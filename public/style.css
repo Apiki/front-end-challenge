@@ -1,0 +1,631 @@
+body {
+    color: #818181;
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+h2 {
+    color: #161b3d;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+h3 {
+    color: #161b3d;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+h4 {
+    color: #161b3d;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.375em;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.title-primary {
+    color: #098ECB;
+    text-align: center;
+}
+
+.container {
+    overflow: hidden;
+}
+
+/*--------------------*/
+
+/* Header */
+
+/*--------------------*/
+
+.navbar {
+    background-color: #FFFFFF;
+    border: 0;
+    border-radius: 0;
+    font-size: 12px !important;
+    font-family: Montserrat, sans-serif;
+    line-height: 1.42857143 !important;
+    letter-spacing: 2px;
+    padding: 10px 0 15px 0;
+    z-index: 9999;
+}
+
+.navbar-header {
+    height: auto;
+    width: 180px;
+}
+
+.navbar img {
+    height: auto;
+    max-width: 100%;
+}
+
+.navbar-nav {
+    margin-top: 10px;
+}
+
+.navbar li a, .navbar .navbar-brand {
+    color: #929191 !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    background-color: #fff !important;
+    color: #212121 !important;
+}
+
+.navbar-default .navbar-toggle {
+    color: #fff !important;
+    border-color: transparent;
+}
+
+/*--------------------*/
+
+/*Hero */
+
+/*--------------------*/
+
+.jumbotron {
+    background-color: #cccccc;
+    background-image: url('./img/fundo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    padding: 200px 25px;
+}
+
+.container-fluid {
+    padding: 60px 50px;
+}
+
+/*--------------------*/
+
+/* News */
+
+/*--------------------*/
+
+h2.section-title {
+    color: #188ECC;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 5px;
+    margin-bottom: 80px;
+    text-transform: uppercase;
+}
+
+p.section-description {
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+h2.section-title+p {
+    margin-bottom: 20px;
+    margin-top: -70px;
+}
+
+.card {
+    background: #fff;
+    border-bottom-width: 2px;
+    border-radius: 20px;
+    display: block;
+    line-height: 1.3;
+    margin-bottom: 2%;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.entry {
+    height: 350px;
+}
+
+.entry-media {
+    height: 150px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.entry-media a {
+    display: block;
+}
+
+.entry-media .absolute-wrapper {
+    background-color: rgba(255, 255, 255, .5);
+    display: none;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: all .5s;
+    visibility: hidden;
+    width: 100%;
+    z-index: 1;
+}
+
+.entry:hover .absolute-wrapper {
+    background-color: rgba(255, 255, 255, .5);
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.entry-title {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.entry-title a {
+    color: initial;
+}
+
+.entry-title a:hover {
+    text-decoration: none;
+}
+
+.entry p {
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 18em;
+}
+
+.img-responsive {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.read-more {
+    background: #FAA722;
+    border: none;
+    color: #FFFFFF;
+}
+
+.read-more:hover {
+    background: #F57E20;
+}
+
+.card-btn {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.card-text {
+    display: block;
+    display: -webkit-box;
+    font-size: 20dp;
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.add-news {
+    margin-bottom: 80px;
+}
+
+.btn-load {
+    background-color: #FAA722;
+    border: 1px solid transparent;
+    color: #ffffff;
+    font-size: 2.0rem;
+    margin: 25px 0;
+    padding: 1.25rem 2.5rem;
+    font-weight: 300;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-load:hover {
+    background: #F57E20;
+    color: #FFFFFF;
+    transition: 1s;
+}
+
+.card-btn .btn:active {
+    background-color: #F57E20;
+}
+
+/*--------------------*/
+
+/* CONTENT */
+
+/*--------------------*/
+
+.content-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 768px;
+}
+
+.content-wrapper {
+    margin-bottom: 25%;
+}
+
+.the-content p {
+    font-size: 1.06em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.thumb-img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.excerpt {
+    font-size: 15px;
+    position: relative;
+    text-align: center;
+}
+
+.content-page {
+    margin-top: 10%;
+}
+
+.author-box {
+    line-height: 1.3;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+.author-box span {
+    font-size: 14px;
+    opacity: 0.9
+}
+
+.author-box a {
+    color: #161b3d;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    position: relative;
+    outline: 0;
+    z-index: 2;
+}
+
+.author-box time {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/*--------------------*/
+
+/* NEWSLETTER */
+
+/*--------------------*/
+
+.news-subs {
+    background-color: #098ECB;
+    color: white;
+    display: inline;
+    float: left;
+    margin-top: -6px;
+    padding: 5px 0 30px 0;
+    width: 100%;
+}
+
+.news-subs input {
+    font-family: "robotoregular";
+    font-size: 14px;
+    height: 49px;
+    padding-left: 15px
+}
+
+.news-subs button {
+    background: #FAA722;
+    border: none;
+    color: #FFFFFF;
+    font-family: "Arial";
+    font-size: 11px;
+    font-weight: 700;
+    height: 48px;
+    line-height: 1.2;
+    margin-right: 0;
+    min-height: 40px;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.news-subs .btn:hover {
+    background: #F57E20;
+    color: #FFFFFF;
+    transition: 1s;
+}
+
+button:hover, button:focus {
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+button:active {
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1) inset;
+    opacity: 1;
+}
+
+/*--------------------*/
+
+/* FOOTER */
+
+/*--------------------*/
+
+#footer {
+    background-color: #212121;
+    display: inline;
+    float: left;
+    margin-top: -6px;
+    width: 100%;
+}
+
+.footer-top {
+    display: inline;
+    float: left;
+    width: 100%;
+}
+
+.footer-top-area {
+    display: inline;
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+
+#footer img {
+    height: auto;
+    margin-top: 2%;
+    width: 240px;
+}
+
+.footer-logo {
+    display: inline-block;
+}
+
+.footer-social {
+    display: inline;
+    float: left;
+    margin: 30px 0px;
+    width: 100%;
+}
+
+.footer-social a {
+    border: 1px solid #505050;
+    border-radius: 50%;
+    color: #b8b8b8;
+    display: inline-block;
+    font-size: 18px;
+    height: 48px;
+    line-height: 48px;
+    margin: 0 9px;
+    text-align: center;
+    width: 48px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.footer-social a.facebook:hover {
+    background-color: #3b5998;
+    border-color: #3b5998;
+    color: #fff;
+}
+
+.footer-social a.twitter:hover {
+    background-color: #00aced;
+    border-color: #00aced;
+    color: #fff;
+}
+
+.footer-social a.linkedin:hover {
+    background-color: #007bb5;
+    border-color: #007bb5;
+    color: #fff;
+}
+
+.footer-social a.youtube:hover {
+    background-color: #bb0000;
+    border-color: #bb0000;
+    color: #fff;
+}
+
+.footer-social a.instagram:hover {
+    background-color: #D63084;
+    border-color: #D63084;
+    color: #fff;
+}
+
+.footer-social a.github:hover {
+    background-color: #323131;
+    border-color: #323131;
+    color: #fff;
+}
+
+/*--------------------*/
+
+/* Social */
+
+/*--------------------*/
+
+.container-social {
+    box-sizing: border-box;
+    margin: 100px auto;
+    text-align: center;
+    width: 80%;
+}
+
+.container-social h1 {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.container-social ul {
+    margin: 0;
+    padding: 0;
+}
+
+.container-social ul li {
+    box-sizing: border-box;
+    float: left;
+    list-style: none;
+    width: calc(100% / 8);
+}
+
+.container-social ul li a {
+    color: #fff;
+    display: block;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.container-social ul li a .fa {
+    font-size: 40px;
+    transition: 0.5s;
+}
+
+.container-social ul li a:hover .fa {
+    transform: rotateY(360deg);
+}
+
+.container-social ul li:nth-child(1) a {
+    background: #3b5999;
+}
+
+.container-social ul li:nth-child(2) a {
+    background: #55acee;
+}
+
+.container-social ul li:nth-child(3) a {
+    background: #dd4b39;
+}
+
+.container-social ul li:nth-child(4) a {
+    background: #0077B5;
+}
+
+.container-social ul li:nth-child(5) a {
+    background: #00AFF0;
+}
+
+.container-social ul li:nth-child(6) a {
+    background: #e4405f;
+}
+
+.container-social ul li:nth-child(7) a {
+    background: #cd201f;
+}
+
+.container-social ul li:nth-child(8) a {
+    background: #bd081c;
+}
+
+@media (max-width: 992px) {
+    .container h1 {
+        font-size: 30px;
+    }
+    .container ul li {
+        width: calc(100% / 4);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 96%;
+    }
+    .container h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 98%;
+    }
+    .container ul li {
+        width: calc(100% / 2);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
+    .btn-lg {
+        margin-bottom: 35px;
+        width: 100%;
+    }
+    .card-text {
+        max-width: 500px
+    }
+    .entry p {
+        width: 40em;
+    }
+    .header-page-wrap {
+        margin-top: 25%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .navbar-brand {
+        max-width: 50%;
+        position: absolute;
+        top: 8px;
+    }
+    .navbar-header {
+        width: 100%;
+    }
+    .entry p {
+        width: 18em;
+    }
+    .news-subs {
+        margin-top: 20px;
+    }
+}
