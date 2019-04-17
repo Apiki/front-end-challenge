@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog Apiki Development</title>
+    <meta name="keywords" content="html5, tecnologia, blog, wordpress, apiki, css, javascript">
+    <meta name="description=" content="Desafio challenge apiki front end">
+    <meta name="author" content="Helio Morais">
+
+    <link rel="stylesheet" href="static/css/stylepages.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates" rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-header">
+        <h1>IPv6: o que você precisa saber sobre o protocolo</h1>
+        <p class="p-header">A adoção ao IPv6 será ainda mais acelerada com o esgotamento dos endereços IP atuais. Você precisa conhecer melhor essa nova versão</p>
+        <img class="img-header" src="https://blog.apiki.com/wp-content/uploads/sites/2/2016/12/ipv6-destaque.png" alt="imagem do header">
+    </header>
+    <main class="main-content">
+        <p>Se uma imagem vale mais que mil palavras, imagine um vídeo que detalha como nenhum outro o que é o IPv6, seus benefícios e por que devemos considerá-lo o quanto antes.
+
+            O vídeo é do NIC.br, o Núcleo de Informação e Coordenação do Ponto BR.</p>
+
+        <iframe width="940" height="500" src="https://www.youtube.com/embed/_JbLr_C-HLk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <p>O protocolo IP é muito importante como vários outros protocolos responsáveis pela comunicação na internet.
+
+            As versões relevantes do protocolo IP são a IPv4 e a IPv6. A quarta versão foi oficializada há mais de 30 anos atrás e sua composição de 32 bits permite uma combinação de mais de quatro bilhões de endereços únicos.
+
+            Mas essa quantidade disponível está numa iminência de esgotamento e somente o novo formato proposto será possível atender a latente demanda atual e futura. </p>
+
+        <h2>IPv6</h2>
+
+        <p>Com o advento epopularização da internet, a quantidade disponível de endereços ficou pequena e a proposta do IPv6, de 1998, ganha cada vez mais força em função do esgotamento de endereços IPv4.</p>
+        <h3>Sobre o formato do endereço</h3>
+        <p>Os formatos de endereços IP nas versões 4 e 6 são significativamente distintas e isso exige uma adaptação de toda indústria para suporta-lo por completo. Um exemplo simples para nós desenvolvedores de software está na validação e modelagem de banco de dados para armazená-lo.
+
+            Sua composição será de 128 bits que resultará em incríveis 340.282.366.920.938.000.000.000.000.000.000.000.000 endereços únicos de IP ao contrário do pouco mais de quatro bilhões de endereços.
+
+            Os endereços na quarta versão são representados por quatro blocos de 8 bits, totalizando 32 bits. Eles são representados através de números de 0 a 255, como “189.26.216.84′.
+
+            Já o formato de endereço em IPv6 terá uma sequência de caracteres hexadecimal separados por “:” (dois pontos). Vamos tomar o endereço como exemplo para entendimento do seu formato e possibilidades.
+
+            0201:0DB8:0000:25E2:0000:0000:F0CA:84C1
+            O endereço quando composto de números zero à esquerda de uma sequência pode ser ocultado. No exemplo anterior a primeira sequência poderia ser “201” ao contrário de “0201”.
+
+            Grupos de quatro algarismos zero podem ser representados por um único algarismo. Considerando o nosso exemplo poderíamos ter:
+
+            201:0DB8:0:25E2:0:0:F0CA:84C1
+            ao contrário de
+
+            0201:0DB8:0000:25E2:0000:0000:F0CA:84C1
+            Uma sequência longa de zeros também poder ser substituídas. E nesse caso seria por “::”. Em nosso exemplo teríamos a seguinte composição.
+
+            201:0DB8:0:25E2::F0CA:84C1
+            Como um endereço em formato IPv6 será longo, essas substituições nos permitirá termos uma sequência menor. E como no início teremos vários casos com inúmeros zero, essas substituições serão de grande valia.</p>
+
+        <h3>Tipos de endereço</h3>
+
+        <p>No IPv6 há três tipos de endereço: Unicast, Multicast e Anycast. Isso permite uma distribuição otimizada de endereços para um acesso mais rápido em algumas situações.</p>
+
+        <h3>Unicast</h3>
+
+        <p>Indicado para redes ponto-a-ponto. O tipo Unicast identifica uma única interface para que os pacotes sejam enviados somente a essa interface.</p>
+
+        <h3>Multicast</h3>
+
+        <p>Indicado para comunicações de um-para-muitos. Esse tipo identifica um conjunto de interfaces e os pacotes de dados são entregues às todas interfaces associadas ao tipo de endereço Multicast.</p>
+
+        <h3>Anycast</h3>
+
+        <p>Também indicado para comunicações de um-para-muitos, apropriado para servidores de DNS. Endereços Anycast são semelhantes ao Multicast, a diferença é que o pacote de dados é entregue a interface mais próxima.</p>
+
+        <h3>Segurança reforçada</h3>
+
+        <p>Segurança é um item relevante que será consideravelmente melhorado com a adoção do IPv6.
+
+            A nova versão do protocolo manteve o IPSec (IP Security Protocol) que é uma extensão do protocolo IP voltado para segurança. No entanto, nesta versão temos os dados do pacote criptografados garantindo maior confidencialidade, autenticidade e integridade das informações trafegadas.
+
+            Além disso com uma grande capacidade de endereços únicos será possível uma associação mais específica do endereço IP em uso, ao contrário do método atual que compartilha o mesmo endereço em várias situações.</p>
+
+        <h3>Estatísticas de uso do IPv6</h3>
+
+        <p>As duas imagens abaixo retratam dois cenários muito importantes. A primeira está relacionada a porcentagem de uso do IPv6 no Brasil e a segunda a quantidade restante de endereços IPv4 ainda disponíveis.
+
+            É preciso considerar uma adoção acelerada do IPv6 em um ritmo ainda maior a quantidade restante de IPv4.</p>
+
+        <img src="https://blog.apiki.com/wp-content/uploads/sites/2/2016/12/ipv6-stats-brasil-e1482667473879.png" alt="imagem explicativa"><br>
+        <img src="https://blog.apiki.com/wp-content/uploads/sites/2/2016/12/ipv4-stats-e1482667545603.png" alt="imagem explicativa">
+
+        <h3>A adoção ao novo protocolo, segundo o Google</h3>
+
+        <p>O Google analisa a disponibilidade do novo protocolo entre seus usuários e assim temos uma noção de crescimento do uso do IPv6 em relação ao acesso aos serviços do Google.</p>
+
+        <img src="https://blog.apiki.com/wp-content/uploads/sites/2/2016/12/ipv6-google-stats.png" alt="imagem explicativa">
+
+        <h3>Meu site já suporta o IPv6?</h3>
+
+        <p>O número de sites que suportam a sexta versão ainda é tímido. Algumas soluções de <a href="https://apiki.com/produtos/apiki-wp-host/">hospedagem de sites</a> já estão se preparando para o suporte ou já concluíram essa fase e coloram a disposição dos seus clientes o suporte completo ao IPv6.
+
+            O Centro de Estudos e Pesquisas em Tecnologia de Redes e Operações disponibiliza o <a href="http://validador.ipv6.br/">Validador IPv6</a> para analisar e informar sobre o suporte a nova versão do protocolo a um endereço web.</p>
+
+        <h2>Conclusão</h2>
+
+        <p>O iminente esgotamento dos endereços IPv4 se faz necessário uma adoção completa e considerável ao IPv6 por parte da indústria de equipamentos diversos, desenvolvedores de softwares, sites, provedores de acessos e dispositivos variados para que tenhamos uma conexão de melhor qualidade, além de mais rápida e segura.
+
+            O IoT vem evoluindo e exigindo uma adoção mais rápida do IPv6, caso contrário, não será possível termos todas as coisas conectadas como se tem mostrado o caminho o qual estamos seguindo.</p>
+
+
+
+    </main>
+</body>
+
+</html>

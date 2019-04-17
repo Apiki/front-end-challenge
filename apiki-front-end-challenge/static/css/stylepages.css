@@ -1,0 +1,90 @@
+body {
+    font-family: 'Montserrat Alternates', arial, helvetica, sans-serif;
+    background-color: #fff;
+}
+
+h1 {
+    font-size: 48px;
+    text-align: center;
+    color: darkred;
+    margin: 80px 0;
+    letter-spacing: 5px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-left: 40px;
+    color: darkred;
+}
+
+h3 {
+    font-size: 20px;
+    margin-left: 40px;
+    color: darkred;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px;
+    line-height: 1.8em;
+}
+
+blockquote {
+    border-left: 10px solid darkred;
+    margin: 20px 40px;
+    padding: 5px 20px;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: darkred;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: underline;
+    color: darkred;
+    font-weight: 900;
+}
+
+ul {
+    text-align: left;
+    font-size: 18px;
+    margin: 10px;
+    line-height: 1.8em;
+    box-sizing: border-box;
+    border: 2px solid darkred;
+    border-radius: 10px;
+}
+
+pre {
+    font-size: 18px;
+    line-height: 1.8em;
+}
+
+.p-header {
+    font-size: 24px;
+    margin: 20px;
+    font-style: italic;
+    letter-spacing: 3px;
+}
+
+.main-header {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.img-header {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.main-content {
+    width: auto;
+    margin: 30px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 2px solid darkred;
+    border-radius: 30px;
+}

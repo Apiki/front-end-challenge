@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat Alternates', arial, helvetica, sans-serif;
+    background-color: #fff;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    color: darkred;
+}
+
+h2 {
+    font-size: 18px;
+    color: darkred;
+}
+
+img {
+    width: inherit;
+    border-bottom: 2px solid darkred;
+    border-top-left-radius: 7.5px;
+    border-top-right-radius: 7.5px;
+}
+
+a {
+    transition: color .2s linear, border .2 linear;
+    text-decoration: none;
+    color: #444;
+    display: inline-table
+}
+
+a:hover {
+    border-bottom-color: transparent;
+}
+
+.main-header {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+    background: #ebebeb;
+    margin-bottom: 10px;
+}
+
+.container {
+    width: 100%;
+}
+
+.main-content-section {}
+
+.card {
+    width: 220px;
+    height: 350px;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 3px solid darkred;
+    margin: 15px 20px;
+    float: left;
+    border-radius: 10px;
+}
+
+.card-body {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.card-text {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.button {
+    position: relative;
+    left: 580px
+}
+
+.button,
+.button-default {
+    background-color: darkred;
+    border: 3px solid darkred;
+    color: white;
+    padding: 11.2px 24px;
+    border-radius: 5px;
+    font-size: 12.8px;
+    transition: all .5s;
+    cursor: pointer;
+    margin: 10px;
+    position: relative;
+    bottom: auto
+}
+
+.button:hover,
+.button-default:hover {
+    background-color: #670000;
+    border-color: transparent;
+}
+
+.main-footer {
+    width: auto;
+    padding: 20px;
+    font-size: 20px;
+    background: #ebebeb;
+    color: darkred;
+    letter-spacing: 5px;
+    text-align: center;
+}

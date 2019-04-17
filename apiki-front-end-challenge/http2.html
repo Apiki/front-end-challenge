@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog Apiki Development</title>
+    <meta name="keywords" content="html5, tecnologia, blog, wordpress, apiki, css, javascript">
+    <meta name="description=" content="Desafio challenge apiki front end">
+    <meta name="author" content="Helio Morais">
+
+    <link rel="stylesheet" href="static/css/stylepages.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <h1>Por que seu site precisa adotar o protocolo HTTP/2</h1>
+            <p class="p-header">O protocolo HTTP/2 vai turbinar seu site incrivelmente e você deveria adota-lo o quanto antes. Conheça a história e os grandes e reais benefícios.</p>
+                <img class="img-header" src="https://blog.apiki.com/wp-content/uploads/sites/2/2016/12/http2-1068x400.png" alt="imagem do header">
+    </header>
+    <main class="main-content">
+        <p> Para compreendermos o HTTP/2 é preciso ter uma noção, mesmo que superficial, sobre o protocolo Hypertext Transfer Protocol.</p>
+        <p>O protocolo HTTP é um mecanismo utilizado pelos navegadores de internet para requisitarem informações ao servidor web e exibir páginas na tela do dispositivo em uso.</p>
+        
+        <img src="https://blog.apiki.com/wp-content/uploads/sites/2/2016/12/HTTP-protocol-header-payload-footer.png" alt="imagem explicação">
+        
+        <p>Você também pode o compreender como “um conjunto de regras que definem como a informação será transferida de um computador para o outro”. Embora todo protocolo seja um pouco diferente, eles são compostos de um cabeçalho (header), “carga” (payload) e rodapé (footer).</p>
+        
+        <p>A versão largamente em uso é a do HTTP/1.1, desde 1999, ou seja, 17 anos em uso. O rascunho do seu substituto, o HTTP/2 já foi <a href="https://tools.ietf.org/pdf/draft-ietf-httpbis-http2-17.pdf">publicado pela IEFT</a> (Internet Engineering Task Force).</p>
+        
+        <p>Através dele, teremos significativas melhorias na comunicação e renderização de dados entre navegadores e servidores.</p>
+
+        <h2>As versões do protocolo HTTP</h2>
+        <p>“Foi um projeto complexo porque tinha telas com muitas interações. Desenvolvemos uma poderosa estratégia de cache para aguentar o volume de acessos. Consegui aprender muita coisa e estou feliz com o resultado final”, comenta o Desenvolvedor Back-End Danilo Alves.</p>
+            <img src="https://blog.apiki.com/wp-content/uploads/sites/2/2016/12/HTTP-historico-versoes.png" alt="imagem de explicação">
+        <h3>HTTP/0.9</h3>
+        <p>A primeira versão, proposta por Tim Berners-Lee, tinha a simplicidade como ponto focal.
+
+            A ideia era transferir dados no formato de texto <a href="https://pt.wikipedia.org/wiki/ASCII">ASCII</a>. Na época, era o único método de requisição era o GET.
+
+            O surgimento da World Wide Web está interligado ao nascimento do protocolo HTTP.</p>
+        <h3>HTTP/1.0</h3>
+        <p>Cinco anos se passaram até a chegada da segunda versão do protocolo, o HTTP/1.0.
+
+            Ele foi uma resposta a ineficiência da primeira versão frente ao rápido crescimento da web.
+
+            A comunicação e transferência de arquivos precisavam ir além da simples transferência de textos. Era preciso também considerar dados mais ricos, metadados da requisição / resposta e negociação de conteúdo, por exemplo.</p>
+        <h3>HTTP/1.1</h3>
+        <p>A terceira versão é disponibilizada três anos após a segunda. O lançamento dela é considerado um marco e define o padrão da Internet.
+
+        O protocolo HTTP/1.1, além de resolver inúmeras ambiguidades da versão 1.0, inseriu melhorias críticas de performance, como: conexões vivas, mecanismo adicional de cache, transferências de codificação fragmentadas, pipelining de solicitação, codificações de transferência.</p>
+        
+        <h3>SPDY</h3>
+        <p>SPDY foi um esforço de engenheiros do Google para avançar nos problemas de performance do HTTP/1.1.
+
+        Os navegadores de internet e grandes empresas (Google, Twitter, Facebook) o adotaram.
+
+        Esses movimentos chamaram a atenção do HTTP Working Group (HTTP-WG) que reconheceram e aprenderam com o SPDY. Em seguida, veio a proposta do HTTP/2.</p>
+        <h3>HTTP/2</h3>
+        <p>O uso da web e os variados dispositivos conectados à ela crescem exponencialmente. O HTTP/2 é uma resposta a este novo cenário em que tudo está cada vez mais conectado.
+
+        Computadores, smartphones, sensores, relógios, óculos, roupas… Sem contar nas interações sociais, e-mail, vídeos, fotos, notícias, etc.
+
+        A semântica do protocolo não será afetada com a nova versão. Serão mantidos os cabeçalhos HTTP, valores e formatos de uso.
+
+        As melhorias significativas são na performance de transporte das informações, além de uma latência menor e maior rendimento.
+
+        A versão 0.9 pode ser considerada o nascimento; a versão 1.0 uma resposta ao rápido crescimento; a versão 1.1 o padrão da internet e o HTTP/2 uma resposta ao IoT (Internet of Things).</p>
+        
+        <h2>HTTP/2</h2>
+        <p>O uso do HTTP/2 já é uma realidade em vários cenários. Quem ainda não o adotou, fará isso muito em breve a medida que seus benefícios ficarem mais claros, que empresas de hospedagem o adotarem e desenvolvedores passarem a considerá-lo em suas aplicações.
+
+        Surma, um dos engenheiros do Google que trabalha no Chrome, realizou uma abordagem sobre o HTTP/2 no Chrome Dev Summit em 2015. O vídeo segue abaixo. Vale a pena ver muito cada minuto:</p>
+        
+        <iframe width="940" height="500" src="https://www.youtube.com/embed/r5oT_2ndjms" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <h3>As diferenças entre o HTTP/1.1 e o HTTP/2</h3>
+        <p>É preciso ficar claro que as aplicações e os sites atuais funcionarão normalmente com a nova versão do protocolo.
+
+        No entanto, quem se aproveitar das vantagens do HTTP/2 terá significativos ganhos de performance.
+
+        As sintaxes e semântica dos métodos, status dos códigos, campos dos cabeçalhos e URIs foram mantidos com exatidão.
+
+        A mudança está no tráfego das informações entre o cliente (leia-se navegador de internet), sensores, dispositivos diversos e o servidor.
+
+        Uma grande diferença entre o HTTP/1.1 e o HTTP/2 será sentida pelos desenvolvedores web em seus esforços de minificar arquivos e reduzir requisições ao servidor.
+
+        É comum minificar imagens, arquivos CSS e JavaScript para reduzir seus tamanhos e, consequentemente, ter um download e renderização mais rápidos.
+
+        Unificar os arquivos é uma forma de reduzir a quantidade de requisições ao servidor.
+
+        Essa dupla de esforços gera um dilema: mais requisições e arquivos menores ou arquivos maiores e menos requisições?
+
+        Como já dito com o HTTP/2, a comunicação e transferência de arquivos entre o navegador e o servidor foi incrivelmente melhorada e permitirá ao servidor responder ao navegador com mais requisições.
+
+        Isso significa dizer que o servidor web fornecerá dados que ele já tem conhecimento. Significa, ainda, que o navegador de internet precisará para renderizar a página mesmo sem o navegador examinar a primeira resposta e sem sobrecarga de um ciclo de requisição adicional.</p>
+        
+        <h3>Os grandes benefícios do HTTP/2</h3>
+        <p>A segunda versão do protocolo HTTP já é uma realidade e suas vantagens são incríveis com os benefícios que ele agrega quando implementado.
+
+        A mudança de paradigma na comunicação e transferência de dados entre o cliente e o servidor serão poderosas e permitirão uma única conexão por origem, Server Push, Priorização de requisições, Paralelização de requisições com multiplexação, Compressão automática com HPACK e GZIP e maior segurança e criptografia de dados.
+
+        Vamos conhecer com mais detalhes cada uma dessas vantagens do HTTP/2.</p>
+        
+        <h3>Segurança e criptografia de dados</h3>
+        
+        <p>O HTTP/2 foi definido para trabalhar sem criptografia, HTTP URIs, ou com criptografia, HTTPS URIs.
+
+        Para esse último seria requerido uma criptografia com o TLS 1.2 ou superior.
+
+        No entanto, os principais navegadores de internet (Chrome, Firefox, Safari, Opera, IE, Edge) declararam suportar o HTTP/2 somente sobre o uso do TLS e com isso o uso do <a href="https://apiki.com/produtos/apiki-wp-one-day/one-day-ssl/">certificado digital SSL</a> passou ser obrigatório para adotar a nova versão do protocolo.
+
+        Além de resolver o problema de deploy do HTTP/2, essa imposição trará também o benefício da segurança da informação e a confidencialidade dos dados trafegados na rede.
+
+        Como o SSL resolve o problema do deploy do HTTP/2? Evitando a quebra e a falta de suporte em navegadores antigos. Como toda comunicação estará criptografada, não haverá falha de comunicação entre os navegadores, os intermediários como proxies e CDNs e o servidor web.</p>
+        
+        <h3>Compressão automática com HPACK e GZIP</h3>
+        
+        <p>Cada requisição HTTP contém uma série de cabeçalhos que descrevem o recurso transferido e suas propriedades.
+
+        Esses dados são meta informação enviados em formato de texto.
+
+        Embora possuam alguns poucos bytes (às vezes chega em kilobytes com a adição dos cookies), é considerável o volume quando se fala de dezenas, centenas ou milhares de requisições.
+
+        Com o HTTP/2 as meta informações dos cabeçalhos são comprimidas através do algoritmo <a href="https://http2.github.io/http2-spec/compression.html">HPACK.</a>
+
+        Além disso o HTTP/2 tornará padrão a compressão dos dados entregues pelo servidor através do GZIP, algo que no HTTP/1.1 precisa ser habilitada.
+
+        Como já dito, o HTTP/2 trás ganhos reais de performance.</p>
+        
+        <h3>Paralelização de requisições com multiplexação</h3>
+        
+        <p>O paralelismo combinado com multiplexação nas requisições HTTP é uma vantagem incrível no HTTP/2 e corrige o grande problema do HTTP/1.1 em lidar com o HTTP pipelining.
+
+        Esse comportamento, acredito, trará um impacto benéfico na forma como os desenvolvedores e profissionais de infra lidam com as requisições HTTP e o ganho de performance.
+
+        No HTTP/1.1, requisição e resposta é sequencial.  Já no HTTP/2, requisições e respostas são paralelas.
+
+        Isso já muda absolutamente tudo, mas vamos compreender isso melhor.
+
+        Através do HTTP/1.1, a comunicação entre o navegador de internet e o servidor web é sequencial e funciona assim: o navegador faz uma requisição, aguardo a resposta e depois que ela chega dispara uma nova.
+
+        Os navegadores de internet têm contribuído e permitido abrir mais de uma conexão ao mesmo tempo.
+
+        Esse paralelismo de requisições vão de quatro a oito por hostname.
+
+        Por isso é comum vermos subdomínio dedicados a entrega de arquivos estáticos, o uso de CDN e outras técnicas para permitir atualmente várias requisições de forma simultânea.
+
+        Com a implementação do paralelismo e multiplexação no HTTP/2, teremos requisições e retorno de dados de forma paralela automaticamente com uma única conexão.
+
+        Isso facilitará o trabalho de infra, logo, desenvolvedores não vão precisar manter vários hostnames. Além disso, reduzirá o custo com servidores.
+
+        Podemos ir além e afirmar que será o fim de várias gambiarras utilizadas atualmente para suportar e garantir uma melhor performance em páginas e aplicações web, com dezenas de arquivos a serem requisitados do servidor.</p>
+        
+        <h3>Priorização de requisições</h3>
+        
+        <p>Uma página web é composta por diversos elementos que têm prioridades diferentes de carregamento e renderização.
+
+        Por não suportar a multiplexação, os navegadores de internet com o HTTP/1.1 têm dificuldades em priorizar requisições, já que não há uma forma de comunicar ao servidor quais são as prioridades.
+
+        O HTTP/2 resolve isso por permitir ao navegador requisitar todos os elementos quando descobertos e comunicar ao servidor sobre sua intenção de priorizar algum deles através das dependências e pesos das streams implementados nesta nova versão do protocolo.
+
+        Um exemplo prático e corriqueiro é a tríade: HTML, CSS e JavaScript.
+
+        Imagine um cenário onde temos a requisição de um arquivo JavaScript assíncrono e um arquivo CSS, ambos no cabeçalho, sendo que esse último bloqueia a renderização.
+
+        No HTTP/2 o comportamento do navegador será de priorizar primeiro o arquivo CSS, mesmo que sua requisição na ordem do DOM venha depois do JS.</p>
+        
+        <h3>Server Push</h3>
+        <p>Enviar múltiplas repostas ao cliente a partir de uma única requisição será um grande recurso no HTTP/2 que o servidor conseguirá implementar.
+
+        O incrível é que mesmo um arquivo não requisitado explicitamente, será enviado ao navegador pelo servidor.
+
+        Com o recurso, será possível facilmente resolver questões de performance atreladas a arquivo estáticos de CSS, imagens e JavaScript, por exemplo.
+
+        Atualmente, no HTTP/1.1 é comum utilizarmos declarações inline ou contidas no head da página ao contrário de sobrecarregarmos o servidor com uma requisição a mais.
+
+        Com a situação acima, enfrentamos dilemas corriqueiros no dia-a-dia: usar as declarações em arquivos externos e assim se aproveitar do cache ou manter inline para corrigir o bloqueio de renderização e ganhar pontos no PageSpeed?
+
+        Com o HTTP/2, o dilema acaba e ficará ainda mais simples.
+
+        Imagine o cenário: o navegador de internet requisita o arquivo HTML da página; o servidor responde com o arquivo requisitado e já envia também o arquivo CSS, JavaScript, ícones e outras coisas mais com base na priorização das streams com base nas dependências e peso de cada uma.
+
+        Uma conexão por origem
+        Com o novo modelo de requisição e transferência de dados no HTTP/2, não será mais necessário múltiplas conexões TCP para requisitar vários arquivos em paralelo.
+
+        Uma conexão TCP no HTTP/2 será persistente e precisará somente de uma por origem para requisitar os arquivos necessários, uma vez que cada stream será dividida em múltiplos quadros podendo ser entrelaçada e priorizada.
+
+        Os clientes ganharão maior redução no consumo de processamento e memória.
+
+        Nas redes teremos redução de custo operacional e maior capacidade de uso.
+
+        O resultado será uma redução de latência na rede e redução de custo em hardware e software.</p>
+        
+        <h2>Quais navegadores já suportam o protocolo HTTP/2</h2>
+        
+        <p>Os principais navegadores atualmente já oferecem suporte completo ao novo protocolo.
+
+        Outros oferecem suporte parcial nos dando tranquilidade para adotá-lo com segurança e sem medo de quebra.</p>
+        
+        <img src="https://blog.apiki.com/wp-content/uploads/sites/2/2016/12/http2-browser-support.png" alt="imagem de explicação">
+        
+        <h2>HTTP/2 e os servidores web</h2>
+        <p><a href="https://blog.apiki.com/nginx-apache-wordpress/">Apache e NGINX</a>, os servidores web mais utilizados, também suportam a segunda versão do protocolo HTTP.
+
+            Nesse assunto é necessário envolver o time de infra para implementá-lo.
+
+            No Apache é preciso considerar o <a href="https://httpd.apache.org/docs/2.4/mod/mod_http2.html">módulo mod_http2</a> que adiciona o suporte ao HTTP/2 no referido servidor web.</p>
+        <p>Embora em caráter experimental é considerado seguro seu uso.
+
+            Já no NGINX o suporte, também experimental, veio na <a href="http://nginx.org/en/CHANGES">versão 1.9.5</a> e adicionar o suporte é bastante simples e exige uma pequena mudança no <a href="http://imasters.com.br/tecnologia/redes-e-servidores/habilitando-http2-no-nginx/">arquivo de configuração do virtualhost.</a></p>
+        <h2>Minha hospedagem já tem suporte para o HTTP/2?</h2>
+        <p>Para se certificar que o domínio já responde ao HTTP/2 consulte através da ferramenta <a href="https://tools.keycdn.com/http2-test">HTTP/2 Test</a> se o seu site ou <a href="https://blog.apiki.com/usar-cdn-opcao-mais-logica/">CDN</a> já suporta a segunda versão do protocolo HTTP/2.</p>
+        <h2>Conclusão</h2>
+        <p>Considerar, migrar e fazer uso do HTTP/2 é um caminho sem volta.
+
+        As vantagens são incríveis e seu site ganhará muito em performance, beneficiando seus usuários com uma melhor experiência de navegação e seu bolso com redução de custos.</p>
+
+    </main>
+</body> 
+</html>
