@@ -70,18 +70,18 @@ export default class Posts extends Component {
           <div className="card">
           
           <div className="card__fakeimg">
-            <a href={`desenvolvimento/${post.link}`} title="">
-              { <img src={post.image_post.source_url} alt=""  /> }
+            <a href={`desenvolvimento/${post.link}`} title={post.titulo}>
+              { <img src={post.image_post.source_url} alt={post.titulo}  /> }
             </a>
           </div>
-          <h2><a href={`desenvolvimento/${post.link}`}>{post.titulo}</a></h2>
+          <h2><a href={`desenvolvimento/${post.link}`} title={post.titulo}>{post.titulo}</a></h2>
           <ul className="card__info-post">
             <li><a href="" title="">{post.author }</a></li>
           </ul>
           <div className="card__content-post">
             <div dangerouslySetInnerHTML={{ __html: post.excerpt }} />
           </div>
-          <Link className="card__more-tag" to={`desenvolvimento/${post.link}`}>Continuar lendo…</Link>
+          <Link className="card__more-tag" to={`desenvolvimento/${post.link}`} title="Continuar Lendo">Continuar lendo…</Link>
         </div>
       </div>
     );
