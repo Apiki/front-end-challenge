@@ -1,0 +1,104 @@
+.leftcolumn {   
+    float: left;
+    width: 70%;
+  }
+
+  .fakeimg {
+    max-width: 100%;
+    img{
+      height: 275px;
+      width: 100%;
+    }
+  }
+ 
+  .card {
+     background-color: white;
+     margin-top: 20px;
+     
+     position: relative;
+     
+      h2{
+        margin: 0;
+        text-align: left;
+        line-height: 120%;
+        width: 100%;
+        padding:2% 2% 1% 2%;
+        position: relative;
+        a{
+          color: #000000;
+          &:hover{
+            color: #07c86f;
+            font-weight: 700;
+            text-decoration: underline;
+          }
+        }
+      }
+      .info-post{
+        width: 100%;
+        padding: 0 2%;
+        position: relative;
+        li{
+          color: #525252;
+          list-style: none;
+          font-weight: bold;
+          display: inline;
+                   
+          a{
+            color: #525252;
+          }
+          .avatar{
+            position: absolute;
+            border-radius: 500px;
+            width: 60px;
+            height: 60px;
+            top: -220%;
+            right: 5%;
+            img{
+              border-radius: 500px;
+              width: 60px;
+              height: 60px;
+            }
+          }
+        }
+
+      }
+      .content-post{
+        padding: 2%;
+        p{
+          color: #525252;
+          line-height: 1.8em;
+          margin-bottom: 20px;
+          font-size: 18px;
+          font-weight: 400;
+          
+        }
+      }
+      .more-tag{
+        background: transparent;
+        display: block;
+        bottom: 0;
+        margin: 10px 0;
+        padding: 10px 0;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        border-width: 1px;
+        border-style: solid;
+        -webkit-transition: all .10s ease-in-out;
+        -moz-transition: all .10s ease-in-out;
+        -o-transition: all .10s ease-in-out;
+        transition: all .10s ease-in-out;
+        color: #07c86f;
+        border-color: #07c86f;
+        &:hover{
+          background: #07c86f;
+          color: #ffffff;
+        }
+      }
+  }
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+ 

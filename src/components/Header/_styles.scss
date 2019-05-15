@@ -1,0 +1,33 @@
+@import  '../../assets/css/_mixins';
+.header{
+  text-align: center;
+  &__container{
+    background-color: #FFFFFF;
+    -moz-border-radius: 1px 1px 1px 1px;
+    -webkit-border-radius: 1px 1px 1px 1px;
+    border-radius: 1px 1px 1px 1px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.05);
+    padding: 1% 0;
+      &--logo{
+        float: left;
+        padding:4%;
+      }
+      &--name-cat-header{
+        text-align:left;
+          a{
+            color: #07c86f;
+            font-size: 25px;
+            padding-top: 4%;
+            display: block;
+              @include mobile{
+                font-size: 15px;
+                padding-top: 8%;
+
+              }
+      
+          }
+    
+      }
+  } 
+  
+}

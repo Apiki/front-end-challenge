@@ -1,0 +1,43 @@
+ /* Right column */
+ .rightcolumn {
+    float: right;
+    width: 27%;
+    margin-left: 3%;
+    
+    color: #fff;
+    font-size: 20px;
+    .card{
+       border: 2px #089bdd solid;
+       padding: 0;
+       h3{
+          background: #089bdd;
+          color: #fff;
+          font-size: 20px;
+          text-align: center;
+          text-transform: uppercase;
+          display: block;
+          width: 100%;
+          padding: 2% 0;
+       }
+       p{
+          font-weight: 300;
+          line-height: 1.4em;
+          font-size: 15px;
+          padding:3%;
+          color: #000000;
+          text-align: center;
+
+       }
+
+    }
+  
+    
+  }
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+    
+  }

@@ -1,0 +1,67 @@
+$mobile: 767px;
+$tabletW: 900px;
+$tablet: 1024px;
+$netbook: 1199px;
+$notebook: 1480px;
+$monitor: 1820px;
+$full: 1480px;
+
+/* Media Querys */
+@mixin full {
+  @media (max-width: #{$full}) {
+    @content;
+  }
+}
+
+@mixin monitor {
+  @media (max-width: #{$monitor}) {
+    @content;
+  }
+}
+
+@mixin notebook {
+  @media (max-width: #{$notebook}) {
+    @content;
+  }
+}
+@mixin netbook {
+  @media (max-width: #{$netbook}){
+    @content;
+  }
+}
+
+@mixin tabletW {
+   @media (max-width: #{$tabletW}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+   @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin miniMobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin hMax-900{
+  @media (max-height:901px) and ( min-width: $netbook-width-min){
+    @content;
+  }
+}
+
+@mixin hMax-650{
+  @media (max-height:651px) and ( min-width: $netbook-width-min) {
+    @content;
+  }
+}
