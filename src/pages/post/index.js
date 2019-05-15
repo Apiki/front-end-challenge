@@ -31,7 +31,7 @@ export default class Post extends Component {
             <div className="grid-100 grid-parent">
                 <div className="content-post">
                 
-                { <img src={post.image_post.source_url} alt=""  /> }
+                { <img src={post.image_post.source_url} alt={post.title} /> }
                     <h1>{post.title}</h1>
                     { loading ? null :  <div   dangerouslySetInnerHTML={{ __html: post.html }} /> }
                 </div>
