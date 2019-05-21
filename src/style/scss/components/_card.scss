@@ -1,0 +1,41 @@
+.card-box {
+  margin-bottom: 30px;
+  a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    &:hover {
+      text-decoration: initial;
+      color: #333;
+      > .img-post {
+        img {
+          transform: scale(1.2) rotate(-5deg);
+        }
+      }
+
+      > .title-post {
+        color: #f19800;
+      }
+    }
+
+    .img-post {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      overflow: hidden;
+      img {
+        transition: all 0.5s;
+        max-height: 175px;
+      }
+    }
+
+    .title-post {
+      padding: 15px;
+      width: 100%;
+      display: inline-block;
+      transition: all 0.5s;
+      background-color: #f1f1f1;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+}
