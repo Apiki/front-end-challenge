@@ -1,3 +1,4 @@
 button {
-  display: inline-block;
-  width: 100%; }
+  min-width: 250px;
+  max-width: 400px;
+  margin: 0px auto; }
