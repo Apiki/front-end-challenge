@@ -84,4 +84,4 @@ button { min-width: 250px; margin: 0px auto; }
 
 .post .author .about-author .info-author { width: calc(100% - 96px); padding-left: 30px; }
 
-.post .author .about-author .info-author .Name-author h4 { margin: 0px 0px 10px; }
+.post .author .about-author .info-author .name-author h4 { margin: 0px 0px 10px; }
