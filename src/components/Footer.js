@@ -1,5 +1,5 @@
 import React from 'react';
-import Branding from '../branding-footer.svg';
+import Branding from '../images/branding-footer.svg';
 
 function Footer() {
     return (
