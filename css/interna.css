@@ -65,7 +65,7 @@ pre{
     margin: 0 auto;
 }
 
-#producao {
+#info-conteudo {
     text-align: center;
     padding: 20px;
     color: #858484;
@@ -107,7 +107,8 @@ p{
 }
 
 #area-titulo{
-    margin: 0px 10px;
+    width: 920px;
+    margin: 0 auto;
 }
 
 figcaption.wp-caption-text {
@@ -145,7 +146,6 @@ a.tm-ctt-btn {
 }
 
 #area-autor__imagem{
-    border-radius: 100%;
     margin-bottom: 20px;
     overflow: hidden;
     width: 100%;
@@ -156,9 +156,10 @@ a.tm-ctt-btn {
     width: 920px;
     margin: 0 auto;
     margin-top: 20px;
+    line-height: 24px;
 }
 
-#producao {
+#info-conteudo {
     text-align: center;
     padding: 20px;
     color: #858484;
@@ -171,14 +172,31 @@ iframe {
     width: 100%;
 }
 
-img.author-thumbnail{
+img.autor-thumbnail{
     border-radius: 100%;
+    padding: 0px;
+    line-height: 50px;
 }
 
 .wp-video {
     max-width: 100%;
     text-align: center;
     margin: 0 auto;
+}
+
+.return-home{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.bto-principal{
+    padding: 15px 50px;
+    font-size: 16px;    
+    background-color: #848585;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
 }
 
 @media screen and (max-width: 768px) {
@@ -199,6 +217,11 @@ img.author-thumbnail{
         font-size: 20px;
     }
 
+    #area-titulo{
+        width: 90%;
+        margin: 0px 10px;
+    }
+
     #area-conteudo{
         width: 90%;
         margin: 0px 10px;
@@ -212,7 +235,7 @@ img.author-thumbnail{
         margin: 0;
     }
 
-    #producao{
+    #info-conteudo{
         width: 80% !important;
         padding: 10px !important;
     }

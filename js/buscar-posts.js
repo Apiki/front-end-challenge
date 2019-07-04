@@ -18,16 +18,27 @@ button.addEventListener("click", function(){
     var url = "https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page="+requestNum;
     x.open("GET", url, true);
     var button = document.querySelector(".fa");
+
+    console.log('OPENED', x.readyState);
+    
+    var buttonLoad = document.querySelector(".fa-spin");
+    buttonLoad.classList.remove("no-load");
+
+    xhr.onprogress = function () {
+        console.log('LOADING', x.readyState);
+    };
     
     x.addEventListener("load", function(){
         loadEvent(x);
-
-        
-        button.classList.remove("no-button");
     });
 
 
-    button.classList.add("no-button");
+    x.onload = function () {
+        buttonLoad.classList.add("no-load");
+        console.log('DONE', xhr.readyState); 
+    };
+
+
     requestNum++;
     x.send();
 
@@ -39,12 +50,15 @@ function loadEvent(x){
 
         var posts = JSON.parse(resposta);
 
-        posts.forEach(function(post){
-            listOfPost(post);
-        });
+        setTimeout(function(){
+            posts.forEach(function(post){
+                listOfPost(post);
+            });
+        }, 200);
+
+        
     }else{
         console.log(x.status);
         console.log(x.responseText);
     }
 }
-

@@ -1,6 +1,4 @@
-function getPost(post){
-
-    //console.log(post);
+function getInfo(post){
 
     var item = {
         title : post.title.rendered,
@@ -19,34 +17,29 @@ function getPost(post){
     return item;
 }
 
-function createPostElement(element, data, postClass){
-    var titleH3 = document.createElement(element);
-    titleH3.textContent = data;
-    titleH3.classList.add(postClass);
+function createEl(element, data, elClass){
+    var el = document.createElement(element);
+    el.innerHTML = data;
+    el.classList.add(elClass);
 
-    titleH3.title = data;
-
-    titleH3.innerHTML;
+    el.title = data;
     
-
-    return titleH3;
+    return el;
 }
 
-function createAuthorName(texto, element, data, postClass){
-    var titleH3 = document.createElement(element);
-    titleH3.textContent = texto+data;
-    titleH3.classList.add(postClass);
+function createAuthorName(text, element, data, elClass){
+    var el = document.createElement(element);
+    el.textContent = text + data;
+    el.classList.add(elClass);
 
-    titleH3.title = data;
+    el.title = data;
 
-    titleH3.innerHTML;
-
-    return titleH3;
+    return el;
 }
 
-function createImageElement(element, data, postClass, altImg){
+function createImageElement(element, data, elClass, altImg){
     var img = document.createElement(element);
-    img.classList.add(postClass);
+    img.classList.add(elClass);
 
     img.src = data;
     img.alt = altImg;
@@ -54,54 +47,54 @@ function createImageElement(element, data, postClass, altImg){
     return img;
 }
 
+
 function createPost(post){
-    var area = document.createElement("a");
-    area.classList.add("post");
+    var card = document.createElement("a");
+    card.classList.add("post");
 
-    var postTitle = createPostElement("h3", post.title,"post-title");
-    var postIMG = createImageElement("img", post.image, "post-thumbnail",post.alt_image);
+    var cardTitle = createEl("h3", post.title,"post-title");
+    
+    var cardIMG = createImageElement("img", post.image, "post-thumbnail", post.alt_image);
+    var cardPicture = document.createElement("picture");
+    cardPicture.classList.add("post-img");
+    cardPicture.appendChild(cardIMG);
 
-    var postPicture = document.createElement("picture");
-    postPicture.classList.add("post-img");
+    card.appendChild(cardPicture);
+    card.appendChild(cardTitle);
 
-    postPicture.appendChild(postIMG);
+    card.title = post.title;
+    card.href = "interna.html?slug=" + post.slug;
 
-    area.appendChild(postPicture);
-    area.appendChild(postTitle);
-
-    area.title = post.title;
-    area.href = "interna.html?slug=" + post.slug;
-
-    return area;
+    return card;
 }
 
 function listOfPost(post){
-    var postXHR = getPost(post);
+    var i = getInfo(post);
 
-    var areaPost = createPost(postXHR);
+    var areaPost = createPost(i);
 
-    var area = document.querySelector(".post-list");
+    var area = document.querySelector(".card-list");
 
     area.appendChild(areaPost);
 }
 
 function createInterna(post){
 
-    var postXHR = getPost(post);
+    var i = getInfo(post);
 
     //titulo
-    var titleSection = document.querySelector("#titulo-pagina").innerHTML = postXHR.title;
+    document.querySelector("#titulo-pagina").innerHTML = i.title;
    
     //imagem destacada
-    var postIMG = createImageElement("img", postXHR.image, "interna-thumbnail",postXHR.alt_image);
+    var postIMG = createImageElement("img", i.image, "interna-thumbnail",i.alt_image);
     var imgArea = document.querySelector("#imagem-interna");
     imgArea.appendChild(postIMG);
 
     //resumo
-    document.getElementById("resumo").innerHTML = postXHR.excerpt;
+    document.getElementById("resumo").innerHTML = i.excerpt;
 
     //data e nome do autor
-    var d = new Date(postXHR.date);
+    var d = new Date(i.date);
 
     var day = ("0" + d.getDate()).slice(-2);
     console.log(d.getMonth());
@@ -110,26 +103,25 @@ function createInterna(post){
 
     var m =  ("0" + month).slice(-2);
 
-    var producaoNome = "Produzido por: " + postXHR.authorName;
-    var producaoData = day + "/" + m + "/" + year;
+    var infoAutorNome = "Produzido por: " + i.authorName;
+    var infoData = day + "/" + m + "/" + year;
 
-    document.getElementById("producao").textContent = producaoNome + " | Publicado em: " + producaoData;
+    document.getElementById("info-conteudo").textContent = infoAutorNome + " | Publicado em: " + infoData;
 
     //conteudo
-    document.getElementById('area-conteudo').innerHTML = postXHR.content;
+    document.getElementById('area-conteudo').innerHTML = i.content;
 
     //nome do autor
-    var authorName = createAuthorName("","span", postXHR.authorName,"nome");
+    var authorName = createAuthorName("","span", i.authorName,"nome");
     var nameAuthor = document.querySelector("#area-autor__nome");
     nameAuthor.appendChild(authorName);
    
     //imagem do autor
-    var authorIMG = createImageElement("img", postXHR.authorImage, "autor-thumbnail","");
+    var authorIMG = createImageElement("img", i.authorImage, "autor-thumbnail","");
     var imgAuthor = document.querySelector("#area-autor__imagem");
     imgAuthor.appendChild(authorIMG);
-    //document.getElementById('imagem-autor').textContent = postXHR.authorImage;
 
     //descricao do autor
-    document.getElementById('area-autor__descricao').innerHTML = postXHR.authorDescription;
+    document.getElementById('area-autor__descricao').innerHTML = i.authorDescription;
     
 }
