@@ -60,12 +60,12 @@ pre{
     overflow-x:scroll;
 }
 
-#area-conteudo{
+#content-article{
     width: 920px;
     margin: 0 auto;
 }
 
-#info-conteudo {
+#content-publish {
     text-align: center;
     padding: 20px;
     color: #858484;
@@ -81,7 +81,7 @@ pre{
     height: auto;
 }
 
-#area-conteudo img{
+#content-article img{
     box-shadow: 5px 10px 18px #888888;
     width: 80%;
     display: block;
@@ -102,11 +102,11 @@ p{
     text-align: center;
 }
 
-#titulo-pagina{
+#content-title{
     text-align: center;
 }
 
-#area-titulo{
+.first-info{
     width: 920px;
     margin: 0 auto;
 }
@@ -159,7 +159,7 @@ a.tm-ctt-btn {
     line-height: 24px;
 }
 
-#info-conteudo {
+#content-publish {
     text-align: center;
     padding: 20px;
     color: #858484;
@@ -189,7 +189,7 @@ img.autor-thumbnail{
     margin-top: 30px;
 }
 
-.bto-principal{
+.bto{
     padding: 15px 50px;
     font-size: 16px;    
     background-color: #848585;
@@ -217,12 +217,12 @@ img.autor-thumbnail{
         font-size: 20px;
     }
 
-    #area-titulo{
+    .first-info{
         width: 90%;
         margin: 0px 10px;
     }
 
-    #area-conteudo{
+    #content-article{
         width: 90%;
         margin: 0px 10px;
     }
@@ -235,7 +235,7 @@ img.autor-thumbnail{
         margin: 0;
     }
 
-    #info-conteudo{
+    #content-publish{
         width: 80% !important;
         padding: 10px !important;
     }

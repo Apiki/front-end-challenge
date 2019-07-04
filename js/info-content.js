@@ -83,15 +83,15 @@ function createInterna(post){
     var i = getInfo(post);
 
     //titulo
-    document.querySelector("#titulo-pagina").innerHTML = i.title;
+    document.querySelector("#content-title").innerHTML = i.title;
    
     //imagem destacada
     var postIMG = createImageElement("img", i.image, "interna-thumbnail",i.alt_image);
-    var imgArea = document.querySelector("#imagem-interna");
+    var imgArea = document.querySelector("#content-image");
     imgArea.appendChild(postIMG);
 
     //resumo
-    document.getElementById("resumo").innerHTML = i.excerpt;
+    document.getElementById("content-excerpt").innerHTML = i.excerpt;
 
     //data e nome do autor
     var d = new Date(i.date);
@@ -106,10 +106,10 @@ function createInterna(post){
     var infoAutorNome = "Produzido por: " + i.authorName;
     var infoData = day + "/" + m + "/" + year;
 
-    document.getElementById("info-conteudo").textContent = infoAutorNome + " | Publicado em: " + infoData;
+    document.getElementById("content-publish").textContent = infoAutorNome + " | Publicado em: " + infoData;
 
     //conteudo
-    document.getElementById('area-conteudo').innerHTML = i.content;
+    document.getElementById('content-article').innerHTML = i.content;
 
     //nome do autor
     var authorName = createAuthorName("","span", i.authorName,"nome");
