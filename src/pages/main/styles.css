@@ -1,0 +1,85 @@
+.post-list {
+    max-width: 700px;
+    margin: 20px auto 0;
+    padding: 0 20px;
+}
+
+.post-list article {
+    background: #FFF;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.post-list article p {
+    font-size: 16px;
+    color: #999;
+    margin-top: 5px;
+    line-height: 24px;
+}
+
+.post-list article a {
+    height: 42px;
+    border-radius: 5px;
+    border: 2px solid #da552f;
+    background: none;
+    margin-top: 10px;
+    color: #da552f;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.post-list article a:hover {
+    background: #da552f;
+    color: #FFF;
+}
+
+.post-list article img {
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px #da552f;
+    margin-bottom: 10px;
+}
+
+.post-list .actions {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+
+.post-list .actions button {
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 5px;
+    border: 0;
+    background: #da552f;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.post-list .actions button[disabled] {
+    opacity: 0.5;
+    cursor: default;
+    background: #999;
+}
+
+.post-list .actions button:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.post-list .actions button[disabled]:hover {
+    opacity: 0.5;
+    cursor: default;
+    background: #999;
+}
