@@ -41,9 +41,7 @@
 }
 
 .post-list article img {
-    max-width: 100%;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
     box-shadow: 4px 4px #da552f;
     margin-bottom: 10px;
 }
@@ -52,7 +50,6 @@
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-
 }
 
 .post-list .actions button {

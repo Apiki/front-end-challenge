@@ -47,6 +47,7 @@ export default class Main extends Component{
                 {posts.map(post => (
                     <article key={post.id}>
                         <img src={post._embedded['wp:featuredmedia'][0].source_url}/>
+                        <br/>
                         <strong>{post.title.rendered}</strong>
                         <p>{post.excerpt.rendered}</p>
 

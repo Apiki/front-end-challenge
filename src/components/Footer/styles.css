@@ -1,11 +1,17 @@
 footer#main-footer{
     width: 100%;
-    height: 60px;
-    background: #da552f;
+    height: 250px;
+    background: #493f3c;
     font-size: 18px;
     font-weight: bold;
     color: #FFF;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+footer#main-footer img{
+    width: 50%;
+    align-self: center;
+    height: auto;
 }
