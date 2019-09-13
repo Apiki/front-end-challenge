@@ -1,17 +1,16 @@
-footer#main-footer{
-    width: 100%;
-    height: 250px;
-    background: #493f3c;
-    font-size: 18px;
-    font-weight: bold;
-    color: #FFF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+footer#footer-container{
+    background: #050505;
+    margin-top: 50px;
 }
 
-footer#main-footer img{
-    width: 50%;
+
+footer a{
+    color: #FFF;
+}
+
+footer img{
+    width: 60px;
     align-self: center;
+    padding-top: 20px;
     height: auto;
 }

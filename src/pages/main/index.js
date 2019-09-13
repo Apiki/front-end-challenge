@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import api from "../../services/api";
 import { Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './styles.css';
 
@@ -48,7 +49,7 @@ export default class Main extends Component{
                     <article key={post.id}>
                         <img src={post._embedded['wp:featuredmedia'][0].source_url}/>
                         <br/>
-                        <strong className='' dangerouslySetInnerHTML={{__html: post.title.rendered}}></strong>
+                        <h1 className='' dangerouslySetInnerHTML={{__html: post.title.rendered}}></h1>
                         <p className='' dangerouslySetInnerHTML={{__html: post.excerpt.rendered}}></p>
 
                         <Link to={`/posts/${post.slug}`}>Acessar</Link>

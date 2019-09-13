@@ -1,5 +1,6 @@
 .post-list {
-    max-width: 700px;
+    max-width: 750px;;
+    max-height: 100%;
     margin: 20px auto 0;
     padding: 0 20px;
 }
@@ -14,7 +15,18 @@
 
 .post-list article p {
     font-size: 16px;
-    color: #999;
+    color: rgb(53, 53, 53);
+    margin-top: 5px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.post-list article h1 {
+    font-size: 26px;
+    color: #da552f;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 15px;
     margin-top: 5px;
     line-height: 24px;
 }
@@ -41,7 +53,8 @@
 }
 
 .post-list article img {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
     box-shadow: 4px 4px #da552f;
     margin-bottom: 10px;
 }

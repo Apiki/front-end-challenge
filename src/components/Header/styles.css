@@ -1,5 +1,7 @@
 header#main-header img{
-    width: 20%;
+    width:200px;
     align-self: center;
+    padding-top: 10px;
+    padding-left: 30px;
     height: auto;
 }
