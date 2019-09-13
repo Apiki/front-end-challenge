@@ -38,10 +38,9 @@ export default class Main extends Component{
                 
                 {posts.map(post => (
                     <article key={post.slug}>
-                        <strong>{post.title.rendered}</strong><br/>
+                        <h1 className='' dangerouslySetInnerHTML={{__html: post.title.rendered}}></h1><br/>
                         <img src={post._embedded['wp:featuredmedia'][0].source_url}/><br/>
-                        <p>{post.excerpt.rendered}</p>
-                        <p>{post.content.rendered}</p>
+                        <p className='' dangerouslySetInnerHTML={{__html: post.content.rendered}}></p>
                     </article>
                 ))}
 

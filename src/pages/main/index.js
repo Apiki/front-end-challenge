@@ -48,8 +48,8 @@ export default class Main extends Component{
                     <article key={post.id}>
                         <img src={post._embedded['wp:featuredmedia'][0].source_url}/>
                         <br/>
-                        <strong>{post.title.rendered}</strong>
-                        <p>{post.excerpt.rendered}</p>
+                        <strong className='' dangerouslySetInnerHTML={{__html: post.title.rendered}}></strong>
+                        <p className='' dangerouslySetInnerHTML={{__html: post.excerpt.rendered}}></p>
 
                         <Link to={`/posts/${post.slug}`}>Acessar</Link>
                     </article>
