@@ -1,26 +1,50 @@
 import React, { Component } from "react";
-import api from '../../services/api';
-import styles from './styles.css';
-import { tsLiteralType } from "@babel/types";
+import api from "../../services/api";
+import { Link } from 'react-router-dom';
 
-export default class Post extends Component {
+import './styles.css';
+
+export default class Main extends Component{
     state = {
-        post: {},
+        posts: [],
+        postInfo: {},
+        page: 1,
+    };
+      
+    componentDidMount() {
+        this.loadPost();
+    }
+
+    loadPost = async () => {
+        const {slug} = this.props.match.params;
+
+        const response = await api.get(`/posts?_embed&slug=${slug}`);
+
+        const {data, ...postInfo} = response;
+
+        this.setState({posts: data,
+        postInfo,
+        post: [],
+        page: 1,
+        totalPages: parseInt(response.headers['x-wp-totalpages']) 
+        });
     };
 
-    async componentWillMount() {
-        const { slug } = this.props.match.params;
-        const response = await api.get(`/posts?_embed&slug=${slug}`);
-   
-        this.setState({ post: response.data[0] });
-    }
     render() {
-        const {post} = this.state;
+        const { posts, page, postInfo, totalPages } = this.state;
 
         return (
             <div className="post-info">
-                <h1>{post.id}</h1>
-                <h2>{post.slug}</h2>
+                
+                {posts.map(post => (
+                    <article key={post.slug}>
+                        <strong>{post.title.rendered}</strong><br/>
+                        <img src={post._embedded['wp:featuredmedia'][0].source_url}/><br/>
+                        <p>{post.excerpt.rendered}</p>
+                        <p>{post.content.rendered}</p>
+                    </article>
+                ))}
+
             </div>
         );
     }
