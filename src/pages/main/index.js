@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import api from "../../services/api";
 import { Link } from 'react-router-dom';
 
@@ -15,26 +15,32 @@ export default class Main extends Component{
         this.loadPosts();
     }
 
-    loadPosts = async (page = 1) => {
-        const response = await api.get(`/posts?_embed&categories=518&page=${page}`);
+    loadPosts = async () => {
+        const response = await api.get(`/posts?_embed&categories=518`);
 
         const {data, ...postInfo} = response;
 
-        this.setState({posts: data, postInfo, page});
+        this.setState({posts: data,
+        postInfo,
+        post: [],
+        page: 1,
+        totalPages: parseInt(response.headers['x-wp-totalpages']) 
+        });
     };
 
-    loadMore = () => {
-        const { page, postInfo} = this.state;
-
-        if (page === `x-wp-totalpages`) return;
-
-        const pageNumber = page + 1;
-
-        this.loadPosts(pageNumber);
+    loadMore = async () => {
+        if (this.state.page < this.state.totalPages) {
+        const page = this.state.page + 1
+        const response = await api.get(`posts?_embed&categories=518&page=${page}`)
+        this.setState({
+            posts: [...this.state.posts, ...response.data],
+            page: page,
+        })
+        } else return;
     };
 
     render() {
-        const { posts, page, postInfo } = this.state;
+        const { posts, page, postInfo, totalPages } = this.state;
 
         return (
             <div className="post-list">
@@ -48,7 +54,7 @@ export default class Main extends Component{
                     </article>
                 ))}
                 <div className="actions">
-                    <button disabled={page === `x-wp-totalpages`} onClick={this.loadMore}>{this.state.page} - Carregar mais...</button>
+                    <button disabled={page === totalPages} onClick={this.loadMore}>Carregar mais...</button>
                 </div>
             </div>
         );

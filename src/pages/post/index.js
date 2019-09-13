@@ -1,5 +1,6 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import api from '../../services/api';
+import styles from './styles.css'
 
 export default class Post extends Component {
     state = {
@@ -8,10 +9,9 @@ export default class Post extends Component {
 
     async componentDidMount() {
         const { slug } = this.props.match.params;
-
         const response = await api.get(`/posts?_embed&slug=${slug}`);
-    
-        this.setState({ post: response.data});
+        let post = response.data[0];
+        console.log(post);
     }
 
     render() {
@@ -19,12 +19,11 @@ export default class Post extends Component {
         const { post } = this.state;
 
         return (
-            <div className="post_info">
-                <h1>{post.title.rendered}</h1>
-                <p>{post.excerpt.rendered}</p>
-
-
+            <div className="post-info">
+                <h1>{post.id}</h1>
+                <h2>{post.slug}</h2>
+                                
             </div>
         );
-    }
+        }
 }

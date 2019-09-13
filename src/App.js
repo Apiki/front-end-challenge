@@ -5,11 +5,13 @@ import "./styles.css";
 
 import Header from './components/Header';
 import Main from './pages/main';
+import Footer from './components/Footer';
 
 const App = () => (
   <div className="App">
     <Header />
     <Routes />
+    <Footer />
   </div>
 );
 

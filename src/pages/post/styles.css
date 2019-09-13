@@ -1,0 +1,20 @@
+.post-info {
+    max-width: 95%;
+    margin: 20px 0 20px;
+    padding: 20px;
+    margin-right: 3%;
+    margin-left: 3%;
+    background: #FFF;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.post-info h1 {
+    font-size: 32px;
+}
+
+.post-info p {
+    color: #666;
+    line-height: 24px;
+    margin-top: 5px;
+}
