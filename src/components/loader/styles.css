@@ -1,0 +1,22 @@
+.circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 30%;
+    background-color: #2E9AFE;
+    margin: 20px auto;
+}
+.animate {
+    animation-name: girando;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+     animation-timing-function: linear;
+ }
+ 
+ @keyframes girando {
+    from {
+     transform: rotate(0deg);
+   }
+   to {
+     transform: rotate(360deg);
+   }
+ }

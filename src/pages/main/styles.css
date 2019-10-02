@@ -1,0 +1,82 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.mainPage{
+    width: 100%; 
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+}
+
+.mainPage__title{
+    background-color: #0B243B;
+    color: #fff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%; 
+}
+.postingArea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    margin: 20px 20px 20px 20px;
+    width: 350px;
+    text-align: center;
+    transition:all 0.3s ease;
+    opacity: 0.9;
+}
+
+.card:hover{
+    opacity: 1;
+}
+
+.card__title {
+    color: black;
+    font-size: 18px;
+    margin: 10px;
+    width: 100%;
+}
+
+.card__text{
+    max-width: 100%;
+    font-size: 14px;
+    color: #5B5A59;
+}
+
+.card img {
+    max-width: 99%;
+    min-height: 235px;
+    max-height: 235px;
+    border-radius: 5%;
+}
+
+button{
+    height: 40px;
+    width: 300px;
+    border: none;
+    background-color:#0B243B;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px 0px 10px 0px;
+}
+button:hover{
+    opacity: 0.90;
+}
+
+.button--disabled{
+    background-color: #5B5A59;
+    cursor: default;    
+}
+
+a:link{
+    text-decoration: none;
+}
+
+a{
+    color: inherit;
+}

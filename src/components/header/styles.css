@@ -1,0 +1,15 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.header{
+    width: 95%;
+    height: 35px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.header__img{
+    height: 100%;
+}
