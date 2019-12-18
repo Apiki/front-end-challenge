@@ -1,10 +1,20 @@
 const url_endp = 'https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518';
-
-function connectAPI() {
-
-}
-
 const wrap = document.querySelector('.last-posts');
+
+async function connectAPI(url) {
+    await fetch(url)
+        .then(res => {
+            res.json();
+        })
+
+        .then(data => {
+            console.log(data);
+        })
+
+        .catch(err => {
+            console.log('erro: ', err.statusText);
+        })
+}
 
 const section = document.createElement('section');
 const image = document.createElement('img');
@@ -19,22 +29,4 @@ section.appendChild(title);
 
 wrap.appendChild(section);
 
-fetch('https://blog.apiki.com/wp-json/wp/2/')
-    .then(res => {
-        if(res.ok) {
-            return res.json();
-        } else {
-            return Promise.reject({
-                status: res.status,
-                statusText: res.url
-            });
-        }
-    })
-
-    .then(data => {
-        console.log(data);
-    })
-
-    .catch(err => {
-        console.log('erro: ', err.statusText);
-    })
+connectAPI(url_endp);
