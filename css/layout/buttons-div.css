@@ -1,0 +1,25 @@
+/* Estilização da div contendo os botões principais*/
+
+.main-buttons {
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main-buttons button {
+    padding: 10px 40px;
+    margin: 10px;
+    border: none;
+    background-color: #5882FA;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer
+}
+
+
+

@@ -1,0 +1,37 @@
+/* Estilização da barra de navegação */
+
+.main-navigation {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 20px 130px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-navigation img {
+    width: 120px;
+    height: 40px;
+}
+
+.main-navigation h1 {
+    color: #5882FA;
+}
+
+/* Ajustes de responsividade */
+
+@media (max-width: 800px) {
+    .main-navigation {
+        padding: 20px;
+    }
+
+    .main-navigation img {
+        width: 90px;
+        height: 30px;
+    }
+
+    .main-navigation h1 {
+        text-align: right;
+        font-size: 14px;
+    }
+}

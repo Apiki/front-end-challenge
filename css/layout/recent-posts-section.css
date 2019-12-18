@@ -1,0 +1,98 @@
+/* Estilização da seção de posts recentes */
+
+.recent-posts {
+    padding-top:120px;
+    padding-bottom: 60px;
+    min-height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recent-posts h1 {
+    color: #2b2b2b;
+}
+
+.recent-posts h1::after {
+    background-color: #F5BB00;
+    content: "";
+    display: block;
+    height: 2px;
+    margin-top: 20px;
+}
+
+.container-card { 
+    padding-top: 40px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: 1px solid #e6e6e6;
+    width: 340px;
+    height: 460px;
+    margin: 10px;
+
+    flex-shrink: 1;
+    flex-grow: 1;
+
+    animation: show-cards 1.5s;
+}
+
+.card:hover {
+    transform: translate3d(0, -4px, 0);
+    transition: 0.5s;
+} 
+
+.card__image {
+    width: 100%;
+    min-height: 200px;
+}
+
+.card__contentText {
+    padding: 20px;
+}
+
+.card__title {
+    font-size: 16px;
+    color: #2b2b2b;
+    font-weight: bold;
+}
+
+.card__intro {
+    margin: 20px 0;
+    font-size: 16px;
+    color: #a4a4a4;
+    line-height: 1.3;
+}
+
+.card__contentText label {
+    font-size: 16px;
+    color: #a4a4a4;
+}
+
+.card__author{
+    color: #F57E20;
+}
+
+@keyframes show-cards {
+    0% {opacity:0;}
+    100% {opacity: 1}
+}
+
+/* Ajustes de responsividade */
+
+@media (max-width: 740px){
+    .card {
+        margin: 10px 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .recent-posts {
+        padding: 80px 10px;
+    }
+}
