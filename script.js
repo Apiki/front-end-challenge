@@ -6,31 +6,33 @@ async function connectAPI(url) {
     await fetch(url)
         .then(
             async (res) => {
+                console.log(res.headers.get('X-WP-TotalPages'));
                 return await res.json();
             }
         )
 
         .then(
             data => {
-                data.map((item) => {
-                    const section = document.createElement('section');
-                    const image = document.createElement('img');
-                    const title = document.createElement('h3');
-                    let text = document.createTextNode(item.title.rendered);
-
-                    image.setAttribute('src', item._embedded['wp:featuredmedia'][0].source_url);
-                    title.appendChild(text);
-
-                    section.appendChild(image);
-                    section.appendChild(title);
-                    wrap.appendChild(section);
-                });
+                generateCards(data);
             }
         )
 }
 
 function generateCards(data) {
+    data.map((item) => {
+        const section = document.createElement('section');
+        const image = document.createElement('img');
+        const title = document.createElement('h3');
+        let text = document.createTextNode(item.title.rendered);
 
+        image.setAttribute('src', item._embedded['wp:featuredmedia'][0].source_url);
+        title.appendChild(text);
+
+        section.appendChild(image);
+        section.appendChild(title);
+        wrap.appendChild(section);
+    });
+    console.log(data);
 }
 
 //const section = document.createElement('section');
