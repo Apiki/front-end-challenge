@@ -1,7 +1,7 @@
 const url_endp = 'https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518';
 var quantPages, countPage;
 
-countPage = 12;
+countPage = 1;
 
 const wrap = document.getElementById('app');
 
@@ -27,7 +27,6 @@ function render(data) {
     } else {
         renderPost(data);
     }
-    console.log(data.length);
 }
 
 function renderCards(data) {
@@ -36,9 +35,6 @@ function renderCards(data) {
 
     const h1 = document.createElement('h1');
     const h1Text = document.createTextNode('Últimas postagens');
-    const button = document.createElement('button');
-
-    button.innerText = "Carregar mais...";
 
     h1.appendChild(h1Text);
     wrap.appendChild(h1);
@@ -73,8 +69,8 @@ function renderCards(data) {
             connectAPI(`https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=${this.getAttribute('slug')}`);
         });
     });
-    button.onclick = nextPage(quantPages);
-    wrap.appendChild(button);
+    prevPage();
+    nextPage();
 }
 
 function renderPost(data) {
@@ -101,14 +97,30 @@ function renderPost(data) {
     wrap.appendChild(article);
 }
 
-function nextPage(numPages) {
-    if(countPage <= numPages) {
-        
+function nextPage() {
+    if(countPage < quantPages) {
+        const button = document.createElement('button');
+        button.innerText = "Próximo";
+        button.onclick = () => {
+            countPage++;
+            console.log(countPage);
+            connectAPI(`https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=${countPage}`);
+        }
+        wrap.appendChild(button);
     }
 }
 
-function prevPage(numPages) {
-
+function prevPage() {
+    if(countPage > 1 && countPage <= quantPages) {
+        const button = document.createElement('button');
+        button.innerText = "Anterior";
+        button.onclick = () => {
+            countPage--;
+            console.log(countPage);
+            connectAPI(`https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=${countPage}`);
+        }
+        wrap.appendChild(button);
+    }
 }
 //const section = document.createElement('section');
 //const image = document.createElement('img');
