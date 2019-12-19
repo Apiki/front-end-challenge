@@ -1,40 +1,115 @@
 const url_endp = 'https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518';
+var quantPages, countPage;
 
-const wrap = document.querySelector('.last-posts');
+countPage = 12;
+
+const wrap = document.getElementById('app');
 
 async function connectAPI(url) {
     await fetch(url)
         .then(
             async (res) => {
-                console.log(res.headers.get('X-WP-TotalPages'));
+                quantPages = res.headers.get('X-WP-TotalPages');
                 return await res.json();
             }
         )
 
         .then(
             data => {
-                generateCards(data);
+                render(data);
             }
         )
 }
 
-function generateCards(data) {
-    data.map((item) => {
-        const section = document.createElement('section');
-        const image = document.createElement('img');
-        const title = document.createElement('h3');
-        let text = document.createTextNode(item.title.rendered);
-
-        image.setAttribute('src', item._embedded['wp:featuredmedia'][0].source_url);
-        title.appendChild(text);
-
-        section.appendChild(image);
-        section.appendChild(title);
-        wrap.appendChild(section);
-    });
-    console.log(data);
+function render(data) {
+    if(data.length > 1) {
+        renderCards(data);
+    } else {
+        renderPost(data);
+    }
+    console.log(data.length);
 }
 
+function renderCards(data) {
+    wrap.innerHTML = "";
+    document.title = "Blog para Desenvolvedores - Apiki";
+
+    const h1 = document.createElement('h1');
+    const h1Text = document.createTextNode('Últimas postagens');
+    const button = document.createElement('button');
+
+    button.innerText = "Carregar mais...";
+
+    h1.appendChild(h1Text);
+    wrap.appendChild(h1);
+
+    data.map((item) => {
+        const section = document.createElement('section');
+        const link = document.createElement('a');
+        const image = document.createElement('img');
+        const title = document.createElement('h3');
+
+        let text = document.createTextNode(item.title.rendered);
+
+        link.setAttribute('href', '#');
+        link.setAttribute('slug', item.slug);
+        link.setAttribute('class', 'link-slug');
+        image.setAttribute('src', item._embedded['wp:featuredmedia'][0].source_url);
+        
+        title.appendChild(text);
+
+        link.appendChild(image);
+        link.appendChild(title);
+
+        section.appendChild(link);
+        //connectAPI(`https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=${item.slug}`);
+
+        wrap.appendChild(section);
+    });
+
+    const items = document.querySelectorAll('.link-slug');
+    items.forEach((item) => {
+        item.addEventListener('click', function() {
+            connectAPI(`https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=${this.getAttribute('slug')}`);
+        });
+    });
+    button.onclick = nextPage(quantPages);
+    wrap.appendChild(button);
+}
+
+function renderPost(data) {
+    wrap.innerHTML = "";
+    console.log(data[0].title.rendered);
+    document.title = data[0].title.rendered;
+
+    const article = document.createElement('article');
+
+    const img = document.createElement('img');
+    img.setAttribute('src', data[0]._embedded['wp:featuredmedia'][0].source_url);
+    
+    const h1 = document.createElement('h1');
+    const text = document.createTextNode(data[0].title.rendered);
+    h1.appendChild(text);
+
+    const content = document.createElement('div');
+    content.innerHTML = data[0].content.rendered;
+
+    article.appendChild(img);
+    article.appendChild(h1);
+    article.appendChild(content);
+
+    wrap.appendChild(article);
+}
+
+function nextPage(numPages) {
+    if(countPage <= numPages) {
+        
+    }
+}
+
+function prevPage(numPages) {
+
+}
 //const section = document.createElement('section');
 //const image = document.createElement('img');
 //const title = document.createElement('h3');
