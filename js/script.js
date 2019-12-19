@@ -31,13 +31,14 @@ function render(data) {
 
 function renderCards(data) {
     wrap.innerHTML = "";
-    wrap.setAttribute('class', 'container flex');
+    wrap.setAttribute('class', 'container flex flex-wrap');
 
     document.title = "Blog para Desenvolvedores - Apiki";
 
     const h1 = document.createElement('h1');
     const h1Text = document.createTextNode('Últimas postagens');
 
+    h1.setAttribute('class', 'title');
     h1.appendChild(h1Text);
     wrap.appendChild(h1);
 
@@ -53,11 +54,12 @@ function renderCards(data) {
 
         link.setAttribute('href', '#');
         link.setAttribute('slug', item.slug);
-        link.setAttribute('class', 'link-slug');
+        link.setAttribute('class', 'link-slug card-link');
         
         image.setAttribute('src', item._embedded['wp:featuredmedia'][0].source_url);
         image.setAttribute('class', 'card-figure');
 
+        title.setAttribute('class', 'card-title');
         title.appendChild(text);
 
         link.appendChild(image);
