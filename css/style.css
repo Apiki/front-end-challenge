@@ -35,12 +35,41 @@ body {
 
 .l-flex {
     display: flex;
+    flex-direction: row;
+}
+.l-flex-wrap {
     flex-wrap: wrap;
 }
+.l-flex-item-grow-1 {
+    flex-grow: 1;
+}
+
 /* Module Rules */
-/* naming -> its name itself
+/* naming -> its name itself */
+.container {
+    width: 100%;
+    padding: 1.5rem 3rem;
+}
+
+.card {
+    width: 30%;
+}
+.card-link {
+
+}
+.card-figure {
+    width: 400px;
+    height: auto;
+}
+.card-title {
+
+}
 
 /* State Rules */
-/* naming -> is-....
+/* naming -> is-... */
+/* naming -> is-module-... */
+.is-hidden {
+    display: none;
+}
 
 /* Theme Rules */
