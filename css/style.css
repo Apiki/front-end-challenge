@@ -22,9 +22,16 @@ time, mark, audio, video {
     font-size: 100%;
 }
 
+body {
+    background-color: #ffffff;
+}
+
 /* Layout Rules */
 /* naming -> l-... */
 /* naming -> grid-... */
+.l-inline {
+    display: inline;
+}
 
 /* Module Rules */
 /* naming -> its name itself
