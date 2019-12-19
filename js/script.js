@@ -86,6 +86,15 @@ function renderPost(data) {
     console.log(data[0].title.rendered);
     document.title = data[0].title.rendered;
 
+    const a = document.createElement('a');
+    a.innerText = "< Voltar aos posts";
+    a.onclick = () => {
+        connectAPI(url_endp);
+    }
+    a.setAttribute('href', '#');
+    a.setAttribute('class', 'back-link');
+    wrap.appendChild(a);
+
     const article = document.createElement('article');
 
     const img = document.createElement('img');
@@ -114,6 +123,7 @@ function nextPage() {
             console.log(countPage);
             connectAPI(`https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=${countPage}`);
         }
+        button.setAttribute('class', 'button');
         wrap.appendChild(button);
     }
 }
@@ -127,6 +137,7 @@ function prevPage() {
             console.log(countPage);
             connectAPI(`https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=${countPage}`);
         }
+        button.setAttribute('class', 'button');
         wrap.appendChild(button);
     }
 }
