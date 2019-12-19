@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
 /* Base Rules */
 * {
     box-sizing: border-box;
@@ -24,34 +25,39 @@ time, mark, audio, video {
 
 body {
     background-color: #ffffff;
+    font-family: 'Raleway', sans-serif;
 }
 
 h1 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+}
+h2 {
+    font-size: 1.4rem;
+}
+h3 {
+    font-size: 1.3rem;
+}
+a {
+    text-decoration: none;
 }
 
 /* Layout Rules */
 /* naming -> l-... */
 /* naming -> grid-... */
-.l-inline {
-    display: inline;
-}
-
+/* naming -> flex-... */
 .flex {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 .flex-wrap {
     flex-wrap: wrap;
 }
-.flex-item-grow-1 {
-    flex-grow: 1;
-}
-
 /* Module Rules */
 /* naming -> its name itself */
 .title {
     width: 100%;
+    margin-bottom: 2rem;
 }
 
 .container {
@@ -60,24 +66,35 @@ h1 {
 }
 
 .card {
-    width: 50%;
+    width: 48%;
+    margin-bottom: 3rem;
 }
 .card-link {
-
+    color: #2e2e2e;
 }
 .card-figure {
     width: 100%;
-    height: 400px;
+    height: 300px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
 }
 .card-title {
-
+    font-size: 1.1rem;
 }
-
+.button {
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #2e2e2e;
+    border: #2e2e2e 1px solid;
+}
+.button:hover {
+    background-color: #2e2e2e;
+    color: #ffffff;
+}
 /* State Rules */
 /* naming -> is-... */
 /* naming -> is-module-... */
-.is-hidden {
-    display: none;
-}
 
 /* Theme Rules */
