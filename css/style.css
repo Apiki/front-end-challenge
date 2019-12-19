@@ -33,6 +33,10 @@ body {
     display: inline;
 }
 
+.l-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
 /* Module Rules */
 /* naming -> its name itself
 
