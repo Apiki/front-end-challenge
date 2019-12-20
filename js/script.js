@@ -96,19 +96,23 @@ function renderPost(data) {
     wrap.appendChild(a);
 
     const article = document.createElement('article');
+    article.setAttribute('class', 'container post');
 
     const img = document.createElement('img');
     img.setAttribute('src', data[0]._embedded['wp:featuredmedia'][0].source_url);
-    
+    img.setAttribute('class', 'container-image post-image');
+
     const h1 = document.createElement('h1');
     const text = document.createTextNode(data[0].title.rendered);
     h1.appendChild(text);
+    h1.setAttribute('class', 'post-title');
 
     const content = document.createElement('div');
+    content.setAttribute('class', 'post-content');
     content.innerHTML = data[0].content.rendered;
 
-    article.appendChild(img);
     article.appendChild(h1);
+    article.appendChild(img);
     article.appendChild(content);
 
     wrap.appendChild(article);

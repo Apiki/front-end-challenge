@@ -25,6 +25,7 @@ time, mark, audio, video {
 
 body {
     background-color: #ffffff;
+    line-height: 1.8rem;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -53,18 +54,20 @@ a {
 .flex-wrap {
     flex-wrap: wrap;
 }
+
 /* Module Rules */
 /* naming -> its name itself */
 .title {
     width: 100%;
     margin-bottom: 2rem;
 }
-
 .container {
     width: 100%;
     padding: 1.5rem 3rem;
 }
-
+.container-image {
+    width: 100%;
+}
 .card {
     width: 48%;
     margin-bottom: 3rem;
@@ -93,8 +96,36 @@ a {
     background-color: #2e2e2e;
     color: #ffffff;
 }
+.back-link {
+    color: #2e2e2e;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+.back-link:hover {
+    color: #868686;
+}
+.post {
+    text-align: justify;
+}
+.post-title {
+    font-size: 2.2rem;
+    text-align: center;
+    line-height: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+.post-image {
+    margin-bottom: 1.5rem;
+}
+.post-content a {
+    text-decoration: underline;
+}
+.post-content h2 {
+    margin-top: 3.5rem;
+    margin-bottom: 1.2rem;
+}
 /* State Rules */
 /* naming -> is-... */
 /* naming -> is-module-... */
+
 
 /* Theme Rules */
