@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body{
+    margin: 0;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+img.post-thumbnail {
+    display: block;
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+img.post-thumbnail:hover {
+    -webkit-filter: brightness(1.07);
+    filter: brightness(1.07);
+}
+
+a.post {
+    width: calc(30% - 22.5px);
+    display: inline-block;
+    vertical-align: top;
+    margin: 30px;
+    text-decoration: none;
+}
+
+h3.post-title{
+    padding: 30px 20px;
+    background-color: #fff;
+    margin: 0;
+    text-transform: none;
+    text-decoration: none;
+    color: #3e3939;
+}
+
+.card-list{
+    background-color: #e0e0e0;
+    padding: 20px;
+} 
+
+.button-area{
+    padding: 30px;
+    text-align: center;
+}
+
+.bto{
+    padding: 15px 50px;
+    font-size: 16px;    
+    background-color: #848585;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+}
+
+.no-load{
+    display: none;
+}
+
+.logo-apiki {
+    width: 230px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+h2{
+    text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+    a.post{
+        margin: 26px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    a.post{
+        width: calc(45% - 22.5px);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    a.post{
+        width: calc(100% - 22.5px);
+        margin: 8px;
+    }
+}
