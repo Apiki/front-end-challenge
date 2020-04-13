@@ -1,0 +1,43 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #eee;
+  border-radius: 25px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,.3);
+  overflow: hidden;
+  transition: transform .5s;
+
+  .card-info {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    padding: 6% 8%;
+
+    .card-description {
+      flex: 0.9;
+
+      .card-title {
+        font-weight: bold;
+      }
+
+      .card-date {
+        color: gray;
+      }
+    }
+
+    .card-details-link {
+      flex: 0.1;
+      padding: 2%;
+    }
+  }
+
+  &:hover{
+    .card-image {
+      opacity: 1;
+    }
+  }
+}
+
+.scale-on-hover:hover {
+  transform: scale(1.02);
+}

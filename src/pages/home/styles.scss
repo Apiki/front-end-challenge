@@ -1,0 +1,27 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+
+  .post-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .button-load {
+    align-self: center;
+    background-color: #ccc;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    opacity: 0.9;
+    padding: 3% 6%;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
