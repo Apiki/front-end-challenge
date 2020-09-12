@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'ibm_plex_sansregular';
+  src: url('../fonts/ibmplexsans-regular-webfont.eot');
+  src: url('../fonts/ibmplexsans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/ibmplexsans-regular-webfont.woff2') format('woff2'),
+       url('../fonts/ibmplexsans-regular-webfont.woff') format('woff'),
+       url('../fonts/ibmplexsans-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-ibm-plex {
+  font-family: ibm_plex_sansregular, Arial, Helvetica, sans-serif;
+}
+
+.btn-default {
+  background-color: #8257E5;
+  border: 2px solid #8257E5;
+  border-radius: 4px;
+  color: #E2E1E6;
+  font-weight: 800;
+  outline: none;
+  padding: 13px 19px;
+}
+
+.btn-default:hover {
+  background-color: #E2E1E6;
+  color: #8257E5; 
+  cursor: pointer;
+}

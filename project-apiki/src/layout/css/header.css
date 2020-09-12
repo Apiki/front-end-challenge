@@ -1,0 +1,122 @@
+nav, ul, li, a, header, div, img, button {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #121214;
+  min-width: 320px;
+}
+
+header {
+  background-color: #E2E1E6;
+}
+
+.menu-hamburger-btn {
+  background-color: #E2E1E6;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  height: 24px;
+  justify-content: space-between;
+  outline: none;
+  width: 31px;
+}
+
+.menu-hamburger-btn div {
+  border: 2px solid #121214;
+  width: 31px;
+}
+
+.header-container {
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 23px;
+}
+
+.nav-bar-list-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-bar-list-container li {
+  list-style: none;
+  padding: 0 17px;
+}
+
+.nav-bar-list-container a {
+  color: #121214;
+  font-size: 13px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.nav-bar-list-container a:hover {
+  color: #4f4f55;
+}
+
+
+@media (min-width: 1199px) {
+  .menu-hamburger-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav-bar {
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+  }
+
+  @keyframes displayNav {
+    from {
+      left: -100%;
+    }
+    to {
+      left: 0;
+    }
+  }
+
+  @keyframes coverNav {
+    from {
+      left: 0;
+    }
+    to {
+      left: -100%;
+    }
+  }
+
+  .nav-bar-list-container {
+    align-items: center;
+    background-color: #E2E1E6;
+    border-radius: 0 0 40px 0;
+    box-shadow: 5px 0px 2px #E2E1E6;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    width: 50%;
+  }
+
+  .nav-bar-list-container li {
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav-bar-list-container {
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .btn-register {
+    display: none;
+  }
+}
