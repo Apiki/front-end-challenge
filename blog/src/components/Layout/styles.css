@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+
+.header-container{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+}
+
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.nav-bar h1{
+    color: white;
+}
+
+.nav-bar h1 a{
+    font-family: 'Ranchers', cursive;;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2;
+}
+
+.nav-bar h1 a:hover{
+    opacity: 0.6;
+}
+
+
