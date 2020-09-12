@@ -20,12 +20,13 @@ header {
   height: 24px;
   justify-content: space-between;
   outline: none;
-  width: 31px;
+  width: 30px;
 }
 
 .menu-hamburger-btn div {
   border: 2px solid #121214;
-  width: 31px;
+  transition: all 0.4s linear;
+  width: 30px;
 }
 
 .header-container {
