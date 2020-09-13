@@ -1,4 +1,4 @@
-const url = 'https://blog.apiki.com/wp-json/wp/v2/';
+const url = 'https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518';
 
 const blogApikiapi = () => (
   fetch(url)

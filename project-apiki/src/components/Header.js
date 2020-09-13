@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import '../layout/css/header.css';
 import apikiIcon from '../layout/images/marca-apiki.png';
 
@@ -53,7 +54,7 @@ const NavBar = (navStyle) => {
     >
       <ul className="nav-bar-list-container font-ibm-plex">
         {navLinks.map((link) =>
-          <li key={link}><a href="#">{link}</a></li>
+          <li key={link}><Link to='/'>{link}</Link></li>
         )}
       </ul>
     </nav>
@@ -63,11 +64,7 @@ const NavBar = (navStyle) => {
 const Header = () => {
   const [navDisplay, setNavDisplay] = useState(true);
   const [navStyle, setNavStyle] = useState({});
-  const [transitionMenuHambuger, setTransitionMenuHambuger] = useState({
-    lineOne: '',
-    lineTwo: '',
-    lineThree: '',
-  });
+  const [transitionMenuHambuger, setTransitionMenuHambuger] = useState({});
 
   useEffect(() => {
     if (window.innerWidth < 1201) {
@@ -86,7 +83,7 @@ const Header = () => {
     <header>
       <div className="header-container">
         {menuHamburgerBtn(setNavDisplay, navDisplay, setNavStyle, transitionMenuHambuger, setTransitionMenuHambuger)}
-        <img className="apiki-icon" src={apikiIcon} alt="ícone Apiki" />
+        <Link to="/"><img className="apiki-icon" src={apikiIcon} alt="ícone Apiki" /></Link>
         {navDisplay && NavBar(navStyle)}
         <button className="btn-default font-ibm-plex btn-register">CADASTRAR E-MAIL</button>
       </div>

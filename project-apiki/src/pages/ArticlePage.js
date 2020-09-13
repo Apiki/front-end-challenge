@@ -1,16 +1,14 @@
 import React from 'react';
 import Header from '../components/Header';
-import ArticlesPrev from '../components/ArticlesPrev';
 import '../layout/css/sharedStyle.css';
 
-const HomePage = () => {
+const ArticlePage = () => {
   return (
     <>
       <Header />
-      <ArticlesPrev />
     </>
   );
 }
 
 
-export default HomePage;
+export default ArticlePage;
