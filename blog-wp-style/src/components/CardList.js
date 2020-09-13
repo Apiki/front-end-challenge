@@ -18,20 +18,12 @@ const CardList = (props) => {
     }
   });
     return (
-      // Opção 1
-      // cards.map((e, index) =>
-      // <div key={`${e.title}${index}`}>
-      //   <img src={e.imagemDestacada} width="200px"></img>
-      //   <p>{e.titulo}</p>
-      //   <a href={`${linkToPage}${e.link}`}>Leia</a>
-      // </div>)
-      // Opção 2
       cards.map((e, index) =>
-      <div key={`${e.title}${index}`}>
-        <img src={e.imagemDestacada} width="200px" alt={e.title}></img>
-        <p>{e.titulo}</p>
-        <a href={`/${e.link}`}>Leia</a>
-      </div>)
+        <div key={`${e.title}${index}`}>
+          <img src={e.imagemDestacada} width="200px" alt={e.title}></img>
+          <p>{e.titulo}</p>
+          <a href={`/${e.link}`}>Leia</a>
+        </div>)
     );
 };
 

@@ -1,4 +1,4 @@
-import { RECEIVE_API_BLOG } from '../actions/index';
+import { RECEIVE_API_BLOG, RECEIVE_API_ARTICLE } from '../actions/index';
 
 const INITIAL_STATE = {};
 
@@ -9,6 +9,11 @@ const articles = (state = INITIAL_STATE, action) => {
         ...state,
         list: action.content,
       };
+    case RECEIVE_API_ARTICLE:
+        return {
+          ...state,
+          article: action.content,
+        };
     default: return state;
   }
 };
