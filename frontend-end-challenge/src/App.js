@@ -5,9 +5,6 @@ import { Home, Post } from './pages';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Desafio aceito!</h1>
-      </header>
       <Switch>
         <Route exact path="/">
           <Home />
