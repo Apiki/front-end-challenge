@@ -24,9 +24,7 @@ const fetchBlogPosts = async (page = 1) => {
 // Função para obtenção de post especifíco
 const fetchBlogPost = async (slug) => {
   try {
-    const response = await api.get(
-      `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=${slug}`,
-    );
+    const response = await api.get(`posts?_embed&slug=${slug}`);
     const { data } = response;
 
     return data;

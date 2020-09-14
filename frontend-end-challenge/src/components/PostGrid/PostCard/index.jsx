@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import NoImage from '../../../assets/No-image-available.png';
 
 const PostCard = ({ slug, title, _embedded }) => {
   return (
@@ -8,11 +9,16 @@ const PostCard = ({ slug, title, _embedded }) => {
       <div>
         <img
           src={
-            _embedded['wp:featuredmedia'][0].media_details.sizes.thumbnail
-              .source_url
+            _embedded['wp:featuredmedia']
+              ? _embedded['wp:featuredmedia'][0].media_details.sizes.thumbnail
+                  .source_url
+              : NoImage
           }
           alt={
-            _embedded['wp:featuredmedia'][0].media_details.sizes.thumbnail.file
+            _embedded['wp:featuredmedia']
+              ? _embedded['wp:featuredmedia'][0].media_details.sizes.thumbnail
+                  .file
+              : 'Imagem indisponível'
           }
         />
       </div>
