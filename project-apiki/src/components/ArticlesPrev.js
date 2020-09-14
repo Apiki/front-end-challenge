@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import blogApikiapi from '../services/blogApikiApi';
+import { blogApikiContext } from '../hooks/blogApikiContext';
+import { blogApikiFirstApi, testHeader } from '../services/blogApikiApi';
+import Loading from './Loading';
 import '../layout/css/sharedStyle.css';
 import '../layout/css/articlesPrev.css';
 
@@ -30,7 +32,7 @@ const ArticleItem = (articlePrev) => {
   );
 }
 
-const asideDestaks = (articles) => {
+const asideDestaks = (articles, marginTopdestaksPosition) => {
   return (
     <aside className="articles-prev-destaks">
       <h1 className="articles-prev-destaks-title">Destaques da semana</h1>
@@ -66,25 +68,24 @@ const loadMoreBtn = () => {
 const ArticlesPrev = () => {
 
   const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-  let windowSize;
+  const {
+    article,
+    setArticle
+  } = useContext(blogApikiContext);
 
   useEffect(() => {
-    blogApikiapi()
+    testHeader().then((res) => console.log('aqui', res))
+    blogApikiFirstApi()
       .then((res) => {
         setData(res)
         console.log(res)
-        windowSize = window.innerWidth;
-        console.log('tamanho inicial', windowSize)
+        setIsLoading(false)
       });
   }, []);
 
-  window.addEventListener('resize', () => {
-    windowSize = window.innerWidth;
-    console.log(windowSize)
-  })
-
-
+  if (isLoading) return <Loading />
 
   return (
     <div className="articles-prev-main-container">

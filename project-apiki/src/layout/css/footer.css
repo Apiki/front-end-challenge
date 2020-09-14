@@ -1,0 +1,9 @@
+div, footer, p, a {
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  background-color: #E6E1E6;
+  height: 497px;
+}

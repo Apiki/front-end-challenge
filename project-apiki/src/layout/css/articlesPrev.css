@@ -30,15 +30,12 @@ div, img, h1, p, h2, article {
   width: 100%;
 }
 
-@media (max-width: 700px) {
-  
-}
-
 .articles-prev-contents-container {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1280px;
+  min-height: 500px;
   padding: 0 23px;
 }
 
@@ -127,7 +124,7 @@ div, img, h1, p, h2, article {
 
 .articles-prev-destaks a {
   color: #FEFEFE;
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: none;
 }
 
@@ -173,9 +170,6 @@ div, img, h1, p, h2, article {
     font-size: 22px;
   }
 
-  .articles-prev-destaks a {
-    font-size: 16.9px;
-  }
 }
 
 @media (max-width: 1315px) {
@@ -285,10 +279,6 @@ div, img, h1, p, h2, article {
 
   .articles-prev-destaks-title {
     font-size: 22px;
-  }
-
-  .articles-prev-destaks a {
-    font-size: 17px;
   }
 }
 

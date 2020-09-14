@@ -29,3 +29,22 @@
   color: #8257E5; 
   cursor: pointer;
 }
+
+.loading-container {
+  height: 600px;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.loading-text {
+  color: #FEFEFE;
+  font-size: 40px;
+  margin: 25px auto;
+  width: fit-content;
+}
+
+@media (max-width: 700px) {
+  .loading-text {
+    font-size: 30px;
+  }
+}
