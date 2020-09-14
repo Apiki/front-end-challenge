@@ -17,13 +17,13 @@ body {
 }
 
 :root {
-  --backgroundColor: #FFF;
-  --primary: #EE8622;
-  --primaryDarker: #E37811;
-  --primaryLighter: #F09843;
+  --backgroundColor: #fff;
+  --primary: #ee8622;
+  --primaryDarker: #e37811;
+  --primaryLighter: #f09843;
   --secondary: #009bdb;
   --secondaryDarker: #008bc5;
-  --secondaryLighter:#00aff8;
+  --secondaryLighter: #00aff8;
   --tertiary: #4a4a4a;
   --tertiaryDarker: #424242;
   --tertiaryLighter: #5c5c5c;
