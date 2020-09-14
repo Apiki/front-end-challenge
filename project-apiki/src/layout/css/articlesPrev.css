@@ -44,9 +44,9 @@ div, img, h1, p, h2, article {
   background-color: #212025;
   border-radius: 5px;
   display: flex;
-  height: 260px;
+  min-height: 260px;
   margin: 36px 0;
-  padding: 0 20px;
+  padding: 10px 20px;
   width: 750px;
 }
 
@@ -141,7 +141,7 @@ div, img, h1, p, h2, article {
 @media (max-width: 1365px) {
 
   .articles-prev-item {
-    height: 225px;
+    min-height: 225px;
     margin: 30px 0;
     width: 735px;
   }
@@ -175,7 +175,7 @@ div, img, h1, p, h2, article {
 @media (max-width: 1315px) {
   
   .articles-prev-item {
-    height: 215.8px;
+    min-height: 215.8px;
     width: 700px;
   }
   
@@ -191,7 +191,7 @@ div, img, h1, p, h2, article {
 @media (max-width: 1273px) {
 
   .articles-prev-item {
-    height: 200px;
+    min-height: 200px;
     width: 640px;
   }
 
@@ -203,12 +203,12 @@ div, img, h1, p, h2, article {
 @media (max-width: 1214px) {
 
   .articles-prev-item {
-    height: 190px;
+    min-height: 190px;
     width: 610px;
   }
 
   .articles-prev-item-img {
-    width: 180px;
+    width: 210px;
   }
 }
 
@@ -219,7 +219,8 @@ div, img, h1, p, h2, article {
   }
 
   .articles-prev-item {
-    height: 200px;
+    min-height: 250px;
+    padding: 10px 20px;
     width: auto;
   }
 
@@ -243,7 +244,7 @@ div, img, h1, p, h2, article {
 @media (max-width: 900px) {
 
   .articles-prev-item {
-    height: 150px;
+    min-height: 150px;
   }
 
   .articles-prev-item-subtitle {
@@ -315,7 +316,8 @@ div, img, h1, p, h2, article {
 @media (max-width: 450px) {
 
   .articles-prev-item {
-    height: 100px;
+    min-height: 100px;
+    padding: 0 10px;
   }
 
   .articles-prev-item-title {

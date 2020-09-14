@@ -1,38 +1,45 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { blogApikiContext } from '../hooks/blogApikiContext';
-import { blogApikiFirstApi, testHeader } from '../services/blogApikiApi';
+import {
+  blogApikiFirstApi,
+  blogApikiFirstApiNumberPages,
+  blogApikiLoadMoreapi
+} from '../services/blogApikiApi';
 import Loading from './Loading';
+import AsideDestaks from './AsideDestaks';
 import '../layout/css/sharedStyle.css';
 import '../layout/css/articlesPrev.css';
 
 
 const ArticleItem = (articlePrev) => {
+  let routeFeaturedMedia = articlePrev._embedded['wp:featuredmedia'];
   return (
     <article className="articles-prev-item">
       <Link to={`/${articlePrev.slug}`}>
         <img
           className="articles-prev-item-img"
-          src={articlePrev._embedded['wp:featuredmedia'][0].source_url}
-          alt={articlePrev._embedded['wp:featuredmedia'][0].alt_text}
+          src={routeFeaturedMedia ? routeFeaturedMedia[0].source_url : ''}
+          alt={routeFeaturedMedia ? routeFeaturedMedia[0].alt_text : ''}
         />
       </Link>
       <div className="articles-prev-item-text">
         <h1 className="articles-prev-item-title font-ibm-plex">
-          <Link to={`/${articlePrev.slug}`}>{articlePrev.title.rendered}</Link>
+          <Link
+            dangerouslySetInnerHTML={{ __html: articlePrev.title.rendered }}
+            to={`/${articlePrev.slug}`}></Link>
         </h1>
         <p className="articles-prev-item-author font-ibm-plex">
           <span >by</span> {articlePrev._embedded.author[0].name}
         </p>
-        <p className="articles-prev-item-subtitle font-ibm-plex">
-          {articlePrev.excerpt.rendered.substring(3, articlePrev.excerpt.rendered.length - 5)}
+        <p dangerouslySetInnerHTML={{ __html: articlePrev.excerpt.rendered }} className="articles-prev-item-subtitle font-ibm-plex">
         </p>
       </div>
     </article>
   );
 }
 
-const asideDestaks = (articles, marginTopdestaksPosition) => {
+const asideDestaks = (articles) => {
   return (
     <aside className="articles-prev-destaks">
       <h1 className="articles-prev-destaks-title">Destaques da semana</h1>
@@ -53,11 +60,20 @@ const asideDestaks = (articles, marginTopdestaksPosition) => {
   );
 }
 
-const loadMoreBtn = () => {
+const loadMoreBtn = (numberPages, pagesRendered, setPagesRendered, data, setData) => {
   return (
     <div className="load-more-btn">
       <button
         className="btn-default"
+        onClick={() => {
+          if (pagesRendered < numberPages) {
+            blogApikiLoadMoreapi(pagesRendered + 1)
+              .then((res) => {
+                setData([...data, ...res]);
+                setPagesRendered(pagesRendered + 1);
+              })
+          }
+        }}
       >
         Carregar mais
     </button>
@@ -67,8 +83,10 @@ const loadMoreBtn = () => {
 
 const ArticlesPrev = () => {
 
-  const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [data, setData] = useState([]);
+  const [numberPages, setNumberPages] = useState(0);
+  const [pagesRendered, setPagesRendered] = useState(1);
 
   const {
     article,
@@ -76,12 +94,14 @@ const ArticlesPrev = () => {
   } = useContext(blogApikiContext);
 
   useEffect(() => {
-    testHeader().then((res) => console.log('aqui', res))
+    blogApikiFirstApiNumberPages()
+      .then((number) => setNumberPages(parseInt(number, 10)));
     blogApikiFirstApi()
-      .then((res) => {
-        setData(res)
-        console.log(res)
-        setIsLoading(false)
+      .then((res) => res.json())
+      .then((json) => {
+        setData(json);
+        console.log(json);
+        setIsLoading(false);
       });
   }, []);
 
@@ -103,9 +123,15 @@ const ArticlesPrev = () => {
             <div key={articlePrev.id}>
               {ArticleItem(articlePrev)}
             </div>)}
-          {loadMoreBtn()}
+          {pagesRendered < numberPages && loadMoreBtn(
+            numberPages,
+            pagesRendered,
+            setPagesRendered,
+            data,
+            setData,
+          )}
         </div>
-        {asideDestaks(data)}
+        {AsideDestaks(data)}
       </div>
     </div>
   );
