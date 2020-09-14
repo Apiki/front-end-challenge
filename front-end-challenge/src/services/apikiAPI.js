@@ -1,6 +1,4 @@
-const BASE_URL = "https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518";
-
-const fetchBaseUrl = (pageNumber = 1) => fetch(`${BASE_URL}&page=${pageNumber}`);
+const fetchBaseUrl = (pageNumber) => fetch(`https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=${pageNumber}`);
 
 const getSinglePost = (slug) => fetch(`https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=${slug}`)
 .then((response) => response.json()

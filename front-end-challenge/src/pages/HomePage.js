@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import { fetchBaseUrl } from '../services/apikiAPI'
+import Header from '../components/Header';
 import Loading from '../components/Loading';
 import PostCard from '../components/PostCard';
 import MoreButton from '../components/MoreButton';
+import Footer from '../components/Footer';
 
 function HomePage() {
   const [posts, setPosts] = useState([]);
   const [totalPages, setTotalPages] = useState(0);
   const [loading, setLoading] = useState(true);
 
-  let { page } = useParams();
+  let { page = 1 } = useParams();
 
   useEffect(() => {
-    fetchBaseUrl(parseInt(page))
+    fetchBaseUrl(page)
       .then((response) => {
         for (let pair of response.headers.entries()) {
           if (pair[0] === 'x-wp-totalpages') setTotalPages(pair[1]);
@@ -25,25 +27,30 @@ function HomePage() {
         setPosts([ ...posts ]);
         setLoading(false);
       })
-  }, []);
+  });
 
   if (loading) return <Loading/>
-  console.log(posts);
   return (
-    <div className="HomePage container">
-
-      <h1 className="title text-center">Blog APIki</h1>
+    <div className="HomePage">
+      <Header/>
+     <div className="row">
+       <div className="col m-4">
+        <span className="text-muted ">{`Página ${page} de ${totalPages}`}</span>
+       </div>
+     </div>
       <div className="row mb-2">
-      { // Listagem dos 10 primeiros posts.
+      { // Listagem de 10 posts.
         posts.map((elem) => <PostCard key={elem.id} elem={elem}/> ) 
       }
       </div>
 
       <div className="row">
-          {
-            (page < totalPages) && <MoreButton page={page} />
+          { // Se o número referente a  página atual for menor que a quantidade de páginas, então mostrará o botão de carregar mais.
+            (parseInt(page) < parseInt(totalPages)) && <MoreButton page={page} /> 
           }
       </div>
+
+      <Footer/>
 
     </div>
   );
