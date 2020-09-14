@@ -6,6 +6,9 @@ import moment from 'moment';
 import useFetchData from '../../hooks/useFetchData';
 import { fetchBlogPost } from '../../services/apikiAPI';
 
+/* Para parsear as strings contendo html, oriundas da API,Preferi o uso da lib
+'html-react-parser' à propriedade 'dangerouslySetInnerHTML', isso 
+evita a possiblidade de  cross-site scripting (XSS) attack */
 export default function Post() {
   const { slug } = useParams();
   const { data, isFetching, error } = useFetchData(fetchBlogPost, slug);
