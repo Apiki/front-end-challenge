@@ -1,17 +1,11 @@
 import React from 'react';
 
-let xf = [];
+let xf = {};
 const CardList = (props) => {
-  const { content } = props;
+  const { content, actualPage } = props;
   // const linkToPage = 'https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=';  
   console.log('eu');
-  content.map((e) => {
-    if (xf.includes(e)) {
-      console.log('Não faça nada!');
-    } else {
-      xf = [...xf, ...content];
-    }
-  });
+  xf = {...xf, [actualPage]: content}
   console.log('xf ', xf);
   const cards = content.map((e) =>  {
    if (!e._embedded['wp:featuredmedia']) {

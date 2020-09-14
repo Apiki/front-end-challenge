@@ -65,7 +65,7 @@ const PaginaInicial = (props) => {
     return (
       <div>
       <div className="listContent">
-        <CardList content={resultado.content}/>
+        <CardList content={resultado.content, actualPage}/>
       </div>
       <div>
         {enablePrevBtn &&
