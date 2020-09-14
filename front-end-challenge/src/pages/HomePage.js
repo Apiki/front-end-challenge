@@ -1,15 +1,19 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from "react-router-dom";
 import { fetchBaseUrl } from '../services/apikiAPI'
 import Loading from '../components/Loading';
 import PostCard from '../components/PostCard';
+import MoreButton from '../components/MoreButton';
 
 function HomePage() {
   const [posts, setPosts] = useState([]);
   const [totalPages, setTotalPages] = useState(0);
   const [loading, setLoading] = useState(true);
 
+  let { page } = useParams();
+
   useEffect(() => {
-    fetchBaseUrl()
+    fetchBaseUrl(parseInt(page))
       .then((response) => {
         for (let pair of response.headers.entries()) {
           if (pair[0] === 'x-wp-totalpages') setTotalPages(pair[1]);
@@ -24,7 +28,7 @@ function HomePage() {
   }, []);
 
   if (loading) return <Loading/>
-  console.log(totalPages);
+  console.log(posts);
   return (
     <div className="HomePage container">
 
@@ -36,7 +40,9 @@ function HomePage() {
       </div>
 
       <div className="row">
-
+          {
+            (page < totalPages) && <MoreButton page={page} />
+          }
       </div>
 
     </div>

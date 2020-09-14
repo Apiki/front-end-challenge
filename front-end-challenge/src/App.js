@@ -15,6 +15,9 @@ function App() {
        <Route path="/post/:slug">
           <PostPage/>
         </Route>
+        <Route path="/:page">
+         <HomePage/>
+        </Route>
         <Route path="/">
          <HomePage/>
         </Route>
