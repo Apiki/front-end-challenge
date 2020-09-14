@@ -2,25 +2,46 @@ import React from 'react';
 
 const ArticleShow = (props) => {
   const { content } = props;
+  let imagemArtigo, avatarAutor, nomeAutor, bioAutor;
   // const linkToPage = 'https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=';  
   const article = content.map((e) =>  {
-    if (!e._embedded['wp:featuredmedia']) {
-      return { 
-        imagemDestacada: '',
-        titulo: e.title.rendered,
-        conteudo: e.content.rendered,
-        avatar: e._embedded.author[0].avatar_urls['96'],
-        autor: e._embedded.author[0].name,
-        bio: e._embedded.author[0].description,
-      }
+    if (!e._embedded) {
+      imagemArtigo = '';
+      avatarAutor = '';
+      nomeAutor = 'Desconhecido';
+      bioAutor = 'Bio desconhecida';
+    }
+    if (e._embedded.author[0].message && !e._embedded['wp:featuredmedia']) {
+      imagemArtigo = '';
+      avatarAutor = '';
+      nomeAutor = 'Desconhecido';
+      bioAutor = 'Bio desconhecida';
+    }
+    if (e._embedded.author[0].message && e._embedded['wp:featuredmedia']) {
+      imagemArtigo =  e._embedded['wp:featuredmedia'][0].source_url;
+      avatarAutor = '';
+      nomeAutor = 'Desconhecido';
+      bioAutor = 'Bio desconhecida';
+    }
+    if (!e._embedded.author[0].message && !e._embedded['wp:featuredmedia']) {
+      imagemArtigo =  '';
+      avatarAutor = e._embedded.author[0].avatar_urls['96'];
+      nomeAutor = e._embedded.author[0].name;
+      bioAutor = e._embedded.author[0].description;
+    }
+    if (!e._embedded.author[0].message && e._embedded['wp:featuredmedia']) {
+      imagemArtigo =  e._embedded['wp:featuredmedia'][0].source_url;
+      avatarAutor = e._embedded.author[0].avatar_urls['96'];
+      nomeAutor = e._embedded.author[0].name;
+      bioAutor = e._embedded.author[0].description;
     }
     return {
-      imagemDestacada: e._embedded['wp:featuredmedia'][0].source_url,
+      imagemDestacada: imagemArtigo,
       titulo: e.title.rendered,
       conteudo: e.content.rendered,
-      avatar: e._embedded.author[0].avatar_urls['96'],
-      autor: e._embedded.author[0].name,
-      bio: e._embedded.author[0].description,
+      avatar: avatarAutor,
+      autor: nomeAutor,
+      bio: bioAutor,
     }
   });
   return (

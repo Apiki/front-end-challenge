@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import ArticleShow from '../components/ArticleShow';
 import { getArticle } from '../services/APIService';
 import { receiveAPIArticleSuccess } from '../actions/index';
+import loadingImage from '../images/InternetSlowdown_Day.gif';
 
 let resultado;
 
@@ -28,7 +29,6 @@ const ArticleDetail = (props) => {
   const [dataReceived, setDataReceived] = useState(false);
   const [data, setData] = useState();
   const fetchComplement = location.pathname.substring(1, (location.pathname.length));
-  console.log(fetchComplement);
 
   const obtido = async (url) => await getArticle(url).then((data) => {
     setDataReceived(true);
@@ -61,7 +61,7 @@ const ArticleDetail = (props) => {
       </div>
     );
   }
-  return (<div>Loading</div>);
+  return (<div><img src={loadingImage} alt="loading"/></div>);
 };
 
 const mapDispatchToProps = dispatch => (

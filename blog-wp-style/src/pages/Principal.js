@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import CardList from '../components/CardList';
 import { getArticlesList  } from '../services/APIService';
 import { receiveAPISuccess } from '../actions/index';
+import loadingImage from '../images/InternetSlowdown_Day.gif';
+import './Principal.css';
 
 let resultado;
 
@@ -56,12 +58,16 @@ const PaginaInicial = (props) => {
   }
   
   if (data && dataReceived) {
+    console.log('Resultado: ', resultado);
     let enableNextBtn = false, enablePrevBtn = false;
     if (actualPage < resultado.totalPages) enableNextBtn = true;
     if (actualPage > 1) enablePrevBtn = true;
     return (
       <div>
+      <div className="listContent">
         <CardList content={resultado.content}/>
+      </div>
+      <div>
         {enablePrevBtn &&
           <button
             onClick = {
@@ -80,9 +86,10 @@ const PaginaInicial = (props) => {
             }>Próxima
           </button>}
       </div>
+      </div>
     );
   }
-  return (<div>Loading</div>);
+  return (<div><img src={loadingImage} alt="loading"/></div>);
 };
 
 const mapDispatchToProps = dispatch => (

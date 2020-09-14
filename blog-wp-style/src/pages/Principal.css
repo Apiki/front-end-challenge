@@ -1,0 +1,26 @@
+.App {
+  display: flex;
+  width: 800px;
+}
+
+.cardLength {
+  width: 360px;
+}
+
+.listContent {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.padStepOne {
+  padding-bottom: 10px;
+}
+
+.padStepTwo {
+  padding-bottom: 20px;
+}
+
+.padStepThree {
+  padding-bottom: 30px;
+}
