@@ -10,12 +10,12 @@ export default function (callback, ...params) {
   const getData = useCallback(() => {
     callback(...params).then(
       (response) => {
-        setData(response);
-        return setIsFetching(false);
+        setIsFetching(false);
+        return setData(response);
       },
       (response) => {
-        setError(response);
-        return setIsFetching(false);
+        setIsFetching(false);
+        return setError(response);
       },
     );
   }, [callback]);
