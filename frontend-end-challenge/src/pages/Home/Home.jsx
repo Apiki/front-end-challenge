@@ -15,9 +15,10 @@ function Home() {
   return (
     <main>
       {isFetching && <h1>Loading</h1>}
-      {!isFetching && <div>{error}</div>}
+      {!isFetching && error && <div>{error}</div>}
       {!isFetching && data && (
         <section>
+          <h1>Posts</h1>
           <>
             <PostGrid data={data.data} />
           </>
