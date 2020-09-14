@@ -1,16 +1,33 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
-export default function () {
+export default function (callback) {
   const [data, setData] = useState(null);
   const [isFetching, setIsFetching] = useState(false);
   const [error, setError] = useState(null);
 
+  /* Sem uso de catch para que erros ocorridos durante a renderização 
+  sejam tratados pela API Error Boundaries do React. */
+  const getData = useCallback(async () => {
+    callback().then(
+      (response) => {
+        setData(response);
+        return setIsFetching(false);
+      },
+      (response) => {
+        setError(response);
+        return setIsFetching(false);
+      },
+    );
+  }, [callback]);
   useEffect(() => {
-    effect;
+    setIsFetching(true);
+    getData();
     return () => {
-      cleanup;
+      setData(null);
+      setIsFetching(false);
+      setError(null);
     };
-  }, [input]);
+  }, [getData]);
 
   return { data, isFetching, error };
 }
