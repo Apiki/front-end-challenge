@@ -20,7 +20,7 @@ export const receiveAPISuccess = (data) => ({
 });
 
 export const receiveAPIArticleSuccess = (data) => ({
-  type: RECEIVE_API_BLOG,
+  type: RECEIVE_API_ARTICLE,
   content: data,
 });
 

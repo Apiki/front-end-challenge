@@ -16,6 +16,7 @@ const PaginaInicial = (props) => {
   const [dataReceived, setDataReceived] = useState(false);
   const [data, setData] = useState();
   const [actualPage, setActualPage] = useState(0);
+  const [acc, setAcc] = useState();
 
   const obtido = async (url) => await getArticlesList(url).then((data) => {
     setDataReceived(true);
@@ -40,38 +41,40 @@ const PaginaInicial = (props) => {
       setFetchUrl(() => `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=${actualPage}`);
     }
   }, [actualPage]);
-  
-  // Atualiza a store
-  if (data) {
-    props.APIData(resultado);
 
-    // cria novo array acumulativo
-    let comparisson, comparisson1, comparisson2;
-    comparisson = accumulator.map((e) => e.id);
-    comparisson2 = data.content.map((e) =>  e.id);
-    comparisson1 = comparisson.slice((comparisson.length - comparisson2.length), comparisson.length);
+  useEffect(() => {
+    // Função de criação do acumulador
+    if (data) {
+      let comparisson, comparisson1, comparisson2;
+      comparisson = accumulator.map((e) => e.id);
+      comparisson2 = data.content.map((e) =>  e.id);
+      comparisson1 = comparisson.slice((comparisson.length - comparisson2.length), comparisson.length);
 
-    for (let i = 0; i < comparisson2.length; i += 1) {
-      if (comparisson1[i] !== comparisson2[i]) { // Se forem arrays diferentes acumulam-se os resultados
-        accumulator = [...accumulator, ...data.content];
-        break ;
+      for (let i = 0; i < comparisson2.length; i += 1) {
+        if (comparisson1[i] !== comparisson2[i]) { // Se forem arrays diferentes acumulam-se os resultados
+          accumulator = [...accumulator, ...data.content];
+          setAcc(accumulator);
+          break ;
+        }
       }
     }
-  }
-  
-  // if (data && dataReceived) {
-  // }
+  }, [data]);
 
-  if (!accumulator.length) {
-    return (<div><img src={loadingImage} alt="loading"/></div>);
-  } else {
+  useEffect(() => {
+    if (acc) {
+      // Atualiza a store
+      props.APIData(acc);
+    }
+  }, [acc]);
+  
+  if (acc) {
     let enableNextBtn = false;
     if (actualPage < resultado.totalPages) enableNextBtn = true;
     return (
       <div className="userScreen">
         <div className="padStepThree"><Header styles={'header bcgBlue'}/></div>
         <div className="listContent">
-          <CardList content={accumulator} />
+          <CardList />
         </div>
         <div className="padStepThree">
           {enableNextBtn &&
@@ -92,6 +95,7 @@ const PaginaInicial = (props) => {
       </div>
     );
   }
+  return (<div><img src={loadingImage} alt="loading"/></div>);
 };
 
 const mapDispatchToProps = dispatch => (

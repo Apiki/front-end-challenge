@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
-import articles from './blogReducer';
+import blog from './blogReducer';
 
 const rootReducer = combineReducers(
   {
-    articles,
+    blog,
   },
 );
 
