@@ -18,6 +18,39 @@
   color: white;
 }
 
+.btnBlue {
+  background: Blue;
+  color: #FFF;
+}
+
+.btnBlue:hover {
+  background: rgb(51, 51, 248);
+}
+
+.btnCyan {
+  background: #00bcd4;
+  color: #FFF;
+}
+
+.btnCyan:hover {
+  background: #1ec7bb;
+}
+
+.btnOrange {
+  background: orange;
+  color: #FFF;
+}
+
+.btnOrange:hover {
+  background: orangered;
+}
+
+button {
+  font-size: 3vh;
+  font-weight: bold;
+  transition: .4s;
+}
+
 .cardLength {
   display: flex;
   flex-direction: column;

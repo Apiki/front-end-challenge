@@ -77,8 +77,8 @@ const PaginaInicial = (props) => {
           <CardList />
         </div>
         <div className="padStepThree">
-          {enableNextBtn &&
-            <button
+          {enableNextBtn && dataReceived &&
+            <button className="btnBlue"
               onClick = {
                 () => {
                   if (actualPage === 0) {
@@ -86,7 +86,7 @@ const PaginaInicial = (props) => {
                   }
                   setActualPage(() => actualPage + 1);
                 }
-              }>Carregar Mais
+              }> {`> Carregar mais...`}
             </button>}
         </div>
         <div>
