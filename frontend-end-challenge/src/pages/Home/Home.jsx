@@ -1,20 +1,16 @@
-import React, { useState, useCallback } from 'react';
+import React from 'react';
 import useFetchData from '../../hooks/useFetchData';
-import { Button, PostGrid } from '../../components';
+import { Button, PostGrid, Loading } from '../../components';
 import { fetchBlogPosts } from '../../services/apikiAPI';
 
 function Home() {
-  const [pageCount, setPageCount] = useState(1);
-
-  // garantido que não haverão renderizações desnecessárias
-  const memoizedDataFetch = useCallback(() => fetchBlogPosts(pageCount), [
-    pageCount,
-  ]);
-  const { data, isFetching, error } = useFetchData(memoizedDataFetch);
+  const { data, isFetching, error, setPagination, pagination } = useFetchData(
+    fetchBlogPosts,
+  );
 
   return (
-    <main>
-      {isFetching && <h1>Loading</h1>}
+    <section>
+      {isFetching && <Loading />}
       {!isFetching && error && <div>{error}</div>}
       {!isFetching && data && (
         <section>
@@ -25,13 +21,13 @@ function Home() {
           <div>
             <Button
               value="Carregar Mais"
-              onClick={() => setPageCount((prevCount) => prevCount + 1)}
-              disabled={!!(pageCount >= data.headers['x-wp-totalpages'])}
+              onClick={() => setPagination((prevCount) => prevCount + 1)}
+              disabled={!!(pagination >= data.headers['x-wp-totalpages'])}
             />
           </div>
         </section>
       )}
-    </main>
+    </section>
   );
 }
 
