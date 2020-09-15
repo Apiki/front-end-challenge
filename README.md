@@ -1,8 +1,8 @@
 # Desafio - Front-end Developer
 
-Neste desafio foi criado um blog  para a Apiki, apenas para Devs, com ReactJS e Redux, o que trás grande confiabilidade com relação à aplicação e permite que a mesma se torne uma aplicação mais robusta, uma vez que o fluxo centralizado do Redux, na store, resolve um dos grandes problemas do ReactJS chamado de props drilling, tornando assim a aplicação escalável, mais confável e menos complexa.
+Neste desafio foi criado um blog  para a Apiki, apenas para Devs, com ReactJS e Redux recebendo dados da API da Apiki. O uso do ReactJS aliado ao Redux trás grande confiabilidade com relação à aplicação e permite que a mesma se torne uma aplicação mais robusta, uma vez que o fluxo centralizado do Redux, na store, resolve um dos grandes problemas do ReactJS chamado de props drilling, tornando assim a aplicação escalável, mais confável e menos complexa.
 
-O design foi baseado em um visual de blog clean e intruitivo. Ainda há espaços para melhorias, mas esta primeira versão viável (15/set/2020) já é muito agradável, prática e intuitiva de usar.
+O design foi baseado em um visual de blog clean e intuitivo. Ainda há espaços para melhorias, mas esta primeira versão viável (15/set/2020) já é muito agradável, prática e fácil de usar.
 
 Espero que a experiência de uso seja agradável e estou à disposição para qualquer esclarecimento.
 
