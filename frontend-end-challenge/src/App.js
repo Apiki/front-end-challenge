@@ -4,7 +4,7 @@ import { Home, Post } from './pages';
 
 function App() {
   return (
-    <div className="App">
+    <main className="App">
       <Switch>
         <Route exact path="/">
           <Home />
@@ -13,7 +13,7 @@ function App() {
           <Post />
         </Route>
       </Switch>
-    </div>
+    </main>
   );
 }
 
