@@ -1,0 +1,23 @@
+.button-default {
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: 0.25rem 0.40rem 0.875rem 0.0625rem var(--tertiaryLighter);
+  display: inline-block;
+  margin: 1rem auto;
+  -moz-box-shadow: 0.25rem 0.40rem 0.875rem 0.0625rem var(--tertiaryLighter);
+  padding: 0.625rem; /* equivale a 10px */
+  -webkit-box-shadow: 0.25rem 0.40rem 0.875rem 0.0625rem var(--tertiaryLighter);
+}
+
+.button-default__text {
+  font-family: var(--textFont);
+  font-size: 0.875rem; /* equivale a 14 px */
+  font-weight: bold;
+  height: 80%;
+  margin: auto;
+  padding: 0.625rem;
+  text-align: center;
+  text-transform: uppercase;
+  width: 60%;
+}
