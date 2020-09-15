@@ -37,16 +37,19 @@ const ArticleDetail = (props) => {
     setData(resultado);
   },[dataReceived]);
 
-  // Atualiza a store
-  if (data) {
-    props.APIData(resultado);
-  }
+  useEffect(() => {
+    // Atualiza a store
+    if (data) {
+      props.APIData(resultado);
+    }
+  }, [data]);
+
   // Exibição principal
   if (data && dataReceived) {
     return(
       <div className="userScreen">
         <div className="padStepThree"><Header styles={'header bcgOrange'}/></div>
-        <div className="content padStepThree"><ArticleShow content={resultado} /></div>
+        <div className="content padStepThree"><ArticleShow /></div>
         <div><Footer styles={'footer bcgOrange'}/></div>
       </div>
     );

@@ -28,7 +28,7 @@ const CardList = (props) => {
         </div>)
     );  
   } else {
-    return (<div>Oi</div>);
+    return (<div>Loading...</div>);
   }
 };
 
