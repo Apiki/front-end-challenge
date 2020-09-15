@@ -18,7 +18,7 @@ export default function (callback, ...params) {
         return setError(response);
       },
     );
-  }, [callback]);
+  }, [callback, ...params]);
 
   useEffect(() => {
     setIsFetching(true);
