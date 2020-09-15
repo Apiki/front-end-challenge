@@ -6,7 +6,9 @@ const Header = () => {
   return (
     <header className="b-header">
       <Link to="/">
-        <i className="fas fa-home b-header__icon" />
+        <span className="icon is-medium">
+          <i className="fas fa-home b-header__icon" />
+        </span>
       </Link>
     </header>
   );

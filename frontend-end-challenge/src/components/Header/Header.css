@@ -1,11 +1,12 @@
 .b-header {
+  align-items: center;
   background-color: var(--primaryDarker);
   background-image: url('../../assets/logo.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   height: 5vh;
   left: 0;
   margin: 0 auto;
