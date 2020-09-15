@@ -1,0 +1,18 @@
+.media-base {
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: 0.3125rem 0.3125rem 0.9375rem 0.03125rem rgba(0, 0, 0, 0.25);
+  margin: 1.875rem; /* 30px */
+  max-width: 55%;
+  -moz-box-shadow: 0.3125rem 0.3125rem 0.9375rem 0.03125rem rgba(0, 0, 0, 0.25);
+  padding: 0.635rem;
+  -webkit-box-shadow: 0.3125rem 0.3125rem 0.9375rem 0.03125rem rgba(0, 0, 0, 0.25);
+}
+
+.media-base__img {
+  border-radius: 50%;
+}
+
+.info-container {
+  max-width: 45%;
+}

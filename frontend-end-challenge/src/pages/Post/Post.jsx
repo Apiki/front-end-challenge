@@ -8,6 +8,7 @@ import { Loading } from '../../components';
 import { fetchBlogPost } from '../../services/apikiAPI';
 import FallbackImageSmall from '../../assets/indisponivel_24.png';
 import FallbackImageMedium from '../../assets/indisponivel_96.png';
+import './Post.css';
 
 /* Para parsear as strings contendo html, oriundas da API,Preferi o uso da lib
 'html-react-parser' à propriedade 'dangerouslySetInnerHTML', isso 
@@ -22,11 +23,12 @@ export default function Post() {
       {!isFetching && error && <div>{error}</div>}
       {!isFetching && data && (
         <section className="section">
-          <nav className="level">
+          <nav className="level tags are-medium">
             <div className="level-item has-text-centered">
               <p className="heading">
                 Categoria:
                 <a
+                  className="tag is-link is-normal is-light"
                   href={data[0]._embedded['wp:term'][0][0].link}
                   rel="external noreferrer noopener"
                   target="_blank"
@@ -40,6 +42,7 @@ export default function Post() {
                 tags:
                 {data[0]._embedded['wp:term'][1].map((tag) => (
                   <a
+                    className="tag is-link is-normal is-light"
                     key={tag.id}
                     href={tag.link}
                     rel="external noreferrer noopener"
@@ -61,7 +64,7 @@ export default function Post() {
           <div className="content is-medium">
             {parse(data[0].excerpt.rendered)}
           </div>
-          <div className="level">
+          <div className="level info-container">
             <div className="level-item">
               <img
                 src={
@@ -73,7 +76,7 @@ export default function Post() {
               />
               <p className="heading">by</p>
               <a
-                href={data[0]._embedded.author[0].link }
+                href={data[0]._embedded.author[0].link}
                 rel="external noreferrer noopener"
                 target="_blank"
               >{`${data[0]._embedded.author[0].name || 'Indisponível'}`}</a>
@@ -85,23 +88,39 @@ export default function Post() {
           <div className="container is-fluid">
             {parse(data[0].content.rendered)}
           </div>
-          <article className="tile is-child is-6">
-            <img
-              src={
-                data[0]._embedded.author[0].avatar_urls
-                  ? data[0]._embedded.author[0].avatar_urls[96]
-                  : FallbackImageMedium
-              }
-              alt={data[0]._embedded.author[0].name}
-            />
-            <a
-              href={data[0]._embedded.author[0].link}
-              rel="external noreferrer noopener"
-              target="_blank"
-            >
-              <p className="title is-5 is-spaced">{`${data[0]._embedded.author[0].name || 'Indisponível'}`}</p>
-            </a>
-            <p className="content">{data[0]._embedded.author[0].description || 'Descrição indisponível'}</p>
+          <article className="media media-base">
+            <figure className="media-left">
+              <div className="image is-96x96">
+                <img
+                  className="media-base__img"
+                  src={
+                    data[0]._embedded.author[0].avatar_urls
+                      ? data[0]._embedded.author[0].avatar_urls[96]
+                      : FallbackImageMedium
+                  }
+                  alt={data[0]._embedded.author[0].name}
+                />
+              </div>
+            </figure>
+            <div className="media-content">
+              <div className="content">
+                <a
+                  href={data[0]._embedded.author[0].link}
+                  rel="external noreferrer noopener"
+                  target="_blank"
+                >
+                  <p className="title is-5 is-spaced">{`${
+                    data[0]._embedded.author[0].name || 'Indisponível'
+                  }`}</p>
+                </a>
+              </div>
+              <div className="content">
+                <p>
+                  {data[0]._embedded.author[0].description ||
+                    'Descrição indisponível'}
+                </p>
+              </div>
+            </div>
           </article>
         </section>
       )}
