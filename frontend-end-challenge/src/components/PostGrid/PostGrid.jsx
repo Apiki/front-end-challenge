@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import PostCard from './PostCard';
 
@@ -21,4 +21,4 @@ PostGrid.defaultProps = { data: null };
 
 PostGrid.propTypes = { data: PropTypes.arrayOf(PropTypes.object) };
 
-export default PostGrid;
+export default memo(PostGrid);
