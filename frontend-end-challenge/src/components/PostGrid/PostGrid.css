@@ -1,6 +1,6 @@
 .grid-base {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   height: 60vh;
   margin: 0.625rem auto;
