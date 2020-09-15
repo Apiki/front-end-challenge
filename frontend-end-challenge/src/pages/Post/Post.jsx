@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import parse from 'html-react-parser';
 import moment from 'moment';
 import useFetchData from '../../hooks/useFetchData';
+import { Loading } from '../../components';
 import { fetchBlogPost } from '../../services/apikiAPI';
 
 /* Para parsear as strings contendo html, oriundas da API,Preferi o uso da lib
@@ -14,21 +15,23 @@ export default function Post() {
   const { data, isFetching, error } = useFetchData(fetchBlogPost, slug);
 
   return (
-    <main>
-      {isFetching && <h1>Loading</h1>}
+    <section>
+      {isFetching && <Loading />}
       {!isFetching && error && <div>{error}</div>}
       {!isFetching && data && (
         <section>
           <div>
             <div>
-              Categoria:
-              <a
-                href={data[0]._embedded['wp:term'][0][0].link}
-                rel="external noreferrer noopener"
-                target="_blank"
-              >
-                {`${data[0]._embedded['wp:term'][0][0].name}`}
-              </a>
+              <span>
+                Categoria:
+                <a
+                  href={data[0]._embedded['wp:term'][0][0].link}
+                  rel="external noreferrer noopener"
+                  target="_blank"
+                >
+                  {`${data[0]._embedded['wp:term'][0][0].name}`}
+                </a>
+              </span>
               <span>
                 tags:
                 {data[0]._embedded['wp:term'][1].map((tag) => (
@@ -82,6 +85,6 @@ export default function Post() {
           </div>
         </section>
       )}
-    </main>
+    </section>
   );
 }
