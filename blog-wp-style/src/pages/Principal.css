@@ -1,26 +1,149 @@
 .App {
   display: flex;
-  width: 800px;
+  justify-content: center;
+  width: 100vw;
+}
+
+.avatar {
+  width: auto;
+}
+
+.bcgBlue {
+  background-color: blue;
+  color: white;
+}
+
+.bcgOrange {
+  background-color: orange;
+  color: white;
 }
 
 .cardLength {
+  display: flex;
+  flex-direction: column;
   width: 360px;
 }
 
+.cardLength img {
+  width: 360px;
+}
+
+.content {
+  align-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 10%;
+  width: 80%;
+}
+
+.entreringHTML {
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  font-size: 1em;
+  width: 100%;
+}
+
+.footer h3 {
+  text-align: center;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  font-size: 2em;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .listContent {
+  align-content: center;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  width: 80%; 
 }
 
 .padStepOne {
-  padding-bottom: 10px;
+  padding-bottom: 1%;
 }
 
 .padStepTwo {
-  padding-bottom: 20px;
+  padding-bottom: 2%;
 }
 
 .padStepThree {
-  padding-bottom: 30px;
+  padding-bottom: 3%;
+}
+
+.userScreen {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 100vw
+}
+
+@media only screen and (max-width: 360px) {
+  img {
+    display: none;
+  }
+
+  .listContent {
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: auto;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 900px) {  
+  .entreringHTML {
+    width: 80vw;
+  }
+
+  .footer {
+    font-size: auto;
+    width: 100%;
+  }
+
+  .footer h3 {
+    text-align: center;
+    width: 100%;
+  }
+
+  img {
+    width: auto;
+    max-width: 80vw;
+  }
+
+  .listContent {
+    display: flex;
+    flex-flow: column wrap;
+    justify-items: center;
+    width: 100%;
+  }
+
+  pre {
+    width: auto;
+    white-space: wrap;
+    max-width: 10vw;
+  }
+
+  .userScreen {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
 }

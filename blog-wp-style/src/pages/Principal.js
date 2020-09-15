@@ -4,25 +4,14 @@ import CardList from '../components/CardList';
 import { getArticlesList  } from '../services/APIService';
 import { receiveAPISuccess } from '../actions/index';
 import loadingImage from '../images/InternetSlowdown_Day.gif';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import './Principal.css';
 
 let resultado;
+let accumulator = [];
 
 const PaginaInicial = (props) => {
-  // const mockFetch = [{
-  //   _embedded: {
-  //     'wp:featuredmedia': [
-  //       {
-  //         source_url: 'https://blog.apiki.com/wp-content/uploads/sites/2/2020/07/Como-habilitar-os-recursos-ocultos-do-Gutenberg-no-seu-tema-WordPress-open-graph.png',
-  //       },
-  //     ],
-  //   },
-  //   title: {
-  //     rendered: 'Como habilitar os recursos ocultos do Gutenberg no seu tema WordPress',
-  //   },
-  //   slug: 'como-habilitar-os-recursos-ocultos-do-gutenberg-no-seu-tema-wordpress',
-  // }];
-
   const [fetchUrl, setFetchUrl] = useState('https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518');
   const [dataReceived, setDataReceived] = useState(false);
   const [data, setData] = useState();
@@ -55,41 +44,54 @@ const PaginaInicial = (props) => {
   // Atualiza a store
   if (data) {
     props.APIData(resultado);
+
+    // cria novo array acumulativo
+    let comparisson, comparisson1, comparisson2;
+    comparisson = accumulator.map((e) => e.id);
+    comparisson2 = data.content.map((e) =>  e.id);
+    comparisson1 = comparisson.slice((comparisson.length - comparisson2.length), comparisson.length);
+
+    for (let i = 0; i < comparisson2.length; i += 1) {
+      if (comparisson1[i] !== comparisson2[i]) { // Se forem arrays diferentes acumulam-se os resultados
+        accumulator = [...accumulator, ...data.content];
+        break ;
+      }
+    }
   }
   
-  if (data && dataReceived) {
-    console.log('Resultado: ', resultado);
-    let enableNextBtn = false, enablePrevBtn = false;
+  // if (data && dataReceived) {
+  // }
+
+  if (!accumulator.length) {
+    return (<div><img src={loadingImage} alt="loading"/></div>);
+  } else {
+    let enableNextBtn = false;
     if (actualPage < resultado.totalPages) enableNextBtn = true;
-    if (actualPage > 1) enablePrevBtn = true;
     return (
-      <div>
-      <div className="listContent">
-        <CardList content={resultado.content, actualPage}/>
-      </div>
-      <div>
-        {enablePrevBtn &&
-          <button
-            onClick = {
-              () => setActualPage(() => actualPage - 1)
-            }>Anterior
-          </button>}
-        {enableNextBtn &&
-          <button
-            onClick = {
-              () => {
-                if (actualPage === 0) {
-                  return setActualPage(() => actualPage + 2);
+      <div className="userScreen">
+        <div className="padStepThree"><Header styles={'header bcgBlue'}/></div>
+        <div className="listContent">
+          <CardList content={accumulator} />
+        </div>
+        <div className="padStepThree">
+          {enableNextBtn &&
+            <button
+              onClick = {
+                () => {
+                  if (actualPage === 0) {
+                    return setActualPage(() => actualPage + 2);
+                  }
+                  setActualPage(() => actualPage + 1);
                 }
-                setActualPage(() => actualPage + 1);
-              }
-            }>Próxima
-          </button>}
-      </div>
+              }>Carregar Mais
+            </button>}
+        </div>
+        <div>
+          <Footer styles={'footer bcgBlue'}/>
+        </div>
       </div>
     );
   }
-  return (<div><img src={loadingImage} alt="loading"/></div>);
 };
 
 const mapDispatchToProps = dispatch => (

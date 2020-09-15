@@ -4,27 +4,15 @@ import { useLocation } from 'react-router-dom';
 import ArticleShow from '../components/ArticleShow';
 import { getArticle } from '../services/APIService';
 import { receiveAPIArticleSuccess } from '../actions/index';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import loadingImage from '../images/InternetSlowdown_Day.gif';
+import './Principal.css';
 
 let resultado;
 
 const ArticleDetail = (props) => {
   const location = useLocation();
-  const mockFetch = [{
-    _embedded: {
-      'wp:featuredmedia': [
-        {
-          source_url: 'https://blog.apiki.com/wp-content/uploads/sites/2/2020/07/Como-habilitar-os-recursos-ocultos-do-Gutenberg-no-seu-tema-WordPress-open-graph.png',
-        },
-      ],
-    },
-    title: {
-      rendered: 'Como habilitar os recursos ocultos do Gutenberg no seu tema WordPress',
-    },
-    slug: 'como-habilitar-os-recursos-ocultos-do-gutenberg-no-seu-tema-wordpress',
-  }];
-
-  // <div>Endereço Artigo {location.pathname}</div>
   const [fetchUrl, setFetchUrl] = useState('');
   const [dataReceived, setDataReceived] = useState(false);
   const [data, setData] = useState();
@@ -56,8 +44,10 @@ const ArticleDetail = (props) => {
   // Exibição principal
   if (data && dataReceived) {
     return(
-      <div>
-        <ArticleShow content={resultado} />
+      <div className="userScreen">
+        <div className="padStepThree"><Header styles={'header bcgOrange'}/></div>
+        <div className="content padStepThree"><ArticleShow content={resultado} /></div>
+        <div><Footer styles={'footer bcgOrange'}/></div>
       </div>
     );
   }

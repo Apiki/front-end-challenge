@@ -1,12 +1,8 @@
 import React from 'react';
 
-let xf = {};
 const CardList = (props) => {
-  const { content, actualPage } = props;
-  // const linkToPage = 'https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=';  
-  console.log('eu');
-  xf = {...xf, [actualPage]: content}
-  console.log('xf ', xf);
+  const { content } = props;
+  // const linkToPage = 'https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=';
   const cards = content.map((e) =>  {
    if (!e._embedded['wp:featuredmedia']) {
      return { 
@@ -24,7 +20,7 @@ const CardList = (props) => {
     return (
       cards.map((e, index) =>
         <div key={`${e.title}${index}`} className="cardLength padStepTwo">
-          <img src={e.imagemDestacada} width="360px" alt={e.title}></img>
+          <img src={e.imagemDestacada} alt={e.title}></img>
           <p>{e.titulo}</p>
           <a href={`/${e.link}`}>Leia</a>
         </div>)

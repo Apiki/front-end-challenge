@@ -46,12 +46,12 @@ const ArticleShow = (props) => {
   });
   return (
     article.map((e, index) =>
-    <div key={`${e.title}${index}`} style={{align: "center", padding: "50px"}}>
-      <div><img src={e.imagemDestacada} width="800px" alt={e.title}/></div>
-      <h1 style={{width: "800px"}}>{e.titulo}</h1>
-      <div><img src={e.avatar} alt={e.title}/><span style={{padding: "10px"}}>Escrito por: {e.autor}</span></div>
-      <div style={{width: "800px"}} contentEditable='true' dangerouslySetInnerHTML={{ __html: `${e.conteudo}` }}></div>
-      <div style={{width: "800px"}}><span>Sobre o autor: {e.bio}</span></div>
+    <div key={`${e.title}${index}`}>
+      <div><img src={e.imagemDestacada} width="100%" alt={e.title}/></div>
+      <h1>{e.titulo}</h1>
+      <div><img className="avatar" src={e.avatar} alt={e.title}/><span style={{padding: "10px"}}>Escrito por: {e.autor}</span></div>
+      <div  className="entreringHTML" contentEditable='false' dangerouslySetInnerHTML={{ __html: `${e.conteudo}` }}></div>
+      <div><span>Sobre o autor: {e.bio}</span></div>
     </div>)
   );
 };
