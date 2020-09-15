@@ -1,68 +1,26 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Aplicação desenvolvida como parte do "Desafio - Front-end Developer" do processo da Apiki
 
-## Available Scripts
+## O Desafio
 
-In the project directory, you can run:
+Criar uma versão para Devs do blog da Apiki, construindo uma solução headless.abs
 
-### `yarn start`
+Essa versão deve conter:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Página inicial (página Home do projeto): Listará as últimas postagens do blog com a categoria **Desenvolvimento**;
+- Interna (página de Post do projeto): Exibirá conteúdo da postagem.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Esse desafio deveria ser desenvolvido utilizando dados da api do blog da [Apiki](https://blog.apiki.com/wp-json/wp/v2/)
 
-### `yarn test`
+### Minha solução
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para atender os critérios do desafio, desenvolvi a aplicação solicitada utilizando as seguintes ferramentas:
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Biblioteca javascript REACT, em conjunto com as bibliotecas react-router e prop-types para controle de roteamento da aplicação e tipagem dos dados que alimentam os componentes da aplicação;
+- Framework CSS [Bulma](https://bulma.io/), via CDN, para acelerar o desenvolvimento da aplicação, com foco na responsividade das páginas da aplicação;
+- Mesmo com uso do Bulma, foram utilizadas folhas de estilo personalizadas em componentes da aplicação, de forma a preencher as especificidades do projeto que o Bulma não atende. A nomeclatura de classes CSS personalizadas procurou atender os parâmetros da metodologia _BEMCSS_, porém a organização foi inspirada pela metodologia SMACSS, pensando o CSS do base ao topo;
+- As regras de base do CSS estão no arquivo index.css. As regras especificas de cada componente da UI localiza-se no diretório que contém o _source code_ do componente;
+- A aplicação foi criada utilizando javascript puro e JSX;
+- Os containers que formam as páginas obrigatórias da aplicação estão contidos no diretório _pages_, os componentes que formam a _UI_ da aplicação estão contidos na pasta _components_;
+- Por se tratar de uma aplicação pequena, o gerenciamento de estado foi feito via um _custom Hook_ do React, este Hook é responsável por fazer o fetch dos dados da api base do desafio e fornecer aos componentes as _props_ necessárias para renderizar a _UI_. O uso de um hook permite evitar duplicação de código e melhor controle dos updates dos componentes _React_;
+- A aplicação foi construída de acordo com o guia de estilo do [Airbnb](https://airbnb.io/projects/javascript/) para javascript, React e CSS. Para automatizar a avaliação da aderência do código as regras do manual, foram utilizados os pacotes e plugins dos _linters_ **ESLint** e **StyleLint**, bem como o formatador de código **Prettier**;
+- As partes mais complexas de código e algumas medidas relativas de CSS foram comentadas para facilitar a compreensão e explicar as escolhas técnicas que levaram ao código produzido.
