@@ -16,6 +16,23 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1 h2 h3 h4 {
+  color: var(--titleColor);
+}
+
+p {
+  color: var(--textColor);
+}
+
+a {
+  color:inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
 :root {
   --backgroundColor: #fff;
   --primary: #ee8622;
@@ -29,12 +46,11 @@ body {
   --tertiaryLighter: #5c5c5c;
   --textColor: #858484;
   --titleColor: #484848;
-  --linkTextColor: #ee8622;
 
   font-size: 16px;
 }
 
 #root {
-  width: 100vw;
   height: 100vh;
+  width: 100vw;
 }

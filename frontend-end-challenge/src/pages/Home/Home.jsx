@@ -9,11 +9,11 @@ function Home() {
   );
 
   return (
-    <section>
+    <div className="container is-fluid">
       {isFetching && <Loading />}
       {!isFetching && error && <div>{error}</div>}
       {!isFetching && data && (
-        <section>
+        <section className="section">
           <h1>Posts</h1>
           <>
             <PostGrid data={data.data} />
@@ -27,7 +27,7 @@ function Home() {
           </div>
         </section>
       )}
-    </section>
+    </div>
   );
 }
 

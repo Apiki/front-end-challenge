@@ -1,0 +1,21 @@
+.b-header {
+  background-color: var(--primaryDarker);
+  background-image: url('../../assets/logo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-flow: row wrap;
+  height: 5vh;
+  left: 0;
+  margin: 0 auto;
+  opacity: 0.98;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.b-header__icon {
+  color: var(--backgroundColor);
+}

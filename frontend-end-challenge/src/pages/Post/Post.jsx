@@ -6,6 +6,8 @@ import moment from 'moment';
 import useFetchData from '../../hooks/useFetchData';
 import { Loading } from '../../components';
 import { fetchBlogPost } from '../../services/apikiAPI';
+import FallbackImageSmall from '../../assets/indisponivel_24.png';
+import FallbackImageMedium from '../../assets/indisponivel_96.png';
 
 /* Para parsear as strings contendo html, oriundas da API,Preferi o uso da lib
 'html-react-parser' à propriedade 'dangerouslySetInnerHTML', isso 
@@ -15,14 +17,14 @@ export default function Post() {
   const { data, isFetching, error } = useFetchData(fetchBlogPost, slug);
 
   return (
-    <section>
+    <div className="container is-fluid">
       {isFetching && <Loading />}
       {!isFetching && error && <div>{error}</div>}
       {!isFetching && data && (
-        <section>
-          <div>
-            <div>
-              <span>
+        <section className="section">
+          <nav className="level">
+            <div className="level-item has-text-centered">
+              <p className="heading">
                 Categoria:
                 <a
                   href={data[0]._embedded['wp:term'][0][0].link}
@@ -31,8 +33,10 @@ export default function Post() {
                 >
                   {`${data[0]._embedded['wp:term'][0][0].name}`}
                 </a>
-              </span>
-              <span>
+              </p>
+            </div>
+            <div className="level-item has-text-centered">
+              <p className="heading">
                 tags:
                 {data[0]._embedded['wp:term'][1].map((tag) => (
                   <a
@@ -44,36 +48,50 @@ export default function Post() {
                     {tag.name}
                   </a>
                 ))}
-              </span>
+              </p>
             </div>
-            <a
-              href={data[0].link}
-              rel="external noreferrer noopener"
-              target="_blank"
-            >
-              <h1>{data[0].title.rendered}</h1>
-            </a>
+          </nav>
+          <a
+            href={data[0].link}
+            rel="external noreferrer noopener"
+            target="_blank"
+          >
+            <h1>{data[0].title.rendered}</h1>
+          </a>
+          <div className="container is-fluid">
             {parse(data[0].excerpt.rendered)}
           </div>
-          <div>
-            <img
-              src={data[0]._embedded.author[0].avatar_urls[24]}
-              alt={data[0]._embedded.author[0].name}
-            />
-            <span>
-              by
+          <div className="level">
+            <div className="level-item">
+              <img
+                src={
+                  data[0]._embedded.author[0].avatar_urls
+                    ? data[0]._embedded.author[0].avatar_urls[24]
+                    : FallbackImageSmall
+                }
+                alt={data[0]._embedded.author[0].name || 'Indisponível'}
+              />
+              <p className="heading">by</p>
               <a
                 href={data[0]._embedded.author[0].link}
                 rel="external noreferrer noopener"
                 target="_blank"
               >{`${data[0]._embedded.author[0].name}`}</a>
-            </span>
-            <span>{moment(data[0].date, 'YYYYMMDD').fromNow()}</span>
+            </div>
+            <div className="level-item">
+              {moment(data[0].date, 'YYYYMMDD').fromNow()}
+            </div>
           </div>
-          <div>{parse(data[0].content.rendered)}</div>
-          <div>
+          <div className="container is-fluid">
+            {parse(data[0].content.rendered)}
+          </div>
+          <article className="container is-fluid">
             <img
-              src={data[0]._embedded.author[0].avatar_urls[96]}
+              src={
+                data[0]._embedded.author[0].avatar_urls
+                  ? data[0]._embedded.author[0].avatar_urls[96]
+                  : FallbackImageMedium
+              }
               alt={data[0]._embedded.author[0].name}
             />
             <a
@@ -82,9 +100,9 @@ export default function Post() {
               target="_blank"
             >{`${data[0]._embedded.author[0].name}`}</a>
             <p>{data[0]._embedded.author[0].description}</p>
-          </div>
+          </article>
         </section>
       )}
-    </section>
+    </div>
   );
 }
