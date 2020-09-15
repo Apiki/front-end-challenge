@@ -56,9 +56,9 @@ export default function Post() {
             rel="external noreferrer noopener"
             target="_blank"
           >
-            <h1>{data[0].title.rendered}</h1>
+            <h1 className="title is-1 is-spaced">{data[0].title.rendered}</h1>
           </a>
-          <div className="container is-fluid">
+          <div className="content is-medium">
             {parse(data[0].excerpt.rendered)}
           </div>
           <div className="level">
@@ -85,7 +85,7 @@ export default function Post() {
           <div className="container is-fluid">
             {parse(data[0].content.rendered)}
           </div>
-          <article className="container is-fluid">
+          <article className="tile is-child is-6">
             <img
               src={
                 data[0]._embedded.author[0].avatar_urls
@@ -98,8 +98,10 @@ export default function Post() {
               href={data[0]._embedded.author[0].link}
               rel="external noreferrer noopener"
               target="_blank"
-            >{`${data[0]._embedded.author[0].name}`}</a>
-            <p>{data[0]._embedded.author[0].description}</p>
+            >
+              <p className="title is-5 is-spaced">{`${data[0]._embedded.author[0].name}`}</p>
+            </a>
+            <p className="content">{data[0]._embedded.author[0].description}</p>
           </article>
         </section>
       )}

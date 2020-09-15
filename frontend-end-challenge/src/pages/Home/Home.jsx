@@ -14,7 +14,7 @@ function Home() {
       {!isFetching && error && <div>{error}</div>}
       {!isFetching && data && (
         <section className="section">
-          <h1>Posts</h1>
+          <h1 className="title is-1 centered is-spaced">Posts</h1>
           <>
             <PostGrid data={data.data} />
           </>
