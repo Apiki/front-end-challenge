@@ -57,6 +57,7 @@ const ArticleDetail = (props) => {
       <div className="userScreen">
         <div className="padStepThree"><Header styles={'header bcgOrange'}/></div>
         <div className="content padStepThree"><ArticleShow /></div>
+        <div className="content padStepTwo"><a href="/">Voltar</a></div>
         <div><Footer styles={'footer bcgOrange'}/></div>
       </div>
     );
