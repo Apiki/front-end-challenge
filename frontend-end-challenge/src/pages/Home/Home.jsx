@@ -11,7 +11,7 @@ function Home() {
   return (
     <div className="container is-fluid">
       {isFetching && <Loading />}
-      {!isFetching && error && <div>{error}</div>}
+      {!isFetching && error && <div className="content">{error}</div>}
       {!isFetching && data && (
         <section className="section">
           <h1 className="title is-1 centered is-spaced">Posts</h1>

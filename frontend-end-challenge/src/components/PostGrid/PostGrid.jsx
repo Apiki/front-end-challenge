@@ -1,10 +1,11 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import PostCard from './PostCard';
+import './PostGrid.css';
 
 const PostGrid = ({ data }) => {
   return (
-    <section>
+    <div className="grid-base">
       {data.map(({ id, slug, title, _embedded }) => (
         <PostCard
           key={id}
@@ -13,7 +14,7 @@ const PostGrid = ({ data }) => {
           _embedded={_embedded}
         />
       ))}
-    </section>
+    </div>
   );
 };
 

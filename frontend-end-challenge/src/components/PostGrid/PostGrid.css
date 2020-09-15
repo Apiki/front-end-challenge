@@ -1,0 +1,9 @@
+.grid-base {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 60vh;
+  margin: 0.625rem auto;
+  padding: 0.625rem;
+  width: 90vw;
+}
