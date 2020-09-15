@@ -1,14 +1,20 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState, useMemo } from 'react';
 
 export default function (callback, ...params) {
   const [data, setData] = useState(null);
   const [isFetching, setIsFetching] = useState(false);
   const [error, setError] = useState(null);
+  const [pagination, setPagination] = useState(1);
+
+  const setParams = useMemo(() => [...params, pagination], [
+    params,
+    pagination,
+  ]);
 
   /* Sem uso de catch para que erros ocorridos durante a renderização 
   sejam tratados pela API Error Boundaries do React. */
   const getData = useCallback(() => {
-    callback(...params).then(
+    callback(...setParams).then(
       (response) => {
         setIsFetching(false);
         return setData(response);
@@ -18,7 +24,7 @@ export default function (callback, ...params) {
         return setError(response);
       },
     );
-  }, [callback, ...params]);
+  }, [callback, ...setParams]);
 
   useEffect(() => {
     setIsFetching(true);
@@ -30,5 +36,5 @@ export default function (callback, ...params) {
     };
   }, [getData]);
 
-  return { data, isFetching, error };
+  return { data, isFetching, error, setPagination, pagination };
 }
