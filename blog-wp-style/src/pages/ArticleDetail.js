@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Redirect } from 'react-router-dom';
 import ArticleShow from '../components/ArticleShow';
 import { getArticle } from '../services/APIService';
 import { receiveAPIArticleSuccess } from '../actions/index';
@@ -43,6 +43,13 @@ const ArticleDetail = (props) => {
       props.APIData(resultado);
     }
   }, [data]);
+
+  // Se não retornou resultado vai para NotFoun
+  if (data && dataReceived) {
+    if (!data.length) {
+      return (<Redirect to="/notfound" />);
+    }
+  }
 
   // Exibição principal
   if (data && dataReceived) {

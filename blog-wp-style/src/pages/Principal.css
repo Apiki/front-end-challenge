@@ -76,6 +76,14 @@ img {
   width: 80%; 
 }
 
+.notFound {
+  display: flex;
+  flex-direction: column;
+  font-size: 2em;
+  padding-left: 2%;
+  width: 100%;
+}
+
 .padStepOne {
   padding-bottom: 1%;
 }
