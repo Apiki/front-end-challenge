@@ -88,6 +88,13 @@ div, img, h1, p, h2, article {
   margin-top: 19px;
 }
 
+.load-more-msg {
+  color: rgb(206, 194, 194);
+  font-weight: 700;
+  margin-top: 23px;
+  text-align: center;
+}
+
 .load-more-btn {
   margin-top: 30px;
   display: flex;
@@ -186,6 +193,11 @@ div, img, h1, p, h2, article {
 
   .articles-prev-item-subtitle {
     display: none;
+  }
+
+  .btn-default:hover {
+    background-color: #8257E5;
+    color: #FEFEFE;
   }
 }
 

@@ -60,17 +60,19 @@ const asideDestaks = (articles) => {
   );
 }
 
-const loadMoreBtn = (numberPages, pagesRendered, setPagesRendered, data, setData) => {
+const loadMoreBtn = (numberPages, pagesRendered, setPagesRendered, data, setData, setIsLoadingMore) => {
   return (
     <div className="load-more-btn">
       <button
         className="btn-default"
         onClick={() => {
+          setIsLoadingMore(true)
           if (pagesRendered < numberPages) {
             blogApikiLoadMoreapi(pagesRendered + 1)
               .then((res) => {
                 setData([...data, ...res]);
                 setPagesRendered(pagesRendered + 1);
+                setIsLoadingMore(false);
               })
           }
         }}
@@ -81,12 +83,19 @@ const loadMoreBtn = (numberPages, pagesRendered, setPagesRendered, data, setData
   );
 }
 
+const loadMoreMessage = () => (
+  <div className="load-more-msg-container">
+    <p className="load-more-msg">Carregando...</p>
+  </div>
+)
+
 const ArticlesPrev = () => {
 
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState([]);
   const [numberPages, setNumberPages] = useState(0);
   const [pagesRendered, setPagesRendered] = useState(1);
+  const [isLoadinMore, setIsLoadingMore] = useState(false);
 
   useEffect(() => {
     blogApikiFirstApiNumberPages()
@@ -95,7 +104,6 @@ const ArticlesPrev = () => {
       .then((res) => res.json())
       .then((json) => {
         setData(json);
-        console.log(json);
         setIsLoading(false);
       });
   }, []);
@@ -118,12 +126,14 @@ const ArticlesPrev = () => {
             <div key={articlePrev.id}>
               {ArticleItem(articlePrev)}
             </div>)}
+            {isLoadinMore && loadMoreMessage()}
           {pagesRendered < numberPages && loadMoreBtn(
             numberPages,
             pagesRendered,
             setPagesRendered,
             data,
             setData,
+            setIsLoadingMore
           )}
         </div>
         {AsideDestaks(data)}

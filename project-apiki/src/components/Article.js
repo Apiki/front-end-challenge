@@ -15,8 +15,7 @@ const Article = () => {
     blogApikiArticleApi(slug)
       .then((res) => {
         setData(res[0]);
-        console.log('aqui', res[0]._embedded.author[0].avatar_urls)
-        setIsLoading(false)
+        setIsLoading(false);
       })
   }, [])
 
