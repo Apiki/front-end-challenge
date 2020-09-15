@@ -35,6 +35,7 @@ a:hover {
 
 :root {
   --backgroundColor: #fff;
+  --altBackgroundColor: #f7f2f2;
   --primary: #ee8622;
   --primaryDarker: #e37811;
   --primaryLighter: #f09843;

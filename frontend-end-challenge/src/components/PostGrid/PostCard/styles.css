@@ -1,0 +1,7 @@
+.card-base {
+  background-color: var(--altBackgroundColor);
+  border: none;
+  border-radius: 0.325rem;
+  margin: 0.9375rem; /* 15px */
+  padding: 0.625rem;
+}
