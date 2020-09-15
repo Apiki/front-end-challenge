@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { blogApikiContext } from '../hooks/blogApikiContext';
 import {
   blogApikiFirstApi,
   blogApikiFirstApiNumberPages,
@@ -10,6 +9,7 @@ import Loading from './Loading';
 import AsideDestaks from './AsideDestaks';
 import '../layout/css/sharedStyle.css';
 import '../layout/css/articlesPrev.css';
+import '../layout/css/asideDestaks.css';
 
 
 const ArticleItem = (articlePrev) => {
@@ -87,11 +87,6 @@ const ArticlesPrev = () => {
   const [data, setData] = useState([]);
   const [numberPages, setNumberPages] = useState(0);
   const [pagesRendered, setPagesRendered] = useState(1);
-
-  const {
-    article,
-    setArticle
-  } = useContext(blogApikiContext);
 
   useEffect(() => {
     blogApikiFirstApiNumberPages()

@@ -25,13 +25,41 @@ const linksPage = () => (
 
 const socialNetworksIcons = () => (
   <ul>
-    <li><a href=""><img src={iFacebook} /></a></li>
-    <li><a href=""><img src={iLinkedin} /></a></li>
-    <li><a href=""><img src={iInstagram} /></a></li>
-    <li><a href=""><img src={iTwitter} /></a></li>
-    <li><a href=""><img src={iYoutube} /></a></li>
-    <li><a href=""><img src={iGithub} /></a></li>
-    <li><a href=""><img src={iRss} /></a></li>
+    <li>
+      <a href="https://www.facebook.com/ApikiWordPress" target="_blank">
+        <img src={iFacebook} />
+      </a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/company/apiki" target="_blank">
+        <img src={iLinkedin} />
+      </a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/apikiwordpress/" target="_blank">
+        <img src={iInstagram} />
+      </a>
+    </li>
+    <li>
+      <a href="https://twitter.com/apikiWordPress" target="_blank">
+        <img src={iTwitter} />
+      </a>
+    </li>
+    <li>
+      <a href="https://www.youtube.com/channel/UC__ToR3hqjs1ZktdLIWqYFA" target="_blank">
+        <img src={iYoutube} />
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/Apiki" target="_blank">
+        <img src={iGithub} />
+      </a>
+    </li>
+    <li>
+      <a href="https://blog.apiki.com/feed/" target="_blank">
+        <img src={iRss} />
+      </a>
+    </li>
   </ul>
 );
 
@@ -53,11 +81,11 @@ const Footer = () => {
               Empresa especializada em WordPress com três unidades de negócios. Design e Desenvolvimento; Infra e Hospedagem; Suporte e manutenção. Em resumo, só fazemos uma coisa em WordPress: tudo.
             </p>
           </div>
-          <hr/>
+          <hr />
           <div className="footer-texts-social-networks">
             {socialNetworksIcons()}
           </div>
-          <hr/>
+          <hr />
           <div className="footer-texts-links-page">
             <h3 className="font-ibm-plex">Páginas do Blog</h3>
             {linksPage()}

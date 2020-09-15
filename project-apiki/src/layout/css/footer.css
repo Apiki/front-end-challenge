@@ -89,15 +89,8 @@ div, footer, p, a {
   }
 }
 
-@media (max-width: 730px) {
-  
-  .footer-texts-social-networks {
-    width: 180px;
-  }
 
-}
-
-@media (max-width: 670px) {
+@media (max-width: 800px) {
 
   .footer-texts-container hr {
     border: 1px solid #12121479;

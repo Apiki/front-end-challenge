@@ -1,0 +1,151 @@
+div, h1, h2, h3, h4, p, figure, img  {
+  margin: 0;
+  padding: 0;
+}
+
+.article-main-container {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 20px 15px;
+}
+
+.article-main-container hr {
+  border: 1px solid #969599;
+  max-width: 680px;
+}
+
+.article-content-container, .article-title, .article-subtitle {
+  margin: 0 auto;
+  max-width: 680px;
+}
+
+.article-title {
+  color: rgba(254, 254, 254, 0.842);
+}
+
+.article-content-container p, .article-main-container h2, .article-main-container h3, .article-content-container ol, .article-content-container ul, .article-author-name, .article-content-container figcaption {
+  margin: 23px auto;
+}
+
+.article-content-container, .article-main-container h2, .article-author-name {
+  color: #969599;
+}
+
+.article-content-container code {
+  color: #c09122;
+  max-width: 680px;
+}
+
+.article-content-container pre {
+  background-color: #212025;
+  border-radius: 5px;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+.article-content-container ul {
+  padding-left:  23px;
+}
+
+.article-content-container li {
+  list-style-image: url('../images/ellipse.png');
+  margin: 12px 0;
+}
+
+.article-content-container a {
+  color: #8156e4;
+  text-decoration: none;
+}
+
+.article-content-container a:hover {
+  text-decoration: underline;
+}
+
+figure {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.article-main-container img {
+  height: auto;
+  margin: 17px 0;
+  max-width: 680px;
+  width: auto;
+}
+
+.article-about-author-container, .article-author-container {
+  margin: 0 auto;
+  max-width: 680px;
+}
+
+.article-author-container {
+  align-items: center;
+  display: flex;
+}
+
+.article-author-img {
+  border-radius: 50%;
+}
+
+.article-author-name {
+  font-weight: 800;
+  margin-left: 23px;
+}
+
+.article-author-name span {
+  font-weight: 400;
+  margin-right: 8px;
+}
+
+.article-about-author-container {
+  align-items: center;
+  background-color: #e6e1e7;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: flex;
+  padding: 23px 10px;
+}
+
+.article-about-author-img {
+  border-radius: 50%;
+}
+
+.article-about-author {
+  color: #121214;
+  margin-left: 23px;
+}
+
+.article-about-author-name {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 745px) {
+
+  .article-content-container,
+  .article-main-container img,
+  .article-title,
+  .article-subtitle,
+  .article-author-container,
+  .article-about-author-container,
+  .article-main-container hr {
+    max-width: 100%;
+  }
+
+  .article-main-container {
+    font-size: 0.9em;
+  }
+
+} 
+
+ @media (max-width: 617px) {
+
+  .article-about-author-container {
+    flex-direction: column;
+  }
+
+  .article-about-author-name {
+    text-align: center;
+  }
+
+}

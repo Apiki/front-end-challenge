@@ -63,8 +63,12 @@ header {
 
 .nav-bar-list-container a:hover {
   color: #4f4f55;
+  cursor: pointer;
 }
 
+.apiki-icon:hover {
+  cursor: pointer;
+}
 
 @media (min-width: 1200px) {
   .menu-hamburger-btn {
