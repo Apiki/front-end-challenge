@@ -1,0 +1,21 @@
+.b-spinner {
+  animation: spin 2s linear infinite;
+  background-color: var(--backgroundColor);
+  background-image: url('../../assets/logo-apiki-site-01.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 1rem solid var(--backgroundColor);
+  border-top: 1rem solid var(--primaryDarker);
+  border-bottom: 1rem solid var(--primaryDarker);
+  border-radius: 50%;
+  height: 9.5rem;
+  margin: auto;
+  width: 9.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
