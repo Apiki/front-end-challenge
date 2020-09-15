@@ -1,0 +1,10 @@
+.header {
+  background: var(--color-background-header);
+  margin-top: 744vh;
+  border-radius: 2vh;
+}
+
+.header img {
+  height: 11vh;
+  width: 35vh;
+}

@@ -1,0 +1,64 @@
+:root {
+  font-size: 60%;
+  --color-background: #7ff4cd;
+  --color-background-header: linear-gradient(90deg, #67666a 0%, #000000 100%);
+  --color-text-base: #6A6180;
+  --color-button-text: #FFFFFF;
+  --color-card: #a3a3a3;
+  --color-box-footer: #FAFAFC;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100vh;
+}
+
+img {
+  width: 100vh;
+}
+
+body {
+  background: var(--color-background);
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body,
+input,
+button,
+textarea {
+  font:  500 1.6rem Poppins;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 2vh;
+}
+
+a:hover {
+  color: #ff0000;
+}
+
+.container {
+  width: 90vw;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 700px) {
+  :root {
+    font-size: 60%;
+  }
+}
