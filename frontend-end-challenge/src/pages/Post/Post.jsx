@@ -73,10 +73,10 @@ export default function Post() {
               />
               <p className="heading">by</p>
               <a
-                href={data[0]._embedded.author[0].link}
+                href={data[0]._embedded.author[0].link }
                 rel="external noreferrer noopener"
                 target="_blank"
-              >{`${data[0]._embedded.author[0].name}`}</a>
+              >{`${data[0]._embedded.author[0].name || 'Indisponível'}`}</a>
             </div>
             <div className="level-item">
               {moment(data[0].date, 'YYYYMMDD').fromNow()}
@@ -99,9 +99,9 @@ export default function Post() {
               rel="external noreferrer noopener"
               target="_blank"
             >
-              <p className="title is-5 is-spaced">{`${data[0]._embedded.author[0].name}`}</p>
+              <p className="title is-5 is-spaced">{`${data[0]._embedded.author[0].name || 'Indisponível'}`}</p>
             </a>
-            <p className="content">{data[0]._embedded.author[0].description}</p>
+            <p className="content">{data[0]._embedded.author[0].description || 'Descrição indisponível'}</p>
           </article>
         </section>
       )}
