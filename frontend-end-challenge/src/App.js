@@ -5,7 +5,7 @@ import { Header } from './components';
 
 function App() {
   return (
-    <main className="App">
+    <main className="App container is-fluid">
     <Header />
       <Switch>
         <Route exact path="/">
