@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 3s%;
+
+}
+
+figure > img {
+width:  90vw;
+height: auto;
+}
+figure{
+    display: inline;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}

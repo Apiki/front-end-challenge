@@ -1,0 +1,26 @@
+.container__link__icon {
+  position: relative;
+  top: 5px;
+  left: 2px;
+  transition: left 0.1s;
+}
+
+.container__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.container:hover {
+  color: rgb(13, 0, 128);
+}
+
+.container:hover .container__link__icon {
+  left: 10px;
+
+}

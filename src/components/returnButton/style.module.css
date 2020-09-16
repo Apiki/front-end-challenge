@@ -1,0 +1,20 @@
+.return-button {
+  margin-left: 1%;
+  text-decoration: none;
+  color: black;
+}
+
+.return-button__icon {
+  vertical-align: middle;
+  position: relative;
+  right: 5px;
+  transition: right 0.1s;
+}
+
+.return-button:hover {
+  color: rgb(13, 0, 128);
+}
+
+.return-button:hover .return-button__icon {
+  right: 10px;
+}

@@ -1,0 +1,9 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+.loading {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+}
