@@ -34,7 +34,9 @@ const ArticleDetail = (props) => {
   },[fetchUrl]);
 
   useEffect(() => {
-    setData(resultado);
+    if (resultado) {
+      setData(resultado);
+    }
   },[dataReceived]);
 
   useEffect(() => {
