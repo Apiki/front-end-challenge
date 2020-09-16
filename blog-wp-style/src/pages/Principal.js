@@ -21,16 +21,16 @@ const PaginaInicial = (props) => {
 
   const obtido = async (url) => await getArticlesList(url)
   .then((data) => {
-    setDataReceived(true);
     resultado = data;
-  },() => { 
     setDataReceived(true);
-    resultado = [] 
+  },() => { 
+    resultado = [];
+    setDataReceived(true);
   })
   .catch((error) => {
-    setDataReceived(true);
     resultado = [];
     console.log(error);
+    setDataReceived(true);
   });
   
   useEffect(() => {

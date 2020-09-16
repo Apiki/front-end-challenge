@@ -20,16 +20,16 @@ const ArticleDetail = (props) => {
 
   const obtido = async (url) => await getArticle(url)
   .then((data) => {
-    setDataReceived(true);
     resultado = data;
+    setDataReceived(true);
     },() => { 
+      resultado = [];
       setDataReceived(true);
-      resultado = [] 
     })
   .catch((error) => {
-    setDataReceived(true);
     resultado = [];
     console.log(error);
+    setDataReceived(true);
   });
   
   useEffect(() => {
@@ -38,7 +38,7 @@ const ArticleDetail = (props) => {
   },[]);
 
   useEffect(() => {
-    // setDataReceived(false);
+    setDataReceived(false);
     obtido(fetchUrl);
   },[fetchUrl]);
 
@@ -46,7 +46,6 @@ const ArticleDetail = (props) => {
     if (resultado) {
       setData(resultado);
     }
-    // else setData([]);
   },[dataReceived]);
 
   useEffect(() => {
