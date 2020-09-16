@@ -21,7 +21,7 @@ const ArticleDetail = (props) => {
   const obtido = async (url) => await getArticle(url).then((data) => {
     setDataReceived(true);
     resultado = data;
-  });
+  },() => {<div>Internal Server Error</div>});
   
   useEffect(() => {
     // obtido(fetchUrl);
@@ -46,7 +46,7 @@ const ArticleDetail = (props) => {
     }
   }, [data]);
 
-  // Se não retornou resultado vai para NotFoun
+  // Se não retornou resultado vai para NotFound
   if (data && dataReceived) {
     if (!data.length) {
       return (<Redirect to="/notfound" />);
@@ -57,6 +57,7 @@ const ArticleDetail = (props) => {
   if (data && dataReceived) {
     return(
       <div className="userScreen">
+        <title>{data[0].title.rendered}</title>
         <div className="padStepThree"><Header styles={'header bcgOrange'}/></div>
         <div className="content padStepThree"><ArticleShow /></div>
         <div className="content padStepTwo"><a href="/">Voltar</a></div>
