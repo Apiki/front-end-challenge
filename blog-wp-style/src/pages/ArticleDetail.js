@@ -21,7 +21,7 @@ const ArticleDetail = (props) => {
   const obtido = async (url) => await getArticle(url).then((data) => {
     setDataReceived(true);
     resultado = data;
-  },() => {<div>Internal Server Error</div>});
+  },() => { resultado = [] });
   
   useEffect(() => {
     // obtido(fetchUrl);
@@ -55,9 +55,9 @@ const ArticleDetail = (props) => {
 
   // Exibição principal
   if (data && dataReceived) {
+    document.title = `${data[0].title.rendered}`;
     return(
       <div className="userScreen">
-        <title>{data[0].title.rendered}</title>
         <div className="padStepThree"><Header styles={'header bcgOrange'}/></div>
         <div className="content padStepThree"><ArticleShow /></div>
         <div className="content padStepTwo"><a href="/">Voltar</a></div>

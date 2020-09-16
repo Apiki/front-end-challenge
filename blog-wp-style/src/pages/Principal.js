@@ -70,6 +70,7 @@ const PaginaInicial = (props) => {
   if (acc) {
     let enableNextBtn = false;
     if (actualPage < resultado.totalPages) enableNextBtn = true;
+    document.title = 'devCode Blog';
     return (
       <div className="userScreen">
         <div className="padStepThree"><Header styles={'header bcgBlue'}/></div>
