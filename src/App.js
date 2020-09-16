@@ -1,11 +1,16 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter as Router} from 'react-router-dom';
+import Header from './components/Header';
+import Routes from './routes/Routes';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Preparando.</h1>
-    </div>
+    <Router>
+      <Header />
+      <Routes />
+      <Footer />
+    </Router>
   );
 }
 
