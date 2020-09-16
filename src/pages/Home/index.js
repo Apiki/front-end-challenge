@@ -23,8 +23,6 @@ const Home = () => {
     fetchMorePosts(page)
     .then((res) => {
       const totalPages = res.headers.get('X-WP-TotalPages')
-      console.log('Máximo de paginas disponíveis:', totalPages)
-      console.log('Pagina atual:', page) 
       if (+page >= totalPages) setDisableButton(true);
       return res.json();
     })
@@ -38,12 +36,6 @@ const Home = () => {
   return (
     <main className="home-page">
 
-      {console.log('Posts', posts)}
-      {console.log('IsLoading', isLoading)}
-      {console.log('EnableButton', disableButton)}
-
-      {/* <PageSpeed /> */}
-      
       <h1>Últimas postagens</h1>
 
       <section className="latest-posts">

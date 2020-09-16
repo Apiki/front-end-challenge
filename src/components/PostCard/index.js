@@ -8,8 +8,6 @@ const PostCard = ({post}) => {
   return (
     <Link to={`/${post.slug}`} className="card scale-up-center">
 
-      {console.log('PostCard', post)}
-
       <img 
         src={post['_embedded']["wp:featuredmedia"] ? post['_embedded']["wp:featuredmedia"][0].source_url : Undefined} 
         alt={post['_embedded']["wp:featuredmedia"] ? post['_embedded']["wp:featuredmedia"][0].alt_text : 'Undefined'} 
@@ -24,7 +22,7 @@ const PostCard = ({post}) => {
           src={ post._embedded.author[0].avatar_urls ? post._embedded.author[0].avatar_urls[24] : DefaultGravatar }
           alt={ post._embedded.author[0].name || 'Default Gravatar'}
         />
-        | { post['_embedded']["author"][0].name } - {new Date(post.date).toLocaleDateString() }.
+        | { post['_embedded']["author"][0].name } - {new Date(post.date).toLocaleDateString() }
       </span>
 
     </Link>

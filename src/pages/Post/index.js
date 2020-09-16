@@ -21,9 +21,9 @@ const Post = () => {
 
   return (
     <main className= "post-page">
-      {console.log('slug: ', slug)}
-      {console.log('post: ', posts)}
+
       {isLoading && <div className="loader"><ReactLoading type={"spin"} color={"#FF8C00"} height={150} width={150} /></div>}
+
       {!isLoading && (
         <>
         <div className="post-title-container scale-up-center">
@@ -40,6 +40,7 @@ const Post = () => {
         <div className="post-content scale-up-center" dangerouslySetInnerHTML={{ __html: posts.content.rendered }}></div>
         </>
       )}
+
     </main>
   );
 }
