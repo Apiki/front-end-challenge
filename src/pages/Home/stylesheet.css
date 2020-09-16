@@ -1,0 +1,36 @@
+.home-page {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 100vw;
+  width: 100vw;
+}
+
+.home-page > h1 {
+  color: rgb(112, 112, 112);
+}
+
+.latest-posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.load-more-btn {
+  background-color: transparent;
+  border-radius: 10px;
+  border: solid 2px #FF8C00;
+  color: #FF8C00;
+  display: inline-block;
+  font-size: 22px;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  transition: .4s;
+}
+
+.load-more-btn:hover {
+  background: #FF8C00;
+  color: white;
+  cursor: pointer;
+}

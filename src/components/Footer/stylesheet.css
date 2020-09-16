@@ -1,0 +1,35 @@
+footer {
+  align-items: center;
+  background-color: rgb(112, 112, 112);
+  bottom: 0;
+  color: white;
+  display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  min-height: 260px;
+  min-width: 560px;
+  position: relative;
+}
+
+.logo-footer {
+  max-height: 50px;
+}
+
+.icons-footer {
+  padding: 15px;
+}
+
+#color{
+  padding: 15px;
+  width: 35px;
+}
+
+
+#color:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+
