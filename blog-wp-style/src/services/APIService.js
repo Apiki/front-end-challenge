@@ -10,7 +10,8 @@ export const getArticlesList = async (url) => {
         total = result.headers.get('X-WP-Total');
         totalPages = result.headers.get('X-WP-TotalPages');
       })
-      .then(() => ({ total, totalPages, content }));
+      .then(() => ({ total, totalPages, content }))
+      .catch((error) => error);
   }
 };
 
@@ -24,6 +25,7 @@ export const getArticle = async (url) => {
       .then((dataJson) => {
         article = dataJson;
       })
-      .then(() => (article));
+      .then(() => (article))
+      .catch((error) => error);
   }
 };
