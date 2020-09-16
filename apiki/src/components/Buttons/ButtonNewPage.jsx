@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { ContextAplication } from "../../context/ContextAplication";
+import './index.css';
 
 const ButtonNewPage = () => {
   const {
@@ -13,14 +14,12 @@ const ButtonNewPage = () => {
 
   useEffect(() => {
     nextPage(actualPage);
-  }, []);
-
-  useEffect(() => {
-    nextPage(actualPage);
   }, [actualPage]);
 
+  console.log(actualPage)
+
   const handleNextPage = () => {
-    setActualPage(actualPage < totalPages ? actualPage + 1 : totalPages);
+    setActualPage(actualPage < totalPages ? actualPage + 1 : actualPage);
     return setHome(pages);
   };
 

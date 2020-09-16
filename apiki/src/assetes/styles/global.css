@@ -1,6 +1,6 @@
 :root {
   font-size: 60%;
-  --color-background: #7ff4cd;
+  --color-background: #a6efd6;
   --color-background-header: linear-gradient(90deg, #67666a 0%, #000000 100%);
   --color-text-base: #6A6180;
   --color-button-text: #FFFFFF;
@@ -14,16 +14,13 @@
   box-sizing: border-box;
 }
 
-html, body, #root {
-  height: 100vh;
-}
-
 img {
-  width: 100vh;
+  width: 90vh;
 }
 
 body {
   background: var(--color-background);
+  cursor: pointer;
 }
 
 #root {
@@ -36,7 +33,7 @@ body,
 input,
 button,
 textarea {
-  font:  500 1.6rem Poppins;
+  font:  500 2rem Poppins;
 }
 
 a {

@@ -1,7 +1,7 @@
 .header {
   background: var(--color-background-header);
-  margin-top: 744vh;
   border-radius: 2vh;
+  margin-top: 2vw;
 }
 
 .header img {

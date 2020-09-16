@@ -1,19 +1,11 @@
 .cards {
   border-radius: 24px;
-  height: 74vh;
-  width: 100vh;
   background-color: var(--color-card);
   margin-top: 5vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-}
-
-.cards img {
-  width: 84vh;
-}
-
-.next-button {
-  float: right
+  width: 90%;
+  text-align: center;
 }

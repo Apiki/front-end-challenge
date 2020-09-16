@@ -1,15 +1,17 @@
 import React from "react";
-import Header from "./components/Header/Header";
-import InternalNews from "./components/InternalPage/InternalNews";
+import { Route, Switch } from "react-router-dom";
+import PostPage from "./pages/PostPage/PostPage";
 import HomePage from "./pages/HomePage/HomePage";
-import './assetes/styles/global.css';
+import AplicationProvider from "./context/ContextAplication";
+import "./assetes/styles/global.css";
 
 const App = () => (
-  <div>
-    <Header />
-    <HomePage />
-    <InternalNews />
-  </div>
-)
+  <AplicationProvider>
+    <Switch>
+      <Route exact path="/" component={HomePage} />
+      <Route exact path="/:slug" component={PostPage} />
+    </Switch>
+  </AplicationProvider>
+);
 
 export default App;
