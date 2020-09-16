@@ -18,10 +18,19 @@ const ArticleDetail = (props) => {
   const [data, setData] = useState();
   const fetchComplement = location.pathname.substring(1, (location.pathname.length));
 
-  const obtido = async (url) => await getArticle(url).then((data) => {
+  const obtido = async (url) => await getArticle(url)
+  .then((data) => {
     setDataReceived(true);
     resultado = data;
-  },() => { resultado = [] });
+    },() => { 
+      setDataReceived(true);
+      resultado = [] 
+    })
+  .catch((error) => {
+    setDataReceived(true);
+    resultado = [];
+    console.log(error);
+  });
   
   useEffect(() => {
     // obtido(fetchUrl);
