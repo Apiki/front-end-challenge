@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import CardList from '../components/CardList';
 import { getArticlesList  } from '../services/APIService';
 import { receiveAPISuccess } from '../actions/index';
@@ -18,9 +19,18 @@ const PaginaInicial = (props) => {
   const [actualPage, setActualPage] = useState(0);
   const [acc, setAcc] = useState();
 
-  const obtido = async (url) => await getArticlesList(url).then((data) => {
+  const obtido = async (url) => await getArticlesList(url)
+  .then((data) => {
     setDataReceived(true);
     resultado = data;
+  },() => { 
+    setDataReceived(true);
+    resultado = [] 
+  })
+  .catch((error) => {
+    setDataReceived(true);
+    resultado = [];
+    console.log(error);
   });
   
   useEffect(() => {
@@ -66,6 +76,13 @@ const PaginaInicial = (props) => {
       props.APIData(acc);
     }
   }, [acc]);
+
+  // Se não retornou resultado vai para NotFound
+  if (data && dataReceived) {
+    if (!data.content.length) {
+      return (<Redirect to="/notfound" />);
+    }
+  }
   
   if (acc) {
     let enableNextBtn = false;
