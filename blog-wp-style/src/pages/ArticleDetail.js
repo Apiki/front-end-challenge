@@ -19,18 +19,20 @@ const ArticleDetail = (props) => {
   const fetchComplement = location.pathname.substring(1, (location.pathname.length));
 
   const obtido = async (url) => await getArticle(url)
-  .then((data) => {
-    resultado = data;
-    setDataReceived(true);
+    .then((data) => {
+      resultado = data;
+      if (resultado) {
+        setDataReceived(true);
+      }
     },() => { 
       resultado = [];
       setDataReceived(true);
     })
-  .catch((error) => {
-    resultado = [];
-    console.log(error);
-    setDataReceived(true);
-  });
+    .catch((error) => {
+      resultado = [];
+      console.log(error);
+      setDataReceived(true);
+    });
   
   useEffect(() => {
     // obtido(fetchUrl);

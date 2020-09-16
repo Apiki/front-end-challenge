@@ -20,25 +20,29 @@ const PaginaInicial = (props) => {
   const [acc, setAcc] = useState();
 
   const obtido = async (url) => await getArticlesList(url)
-  .then((data) => {
-    resultado = data;
-    setDataReceived(true);
-  },() => { 
-    resultado = [];
-    setDataReceived(true);
-  })
-  .catch((error) => {
-    resultado = [];
-    console.log(error);
-    setDataReceived(true);
-  });
+    .then((data) => {
+      resultado = data;
+      if (resultado) {
+        setDataReceived(true);
+      }
+    },() => { 
+      resultado = [];
+      setDataReceived(true);
+    })
+    .catch((error) => {
+      resultado = [];
+      console.log(error);
+      setDataReceived(true);
+    });
   
   useEffect(() => {
     obtido(fetchUrl);
   },[]);
 
   useEffect(() => {
-    setData(resultado);
+    if (resultado) {
+      setData(resultado);
+    }
   },[dataReceived]);
 
   useEffect(() => {
