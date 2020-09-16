@@ -38,7 +38,7 @@ const ArticleDetail = (props) => {
   },[]);
 
   useEffect(() => {
-    setDataReceived(false);
+    // setDataReceived(false);
     obtido(fetchUrl);
   },[fetchUrl]);
 
@@ -46,6 +46,7 @@ const ArticleDetail = (props) => {
     if (resultado) {
       setData(resultado);
     }
+    // else setData([]);
   },[dataReceived]);
 
   useEffect(() => {
@@ -74,6 +75,7 @@ const ArticleDetail = (props) => {
       </div>
     );
   }
+
   return (<div><img src={loadingImage} alt="loading"/></div>);
 };
 
