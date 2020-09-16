@@ -6,6 +6,8 @@ O design foi baseado em um visual de blog clean e intuitivo. Ainda há espaços 
 
 Espero que a experiência de uso seja agradável e estou à disposição para qualquer esclarecimento.
 
+Foi feito o deploy deste projeto que pode ser acessado em: https://marco-barbosa-desafio-frontend.herokuapp.com/
+
 Atenciosamente,
 
 Marco Barbosa
