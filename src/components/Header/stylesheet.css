@@ -1,68 +1,35 @@
 header {
   background-color: rgb(112, 112, 112);
-  border-bottom: 3px solid rgb(59, 59, 59);
+  border-bottom: 1px solid rgb(59, 59, 59);
+  -moz-box-shadow: 4px 4px 15px 0px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 4px 4px 15px 0px rgba(0,0,0,0.5);
   display: flex;
-  height: 75px;
-  margin-bottom: 50px;
-  min-width: 560px;
-}
-
-header > container {
-  display: flex;
-  justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80vw;
-}
-
-
-header > container > img {
-  height: 45px;
-  margin-bottom: auto;
-  margin-top: auto;
-}
-
-header > container > div {
   align-items: center;
-  display: flex;
-  text-decoration:none;
-}
-
-#Nav {
-  color: white;
-  font-size: 22px;
-  padding: 8px;
-  position: relative;
-  text-decoration:none;
+  justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 
-#Nav:hover {
-  background-color: rgba(255, 140, 0, 0.445);
-  border-radius: 5px;
-  color: white;
+header > img {
+  height: 45px;
+  margin: 15px;
 }
 
-#Nav:before {  /* https://www.htmlecsspro.com/artigo/animacao-de-link-sublinhado */
-  -webkit-transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in-out 0s;
+.btn-hamburguer {
+  cursor: pointer;
+  margin: 15px;
+}
+
+.btn-hamburguer > div {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+  border-radius: 15px;
+}
+
+.btn-hamburguer:hover > div{
   background-color: #FF8C00;
-  border-radius: 5px;
-  bottom: -5px;
-  content: "";
-  height: 3px;
-  left: 0;
-  position: absolute;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out 0s;
-  visibility: hidden;
-  width: 100%;
-}
-
-#Nav:hover:before {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-  visibility: visible;
 }
 
 .fade-in-top{

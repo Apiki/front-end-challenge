@@ -15,18 +15,12 @@ const Footer = () => {
         <img className="logo-footer" src={LogoApiki} alt="LogoApiki"></img>
 
         <div className="adress-footer">
-          <h3>Governador Valadares - MG</h3>
+          <h4>Governador Valadares - MG</h4>
           <p>Praça Doutor João Paulo Pinheiro</p>
           <p>100 - Centro. CEP: 35010-330</p>
           <p>+55 33 3278-1002</p>
         </div>
 
-        <div className="adress-footer">
-          <h3>São Paulo - SP</h3>
-          <p>Rua Oscar Freire, 2379</p>
-          <p>Pinheiros</p>
-          <p>CEP: 05409-012</p>
-        </div>
 
         <div className="icons-footer">
           <FacebookIcon id="color"/>

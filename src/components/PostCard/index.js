@@ -15,14 +15,12 @@ const PostCard = ({post}) => {
       
       <h3>{post['title']["rendered"]} </h3>
 
-      <p>{post['excerpt']["rendered"].slice(3, -5)}</p> 
-
       <span>
         <img
           src={ post._embedded.author[0].avatar_urls ? post._embedded.author[0].avatar_urls[24] : DefaultGravatar }
           alt={ post._embedded.author[0].name || 'Default Gravatar'}
         />
-        | { post['_embedded']["author"][0].name } - {new Date(post.date).toLocaleDateString() }
+        { post['_embedded']["author"][0].name } | {new Date(post.date).toLocaleDateString() }
       </span>
 
     </Link>

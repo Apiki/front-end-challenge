@@ -9,27 +9,33 @@
   flex-direction: column;
   flex-wrap: wrap;
   font-family: Roboto;
-  justify-content: space-around;
   max-width: 100vw;
   min-height: 100vw;
 }
 
 .post-title-container {
-  font-size: 26px;
+  font-size: 16px;
   padding-bottom: 50px;
   width: 90vw;
   word-wrap: break-word;
+
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .post-author-container > span {
   bottom: 10px;
   font-size: 16px;
   position: relative;
+  margin-left: 10px;
 }
 
 .post-author-container > img {
   border-radius: 50%;
   width: 35px;
+
 }
 
 .post-content {

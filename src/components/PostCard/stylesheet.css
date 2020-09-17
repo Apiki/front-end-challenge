@@ -4,7 +4,8 @@
 }
 
 .home-page h1 {
-  padding-bottom: 50px;
+  padding-bottom: 20px;
+  max-width: 100vw;
 }
 
 .card {
@@ -19,8 +20,8 @@
   font-family: RoboMontserratto;
   font-size: 16px;
   justify-content: space-between;
-  margin: 25px;
-  max-width: 375px;
+  margin: 20px;
+  max-width: 265px;
   overflow: hidden;
   position: relative;
   text-decoration: none;
@@ -35,20 +36,18 @@
 }
 
 .card > img {
-  border: 2px solid black;
-  max-width: 375px;
+  width: 350px;
 }
 
 .card > h3, p {
-  margin: 15px;
+  margin: 10px;
 }
 
 .card > span {
   bottom: 0;
   font-size: 16px;
-  margin: 15px;
-  padding-top: 15px;
-  position: relative;
+  margin-bottom: 15px;
+  margin-left: 10px;
 }
 
 .card > span > img {

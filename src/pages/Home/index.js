@@ -40,6 +40,7 @@ const Home = () => {
 
       <section className="latest-posts">
 
+  
         {posts.map((post) => <PostCard key={post.id} post={post}/> )}
 
       </section>

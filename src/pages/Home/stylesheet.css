@@ -4,7 +4,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   min-height: 100vw;
-  width: 100vw;
+  max-width: 100vw;
 }
 
 .home-page > h1 {
@@ -27,6 +27,7 @@
   padding: 0.3em 1em;
   text-decoration: none;
   transition: .4s;
+  margin-top: 50px;
 }
 
 .load-more-btn:hover {
