@@ -1,0 +1,63 @@
+.card-moreArticle {
+  width: 50%;
+  display: flex;
+}
+
+.card-title {
+  box-shadow: 3px 3px 3px 3px #242526;
+  color: #0098e4;
+  font-size: 3em;
+  height: 60px;
+  margin: 2em 0;
+  padding: 7px;
+  text-align: center;
+}
+
+.card-button {
+  background: #0098e4;
+  border-style: none;
+  width: 100%;
+  font-size: 3em;
+  height: 60px;
+  border-radius: 5px;
+}
+
+.card-button:hover {
+  background: rgb(71, 130, 240);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.card-positionArticle {
+  font-size: 10px;
+  padding: 5px 5px;
+  margin: auto;
+  width: 73%;
+}
+
+.card-info {
+  font-size: 14px;
+}
+
+.internal-content {
+  text-align: center;
+}
+
+p {
+  text-align: left;
+}
+
+.btn-detailPost {
+  margin: 5px;
+  width: 55%;
+  background: #0b0407;
+  color: #ffff;
+  border-style: none;
+  height:  30px;
+  border-radius: 5px;
+}
+
+.btn-detailPost:hover {
+  cursor: pointer;
+  background-color: #411327;
+}

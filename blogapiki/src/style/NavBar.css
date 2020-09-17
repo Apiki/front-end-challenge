@@ -1,0 +1,23 @@
+header {
+  background: #242424;
+  color: #ffff;
+  height: 3.8em;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  padding: 1em;
+}
+
+.anchor {
+  margin-left: 2em;
+  align-items: center;
+  font-size: 1.26em;
+  text-decoration: none;
+  color: white;
+}

@@ -1,0 +1,12 @@
+.home {
+  display: flex;
+}
+
+.main {
+  width: 85%;
+  margin: auto;
+}
+
+.asideBar {
+  width: 30%;
+}

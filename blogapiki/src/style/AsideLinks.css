@@ -1,0 +1,19 @@
+.links-aside {
+  font-size: 2em;
+  /* margin-bottom: 1em; */
+}
+
+.publish {
+  font-size: 2em;
+  font-family: monospace;
+  margin-bottom: 1.6em;
+}
+
+.publish-aside {
+  font-size: 0.7em;
+  margin-bottom: 1em;
+}
+
+a {
+  text-decoration: none;
+}
