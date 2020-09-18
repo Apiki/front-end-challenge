@@ -1,17 +1,31 @@
-import React, { useEffect } from 'react';
+import React, { useContext } from 'react';
 import { apikiPagesAPI } from '../services/apikiAPI';
+import Context from '../Context/Context';
 
 export default function CarregarMais() {
-  useEffect(() => {
-    fetch(`https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=2`)
-      .then((response) => {
-        console.log(response.json());
-    })
-  }, []);
+  const { pageNumber, setPageNumber, data, setData } = useContext(Context);
 
+  async function carregarMais() {
+    try {
+      const response = await apikiPagesAPI(pageNumber);
+      const newPosts = await response.json();
+      if (newPosts.length) {
+        const newData = [...data, ...newPosts];
+        setData(newData);
+        console.log(data);
+        setPageNumber((currentPage) => currentPage + 1);
+        console.log(pageNumber);
+      } else {
+        alert('Não existem mais postagens a serem carregadas.');
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
   return (
     <button
       type="button"
+      onClick={() => carregarMais()}
     >
       Carregar mais...
     </button>
