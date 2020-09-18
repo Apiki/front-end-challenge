@@ -10,7 +10,6 @@ export default function PaginaInicial() {
   useEffect(() => {
     apikiAPI().then((response) => {
       setData(response);
-      console.log(response);
     });
   }, []);
 

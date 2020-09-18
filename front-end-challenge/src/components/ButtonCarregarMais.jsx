@@ -9,17 +9,15 @@ export default function CarregarMais() {
     try {
       const response = await apikiPagesAPI(pageNumber);
       const newPosts = await response.json();
-      if (newPosts.length) {
+      if (newPosts) {
         const newData = [...data, ...newPosts];
         setData(newData);
-        console.log(data);
         setPageNumber((currentPage) => currentPage + 1);
-        console.log(pageNumber);
       } else {
         alert('Não existem mais postagens a serem carregadas.');
       }
     } catch (error) {
-      console.log(error);
+      alert('Não existem mais postagens a serem carregadas.');
     }
   }
   return (
