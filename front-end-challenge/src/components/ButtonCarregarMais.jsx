@@ -26,7 +26,7 @@ export default function CarregarMais() {
     }
   }
 
-  if (disableButton) return <button type="button" disabled>Carregar mais...</button>
+  if (disableButton) return <button type="button" disabled>Carregar mais...</button>;
 
   return (
     <button
