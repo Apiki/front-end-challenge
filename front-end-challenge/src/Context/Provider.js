@@ -4,16 +4,10 @@ import Context from './Context';
 
 export default function Provider({ children }) {
   const [data, setData] = useState([]);
-  const [pageNumber, setPageNumber] = useState(10);
-  const [dataNextPage, setDataNextPage] = useState([]);
 
   const store = {
     data,
     setData,
-    pageNumber,
-    setPageNumber,
-    dataNextPage,
-    setDataNextPage,
   };
 
   return (
