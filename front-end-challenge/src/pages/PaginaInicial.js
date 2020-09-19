@@ -15,9 +15,7 @@ export default function PaginaInicial() {
 
   return (
     <section>
-      {data.map((post) => (
-        <Card key={post.id} post={post} />
-      ))}
+      {data.map((post) => <Card key={post.id} post={post} />)}
       <CarregarMais />
     </section>
   );
