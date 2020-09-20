@@ -1,20 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
-import Provider from './Context/Provider';
 import PaginaInicial from './pages/PaginaInicial';
 import Interna from './pages/Interna';
+import Context from './Context/Context';
 
 function App() {
+  const { slugRoutes } = useContext(Context);
   return (
-    <Provider>
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={PaginaInicial} />
-          {/*<Route path={`/${slug}`} component={Interna} />*/}
-        </Switch>
-      </BrowserRouter>
-    </Provider>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={PaginaInicial} />
+        {slugRoutes.map((route) => <Route key={route} path={`/${route}`} component={Interna} />)}
+      </Switch>
+    </BrowserRouter>
   );
 }
 

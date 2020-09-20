@@ -4,10 +4,13 @@ import Context from './Context';
 
 export default function Provider({ children }) {
   const [data, setData] = useState([]);
+  const [ slugRoutes, setSlugRoutes ] = useState([]);
 
   const store = {
     data,
     setData,
+    slugRoutes,
+    setSlugRoutes,
   };
 
   return (

@@ -1,13 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import Context from '../Context/Context';
 
 export default function Card({ post }) {
   const semImagem = 'https://www.termoparts.com.br/wp-content/uploads/2017/10/no-image.jpg';
 
   const [ slug, setSlug ] = useState('');
 
+  const { slugRoutes, setSlugRoutes } = useContext(Context);
+
   useEffect(() => {
     setSlug(post.slug);
+    const newSlugRoutes = [...slugRoutes, slug];
+    setSlugRoutes(newSlugRoutes);
   }, []);
 
   return (
