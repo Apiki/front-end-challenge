@@ -1,5 +1,5 @@
-export const apikiAPI = () => (
-  fetch('https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518')
+export const apikiInternaAPI = (slug) => (
+  fetch(`https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=${slug}`)
     .then((response) => (
       response
         .json()
