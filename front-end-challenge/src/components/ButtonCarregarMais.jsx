@@ -4,7 +4,6 @@ import Context from '../Context/Context';
 
 export default function CarregarMais() {
   const { data, setData } = useContext(Context);
-
   const [pageNumber, setPageNumber] = useState(2);
   const [disableButton, setDisableButton] = useState(false);
 
@@ -25,12 +24,5 @@ export default function CarregarMais() {
 
   if (disableButton) return <button type="button" disabled>Carregar mais...</button>;
 
-  return (
-    <button
-      type="button"
-      onClick={() => carregarMais()}
-    >
-      Carregar mais...
-    </button>
-  );
+  return <button type="button" onClick={() => carregarMais()}>Carregar mais...</button>;
 }
