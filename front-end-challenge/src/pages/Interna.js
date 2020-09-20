@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { apikiInternaAPI } from '../services/apikiAPI';
+import { apikiInternaAPI } from '../services/apikiInternaAPI';
 import InternaCard from '../components/InternaCard';
 
 export default function Interna() {
@@ -11,6 +11,7 @@ export default function Interna() {
       setInternaData(response);
     })
   }, []);
+  
   return (
     <div>
       {internaData.map((post) => <InternaCard key={post.id} post={post} />)}

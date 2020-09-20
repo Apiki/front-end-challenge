@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { apikiPagesAPI } from '../services/apikiAPI';
+import { apikiPagesAPI } from '../services/apikiPagesAPI';
 import Context from '../Context/Context';
 
 export default function CarregarMais() {
