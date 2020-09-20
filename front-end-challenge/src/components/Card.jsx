@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Context from '../Context/Context';
+import PropTypes from 'prop-types';
 
 export default function Card({ post }) {
   const semImagem = 'https://www.termoparts.com.br/wp-content/uploads/2017/10/no-image.jpg';
@@ -27,3 +28,7 @@ export default function Card({ post }) {
     </div>
   );
 }
+
+Card.propTypes = {
+  post: PropTypes.object.isRequired,
+};
