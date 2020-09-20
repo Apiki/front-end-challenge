@@ -16,12 +16,9 @@ export default function CarregarMais() {
         const newData = [...data, ...newPosts];
         setData(newData);
         setPageNumber((currentPage) => currentPage + 1);
-      } else {
-        alert('Não existem mais postagens a serem carregadas.');
-        setDisableButton(true);
       }
     } catch (error) {
-      alert('Não existem mais postagens a serem carregadas.');
+      alert('Não existem mais postagens a serem exibidas.');
       setDisableButton(true);
     }
   }
