@@ -5,12 +5,18 @@ import Context from './Context';
 export default function Provider({ children }) {
   const [data, setData] = useState([]);
   const [ slugRoutes, setSlugRoutes ] = useState([]);
+  const [internaData, setInternaData] = useState([]);
+  const [author, setAuthor] = useState([]);
 
   const store = {
     data,
     setData,
     slugRoutes,
     setSlugRoutes,
+    internaData,
+    setInternaData,
+    author,
+    setAuthor,
   };
 
   return (
