@@ -8,7 +8,7 @@ export default function User() {
   return (
     <div>
       <img src={internaData[0]._embedded.author[0].avatar_urls[`${url}`]} alt="Avatar do Autor" />
-      <h3>{internaData[0]._embedded.author[0].name}</h3>
+      <h4>{internaData[0]._embedded.author[0].name}</h4>
       <p>{internaData[0]._embedded.author[0].description}</p>
     </div>
   );

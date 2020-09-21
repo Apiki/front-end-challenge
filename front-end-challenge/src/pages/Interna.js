@@ -5,6 +5,7 @@ import Context from '../Context/Context';
 import Voltar from '../components/BtnVoltar';
 import Carregando from '../components/Carregando';
 import User from '../components/User';
+import DeixeComentario from '../components/DeixeComentario';
 
 export default function Interna() {
   const { internaData, setInternaData } = useContext(Context);
@@ -25,6 +26,7 @@ export default function Interna() {
       <Voltar />
       <InternaContent />
       <User />
+      <DeixeComentario />
     </div>
   );
 }
