@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { apikiInternaAPI } from '../services/apikiInternaAPI';
-import InternaCard from '../components/InternaContent';
+import InternaContent from '../components/InternaContent';
 import Context from '../Context/Context';
 import Voltar from '../components/BtnVoltar';
 import Carregando from '../components/Carregando';
@@ -23,8 +23,7 @@ export default function Interna() {
   return (
     <div>
       <Voltar />
-      {internaData.map((post) => <InternaCard key={post.id} post={post} />)}
-      <Voltar />
+      <InternaContent />
     </div>
   );
 }

@@ -1,24 +1,23 @@
-import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React, { useEffect, useContext, useState } from 'react';
+import Context from '../Context/Context';
 
-export default function InternaCard({ post }) {
-  const semImagem = 'https://www.termoparts.com.br/wp-content/uploads/2017/10/no-image.jpg';
+export default function InternaContent() {
+  const { semImagem, internaData } = useContext(Context);
+  const [src, setSrc] = useState('');
 
   useEffect(() => {
     const content_el = document.querySelector('#content');
-    content_el.innerHTML = post.content.rendered;
+    content_el.innerHTML = internaData[0].content.rendered;
+
+    setSrc((internaData[0]._embedded['wp:featuredmedia']) ? internaData[0]._embedded['wp:featuredmedia'][0].source_url : semImagem);
   }, []);
 
   return (
     <div>
-      <img src={(post._embedded['wp:featuredmedia']) ? post._embedded['wp:featuredmedia'][0].source_url : semImagem} />
-      <h2>{post.title.rendered}</h2>
-      <h3>{post.excerpt.rendered.substring(3, (post.excerpt.rendered.length) - 5)}</h3>
+      <img src={src} alt="Imagem destacada" />
+      <h2>{internaData[0].title.rendered}</h2>
+      <h3>{internaData[0].excerpt.rendered.substring(3, (internaData[0].excerpt.rendered.length) - 5)}</h3>
       <pre id="content"></pre>
     </div>
   );
 }
-
-InternaCard.propTypes = {
-  post: PropTypes.object.isRequired,
-};
