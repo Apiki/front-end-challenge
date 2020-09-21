@@ -15,3 +15,5 @@ export const saveComentariosLocalStorage = (url) => {
     localStorage.setItem(`${url}`, JSON.stringify(comentarios));
   }
 };
+
+export const loadComentariosLocalStorage = (url) => JSON.parse(localStorage.getItem(`${url}`));
