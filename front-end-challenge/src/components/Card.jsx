@@ -4,21 +4,18 @@ import Context from '../Context/Context';
 import PropTypes from 'prop-types';
 
 export default function Card({ post }) {
-  const semImagem = 'https://www.termoparts.com.br/wp-content/uploads/2017/10/no-image.jpg';
   const [ slug, setSlug ] = useState('');
-  const [src, setSrc] = useState('');
-  const { slugRoutes, setSlugRoutes } = useContext(Context);
+  const { slugRoutes, setSlugRoutes, semImagem } = useContext(Context);
 
   useEffect(() => {
     setSlug(post.slug);
     const newSlugRoutes = [...slugRoutes, slug];
     setSlugRoutes(newSlugRoutes);
-    setSrc((post._embedded['wp:featuredmedia']) ? post._embedded['wp:featuredmedia'][0].source_url : semImagem);
   }, []);
 
   return (
     <div>
-      <img src={src} alt="Imagem destacada" />
+      <img src={(post._embedded['wp:featuredmedia']) ? post._embedded['wp:featuredmedia'][0].source_url : semImagem} alt="Imagem destacada" />
       <h3>{post.title.rendered}</h3>
       <Link
         to={`/${slug}`}

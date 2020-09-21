@@ -6,7 +6,7 @@ import Voltar from '../components/BtnVoltar';
 import Carregando from '../components/Carregando';
 
 export default function Interna() {
-  const { internaData, setInternaData, setAuthor } = useContext(Context);
+  const { internaData, setInternaData } = useContext(Context);
 
   useEffect(() => {
     apikiInternaAPI(window.location.pathname.substring(1)).then((response) => {
@@ -15,7 +15,6 @@ export default function Interna() {
       console.log(response);
       // setCategoria(response[0]._embedded['wp:term'][0][0].name);
     });
-    return setInternaData([]);
   }, []);
 
   if (!internaData.length) return <Carregando />;
