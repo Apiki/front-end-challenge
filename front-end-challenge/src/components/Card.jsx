@@ -4,21 +4,14 @@ import Context from '../Context/Context';
 import PropTypes from 'prop-types';
 
 export default function Card({ post }) {
-  const [ slug, setSlug ] = useState('');
-  const { slugRoutes, setSlugRoutes, semImagem } = useContext(Context);
-
-  useEffect(() => {
-    setSlug(post.slug);
-    const newSlugRoutes = [...slugRoutes, slug];
-    setSlugRoutes(newSlugRoutes);
-  }, []);
+  const { semImagem } = useContext(Context);
 
   return (
     <div>
       <img src={(post._embedded['wp:featuredmedia']) ? post._embedded['wp:featuredmedia'][0].source_url : semImagem} alt="Imagem destacada" />
       <h3>{post.title.rendered}</h3>
       <Link
-        to={`/${slug}`}
+        to={`/${post.slug}`}
       >
         {post.slug}
       </Link>

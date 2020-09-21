@@ -6,12 +6,11 @@ import Interna from './pages/Interna';
 import Context from './Context/Context';
 
 function App() {
-  const { slugRoutes } = useContext(Context);
   return (
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={PaginaInicial} />
-        {slugRoutes.map((route) => <Route key={route} path={`/${route}`} component={Interna} />)}
+        <Route path={`/${window.location.pathname.substring(1)}`} component={Interna} />
       </Switch>
     </BrowserRouter>
   );

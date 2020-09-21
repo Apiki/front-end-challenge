@@ -7,29 +7,33 @@ import Carregando from '../components/Carregando';
 import User from '../components/User';
 import DeixeComentario from '../components/DeixeComentario';
 import Comentarios from '../components/Comentarios';
+import Aside from '../components/Aside';
 
 export default function Interna() {
   const { internaData, setInternaData } = useContext(Context);
 
   useEffect(() => {
     apikiInternaAPI(window.location.pathname.substring(1)).then((response) => {
-      // setAuthor(response[0]._embedded.author);
       setInternaData(response);
-      console.log(response);
-      // setCategoria(response[0]._embedded['wp:term'][0][0].name);
     });
   }, []);
 
   if (!internaData.length) return <Carregando />;
-  
+
   return (
     <section>
-      <Voltar />
-      <InternaContent />
-      <User />
-      <Comentarios />
-      <DeixeComentario />
-      <Voltar />
+      <div>
+        <Voltar />
+        <InternaContent />
+        <User />
+        <Comentarios />
+        <DeixeComentario />
+        <Voltar />
+      </div>
+      <div>
+        <Aside />
+      </div>
+
     </section>
   );
 }
