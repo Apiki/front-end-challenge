@@ -19,6 +19,7 @@ export default function DeixeComentario() {
       document.querySelector('#comentario').value = '';
       alert('Comentário enviado com sucesso!');
       setQtdCaracteres(100);
+      window.location.reload(true);
     }
   }
 
