@@ -15,6 +15,7 @@ export default function Comentarios() {
 
   return (
     <div>
+      <h3>Comentários</h3>
       {comentarios.map((comentario, i) => <ComentarioCard key={i} props={comentario} />)}
     </div>
   );

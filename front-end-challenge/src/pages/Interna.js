@@ -29,6 +29,7 @@ export default function Interna() {
       <User />
       <Comentarios />
       <DeixeComentario />
+      <Voltar />
     </section>
   );
 }
