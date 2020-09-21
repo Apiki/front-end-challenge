@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { apikiInternaAPI } from '../services/apikiInternaAPI';
 import InternaContent from '../components/InternaContent';
 import Context from '../Context/Context';
