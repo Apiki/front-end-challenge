@@ -22,11 +22,11 @@ export default function Interna() {
   if (!internaData.length) return <Carregando />;
   
   return (
-    <div>
+    <section>
       <Voltar />
       <InternaContent />
       <User />
       <DeixeComentario />
-    </div>
+    </section>
   );
 }
