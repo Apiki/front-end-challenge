@@ -1,28 +1,11 @@
 import React, { useState } from 'react';
-import { saveComentariosLocalStorage } from '../services/localStorage';
+import { submitComentario } from '../services/submitComentario';
 
 export default function DeixeComentario() {
   const [qtdCaracteres, setQtdCaracteres] = useState(100);
-
   const calcularCaracteres = (event) => {
     setQtdCaracteres(100 - event.target.value.length);
   }
-
-  const submitComentario = () => {
-    const nome = document.querySelector('#name').value;
-    const coment = document.querySelector('#comentario').value;
-    if (nome === '' || coment === '') {
-      alert('Digite todos os campos antes de enviar o comentário');
-    } else {
-      saveComentariosLocalStorage(window.location.pathname.substring(1));
-      document.querySelector('#name').value = '';
-      document.querySelector('#comentario').value = '';
-      alert('Comentário enviado com sucesso!');
-      setQtdCaracteres(100);
-      window.location.reload(true);
-    }
-  }
-
   return (
     <div className="text-center margin-bottom">
       <h3 className="margin-bottom">Deixe um comentário</h3>
@@ -32,18 +15,12 @@ export default function DeixeComentario() {
       </div>
       <div className="margin-bottom">
         <label className="margin-bottom" to="textarea">Comentário</label>
-        <textarea
-          className="margin-bottom"
-          id="comentario" name="textarea" type="text" maxLength="100"
+        <textarea className="margin-bottom" id="comentario" name="textarea" type="text" maxLength="100"
           onChange={(event) => calcularCaracteres(event)}
         />
         <p className="margin-bottom">{`Você ainda pode digitar ${qtdCaracteres} caracteres.`}</p>
       </div>
-      <button
-        className="margin-bottom btn btn-sm"
-        onClick={() => submitComentario()}
-        type="button"
-      >
+      <button className="margin-bottom btn btn-sm" onClick={() => submitComentario() || setQtdCaracteres(100)} type="button">
         Enviar comentário
       </button>
     </div>
