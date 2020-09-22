@@ -30,7 +30,7 @@ export default function Interna() {
         <DeixeComentario />
         <Voltar />
       </div>
-      <div>
+      <div className="margin-top margin-right text-center">
         <Aside />
       </div>
 
