@@ -55,6 +55,14 @@ body {
   width: 75%;
 }
 
+.card-deixe {
+  align-items: center;
+  color: black;
+  display: flex;
+  margin: 30px auto;
+  width: 35%;
+}
+
 .btn {
   border: none;
   border-radius: 5px;
@@ -63,6 +71,11 @@ body {
 
 .btn-green {
   background-color: #006400;
+  color: whitesmoke;
+}
+
+.btn-salmon {
+  background-color: #FA8072;
   color: whitesmoke;
 }
 

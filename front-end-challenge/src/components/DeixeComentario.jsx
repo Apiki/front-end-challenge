@@ -9,18 +9,20 @@ export default function DeixeComentario() {
   return (
     <div className="text-center margin-bottom">
       <h3 className="margin-bottom">Deixe um comentário</h3>
-      <div>
+      <div className="text-center">
         <label className="margin-bottom" to="name">Nome</label>
-        <input className="margin-bottom" id="name" name="name" type="text" maxLength="10" />
+        <input className="margin-bottom margin-left" id="name" name="name" type="text" maxLength="10" />
       </div>
-      <div className="margin-bottom">
+      <div className="margin-bottom card-deixe">
         <label className="margin-bottom" to="textarea">Comentário</label>
-        <textarea className="margin-bottom" id="comentario" name="textarea" type="text" maxLength="100"
-          onChange={(event) => calcularCaracteres(event)}
-        />
-        <p className="margin-bottom">{`Você ainda pode digitar ${qtdCaracteres} caracteres.`}</p>
+        <div>
+          <textarea className="margin-bottom margin-left" id="comentario" name="textarea" type="text" maxLength="100"
+            onChange={(event) => calcularCaracteres(event)}
+          />
+          <p className="margin-bottom">{`Você ainda pode digitar ${qtdCaracteres} caracteres.`}</p>
+        </div>
       </div>
-      <button className="margin-bottom btn btn-sm" onClick={() => submitComentario() || setQtdCaracteres(100)} type="button">
+      <button className="margin-bottom btn btn-sm btn-salmon" onClick={() => submitComentario() || setQtdCaracteres(100)} type="button">
         Enviar comentário
       </button>
     </div>
