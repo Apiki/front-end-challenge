@@ -23,7 +23,7 @@ body {
   border: 1px solid black;
   color: black;
   display: flex;
-  margin: 30px;
+  margin: 30px auto;
   width: 75%;
 }
 
@@ -46,6 +46,7 @@ body {
 
 .btn-disabled {
   background-color: #228B22;
+  cursor: unset;
 }
 
 .img-sm {
@@ -58,4 +59,19 @@ body {
 
 .font-grey {
   color: #696969;
+}
+
+@media only screen and (min-width: 415px) {
+  .content {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card-pc {
+    width: 50%;
+  }
+
+  .btn {
+    margin: auto;
+  }
 }

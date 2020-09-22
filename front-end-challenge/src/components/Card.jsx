@@ -7,7 +7,7 @@ export default function Card({ post }) {
   const { semImagem } = useContext(Context);
 
   return (
-    <div>
+    <div className="card-pc">
       <Link className="card link" to={`/${post.slug}`}>
         <img className="img-sm" src={(post._embedded['wp:featuredmedia']) ? post._embedded['wp:featuredmedia'][0].source_url : semImagem} alt="Imagem destacada" />
         <div>
