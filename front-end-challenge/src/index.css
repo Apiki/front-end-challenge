@@ -155,6 +155,15 @@ li {
   margin-right: 50px;
 }
 
+.esq {
+  max-width: 70%;
+  word-wrap: break-word
+}
+
+div {
+  word-wrap: break-word;
+}
+
 @media only screen and (min-width: 415px) {
   .content {
     flex-direction: row;

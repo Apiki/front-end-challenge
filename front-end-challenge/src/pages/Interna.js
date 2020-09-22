@@ -22,7 +22,7 @@ export default function Interna() {
 
   return (
     <section className="flex interna">
-      <div>
+      <div className="esq">
         <Voltar />
         <InternaContent />
         <User />
