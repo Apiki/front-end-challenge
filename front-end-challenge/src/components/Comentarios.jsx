@@ -12,7 +12,14 @@ export default function Comentarios() {
       setComentarios([]);
     }
   }, []);
-
+  if (!comentarios.length) {
+    return (
+      <div className="text-center">
+        <h3>Comentários</h3>
+        <p>Esta postagem ainda não possui comentários. Seja o primeiro a comentar!</p>
+      </div>
+    );
+  }
   return (
     <div className="text-center">
       <h3>Comentários</h3>
