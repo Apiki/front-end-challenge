@@ -6,10 +6,12 @@ export default function User() {
 
   const url = Object.keys(internaData[0]._embedded.author[0].avatar_urls)[0];
   return (
-    <div>
+    <div className="card">
       <img src={internaData[0]._embedded.author[0].avatar_urls[`${url}`]} alt="Avatar do Autor" />
-      <h4>{internaData[0]._embedded.author[0].name}</h4>
-      <p>{internaData[0]._embedded.author[0].description}</p>
+      <div>
+        <h4>{internaData[0]._embedded.author[0].name}</h4>
+        <p>{internaData[0]._embedded.author[0].description}</p>
+      </div>
     </div>
   );
 }
