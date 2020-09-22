@@ -8,7 +8,7 @@ export default function MaisRecentes() {
   if (!data.length) return '';
 
   return (
-    <div>
+    <div className="margin-top-sm">
       <h3>Posts mais recentes</h3>
       <ul>
         {data.map((post, i) => {

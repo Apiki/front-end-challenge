@@ -129,9 +129,10 @@ textarea {
 }
 
 li {
-  list-style: none;
   cursor: pointer;
   font-size: 10px;
+  list-style: none;
+  margin-top: 20px;
 }
 
 .margin-left {
@@ -144,6 +145,10 @@ li {
 
 .margin-top {
   margin-top: 250px;
+}
+
+.margin-top-sm {
+  margin-top: 50px;
 }
 
 .margin-right {
