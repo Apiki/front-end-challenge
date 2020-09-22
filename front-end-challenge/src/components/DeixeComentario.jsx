@@ -24,18 +24,18 @@ export default function DeixeComentario() {
   }
 
   return (
-    <div className="text-center">
-      <h3>Deixe um comentário</h3>
+    <div className="text-center margin-bottom">
+      <h3 className="margin-bottom">Deixe um comentário</h3>
       <div>
-        <label to="name">Nome</label>
-        <input id="name" name="name" type="text" maxLength="10" />
+        <label className="margin-bottom" to="name">Nome</label>
+        <input className="margin-bottom" id="name" name="name" type="text" maxLength="10" />
       </div>
-      <div>
-        <label to="textarea">Comentário</label>
-        <textarea id="comentario" name="textarea" type="text" maxLength="100" onChange={(event) => calcularCaracteres(event)} />
-        <p>{`Você ainda pode digitar ${qtdCaracteres} caracteres.`}</p>
+      <div className="margin-bottom">
+        <label className="margin-bottom" to="textarea">Comentário</label>
+        <textarea className="margin-bottom" id="comentario" name="textarea" type="text" maxLength="100" onChange={(event) => calcularCaracteres(event)} />
+        <p className="margin-bottom">{`Você ainda pode digitar ${qtdCaracteres} caracteres.`}</p>
       </div>
-      <button onClick={() => submitComentario()} type="button">Enviar comentário</button>
+      <button className="margin-bottom btn btn-sm" onClick={() => submitComentario()} type="button">Enviar comentário</button>
     </div>
   );
 }

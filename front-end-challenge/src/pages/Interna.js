@@ -21,7 +21,7 @@ export default function Interna() {
   if (!internaData.length) return <Carregando />;
 
   return (
-    <section className="flex">
+    <section className="flex interna">
       <div>
         <Voltar />
         <InternaContent />

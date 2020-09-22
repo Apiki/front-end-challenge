@@ -19,8 +19,16 @@ body {
   flex-direction: column;
 }
 
+.interna {
+  padding: 2rem;
+}
+
 .flex {
   display: flex;
+}
+
+.align-items {
+  align-items: center;
 }
 
 .card {
@@ -29,6 +37,14 @@ body {
   display: flex;
   margin: 30px auto;
   width: 75%;
+}
+
+.card-sm {
+  border: 1px solid black;
+  color: black;
+  display: flex;
+  margin: 30px auto;
+  width: 35%;
 }
 
 .btn {
@@ -40,6 +56,12 @@ body {
 .btn-green {
   background-color: #006400;
   color: whitesmoke;
+}
+
+.btn-sm {
+  font-size: 0.5rem;
+  margin: 10px;
+  padding: 0.5rem;
 }
 
 .btn-big {
@@ -61,12 +83,20 @@ img {
   width: 20px;
 }
 
+.title {
+  font-size: 40px;
+}
+
 .link {
   text-decoration: none;
 }
 
 .font-grey {
   color: #696969;
+}
+
+.font-black {
+  color: black;
 }
 
 textarea {

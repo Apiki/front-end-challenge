@@ -9,8 +9,8 @@ export default function Voltar() {
   const title = internaData[0].title.rendered;
 
   return (
-    <div className="flex">
-      <Link className="link" to="/">{paginaInicial}</Link>
+    <div className="flex align-items">
+      <Link className="link font-black" to="/">{paginaInicial}</Link>
       <p className="font-grey">{`>>> ${title}`}</p>
     </div>
   );

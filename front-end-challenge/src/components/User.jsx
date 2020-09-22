@@ -6,7 +6,7 @@ export default function User() {
 
   const url = Object.keys(internaData[0]._embedded.author[0].avatar_urls)[0];
   return (
-    <div className="card">
+    <div className="card-sm">
       <img src={internaData[0]._embedded.author[0].avatar_urls[`${url}`]} alt="Avatar do Autor" />
       <div>
         <h4>{internaData[0]._embedded.author[0].name}</h4>
