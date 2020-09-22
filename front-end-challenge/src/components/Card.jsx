@@ -9,7 +9,10 @@ export default function Card({ post }) {
   return (
     <div className="card-pc">
       <Link className="card link" to={`/${post.slug}`}>
-        <img src={(post._embedded['wp:featuredmedia']) ? post._embedded['wp:featuredmedia'][0].source_url : semImagem} alt="Imagem destacada" />
+        <img
+          src={(post._embedded['wp:featuredmedia']) ? post._embedded['wp:featuredmedia'][0].source_url : semImagem}
+          alt="Imagem destacada"
+        />
         <div>
           <h3 className="link">{post.title.rendered}</h3>
           <Link

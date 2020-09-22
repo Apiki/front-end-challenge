@@ -32,10 +32,20 @@ export default function DeixeComentario() {
       </div>
       <div className="margin-bottom">
         <label className="margin-bottom" to="textarea">Comentário</label>
-        <textarea className="margin-bottom" id="comentario" name="textarea" type="text" maxLength="100" onChange={(event) => calcularCaracteres(event)} />
+        <textarea
+          className="margin-bottom"
+          id="comentario" name="textarea" type="text" maxLength="100"
+          onChange={(event) => calcularCaracteres(event)}
+        />
         <p className="margin-bottom">{`Você ainda pode digitar ${qtdCaracteres} caracteres.`}</p>
       </div>
-      <button className="margin-bottom btn btn-sm" onClick={() => submitComentario()} type="button">Enviar comentário</button>
+      <button
+        className="margin-bottom btn btn-sm"
+        onClick={() => submitComentario()}
+        type="button"
+      >
+        Enviar comentário
+      </button>
     </div>
   );
 }

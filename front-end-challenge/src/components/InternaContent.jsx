@@ -13,9 +13,16 @@ export default function InternaContent() {
   return (
     <div>
       <h2 className="title">{internaData[0].title.rendered}</h2>
-      <h3 className="font-grey">{internaData[0].excerpt.rendered.substring(3, (internaData[0].excerpt.rendered.length) - 5)}</h3>
+      <h3
+        className="font-grey"
+      >
+        {internaData[0].excerpt.rendered.substring(3, (internaData[0].excerpt.rendered.length) - 5)}
+      </h3>
       <Autor />
-      <img src={(internaData[0]._embedded['wp:featuredmedia']) ? internaData[0]._embedded['wp:featuredmedia'][0].source_url : semImagem} alt="Imagem destacada" />
+      <img
+        src={(internaData[0]._embedded['wp:featuredmedia']) ? internaData[0]._embedded['wp:featuredmedia'][0].source_url : semImagem}
+        alt="Imagem destacada"
+      />
       <pre id="content"></pre>
     </div>
   );
