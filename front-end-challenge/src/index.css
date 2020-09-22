@@ -47,6 +47,14 @@ body {
   width: 35%;
 }
 
+.card-coment {
+  align-items: center;
+  color: black;
+  display: flex;
+  margin: 30px auto;
+  width: 75%;
+}
+
 .btn {
   border: none;
   border-radius: 5px;

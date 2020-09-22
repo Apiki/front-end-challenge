@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function ComentarioCard({ props }) {
   return (
-    <div>
+    <div className="card-coment">
       <h4>{props.nome}</h4>
-      <p>{props.comentario}</p>
+      <p className="margin-left">{props.comentario}</p>
     </div>
   );
 }
