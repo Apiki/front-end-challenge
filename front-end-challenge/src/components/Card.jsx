@@ -13,7 +13,7 @@ export default function Card({ post }) {
           src={(post._embedded['wp:featuredmedia']) ? post._embedded['wp:featuredmedia'][0].source_url : semImagem}
           alt="Imagem destacada"
         />
-        <div>
+        <div className="text-center margin-left">
           <h3 className="link">{post.title.rendered}</h3>
           <Link
             className="link font-grey"

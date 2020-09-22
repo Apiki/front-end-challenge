@@ -113,6 +113,10 @@ li {
   font-size: 10px;
 }
 
+.margin-left {
+  margin-left: 10px;
+}
+
 .margin-bottom {
   margin-bottom: 10px;
 }
