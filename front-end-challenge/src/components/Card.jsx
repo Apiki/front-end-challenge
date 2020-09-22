@@ -8,14 +8,20 @@ export default function Card({ post }) {
 
   return (
     <div>
-      <img src={(post._embedded['wp:featuredmedia']) ? post._embedded['wp:featuredmedia'][0].source_url : semImagem} alt="Imagem destacada" />
-      <h3>{post.title.rendered}</h3>
-      <Link
-        to={`/${post.slug}`}
-      >
-        {post.slug}
+      <Link className="card link" to={`/${post.slug}`}>
+        <img className="img-sm" src={(post._embedded['wp:featuredmedia']) ? post._embedded['wp:featuredmedia'][0].source_url : semImagem} alt="Imagem destacada" />
+        <div>
+          <h3 className="link">{post.title.rendered}</h3>
+          <Link
+            className="link font-grey"
+            to={`/${post.slug}`}
+          >
+            {post.slug}
+          </Link>
+        </div>
       </Link>
     </div>
+
   );
 }
 

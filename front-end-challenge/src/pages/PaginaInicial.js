@@ -10,9 +10,9 @@ export default function PaginaInicial() {
   if (!data.length) return <Carregando />;
 
   return (
-    <section>
+    <div className="content">
       {data.map((post) => <Card key={post.id} post={post} />)}
       <CarregarMais />
-    </section>
+    </div>
   );
 }

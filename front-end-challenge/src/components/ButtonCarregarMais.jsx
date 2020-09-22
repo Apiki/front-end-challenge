@@ -22,7 +22,7 @@ export default function CarregarMais() {
     }
   }
 
-  if (disableButton) return <button type="button" disabled>Carregar mais...</button>;
+  if (disableButton) return <button className="btn btn-green btn-big btn-disabled" type="button" disabled>Carregar mais...</button>;
 
-  return <button type="button" onClick={() => carregarMais()}>Carregar mais...</button>;
+  return <button className="btn btn-green btn-big" type="button" onClick={() => carregarMais()}>Carregar mais...</button>;
 }
