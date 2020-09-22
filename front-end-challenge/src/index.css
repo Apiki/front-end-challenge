@@ -19,6 +19,18 @@ body {
   flex-direction: column;
 }
 
+.flex {
+  display: flex;
+}
+
+.left {
+
+}
+
+.right {
+  width: 50%;
+}
+
 .card {
   border: 1px solid black;
   color: black;
@@ -51,6 +63,10 @@ body {
 
 img {
   width: 50%;
+}
+
+.img-sm {
+  width: 20px;
 }
 
 .link {

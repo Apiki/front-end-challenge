@@ -22,7 +22,7 @@ export default function Interna() {
 
   return (
     <section className="flex">
-      <div>
+      <div className="left">
         <Voltar />
         <InternaContent />
         <User />
@@ -30,7 +30,7 @@ export default function Interna() {
         <DeixeComentario />
         <Voltar />
       </div>
-      <div>
+      <div className="right">
         <Aside />
       </div>
 
