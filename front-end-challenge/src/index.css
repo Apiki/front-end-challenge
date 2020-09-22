@@ -23,14 +23,6 @@ body {
   display: flex;
 }
 
-.left {
-
-}
-
-.right {
-  width: 50%;
-}
-
 .card {
   border: 1px solid black;
   color: black;
@@ -79,6 +71,19 @@ img {
 
 textarea {
   resize: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.margin-bottom {
+  margin-bottom: 10px;
 }
 
 @media only screen and (min-width: 415px) {

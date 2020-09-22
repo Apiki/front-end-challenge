@@ -14,7 +14,7 @@ export default function Comentarios() {
   }, []);
 
   return (
-    <div>
+    <div className="text-center">
       <h3>Comentários</h3>
       {comentarios.map((comentario, i) => <ComentarioCard key={i} props={comentario} />)}
     </div>

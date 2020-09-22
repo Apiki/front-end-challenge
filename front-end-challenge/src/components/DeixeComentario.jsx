@@ -24,7 +24,7 @@ export default function DeixeComentario() {
   }
 
   return (
-    <div>
+    <div className="text-center">
       <h3>Deixe um comentário</h3>
       <div>
         <label to="name">Nome</label>
