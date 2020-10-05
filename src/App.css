@@ -1,4 +1,5 @@
 .App {
+  background-color: #fde69a;
   text-align: center;
 }
 
@@ -7,32 +8,70 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  background-color: black;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.header-side {
+  background-color: white;
+  width: 15%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 50px;
+}
+
+.icon-description {
+  display: none;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.footer ol {
+  list-style-type: none;
+}
+
+.footer ul {
+  list-style-type: none;
+}
+
+.footer a {
+  color: inherit;
+}
+
+.footer a:link {
+  text-decoration: none;
+}
+.footer a:visited {
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer a:active {
+  text-decoration: underline;
+}
+
+.copy-right {
+  color: #5a5a5a;
+  font-size: 14px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
