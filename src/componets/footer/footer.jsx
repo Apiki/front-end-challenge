@@ -14,7 +14,6 @@ export default function Footer() {
       <div>
         <PagesCompany />
         <PagesBlog />
-        <About />
         <CopyRight />
       </div>
     </footer>

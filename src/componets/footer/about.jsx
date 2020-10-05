@@ -4,8 +4,8 @@ export default function About(params) {
   return(
     <div>
     <h3>Sobre a Apiki</h3>
-      <div>
-        <p>Empresa especializada em WordPress com três unidades de negócios.</p>
+      <div className="ligth">
+        <p >Empresa especializada em WordPress com três unidades de negócios.</p>
         <ol>
           <li>Design e Desenvolvimento;</li>
           <li>Infra e Hospedagem;</li>
