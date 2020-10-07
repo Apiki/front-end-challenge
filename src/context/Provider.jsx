@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Context from './context';
 
-function Provider({ children }) {
-  const context = {};
+export default function Provider({ children }) {
+  const [actual, setActual] = useState(1);
+  const context = { actual, setActual };
   return <Context.Provider value={context}>{children}</Context.Provider>;
 }
