@@ -7,7 +7,7 @@ import youtube from '../../icons/youtube.svg';
 import github from '../../icons/github.svg';
 import rss from '../../icons/rss.svg';
 
-const apikiLinks = {
+const icons = {
   facebook,
   linkedin,
   instagram,
@@ -17,14 +17,24 @@ const apikiLinks = {
   rss,
 };
 
+const linkOficial = {
+  facebook: 'https://www.facebook.com/ApikiWordPress',
+  linkedin: 'https://www.linkedin.com/company/apiki',
+  instagram: 'https://www.instagram.com/apikiwordpress/',
+  twitter: 'https://twitter.com/apikiWordPress',
+  youtube: 'https://www.youtube.com/channel/UC__ToR3hqjs1ZktdLIWqYFA',
+  github: 'https://github.com/Apiki',
+  rss: 'https://blog.apiki.com/feed/',
+};
 export default function Social(props) {
   const { choosen, name } = props;
+  console.log(name);
+  console.log(icons[name.toLowerCase()]);
   return (
     <div className="icon-circle">
-      <a href={apikiLinks[name.toLowerCase()]}>
-        <i class={choosen}>
-          <span className="icon-description">{name}</span>
-        </i>
+      <a href={linkOficial[name.toLowerCase()]} target="_blank">
+        <img className="icon" src={icons[name.toLowerCase()]} />
+        <span className="icon-description">{name}</span>
       </a>
     </div>
   );

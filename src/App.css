@@ -1,3 +1,18 @@
+/* 
+@media only screen and (min-width: 600px) {
+  
+}
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: inline;
+  font-family: Montserrat,'Roboto Slab', serif;
+  max-width: 80vw;
+}
 .App {
   background-color: #fde69a;
   text-align: center;
@@ -7,7 +22,15 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+h1 {
+  font-size: 1.8em;
+  line-height: 1.3em;
+}
+h2 {
+  max-width: 80vw;
+  font-size: 1.5em;
+  line-height: 1.3em;
+}
 .header {
   background-color: black;
   display: flex;
@@ -17,6 +40,13 @@
 .header-side {
   /*  background-color: white; */
   width: 15%;
+}
+
+.title {
+  margin: 25px 0 10px 0;
+}
+.subtitle {
+  margin: 0 0 25px 0;
 }
 
 section {
@@ -32,7 +62,7 @@ section h2 {
 
 .thumbnail {
   width: 100px;
-  height: 71.5px;
+  min-height: 80px;
   margin-bottom: 10px;
 }
 
@@ -53,7 +83,7 @@ section h2 {
 }
 .side-photo-text p {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .author {
@@ -69,9 +99,12 @@ section h2 {
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 50px;
-  /*   margin-left: 10%;
-  margin-right: 10%; */
   margin-top: 50px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
 }
 
 .icon-circle {
@@ -84,14 +117,48 @@ section h2 {
 
 i {
   font-size: 15px;
-  color: #5a5a5a;
+  color: black;
 }
 
 .icon-description {
   display: none;
 }
 
+.author.subtitle {
+  font-size: 18px;
+  color:#7A7A7A
+}
+
+#subtitle.subtitle {
+  font-size: 18px;
+  color:#7A7A7A
+}
+
+.content {
+  /* 
+  display: flex;
+  flex-direction: column; */
+}
+
+.content h2 {
+  margin-top: 10px;
+}
+.content p {
+  margin-top: 10px;
+}
+
+.content li {
+  margin-left: 2em;
+}
+
+.content figure {
+  margin: auto;
+  margin-top: 10px;
+}
+
 .footer {
+  font-size: 0.9em;
+  font-weight: 400;
   text-align: center;
   line-height: 1.5rem;
   margin-left: 15px;
@@ -120,7 +187,7 @@ i {
   list-style-type: none;
   margin-top: 5px;
   margin-bottom: 5px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .footer a {
@@ -158,25 +225,54 @@ figure {
 
 .padme {
   display: flex;
+  margin: auto;
+  /* padding-left: 10px; */
+  padding-right: 10px;
 }
 
-code {
-  font-family: Consolas, 'courier new';
-  color: crimson;
-  background-color: #f1f1f1;
-  padding: 2px;
-  font-size: small;
-  word-wrap: break-word;
-  width: 100vw;
+article {
+  /* margin: -10px; */
+  line-height: 1.6em;
+}
+article .title {
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 article p {
+  font-weight: 400;
   justify-content: center;
-  margin-left: 10px ;
-  margin-right: 10px ;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-rendering: optimizeLegibility;
+}
+
+article h2 {
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #content img {
   width: 100%;
   height: auto;
+}
+
+.wp-block-code {
+  display: flex;
+  max-width: 95%;
+  overflow: auto;
+}
+
+code {
+  font-family: Consolas, 'courier new';
+  font-size: 0.7em;
+  color: crimson;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+  padding-right: 10px;
+  font-size: small;
+  word-wrap: break-word;
+  width: 100vw;
 }

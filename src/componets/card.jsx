@@ -9,6 +9,7 @@ function reverseData(date) {
 export default function Card(props) {
   const { image, sendTo, alt, slug, author, title, date } = props;
   return (
+    <div className="card">
     <Link className="links" to={`/${slug}`} alt={alt}>
       <img className="thumbnail" src={image} alt={alt} />
       <div className="side-photo-text">
@@ -17,5 +18,6 @@ export default function Card(props) {
         <span className="date">{reverseData(date)}</span>
       </div>
     </Link>
+    </div>
   );
 }
