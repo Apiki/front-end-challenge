@@ -3,11 +3,15 @@
   
 }
 */
+div {
+  border: 1px solid red;
+}
+/* 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
+} */
 body {
   display: inline;
   font-family: Montserrat, 'Roboto Slab', serif;
@@ -25,6 +29,7 @@ body {
 h1 {
   font-size: 1.8em;
   line-height: 1.3em;
+  max-width: 100vw;
 }
 h2 {
   max-width: 80vw;
@@ -40,6 +45,15 @@ h2 {
 .header-side {
   /*  background-color: white; */
   width: 15%;
+}
+
+.icon-back {
+  color: #a0a0a0;
+  width: 100%;
+  fill: white;
+  background-color: white;
+  border: 3px solid white;
+  border-radius: 50%;
 }
 
 .title {
@@ -93,6 +107,18 @@ section h2 {
 .date {
   display: none;
 }
+.navigation-bar {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  margin-top: 10px;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.buttonPages {
+  border-radius: 10%;
+}
 
 .social-icons {
   display: flex;
@@ -136,12 +162,6 @@ i {
 
 .comment {
   height: 1em;
-}
-
-.content {
-  /* 
-  display: flex;
-  flex-direction: column; */
 }
 
 .content h2 {
@@ -228,6 +248,32 @@ figure {
   height: auto;
 }
 
+#content .copyIcon {
+  width: 2.5em;
+  padding-right: 10px;
+}
+
+.autor-copy {
+  display: flex;
+  justify-content: space-between;
+}
+.warning-copy {
+  padding-bottom: 10px;
+  font-size: 0.9em;
+  animation: blinker 1s linear infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+.coping-link-align {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .padme {
   display: flex;
   margin: auto;
@@ -238,14 +284,18 @@ figure {
 article {
   /* margin: -10px; */
   line-height: 1.6em;
+  max-width: 100vw;
 }
 article .title {
   justify-content: center;
   padding-left: 10px;
   padding-right: 10px;
 }
-
+pre {
+  overflow-x: auto;
+}
 article p {
+  max-width: 100vw;
   font-weight: 400;
   justify-content: center;
   padding-left: 10px;
@@ -275,8 +325,29 @@ article ol {
   margin-bottom: 1em;
 }
 
-#content img {
+tr,
+th,
+td {
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+table {
+  margin-bottom: 10px;
+}
+
+article iframe {
   width: 100%;
+}
+
+#content img {
+  width: 100vw;
+  height: auto;
+  margin-bottom: 1em;
+  margin-left: 0em;
+}
+img#content {
+  width: 100vw;
   height: auto;
   margin-bottom: 1em;
 }

@@ -24,9 +24,7 @@ export default function InitialPage(params) {
   );
   useEffect(() => {
     apiPost(actual)
-      .then((e) => {
-        return e;
-      })
+      .then((e) => setPosts(e.response))
       .then(async (e) => {
         if (!noPageAfter && actual === lastPage) {
           await apiPost(lastPage + 1)
@@ -35,7 +33,6 @@ export default function InitialPage(params) {
             )
             .catch(() => setNoPageAfter(lastPage));
         }
-        setPosts(e.response);
       });
   }, [actual]);
   if (!posts) return null;

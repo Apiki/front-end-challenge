@@ -6,7 +6,7 @@ export default function CopyRight(params) {
     <div className="copy-right">
       <p>
         © 2020
-        <Link to="/" title="Empresa especializada em WordPress">
+        <Link to="/" title="Front-End Challenge"/* title="Empresa especializada em WordPress" */>
           {' '}
           Apiki{' '}
         </Link>
