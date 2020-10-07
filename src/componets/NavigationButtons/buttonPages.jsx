@@ -24,7 +24,7 @@ export default function ButtonPages(props) {
   return (
     <button
       className="buttonPages"
-      onClick={(e) => {
+      onClick={() => {
         changePage(text, setActual, lastPage);
       }}
     >

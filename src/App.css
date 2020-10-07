@@ -10,7 +10,7 @@
 }
 body {
   display: inline;
-  font-family: Montserrat,'Roboto Slab', serif;
+  font-family: Montserrat, 'Roboto Slab', serif;
   max-width: 80vw;
 }
 .App {
@@ -126,12 +126,16 @@ i {
 
 .author.subtitle {
   font-size: 18px;
-  color:#7A7A7A
+  color: #7a7a7a;
 }
 
 #subtitle.subtitle {
   font-size: 18px;
-  color:#7A7A7A
+  color: #7a7a7a;
+}
+
+.comment {
+  height: 1em;
 }
 
 .content {
@@ -294,5 +298,4 @@ code {
   font-size: small;
   word-wrap: break-word;
   width: 100vw;
-
 }

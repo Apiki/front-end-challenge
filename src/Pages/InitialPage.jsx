@@ -4,7 +4,7 @@ import NavigationButtons from '../componets/NavigationButtons/navegationPages';
 import Context from '../context/context';
 import apiPost from '../services/apiPosts';
 
-// Function to escape of some problemas in the text recived from the API
+// Function to escape of some problemas in the text received from the API
 function escapeSpecialChar(str) {
   if (str === null || str === '') return false;
   const map = {
@@ -45,7 +45,7 @@ export default function InitialPage(params) {
       <h2 className="subtitle">Desenvolva seu negócio, desenvolvendo com WordPress.</h2>
       {posts.map((post) => {
         const { _embedded, slug, title, date } = post;
-        const { author } = _embedded;
+        const { author, replies } = _embedded;
         if (_embedded['wp:featuredmedia'] === undefined) {
           return null;
         }
@@ -60,6 +60,7 @@ export default function InitialPage(params) {
               slug={slug}
               author={author[0]}
               date={date}
+              replies={replies === undefined || !replies ? 0 : replies.lenght}
             />
           </div>
         );
