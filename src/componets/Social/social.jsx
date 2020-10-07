@@ -27,9 +27,7 @@ const linkOficial = {
   rss: 'https://blog.apiki.com/feed/',
 };
 export default function Social(props) {
-  const { choosen, name } = props;
-  console.log(name);
-  console.log(icons[name.toLowerCase()]);
+  const { name } = props;
   return (
     <div className="icon-circle">
       <a href={linkOficial[name.toLowerCase()]} target="_blank">

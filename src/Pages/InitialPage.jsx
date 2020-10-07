@@ -1,26 +1,43 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Card from '../componets/card';
 import NavigationButtons from '../componets/NavigationButtons/navegationPages';
+import Context from '../context/context';
 import apiPost from '../services/apiPosts';
+
+// Function to escape of some problemas in the text recived from the API
+function escapeSpecialChar(str) {
+  if (str === null || str === '') return false;
+  const map = {
+    '&#8220;': `“`,
+    '&#8221;': `”`,
+    '&#8211;': `–`,
+  };
+  return str.replace(/(&#8220;|&#8221;|&#8211;)/g, function (m) {
+    return map[m];
+  });
+}
 
 export default function InitialPage(params) {
   const [posts, setPosts] = useState([]);
-  const [pages, setPages] = useState(1);
-  const [actual, setActual] = useState(1);
-  const [noPageAfter, setNoPageAfter] = useState(undefined);
+  const { actual, setActual, lastPage, setLastPage, noPageAfter, setNoPageAfter } = useContext(
+    Context
+  );
   useEffect(() => {
-    apiPost()
+    apiPost(actual)
       .then((e) => {
-        setPosts(e.response);
+        return e;
       })
-      .then(() => {
-        if (!noPageAfter && actual === pages) {
-          apiPost(pages + 1)
-            .then(({ status }) => (status !== 200 ? setNoPageAfter(pages) : setPages(pages + 1)))
-            .catch(() => setNoPageAfter(pages));
+      .then(async (e) => {
+        if (!noPageAfter && actual === lastPage) {
+          await apiPost(lastPage + 1)
+            .then(({ status }) =>
+              status !== 200 ? setNoPageAfter(lastPage) : setLastPage(lastPage + 1)
+            )
+            .catch(() => setNoPageAfter(lastPage));
         }
+        setPosts(e.response);
       });
-  }, []);
+  }, [actual]);
   if (!posts) return null;
   return (
     <section>
@@ -29,13 +46,16 @@ export default function InitialPage(params) {
       {posts.map((post) => {
         const { _embedded, slug, title, date } = post;
         const { author } = _embedded;
+        if (_embedded['wp:featuredmedia'] === undefined) {
+          return null;
+        }
         console.log(post);
         const { alt_text, link, source_url: url } = _embedded['wp:featuredmedia'][0];
         return (
           <div>
             <Card
               image={url}
-              title={title.rendered}
+              title={escapeSpecialChar(title.rendered)}
               alt={alt_text}
               slug={slug}
               author={author[0]}
@@ -44,7 +64,7 @@ export default function InitialPage(params) {
           </div>
         );
       })}
-      <NavigationButtons last={pages} actual={actual} setActual={setActual} />
+      <NavigationButtons last={lastPage} actual={actual} />
     </section>
   );
 }

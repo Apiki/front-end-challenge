@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import Context from '../../context/context';
 import ButtonPages from './buttonPages';
 
-export default function NavigationPage(props) {
-  const { last, actual, setActual } = props;
-  console.log(props);
+export default function NavigationPage() {
+  const [build, setBuild] = useState(false);
+  const { actual, noPageAfter, lastPage } = useContext(Context);
+  useEffect(()=>{setBuild(true); return ()=>{setBuild(false)}},[lastPage])
+  if (!build) return <span>Carregando...</span>;
   return (
     <div>
       {actual > 1 ? <ButtonPages text="Anterior" /> : null}
       <ButtonPages text={actual} />
-      {actual !== last ? <ButtonPages text="Próxima" setActual={setActual} /> : null}
+      {!noPageAfter ? <ButtonPages text="Próxima" /> : null}
     </div>
   );
 }
