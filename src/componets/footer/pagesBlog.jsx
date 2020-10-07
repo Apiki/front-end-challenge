@@ -6,31 +6,31 @@ export default function PagesBlog(params) {
       <h3 className="bold">Páginas do Blog</h3>
       <ul>
         <li>
-          <a href="#">Sobre</a>
+          <a href="https://blog.apiki.com/sobre/">Sobre</a>
         </li>
         <li>
-          <a href="#">Newsletter</a>
+          <a href="https://blog.apiki.com/newsletter/">Newsletter</a>
         </li>
         <li>
-          <a href="#">Desenvolvimento WordPress</a>
+          <a href="https://blog.apiki.com/desenvolvimento/">Desenvolvimento WordPress</a>
         </li>
         <li>
-          <a href="#">Segurança para WordPress</a>
+          <a href="https://blog.apiki.com/seguranca/">Segurança para WordPress</a>
         </li>
         <li>
-          <a href="#">WordPress Mobile</a>
+          <a href="https://blog.apiki.com/mobile/">WordPress Mobile</a>
         </li>
         <li>
-          <a href="#">Infra para WordPress</a>
+          <a href="https://blog.apiki.com/infra/">Infra para WordPress</a>
         </li>
         <li>
-          <a href="#">WordPress SEO</a>
+          <a href="https://blog.apiki.com/seo/">WordPress SEO</a>
         </li>
         <li>
-          <a href="#">WordPress Performance</a>
+          <a href="https://blog.apiki.com/performance/">WordPress Performance</a>
         </li>
         <li>
-          <a href="#">E-commerce</a>
+          <a href="https://blog.apiki.com/e-commerce/">E-commerce</a>
         </li>
       </ul>
     </div>
