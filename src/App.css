@@ -16,6 +16,7 @@ body {
   display: inline;
   font-family: Montserrat, 'Roboto Slab', serif;
   max-width: 80vw;
+  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.685), rgba(0, 0, 0, 0.11));
 }
 .App {
   background-color: #fde69a;
@@ -410,7 +411,7 @@ code {
 }
 
 @media only screen and (min-width: 600px) {
-  .content p{
+  .content p {
     font-size: 1.3em;
   }
   .side-photo-text {
@@ -464,30 +465,29 @@ code {
     border-radius: 50%;
   }
   .button-back {
-    margin-top:10px ;
-    margin-left:10px ;
+    margin-top: 10px;
+    margin-left: 10px;
     display: flex;
     color: white;
     font-size: 2em;
   }
-  #content{
+  #content {
     width: 80vw;
     margin: auto;
   }
   .content h2 {
     font-size: 1.4em;
   }
-  
+
   .content h3 {
     font-size: 1.35em;
   }
-  
+
   .content li {
-    font-size:1.3em;
+    font-size: 1.3em;
   }
 
-
-  #content img{
+  #content img {
     width: 80vw;
   }
   .footer {
@@ -499,9 +499,8 @@ code {
     margin-left: 0;
     margin-right: 0;
   }
-  
-.navigation-bar {
-  justify-content: space-around;
-}
 
+  .navigation-bar {
+    justify-content: space-around;
+  }
 }
