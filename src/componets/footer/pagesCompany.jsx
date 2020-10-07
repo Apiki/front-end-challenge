@@ -8,22 +8,24 @@ export default function PagesCompany(params) {
 
       <ul>
         <li>
-          <Link to="/">Apiki.com</Link>
+          <Link to="https://apiki.com/">Apiki.com</Link>
         </li>
         <li>
-          <a href="#">Sobre a Apiki</a>
+          <a href="https://apiki.com/empresa-especializada-em-wordpress/">Sobre a Apiki</a>
         </li>
         <li>
-          <a href="#">Desenvolvimento em WordPress</a>
+          <a href="https://apiki.com/desenvolvimento-sites-wordpress/">
+            Desenvolvimento em WordPress
+          </a>
         </li>
         <li>
-          <a href="#">Sustentação WordPress</a>
+          <a href="https://apiki.com/manutencao-wordpress/">Sustentação WordPress</a>
         </li>
         <li>
-          <a href="#">Hospedagem WordPress</a>
+          <a href="https://apiki.com/infra-hospedagem-wordpress/">Hospedagem WordPress</a>
         </li>
         <li>
-          <a href="#">Atendimento</a>
+          <a href="https://apiki.com/atendimento/">Atendimento</a>
         </li>
       </ul>
     </div>

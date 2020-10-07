@@ -15,7 +15,7 @@ export default function NavigationPage() {
   return (
     <div className="navigation-bar">
       {<ButtonPages text="Anterior" hide={actual > 1 ? false : true} />}
-      <span>{actual}</span>
+      <span className="span-page-atual">{actual}</span>
       <ButtonPages text="Próxima" hide={!noPageAfter ? false : true} />
     </div>
   );

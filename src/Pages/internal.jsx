@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import apiSlug from '../services/apiSlug';
 import copyIcon from '../icons/copy-icon-4797.png';
 import CopyButton from '../componets/copyButton';
+import { Redirect } from 'react-router-dom';
 
 export default function Interna(props) {
   const slug = props.match.params.slug;
@@ -15,6 +16,7 @@ export default function Interna(props) {
       extractingImg();
     });
   }, []);
+  if(slug.length<3) return <Redirect to="/NotFound" />
   if (!data) return null;
   const test = document.getElementById('content');
   return (
