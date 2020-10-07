@@ -4,8 +4,6 @@ import apiSlug from '../services/apiSlug';
 export default function Interna(props) {
   const slug = props.match.params.slug;
   const [data, SetData] = useState(null);
-  /*   const [content, setContent] = useState(null);
-  const [excerpt, setExcerpt] = useState(null); */
   useEffect(() => {
     apiSlug(slug).then((e) => {
       SetData(e);
@@ -20,7 +18,7 @@ export default function Interna(props) {
     <div className="padme">
       <article className="content" id="content">
         <h1 className="title">{data.title.rendered}</h1>
-        <h2 id="subtitle" className="title"></h2>
+        <h2 id="subtitle" className="subtitle"></h2>
         <h3 className="subtitle author">By: {data._embedded.author[0].name}</h3>
       </article>
     </div>

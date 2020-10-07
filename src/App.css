@@ -143,7 +143,8 @@ i {
 .content h2 {
   margin-top: 10px;
 }
-.content p {
+
+.content h3 {
   margin-top: 10px;
 }
 
@@ -245,6 +246,7 @@ article p {
   justify-content: center;
   padding-left: 10px;
   padding-right: 10px;
+  margin-bottom: 1em;
   text-rendering: optimizeLegibility;
 }
 
@@ -252,17 +254,34 @@ article h2 {
   justify-content: center;
   padding-left: 10px;
   padding-right: 10px;
+  margin-bottom: 1em;
+}
+
+article h3 {
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+article ul {
+  margin-bottom: 1em;
+}
+
+article ol {
+  margin-bottom: 1em;
 }
 
 #content img {
   width: 100%;
   height: auto;
+  margin-bottom: 1em;
 }
 
 .wp-block-code {
   display: flex;
   max-width: 95%;
   overflow: auto;
+  margin-bottom: 1em;
 }
 
 code {
@@ -275,4 +294,5 @@ code {
   font-size: small;
   word-wrap: break-word;
   width: 100vw;
+
 }
