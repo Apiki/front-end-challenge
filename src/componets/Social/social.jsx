@@ -29,11 +29,13 @@ const linkOficial = {
 export default function Social(props) {
   const { name } = props;
   return (
-    <div className="icon-circle">
-      <a href={linkOficial[name.toLowerCase()]} target="_blank">
+    <a className="align-icon-description" href={linkOficial[name.toLowerCase()]} target="_blank">
+      <div className="icon-circle">
         <img className="icon" src={icons[name.toLowerCase()]} />
-        <span className="icon-description">{name}</span>
-      </a>
-    </div>
+      </div>
+      <div className="icon-description">
+        <span>{name}</span>
+      </div>
+    </a>
   );
 }

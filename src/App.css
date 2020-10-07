@@ -47,6 +47,10 @@ h2 {
   width: 15%;
 }
 
+.button-back {
+  display: none;
+}
+
 .icon-back {
   color: #a0a0a0;
   width: 100%;
@@ -140,7 +144,7 @@ section h2 {
   position: relative;
   top: 1px;
 }
-.span-page-atual{
+.span-page-atual {
   display: inline-block;
   font-family: Arial;
   font-size: 15px;
@@ -403,4 +407,101 @@ code {
 
 .not-found {
   text-align: justify;
+}
+
+@media only screen and (min-width: 600px) {
+  .content p{
+    font-size: 1.3em;
+  }
+  .side-photo-text {
+    flex-grow: 1;
+    justify-content: space-between;
+    margin-left: 10px;
+  }
+  .date {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2em;
+    padding-right: 1em;
+    align-items: flex-end;
+  }
+  .comment {
+    height: 1em;
+
+    padding-left: 2em;
+  }
+  .author-date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .icon-description {
+    display: flex;
+    width: auto;
+  }
+
+  .align-icon-description {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  .icon-circle {
+    width: 2em;
+  }
+
+  .header-item {
+    max-height: 100em;
+  }
+
+  .icon-back {
+    display: none;
+    color: #a0a0a0;
+    width: 2em;
+    fill: white;
+    background-color: white;
+    border: 3px solid white;
+    border-radius: 50%;
+  }
+  .button-back {
+    margin-top:10px ;
+    margin-left:10px ;
+    display: flex;
+    color: white;
+    font-size: 2em;
+  }
+  #content{
+    width: 80vw;
+    margin: auto;
+  }
+  .content h2 {
+    font-size: 1.4em;
+  }
+  
+  .content h3 {
+    font-size: 1.35em;
+  }
+  
+  .content li {
+    font-size:1.3em;
+  }
+
+
+  #content img{
+    width: 80vw;
+  }
+  .footer {
+    font-size: 0.9em;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.5rem;
+    margin: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+.navigation-bar {
+  justify-content: space-around;
+}
+
 }

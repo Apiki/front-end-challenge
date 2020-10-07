@@ -15,19 +15,20 @@ export default function Card(props) {
         <img className="thumbnail" src={image} alt={alt} />
         <div className="side-photo-text">
           <p className="title-card">{title}</p>
-
-          <span className="author">
-            {!author.name ? (
-              null || author.name === undefined
-            ) : (
-              <span>
-                BY: <em>{author.name.toUpperCase()} </em>
-                <img className="comment" src={comments} />
-                {isNaN(replies) ? 0 : replies}
-              </span>
-            )}
-          </span>
-          <span className="date">{reverseData(date)}</span>
+          <div className="author-date">
+            <span className="author">
+              {!author.name ? (
+                null || author.name === undefined
+              ) : (
+                <span>
+                  BY: <em>{author.name.toUpperCase()} </em>
+                  <img className="comment" src={comments} />
+                  {isNaN(replies) ? 0 : replies}
+                </span>
+              )}
+            </span>
+            <span className="date">{reverseData(date)}</span>
+          </div>
         </div>
       </Link>
     </div>

@@ -15,17 +15,23 @@ function changePage(e, setActual, lastPage) {
   });
 }
 
+/*
+Contornei a deficiência de não ter conseguido acessar o número de páginas na resposta da requisição
+através da desabilitação do botção de avançar e de uma requisitação extra para verificar se a próxima 
+página existe
+*/
 export default function ButtonPages(props) {
   const { text, hide = false } = props;
-  const { setActual, lastPage } = useContext(Context);
+  const { actual, setActual, lastPage } = useContext(Context);
   useEffect(() => {
-    console.log('');
+    console.log(actual);
   }, [lastPage]);
   const visibility = !hide ? 'visible' : 'hidden';
   return (
     <button
-    style={{visibility}}
+      style={{ visibility }}
       className="buttonPages"
+      disabled={actual >= lastPage}
       onClick={() => {
         changePage(text, setActual, lastPage);
       }}

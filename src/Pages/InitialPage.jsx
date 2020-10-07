@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { Redirect } from 'react-router-dom';
 import Card from '../componets/card';
 import NavigationButtons from '../componets/NavigationButtons/navegationPages';
 import Context from '../context/context';
@@ -18,10 +19,8 @@ function escapeSpecialChar(str) {
 }
 
 export default function InitialPage(params) {
-  const [posts, setPosts] = useState([]);
-  const { actual, setActual, lastPage, setLastPage, noPageAfter, setNoPageAfter } = useContext(
-    Context
-  );
+  const [posts, setPosts] = useState(null);
+  const { actual, lastPage, setLastPage, noPageAfter, setNoPageAfter } = useContext(Context);
   useEffect(() => {
     apiPost(actual)
       .then((e) => setPosts(e.response))
@@ -35,7 +34,12 @@ export default function InitialPage(params) {
         }
       });
   }, [actual]);
-  if (!posts) return null;
+  if (!posts || posts === undefined) return null;
+  if (posts.data !== undefined) {
+    if (posts.data.status !== 200) {
+      return <Redirect to="/NotFound" />;
+    }
+  }
   return (
     <section>
       <h1 className="title">Desenvolvimento WordPress</h1>
@@ -46,7 +50,6 @@ export default function InitialPage(params) {
         if (_embedded['wp:featuredmedia'] === undefined) {
           return null;
         }
-        console.log(post);
         const { alt_text, link, source_url: url } = _embedded['wp:featuredmedia'][0];
         return (
           <div>

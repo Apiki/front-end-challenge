@@ -13,7 +13,7 @@ function App() {
       <div className="backGound"></div>
       <Header />
       <Switch>
-        <Route path='/NotFound'component={NotFound} />
+        <Route path='/NotFound' component={NotFound} />
         <Route exact path='/:slug' component={Interna} />
         <Route exact path='/' component={Home} />
       </Switch>

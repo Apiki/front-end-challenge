@@ -8,6 +8,7 @@ export default function Header() {
       <div className="header">
         <div className="header-side">
           <Link to="/">
+            <span className="button-back">Voltar</span>
             <img className="icon-back" src={iconBack} alt="voltar" />
           </Link>
         </div>
