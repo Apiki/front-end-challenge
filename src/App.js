@@ -12,6 +12,7 @@ function App() {
     <BrowserRouter>
       <div className="backGound"></div>
       <Header />
+      <div className="margem-top"></div>
       <Switch>
         <Route path='/NotFound' component={NotFound} />
         <Route exact path='/:slug' component={Interna} />
