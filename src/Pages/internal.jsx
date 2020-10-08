@@ -1,8 +1,44 @@
 import React, { useEffect, useState } from 'react';
 import apiSlug from '../services/apiSlug';
-import copyIcon from '../icons/copy-icon-4797.png';
 import CopyButton from '../componets/copyButton';
 import { Redirect } from 'react-router-dom';
+
+
+function includeHTML(content, placeId, position, extract = false) {
+  const divContent = document.getElementById(placeId);
+  divContent.insertAdjacentHTML(position, content);
+  if (extract) {
+    const pChild = divContent.firstChild;
+    divContent.innerHTML = pChild.innerHTML;
+  }
+}
+
+function extractingImg(base = null) {
+  if (base === null) base = document.getElementById('content');
+  if (base.children.length > 2 && base.className !== 'content') return null;
+  for (let index = 0; index < base.children.length; index++) {
+    const element = base.children[index];
+    extractingImg(element);
+    if (['P', 'FIGURE', 'DIV'].includes(element.nodeName.toUpperCase())) {
+      if (
+        element.childNodes.length === 1 &&
+        ['IMG', 'TABLE', 'IFRAME'].includes(element.childNodes[0].nodeName.toUpperCase())
+      ) {
+        element.after(element.childNodes[0]);
+        element.parentElement.removeChild(element);
+      }
+      if (
+        element.childNodes.length === 2 &&
+        element.childNodes[0].nodeName === 'IMG' &&
+        element.childNodes[1].nodeName === 'FIGCAPTION'
+      ) {
+        element.after(element.childNodes[0]);
+        element.after(element.childNodes[0]);
+        /* element.parentElement.removeChild(element); */
+      }
+    }
+  }
+}
 
 export default function Interna(props) {
   const slug = props.match.params.slug;
@@ -32,39 +68,4 @@ export default function Interna(props) {
       </article>
     </div>
   );
-}
-
-function includeHTML(content, placeId, position, extract = false) {
-  const divContent = document.getElementById(placeId);
-  divContent.insertAdjacentHTML(position, content);
-  if (extract) {
-    const pChild = divContent.firstChild;
-    divContent.innerHTML = pChild.innerHTML;
-  }
-}
-function extractingImg(base = null) {
-  if (base === null) base = document.getElementById('content');
-  if (base.children.length > 2 && base.className !== 'content') return null;
-  for (let index = 0; index < base.children.length; index++) {
-    const element = base.children[index];
-    extractingImg(element);
-    if (['P', 'FIGURE', 'DIV'].includes(element.nodeName.toUpperCase())) {
-      if (
-        element.childNodes.length === 1 &&
-        ['IMG', 'TABLE', 'IFRAME'].includes(element.childNodes[0].nodeName.toUpperCase())
-      ) {
-        element.after(element.childNodes[0]);
-        element.parentElement.removeChild(element);
-      }
-      if (
-        element.childNodes.length === 2 &&
-        element.childNodes[0].nodeName === 'IMG' &&
-        element.childNodes[1].nodeName === 'FIGCAPTION'
-      ) {
-        element.after(element.childNodes[0]);
-        element.after(element.childNodes[0]);
-        /* element.parentElement.removeChild(element); */
-      }
-    }
-  }
 }
