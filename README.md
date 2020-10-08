@@ -1,68 +1,36 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Desafio - Front-end Developer
+ Esse projeto foi proposto pela empresa APIKI para avaliar o conhecimento e desempenho para uma vaga de Front-End.
 
-## Available Scripts
+## Descrição do Projeto
 
-In the project directory, you can run:
+Montar uma versão do blog da Apiki utilizando uma solução headless, tendo as seguintes páginas:
 
-### `npm start`
+1. Página inicial: Listará as últimas postagens do blog com a categoria Desenvolvimento;
+2. Interna: Exibirá o conteúdo da postagem
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Tecnologias utilizadas
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Para o desenvolvimento desse desafio foram utilizados: React com ContextAPI, JavaScript e CSS puro.
 
-### `npm test`
+### Dificuldades
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+As requisições da API foram de certa forma tranquilas de serem realizadas após dedicar ao estudo do oferenciam. Porém, (1) não consegui acessar o Header da requisição para utilizar o X-WP-Total e o X-WP-TotalPages. Foi possível visualizar seus valores através de uma das ferramentas do Chrome (Network), mas a extração desses valores através do código utilizando 'fetch' foi frustrada.
 
-### `npm run build`
+Outra dificuldade foi na construção do CSS para o conteúdo vindo da API (content), uma vez que não foi assumido a (2) padronização e constância dos nomes das classes, e imagens e tabelas dentro de tags ***p***.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Soluções
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+As soluções utilizadas para contornar essas dificuldades foram:
 
-### `npm run eject`
+1. Para o problema de acesso ao Header para conseguir saber o número de páginas totais, bem como o número total de postagens, foi implementado uma segunda chamada da API com o endereço da consulta subsequente. As desvantagens dessa implementação são utilização de dados sem a necessidade deles no momento, os botões de 'Carregar mais...' e 'Anterior' tiveram que ter seu fluxo de cliques controlados para evitar requisições sem resposta à API. Essa penalização pode ser removida com acesso ao dado _X-WP-TotalPages_.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. Desenvolvida a função ***extractingImg*** que remove as imagens e tabelas de dentro das tags *p* e as insere nas posições de corretas no texto.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Melhorias Futuras
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Implementar operações para acessar os dados do header e utiliza-los para aumentar a velocidade e eficiência da página do blog; verificar e catalogar as classes utilizadas, e caso seja padronizadas e constantes utiliza-las para re-elaboração do CSS.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Observação a parte do projeto
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+O link no rodapá do [blog](https://blog.apiki.com/desenvolvimento/) (***© 2020 Apiki***) está errado (https://apiki.com.com/)

@@ -6,7 +6,7 @@ function changePage(e, setActual, lastPage) {
     switch (e) {
       case 'Anterior':
         return actual - 1;
-      case 'Próxima':
+      case 'Carregar mais...':
         if (actual === lastPage - 1) return lastPage;
         return actual + 1;
       default:
