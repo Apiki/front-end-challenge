@@ -16,8 +16,13 @@ body {
   display: inline;
   font-family: Montserrat, 'Roboto Slab', serif;
   max-width: 80vw;
-  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.685), rgba(0, 0, 0, 0.11));
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.685),
+    rgba(0, 0, 0, 0.11)
+  );
 }
+
 .App {
   background-color: #fde69a;
   text-align: center;
@@ -27,16 +32,19 @@ body {
   height: 40vmin;
   pointer-events: none;
 }
+
 h1 {
   font-size: 1.8em;
   line-height: 1.3em;
   max-width: 100vw;
 }
+
 h2 {
   max-width: 80vw;
   font-size: 1.5em;
   line-height: 1.3em;
 }
+
 .header {
   background-color: black;
   display: flex;
@@ -64,6 +72,7 @@ h2 {
 .title {
   margin: 25px 0 10px 0;
 }
+
 .subtitle {
   margin: 0 0 25px 0;
 }
@@ -96,10 +105,12 @@ section h2 {
 .title-card {
   font-size: 1.1em;
 }
+
 .side-photo-text {
   align-items: flex-end;
   margin-left: 10px;
 }
+
 .side-photo-text p {
   margin-top: 0;
   margin-bottom: 5px;
@@ -112,6 +123,7 @@ section h2 {
 .date {
   display: none;
 }
+
 .navigation-bar {
   display: flex;
   flex-direction: row;
@@ -136,6 +148,7 @@ section h2 {
   text-decoration: none;
   text-shadow: 0px 1px 0px #7cacde;
 }
+
 .buttonPages:hover {
   background: linear-gradient(to bottom, #468ccf 5%, #63b8ee 100%);
   background-color: #468ccf;
@@ -145,6 +158,7 @@ section h2 {
   position: relative;
   top: 1px;
 }
+
 .span-page-atual {
   display: inline-block;
   font-family: Arial;
@@ -224,6 +238,7 @@ i {
   margin-left: 15px;
   margin-right: 15px;
 }
+
 .footer h3 {
   margin-top: 5px;
   margin-bottom: 5px;
@@ -292,16 +307,19 @@ figure {
   display: flex;
   justify-content: space-between;
 }
+
 .warning-copy {
   padding-bottom: 10px;
   font-size: 0.9em;
   animation: blinker 1s linear infinite;
 }
+
 @keyframes blinker {
   50% {
     opacity: 0;
   }
 }
+
 .coping-link-align {
   display: flex;
   flex-direction: row;
@@ -321,14 +339,17 @@ article {
   line-height: 1.6em;
   max-width: 100vw;
 }
+
 article .title {
   justify-content: center;
   padding-left: 10px;
   padding-right: 10px;
 }
+
 pre {
   overflow-x: auto;
 }
+
 article p {
   max-width: 100vw;
   font-weight: 400;
@@ -381,6 +402,7 @@ article iframe {
   margin-bottom: 1em;
   margin-left: 0em;
 }
+
 img#content {
   width: 100vw;
   height: auto;
@@ -411,14 +433,17 @@ code {
 }
 
 @media only screen and (min-width: 600px) {
+
   .content p {
     font-size: 1.3em;
   }
+
   .side-photo-text {
     flex-grow: 1;
     justify-content: space-between;
     margin-left: 10px;
   }
+
   .date {
     display: flex;
     flex-direction: column;
@@ -426,11 +451,12 @@ code {
     padding-right: 1em;
     align-items: flex-end;
   }
+
   .comment {
     height: 1em;
-
     padding-left: 2em;
   }
+
   .author-date {
     display: flex;
     flex-direction: row;
@@ -447,6 +473,7 @@ code {
     flex-direction: column;
     margin: auto;
   }
+  
   .icon-circle {
     width: 2em;
   }
@@ -490,6 +517,7 @@ code {
   #content img {
     width: 80vw;
   }
+  
   .footer {
     font-size: 0.9em;
     font-weight: 400;

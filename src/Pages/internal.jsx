@@ -14,9 +14,10 @@ export default function Interna(props) {
       includeHTML(content.rendered, 'content', 'beforeend');
       includeHTML(excerpt.rendered, 'subtitle', 'beforeend', true);
       extractingImg();
+      window.scrollTo(0, 0);
     });
   }, []);
-  if(slug.length<3) return <Redirect to="/NotFound" />
+  if (slug.length < 3) return <Redirect to="/NotFound" />;
   if (!data) return null;
   const test = document.getElementById('content');
   return (
