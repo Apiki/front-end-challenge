@@ -1,47 +1,36 @@
 # Desafio - Front-end Developer
-Este desafio tem como objetivo te avaliar como desenvolvedor Front-end: JavaScript, HTML, CSS e lógica de programação.
+ Esse projeto foi proposto pela empresa APIKI para avaliar o conhecimento e desempenho para uma vaga de Front-End.
 
-## O Desafio
-Queremos montar uma versão do blog da Apiki apenas para Devs, e queremos que essa seja uma solução headless, esta nova versão terá as seguintes páginas: 
+## Descrição do Projeto
 
-- Página inicial: Listará as últimas postagens do blog com a categoria **Desenvolvimento**; 
-- Interna: Exibirá o conteúdo da postagem;
+Montar uma versão do blog da Apiki utilizando uma solução headless, tendo as seguintes páginas:
+
+1. Página inicial: Listará as últimas postagens do blog com a categoria Desenvolvimento;
+2. Interna: Exibirá o conteúdo da postagem
+
+### Tecnologias utilizadas
+
+Para o desenvolvimento desse desafio foram utilizados: React com ContextAPI, JavaScript e CSS puro.
+
+### Dificuldades
+
+As requisições da API foram de certa forma tranquilas de serem realizadas após dedicar ao estudo do oferenciam. Porém, (1) não consegui acessar o Header da requisição para utilizar o X-WP-Total e o X-WP-TotalPages. Foi possível visualizar seus valores através de uma das ferramentas do Chrome (Network), mas a extração desses valores através do código utilizando 'fetch' foi frustrada.
+
+Outra dificuldade foi na construção do CSS para o conteúdo vindo da API (content), uma vez que não foi assumido a (2) padronização e constância dos nomes das classes, e imagens e tabelas dentro de tags ***p***.
 
 
-## Requesitos
-- Utilizar os dados da API do nosso blog: https://blog.apiki.com/wp-json/wp/v2/;
+### Soluções
 
-## Diferencial
-- Utilizar alguma metodologia para a organização de seu CSS (BEMCSS, OOCSS, SMACSS... o que preferir :D);
-- Escolha uma lib para criação de interfaces de usuário (React ou Angular); 
+As soluções utilizadas para contornar essas dificuldades foram:
 
-### Página inicial
-Para montar esta página você precisará consumir do seguinte endpoint: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518`, ele já te retornará as últimas 10 postagens cadastradas, cada item do array deve representar uma card contendo:
+1. Para o problema de acesso ao Header para conseguir saber o número de páginas totais, bem como o número total de postagens, foi implementado uma segunda chamada da API com o endereço da consulta subsequente. As desvantagens dessa implementação são utilização de dados sem a necessidade deles no momento, os botões de 'Carregar mais...' e 'Anterior' tiveram que ter seu fluxo de cliques controlados para evitar requisições sem resposta à API. Essa penalização pode ser removida com acesso ao dado _X-WP-TotalPages_.
 
-- Imagem destacada: Você encontrará um atributo chamado `_embedded`, dentro deste atributo você encontrará o `wp:featuredmedia`;
-- Título;
-- Link para a postagem: O link deverá conter o atributo `slug`;
+2. Desenvolvida a função ***extractingImg*** que remove as imagens e tabelas de dentro das tags *p* e as insere nas posições de corretas no texto.
 
-Ao final da listagem deve haver um botão nomeado **Carregar mais...**, Quando o usuário clicar neste botão você deverá fazer uma nova requisição para o mesmo endpoint informando o parâmetro `page`, este parâmetro deve receber o número da próxima página, exemplo: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=2`. Você deve estar se perguntando, "como sei se haverá uma próxima página?", isso é simples, no **Header** de resposta desta requisição virá 2 atributos necessários para essa façanha `X-WP-Total` que diz a quantidade total de postagens que essa categoria possui, e o parâmetro `X-WP-TotalPages` que te informará qual o total de páginas de postagens que essa categoria possui.
+### Melhorias Futuras
 
-### Interna
-Para montar esta página você precisará consumir do seguinte endpoint: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=wordpress-escolha-site-pequenas-empresas`, lembre-se de substituir o `slug` dado como exemplo pelo slug definido no **Link para a postagem** da **Página inicial**, o layout deve conter os seguintes elementos:
+Implementar operações para acessar os dados do header e utiliza-los para aumentar a velocidade e eficiência da página do blog; verificar e catalogar as classes utilizadas, e caso seja padronizadas e constantes utiliza-las para re-elaboração do CSS.
 
-- Imagem destacada;
-- Título;
-- Conteúdo;
+## Observação a parte do projeto
 
-Seja criativo, construa um layout pensando no usuário final, e sinta-se a vontade para incrementar o layout com outros atributos disponíveis no JSON retornado. 
-
-## Critérios de avaliação
-
-- Organização do código;
-- Responsividade;
-- Reaproveitamento de código;
-- SEO;
-
-## Como submeter seu projeto
-
-1. Efetue o fork deste repositório e crie um branch com o seu nome e sobrenome. (exemplo: fulano-dasilva);
-1. Após finalizar o desafio, crie um Pull Request;
-1. Aguarde algum contribuidor realizar o code review;
+O link no rodapá do [blog](https://blog.apiki.com/desenvolvimento/) (***© 2020 Apiki***) está errado (https://apiki.com.com/)
