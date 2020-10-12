@@ -1,0 +1,35 @@
+
+:root {
+    font-size: 70%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body, #root {
+    height: 100vh;
+}
+
+body {
+    background: white;
+}
+/*
+#root {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  
+}
+*/
+body, textarea {
+    font: 500 1.6 rem;
+}
+
+@media (min-width: 700px) {
+    :root {
+        font-size: 90%;
+    }
+}
