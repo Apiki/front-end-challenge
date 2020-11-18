@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import Cards from './Cards';
+import CardsList from './CardsList';
 
 class Posts extends Component {
 	constructor(props) {
@@ -19,7 +19,7 @@ class Posts extends Component {
 			const responseReturned = await fetch(endpoint);
 			const responseObj = await responseReturned.json();
 			this.setState(({ listOfPosts, isLoading }) => ({
-        listOfPosts: [...listOfPosts, responseObj],
+        listOfPosts: [...listOfPosts, ...responseObj],
         isLoading: false
 			}))
 		})
@@ -28,7 +28,7 @@ class Posts extends Component {
 	renderCards() {
 		const { listOfPosts } = this.state;
 		return (
-      <Cards posts={listOfPosts} />
+      <CardsList posts={listOfPosts} />
 		);
 	}
 
