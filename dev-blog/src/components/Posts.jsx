@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import Cards from './Cards';
 
 class Posts extends Component {
 	constructor(props) {
@@ -8,6 +9,7 @@ class Posts extends Component {
 		this.state = {
 			isLoading: true,
 			listOfPosts: [],
+			page: 1,
 		}
 	}
 
@@ -16,19 +18,22 @@ class Posts extends Component {
 			const endpoint = 'https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518';
 			const responseReturned = await fetch(endpoint);
 			const responseObj = await responseReturned.json();
-			this.setState(({ listOfPosts }) => ({
-				listOfPosts: [...listOfPosts, responseObj]
+			this.setState(({ listOfPosts, isLoading }) => ({
+        listOfPosts: [...listOfPosts, responseObj],
+        isLoading: false
 			}))
 		})
 	}
 
 	renderCards() {
 		const { listOfPosts } = this.state;
-		console.log(listOfPosts);
+		return (
+      <Cards posts={listOfPosts} />
+		);
 	}
 
 	componentDidMount() {
-		this.fetchPosts();
+    this.fetchPosts();
 	}
 
 	render() {
@@ -36,7 +41,7 @@ class Posts extends Component {
 		const { isLoading } = this.state;
 		return (
 			<div className="cards-list">
-				{(isLoading) ? loadingElement : () => this.renderCards()}
+				{(isLoading) ? loadingElement : this.renderCards()}
 				{/* <button onClick={this.fetchPosts}>Mais</button> */}
 			</div>
 		);
