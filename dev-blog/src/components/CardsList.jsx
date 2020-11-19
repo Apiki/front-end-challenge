@@ -5,10 +5,10 @@ class CardsList extends Component {
   render() {
     const { posts } = this.props;
     return (
-      <div>
+      <div className="cards flex">
         { posts.map((post) => {
-          // const title = _embedded.wp:featuredmedia[0].title.rendered;
           const { _embedded, title, slug, id } = post;
+          // const title = _embedded.wp:featuredmedia[0].title.rendered;
           return (
             <Card
               key={id}

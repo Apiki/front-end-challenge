@@ -4,7 +4,7 @@ import Posts from './Posts';
 class Content extends Component {
 	render() {
 		return (
-			<main>
+			<main className="content">
         <Posts />
       </main>
 		)

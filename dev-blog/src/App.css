@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Raleway&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  background-color: rgb(70, 73, 76);
+  font-family: 'Raleway', sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+.header {
+  align-items: center;
+  background-color: rgb(25, 133, 161);
+  box-shadow: 0 15px 10px black;
+  box-sizing: border-box;
+  color: white;
+  height: 100px;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+}
+
+.header__title {
+  font-family: 'Caveat', cursive;
+  font-size: 3em;
+}
+
+.content {
+  padding-top: 115px;
+}
+
+.page {
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 1em;
+}
+
+.page__title {
+  color: white;
+}
+
+.page__button {
+  background-color: rgb(25, 133, 161);
+  border-style: none;
+  border-radius: 15px;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  margin: 1em;
+  padding: 0.3em;
+  width: 200px;
+}
+
+.cards {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.card {
+  background-color: rgb(25, 133, 161);
+  border-radius: 15px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 1em;
+  width: 300px;
+}
+
+.card__image {
+  border-radius: 15px;
+  width: 100%;
+}
+
+.card__description {
+  align-items: center;
+  flex-direction: column;
+}
+
+.card__title {
+  padding: 1em;
+}
+
+.card__button {
+  background-color: white;
+  border-style: none;
+  border-radius: 15px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  margin: 1em;
+  padding: 0.3em;
+  width: 200px;
+}

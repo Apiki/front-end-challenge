@@ -42,13 +42,14 @@ class Posts extends Component {
 
 	render() {
 		// const loadingElement = <span>Loading...</span>;
-		const acabou = <span>Acabou as páginas</span>
+		const end = <button disabled onClick={this.fetchPosts}>Carregar mais...</button>
 		const { totalPages, page } = this.state;
 		return (
-			<div className="cards-list">
+			<div className="page flex">
 				{/* {(isLoading) ? loadingElement : this.renderCards()} */}
+				<h2 className="page__title">Artigos</h2>
 				{this.renderCards()}
-				{(totalPages >= page) ? <button onClick={this.fetchPosts}>Carregar mais...</button> : acabou};
+				{(totalPages >= page) ? <button className="page__button" onClick={this.fetchPosts}>Carregar mais...</button> : end}
 			</div>
 		);
 	}
