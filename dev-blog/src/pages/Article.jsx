@@ -15,10 +15,10 @@ class Article extends Component {
   renderArticle() {
     const { article } = this.state;
     return (
-      <div>
-        <img src={article[0]._embedded.['wp:featuredmedia'][0].media_details.sizes.large.source_url} alt=""/>
-        <h1>{article[0].title.rendered}</h1>
-        <div dangerouslySetInnerHTML={{ __html: article[0].content.rendered }} />
+      <div className="content-page flex">
+        <img className="content-page__image" src={article[0]._embedded.['wp:featuredmedia'][0].media_details.sizes.large.source_url} alt=""/>
+        <h1 className="content-page__title">{article[0].title.rendered}</h1>
+        <div className="content-page__article" dangerouslySetInnerHTML={{ __html: article[0].content.rendered }} />
       </div>
     );
   }
