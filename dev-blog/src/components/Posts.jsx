@@ -14,13 +14,17 @@ class Posts extends Component {
 	}
 
 	async fetchPosts() {
+		const { page }  = this.state;
 		this.setState({ isLoading: true }, async () => {
-			const endpoint = 'https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518';
+			const endpoint = `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=${page}`;
 			const responseReturned = await fetch(endpoint);
+			const totalPages = parseInt(responseReturned.headers.get('X-WP-TotalPages'));
 			const responseObj = await responseReturned.json();
-			this.setState(({ listOfPosts }) => ({
+			this.setState(({ listOfPosts, page }) => ({
         listOfPosts: [...listOfPosts, ...responseObj],
-        isLoading: false
+				isLoading: false,
+				totalPages: totalPages - 2,
+				page: page +1,
 			}))
 		})
 	}
@@ -37,12 +41,14 @@ class Posts extends Component {
 	}
 
 	render() {
-		const loadingElement = <span>Loading...</span>;
-		const { isLoading } = this.state;
+		// const loadingElement = <span>Loading...</span>;
+		const acabou = <span>Acabou as páginas</span>
+		const { totalPages, page } = this.state;
 		return (
 			<div className="cards-list">
-				{(isLoading) ? loadingElement : this.renderCards()}
-				{/* <button onClick={this.fetchPosts}>Mais</button> */}
+				{/* {(isLoading) ? loadingElement : this.renderCards()} */}
+				{this.renderCards()}
+				{(totalPages >= page) ? <button onClick={this.fetchPosts}>Carregar mais...</button> : acabou};
 			</div>
 		);
 	}
