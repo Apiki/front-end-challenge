@@ -4,9 +4,9 @@ import Posts from './Posts';
 class Content extends Component {
 	render() {
 		return (
-			<div>
+			<main>
         <Posts />
-      </div>
+      </main>
 		)
 	}
 }

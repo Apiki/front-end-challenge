@@ -18,7 +18,7 @@ class Posts extends Component {
 			const endpoint = 'https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518';
 			const responseReturned = await fetch(endpoint);
 			const responseObj = await responseReturned.json();
-			this.setState(({ listOfPosts, isLoading }) => ({
+			this.setState(({ listOfPosts }) => ({
         listOfPosts: [...listOfPosts, ...responseObj],
         isLoading: false
 			}))

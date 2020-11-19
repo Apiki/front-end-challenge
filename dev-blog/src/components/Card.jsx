@@ -9,7 +9,7 @@ class Cards extends Component {
         <img src={image} alt=""/>
         <div className="description flex-container">
           <h4 className="card-title">{title}</h4>
-          <Link>Veja mais...</Link>
+          <Link to='/article' >Veja mais...</Link>
         </div>
       </div>
     );
