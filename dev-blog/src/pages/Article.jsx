@@ -3,7 +3,8 @@ import Header from '../components/Header';
 
 class Article extends Component {
   render() {
-    console.log(this.props);
+    const path = window.location.pathname.split('/');
+    console.log(path[path.length -1]);
     return (
       <div>
         <Header />
