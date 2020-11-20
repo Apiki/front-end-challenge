@@ -10,9 +10,19 @@
   width: 100%;
 }
 
+.header a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .header__title {
   font-family: 'Caveat', cursive;
   font-size: 3em;
+}
+
+.header__title:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
 }
 
 @media screen and ( min-width: 768px ) {

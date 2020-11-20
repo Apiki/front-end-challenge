@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import Header from '../../components/Header/Header';
-import Loading from '../../components/Loading/Loading';
+import LoadingArticle from '../../components/LoadingArticle/LoadingArticle';
 import './Article.css';
 
 class Article extends Component {
@@ -46,7 +46,7 @@ class Article extends Component {
     return (
       <div>
         <Header />
-        {isLoading ? <Loading /> : this.renderArticle()} 
+        {isLoading ? <LoadingArticle /> : this.renderArticle()} 
       </div>
     );
   }
