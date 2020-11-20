@@ -1,6 +1,6 @@
 import { Component } from 'react';
-import CardsList from './CardsList';
-import Loading from './Loading'
+import CardsList from '../CardsList/CardsList';
+import Loading from '../Loading/Loading'
 
 class Posts extends Component {
 	constructor(props) {

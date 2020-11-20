@@ -1,0 +1,22 @@
+.header {
+  align-items: center;
+  background-color: rgb(25, 133, 161);
+  box-shadow: 0 15px 10px black;
+  box-sizing: border-box;
+  color: white;
+  height: 100px;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+}
+
+.header__title {
+  font-family: 'Caveat', cursive;
+  font-size: 3em;
+}
+
+@media screen and ( min-width: 768px ) {
+  .header__title {
+    font-size: 4em;
+  }
+}

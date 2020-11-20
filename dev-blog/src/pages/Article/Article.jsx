@@ -1,5 +1,6 @@
 import { Component } from 'react';
-import Header from '../components/Header';
+import Header from '../../components/Header/Header';
+import Loading from '../../components/Loading/Loading'
 
 class Article extends Component {
   constructor(props) {
@@ -41,11 +42,10 @@ class Article extends Component {
 
   render() {
     const { isLoading } = this.state;
-    const loadingElement = <div>Loading...</div>
     return (
       <div>
         <Header />
-        {isLoading ? loadingElement : this.renderArticle()} 
+        {isLoading ? <Loading /> : this.renderArticle()} 
       </div>
     );
   }
