@@ -1,7 +1,7 @@
 .header {
   align-items: center;
   background-color: rgb(25, 133, 161);
-  box-shadow: 0 15px 10px black;
+  box-shadow: 0 10px 20px rgb(73, 73, 73);
   box-sizing: border-box;
   color: white;
   height: 100px;

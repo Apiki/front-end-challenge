@@ -22,11 +22,12 @@
 }
 
 .card__title {
-  padding: 1em;
+  color: rgb(20, 20, 20);
+  padding: 1em 2em 0.5em;
 }
 
 .card__button {
-  background-color: white;
+  background-color: rgb(248, 249, 250);
   border-style: none;
   border-radius: 15px;
   font-family: 'Raleway', sans-serif;
@@ -34,4 +35,14 @@
   margin: 1em;
   padding: 0.3em;
   width: 200px;
+}
+
+.card__button:hover {
+  background-color: rgb(200, 200, 200);
+  transition: 0.5s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: 1s;
 }

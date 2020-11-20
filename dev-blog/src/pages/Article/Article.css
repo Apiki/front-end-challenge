@@ -1,22 +1,31 @@
 .content-page {
+  align-items: center;
   flex-direction: column;
-  padding-top: 115px;
+  padding-top: 125px;
 }
 
 .content-page__image {
+  max-width: 960px;
   width: 100%;
 }
 
 .content-page__title {
+  max-width: 680px;
   padding: 1em;
 }
 
 .content-page__article {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 1em;
+  text-align: left;
 }
 
 .content-page__article p {
   margin-bottom: 0.5em;
+  max-width: 680px;
 }
 
 .content-page__article a {
@@ -25,6 +34,7 @@
 }
 
 .content-page__article ul, ol {
+  max-width: 680px;
   padding: 2em;
 }
 
@@ -46,6 +56,7 @@
 .wp-block-image img {
   height: auto;
   margin: 2em 0;
+  max-width: 960px;
   width: 100% !important;
 }
 

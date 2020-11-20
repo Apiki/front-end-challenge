@@ -10,7 +10,7 @@
 }
 
 .page__title {
-  color: white;
+  color: rgb(29, 29, 29);
 }
 
 .page__button {
@@ -24,6 +24,11 @@
   margin: 1em;
   padding: 0.3em;
   width: 200px;
+}
+
+.page__button:hover {
+  transform: scale(1.1);
+  transition: 1s;
 }
 
 @media screen and ( min-width: 768px ) {
