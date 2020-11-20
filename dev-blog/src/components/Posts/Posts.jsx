@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import CardsList from '../CardsList/CardsList';
-import Loading from '../Loading/Loading'
+import Loading from '../Loading/Loading';
+import './Posts.css';
 
 class Posts extends Component {
 	constructor(props) {

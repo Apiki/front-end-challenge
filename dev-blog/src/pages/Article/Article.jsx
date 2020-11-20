@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import Header from '../../components/Header/Header';
-import Loading from '../../components/Loading/Loading'
+import Loading from '../../components/Loading/Loading';
+import './Article.css';
 
 class Article extends Component {
   constructor(props) {

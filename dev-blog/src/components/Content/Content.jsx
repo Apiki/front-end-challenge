@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import Posts from '../Posts/Posts';
+import './Content.css';
 
 class Content extends Component {
 	render() {
