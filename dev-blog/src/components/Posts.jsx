@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import CardsList from './CardsList';
+import Loading from './Loading'
 
 class Posts extends Component {
 	constructor(props) {
@@ -42,14 +43,14 @@ class Posts extends Component {
 
 	render() {
 		// const loadingElement = <span>Loading...</span>;
-		const end = <button disabled onClick={this.fetchPosts}>Carregar mais...</button>
-		const { totalPages, page } = this.state;
+		const endButton = <button className="page__button" disabled onClick={this.fetchPosts}>Carregar mais...</button>
+		const { totalPages, page, isLoading } = this.state;
 		return (
 			<div className="page flex">
-				{/* {(isLoading) ? loadingElement : this.renderCards()} */}
 				<h2 className="page__title">Artigos</h2>
 				{this.renderCards()}
-				{(totalPages >= page) ? <button className="page__button" onClick={this.fetchPosts}>Carregar mais...</button> : end}
+				{isLoading ? <Loading /> : null}
+				{(totalPages >= page) ? <button className="page__button" onClick={this.fetchPosts}>Carregar mais...</button> : endButton}
 			</div>
 		);
 	}

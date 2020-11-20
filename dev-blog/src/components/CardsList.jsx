@@ -8,7 +8,6 @@ class CardsList extends Component {
       <div className="cards flex">
         { posts.map((post) => {
           const { _embedded, title, slug, id } = post;
-          // const title = _embedded.wp:featuredmedia[0].title.rendered;
           return (
             <Card
               key={id}

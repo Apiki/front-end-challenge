@@ -1,15 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Raleway&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .App {
   background-color: rgb(70, 73, 76);
   font-family: 'Raleway', sans-serif;
+  min-height: 100vh;
 }
 
 .flex {
@@ -143,10 +135,15 @@
 
 .content-page__article img,
 .content-page__article iframe,
+.content-page__article figure,
+.content-page__article figure a,
+.content-page__article figure img,
+.content-page__article figure caption,
+.content-page__article pre,
 .wp-block-image img {
   height: auto;
   margin: 2em 0;
-  width: 100%;
+  width: 100% !important;
 }
 
 .wp-block-group table {
