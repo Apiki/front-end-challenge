@@ -1,0 +1,27 @@
+.flex {
+  display: flex;
+}
+
+.page {
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 1em 0;
+}
+
+.page__title {
+  color: white;
+}
+
+.page__button {
+  background-color: rgb(25, 133, 161);
+  border-style: none;
+  border-radius: 15px;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin: 1em;
+  padding: 0.3em;
+  width: 200px;
+}

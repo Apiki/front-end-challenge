@@ -1,0 +1,37 @@
+.flex {
+  display: flex;
+}
+
+.card {
+  background-color: rgb(25, 133, 161);
+  border-radius: 15px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 1em;
+  width: 300px;
+}
+
+.card__image {
+  border-radius: 15px;
+  width: 100%;
+}
+
+.card__description {
+  align-items: center;
+  flex-direction: column;
+}
+
+.card__title {
+  padding: 1em;
+}
+
+.card__button {
+  background-color: white;
+  border-style: none;
+  border-radius: 15px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  margin: 1em;
+  padding: 0.3em;
+  width: 200px;
+}
