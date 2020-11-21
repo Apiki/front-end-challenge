@@ -24,7 +24,7 @@ npm install
   ```
 # Resultado e usabilidade (mobile)
 
-* Logo ao entrar no site a aplicação carrega 10 cards de artigos para o usuário escolher. No fim da página, um botão oferece a opção de carregar mais 10 cards. Enquanto carrega sempre é mostrada uma pequena animação de carregamento. Como foi usado React para a implementação do projeto, a página parece bem fluída e não é recarregada a cada requisisção. Abaico veja um GIF da aplicação rodando em uma tela do tamanho de um Iphone:
+* Logo ao entrar no site a aplicação carrega 10 cards de artigos para o usuário escolher. No fim da página, um botão oferece a opção de carregar mais 10 cards. Enquanto carrega sempre é mostrada uma pequena animação de carregamento. Como foi usado React para a implementação do projeto, a página parece bem fluída e não é recarregada a cada requisisção. Abaico veja um GIF da aplicação rodando em uma tela do tamanho de um Moto G4:
 
 ![](mobile_home.gif)
 
