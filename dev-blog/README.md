@@ -26,7 +26,7 @@ npm install
 
 * Logo ao entrar no site a aplicação carrega 10 cards de artigos para o usuário escolher. No fim da página, um botão oferece a opção de carregar mais 10 cards. Enquanto carrega sempre é mostrada uma pequena animação de carregamento. Como foi usado React para a implementação do projeto, a página parece bem fluída e não é recarregada a cada requisisção. Abaico veja um GIF da aplicação rodando em uma tela do tamanho de um Iphone:
 
-![]()
+![](mobile_home.gif)
 
 * Ao clicar no botão Leia mais de um card, o usuário é direcionado para uma outra página que mostra o conteúdo do artigo. Na versão mobile, o carregamento da página e a disposição do conteúdo ficou assim:
 
