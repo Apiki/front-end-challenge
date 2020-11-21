@@ -30,17 +30,17 @@ npm install
 
 * Ao clicar no botão Leia mais de um card, o usuário é direcionado para uma outra página que mostra o conteúdo do artigo. Na versão mobile, o carregamento da página e a disposição do conteúdo ficou assim:
 
-![]()
+![](mobile_article.gif)
 
 # Resultado e usabilidade (desktop)
 
 * No desktop o funcionamento da página inicial é parecido com o mobile, com exceção da forma como os cards estão dispostos (varia de acordo com o tamanho da tela) e também há algumas animações disponíveis apenas com o uso do mouse. Por exemplo, ao passar o mouse em cima do card ele aumenta seu tamanho cerca de 5%. Abaixo, veja um GIF do funcionamento da aplicação em uma tela com resolução de 1366px x 768px:
 
-![]()
+![](desktop_home.gif)
 
 * No desktop a página de conteúdo ficou com maiores margens, e as imagens e outros tipos de mídia ficaram proporcionais ao tamanho da tela. No GIF abaixo se vê um exemplo da página de conteúdo na resolução de tela de 1366px x 768px
 
-![]()
+![](desktop_article.gif)
 
 ## Feedback
 
