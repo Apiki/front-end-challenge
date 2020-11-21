@@ -12,7 +12,7 @@ class Posts extends Component {
 			isLoading: true,
 			listOfPosts: [],
 			page: 1,
-		}
+		};
 	}
 
 	async fetchPosts() {
@@ -27,7 +27,7 @@ class Posts extends Component {
 				isLoading: false,
 				totalPages: totalPages - 2,
 				page: page +1,
-			}))
+			}));
 		})
 	}
 
@@ -43,7 +43,6 @@ class Posts extends Component {
 	}
 
 	render() {
-		// const loadingElement = <span>Loading...</span>;
 		const endButton = <button className="page__button" disabled onClick={this.fetchPosts}>Carregar mais...</button>
 		const { totalPages, page, isLoading } = this.state;
 		return (

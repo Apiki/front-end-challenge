@@ -1,8 +1,8 @@
 .loader {
   animation: spin 2s linear infinite;
   border: 6px solid white;
-  border-top: 6px solid rgb(25, 133, 161);
   border-radius: 50%;
+  border-top: 6px solid rgb(25, 133, 161);
   height: 40px;
   margin: 10px;
   width: 40px;

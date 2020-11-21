@@ -13,7 +13,7 @@ class Header extends Component {
 					</h1>
 				</Link>
 			</header>
-		)
+		);
 	}
 }
 

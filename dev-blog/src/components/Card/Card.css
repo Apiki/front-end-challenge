@@ -28,8 +28,8 @@
 
 .card__button {
   background-color: rgb(248, 249, 250);
-  border-style: none;
   border-radius: 15px;
+  border-style: none;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
   margin: 1em;

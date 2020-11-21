@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import './LoadingArticle.css'
+import './LoadingArticle.css';
 
 class LoadingArticle extends Component {
   render() {
@@ -7,7 +7,7 @@ class LoadingArticle extends Component {
       <div className="spacer">
         <div className="loader__article"></div>
       </div>
-    )
+    );
   }
 }
 

@@ -12,7 +12,7 @@ class Article extends Component {
     this.state = {
       isLoading: true,
       article: '',
-    }
+    };
   }
 
   renderArticle() {
@@ -38,7 +38,7 @@ class Article extends Component {
   }
 
   componentDidMount() {
-    const id = this.props.match.params.id
+    const id = this.props.match.params.id;
     this.fetchArticle(id);
   }
 
@@ -47,6 +47,7 @@ class Article extends Component {
     return (
       <div>
         <Helmet>
+          <link rel="icon" href="apiki-logo.png" />
 					<title>{isLoading ? 'ApikiDev' : (`Apiki - ${article[0].title.rendered}`)}</title>
 				</Helmet>
         <Header />
