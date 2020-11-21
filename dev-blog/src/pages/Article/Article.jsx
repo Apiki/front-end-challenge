@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { Helmet } from 'react-helmet';
 import Header from '../../components/Header/Header';
 import LoadingArticle from '../../components/LoadingArticle/LoadingArticle';
 import './Article.css';
@@ -42,9 +43,12 @@ class Article extends Component {
   }
 
   render() {
-    const { isLoading } = this.state;
+    const { isLoading, article } = this.state;
     return (
       <div>
+        <Helmet>
+					<title>{isLoading ? 'ApikiDev' : (`Apiki - ${article[0].title.rendered}`)}</title>
+				</Helmet>
         <Header />
         {isLoading ? <LoadingArticle /> : this.renderArticle()} 
       </div>
