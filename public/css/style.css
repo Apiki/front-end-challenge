@@ -1,0 +1,528 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html,body{
+    height: 100%;
+}
+
+body{
+	overflow-x: hidden;
+	background:white;
+}
+
+.clear{
+    clear: both;
+}
+
+.center{
+    max-width: 1280px;
+    padding:0 2%;
+    margin:0 auto;
+}
+/**header do meu site**/
+
+header{
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 350px;
+    padding:30px 0;
+}
+
+.logo{
+    position: relative;
+    z-index: 2;
+    background-position: bottom;
+    background-image: url('../img/logo-apiki-blog.png');
+    background-size: 100% 100%;
+    float: left;
+    width: 250px;
+    height: 90px;
+    border-radius: 12px;
+}
+
+nav.desktop{
+    float: right;
+}
+
+nav.desktop ul{
+    list-style-type: none;
+}
+
+nav.desktop li{
+    display: inline-block;
+    margin:0 15px;
+}
+
+li.selected{
+	color:#ff5f27;
+	position: relative;
+}
+
+li.selected > span{
+	position: absolute;
+	bottom:0;
+	width: 17px;
+	height: 3px;
+	background: #ff5f27;
+}
+
+nav.desktop a{
+    color: #00659b;
+    text-decoration: none;
+    font-weight: lighter;
+}
+
+nav.mobile{
+    display: none;
+    float: right;
+}
+
+nav.mobile ul{
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    padding: 70px 0 30px 0;
+    background: #31475e;
+    display: none;
+    text-align: center;
+}
+
+nav.mobile h3{
+    position: relative;
+    z-index: 2;
+    color: white;
+    cursor: pointer;
+    font-size: 27px;
+}
+
+nav.mobile li{
+    padding:10px 0;
+}
+
+nav.mobile li.btn-nav{
+    padding:5px 10px;
+    display: inline-block;
+}
+
+nav.mobile a{
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+div.chamada-h{
+    padding:110px 0;
+}
+
+div.chamada-h h2{
+    font-size: 35px;
+    color: white;
+    font-weight: normal;
+}
+
+div.chamada-h p{
+    font-size: 17px;
+    color: white;
+    margin-top: 10px;
+    max-width: 600px;
+}
+
+div.chamada-h form{
+    margin-top: 10px;
+}
+
+div.chamada-h input[type=email]{
+    display: inline-block;
+    border-radius: 100px;
+    background: white;
+    width: 237px;
+    height: 35px;
+    border: 0;
+    padding-left: 10px;
+}
+
+div.chamada-h input[type=email]:focus{
+    outline: 0;
+}
+
+div.chamada-h input[type=submit]{
+    width: 181px;
+    height: 43px;
+    border-radius: 100px;
+    background-color: #ff5f27;
+    color: white;
+    cursor: pointer;
+    border: 0;
+}
+
+section.descricao-s{
+    text-align: center;
+    margin-top: 15px;
+    padding: 30x 0;
+}
+
+section.descricao-s p{
+    display: inline-block;
+    max-width: 700px;
+    font-weight: lighter;
+    font-size: 17px;
+    font-style: italic;
+}
+
+section.descricao-s2{
+    padding: 50px 0;
+}
+
+section.descricao-s2 > .center{
+    max-width: 960px;
+}
+
+.text-descricao{
+    padding:0 15px;
+    float: left;
+    width: 50%;
+}
+
+.text-descricao h3{
+    color: #31475e;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: normal;
+}
+
+.text-descricao p{
+    margin-top: 15px;
+    color: #6a7c92;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+section.descricao-s2 img{
+    width: 50%;
+    float: left;
+    max-width: 500px;
+}
+
+section.descricao-s3{
+    padding: 30px 0 60px 0;
+}
+
+section.descricao-s3 > .center{
+    max-width: 960px;
+    background-image: url('../img/bg2.jpg');
+    background-size: cover;
+    min-height: 350px;
+    position: relative;
+}
+
+.depoimento{
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    width: 70%;
+    max-width: 506px;
+    background: white;
+    padding:10px 30px;
+    box-shadow: 0 8px 20px 0 rgba( 224, 224, 224, 0.5);
+}
+
+.depoimento p{
+    font-size: 18px;
+    color: #31475e;
+    font-weight: lighter;
+}
+
+section.servicos{
+    padding: 25px 0;
+}
+
+section.servicos > .center{
+    max-width: 1100px;
+}
+
+.title-servicos{
+    text-align: center;
+    text-decoration: none;
+}
+.title-servicos h3,a{
+    color: #31475e;
+    font-size: 22px;
+    font-weight: normal;
+}
+.flex-servicos{
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 33.3%;
+}
+
+.box-servicos{
+    border: 10px solid white;
+    border-radius: 3px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 20px 0 rgba(224, 224, 224, 0.5);
+    background: #D3D3D3;
+}
+
+.box-servicos img{
+    width: 100%;
+}
+
+.box-wraper{
+  padding: 20px;  
+}
+
+.box-wraper h3,a{
+    color: #31475e;
+    font-size: 20px;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: center;
+}
+
+.tbn2{ 
+    display: block;
+    width: 145px;
+    height: 43px;
+    border: solid 1px #00659b;
+    color: #323232;
+    text-decoration: none;
+    padding: 6px 12px;
+    margin-top: 10px;
+    margin-left: 25%;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tbn2:hover {
+    background: #00659b;
+    color: #ffffff;
+}
+
+/*paralax*/
+
+section.parallax{
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    background-image: url('../img/bg_parallax.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.parallax .center{
+    position: relative;
+    z-index: 2;
+    margin:40px auto;
+    max-width: 960px;
+    color: white;
+}
+
+section.parallax h2{
+    text-align: center;
+}
+
+section.parallax p{
+    margin-top: 15px;
+    text-align: center;
+}
+
+.overlay-parallax{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgb(20,20,20,0.6);
+}
+
+/* formulario*/
+
+section.formulario > .center{
+    max-width: 960px;
+    padding: 15px 0;
+}
+
+section.formulario{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contato{
+    margin-top: 10px;
+    position: relative;
+    left: 15%;
+    right: 15%;
+}
+
+section.formulario h2{
+    text-align: center;
+    font-weight: normal;
+    color: #31475e;
+}
+
+section.formulario input[type=text]{
+	width: 70%;
+	height: 40px;
+	border-radius: 100px;
+	border:1px solid #ccc;
+	padding-left: 12px;
+	margin-bottom: 10px;
+}
+
+section.formulario input[type=text]:focus{
+	outline: 0;
+}
+
+section.formulario textarea{
+	width: 70%;
+	height: 120px;
+    border:1px solid #ccc;
+    border-radius: 10px;
+	padding:8px;
+	resize: vertical;
+}
+
+section.formulario input[type=submit]{
+  width: 120px;
+  height: 43px;
+  border-radius: 100px;
+  background-color: #ff5f27;
+  color: white;
+  font-weight: bold;
+  border:0;
+  box-shadow: 0 8px 20px 0 rgba(224, 224, 224, 0.5);
+  display: block;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+footer{
+	margin: 50px 0;
+}
+
+.box-footer{
+	float: left;
+	width: 33.3%;
+	padding: 0 15px;
+}
+
+.box-footer h2{
+	color: #31475e;
+	font-size: 22px;
+	font-weight: normal;
+}
+
+.box-footer p{
+	margin-top: 10px;
+	color: #31475e;
+	font-weight: 300;
+	font-size: 15px;
+}
+
+.box-footer form{margin-top: 10px;}
+
+.box-footer button{
+	width: calc(20% - 10px);
+	margin-left: 10px;
+	max-width: 63px;
+	height: 43px;
+	border: 1px solid #31475e;
+	border-radius: 50px;
+	background: white;
+}
+
+.box-footer input[type=text]{
+    width: 80%;
+    padding-left: 10px;
+    max-width: 208px;
+    height: 43px;
+    border-radius: 100px;
+    background-color: #ffffff;
+    border: solid 1px #bfbfbf;
+}
+
+.box-footer input[type=text]:focus{outline: 0;}
+
+.box-footer button i{
+	color: #31475e;
+}
+
+
+@media screen and (max-width: 1024px){
+    nav.desktop{
+        display: none;
+    }
+
+    nav.mobile{
+        display: block;
+    }
+
+    div.chamada-h{
+        text-align: center;
+    }
+
+    div.chamada-h p{
+        display: inline-block;
+    }
+    
+    div.chamada-h input[type=email]{
+        margin-bottom: 10px;
+    }
+
+    .depoimento{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 70%;
+        max-width: 506px;
+        background: white;
+        padding:10px 30px;
+        box-shadow: 0 8px 20px 0 rgba( 224, 224, 224, 0.5);
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    .text-descricao{
+        width: 100%;
+        display: block;
+        float: none;
+    }
+
+    section.descricao-s2 img{
+        width: 100%;
+        display: block;
+        margin:0 auto;
+        margin-top: 10px;
+        max-width: 500px;
+        float: none;
+    }
+    
+    .flex-servicos{
+        display: block;
+        max-width: 400px;
+        margin:0 auto;
+        width: 100%;
+    }
+
+    .empresa-single{
+        width: 100%;
+        max-width: 640px;
+        margin: 15px auto;
+        border: 1px solid #dcdcdc;
+    }
+
+
+}
