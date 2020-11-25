@@ -1,0 +1,19 @@
+.spacer {
+  display: flex;
+  justify-content: center;
+  padding-top: 130px;
+}
+
+.loader__article {
+  animation: spin 0.5s linear infinite;
+  border: 16px solid white;
+  border-radius: 50%;
+  border-top: 16px solid rgb(25, 133, 161);
+  height: 120px;
+  width: 120px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

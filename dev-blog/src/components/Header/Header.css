@@ -1,0 +1,32 @@
+.header {
+  align-items: center;
+  background-color: rgb(25, 133, 161);
+  box-shadow: 0 10px 20px rgb(73, 73, 73);
+  box-sizing: border-box;
+  color: white;
+  height: 100px;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+}
+
+.header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header__title {
+  font-family: 'Caveat', cursive;
+  font-size: 3em;
+}
+
+.header__title:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+
+@media screen and ( min-width: 768px ) {
+  .header__title {
+    font-size: 4em;
+  }
+}
