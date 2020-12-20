@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;600;700&display=swap');
+*{
+    list-style: none;
+    color: rgb(16, 30, 31);
+    text-decoration: none;
+}
+
+.background{
+    background: linear-gradient(to bottom, rgb(16, 30, 31),rgb(72, 90, 92) 100%, rgb(72, 90, 92));    
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px  45px;   
+}
+
+.subBackground{
+background-color: rgb(72, 90, 92);
+}
+
+.subBackground div a{
+    font-family:'Dosis', sans-serif;
+    font-weight: 400;
+    color: white;
+}
+
+.subBackground li a:hover {
+
+    opacity: 0.5;
+}
+
+.logotype{
+    width: 90px;
+}
+
+.blogTipe{
+font-family:'Dosis';
+color: whitesmoke;
+margin-left: 5px;
+}
+
+
+.socialIcons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;    
+    padding-left: auto;
+    
+}
+
+.line{
+    border-left: solid 2px white;
+}
+
+.iconSocial{
+max-height: 15px;
+margin-left: 15px;
+}
+
+.iconSocial:hover {
+filter: invert(0.4) sepia(1) hue-rotate(14deg) saturate(1000%);  
+}
+
+
+@media (max-width:375px){
+    
+    .container{
+    justify-content:center;
+    }
+
+    .line{
+        border-left: none;
+    }
+    .logotype{
+        width: 90px;
+        margin-bottom: 10px;
+    }
+
+    .iconSocial{
+        max-height: 20px;
+        margin-left: 23px;
+        margin-bottom: 10px;
+
+        }
+
+        
+}
