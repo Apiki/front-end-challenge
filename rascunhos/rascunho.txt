@@ -1,0 +1,5 @@
+Em primeiro lugar, obrigado pela oportunidade de me deixar assumir este desafio, é a minha primeira vez usando bibliotecas, 
+este desafio foi concluído em um tempo de aproximadamente 3 dias,Senti falta de implementar algumas coisas. como no menu, 
+que seria corrigir o cabeçalho. um menu fixo na parte superior da tela. Mas para economizar tempo, não acabe implementando. 
+outra das coisas que gostaria de relatar. foi o fato de alguns problemas semânticos ao criar algumas partes, como o menu que ao invés de usar li e ul. use div. 
+porque algumas dessas tags foram usadas na string api com o conteúdo. Mais uma vez, obrigado pela oportunidade, e gostaria de ouvir sugestões e críticas.

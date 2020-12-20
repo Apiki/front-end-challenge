@@ -1,0 +1,71 @@
+*{    
+    box-sizing: border-box;
+    font-family: 'Dosis';
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;600;700&display=swap');
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 15px  40px;  
+}
+
+.card{
+    max-width: 310px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+
+
+ figure {
+    width: 100%;
+    overflow: hidden;
+}
+
+.imageNew{
+width: 100%;
+transition:1s ;
+}
+
+.imageNew:hover{
+    transform: scale(1.1);
+    filter:brightness(0.4)}
+
+.title{
+color: rgb(16, 30, 31);
+font-size: 20px;
+font-family: 'Dosis';
+font-weight: 800;
+text-align: center;
+}
+
+.description{
+text-align: justify;
+background-color: rgba(72, 90, 92,0.6);
+color: white;
+font-family: 'Dosis';
+border-radius: 1%;
+padding: 5px;
+}
+
+@media (max-width:375px){
+
+    .cards{
+        padding: 15px  20px;  
+
+    }
+
+    .title{
+        color: rgb(16, 30, 31);
+        font-size: 27px;
+        font-family: 'Dosis';
+        font-weight: 800;
+        text-align: center;
+        }
+
+}

@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+.padding {
+  padding: 10px 40px;
+}
+
+.Noticiablock {
+  border-bottom: solid 5px rgba(72, 90, 92, 0.5);
+  margin: 20px 0px 20px 0px;
+}
+
+.Noticiatitulo {
+  font-size: 40px;
+  color: rgba(16, 30, 31, 0.8);
+  margin: 20px 0px 20px 0px;
+  font-family: "Russo One", sans-serif;
+  text-align: center;
+  line-height: 33px;
+  
+}
+
+.NoticiaHeadline {
+  font-size: 30px;
+  color: rgb(72, 90, 92);
+  text-align: left;
+  font-weight: 600;
+  font-family: "Dosis";
+}
+
+p {
+  font-family: "Dosis";
+  font-size: 22px;
+  text-align: justify;
+}
+
+h1 {
+  font-family: "Russo One", sans-serif;
+  text-align: center;
+  line-height: 33px;
+}
+
+h2 {
+  font-family: "Dosis";
+  font-size: 35px;
+  font-weight: 400;
+  margin: 20px 0px 20px 0px;
+  text-align: center;
+  text-decoration: underline rgb(173, 50, 120);
+}
+
+h4 {
+  font-family: "Dosis";
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  transition: 1s;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px 20px 0px;
+}
+
+li {
+  font-family: "Dosis";
+  font-size: 20px;
+  list-style: circle;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 20px;
+
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+}
+
+@media (max-width: 375px) {
+  .Noticiatitulo {
+    font-size: 40px;
+    color: rgba(16, 30, 31, 0.8);
+    text-align: left;
+    margin: 20px 0px 20px 0px;
+  }
+}

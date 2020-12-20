@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;600;700&display=swap');
+.headline{
+    background-color:rgb(157, 185, 32);
+    padding:40px;
+    box-shadow: inset 0px 0px 9px -1px rgb(72, 90, 92);
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+h5{
+  font-family: "Russo One", sans-serif;
+  font-size: 30px;
+  color: whitesmoke;
+  text-align: center;
+  line-height: 33px;
+}
+
+
+h5 strong {
+    color:whitesmoke;
+    font-family: 'Dosis';
+    font-weight: 700;    
+    text-decoration: underline 5px rgb(173, 50, 120);
+    background-color: rgb(173, 50, 120);
+}
