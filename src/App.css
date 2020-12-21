@@ -1,0 +1,18 @@
+.list-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card-post {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.text-overflow{
+  max-width: 15ch;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
