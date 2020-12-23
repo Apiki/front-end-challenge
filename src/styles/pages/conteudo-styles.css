@@ -1,0 +1,91 @@
+#pag-inter {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    
+}
+
+#pag-cont {
+    background: linear-gradient(329.59deg, #29B6D1 0%, #00C7C7 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#pag-inter h1 {
+    padding: 50px;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 42px;
+    margin-top: 64px;
+}
+
+#pag-inter p, h3 {
+    padding: 60px;
+    line-height: 28px;
+    margin-top: 24px;
+    display: flex;
+}
+
+#conteudo {
+    box-shadow: -14px -10px 82px -42px rgba(0, 0, 0, 0.22);
+    color: skyblue;
+    position: relative;
+    display: flex;
+    padding: 50px;
+    display: flex;
+    background: steelblue;
+}
+
+#pag-inter-con h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 42px;
+    margin-top: 64px;
+}
+
+#pag-inter-con p {
+    line-height: 28px;
+    margin-top: 24px;
+}
+
+#pag-inter-con img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+ul {
+    height: 100px;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    color: white;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    margin: 0 1%;
+    color: white;
+}
+
+ul:hover {
+    color: red;
+}
+
+li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
