@@ -1,0 +1,90 @@
+#page-home {
+    width: auto;
+    height: auto;
+    display: flex;
+}
+
+#page-home aside {
+    width: 300px;
+    background: linear-gradient(329.59deg, #29B6D1 0%, #00C7C7 100%);
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#page-home aside h2 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 42px;
+    margin-top: 64px;
+}
+
+#page-home aside p {
+    line-height: 28px;
+    margin-top: 24px;
+}
+
+#page-home aside footer {
+    display: flex;
+    flex-direction: column;
+    line-height: 24px;
+}
+
+#page-home aside footer strong {
+    font-weight: 800;
+}
+
+#page-home .create-list {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    width: 200px;
+    height: 50px;
+    background: skyblue;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#page-home .create-list h1 {
+    font-size: 18px;
+}
+
+#conteudo {
+    box-shadow: -14px -10px 82px -42px rgba(0, 0, 0, 0.22);
+    color: skyblue;
+    position: relative;
+    display: flex;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: steelblue;
+}
+
+#conteudo h1 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 42px;
+    margin-top: 64px;
+}
+
+#conteudo p {
+    line-height: 28px;
+    margin-top: 24px;
+}
+
+#c1 {
+    background: steelblue;
+    color: white;
+    padding: 10px;
+}
+
+#conteudo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
