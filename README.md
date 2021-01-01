@@ -1,7 +1,7 @@
 <h1> Space reserved for challenges technical </h1>
 
+<h3>  You can find code using </h3>
 <ul>
-  You can find code using
   <li> ReactJS </li>
   <li> .Net Core </li>
 </ul>
