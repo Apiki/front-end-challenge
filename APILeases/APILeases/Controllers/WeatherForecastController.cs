@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace APILeases.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -23,17 +23,32 @@ namespace APILeases.Controllers
             _logger = logger;
         }
 
+
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public IEnumerable<Propertie> Get()
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            return Enumerable.Range(1, 5).Select(index => new Propertie
             {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
+                Street = "Rua santa cecilia",
+                Neighborhood = "Centro",
+                City = "Betim",
+                State = "MG"
             })
-            .ToArray();
+             .ToArray();
         }
     }
 }
+/*
+[HttpGet]
+public IEnumerable<WeatherForecast> Get()
+{
+    var rng = new Random();
+    return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+    {
+        Date = DateTime.Now.AddDays(index),
+        TemperatureC = rng.Next(-20, 55),
+        Summary = Summaries[rng.Next(Summaries.Length)]
+    })
+    .ToArray();
+} 
+*/

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wilia\\source\\repos\\APILeases\\APILeases\\APILeases.csproj",
+      "projectUniqueName": "C:\\Users\\wilia\\OneDrive\\Ambiente de Trabalho\\PRIS\\Technical-challenge\\APILeases\\APILeases\\APILeases.csproj",
       "projectName": "APILeases",
-      "projectPath": "C:\\Users\\wilia\\source\\repos\\APILeases\\APILeases\\APILeases.csproj",
+      "projectPath": "C:\\Users\\wilia\\OneDrive\\Ambiente de Trabalho\\PRIS\\Technical-challenge\\APILeases\\APILeases\\APILeases.csproj",
       "packagesPath": "C:\\Users\\wilia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wilia\\source\\repos\\APILeases\\APILeases\\obj\\",
+      "outputPath": "C:\\Users\\wilia\\OneDrive\\Ambiente de Trabalho\\PRIS\\Technical-challenge\\APILeases\\APILeases\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\wilia\\AppData\\Roaming\\NuGet\\NuGet.Config",
