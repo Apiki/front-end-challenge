@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wilia\\OneDrive\\Ambiente de Trabalho\\PRIS\\Technical-challenge\\APILeases\\APILeases\\APILeases.csproj": {}
+    "C:\\Users\\wilia\\OneDrive\\Ambiente de Trabalho\\API\\Technical-challenge\\APILeases\\APILeases.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wilia\\OneDrive\\Ambiente de Trabalho\\PRIS\\Technical-challenge\\APILeases\\APILeases\\APILeases.csproj": {
+    "C:\\Users\\wilia\\OneDrive\\Ambiente de Trabalho\\API\\Technical-challenge\\APILeases\\APILeases.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wilia\\OneDrive\\Ambiente de Trabalho\\PRIS\\Technical-challenge\\APILeases\\APILeases\\APILeases.csproj",
+        "projectUniqueName": "C:\\Users\\wilia\\OneDrive\\Ambiente de Trabalho\\API\\Technical-challenge\\APILeases\\APILeases.csproj",
         "projectName": "APILeases",
-        "projectPath": "C:\\Users\\wilia\\OneDrive\\Ambiente de Trabalho\\PRIS\\Technical-challenge\\APILeases\\APILeases\\APILeases.csproj",
+        "projectPath": "C:\\Users\\wilia\\OneDrive\\Ambiente de Trabalho\\API\\Technical-challenge\\APILeases\\APILeases.csproj",
         "packagesPath": "C:\\Users\\wilia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wilia\\OneDrive\\Ambiente de Trabalho\\PRIS\\Technical-challenge\\APILeases\\APILeases\\obj\\",
+        "outputPath": "C:\\Users\\wilia\\OneDrive\\Ambiente de Trabalho\\API\\Technical-challenge\\APILeases\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\wilia\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -37,8 +37,28 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.1, )",
+              "noWarn": [
+                "NU1605"
+              ]
+            },
+            "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
+              "target": "Package",
+              "version": "[5.0.1, )",
+              "noWarn": [
+                "NU1605"
+              ]
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

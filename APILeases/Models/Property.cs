@@ -1,0 +1,31 @@
+using System.ComponentModel.DataAnnotations;
+
+namespace Properties.Models
+{
+  public class Property
+  {
+    [Key]
+    public int Id { get; set; }
+    
+    [Required(ErrorMessage = "Campo obrigatório")]
+    [MaxLength(50, ErrorMessage = "Preencha um breve título")]
+    public string Title { get; set; }
+
+    [Required(ErrorMessage = "Campo obrigatório")]
+    [MaxLength(50, ErrorMessage = "Preencha uma breve descrição")]
+    public string Description { get; set; }
+
+    [Required(ErrorMessage = "campo obrigatório")]
+    [MinLength(10, ErrorMessage = "Deescreva os cômodos do imóvel")]
+    public string Habitation { get; set; }
+
+    [Required(ErrorMessage = "campo obrigatório")]
+    [MinLength(10, ErrorMessage = "Digite a URL da imagem")]
+    public string Picture { get; set; }
+
+    
+    [Required(ErrorMessage = "campo obrigatório")]
+    [MinLength(3, ErrorMessage = "Digite o preço do aluguel")]
+    public int Price { get; set; }
+  }
+}

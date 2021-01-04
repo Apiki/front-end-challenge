@@ -1,2 +1,0 @@
-C:\Users\wilia\OneDrive\Ambiente de Trabalho\PRIS\Technical-challenge\Models\Models\obj\Debug\Models.csprojAssemblyReference.cache
-C:\Users\wilia\OneDrive\Ambiente de Trabalho\PRIS\Technical-challenge\Models\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
