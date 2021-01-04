@@ -14,7 +14,6 @@ function App() {
         <Route path="/property/:id" component={DetailsProperty}/>
         <Route exact path="/" component={Home}/>
       </Switch>
-
     </div>
   );
 }
