@@ -27,5 +27,9 @@ namespace Properties.Models
     [Required(ErrorMessage = "campo obrigatório")]
     [MinLength(3, ErrorMessage = "Digite o preço do aluguel")]
     public int Price { get; set; }
+
+    [Required(ErrorMessage = "campo obrigatório")]
+    [MinLength(5, ErrorMessage = "Digite a região do imóvel")]
+    public string Region { get; set; }
   }
 }
