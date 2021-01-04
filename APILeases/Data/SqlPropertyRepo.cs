@@ -13,7 +13,6 @@ namespace Properties.Data
       _context = context;
     }
 
-
     public IEnumerable<Property> GetAllProperties()
     {
       return _context.Propertie.ToList();
