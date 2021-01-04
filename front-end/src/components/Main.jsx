@@ -1,37 +1,36 @@
 import React, { useEffect, useState, useContext } from 'react';
-import CardProperties from './CardProperties';
 import axios from 'axios';
+import CardProperties from './CardProperties';
+import { contextLease } from '../context/context';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
 
 const Main = () => {
   const [propertiesAPI, setPropertiesAPI] = useState([]);
+  const { regionSelected, setRegionSelected } = useContext(contextLease);
 
   useEffect(() => {
     axios.get("https://localhost:5001/v1/property").then(({ data }) => setPropertiesAPI(data));
-  }, [])
-
-  const regionSelected = 'Belo Horizonte'
+  }, []);
 
   const filterByRegion = regionSelected ? propertiesAPI.filter(e => e.region == regionSelected) : propertiesAPI;
 
   return (
-    <div >
-      <h2 className="h2">Lancamento</h2>
+    <div>
+      <h2 className="h2">Imóveis para Alugar</h2>
       <div className="d-flex justify-content-center flex-wrap">
         {filterByRegion.map((e) => <div key={e.id} >
-          <CardProperties
-            title={e.title}
-            description={e.description}
-            picture={e.picture}
-            habitation={e.habitation}
-            region={e.region}
-          />
+          <Link to={`property/${e.id}`}style={{textDecoration: "none", color: 'black'}}>
+            <CardProperties
+              title={e.title}
+              description={e.description}
+              picture={e.picture}
+              habitation={e.habitation}
+              region={e.region}
+            />
+          </Link>
         </div>
         )}
-      </div>
-      <h2 >Novidades</h2>
-      <div className="d-flex justify-content-center flex-wrap">
-        {/* {[1, 2, 3, 4, 6, 2].map((e) => <div> <CardProperties /> </div>)} */}
       </div>
     </div>
   )

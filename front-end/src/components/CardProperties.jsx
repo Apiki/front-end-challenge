@@ -15,7 +15,6 @@ const CardProperties = ({title, description,picture, habitation,region }) => {
         </Card.Body>
         <ListGroup className="list-group-flush">
           <ListGroupItem>{habitation}</ListGroupItem>
-          {/* <ListGroupItem>Dapibus ac facilisis in</ListGroupItem> */}
         </ListGroup>
         <Card.Body>
           <Card.Link href="#">{region}</Card.Link>
