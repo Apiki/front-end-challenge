@@ -13,7 +13,7 @@ namespace Properties.Controllers
 
     private readonly IPropertyRepo _repository;
 
-    public CommandsController(IPropertyRepo repository)
+    public PropertiesController(IPropertyRepo repository)
     {
       _repository = repository;
     }

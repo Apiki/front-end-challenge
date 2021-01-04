@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\wilia\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\wilia\\.nuget\\packages"
+    ]
+  }
+}

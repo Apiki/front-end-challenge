@@ -12,6 +12,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
+using Microsoft.EntityFrameworkCore;
+using Properties.Data;
+
 namespace APILeases
 {
     public class Startup
@@ -29,7 +32,7 @@ namespace APILeases
             services.AddDbContext<PropertyContext>(opt => opt.UseSqlServer
             (Configuration.GetConnectionString("PropertyConnection")));
 
-             services.AddScoped<IPropertyContext, SqlPropertyContext>();
+             services.AddScoped<IPropertyRepo, SqlPropertyRepo>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

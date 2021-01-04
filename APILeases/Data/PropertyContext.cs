@@ -7,6 +7,6 @@ namespace Properties.Data
   {
     public PropertyContext(DbContextOptions<PropertyContext> opt) : base(opt) { }
 
-    public DbSet<Property> Property { get; set; }
+    public DbSet<Property> Propertie { get; set; }
   }
 }
