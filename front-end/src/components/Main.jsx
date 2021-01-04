@@ -10,18 +10,20 @@ const Main = () => {
     axios.get("https://localhost:5001/v1/property").then(({ data }) => setPropertiesAPI(data));
   }, [])
 
+  console.log(propertiesAPI);
+
   return (
     <div >
       <h2 className="h2">Lancamento</h2>
       <div className="d-flex justify-content-center flex-wrap">
         {propertiesAPI.map((e) => <div>
           <CardProperties
-            key={e.Id}
-            title={e.Title}
-            description={e.Description}
-            picture={e.Picture}
-            habitation={e.Habitation}
-            region={e.Region}
+            key={e.id}
+            title={e.title}
+            description={e.description}
+            picture={e.picture}
+            habitation={e.habitation}
+            region={e.region}
           />
         </div>
         )}

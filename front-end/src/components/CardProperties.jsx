@@ -8,7 +8,7 @@ const CardProperties = ({title, description,picture, habitation,region }) => {
   return (
     <div className="ml-3 mb-3">
       <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={picture} />
+        <Card.Img variant="top" src={picture} style={{height:"200px"}} />
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>{description}</Card.Text>

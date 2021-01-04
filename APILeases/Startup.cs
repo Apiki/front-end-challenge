@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Cors;
 using Properties.Data;
 
 namespace APILeases
@@ -32,7 +33,8 @@ namespace APILeases
             services.AddDbContext<PropertyContext>(opt => opt.UseSqlServer
             (Configuration.GetConnectionString("PropertyConnection")));
 
-             services.AddScoped<IPropertyRepo, SqlPropertyRepo>();
+            services.AddScoped<IPropertyRepo, SqlPropertyRepo>();
+            services.AddCors();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -50,6 +52,11 @@ namespace APILeases
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "APILeases v1"));
             }
+
+            app.UseCors(builder => builder
+            .SetIsOriginAllowed((host) => true)
+            .AllowAnyMethod()
+            .AllowAnyHeader());
 
             app.UseHttpsRedirection();
 

@@ -12,7 +12,6 @@ const NavBar = () => {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
           <Nav.Link href="#features" >Alugar</Nav.Link>
-          <Nav.Link href="#pricing">Comprar</Nav.Link>
           <NavDropdown title="Buscar por Região" id="collasible-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">Belo Horizonte</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">Contagem</NavDropdown.Item>
