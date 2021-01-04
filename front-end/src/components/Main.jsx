@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import CardProperties from './CardProperties';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,15 +10,16 @@ const Main = () => {
     axios.get("https://localhost:5001/v1/property").then(({ data }) => setPropertiesAPI(data));
   }, [])
 
-  console.log(propertiesAPI);
+  const regionSelected = 'Belo Horizonte'
+
+  const filterByRegion = regionSelected ? propertiesAPI.filter(e => e.region == regionSelected) : propertiesAPI;
 
   return (
     <div >
       <h2 className="h2">Lancamento</h2>
       <div className="d-flex justify-content-center flex-wrap">
-        {propertiesAPI.map((e) => <div>
+        {filterByRegion.map((e) => <div key={e.id} >
           <CardProperties
-            key={e.id}
             title={e.title}
             description={e.description}
             picture={e.picture}
