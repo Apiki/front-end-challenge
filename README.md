@@ -2,3 +2,7 @@
 
 #  <h3> Aplicação Cliente e servidor </h3>
 
+Você precisara do `NODE` na sua máquina para rodar o projeto
+
+Caminhe ate a past `front-end` cd front-end
+instale as depêndencias `npm install`

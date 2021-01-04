@@ -22,25 +22,27 @@ const Register = () => {
     city
   };
 
-  const submitProperty = () => {
-    axios.post('', propertyToPost).then(() => {
+  // const headers = { 'Content-Type': 'application/json' }
 
-    });
+  const submitProperty = () => {
+    axios.post('', propertyToPost)
+      .then((res) => console.log(res))
+      .catch((error) => console.log(error));
   }
 
   console.log(propertyToPost);
-  
+
   return (
     <div>
       <NavBar />
       <div className="container">
         <Form onSubmit={submitProperty}>
-          <Form.Group  controlId="formGridEmail">
+          <Form.Group controlId="formGridEmail">
             <Form.Label>Título</Form.Label>
             <Form.Control required placeholder="Ex: Apartamento padrão Bh" onChange={e => setTitle(e.target.value)} />
           </Form.Group>
 
-          <Form.Group  controlId="formGridPassword">
+          <Form.Group controlId="formGridPassword">
             <Form.Label>Descrição</Form.Label>
             <Form.Control required placeholder="Ex: More na região central de Betim" onChange={e => setDescription(e.target.value)} />
           </Form.Group>
@@ -52,11 +54,11 @@ const Register = () => {
 
           <Form.Group controlId="formGridAddress2">
             <Form.Label>Endereço da imagem</Form.Label>
-            <Form.Control required placeholder="Digite a URL da imagem"  onChange={e => setUrlImage(e.target.value)} />
+            <Form.Control required placeholder="Digite a URL da imagem" onChange={e => setUrlImage(e.target.value)} />
           </Form.Group>
 
           <Form.Row>
-            <Form.Group  controlId="formGridCity">
+            <Form.Group controlId="formGridCity">
               <Form.Label>Cidade</Form.Label>
               <Form.Control as="select" onChange={e => setCity(e.target.value)}>
                 <option>Escolha a cidade</option>
@@ -65,16 +67,16 @@ const Register = () => {
                 <option>Betim</option>
               </Form.Control>
             </Form.Group>
-            <Form.Group   controlId="formGridZip">
+            <Form.Group controlId="formGridZip">
               <Form.Label>Preço do Aluguel</Form.Label>
-              <Form.Control onChange={e => setPriceLease(e.target.value)}/>
+              <Form.Control onChange={e => setPriceLease(e.target.value)} />
             </Form.Group>
-            
+
           </Form.Row>
 
-          <Form.Group   id="formGridCheckbox">
+          <Form.Group id="formGridCheckbox">
             <a target="blank" href="https://jusbrasilmodelos.jusbrasil.com.br/modelos-pecas/784909844/modelo-termos-e-condicoes-para-site-ou-app?ref=feed">Termo de condições</a>
-            <Form.Check type="checkbox"/>
+            <Form.Check required type="checkbox" />
           </Form.Group>
           <Button variant="primary" type="submit"> Submit</Button>
         </Form>
