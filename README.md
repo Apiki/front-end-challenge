@@ -1,6 +1,6 @@
 # Bem-vindo ao repositório do desafio PRIS 
 
-##  Aplicação Cliente e servidor (REST)
+##  Aplicação Cliente e Servidor
 
 ### Esse projeto consiste em uma API construída em dotnet core
 ### e consumida pelo cliente React
@@ -10,12 +10,13 @@
 ## Step 1
 
 Clone o projeto 
-`git clone ` https://github.com/wigorbh/Technical-challenge/edit/APILeases/
+`git clone` https://github.com/wigorbh/Technical-challenge/edit/APILeases/                                     
 depois caminhe até sua pasta `cd pasta-onde-clonou`
 
+Entre na Pasta APILeases: Nela fica a API de locações`cd APILeases`
+
 ## Step 2
-Entre na Pasta APILeases: Nela fica a API de locações
-`cd APILeases`
+
 
 ## Step 3
 
