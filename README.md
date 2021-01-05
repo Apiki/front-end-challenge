@@ -52,7 +52,7 @@ Abra uma nova aba do terminal na raiz do projeto caminhe para pasta `front-end` 
 
 Instale as depêndencias `npm install` tudo feito já pode executar o comando mestre 🧙
 
-### `NPM START`
+#### `NPM START`
 
 Feito isso é só navegar!
 
@@ -83,7 +83,7 @@ O que acabou atrasando a contrução do front-end com esse metódos.
 
 Mas não é motivo de preocupação, um pouco de tempo e investigação resolverá!
 
-### Sotware desenvoldivo por <a href="https://www.linkedin.com/in/williamigor/">William Igor </a>
+### Sotware desenvolvido por <a href="https://www.linkedin.com/in/williamigor/">William Igor </a>
 
 ## Fim
 
