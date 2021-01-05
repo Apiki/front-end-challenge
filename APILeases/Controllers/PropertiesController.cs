@@ -11,6 +11,7 @@ namespace Properties.Controllers
 
   [ApiController]
   [Route("v1/property")]
+  
   public class PropertiesController : ControllerBase
   {
     private readonly IPropertyRepo _repository;

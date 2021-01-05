@@ -10,14 +10,14 @@ const Main = () => {
   const { regionSelected, setRegionSelected } = useContext(contextLease);
 
   useEffect(() => {
-    axios.get("https://localhost:5000/v1/property").then(({ data }) => setPropertiesAPI(data));
+    axios.get("https://localhost:5001/v1/property").then(({ data }) => setPropertiesAPI(data));
   }, []);
 
   const filterByRegion = regionSelected ? propertiesAPI.filter(e => e.region == regionSelected) : propertiesAPI;
 
   return (
     <div>
-      <h2 className="h2">Imóveis para Alugar</h2>
+      <h2 className="text-primary py-4">Imóveis para Alugar</h2>
       <div className="d-flex justify-content-center flex-wrap">
         {filterByRegion.map((e) => <div key={e.id} >
           <Link to={{ pathname:`property/${e.id}`, state:e.id}}style={{textDecoration: "none", color: 'black'}}>

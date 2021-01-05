@@ -24,21 +24,21 @@ const Register = () => {
 
   // const headers = { 'Content-Type': 'application/json' }
 
-  const submitProperty = () => {
-    axios.post('', propertyToPost)
+  const submitProperty = async () => {
+    axios.post('https://localhost:5001/v1/property', propertyToPost)
       .then((res) => console.log(res))
       .catch((error) => console.log(error));
-  }
-
-  console.log(propertyToPost);
+  };
 
   return (
     <div>
       <NavBar />
       <div className="container">
-        <Form onSubmit={submitProperty}>
+      <h2  className="text-primary py-4">Cadastrar Imóveis</h2>
+      <h5>Preencha os campos corretamente!</h5>
+        <Form style={{fontSize: "1.2rem"}}>
           <Form.Group controlId="formGridEmail">
-            <Form.Label>Título</Form.Label>
+            <Form.Label >Título</Form.Label>
             <Form.Control required placeholder="Ex: Apartamento padrão Bh" onChange={e => setTitle(e.target.value)} />
           </Form.Group>
 
@@ -68,17 +68,15 @@ const Register = () => {
               </Form.Control>
             </Form.Group>
             <Form.Group controlId="formGridZip">
-              <Form.Label>Preço do Aluguel</Form.Label>
-              <Form.Control onChange={e => setPriceLease(e.target.value)} />
+              <Form.Label className="ml-2">Preço do Aluguel</Form.Label>
+              <Form.Control className="ml-2" onChange={e => setPriceLease(e.target.value)} />
             </Form.Group>
-
           </Form.Row>
-
           <Form.Group id="formGridCheckbox">
             <a target="blank" href="https://jusbrasilmodelos.jusbrasil.com.br/modelos-pecas/784909844/modelo-termos-e-condicoes-para-site-ou-app?ref=feed">Termo de condições</a>
             <Form.Check required type="checkbox" />
           </Form.Group>
-          <Button variant="primary" type="submit"> Submit</Button>
+          <Button onClick={async () => submitProperty} variant="primary" type="button"> Submit</Button>
         </Form>
       </div>
       <Footer />
