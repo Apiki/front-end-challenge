@@ -21,17 +21,41 @@ Nesse passo vamos popular o nosso `SQL SERVER` através de `Migrations`
 
 Caminhe ate o arquivo `appsettings.json` nele você encontrará a nossa string de conexão,
 `ConnectionStrings` Configure de acordo com seu banco de dados local.                                                  
-`PropertyConnection` "Server=NomeDoServer; Initial Catalog=PropertiesDB; User ID=Usuario; Password=Senha"                                                   
- realize o mesmo procedimento no arquivo PropertyContext.cs na pasta Data dentro do `UseSqlServer(here)`
+`PropertyConnection` "Server=NomeDoServer; Initial Catalog=PropertiesDB; User ID=Usuario; Password=Senha"                    
+ no campo `Initial Catalog` mantenha o valor já configurado.
+ realize o mesmo procedimento no arquivo `PropertyContext.cs` na pasta `Data` dentro do `UseSqlServer(here)`
 
-no `Initial Catalog` mantenha o valor já configurado.
 
 ## Step 3
 
-Para isso o rode o comando `dotnet ef migrations popularBank`
-Em seguida atualize com seu database `dotnet ef update`
+Com tudo configurado, vamos executar os comandos para popular o banco:
+Para isso o rode o comando `dotnet ef migrations add popularBank`
+Em seguida atualize com seu database `dotnet ef database update`
 
-Você precisara do `NODE` na sua máquina para rodar o projeto
+Depois é só rodar `dotnet run` e a API estará apta a receber solicitações.
 
-Caminhe até a pasta `front-end` `cd front-end`
-instale as depêndencias `npm install`
+## Step 4
+
+Agora vamos abir a nossa aplicação `FRONT-END`
+
+Você precisara do `NODE` na sua máquina para rodar o projeto.
+
+Abra uma nova aba do terminal na raiz do projeto caminhe para pasta `front-end` cd `front-end`
+
+instale as depêndencias `npm install` tudo feito já pode executar o comando mestre 🧙
+
+### `NPM START`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
