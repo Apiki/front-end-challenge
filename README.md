@@ -38,19 +38,25 @@ Depois é só rodar `dotnet run` e a API estará apta a receber solicitações.
 
 Agora vamos abir a nossa aplicação `FRONT-END`
 
-Você precisara do `NODE` na sua máquina para rodar o projeto.
+Você precisará do `NODE` na sua máquina para rodar o projeto.
 
-Abra uma nova aba do terminal na raiz do projeto caminhe para pasta `front-end` cd `front-end`
+Abra uma nova aba do terminal na raiz do projeto caminhe para pasta `front-end` `cd front-end`
 
-instale as depêndencias `npm install` tudo feito já pode executar o comando mestre 🧙
+Instale as depêndencias `npm install` tudo feito já pode executar o comando mestre 🧙
 
 ### `NPM START`
 
+Feito isso é só navegar!
+
+
+## Next Steps
+
+Como próximos passos será feito autenticação de rotas utilizando as libs `Jwt and Bearer`                      
+Pois a API provém de metódos que só usuários com super poderes podem acessar :elmofire: `UPDATE E DELETE`
 
 
 
-
-
+e introduzir os `teste unitários` "Um software sem testes não é um bom software"
 
 
 
