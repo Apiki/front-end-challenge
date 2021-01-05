@@ -9,6 +9,6 @@ namespace Properties.Data
     IEnumerable<Property> GetAllProperties();
     Property GetPropertyById(int Id); 
     void UpdateProperty(Property property);
-
+    void RemoveProperty(Property property);
   }
 }

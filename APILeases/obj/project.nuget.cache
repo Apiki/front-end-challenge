@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "i/otpDk3fcmXh/XmO6YN+Ha/2VDzT0bl0QqEYJMDvA+knq+v2/FvqV7E4J7eqEJrXqKQGU9hFiGUto0pX2bBAg==",
+  "dgSpecHash": "A6qMxxfRJZb6MLs7LW7QCXze7QAJOw738bxIR7ZYxTJ/XgURGWgis8VdqolsfSh5fLFDUQMeoCsyFGC8c7G+HQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\wilia\\OneDrive\\Ambiente de Trabalho\\API\\Technical-challenge\\APILeases\\APILeases.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\wilia\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
+    "C:\\Users\\wilia\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
     "C:\\Users\\wilia\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\wilia\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.1\\microsoft.aspnetcore.authentication.jwtbearer.5.0.1.nupkg.sha512",
     "C:\\Users\\wilia\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\5.0.1\\microsoft.aspnetcore.authentication.openidconnect.5.0.1.nupkg.sha512",
@@ -76,7 +78,7 @@
     "C:\\Users\\wilia\\.nuget\\packages\\system.private.datacontractserialization\\4.3.0\\system.private.datacontractserialization.4.3.0.nupkg.sha512",
     "C:\\Users\\wilia\\.nuget\\packages\\system.private.uri\\4.3.2\\system.private.uri.4.3.2.nupkg.sha512",
     "C:\\Users\\wilia\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
-    "C:\\Users\\wilia\\.nuget\\packages\\system.reflection.emit\\4.3.0\\system.reflection.emit.4.3.0.nupkg.sha512",
+    "C:\\Users\\wilia\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\wilia\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.3.0\\system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",
     "C:\\Users\\wilia\\.nuget\\packages\\system.reflection.emit.lightweight\\4.3.0\\system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
     "C:\\Users\\wilia\\.nuget\\packages\\system.reflection.extensions\\4.3.0\\system.reflection.extensions.4.3.0.nupkg.sha512",

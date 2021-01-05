@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Cors;
 using Properties.Data;
@@ -35,6 +36,8 @@ namespace APILeases
 
       services.AddScoped<IPropertyRepo, SqlPropertyRepo>();
       services.AddCors();
+
+      services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
       services.AddControllers();
       services.AddSwaggerGen(c =>

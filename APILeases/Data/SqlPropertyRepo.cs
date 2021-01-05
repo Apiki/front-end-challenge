@@ -1,6 +1,7 @@
 using Properties.Models;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace Properties.Data
 {
@@ -28,5 +29,14 @@ namespace Properties.Data
        return (_context.SaveChanges() >= 0);
     }
     public void UpdateProperty(Property property) { }
+
+    public void RemoveProperty(Property property) 
+    {
+      if (property == null)
+      {
+        throw new ArgumentNullException(nameof(property));
+      }
+      _context.Propertie.Remove(property);
+     }
   }
 }

@@ -59,3 +59,5 @@ C:\Users\wilia\OneDrive\Ambiente de Trabalho\API\Technical-challenge\APILeases\o
 C:\Users\wilia\OneDrive\Ambiente de Trabalho\API\Technical-challenge\APILeases\obj\Debug\net5.0\ref\APILeases.dll
 C:\Users\wilia\OneDrive\Ambiente de Trabalho\API\Technical-challenge\APILeases\obj\Debug\net5.0\APILeases.pdb
 C:\Users\wilia\OneDrive\Ambiente de Trabalho\API\Technical-challenge\APILeases\obj\Debug\net5.0\APILeases.genruntimeconfig.cache
+C:\Users\wilia\OneDrive\Ambiente de Trabalho\API\Technical-challenge\APILeases\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\wilia\OneDrive\Ambiente de Trabalho\API\Technical-challenge\APILeases\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
