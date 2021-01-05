@@ -83,11 +83,10 @@ O que gerou atraso na contrução do front-end com esse metódos.
 
 Mas não é motivo de preocupação, um pouco de tempo e investigação resolverá!
 
-### Sotware desenvolvido por <a href="https://www.linkedin.com/in/williamigor/">William Igor </a>
 
 ## Fim
 
-
+### Sotware desenvolvido por <a href="https://www.linkedin.com/in/williamigor/">William Igor </a>
 
 
 
