@@ -22,5 +22,11 @@ namespace Properties.Data
     {
       return _context.Propertie.FirstOrDefault(p => p.Id == id);
     }
+
+    public bool SaveChanges()
+    {
+       return (_context.SaveChanges() >= 0);
+    }
+    public void UpdateProperty(Property property) { }
   }
 }
