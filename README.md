@@ -52,12 +52,29 @@ Feito isso é só navegar!
 ## Next Steps
 
 Como próximos passos será feito autenticação de rotas utilizando as libs `Jwt and Bearer`                      
-Pois a API provém de metódos que só usuários com super poderes podem acessar :elmofire: `UPDATE E DELETE`
+Pois a API provém de metódos que só usuários com super poderes podem acessar  `UPDATE E DELETE`, visando a segurança da aplicação. 🙂
 
+Também será introduzido os `teste unitários` "Um software sem testes não é um bom software".
 
+É principalmente resolver os `BUGS` 😱.
 
-e introduzir os `teste unitários` "Um software sem testes não é um bom software"
+## Bugs
 
+Sabemos que na construção de softwares os bugs se apresentam sem serem chamados 😥
+
+Nessa aplicação contamos com `UM`
+
+Quando utilizamos clientes como o `Postman` conseguimos `Pegar, Cadastrar, Atualizar e Deletar` qualquer propriedade para locação.
+
+Porém nosso Cliente `React` por algum motivo não se comporta da mesma maneira para os metódos `Post, Put and Delete`. 
+
+O que acabou atrasando a contrução do front-end com esse metódos.
+
+Mas não é motivo de preocupação, um pouco de tempo e investigação resolverá!
+
+### Sotware desenvoldivo por <a href="https://www.linkedin.com/in/williamigor/">William Igor </a>
+
+## Fim
 
 
 
