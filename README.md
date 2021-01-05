@@ -1,11 +1,11 @@
 # Bem-vindo ao repositório do desafio PRIS 
 
-###   Aplicação Cliente e servidor (REST)
+##  Aplicação Cliente e servidor (REST)
 
-## Esse projeto consiste em uma API construída em dotnet core
-## e consumida pelo cliente React
+### Esse projeto consiste em uma API construída em dotnet core
+### e consumida pelo cliente React
 
-## Follow the instructions 💪🏽
+# Follow the instructions 💪🏽
 
 ## Step 1
 
