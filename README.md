@@ -21,7 +21,7 @@ Nesse passo vamos popular o nosso `SQL SERVER` através de `Migrations`
 
 Caminhe ate o arquivo `appsettings.json` nele você encontrará a nossa string de conexão,
 `ConnectionStrings` Configure de acordo com seu banco de dados local.                                                  
-`PropertyConnection` "Server=NomeDoServer; Initial Catalog=PropertiesDB; User ID=Usuario; Password=Senha"
+`PropertyConnection` "Server=NomeDoServer; Initial Catalog=PropertiesDB; User ID=Usuario; Password=Senha"                                         
 no `Initial Catalog` mantenha o valor já configurado.
 
 ## Step 3
