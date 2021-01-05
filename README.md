@@ -10,20 +10,21 @@
 ## Step 1
 
 Clone o projeto 
-`git clone` https://github.com/wigorbh/Technical-challenge/edit/APILeases/                                     
+`git clone`  https://github.com/wigorbh/Technical-challenge/tree/APILeases                                    
 depois caminhe até sua pasta `cd pasta-onde-clonou`
 
 Entre na Pasta APILeases: Nela fica a API de locações`cd APILeases`
 
 ## Step 2
 
-
-## Step 3
-
 Nesse passo vamos popular o nosso `SQL SERVER` através de `Migrations`
 
-Caminhe ate o arquivo `settings.json` nele você encontrará a nossa string de conexão,
-`ConnectionString` Configure de acordo com seu banco de dados local.
+Caminhe ate o arquivo `appsettings.json` nele você encontrará a nossa string de conexão,
+`ConnectionStrings` Configure e acordo com seu banco de dados local.                          
+`PropertyConnection` "Server=NomeDoServer; Initial Catalog=PropertiesDB; User ID=Usuario; Password=Senha"
+no `Initial Catalog` mantenha o valor já configurado.
+
+## Step 3
 
 Para isso o rode o comando `dotnet ef migrations popularBank`
 Em seguida atualize com seu database `dotnet ef update`
