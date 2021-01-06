@@ -13,6 +13,8 @@ Clone o projeto
 `git clone`  https://github.com/wigorbh/Technical-challenge.git                                  
 depois caminhe até sua pasta `cd pasta-onde-clonou`
 
+Mude para a branch `APILeases` `git checkout APILeases`
+
 Entre na Pasta APILeases: Nela fica a API de locações`cd APILeases`
 
 ## Step 2
