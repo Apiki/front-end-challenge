@@ -3,8 +3,9 @@ import Footer from './Footer';
 import NavBar from './NavBar';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import axios from 'axios';
 
-const UpdateProperty = (props) => {
+const UpdateProperty = ({location}) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [habitation, setHabitation] = useState('');
@@ -12,10 +13,18 @@ const UpdateProperty = (props) => {
   const [price, setPriceLease] = useState('');
   const [region, setCity] = useState('');
 
-  console.log(props.location.state)
+  const id = location.state;
+
+  const updateProperty = async () => {
+    axios.put(`https://localhost:5001/v1/property/${id}`)
+    .then(res => res)
+    .catch(err => err);
+  };
+
   return (
     <div>
       <NavBar />
+      <div className="container">
       <Form style={{fontSize: "1.2rem"}}>
           <Form.Group controlId="formGridEmail">
             <Form.Label >Título</Form.Label>
@@ -56,8 +65,9 @@ const UpdateProperty = (props) => {
             <a target="blank" href="https://jusbrasilmodelos.jusbrasil.com.br/modelos-pecas/784909844/modelo-termos-e-condicoes-para-site-ou-app?ref=feed">Termo de condições</a>
             <Form.Check required type="checkbox" />
           </Form.Group>
-          {/* <Button onClick={() => submitProperty()} variant="primary" type="submit"> Submit</Button> */}
+          <Button onClick={() => updateProperty()} variant="primary" type="submit"> Atualizar</Button> 
         </Form>
+        </div>
       <Footer />
     </div>
   );

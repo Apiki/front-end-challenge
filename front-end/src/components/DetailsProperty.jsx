@@ -40,7 +40,7 @@ const DetailsProperty = ({ location }) => {
         )}
         <Button className="bg-dark" onClick={() => deleteProperty(id)}>Delete</Button>
         {deleted && <Redirect to="/" />}
-        <Link to={{ pathname:`/update/${id}`, state: propertyById}} >Atualizar </Link>
+        <Link className="ml-4" to={{ pathname:`/update/${id}`, state: propertyById}} >Atualizar </Link>
       </div>
     </div>
   );

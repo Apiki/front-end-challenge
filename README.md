@@ -65,7 +65,11 @@ Pois a API provém de metódos que só usuários com super poderes podem acessar
 
 Visando a segurança da aplicação. 🙂
 
-Também será introduzido os `teste unitários` "Um software sem testes não é um bom software".
+Trabalhar na `esperiência do usuário` aplicando as validações para cadastrar no front end
+
+Ao acessar a tela de atualização trazer os dados já cadastrados para atualizar
+
+Também introduzir os `teste unitários` "Um software sem testes não é um bom software".
 
 
 ## Fim
