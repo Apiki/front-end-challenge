@@ -89,7 +89,6 @@ Porém causou danos a performance visto mensagens de warning no console.
 
 Por hora a funcionalidade está mantida, mas tendo ciência do bug e planejando resolvê-lo.
 
-
 ## Fim
 
 ### Sotware desenvolvido por <a href="https://www.linkedin.com/in/williamigor/">William Igor </a>
