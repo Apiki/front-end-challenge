@@ -71,6 +71,24 @@ Ao acessar a tela de atualização trazer os dados já cadastrados para atualiza
 
 Também introduzir os `teste unitários` "Um software sem testes não é um bom software".
 
+É principalmente resolver os `BUGS` 😱.
+
+## Bugs
+
+Sabemos que na construção de softwares os bugs se apresentam sem serem chamados 😥
+
+Nessa aplicação contamos com `UM`
+
+Quando deletamos uma propriedade, somos redirecionados para página home 
+
+Porém a propriedade deletada ainda persistia, com isso o useEffect passou a atender a necessidade de um 
+
+Hook de atualização, sua ideia inicial era somente de montagem. O que atendeu bem
+
+Porém causou danos a performance visto mensagens de warning no console. 
+
+Por hora a funcionalidade está mantida, mas tendo ciência do bug e planejando resolvê-lo.
+
 
 ## Fim
 

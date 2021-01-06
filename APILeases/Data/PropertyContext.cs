@@ -12,7 +12,7 @@ namespace Properties.Data
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     =>
     optionsBuilder
-    .UseSqlServer("Server=DESKTOP-87ELJL0\\SQLEXPRESS; Initial Catalog=PropertiesDB; User ID=ApiLeases; Password=123456");
+    .UseSqlServer("Server=server; Initial Catalog=PropertiesDB; User ID=user; Password=senha");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     =>

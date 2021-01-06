@@ -4,11 +4,11 @@ import ListGroupItem from 'react-bootstrap/ListGroupItem';
 import ListGroup from 'react-bootstrap/ListGroup';
 
 
-const CardProperties = ({title, description,picture, habitation,region }) => {
+const CardProperties = ({ title, description, picture, habitation, region, price }) => {
   return (
     <div className="ml-3 mb-3">
       <Card style={{ width: '18rem', height: '27rem' }}>
-        <Card.Img variant="top" src={picture} style={{height:"200px"}} />
+        <Card.Img variant="top" src={picture} style={{ height: "200px" }} />
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>{description}</Card.Text>
@@ -17,7 +17,8 @@ const CardProperties = ({title, description,picture, habitation,region }) => {
           <ListGroupItem>{habitation}</ListGroupItem>
         </ListGroup>
         <Card.Body>
-          <Card.Link href="#">{region}</Card.Link>
+          <Card.Text className="d-inline text-primary">{region}</Card.Text>
+          <Card.Text className="d-inline ml-3 text-success">Valor R$ {price}</Card.Text>
         </Card.Body>
       </Card>
     </div>

@@ -3,12 +3,14 @@ import { Link, Redirect } from 'react-router-dom';
 import axios from 'axios';
 import NavBar from './NavBar';
 import Button from 'react-bootstrap/Button';
+import Footer from './Footer';
 
 
 const DetailsProperty = ({ location }) => {
 
   const [propertyById, setPropertyById] = useState([]);
   const [deleted, setDeleted] = useState(false);
+  
   const id = location.state;
 
   useEffect(() => {
@@ -42,8 +44,9 @@ const DetailsProperty = ({ location }) => {
         {deleted && <Redirect to="/" />}
         <Link className="ml-4" to={{ pathname:`/update/${id}`, state: propertyById}} >Atualizar </Link>
       </div>
+      <Footer />
     </div>
-  );
-}
+  )
+};
 
 export default DetailsProperty;

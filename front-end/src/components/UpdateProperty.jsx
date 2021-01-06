@@ -15,8 +15,17 @@ const UpdateProperty = ({location}) => {
 
   const id = location.state;
 
+  const propertyToupdate = {
+    title,
+    description,
+    habitation,
+    picture,
+    price,
+    region
+  };
+
   const updateProperty = async () => {
-    axios.put(`https://localhost:5001/v1/property/${id}`)
+    axios.put(`https://localhost:5001/v1/property/${id}`, propertyToupdate)
     .then(res => res)
     .catch(err => err);
   };
@@ -25,6 +34,7 @@ const UpdateProperty = ({location}) => {
     <div>
       <NavBar />
       <div className="container">
+      <h2>Atualize sua propriedade</h2>
       <Form style={{fontSize: "1.2rem"}}>
           <Form.Group controlId="formGridEmail">
             <Form.Label >Título</Form.Label>
@@ -70,7 +80,7 @@ const UpdateProperty = ({location}) => {
         </div>
       <Footer />
     </div>
-  );
-}
+  )
+};
 
 export default UpdateProperty;

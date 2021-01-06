@@ -27,6 +27,7 @@ const Main = () => {
               picture={e.picture}
               habitation={e.habitation}
               region={e.region}
+              price={e.price}
             />
           </Link>
         </div>

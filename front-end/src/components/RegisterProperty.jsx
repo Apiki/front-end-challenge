@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import Footer from './Footer';
 import NavBar from './NavBar';
@@ -79,21 +79,21 @@ const Register = () => {
             <Form.Group controlId="formGridZip">
               <Form.Label className="ml-2">Preço do Aluguel</Form.Label>
               <span className="fontRed">  Apenas números inteiro</span>
-              <Form.Control className="ml-2" onChange={e => setPriceLease(e.target.value)} />
+              <Form.Control required className="ml-2" onChange={e => setPriceLease(e.target.value)} />
             </Form.Group>
           </Form.Row>
           <Form.Group id="formGridCheckbox">
             <a target="blank" href="https://jusbrasilmodelos.jusbrasil.com.br/modelos-pecas/784909844/modelo-termos-e-condicoes-para-site-ou-app?ref=feed">Termo de condições</a>
             <Form.Check required type="checkbox" />
           </Form.Group>
-          <Button onClick={() => submitProperty()} variant="primary" type="button"> Submit</Button>
+          <Button onClick={() => submitProperty()} variant="primary" type="submit"> Submit</Button>
         </Form>
         {registed && <Redirect to="/" />}
       </div>
       <Footer />
     </div>
-  );
-}
+  )
+};
 
 
 
