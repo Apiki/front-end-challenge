@@ -67,22 +67,6 @@ Visando a segurança da aplicação. 🙂
 
 Também será introduzido os `teste unitários` "Um software sem testes não é um bom software".
 
-É principalmente resolver os `BUGS` 😱.
-
-## Bugs
-
-Sabemos que na construção de softwares os bugs se apresentam sem serem chamados 😥
-
-Nessa aplicação contamos com `UM`
-
-Quando utilizamos clientes como o `Postman` conseguimos `Pegar, Cadastrar, Atualizar e Deletar` qualquer propriedade para locação.
-
-Porém nosso Cliente `React` por algum motivo não se comporta da mesma maneira para os metódos `Post, Put and Delete`. 
-
-O que gerou atraso na contrução do front-end com esse metódos.
-
-Mas não é motivo de preocupação, um pouco de tempo e investigação resolverá!
-
 
 ## Fim
 
