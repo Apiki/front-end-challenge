@@ -10,7 +10,7 @@
 ## Step 1
 
 Clone o projeto 
-`git clone`  https://github.com/wigorbh/Technical-challenge/tree/APILeases                                    
+`git clone`  <https://github.com/wigorbh/Technical-challenge/tree/APILeases>                                    
 depois caminhe até sua pasta `cd pasta-onde-clonou`
 
 Entre na Pasta APILeases: Nela fica a API de locações`cd APILeases`
@@ -91,7 +91,7 @@ Por hora a funcionalidade está mantida, mas tendo ciência do bug e planejando 
 
 ## Fim
 
-### Sotware desenvolvido por <a href="https://www.linkedin.com/in/williamigor/">William Igor </a>
+### Sotware desenvolvido por [William Igor](https://www.linkedin.com/in/williamigor/)
 
 
 
