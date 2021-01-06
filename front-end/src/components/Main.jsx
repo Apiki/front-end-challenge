@@ -7,13 +7,13 @@ import { Link } from 'react-router-dom';
 
 const Main = () => {
   const [propertiesAPI, setPropertiesAPI] = useState([]);
-  const { regionSelected, setRegionSelected } = useContext(contextLease);
+  const { regionSelected } = useContext(contextLease);
 
   useEffect(() => {
     axios.get("https://localhost:5001/v1/property").then(({ data }) => setPropertiesAPI(data));
-  }, []);
+  }, [propertiesAPI]);
 
-  const filterByRegion = regionSelected ? propertiesAPI.filter(e => e.region == regionSelected) : propertiesAPI;
+  const filterByRegion = regionSelected ? propertiesAPI.filter(e => e.region === regionSelected) : propertiesAPI;
 
   return (
     <div>

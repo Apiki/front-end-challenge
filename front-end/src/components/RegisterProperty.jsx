@@ -9,25 +9,25 @@ const Register = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [habitation, setHabitation] = useState('');
-  const [urlImage, setUrlImage] = useState('');
-  const [priceLease, setPriceLease] = useState('');
-  const [city, setCity] = useState('');
+  const [picture, setUrlImage] = useState('');
+  const [price, setPriceLease] = useState('');
+  const [region, setCity] = useState('');
 
   const propertyToPost = {
     title,
     description,
     habitation,
-    urlImage,
-    priceLease,
-    city
+    picture,
+    price,
+    region
   };
 
-  // const headers = { 'Content-Type': 'application/json' }
+  const headers = { 'Content-Type': 'application/json' }
 
   const submitProperty = async () => {
-    axios.post('https://localhost:5001/v1/property', propertyToPost)
-      .then((res) => console.log(res))
-      .catch((error) => console.log(error));
+    axios.post('https://localhost:5001/v1/property', propertyToPost, { headers: headers})
+      .then((res) => res )
+      .catch((error) => error);
   };
 
   return (
@@ -76,12 +76,12 @@ const Register = () => {
             <a target="blank" href="https://jusbrasilmodelos.jusbrasil.com.br/modelos-pecas/784909844/modelo-termos-e-condicoes-para-site-ou-app?ref=feed">Termo de condições</a>
             <Form.Check required type="checkbox" />
           </Form.Group>
-          <Button onClick={async () => submitProperty} variant="primary" type="button"> Submit</Button>
+          <Button onClick={() => submitProperty()} variant="primary" type="submit"> Submit</Button>
         </Form>
       </div>
       <Footer />
     </div>
-  )
+  );
 }
 
 

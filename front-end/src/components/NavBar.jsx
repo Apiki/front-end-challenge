@@ -29,7 +29,7 @@ const NavBar = () => {
         </Nav>
         <Nav>
           <Nav.Link href="/register">Cadastrar</Nav.Link>
-          <Nav.Link eventKey={2} href="/login">Login </Nav.Link>
+          <Nav.Link  href="/login">Login </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
