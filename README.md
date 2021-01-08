@@ -93,7 +93,7 @@ Por hora a funcionalidade está mantida, mas tendo ciência do bug e planejando 
 
 ## Fim
 
-### Sotware desenvolvido por [William Igor](https://www.linkedin.com/in/williamigor/)
+### Software desenvolvido por [William Igor](https://www.linkedin.com/in/williamigor/)
 
 
 
