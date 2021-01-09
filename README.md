@@ -1,47 +1,99 @@
-# Desafio - Front-end Developer
-Este desafio tem como objetivo te avaliar como desenvolvedor Front-end: JavaScript, HTML, CSS e lógica de programação.
+# Bem-vindo ao repositório do desafio PRIS 
 
-## O Desafio
-Queremos montar uma versão do blog da Apiki apenas para Devs, e queremos que essa seja uma solução headless, esta nova versão terá as seguintes páginas: 
+##  Aplicação Cliente e Servidor
 
-- Página inicial: Listará as últimas postagens do blog com a categoria **Desenvolvimento**; 
-- Interna: Exibirá o conteúdo da postagem;
+### Esse projeto consiste em uma API construída em dotnet core
+### e consumida pelo cliente React
+
+# Follow the instructions 💪🏽
+
+## Step 1
+
+Clone o projeto 
+`git clone`  https://github.com/wigorbh/Technical-challenge.git                                  
+depois caminhe até sua pasta `cd pasta-onde-clonou`
+
+Mude para a branch `APILeases` `git checkout APILeases`
+
+Entre na Pasta APILeases: Nela fica a API de locações`cd APILeases`
+
+## Step 2
+
+Você precisará do `DOTNET` em sua máquina!
+
+Nesse passo vamos popular o nosso `SQL SERVER` através de `Migrations`
+
+Caminhe ate o arquivo `appsettings.json` nele você encontrará a nossa string de conexão,
+
+`ConnectionStrings` Configure de acordo com seu banco de dados local.       
+
+`PropertyConnection` "Server=NomeDoServer; Initial Catalog=PropertiesDB; User ID=Usuario; Password=Senha"   
+
+ no campo `Initial Catalog` mantenha o valor já configurado.
+ 
+ realize o mesmo procedimento no arquivo `PropertyContext.cs` na pasta `Data` dentro do `UseSqlServer(here)`
 
 
-## Requesitos
-- Utilizar os dados da API do nosso blog: https://blog.apiki.com/wp-json/wp/v2/;
+## Step 3
 
-## Diferencial
-- Utilizar alguma metodologia para a organização de seu CSS (BEMCSS, OOCSS, SMACSS... o que preferir :D);
-- Escolha uma lib para criação de interfaces de usuário (React ou Angular); 
+Com tudo configurado, vamos executar os comandos para popular o banco:
 
-### Página inicial
-Para montar esta página você precisará consumir do seguinte endpoint: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518`, ele já te retornará as últimas 10 postagens cadastradas, cada item do array deve representar uma card contendo:
+Para isso o rode o comando `dotnet ef migrations add popularBank`
 
-- Imagem destacada: Você encontrará um atributo chamado `_embedded`, dentro deste atributo você encontrará o `wp:featuredmedia`;
-- Título;
-- Link para a postagem: O link deverá conter o atributo `slug`;
+Em seguida atualize com seu database `dotnet ef database update`
 
-Ao final da listagem deve haver um botão nomeado **Carregar mais...**, Quando o usuário clicar neste botão você deverá fazer uma nova requisição para o mesmo endpoint informando o parâmetro `page`, este parâmetro deve receber o número da próxima página, exemplo: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=2`. Você deve estar se perguntando, "como sei se haverá uma próxima página?", isso é simples, no **Header** de resposta desta requisição virá 2 atributos necessários para essa façanha `X-WP-Total` que diz a quantidade total de postagens que essa categoria possui, e o parâmetro `X-WP-TotalPages` que te informará qual o total de páginas de postagens que essa categoria possui.
+Depois é só rodar `dotnet run` e a API estará apta a receber solicitações.
 
-### Interna
-Para montar esta página você precisará consumir do seguinte endpoint: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=wordpress-escolha-site-pequenas-empresas`, lembre-se de substituir o `slug` dado como exemplo pelo slug definido no **Link para a postagem** da **Página inicial**, o layout deve conter os seguintes elementos:
+## Step 4
 
-- Imagem destacada;
-- Título;
-- Conteúdo;
+Agora vamos abir a nossa aplicação `FRONT-END`
 
-Seja criativo, construa um layout pensando no usuário final, e sinta-se a vontade para incrementar o layout com outros atributos disponíveis no JSON retornado. 
+Você precisará do `NODE` na sua máquina para rodar o projeto.
 
-## Critérios de avaliação
+Abra uma nova aba do terminal na raiz do projeto caminhe para pasta `front-end` `cd front-end`
 
-- Organização do código;
-- Responsividade;
-- Reaproveitamento de código;
-- SEO;
+Instale as depêndencias `npm install` tudo feito já pode executar o comando mestre 🧙
 
-## Como submeter seu projeto
+#### `NPM START`
 
-1. Efetue o fork deste repositório e crie um branch com o seu nome e sobrenome. (exemplo: fulano-dasilva);
-1. Após finalizar o desafio, crie um Pull Request;
-1. Aguarde algum contribuidor realizar o code review;
+Feito isso é só navegar!
+
+
+## Next Steps
+
+Como próximos passos será feito autenticação de rotas utilizando as libs `Jwt and Bearer`                      
+
+Pois a API provém de metódos que só usuários com super poderes podem acessar  `UPDATE E DELETE`,
+
+Visando a segurança da aplicação. 🙂
+
+Trabalhar na `esperiência do usuário` aplicando as validações para cadastrar no front end
+
+Ao acessar a tela de atualização trazer os dados já cadastrados para atualizar
+
+Também introduzir os `teste unitários` "Um software sem testes não é um bom software".
+
+É principalmente resolver os `BUGS` 😱.
+
+## Bugs
+
+Sabemos que na construção de softwares os bugs se apresentam sem serem chamados 😥
+
+Nessa aplicação contamos com `UM`
+
+Quando deletamos uma propriedade, somos redirecionados para página home 
+
+Porém a propriedade deletada ainda persistia, com isso o useEffect passou a atender a necessidade de um 
+
+Hook de atualização, sua ideia inicial era somente de montagem. O que atendeu bem
+
+Porém causou danos a performance visto mensagens de warning no console. 
+
+Por hora a funcionalidade está mantida, mas tendo ciência do bug e planejando resolvê-lo.
+
+## Fim
+
+### Software desenvolvido por [William Igor](https://www.linkedin.com/in/williamigor/)
+
+
+
