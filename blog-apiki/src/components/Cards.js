@@ -25,10 +25,13 @@ function Cards() {
         <Link to={`/${ post.slug }`}>
           <div key={ index }>
             <h2>{ post.title.rendered }</h2>
-            <img src={ post._embedded["wp:featuredmedia"][0].source_url } alt={ post.slug } />          
+            <img src={ post._embedded["wp:featuredmedia"][0].source_url } alt={ post.slug } width="400" />
           </div>
         </Link>
       ))}
+      <div>
+        
+      </div>
     </div>
   );
 }
