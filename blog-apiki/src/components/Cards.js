@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import context from '../context/Context';
-import { fetchAPI } from '../services';
+import { fetchAPI, fetchMorePosts } from '../services';
 
 function Cards() {
   const { setPosts, posts, setFetching, isFetching } = useContext(context);
@@ -17,7 +17,17 @@ function Cards() {
     getResponse();
     console.log(posts);
     setFetching(false);
+    fetchMorePosts();
   }, []);
+
+  // const loadMore = ({ target }) => {
+  //   if (target.innerHTML === selectedCategory) {
+  //     resetFilter();
+  //   }
+  //   setSelectedCategory(target.innerHTML);
+  //   filterByCategory(target.innerHTML);
+  //   console.log('CATEGORIA:', selectedCategory);
+  // };
 
   return (
     <div className="container-card">
@@ -30,7 +40,7 @@ function Cards() {
         </Link>
       ))}
       <div>
-        
+        {/* <button type="button" onClick={ () => loadMore() }>Carregar mais...</button> */}
       </div>
     </div>
   );
