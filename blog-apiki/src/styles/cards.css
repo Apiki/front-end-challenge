@@ -1,0 +1,36 @@
+
+a {
+  max-width: 46%;  
+  display: flex;
+}
+
+.btn {
+  width: 50%;
+}
+
+.button-container {
+  margin: 1%;
+  display: flex;
+  justify-content: center;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  a {
+    max-width: 100%;
+    max-height: 10%;
+  }
+  
+  .card-container {
+    flex-direction: column;
+  }
+
+  .card-title {
+    font-size: 1.2em;
+  }
+}

@@ -3,16 +3,19 @@ import context from './Context';
 
 function Provider({ children }) {
   const [posts, setPosts] = useState([]);
-  const [isFetching, setFetching] = useState(false);
   const [singlePost, setSinglePost] = useState([]);
+  const [pageNumber, setPageNumber] = useState(1);
+  const [maxPages, setMaxPages] = useState(1);
 
   const contextValues = {
     posts,
     setPosts,
-    isFetching,
-    setFetching,
     singlePost,
     setSinglePost,
+    pageNumber,
+    setPageNumber,
+    maxPages,
+    setMaxPages,
   };
 
   return (
