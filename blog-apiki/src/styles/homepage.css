@@ -1,0 +1,14 @@
+body {
+  background-color: rgb(217, 214, 195);
+}
+
+h1 {
+  text-align: center;
+  padding: 1%;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.2em
+  }
+}
