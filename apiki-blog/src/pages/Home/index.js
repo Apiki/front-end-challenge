@@ -4,7 +4,7 @@ import { getAllBlogs } from '../../store/ducks/blog';
 
 const Home = () => {
   const dispatch = useDispatch();
-  const {blogs, isFetching} = useSelector((state) => state.blogReducer);
+  const { blogs, isFetching } = useSelector((state) => state.blogReducer);
 
   useEffect(() => {
     dispatch(getAllBlogs(1));
@@ -20,8 +20,12 @@ const Home = () => {
   return (
     <div>
       <h1>This is Home</h1>
-      {blogs.map((map) => (
-        <h2>{map.id}</h2>
+      {blogs.map((blog, index) => (
+        <div key={index}>
+          <div>{blog.title.rendered}</div>
+          <h2> test {blog.urlImg}</h2>
+          <img src={`${blog.urlImg}`}></img>
+        </div>
       ))}
       <button onClick={() => handelClick()}> more...</button>
       <h2>page {page}</h2>

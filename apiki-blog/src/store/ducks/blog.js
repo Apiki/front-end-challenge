@@ -59,14 +59,17 @@ export const hasErrored = (error = []) => ({
   payload: error,
 });
 
-/** Actions Creators */
+/** Actions Creators */ 
 
 export const getAllBlogs = (page) => (dispatch) => {
   dispatch(salesFetching(true));
 
   BlogService.getBlogsByPage(page)
     .then((response) => {
-      console.log(response.data);
+      response.data.forEach(function(blog){
+        blog.urlImg = blog._embedded['wp:featuredmedia']['0'].source_url;
+       });
+
       if (page === 1) {
         dispatch(firstPageFetched(response.data));
         dispatch(salesFetching(false));
@@ -76,7 +79,6 @@ export const getAllBlogs = (page) => (dispatch) => {
       }
     })
     .catch((error) => dispatch(hasErrored(error)));
-
 };
 
 export default blogReducer;
