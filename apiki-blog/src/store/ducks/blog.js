@@ -13,7 +13,8 @@ export const Types = {
 
 const initialState = {
   isFetching: false,
-  blogs: [{ title: 'deja la' }],
+  blogs: [],
+  totalPages: 0,
   errors: [],
 };
 
@@ -22,7 +23,11 @@ const blogReducer = (state = initialState, { type, payload }) => {
     case Types.SALES_FETCHING:
       return { ...state, isFetching: payload.status };
     case Types.FIRST_PAGE_FETCHED:
-      return { ...state, blogs: [...payload] };
+      return {
+        ...state,
+        blogs: [...payload.data],
+        totalPages: payload.headers['x-wp-totalpages'],
+      };
     case Types.ADDITIONAL_PAGE_FETCHED:
       return { ...state, blogs: [...state.blogs, ...payload] };
     case Types.ERROR:
@@ -59,21 +64,25 @@ export const hasErrored = (error = []) => ({
   payload: error,
 });
 
-/** Actions Creators */ 
+/** Actions Creators */
 
 export const getAllBlogs = (page) => (dispatch) => {
   dispatch(salesFetching(true));
 
   BlogService.getBlogsByPage(page)
     .then((response) => {
-      response.data.forEach(function(blog){
+      console.log(response.headers['x-wp-totalpages']);
+      response.data.forEach(function (blog) {
+        // store the image url in new field to avoid problems access to _embedded['wp:featuredmedia']
         blog.urlImg = blog._embedded['wp:featuredmedia']['0'].source_url;
-       });
+      });
 
       if (page === 1) {
-        dispatch(firstPageFetched(response.data));
+        // first page will overwrite the blog object in reducer
+        dispatch(firstPageFetched(response));
         dispatch(salesFetching(false));
       } else {
+        // others page will add news pages to the blog object in reducer
         dispatch(additionalPageFetched(response.data));
         dispatch(salesFetching(false));
       }
