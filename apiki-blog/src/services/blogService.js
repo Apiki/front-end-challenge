@@ -26,6 +26,11 @@ class BlogService {
   async getBlogsByPage(page) {
     return this.http.get(`/posts?_embed&categories=518&page=${page}`);
   }
+
+  /** Get one post by slug*/
+  async getPostBySlug(slug) {
+    return this.http.get(`/posts?_embed&slug=${slug}`);
+  }
 }
 
 export default new BlogService();

@@ -4,6 +4,7 @@ import BlogService from '../../services/blogService';
 
 export const Types = {
   FIRST_PAGE_FETCHED: 'FIRST_PAGE_FETCHED',
+  POST_FETCHED: 'POST_FETCHED',
   FETCHING: 'FETCHING',
   ERROR: 'ERROR',
   ADDITIONAL_PAGE_FETCHED: 'ADDITIONAL_PAGE_FETCHED',
@@ -15,6 +16,7 @@ const initialState = {
   isFetching: false,
   blogs: [],
   totalPages: 0,
+  post: [],
   errors: [],
 };
 
@@ -30,6 +32,8 @@ const blogReducer = (state = initialState, { type, payload }) => {
       };
     case Types.ADDITIONAL_PAGE_FETCHED:
       return { ...state, blogs: [...state.blogs, ...payload] };
+    case Types.POST_FETCHED:
+      return { ...state, post: [...payload] };
     case Types.ERROR:
       return {
         ...state,
@@ -59,6 +63,11 @@ export const additionalPageFetched = (payload) => ({
   payload,
 });
 
+export const postFetched = (payload) => ({
+  type: Types.POST_FETCHED,
+  payload,
+});
+
 export const hasErrored = (error = []) => ({
   type: Types.ERROR,
   payload: error,
@@ -71,12 +80,6 @@ export const getAllBlogs = (page) => (dispatch) => {
 
   BlogService.getBlogsByPage(page)
     .then((response) => {
-      console.log(response.headers['x-wp-totalpages']);
-      response.data.forEach(function (blog) {
-        // store the image url in new field to avoid problems access to _embedded['wp:featuredmedia']
-        blog.urlImg = blog._embedded['wp:featuredmedia']['0'].source_url;
-      });
-
       if (page === 1) {
         // first page will overwrite the blog object in reducer
         dispatch(firstPageFetched(response));
@@ -88,6 +91,14 @@ export const getAllBlogs = (page) => (dispatch) => {
       }
     })
     .catch((error) => dispatch(hasErrored(error)));
+};
+
+export const getOnePost = (slug) => (dispatch) => {
+  dispatch(salesFetching(true));
+  BlogService.getPostBySlug(slug).then((response) => {
+    dispatch(postFetched(response.data));
+    dispatch(salesFetching(false));
+  });
 };
 
 export default blogReducer;

@@ -25,7 +25,7 @@ const Home = () => {
     setPage((prevState) => prevState + 1);
   };
 
-  if (isFetching) return <h2>Carregando...</h2>;
+  if (isFetching || typeof blogs === 'undefined') return <h2>Carregando...</h2>;
 
   return (
     <div>
