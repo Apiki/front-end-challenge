@@ -22,7 +22,7 @@ class BlogService {
     throw error;
   }
 
-  /** Get all blogs */
+  /** Get all blogs by page*/
   async getBlogsByPage(page) {
     return this.http.get(`/posts?_embed&categories=518&page=${page}`);
   }
