@@ -1,0 +1,23 @@
+.flex {
+  display: flex;
+}
+
+.header {
+  align-items: center;
+  background-color: black;
+  height: 60px;
+  justify-content: center;
+}
+.header__logo_container {
+  align-items: center;
+  justify-content: center;
+}
+
+.header__logo-img {
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    background-color: black;
+  }
+}

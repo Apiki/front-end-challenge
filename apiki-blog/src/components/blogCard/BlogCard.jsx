@@ -1,17 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
+import './index.css';
 
 const BlogCard = (props) => {
 
   const { blog } = props;
 
   return (
-    <div>
-      <h2>blog - Card:</h2>
-      {/* <h1>{blog._embedded['wp:featuredmedia']['0'].source_url}</h1> */}
-      <div>{blog.title.rendered}</div>
-      <img src={`${blog._embedded['wp:featuredmedia']['0'].source_url}`} alt={blog.title.rendered} width="300"></img>
-    </div>
+    <article >
+      <div className="card__container flex">
+        <img className="card__img" src={`${blog._embedded['wp:featuredmedia']['0'].source_url}`} alt={blog.title.rendered} width="300"></img>
+        <div className="card__content flex">
+          <div className="card__title">{blog.title.rendered}</div>
+          <div className="card__author__container flex">
+            <div className="card__author__by">By</div>
+            <div className="card__author__name">
+              {blog._embedded.author[0].name}
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
   )
 }
 

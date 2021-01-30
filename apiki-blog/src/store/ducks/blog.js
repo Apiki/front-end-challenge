@@ -13,7 +13,7 @@ export const Types = {
 /** Reducers */
 
 const initialState = {
-  isFetching: false,
+  isFetching: true,
   blogs: [],
   totalPages: 0,
   post: [],
@@ -22,7 +22,7 @@ const initialState = {
 
 const blogReducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case Types.SALES_FETCHING:
+    case Types.FETCHING:
       return { ...state, isFetching: payload.status };
     case Types.FIRST_PAGE_FETCHED:
       return {
