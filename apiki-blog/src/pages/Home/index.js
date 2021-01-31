@@ -28,30 +28,38 @@ const Home = () => {
     setPage((prevState) => prevState + 1);
   };
 
-  // if (isFetching) return <h2>Carregando...</h2>;
   if (isFetching) return <Loading />;
 
   return (
     <div>
       <Header></Header>
-
       <div className="home__main">
-      <div className="home__section">
-        {blogs.map((blog, index) => (
-          <div className="home__container" key={index} onClick={() => handleRedirect(blog.slug)}>
-            <BlogCard blog={blog} />
-          </div>
-        ))}
-        <div className="home__container__pages flex" >
-
-        <p>
-          page {page}/{totalPages}
-        </p>
-        <button onClick={() => handelClick()} disabled={page === totalPages}>
-          Carregar mais...
-        </button>
+        <div className="home__title flex">
+          <h1>Desenvolvimento WordPress</h1>
+          <h2>Desenvolva seu negócio, desenvolvendo com WordPress. </h2>
         </div>
-      </div>
+        <div className="home__section">
+          {blogs.map((blog, index) => (
+            <div
+              className="home__container"
+              key={index}
+              onClick={() => handleRedirect(blog.slug)}
+            >
+              <BlogCard blog={blog} />
+            </div>
+          ))}
+          <div className="home__container__pages flex">
+            <p>
+              page {page}/{totalPages}
+            </p>
+            <button
+              onClick={() => handelClick()}
+              disabled={page === totalPages}
+            >
+              Carregar mais...
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

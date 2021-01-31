@@ -6,6 +6,27 @@
   margin: 0px 0px;
 }
 
+.home__title {
+  align-items: flex-start;
+  background-color: lightgray;
+  flex-direction: column;
+  padding-left: 25px;
+}
+
+.home__title h1 {
+  font-size: 28px;
+  margin: 0;
+  padding-top: 25px;
+}
+
+.home__title h2 {
+  color: #565656;
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 15px;
+  text-align: left;
+}
+
 .home__section button {
   background: #fff;
   border-radius: 4px;
