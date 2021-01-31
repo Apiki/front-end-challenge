@@ -19,13 +19,12 @@ const Post = (props) => {
   return (
     <div>
       <Header></Header>
-      <div className="post__section">
+      <div className="post__section flex">
         <div className="post__container flex">
           <h1 dangerouslySetInnerHTML={{ __html: post[0].title.rendered }}></h1>
           <img 
             src={`${post[0]._embedded['wp:featuredmedia']['0'].source_url}`}
             alt={post[0].title.rendered}
-            // width="300"
           ></img>
         <div className="post__container__article flex" dangerouslySetInnerHTML={{ __html: post[0].content.rendered }}>
         </div>

@@ -40,12 +40,15 @@ const Home = () => {
             <BlogCard blog={blog} />
           </div>
         ))}
+        <div className="home__container__pages flex" >
+
+        <p>
+          page {page}/{totalPages}
+        </p>
         <button onClick={() => handelClick()} disabled={page === totalPages}>
           Carregar mais...
         </button>
-        <h2>
-          page {page}/{totalPages}
-        </h2>
+        </div>
       </div>
       </div>
     </div>
