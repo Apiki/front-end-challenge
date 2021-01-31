@@ -5,7 +5,7 @@ import './index.css';
 const Loading = () => {
   return (
 <div className="loader__container flex">
-  <div class="loader"></div>
+  <div className="loader"></div>
 
 </div>
   )

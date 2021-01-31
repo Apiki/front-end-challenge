@@ -5,6 +5,7 @@ import { useHistory } from 'react-router-dom';
 import BlogCard from '../../components/blogCard/BlogCard';
 import Loading from '../../components/Loading/Loading';
 import Header from '../../components/Header/Header';
+import SeoHelmet from '../../components/SeoHelmet/SeoHelmet';
 import './index.css';
 
 const Home = () => {
@@ -32,6 +33,7 @@ const Home = () => {
 
   return (
     <div>
+      <SeoHelmet title = {"meu titulo"}></SeoHelmet>
       <Header></Header>
       <div className="home__main">
         <div className="home__title flex">
