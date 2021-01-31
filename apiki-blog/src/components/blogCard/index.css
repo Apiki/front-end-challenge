@@ -7,7 +7,8 @@
   flex-direction: column;
   margin: auto;
   padding: 5px;
-  width: 300px;
+  /* width: 300px; */
+  width: 95%;
 }
 
 .card__content {
@@ -18,7 +19,9 @@
 }
 
 .card__img {
-  border-radius: 20px;
+  /* border-radius: 20px; */
+  width: 100%;
+
 }
 
 .card__title {
