@@ -80,7 +80,6 @@ export const getAllBlogs = (page) => (dispatch) => {
 
   BlogService.getBlogsByPage(page)
     .then((response) => {
-      console.log(response);
       if (page === 1) {
         // first page will overwrite the blog object in reducer
         dispatch(firstPageFetched(response));
