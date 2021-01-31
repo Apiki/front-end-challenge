@@ -1,24 +1,50 @@
+.flex {
+  display: flex;
+}
+
 .post__section {
   margin: 0px 8px;
 }
 
 .post__container {
   margin: 5px 2px;
+  padding: 0px 15px;
+  align-items: center;
+  flex-direction: column;
 }
 
-
-.post__container_article {
-  margin: 5px 2px;
+.post__container img {
+  width: 80%;
+  height: auto;
 }
 
-.post__container_article img {
-  width: 150px;
-  /* width: 150px !important; */
-
+.post__container__article {
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  width: 100%;
+}
+.post__container__article p {
+  font-size: 20px;
+}
+.post__container__article img {
+  width: 100%;
+  height: auto;
 }
 
+.post__container__article h2 {
+}
 @media screen and (min-width: 768px) {
   .post__container {
     margin: 20px 2px;
+  }
+  .post__container__article p {
+    font-size: 40px;
+  }
+
+  .post__container img {
+    width: 100%;
+    height: auto;
   }
 }
