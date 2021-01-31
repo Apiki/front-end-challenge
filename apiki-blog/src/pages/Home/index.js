@@ -36,7 +36,7 @@ const Home = () => {
       <div className="home__main">
       <div className="home__section">
         {blogs.map((blog, index) => (
-          <div className="post__container" key={index} onClick={() => handleRedirect(blog.slug)}>
+          <div className="home__container" key={index} onClick={() => handleRedirect(blog.slug)}>
             <BlogCard blog={blog} />
           </div>
         ))}

@@ -14,23 +14,24 @@ const Post = (props) => {
     dispatch(getOnePost(slug));
   }, [dispatch, slug]);
 
-  // const handleRedirect = (blogSlug) => history.push(`/`);
-
   if (isFetching || typeof post[0] === 'undefined')
     return <h2>Carregando...</h2>;
 
   return (
     <div>
       <Header></Header>
-      {/* <button onClick={() => handleRedirect()}>back Home</button> */}
-      <h1 dangerouslySetInnerHTML={{ __html: post[0].title.rendered }}></h1>
-      <img
-        src={`${post[0]._embedded['wp:featuredmedia']['0'].source_url}`}
-        alt={post[0].title.rendered}
-        width="300"
-      ></img>
-
-      <p dangerouslySetInnerHTML={{ __html: post[0].content.rendered }}></p>
+      <div className="post__section">
+        <div className="post__container">
+          <h1 dangerouslySetInnerHTML={{ __html: post[0].title.rendered }}></h1>
+          <img
+            src={`${post[0]._embedded['wp:featuredmedia']['0'].source_url}`}
+            alt={post[0].title.rendered}
+            width="300"
+          ></img>
+        <div className="post__container_article" dangerouslySetInnerHTML={{ __html: post[0].content.rendered }}>
+        </div>
+        </div>
+      </div>
     </div>
   );
 };
