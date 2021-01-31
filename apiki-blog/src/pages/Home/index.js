@@ -33,7 +33,10 @@ const Home = () => {
 
   return (
     <div>
-      <SeoHelmet title = {"meu titulo"}></SeoHelmet>
+      <SeoHelmet
+        title={'Blog ApiKi Desenvolvimento WordPress'}
+        description={'Blog de conteúdo sobre WordPress.'}
+      ></SeoHelmet>
       <Header></Header>
       <div className="home__main">
         <div className="home__title flex">
