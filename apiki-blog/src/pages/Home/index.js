@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getAllBlogs } from '../../store/ducks/blog';
 import { useHistory } from 'react-router-dom';
 import BlogCard from '../../components/blogCard/BlogCard';
+import Loading from '../../components/Loading/Loading';
 import Header from '../../components/Header/Header';
 import './index.css';
 
@@ -27,7 +28,8 @@ const Home = () => {
     setPage((prevState) => prevState + 1);
   };
 
-  if (isFetching) return <h2>Carregando...</h2>;
+  // if (isFetching) return <h2>Carregando...</h2>;
+  if (isFetching) return <Loading />;
 
   return (
     <div>

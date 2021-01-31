@@ -6,27 +6,26 @@
   margin: 0px 0px;
 }
 
-.home__section button{
+.home__section button {
   background: #fff;
   border-radius: 4px;
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-family: Roboto, sans-serif;
   height: 34px;
   margin: 0px 8px;
   text-align: center;
-  font-family: Roboto, sans-serif;
 }
 
 .home__container {
   margin: 5px 2px;
 }
 
-.home__container__pages{
-  justify-content: center;
+.home__container__pages {
   align-items: center;
   font-family: Roboto, sans-serif;
-font-size: 12px;
-font-weight: 400;
-
+  font-size: 12px;
+  font-weight: 400;
+  justify-content: center;
 }
 
 .home__container__pages p {
@@ -35,5 +34,16 @@ font-weight: 400;
 @media screen and (min-width: 768px) {
   .home__container {
     margin: 20px 2px;
+  }
+
+  .home__container__pages {
+    font-size: 25px;
+  }
+
+  .home__section button {
+    font-size: 25px;
+    height: 54px;
+    margin: 0px 18px;
+    width: 220px;
   }
 }

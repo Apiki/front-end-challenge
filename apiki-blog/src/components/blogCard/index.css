@@ -6,8 +6,9 @@
   align-items: center;
   flex-direction: column;
   margin: auto;
+  margin-bottom: 30px;
+  border-bottom:darkgray solid 1px;
   padding: 5px;
-  /* width: 300px; */
   width: 95%;
 }
 
@@ -19,14 +20,13 @@
 }
 
 .card__img {
-  /* border-radius: 20px; */
   width: 100%;
 
 }
 
 .card__title {
   font-size: 25px;
-  text-align: center;
+  text-align: left;
 }
 
 .card__author__container {
@@ -46,7 +46,7 @@
 
 @media screen and (min-width: 768px) {
   .card__container {
-    width: auto;
+    width: 80%;
   }
 
   .card__content {
@@ -59,8 +59,14 @@
 
   .card__container {
     flex-direction: row;
+    border-bottom: none;
   }
 
+  .card__img {
+    border-radius: 20px;
+    width: 300px;
+  
+  }
   .card__title {
     font-size: 30px;
     text-align: left;
