@@ -7,9 +7,12 @@ import './index.css';
 
 const Post = (props) => {
   const dispatch = useDispatch();
-
   const slug = props.match.params.id;
+
+  // Getting the full information of the post from the reducer
   const { post, isFetching } = useSelector((state) => state.blogReducer);
+
+  // when loading page, the API is fetched to return information of the post
   useEffect(() => {
     dispatch(getOnePost(slug));
   }, [dispatch, slug]);
@@ -19,10 +22,7 @@ const Post = (props) => {
 
   return (
     <div>
-      <SeoHelmet
-        title={post[0].title.rendered}
-        pathSlug={slug}
-      ></SeoHelmet>
+      <SeoHelmet title={post[0].title.rendered} pathSlug={slug}></SeoHelmet>
       <Header></Header>
       <div className="post__section flex">
         <div className="post__container flex">

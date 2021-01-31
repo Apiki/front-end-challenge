@@ -3,20 +3,20 @@
 }
 
 .post__section {
-  margin: 0px 8px;
   justify-content: center;
+  margin: 0px 8px;
 }
 
 .post__container {
-  margin: 5px 2px;
-  padding: 0px 15px;
   align-items: center;
   flex-direction: column;
+  margin: 5px 2px;
+  padding: 0px 15px;
 }
 
 .post__container img {
-  width: 80%;
   height: auto;
+  width: 80%;
 }
 
 .post__container__article {
@@ -28,9 +28,9 @@
 }
 
 .post__container__article table {
-  text-align: center;
   background:#fafafa ;
   margin: 0 auto;
+  text-align: center;
   width: 80%;
 }
 
@@ -47,8 +47,8 @@
 }
 
 .post__container__article img {
-  width: 100%;
   height: auto;
+  width: 100%;
 }
 
 .post__container__article h2 {
@@ -67,7 +67,7 @@
   }
 
   .post__container img {
-    width: 100%;
     height: auto;
+    width: 100%;
   }
 }

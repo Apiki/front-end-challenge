@@ -10,7 +10,7 @@ class BlogService {
       timeout,
     });
 
-    // Define os handlers para tratamento de erro e sucesso
+    // Define the  handlers to treat errors and success
     this.http.interceptors.response.use(this.handleSuccess, this.handleError);
   }
 

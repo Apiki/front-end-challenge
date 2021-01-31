@@ -6,14 +6,16 @@ const Header = () => {
   return (
     <div className="header">
       <div className="header__logo_container flex">
-        <Link to={'/'}>
-        <img
-          className="header__logo-img"
-          src="https://blog.apiki.com/wp-content/uploads/sites/2/2020/04/marca-apiki-blog-h552.png"
-          alt="apiki logo" height="50px"
-        ></img>
+export default SeoHelmet;
+        {/* this full Link bloc send to home page */}
+        <Link to={'/'}>  
+          <img
+            className="header__logo-img"
+            src="https://blog.apiki.com/wp-content/uploads/sites/2/2020/04/marca-apiki-blog-h552.png"
+            alt="apiki logo" height="50px"
+          ></img>
         </Link>
-    </div >
+      </div >
     </div >
   );
 };

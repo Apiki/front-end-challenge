@@ -1,20 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider } from 'react-helmet-async'; // instead of helmet to avoid async warning
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import store from './store';
-// import SeoHelmet from '../../components/SeoHelmet/SeoHelmet';
 
 ReactDOM.render(
   <React.StrictMode>
     <HelmetProvider>
       <Provider store={store}>
-        <App>
-          {/* <SeoHelmet title={'meu titulo'}></SeoHelmet> */}
-        </App>
+        <App></App>
       </Provider>
     </HelmetProvider>
     ,

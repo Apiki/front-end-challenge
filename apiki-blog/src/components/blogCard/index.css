@@ -4,10 +4,10 @@
 
 .card__container {
   align-items: center;
+  border-bottom: darkgray solid 1px;
   flex-direction: column;
-  margin: auto;
   margin-bottom: 30px;
-  border-bottom:darkgray solid 1px;
+  margin: auto;
   padding: 5px;
   width: 95%;
 }
@@ -21,7 +21,6 @@
 
 .card__img {
   width: 100%;
-
 }
 
 .card__title {
@@ -51,9 +50,9 @@
   .card__content {
     align-items: flex-start;
     flex-direction: column;
+    height: 130px;
     justify-content: space-between;
     margin: 02px 10px;
-    height: 130px;
   }
 
   .card__container {
@@ -64,7 +63,6 @@
   .card__img {
     border-radius: 20px;
     width: 300px;
-  
   }
   .card__title {
     font-size: 30px;

@@ -12,14 +12,17 @@ const Home = () => {
   const dispatch = useDispatch();
   const history = useHistory();
 
+  // Getting the list of all post from the reducer
   const { blogs, isFetching, totalPages } = useSelector(
     (state) => state.blogReducer,
   );
 
+  // when loading page, the API is fetched to return the first page
   useEffect(() => {
     dispatch(getAllBlogs(1));
   }, [dispatch]);
 
+  //this set the current API page fetched
   const [page, setPage] = useState(1);
 
   const handleRedirect = (blogSlug) => history.push(`/${blogSlug}`);
