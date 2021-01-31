@@ -37,6 +37,7 @@
 }
 
 .card__author__name {
+  color: #565656;
   margin-left: 5px;
 }
 
@@ -50,7 +51,7 @@
     flex-direction: column;
     justify-content: space-between;
     margin: 02px 10px;
-    height: 130px; 
+    height: 130px;
   }
 
   .card__container {
@@ -59,10 +60,10 @@
 
   .card__title {
     font-size: 30px;
+    text-align: left;
   }
 
   .card__author__container {
     font-size: 25px;
-
   }
 }
