@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getOnePost } from '../../store/ducks/blog';
 import Header from '../../components/Header/Header';
+import Loading from '../../components/Loading/Loading';
 import SeoHelmet from '../../components/SeoHelmet/SeoHelmet';
 import './index.css';
 
@@ -18,7 +19,7 @@ const Post = (props) => {
   }, [dispatch, slug]);
 
   if (isFetching || typeof post[0] === 'undefined')
-    return <h2>Carregando...</h2>;
+    return <Loading />;
 
   return (
     <div>

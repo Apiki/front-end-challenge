@@ -25,7 +25,7 @@ const Home = () => {
   //this set the current API page fetched
   const [page, setPage] = useState(1);
 
-  const handleRedirect = (blogSlug) => history.push(`/${blogSlug}`);
+  const handleRedirect = (blogSlug) => history.push(`/post/${blogSlug}`);
 
   const handelClick = () => {
     dispatch(getAllBlogs(2));
