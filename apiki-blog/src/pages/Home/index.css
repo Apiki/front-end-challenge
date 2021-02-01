@@ -68,4 +68,12 @@
     margin: 0px 18px;
     width: 220px;
   }
+
+  .home__title h1 {
+    font-size: 48px;
+  }
+
+  .home__title h2 {
+    font-size: 30px;
+  }
 }

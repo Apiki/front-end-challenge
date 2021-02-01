@@ -15,27 +15,28 @@ Will list the latest blog posts with the Development category;
 ### Internal: 
 It will display the content of the post;
 
-### Gif of the App:
+## Gif of the App:
 
 ![](Mobile.gif)
 ![](Desktop.gif)
 
-### Link to the App
+## Link to the App
 
-<!-- <a href="https://mathieubouhelier.github.io/testcss/#/" alt="Desafio ApiKi"> Link <a/> to Repository  -->
 [Link](https://mathieubouhelier.github.io/testcss/#/)
 
-### Diagram of the code structure
+## Diagram of the code structure
 
 ![](codeStructure.png)
 
-### Technologies
+## Technologies
 * React
 * Redux
 * Axios
 * Helmet
 * CSS Mobile first
-### roadmap
+
+## roadmap
+
 - [x] Create the React-Router structure
 - [x] Create the Reducer structure
 - [x] Fetching the Api with Axios
@@ -54,3 +55,5 @@ Could be nice to do to improve the App
 - [ ] CSS search bar mobile
 - [ ] CSS search bar desktop
 - [ ] Use the tags for SEO
+- [ ] Implement Tests
+

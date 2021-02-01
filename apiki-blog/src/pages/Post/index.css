@@ -29,14 +29,14 @@
 }
 
 .post__container__article table {
-  background:#fafafa ;
+  background: #fafafa;
   margin: 0 auto;
   text-align: center;
   width: 80%;
 }
 
 .post__container__article tr:nth-child(even) {
-  background:lightgray;
+  background: lightgray;
 }
 
 .post__container__article p {
@@ -63,6 +63,7 @@
   .post__container h1 {
     font-size: 60px;
   }
+
   .post__container__article p {
     font-size: 30px;
   }

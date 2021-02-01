@@ -8,16 +8,24 @@
   height: 60px;
   justify-content: center;
 }
+
 .header__logo_container {
   align-items: center;
   justify-content: center;
 }
 
 .header__logo-img {
+  height: 50px;
 }
 
 @media screen and (min-width: 768px) {
   .header {
     background-color: black;
+    height: 120px;
   }
+
+  .header__logo-img {
+    height: 100px;
+  }
+  
 }
