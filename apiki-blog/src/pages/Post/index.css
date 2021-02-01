@@ -21,7 +21,7 @@
 }
 
 .post__container__article {
-  align-items: center;
+  align-self: center;
   flex-direction: column;
   justify-content: center;
   text-align: left;
