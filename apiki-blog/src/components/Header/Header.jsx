@@ -6,7 +6,6 @@ const Header = () => {
   return (
     <div className="header">
       <div className="header__logo_container flex">
-export default SeoHelmet;
         {/* this full Link bloc send to home page */}
         <Link to={'/'}>  
           <img

@@ -12,6 +12,7 @@
   flex-direction: column;
   margin: 5px 2px;
   padding: 0px 15px;
+  width: 100%;
 }
 
 .post__container img {
