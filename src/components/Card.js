@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Card extends Component {
   render() {
-    const { id, title, date } = this.props.card;
+    const { _embedded , title, slug } = this.props.card;
     return (
       <div>
-        <h1>{title.rendered}</h1>
-        <p>{id}</p>
-        <p>{date}</p>
+        <Link to={`/article/${slug}`} >
+          <img alt ="" src={_embedded.['wp:featuredmedia'][0].media_details.sizes.medium.source_url} />
+        </Link>
+        <div>
+          <h2>{title.rendered}</h2>
+        </div>
       </div>
     )
   };

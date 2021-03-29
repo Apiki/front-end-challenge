@@ -1,5 +1,5 @@
-export async function fetchData() {
-  const response = await fetch('https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518');
+export async function fetchData(endpoint) {
+  const response = await fetch(endpoint);
   const data = await response.json();
   return data;
 }
