@@ -1,8 +1,14 @@
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import CardList from './components/CardList';
+
 function App() {
   return (
-    <div>
-        Hello World
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={CardList} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
