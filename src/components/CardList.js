@@ -9,6 +9,7 @@ class CardList extends Component {
 
     this.state = {
       cards: [],
+      nextPage: 2,
       loading: true,
     };
   }
@@ -19,7 +20,13 @@ class CardList extends Component {
 
   async getCards() {
     const cardList = await api.fetchData('https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518');
-    this.setState({ cards: cardList, loading: false});
+    this.setState({ cards: cardList, loading: false });
+  }
+
+  loadMore = async () => {
+    this.setState({ loading: true });
+    const cardList = await api.fetchData(`https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=${this.state.nextPage}`);
+    this.setState({ loading: false, nextPage: this.state.nextPage + 1, cards: cardList });
   }
 
   render() {
@@ -30,8 +37,15 @@ class CardList extends Component {
           <Loading />
           ) : (
             <div>
-              {cards.map((card) => <Card key={card.id} card={card}/>)}
-              {console.log(cards)}
+              <div>
+                {cards.map((card) => <Card key={card.id} card={card}/>)}
+              </div>
+              <button
+                type="button"
+                onClick={this.loadMore}
+              >
+                Carregar mais
+              </button>
             </div>
           )
         }
