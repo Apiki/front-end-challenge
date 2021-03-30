@@ -8,7 +8,7 @@ class CardList extends Component {
     super(props);
 
     this.state = {
-      cards: [],
+      cards: '',
       nextPage: 2,
       loading: true,
     };
@@ -24,9 +24,8 @@ class CardList extends Component {
   }
 
   loadMore = async () => {
-    this.setState({ loading: true });
     const cardList = await api.fetchData(`https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=${this.state.nextPage}`);
-    this.setState({ loading: false, nextPage: this.state.nextPage + 1, cards: cardList });
+    this.setState({ nextPage: this.state.nextPage + 1, cards: [...this.state.cards, ...cardList] });
   }
 
   render() {
