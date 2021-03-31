@@ -4,7 +4,7 @@ import '../style/card.css';
 
 class Card extends Component {
   render() {
-    const { _embedded , title, slug, excerpt } = this.props.card;
+    const { _embedded, title, slug, excerpt } = this.props.card;
     return (
       <div className="col-lg-6">
         <div className="card border-dark text-light">

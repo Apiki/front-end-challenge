@@ -1,5 +1,7 @@
 import { Component } from 'react';
+import moment from 'moment';
 import Loading from '../components/Loading';
+import Author from '../components/Author';
 import Topbar from '../components/Topbar';
 import Bottom from '../components/Bottom';
 import * as api from '../services/api';
@@ -25,7 +27,7 @@ class Article extends Component {
   }
 
   render() {
-    const { loading, article, article: { title } } = this.state;
+    const { loading, article, article: { title, date } } = this.state;
     return (
       <div>
         {loading ? (
@@ -35,10 +37,14 @@ class Article extends Component {
             <Topbar />
             <div className="container">
               <div className="row">
-                <div className="col-md">
+                <div className="col-sm">
                   <img className="img-fluid" src={article._embedded.['wp:featuredmedia'][0].media_details.sizes.large.source_url} alt=""/>
                   <h1 className="content-page__title">{title.rendered}</h1>
+                    <p className="Small">{moment(date).format('LL')}</p>
+                  <hr />
                   <div className="content-page__article" dangerouslySetInnerHTML={{ __html: article.content.rendered }} />
+                  <hr />
+                  <Author author={article._embedded.author}/>
                 </div>
               </div>
             </div>

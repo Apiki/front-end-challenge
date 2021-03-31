@@ -37,7 +37,7 @@ class CardList extends Component {
           ) : (
             <div className="container">
               <div className="row">
-                  {cards.map((card) => <Card key={card.id} card={card}/>)}
+                {cards.map((card) => <Card key={card.id} card={card}/>)}
               </div>
               <button
                 type="button"

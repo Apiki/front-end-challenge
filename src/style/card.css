@@ -12,3 +12,10 @@
 .card-title {
   text-shadow: #212529 1px 1px 1px;
 }
+
+@media (max-width: 768px) 
+{
+  .card-text {
+    display: none;
+  }
+}
