@@ -42,7 +42,7 @@ class Article extends Component {
                   <h1>{title.rendered}</h1>
                     <p className="Small">{moment(date).format('LL')}</p>
                   <hr />
-                  <div dangerouslySetInnerHTML={{ __html: article.content.rendered }} />
+                  <article dangerouslySetInnerHTML={{ __html: article.content.rendered }} />
                   <hr />
                   <Author author={article._embedded.author}/>
                 </div>

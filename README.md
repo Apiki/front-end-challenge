@@ -1,3 +1,9 @@
+Este é um desafio técnico de Front-End para o processo seletivo da Apiki, uma empresa especializada em WordPres que tem o objetivo de ser referência mundial na tecnologia.
+
+A meta é utilizar React para criar uma nova solução headless que consome de um endpoint e dinamicamente gera páginas para que o usuário final consiga acessar e ler cada um dos artigos recebidos. Para estilização e responsividade, o framework escolhido foi Bootstrap.
+
+Os detalhes podem ser encontrados no README original do desafio, a seguir
+
 # Desafio - Front-end Developer
 Este desafio tem como objetivo te avaliar como desenvolvedor Front-end: JavaScript, HTML, CSS e lógica de programação.
 
