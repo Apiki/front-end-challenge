@@ -35,12 +35,13 @@ class CardList extends Component {
         {loading ? (
           <Loading />
           ) : (
-            <div>
-              <div>
-                {cards.map((card) => <Card key={card.id} card={card}/>)}
-              </div>
+            <div className="container">
+              <div className="row">
+                  {cards.map((card) => <Card key={card.id} card={card}/>)}
+                </div>
               <button
                 type="button"
+                className="btn btn-secondary btn-lg"
                 onClick={this.loadMore}
               >
                 Carregar mais

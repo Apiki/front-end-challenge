@@ -29,10 +29,14 @@ class Article extends Component {
         {loading ? (
           <Loading />
         ) : (
-          <div>
-            <img src={article._embedded.['wp:featuredmedia'][0].media_details.sizes.large.source_url} alt=""/>
-            <h1 className="content-page__title">{title.rendered}</h1>
-            <div className="content-page__article" dangerouslySetInnerHTML={{ __html: article.content.rendered }} />
+          <div className="container">
+            <div className="row">
+              <div className="col-md">
+                <img className="img-fluid" src={article._embedded.['wp:featuredmedia'][0].media_details.sizes.large.source_url} alt=""/>
+                <h1 className="content-page__title">{title.rendered}</h1>
+                <div className="content-page__article" dangerouslySetInnerHTML={{ __html: article.content.rendered }} />
+              </div>
+            </div>
           </div>
         )
       }
