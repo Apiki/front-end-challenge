@@ -39,10 +39,10 @@ class Article extends Component {
               <div className="row">
                 <div className="col-sm">
                   <img className="img-fluid" src={article._embedded.['wp:featuredmedia'][0].media_details.sizes.large.source_url} alt=""/>
-                  <h1 className="content-page__title">{title.rendered}</h1>
+                  <h1>{title.rendered}</h1>
                     <p className="Small">{moment(date).format('LL')}</p>
                   <hr />
-                  <div className="content-page__article" dangerouslySetInnerHTML={{ __html: article.content.rendered }} />
+                  <div dangerouslySetInnerHTML={{ __html: article.content.rendered }} />
                   <hr />
                   <Author author={article._embedded.author}/>
                 </div>
