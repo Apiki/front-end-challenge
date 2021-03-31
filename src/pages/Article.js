@@ -38,7 +38,7 @@ class Article extends Component {
             <div className="container">
               <div className="row">
                 <div className="col-sm">
-                  <img className="img-fluid" src={article._embedded.['wp:featuredmedia'][0].media_details.sizes.large.source_url} alt=""/>
+                  <img className="img-fluid" src={article._embedded['wp:featuredmedia'][0].media_details.sizes.large.source_url} alt=""/>
                   <h1>{title.rendered}</h1>
                     <p className="Small">{moment(date).format('LL')}</p>
                   <hr />
