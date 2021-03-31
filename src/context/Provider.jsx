@@ -5,11 +5,12 @@ import ApikiBlogContext from './ApikiBlogContext';
 const Provider = ({ children }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+  
   const state = {
     data,
     setData,
     loading,
-    setLoading,
+    setLoading
   };
 
   return (
