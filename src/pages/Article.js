@@ -1,5 +1,7 @@
 import { Component } from 'react';
 import Loading from '../components/Loading';
+import Topbar from '../components/Topbar';
+import Bottom from '../components/Bottom';
 import * as api from '../services/api';
 
 class Article extends Component {
@@ -29,14 +31,18 @@ class Article extends Component {
         {loading ? (
           <Loading />
         ) : (
-          <div className="container">
-            <div className="row">
-              <div className="col-md">
-                <img className="img-fluid" src={article._embedded.['wp:featuredmedia'][0].media_details.sizes.large.source_url} alt=""/>
-                <h1 className="content-page__title">{title.rendered}</h1>
-                <div className="content-page__article" dangerouslySetInnerHTML={{ __html: article.content.rendered }} />
+          <div>
+            <Topbar />
+            <div className="container">
+              <div className="row">
+                <div className="col-md">
+                  <img className="img-fluid" src={article._embedded.['wp:featuredmedia'][0].media_details.sizes.large.source_url} alt=""/>
+                  <h1 className="content-page__title">{title.rendered}</h1>
+                  <div className="content-page__article" dangerouslySetInnerHTML={{ __html: article.content.rendered }} />
+                </div>
               </div>
             </div>
+            <Bottom />
           </div>
         )
       }

@@ -38,10 +38,10 @@ class CardList extends Component {
             <div className="container">
               <div className="row">
                   {cards.map((card) => <Card key={card.id} card={card}/>)}
-                </div>
+              </div>
               <button
                 type="button"
-                className="btn btn-secondary btn-lg"
+                className="btn btn-secondary"
                 onClick={this.loadMore}
               >
                 Carregar mais
