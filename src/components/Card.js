@@ -6,13 +6,20 @@ import '../style/card.css';
 class Card extends Component {
   render() {
     const { _embedded, title, slug, excerpt } = this.props.card;
+    let url;
+    try {
+      url = _embedded['wp:featuredmedia'][0].media_details.sizes['jnews-360x180'].source_url;
+    } catch {
+      url = null;
+    }
+
     return (
       <div className="col-lg-6">
         <div className="card border-dark text-light">
-          {_embedded['wp:featuredmedia'] ? (
+          {url ? (
             <img className="card-img"
               alt =""
-              src={_embedded['wp:featuredmedia'][0].media_details.sizes['jnews-360x180'].source_url}
+              src={url}
             />
           ) : (
             <img

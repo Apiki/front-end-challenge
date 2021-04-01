@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
+import returnUrl from '../services/functions.js';
+
 class Author extends Component {
   render() {
     const { name, avatar_urls, description } = this.props.author[0];
+    const url = returnUrl(avatar_urls['96']);
+
     return(
       <div className="container">
       <div className="card mb-3 border-0">
         <div className="row no-gutters">
           <div className="col-md-1">
-            {avatar_urls ? <img className="card-img" alt="" src={avatar_urls['96']} /> : <div />}
+            {url ? <img className="card-img" alt="" src={url} /> : <div />}
           </div>
           <div className="col-md-8">
             <div className="card-body">

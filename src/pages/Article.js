@@ -5,6 +5,7 @@ import Author from '../components/Author';
 import Topbar from '../components/Topbar';
 import Bottom from '../components/Bottom';
 import * as api from '../services/api';
+import returnUrl from '../services/functions.js';
 
 class Article extends Component {
   constructor(props) {
@@ -29,8 +30,11 @@ class Article extends Component {
     });
   }
 
+
   render() {
     const { loading, article, article: { title, date } } = this.state;
+    const url = returnUrl(`article._embedded['wp:featuredmedia'][0].media_details.sizes.large.source_url`);
+
     return (
       <div>
         {loading ? (
@@ -41,8 +45,8 @@ class Article extends Component {
             <div className="container">
               <div className="row">
                 <div className="col-sm">
-                  {article._embedded['wp:featuredmedia'] ? (
-                    <img className="img-fluid" src={article._embedded['wp:featuredmedia'][0].media_details.sizes.large.source_url} alt=""/>
+                  {url ? (
+                    <img className="img-fluid" src={url} alt=""/>
                   ) : (
                     <div />
                   )}
