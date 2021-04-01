@@ -7,7 +7,7 @@ class Author extends Component {
       <div className="card mb-3 border-0">
         <div className="row no-gutters">
           <div className="col-md-1">
-            <img className="card-img" alt="" src={avatar_urls['96']} />
+            {avatar_urls ? <img className="card-img" alt="" src={avatar_urls['96']} /> : <div />}
           </div>
           <div className="col-md-8">
             <div className="card-body">

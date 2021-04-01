@@ -10,6 +10,7 @@ class CardList extends Component {
     this.state = {
       cards: '',
       nextPage: 2,
+      totalPages: 0,
       loading: true,
     };
   }
@@ -19,17 +20,24 @@ class CardList extends Component {
   }
 
   async getCards() {
-    const cardList = await api.fetchData('https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518');
-    this.setState({ cards: cardList, loading: false });
+    const response = await api.fetchData('https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518');
+    this.setState({
+      cards: response.data,
+      loading: false,
+      totalPages: parseInt(response.totalPages)
+    });
   }
 
   loadMore = async () => {
     const cardList = await api.fetchData(`https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=${this.state.nextPage}`);
-    this.setState({ nextPage: this.state.nextPage + 1, cards: [...this.state.cards, ...cardList] });
+    this.setState({ 
+      nextPage: this.state.nextPage + 1,
+      cards: [...this.state.cards, ...cardList.data]
+    });
   }
 
   render() {
-    const { cards, loading } = this.state;
+    const { cards, loading, nextPage, totalPages } = this.state;
     return (
       <div>
         {loading ? (
@@ -39,13 +47,17 @@ class CardList extends Component {
               <div className="row">
                 {cards.map((card) => <Card key={card.id} card={card}/>)}
               </div>
-              <button
+              {totalPages > nextPage ? (
+                <button
                 type="button"
                 className="btn btn-secondary"
                 onClick={this.loadMore}
               >
                 Carregar mais
               </button>
+              ) : (
+                <div></div>
+              )}
             </div>
           )
         }

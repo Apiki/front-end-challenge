@@ -23,7 +23,10 @@ class Article extends Component {
 
   async getArticleDetails(slug) {
     const articleDetails = await api.fetchData(`https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=${slug}`);
-    this.setState({ article: articleDetails[0], loading: false });
+    this.setState({
+      article: articleDetails.data[0],
+      loading: false
+    });
   }
 
   render() {
