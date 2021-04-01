@@ -3,15 +3,13 @@ import ApikiBlogContext from '../context/ApikiBlogContext';
 import buttonHandler from '../services/buttonHandler';
 
 const Button = () => {
-  const { setData, setLoading } = useContext(ApikiBlogContext);
+  const { data, setData } = useContext(ApikiBlogContext);
   return (
     <button
       onClick={ () => {
-        setLoading(true);
         buttonHandler()
         .then(posts => {
-        setData(posts);
-        setLoading(false);
+        setData(data.concat(posts));
     });
     } }>
       Carregar mais...

@@ -5,8 +5,7 @@ const PostCard = (post) => {
   try {
     source = _embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url;
   } catch (error) {
-    alert('Sem mais páginas!');
-    window.location.reload();
+    source = 'https://static.thenounproject.com/png/3594661-200.png';
   }
   return (
     <div>
