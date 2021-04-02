@@ -1,6 +1,6 @@
-Este é um desafio técnico de Front-End para o processo seletivo da Apiki, uma empresa especializada em WordPres que tem o objetivo de ser referência mundial na tecnologia.
+Este é um desafio técnico de Front-End para o processo seletivo da Apiki, uma empresa especializada em WordPress que tem o objetivo de ser referência mundial na tecnologia.
 
-A meta é utilizar React para criar uma nova solução headless que consome de um endpoint e dinamicamente gera páginas para que o usuário final consiga acessar e ler cada um dos artigos recebidos. Para estilização e responsividade, o framework escolhido foi Bootstrap.
+A meta é utilizar React para criar uma nova solução headless que consome de um endpoint e dinamicamente gera páginas para que o usuário final consiga acessar e ler cada um dos artigos recebidos.
 
 ## Tecnologias e bibliotecas adotadas:
 - React

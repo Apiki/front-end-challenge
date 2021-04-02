@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import Topbar from '../components/Topbar';
+import Header from '../components/Header';
 import CardList from '../components/CardList';
+import Footer from '../components/Footer';
 
 class Home extends Component {
   render() {
     return (
       <div>
-        <Topbar />
+        <Header />
         <CardList />
+        <Footer />
       </div>
     )
   }

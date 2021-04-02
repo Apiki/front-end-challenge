@@ -1,0 +1,36 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.main-content.single {
+  background: white;
+  padding: 20px 50px;
+  font-size: 1.1em;
+  border-radius: 5px;
+}
+
+.post-top-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 770px) {
+  .main-content-wrapper {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .content .main-content.single {
+    padding: 10px 20px;
+  }
+}

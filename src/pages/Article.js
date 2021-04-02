@@ -1,11 +1,13 @@
 import { Component } from 'react';
 import moment from 'moment';
+import 'moment/locale/pt-br';
 import Loading from '../components/Loading';
 import Author from '../components/Author';
-import Topbar from '../components/Topbar';
-import Bottom from '../components/Bottom';
+import Header from '../components/Header';
+import Sidebar from '../components/Sidebar';
+import Footer from '../components/Footer';
 import * as api from '../services/api';
-import returnUrl from '../services/functions.js';
+import '../style/article.css';
 
 class Article extends Component {
   constructor(props) {
@@ -33,7 +35,12 @@ class Article extends Component {
 
   render() {
     const { loading, article, article: { title, date } } = this.state;
-    const url = returnUrl(`article._embedded['wp:featuredmedia'][0].media_details.sizes.large.source_url`);
+    let url;
+    try {
+      url = article._embedded['wp:featuredmedia'][0].media_details.sizes.large.source_url;
+    } catch {
+      url = null;
+    }
 
     return (
       <div>
@@ -41,25 +48,26 @@ class Article extends Component {
           <Loading />
         ) : (
           <div>
-            <Topbar />
-            <div className="container">
-              <div className="row">
-                <div className="col-sm">
-                  {url ? (
-                    <img className="img-fluid" src={url} alt=""/>
-                  ) : (
-                    <div />
-                  )}
-                  <h1>{title.rendered}</h1>
-                    <p className="Small">{moment(date).format('LL')}</p>
-                  <hr />
-                  <article dangerouslySetInnerHTML={{ __html: article.content.rendered }} />
-                  <hr />
-                  <Author author={article._embedded.author}/>
+            <Header />
+            <div className="page-wrapper">
+              <div className="content clearfix">
+                <div className="main-content-wrapper">
+                  <div className="main-content single">
+                    <h1 className="post-title">{title.rendered}</h1>
+                    {url ? (
+                      <img className="post-top-image" src={url} alt=""/>
+                    ) : (
+                      <div />
+                    )}
+                    <p><strong><small>{moment(date).locale('pt-br').format('LL')}</small></strong></p>
+                    <article className="post-content" dangerouslySetInnerHTML={{ __html: article.content.rendered }} />
+                    <Author author={article._embedded.author}/>
+                  </div>
                 </div>
+                <Sidebar />
               </div>
             </div>
-            <Bottom />
+            <Footer />
           </div>
         )
       }

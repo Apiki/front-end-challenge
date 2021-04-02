@@ -1,0 +1,60 @@
+.btn {
+  padding: .5rem 1rem;
+  background: #1a8ecb;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  font-size: 1.08em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn:hover {
+  color: white !important;
+  background: #1a8ecb;
+}
+
+.post-preview .info {
+  color: #757575;
+  font-size: .8em;
+}
+
+.preview-text {
+  line-height: 1.5em;
+  font-size: 1.03em;
+  color: #444;
+}
+
+.post .read-more {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  border: 1px solid #1a8ecb;
+  background: transparent;
+  border-radius: 0px;
+  color: #1a8ecb !important;
+}
+
+.post .read-more:hover {
+  background: #1a8ecb;
+  color: white !important;
+  transition: .25s;
+}
+
+.post-image {
+  width: 40%;
+  height: 100%;
+  float: left;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.post-preview {
+  width: 60%;
+  padding: 20px;
+  float: right;
+}
+
+.recent-post-title {
+  margin: 20px;
+}
+
