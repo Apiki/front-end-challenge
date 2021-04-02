@@ -8,6 +8,9 @@ A meta é utilizar React para criar uma nova solução headless que consome de u
 - HTML5
 - Momento.js
 
+O resultado final pode ser conferido na seguinte URL:
+https://apiki-challenge.vercel.app/
+
 Os detalhes podem ser encontrados no README original do desafio, a seguir.
 
 # Desafio - Front-end Developer
