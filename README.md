@@ -7,7 +7,6 @@ A meta é utilizar React para criar uma nova solução headless que consome de u
 - CSS3
 - HTML5
 - Momento.js
-- Bootstrap
 
 Os detalhes podem ser encontrados no README original do desafio, a seguir.
 
