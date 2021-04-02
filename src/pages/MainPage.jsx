@@ -16,8 +16,10 @@ const MainPage = () => {
   return (
     !loading ?
       <div>
+        <h1 className='main-page-title'>Bem vindo ao blog APIKI!</h1>
         <PostsList />
         <Button />
+        <footer className='details-footer'>APIKI BLOG</footer>
       </div> : <div>Loading...</div>
   );
 };

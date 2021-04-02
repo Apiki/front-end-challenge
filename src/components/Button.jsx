@@ -6,6 +6,7 @@ const Button = () => {
   const { data, setData } = useContext(ApikiBlogContext);
   return (
     <button
+      className='main-page-load-more'
       onClick={ () => {
         buttonHandler()
         .then(posts => {

@@ -8,10 +8,10 @@ const PostCard = (post) => {
     source = 'https://static.thenounproject.com/png/3594661-200.png';
   }
   return (
-    <div>
-      <img src={ source } alt=""/>
-      <h3>{title.rendered}</h3>
-      <Link to={`/details/${slug}`}>Ver postagem</Link>
+    <div className='card-container'>
+      <img src={ source } alt='' className='card-img'/>
+      <h3 className='card-title'>{title.rendered}</h3>
+      <Link to={`/details/${slug}`} className='card-link'>Ver postagem</Link>
     </div>
   );
 };

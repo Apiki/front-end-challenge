@@ -1,38 +1,159 @@
-.App {
-  text-align: center;
+body {
+  background-image: linear-gradient(to bottom right, dimgray, darkgray);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root div div {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-flow: column;
+}
+
+.main-page-title {
+  margin: auto;
+  justify-self: center;
+  width: fit-content;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+
+.card-container {
+  background-color: white;
+  width: 30%;
+  margin: auto;
+  border: 5px ridge darkgray;
+  border-radius: 10px;
+  display: flex;
+  margin-bottom: 3%;
+}
+
+.card-title {
+  margin: auto;
+  margin: 5%;
+}
+
+.card-link {
+  margin: auto;
+}
+.card-img {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.main-page-load-more {
+  background-color: #555555;
+  border: 5px ridge darkgray;
   color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  margin: auto;
+  justify-self: center;
 }
 
-.App-link {
-  color: #61dafb;
+.main-page-load-more:hover {
+  background-color: white;
+  border: 5px ridge darkgray;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  margin: auto;
+  justify-self: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.details-main-img {
+  width: 40%;
+  margin: auto;
+  margin-top: 2.5%;
+  border: 5px ridge darkgray;
+}
+
+.title {
+  margin: auto;
+  margin-top: 2.5%;
+}
+
+.details-subtitle {
+  margin: auto;
+  margin-top: 5%;
+}
+
+.jeg_video_container {
+  margin: auto;
+  border: 5px ridge darkgray;
+}
+
+.details-p {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.details-blockquote {
+  background-color: white;
+  font-style: italic;
+  font-size: small;
+}
+
+.details-link {
+  background-color: yellow;
+}
+
+.wp-block-image {
+  display: flex;
+  margin: auto;
+}
+
+.wp-block-image img {
+  width: 55%;
+  height: auto;
+  margin: auto;
+}
+
+.wp-block-image a {
+  margin: auto;
+}
+
+.details-table thead th {
+  border: 5px ridge darkgray;
+}
+
+.details-table tbody td {
+  border: 5px ridge lightgray;
+}
+
+.details-footer {
+  display: flex;
+  width: 100%;
+  margin-top: 2.5%;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  background-color: dimgray;
+  color: white;
+  justify-content: center;
+  font-size: xx-large;
+}
+
+.details-pre {
+  margin: auto;
+}
+
+.wp-block-coblocks-gist {
+  margin: auto;
+  width: fit-content;
+}
+
+.wp-video {
+  width: 80%;
+  margin: auto;  
+}
+
+.wp-video-shortcode {
+  width: fit-content;
 }
