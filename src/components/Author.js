@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import returnUrl from '../services/functions.js';
 
 class Author extends Component {
   render() {
