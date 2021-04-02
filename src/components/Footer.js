@@ -21,7 +21,7 @@ class Footer extends Component {
           </div>
         </div>
         <div className="footer-bottom">
-          Anderson S. Santana - candidato Apiki
+          Anderson S. Santana - 2021 - candidato Apiki
         </div>
       </nav>
     )

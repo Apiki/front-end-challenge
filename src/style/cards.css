@@ -5,7 +5,7 @@
   border: 1px solid transparent;
   border-radius: .25rem;
   font-size: 1.08em;
-  font-family: 'Lora', serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .btn:hover {
@@ -13,7 +13,7 @@
   background: #1a8ecb;
 }
 
-.post-preview i {
+.post-preview .info {
   color: #757575;
   font-size: .8em;
 }

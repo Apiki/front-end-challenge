@@ -4,7 +4,12 @@ import returnUrl from '../services/functions.js';
 class Author extends Component {
   render() {
     const { name, avatar_urls, description } = this.props.author[0];
-    const url = returnUrl(avatar_urls['96']);
+    let url;
+    try {
+      url = avatar_urls['96'];
+    } catch {
+      url = null;
+    }
 
     return(
       <div>
