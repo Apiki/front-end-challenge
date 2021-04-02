@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import placeholder from '../img/placeholder.png';
-import '../style/card.css';
 
 class Card extends Component {
   render() {
@@ -14,30 +13,29 @@ class Card extends Component {
     }
 
     return (
-      <div className="col-lg-6">
-        <div className="card border-dark text-light">
+      <div className="post clearfix">
           {url ? (
-            <img className="card-img"
+            <img
+              className="post-image"
               alt =""
               src={url}
             />
           ) : (
             <img
-              className="card-img"
+              className="post-image"
               alt =""
               src={placeholder}
             />
           )}
-          <div className="card-img-overlay">
-            <h2 className="card-title h4">{title.rendered}</h2>
-            <div className="col-sm-8">
-              <p className="card-text" dangerouslySetInnerHTML={{ __html: excerpt.rendered }} />
-            </div>
+          <div className="post-preview">
+            <h2>{title.rendered}</h2>
+              <i className="far fa-user">Autor</i>
+              <i className="far fa-calendar">Data da publicação</i>
+              <p className="preview-text" dangerouslySetInnerHTML={{ __html: excerpt.rendered }} />
             <Link to={`/article/${slug}`} >
-              <input class="btn btn-dark" type="button" value="Ler este artigo"></input>
+              <input className="btn read-more" type="button" value="Ler este artigo"></input>
             </Link>
           </div>
-        </div>
       </div>
     )
   };

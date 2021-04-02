@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Article from './pages/Article';
-import './style/normalize.css';
+import './style/style.css';
 
 function App() {
   return (
