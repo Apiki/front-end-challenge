@@ -22,6 +22,7 @@ class Article extends Component {
   componentDidMount() {
     const slug = this.props.match.params.id;
     this.getArticleDetails(slug);
+    window.scrollTo(0, 0);
   }
 
   async getArticleDetails(slug) {
