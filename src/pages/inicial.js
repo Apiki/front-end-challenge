@@ -1,5 +1,6 @@
 import React from 'react';
 import PostCard from '../components/postCard';
+import Header from '../components/header';
 import { fetchPosts, getHeaders } from '../services/index';
 
 class Inicial extends React.Component {
@@ -23,12 +24,20 @@ class Inicial extends React.Component {
     });
   };
 
-  async handleClick() {
+  async handleClick(command) {
     const { pagAtual, pagTotal } = this.state;
-    if (pagAtual < pagTotal) {
-      await this.setState((state) => ({
-        pagAtual: state.pagAtual + 1,
-      }))
+    if (command === 'next') {
+      if (pagAtual < pagTotal) {
+        await this.setState((state) => ({
+          pagAtual: state.pagAtual + 1,
+        }))
+      }
+    } else if (command === 'prev') {
+      if (pagAtual > 1) {
+        await this.setState((state) => ({
+          pagAtual: state.pagAtual - 1,
+        }))
+      }
     }
     this.setState({
       data: await fetchPosts(this.state.pagAtual),
@@ -39,13 +48,22 @@ class Inicial extends React.Component {
     const { data } = this.state
     return (
       <div>
-        <h1>PáginaInicial</h1>
-        { data.map((post, index) => <PostCard key = { index } dados = { post }/>) }
-        <button
-          onClick={ () => this.handleClick() }
-        >
-          Carregar mais...
-        </button>
+        <Header/>
+        <div>
+          { data.map((post, index) => <PostCard key = { index } dados = { post }/>) }
+        </div>
+        <footer>
+          <button
+            onClick={ () => this.handleClick('prev') }
+          >
+            Voltar uma página
+          </button>
+          <button
+            onClick={ () => this.handleClick('next') }
+          >
+            Carregar mais...
+          </button>
+        </footer>
       </div>
     )
   }

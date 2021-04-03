@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
 import { getPost } from '../services/index';
+import Header from '../components/header';
 
 class Interna extends React.Component {
   constructor(props) {
@@ -28,7 +29,7 @@ class Interna extends React.Component {
     }
     return(
       <div>
-        <h1>Página interna</h1>
+        <Header/>
         <img src={ imgURL } alt={ slug } />
         { data !== undefined ? <h1>{ data.title.rendered }</h1> : <p>Carregando...</p> }
         { data !== undefined ? <p>{ ReactHtmlParser(data.content.rendered) }</p> : <p>Carregando...</p> }

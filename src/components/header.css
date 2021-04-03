@@ -1,0 +1,40 @@
+.main {
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-around;
+}
+
+.container-button {
+  /* border: 1px solid blue; */
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.home-button {
+  font-size:large;
+}
+
+.social-icons {
+  height: 30px;
+  padding: 3px;
+}
+
+.container-social-media {
+  /* background-color: chartreuse; */
+  display: flex;
+  align-items: center;
+}
+
+.container-logo {
+  /* background-color: chartreuse; */
+  display: flex;
+  align-items: center;
+}
+
+.logo-apiki {
+  padding: 4px;
+}
+
+a {
+  text-decoration: none;
+}
