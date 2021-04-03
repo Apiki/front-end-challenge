@@ -16,7 +16,7 @@ A meta é utilizar **React** para criar uma nova solução headless que consome 
 
 O código é dividido em **2 páginas** e **7 componentes**.
 
-### Páginas
+### Páginas:
 - **Home:** A página inicial que vai renderizar através dos componentes os seguintes itens: uma barra superior com o logo, uma lista inicial com vários cards contendo publicações, um botão para buscar mais publicações, um rodapé e uma barra lateral.
 - **Article:** Ao clicar no botão **"Ler este artigo"** em um card de publicação da página inicial, o usuário é direcionado para a tela `Article`, onde poderá ler o conteúdo da publicação escolhida. É renderizado o título, uma imagem, a data de publicação, o texto principal e um componente com informações do autor.
 
