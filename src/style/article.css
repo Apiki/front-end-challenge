@@ -30,7 +30,7 @@ img {
 }
 
 @media only screen and (max-width: 600px) {
-  .content .main-content.single {
+  /* .content .main-content.single {
     padding: 10px 20px;
-  }
+  } */
 }
