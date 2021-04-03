@@ -8,7 +8,7 @@ class Footer extends Component {
         <div className="footer-content">
           <div className="footer-section about">
             <h1 className="logo-text">Apiki</h1>
-            <p>Este é um desafio técnico de Front-End para o processo seletivo da Apiki, uma empresa especializada em WordPres que tem o objetivo de ser referência mundial na tecnologia.</p>
+            <p>Este é um desafio técnico de Front-End para o processo seletivo da Apiki, uma empresa especializada em WordPress que tem o objetivo de ser referência mundial na tecnologia.</p>
           </div>
           <div className="footer-section links">
             <h1>Anderson S. Santana</h1>
