@@ -58,3 +58,15 @@
   margin: 20px;
 }
 
+@media only screen and (max-width: 770px) {
+  .post .post-preview {
+    width: 100%;
+  }
+
+  .post .read-more {
+    position: static;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}

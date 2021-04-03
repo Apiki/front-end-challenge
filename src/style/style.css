@@ -71,7 +71,7 @@ a {
   position: relative;
 }
 
-@media only screen and (max-width: 934px) {
+@media only screen and (max-width: 1024px) {
   .content {
     width: 100%;
   }
@@ -86,23 +86,12 @@ a {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 770px) {
   .content .main-content .post {
     height: auto;
   }
 
   .content .main-content .post .post-image {
     width: 100%;
-  }
-
-  .content .main-content .post .post-preview {
-    width: 100%;
-  }
-
-  .content .main-content .post .read-more {
-    position: static;
-    display: block;
-    width: 100%;
-    text-align: center;
   }
 }
