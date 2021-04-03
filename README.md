@@ -1,6 +1,6 @@
-Este é um desafio técnico de Front-End para o processo seletivo da Apiki, uma empresa especializada em WordPress que tem o objetivo de ser referência mundial na tecnologia.
+Este é um desafio técnico de Front-End para o processo seletivo da **Apiki**, uma empresa especializada em **WordPress** que tem o objetivo de ser referência mundial na tecnologia.
 
-A meta é utilizar React para criar uma nova solução headless que consome de um endpoint e dinamicamente gera páginas para que o usuário final consiga acessar e ler cada um dos artigos recebidos.
+A meta é utilizar **React** para criar uma nova solução headless que consome de um *endpoint* e dinamicamente gera páginas para que o usuário final consiga acessar e ler cada um dos artigos recebidos.
 
 ---
 
@@ -14,33 +14,38 @@ A meta é utilizar React para criar uma nova solução headless que consome de u
 
 ## Organização do código
 
-O código é dividido em 2 páginas e 7 componentes.
+O código é dividido em **2 páginas** e **7 componentes**.
 
 ### Páginas
 - **Home:** A página inicial que vai renderizar através dos componentes os seguintes itens: uma barra superior com o logo, uma lista inicial com vários cards contendo publicações, um botão para buscar mais publicações, um rodapé e uma barra lateral.
-- **Article:** Ao clicar no botão "Ler este artigo" em um card de publicação da página inicial, o usuário é direcionado para a tela Article, onde poderá ler o conteúdo da publicação escolhida. É renderizado o título, uma imagem, a data de publicação, o texto principal e um componente com informações do autor.
+- **Article:** Ao clicar no botão **"Ler este artigo"** em um card de publicação da página inicial, o usuário é direcionado para a tela `Article`, onde poderá ler o conteúdo da publicação escolhida. É renderizado o título, uma imagem, a data de publicação, o texto principal e um componente com informações do autor.
 
 ### Componentes:
 - **Header:** Um cabeçalho simples com uma imagem que redireciona para a página inicial quando clicada.
 - **Footer:** O rodapé possui três seções. A primeira abrange informações básicas sobre o site; a segunda contém uma lista de links úteis com um pequeno efeito de transição; a terceira é destacada na parte mais inferior da página, com uma linha em cor diferente indicando os créditos do desenvolvedor.
-- **CardList:** Este componente é responsável por gerar a lista de cards de acordo com os dados recebidos da API. Inicialmente busca 10 cards e armazena no estado as informações dele, assim como o número total de páginas que chega no header da requisição. Existe um botão "Carregar mais" no final do componente que faz mais uma requisição ao endpoint paginado e adiciona novos cards ao array, também renderizando-os em tela. Quando não houver mais páginas para renderizar, o botão desaparece.
-- **Card:** Cada card possui uma imagem, um título, nome do autor, data da publicação e um pequeno resumo, assim como um botão "Ler este artigo" que redirecionará o usuário para a página do  artigo correspondente.
+- **CardList:** Este componente é responsável por gerar a lista de cards de acordo com os dados recebidos da API. Inicialmente busca 10 cards e armazena no estado as informações dele, assim como o número total de páginas que chega no *header* da requisição. Existe um botão **"Carregar mais"** no final do componente que faz mais uma requisição ao endpoint paginado e adiciona novos cards ao *array*, também renderizando-os em tela. Quando não houver mais páginas para renderizar, o botão desaparece.
+- **Card:** Cada card possui uma imagem, um título, nome do autor, data da publicação e um pequeno resumo, assim como um botão **"Ler este artigo"** que redirecionará o usuário para a página do artigo correspondente.
 - **Author:** Um componente ao final do artigo com alguns dados sobre o autor: foto, nome e um pequeno resumo biográfico.
-- **Sidebar:** A barra lateral fica à direita e contém 3 seções: um widget para o Facebook e mais duas áreas placeholders, que eventualmente podem ser utilizadas. Como sugestão, podem prover ao usuário uma lista de publicações mais populares e uma compilação de assuntos para fácil navegação por tags.
-- **Loading:** A tela de loading é exibida na tela enquanto a aplicação faz alguma requisição para a API.
+- **Sidebar:** A barra lateral fica à direita e contém 3 seções: um *widget* para o Facebook e mais duas áreas *placeholders*, que eventualmente podem ser utilizadas. Como sugestão, podem prover ao usuário uma lista de publicações mais populares e uma compilação de assuntos para fácil navegação por *tags*.
+- **Loading:** A tela de *loading* é exibida na tela enquanto a aplicação faz alguma requisição para a API.
 
 ---
 
 ### Responsividade
-O site é melhor visualizado em resoluções acima de 1024px de largura. Foram inseridos alguns breakpoints para dispositivos com resoluções menores:
-- **Abaixo de 1024px:** A sidebar é posicionada abaixo dos cards, que passam a ocupar toda a largura da tela.
-- **Abaixo de 934px:** O footer quebra suas duas seções principais para a vertical.
-- **Abaixo de 770px:** Os cards assumem um novo formato na vertical, sendo que a imagem, a info e o botão ficam um acima do outro. Aqui já é considerado o formato mobile.
+O site é melhor visualizado em resoluções acima de 1024px de largura. Foram inseridos alguns *breakpoints* para dispositivos com resoluções menores:
+- **Abaixo de 1024px:** A `Sidebar` é posicionada abaixo dos cards, que passam a ocupar toda a largura da tela.
+- **Abaixo de 934px:** O `Footer` quebra suas duas seções principais para a vertical.
+- **Abaixo de 770px:** Os `Cards` assumem um novo formato na vertical, sendo que a imagem, a info e o botão ficam um acima do outro. Aqui já é adotado o formato *mobile*.
+
+---
+
+### Momento.js
+Esta biblioteca foi utilizada no componente `Card` e na página `Article` para exibir as datas em formato amigável.
 
 O resultado final pode ser conferido na seguinte URL:
 https://apiki-challenge.vercel.app/
 
-Os detalhes podem ser encontrados no README original do desafio, a seguir.
+Os detalhes podem ser encontrados no **README** original do desafio, a seguir.
 
 ---
 
