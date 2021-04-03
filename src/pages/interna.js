@@ -13,6 +13,7 @@ class Interna extends React.Component {
   }
 
   async componentDidMount() {
+    //FAZER UMA TRATATIVA CASO O SLUG NÃO SEJA VÁLIDO
     const slug = this.props.match.params.slug;
     this.setState({
       data: await getPost(slug)

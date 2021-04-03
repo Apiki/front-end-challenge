@@ -2,6 +2,7 @@ import React from 'react';
 import PostCard from '../components/postCard';
 import Header from '../components/header';
 import { fetchPosts, getHeaders } from '../services/index';
+import './inicial.css';
 
 class Inicial extends React.Component {
   constructor(props) {
@@ -49,7 +50,7 @@ class Inicial extends React.Component {
     return (
       <div>
         <Header/>
-        <div>
+        <div className='container-posts'>
           { data.map((post, index) => <PostCard key = { index } dados = { post }/>) }
         </div>
         <footer>

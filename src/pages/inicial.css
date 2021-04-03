@@ -1,0 +1,6 @@
+.container-posts {
+  /* background-color: red; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
