@@ -49,21 +49,24 @@ class Inicial extends React.Component {
     const { data } = this.state
     return (
       <div>
-        <Header/>
+        <header>
+          <Header/>
+        </header>
+
         <div className='container-posts'>
           { data.map((post, index) => <PostCard key = { index } dados = { post }/>) }
         </div>
+        
         <footer>
-          <button
-            onClick={ () => this.handleClick('prev') }
-          >
-            Voltar uma página
-          </button>
-          <button
-            onClick={ () => this.handleClick('next') }
-          >
+        <div className='container-buttons'>
+          <div className='button' onClick={ () => this.handleClick('prev') }>
+          Voltar uma página
+          </div>
+
+          <div className='button' onClick={ () => this.handleClick('next') }>
             Carregar mais...
-          </button>
+          </div>
+        </div>
         </footer>
       </div>
     )

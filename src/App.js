@@ -1,4 +1,3 @@
-import './App.css';
 import { BrowserRouter, Route} from 'react-router-dom';
 import Inicial from './pages/inicial';
 import Interna from './pages/interna';

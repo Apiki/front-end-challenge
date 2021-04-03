@@ -16,17 +16,15 @@ class PostCard extends React.Component {
       altTxt = 'WordPress Logo';
     }
     return(
-      // <div className='main-posts'>
-        <div className = 'container-card'>
-          <img className = 'img-card' src = { imgURL } alt = { altTxt }></img>
-          <p>{ rendered }</p>
-          <Link
-            to={ `/${slug}` }
-          >
-          <p>{ slug }</p>
-          </Link>
-        </div>
-      // </div>
+      <div className = 'container-card'>
+        <img className = 'img-card' src = { imgURL } alt = { altTxt }></img>
+        <p>{ rendered }</p>
+        <Link
+          to={ `/${slug}` }
+        >
+        <p>{ slug }</p>
+        </Link>
+      </div>
     )
   }
 }

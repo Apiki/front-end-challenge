@@ -1,6 +1,32 @@
 .container-posts {
-  /* background-color: red; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+.container-buttons {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.button {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-decoration: none;  
+  background-color: white;
+  border-color:black;
 }
