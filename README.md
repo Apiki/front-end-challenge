@@ -8,7 +8,7 @@ A meta é utilizar **React** para criar uma nova solução headless que consome 
 - React
 - CSS3
 - HTML5
-- Momento.js
+- Moment.js
 
 ---
 
@@ -39,7 +39,7 @@ O site é melhor visualizado em resoluções acima de 1024px de largura. Foram i
 
 ---
 
-### Momento.js
+### Moment.js
 Esta biblioteca foi utilizada no componente `Card` e na página `Article` para exibir as datas em formato amigável.
 
 O resultado final pode ser conferido na seguinte URL:
