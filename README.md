@@ -6,6 +6,7 @@ A meta é utilizar **React** para criar uma nova solução headless que consome 
 
 ## Tecnologias e bibliotecas adotadas:
 - React
+- JavaScript
 - CSS3
 - HTML5
 - Moment.js
