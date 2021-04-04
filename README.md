@@ -21,7 +21,7 @@ A meta é utilizar **React** para criar uma nova solução headless que consome 
     * `cd front-end-challenge`
 
 2. Instale as dependências
-  * Exemplo: `npm install`
+  * `npm install`
 
 3. Acesse a branch correta
   * Verifique que você está na branch `master`
@@ -30,7 +30,7 @@ A meta é utilizar **React** para criar uma nova solução headless que consome 
     * Exemplo: `git checkout anderson-santana`
 
 4. Execute o código
-  * Exemplo: `npm run`
+  * `npm run`
 
 ---
 
