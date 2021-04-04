@@ -1,15 +1,15 @@
 .loader {
   align-items: center;
-  justify-content: center;
-  display: flex;
-  color: #000000;
-  font-size: 20px;
-  margin: 100px auto;
-  width: 1em;
-  height: 1em;
   border-radius: 50%;
+  color: #000000;
+  display: flex;
+  font-size: 20px;
+  height: 1em;
+  justify-content: center;
+  margin: 100px auto;
   position: relative;
   text-indent: -9999em;
+  width: 1em;
   -webkit-animation: load4 1.3s infinite linear;
   animation: load4 1.3s infinite linear;
   -webkit-transform: translateZ(0);

@@ -1,37 +1,26 @@
 .btn {
-  padding: .5rem 1rem;
   background: #1a8ecb;
-  color: white;
   border: 1px solid transparent;
   border-radius: .25rem;
-  font-size: 1.08em;
+  color: white;
   font-family: 'Montserrat', sans-serif;
+  font-size: 1.08em;
+  padding: .5rem 1rem;
 }
 
 .btn:hover {
-  color: white !important;
   background: #1a8ecb;
-}
-
-.post-preview .info {
-  color: #757575;
-  font-size: .8em;
-}
-
-.preview-text {
-  line-height: 1.5em;
-  font-size: 1.03em;
-  color: #444;
+  color: white !important;
 }
 
 .post .read-more {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  border: 1px solid #1a8ecb;
   background: transparent;
+  border: 1px solid #1a8ecb;
   border-radius: 0px;
+  bottom: 10px;
   color: #1a8ecb !important;
+  position: absolute;
+  right: 10px;
 }
 
 .post .read-more:hover {
@@ -41,17 +30,28 @@
 }
 
 .post-image {
-  width: 40%;
-  height: 100%;
-  float: left;
-  border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  float: left;
+  height: 100%;
+  width: 40%;
 }
 
 .post-preview {
-  width: 60%;
-  padding: 20px;
   float: right;
+  padding: 20px;
+  width: 60%;
+}
+
+.post-preview .info {
+  color: #757575;
+  font-size: .8em;
+}
+
+.post-preview .preview-text {
+  color: #444;
+  font-size: 1.03em;
+  line-height: 1.5em;
 }
 
 .recent-post-title {
@@ -64,9 +64,9 @@
   }
 
   .post .read-more {
-    position: static;
     display: block;
-    width: 100%;
+    position: static;
     text-align: center;
+    width: 100%;
   }
 }

@@ -5,13 +5,20 @@
   position: relative;
 }
 
-.footer-content {
-  display: flex;
+.footer-bottom {
+  background: #343a40;
+  bottom: 0px;
+  color: #686868;
+  height: 40px;
+  left: 0px;
+  padding-top: 10px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
 }
 
-.footer-section {
-  flex: 1;
-  padding: 25px;
+.footer-content {
+  display: flex;
 }
 
 .footer-content h1,
@@ -19,10 +26,15 @@
   color: white;
 }
 
+.footer-section {
+  flex: 1;
+  padding: 25px;
+}
+
 .links ul a {
   display: block;
-  margin-bottom: 10px;
   font-size: 1.2em;
+  margin-bottom: 10px;
   transition: all .3s;
 }
 
@@ -32,27 +44,20 @@
   transition: all .3s;
 }
 
-.footer-bottom {
-  background: #343a40;
-  color: #686868;
-  height: 50px;
-  width: 100%;
-  text-align: center;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  padding-top: 20px;
-}
-
 @media only screen and (max-width: 934px) {
 
   .footer {
-    height: 430px;
+    height: auto;
+  }
+
+  .footer-bottom {
+    font-size: 0.6em;
+    height: 20px;
+    padding-top: 5px;
   }
 
   .footer-content {
     height: auto;
     flex-direction: column;
   }
-
 }

@@ -5,8 +5,8 @@
 }
 
 .sidebar {
-  width: 30%;
   float: left;
+  width: 30%;
 }
 
 .single {
@@ -15,9 +15,9 @@
 
 .section {
   background: white;
-  padding: 20px;
   border-radius: 5px;
   margin-bottom: 20px;
+  padding: 20px;
 }
 
 .section-title {
@@ -26,7 +26,7 @@
 
 @media only screen and (max-width: 1024px) {
   .sidebar {
-    width: 100%;
     padding: 10px;
+    width: 100%;
   }
 }

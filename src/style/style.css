@@ -4,11 +4,16 @@
 
 html,
 body {
-  height: 100%;
-  padding: 0px;
-  margin: 0px;
   background: #f6f6f6;
   font-family: 'Montserrat', sans-serif;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 h1,
@@ -17,40 +22,35 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Montserrat', sans-serif;
   color: #5c5b5b;
+  font-family: 'Montserrat', sans-serif;
   margin: 5px;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 .btn {
-  padding: .5rem 1rem;
   background: #2b6583;
-  color: white;
   border: 1px solid transparent;
   border-radius: .25rem;
-  font-size: 1.08em;
+  color: white;
   font-family: 'Montserrat', sans-serif;
+  font-size: 1.08em;
+  padding: .5rem 1rem;
 }
 
 .btn:hover {
-  color: white !important;
   background: #2b4883;
+  color: white !important;
 }
 
 .clearfix::after {
+  clear: both;
   content: '';
   display: block;
-  clear: both;
 }
 
 .content {
-  width: 90%;
   margin: 30px auto 30px;
+  width: 90%;
 }
 
 .page-wrapper {
@@ -58,17 +58,17 @@ a {
 }
 
 .main-content {
-  width: 70%;
   float: left;
+  width: 70%;
 }
 
 .main-content .post {
-  width: 95%;
+  background: white;
+  border-radius: 5px;
   height: 270px;
   margin: 20px auto;
-  border-radius: 5px;
-  background: white;
   position: relative;
+  width: 95%;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -76,13 +76,13 @@ a {
     width: 100%;
   }
 
-  .content .main-content .post {
+  .content .main-content {
+    padding: 10px;
     width: 100%;
   }
 
-  .content .main-content {
+  .content .main-content .post {
     width: 100%;
-    padding: 10px;
   }
 }
 
