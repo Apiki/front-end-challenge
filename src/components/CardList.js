@@ -46,8 +46,9 @@ class CardList extends Component {
           <Loading />
           ) : (
             <div className="content clearfix">
+              <h1>Blog Apiki</h1>
               <div className="main-content">
-                <h1 className="recent-post-title">Últimas publicações</h1>
+                <h2 className="recent-post-title">Últimas publicações</h2>
                 {cards.map((card) => <Card key={card.id} card={card}/>)}
                 {totalPages > nextPage ? (
                   <button
