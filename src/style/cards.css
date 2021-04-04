@@ -11,6 +11,7 @@
 .btn:hover {
   background: #1a8ecb;
   color: white !important;
+  cursor: pointer;
 }
 
 .post .read-more {
