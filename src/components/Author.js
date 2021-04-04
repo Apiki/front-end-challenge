@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../style/author.css';
 
 class Author extends Component {
   render() {
@@ -11,10 +12,12 @@ class Author extends Component {
     }
 
     return(
-      <div>
-        {url ? <img alt="" src={url} /> : <div />}
+      <div className="author">
         <div>
+          {url ? <img alt="" src={url} /> : <div />}
           <h6>{name}</h6>
+        </div>
+        <div className="author-text">
           <p>{description}</p>
         </div>
       </div>
