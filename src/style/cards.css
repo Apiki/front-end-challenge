@@ -39,9 +39,11 @@
 }
 
 .post-preview {
+  display: block;
   float: right;
   padding: 20px;
   width: 60%;
+  max-height: 270px;
 }
 
 .post-preview .info {
@@ -53,6 +55,8 @@
   color: #444;
   font-size: 1.03em;
   line-height: 1.5em;
+  max-height: 5.5em;
+  overflow: hidden;
 }
 
 .recent-post-title {
