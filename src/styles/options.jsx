@@ -3,6 +3,151 @@ import { domToReact, attributesToProps } from 'html-react-parser';
 const options = {
   replace: (domNode) => {
     if (!domNode.attribs) {
+
+      if (domNode.name === 'p') {
+        return (
+          <h2 className='details-default-p'>
+            {domToReact(domNode.children, options)}
+          </h2>
+        );
+      }
+
+      if (domNode.name === 'a') {
+        return (
+          <h2 className='details-default-a'>
+            {domToReact(domNode.children, options)}
+          </h2>
+        );
+      }
+
+      if (domNode.name === 'table') {
+        return (
+          <h2 className='details-default-table'>
+            {domToReact(domNode.children, options)}
+          </h2>
+        );
+      }
+
+      if (domNode.name === 'ol') {
+        return (
+          <h2 className='details-default-ol'>
+            {domToReact(domNode.children, options)}
+          </h2>
+        );
+      }
+
+      if (domNode.name === 'ul') {
+        return (
+          <h2 className='details-default-ul'>
+            {domToReact(domNode.children, options)}
+          </h2>
+        );
+      }
+
+      if (domNode.name === 'li') {
+        return (
+          <h2 className='details-default-li'>
+            {domToReact(domNode.children, options)}
+          </h2>
+        );
+      }
+
+      if (domNode.name === 'i') {
+        return (
+          <h2 className='details-default-i'>
+            {domToReact(domNode.children, options)}
+          </h2>
+        );
+      }
+
+      if (domNode.name === 'b') {
+        return (
+          <h2 className='details-default-b'>
+            {domToReact(domNode.children, options)}
+          </h2>
+        );
+      }
+
+      if (domNode.name === 'strong') {
+        return (
+          <h2 className='details-default-strong'>
+            {domToReact(domNode.children, options)}
+          </h2>
+        );
+      }
+
+      if (domNode.name === 'em') {
+        return (
+          <h2 className='details-default-em'>
+            {domToReact(domNode.children, options)}
+          </h2>
+        );
+      }
+
+      if (domNode.name === 'h2') {
+        return (
+          <h2 className='details-default-h2'>
+            {domToReact(domNode.children, options)}
+          </h2>
+        );
+      }
+
+      if (domNode.name === 'h3') {
+        return (
+          <h2 className='details-default-h3'>
+            {domToReact(domNode.children, options)}
+          </h2>
+        );
+      }
+
+      if (domNode.name === 'h4') {
+        return (
+          <h2 className='details-default-h4'>
+            {domToReact(domNode.children, options)}
+          </h2>
+        );
+      }
+
+      if (domNode.name === 'pre') {
+        return (
+          <h2 className='details-default-pre'>
+            {domToReact(domNode.children, options)}
+          </h2>
+        );
+      }
+
+      if (domNode.name === 'iframe') {
+        return (
+          <h2 className='details-default-iframe'>
+            {domToReact(domNode.children, options)}
+          </h2>
+        );
+      }
+
+      if (domNode.name === 'code') {
+        return (
+          <h2 className='details-default-code'>
+            {domToReact(domNode.children, options)}
+          </h2>
+        );
+      }
+
+      if (domNode.name === 'blockquote') {
+        return (
+          <h2 className='details-default-blockquote'>
+            {domToReact(domNode.children, options)}
+          </h2>
+        );
+      }
+
+      if (domNode.name === 'div') {
+        return (
+          <h2 className='details-default-div'>
+            {domToReact(domNode.children, options)}
+          </h2>
+        );
+      }
+
       return;
     }
 
@@ -85,7 +230,7 @@ const options = {
         </figure>
       );
     }
-    
+
     if (domNode.attribs.class === 'wp-caption aligncenter' || domNode.attribs.class === 'aligncenter') {
       return (
         <figure className='details-figure-aligncenter'>
@@ -154,7 +299,7 @@ const options = {
         </a>
       );
     }
-    
+
     if (domNode.attribs.class === 'wp-block-coblocks-click-to-tweet' || domNode.attribs.class === 'wp-block-quote wp-block-coblocks-click-to-tweet') {
       return (
         <blockquote className='details-blockquote'>
@@ -218,20 +363,12 @@ const options = {
         </span>
       );
     }
-    
+
     if (domNode.attribs.class === 'mw-headline') {
       return (
         <span className='details-span-headline'>
           {domToReact(domNode.children, options)}
         </span>
-      );
-    }
-
-    if (domNode.name === 'h2') {
-      return (
-        <h2 className='details-subtitle'>
-          {domToReact(domNode.children, options)}
-        </h2>
       );
     }
 

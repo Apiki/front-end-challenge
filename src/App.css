@@ -1,5 +1,5 @@
 body {
-  background-image: linear-gradient(to bottom right, dimgray, darkgray);
+  background-image: linear-gradient(to bottom right, dimgray, lightgray);
 }
 
 #root div div {
@@ -116,6 +116,25 @@ body {
 .details-video {
   width: fit-content;
 }
+
+.details-default-p{}
+.details-default-a{}
+.details-default-b{}
+.details-default-i{}
+.details-default-h2{}
+.details-default-table{}
+.details-default-ul{}
+.details-default-li{}
+.details-default-strong{}
+.details-default-ol{}
+.details-default-em{}
+.details-default-h3{}
+.details-default-h4{}
+.details-default-pre{}
+.details-default-iframe{}
+.details-default-code{}
+.details-default-blockquote{}
+.details-default-div{}
 
 .details-footer {
   display: flex;
