@@ -55,7 +55,7 @@ class CardList extends Component {
                     type="button"
                     onClick={this.loadMore}
                   >
-                  Carregar mais
+                  Carregar mais...
                 </button>
                 ) : (
                   <div></div>
