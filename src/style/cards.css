@@ -1,0 +1,76 @@
+.btn {
+  background: #1a8ecb;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.08em;
+  padding: .5rem 1rem;
+}
+
+.btn:hover {
+  background: #1a8ecb;
+  color: white !important;
+  cursor: pointer;
+}
+
+.post .read-more {
+  background: transparent;
+  border: 1px solid #1a8ecb;
+  border-radius: 0px;
+  bottom: 10px;
+  color: #1a8ecb !important;
+  position: absolute;
+  right: 10px;
+}
+
+.post .read-more:hover {
+  background: #1a8ecb;
+  color: white !important;
+  transition: .25s;
+}
+
+.post-image {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  float: left;
+  height: 100%;
+  width: 40%;
+}
+
+.post-preview {
+  float: right;
+  padding: 20px;
+  width: 60%;
+  max-height: 270px;
+}
+
+.post-preview .info {
+  color: #757575;
+  font-size: .8em;
+}
+
+.post-preview .preview-text {
+  color: #444;
+  font-size: 1.03em;
+  line-height: 1.5em;
+  max-height: 5.5em;
+  overflow: hidden;
+}
+
+.recent-post-title {
+  margin: 20px;
+}
+
+@media only screen and (max-width: 770px) {
+  .post .post-preview {
+    width: 100%;
+  }
+
+  .post .read-more {
+    display: block;
+    position: static;
+    text-align: center;
+    width: 100%;
+  }
+}

@@ -1,0 +1,32 @@
+.popular .post {
+  border-top: 1px solid #e0e0e0;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.sidebar {
+  float: left;
+  width: 30%;
+}
+
+.single {
+  padding: 0px 10px;
+}
+
+.section {
+  background: white;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.section-title {
+  margin: 10px 0px 10px 0px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .sidebar {
+    padding: 10px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,21 @@
+header {
+  background: #d07400;
+  height: 66px;
+}
+
+header .logo {
+  float: left;
+  height: inherit;
+  margin-left: 2em;
+}
+
+header .logo-img {
+  padding: 9px;
+  height: 90%;
+}
+
+@media only screen and (max-width: 770px) {
+  header .logo {
+    margin-left: .5em;
+  }
+}

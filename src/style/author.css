@@ -1,0 +1,11 @@
+.author {
+  border: 1px solid #757575;
+  display: flex;
+  padding: 15px;
+  margin: 15px;
+}
+
+.author-text {
+  color: #757575;
+  padding: 0px 30px;
+}
