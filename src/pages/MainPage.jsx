@@ -1,17 +1,20 @@
 import React, { useContext, useEffect } from 'react';
 import ApikiBlogContext from '../context/ApikiBlogContext';
-import getAll from '../services/getAll';
-import PostsList from '../components/PostsList';
 import Button from '../components/Button';
+import PostsList from '../components/PostsList';
+import getAll from '../services/getAll';
 
 const MainPage = () => {
-  const { loading, setLoading, setData } = useContext(ApikiBlogContext);
+  const { loading, setLoading, setData, continous, setContinous } = useContext(ApikiBlogContext);
   useEffect(() => {
-    getAll().then((response) => {
-      setData(response);
-      setLoading(false);
-    });
-  }, []);
+    if (!continous) {
+      getAll().then((response) => {
+        setData(response);
+        setContinous(true);
+        setLoading(false);
+      });
+    }
+  });
 
   return (
     !loading ?

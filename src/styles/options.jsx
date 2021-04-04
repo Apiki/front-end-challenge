@@ -2,9 +2,9 @@ import { domToReact, attributesToProps } from 'html-react-parser';
 
 const options = {
   replace: (domNode) => {
-    // if (!domNode.attribs) {
-    //   return;
-    // }
+    if (!domNode.attribs) {
+      return;
+    }
 
     if (domNode.attribs.class === 'wp-block-coblocks-click-to-tweet__text') {
       return (
