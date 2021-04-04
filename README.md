@@ -13,6 +13,27 @@ A meta é utilizar **React** para criar uma nova solução headless que consome 
 
 ---
 
+## Como clonar o projeto e executá-lo localmente:
+
+1. Clone o repositório
+  * `git clone https://github.com/andersonssantana/front-end-challenge.git`.
+  * Entre na pasta do repositório que você acabou de clonar:
+    * `cd front-end-challenge`
+
+2. Instale as dependências
+  * Exemplo: `npm install`
+
+3. Acesse a branch correta
+  * Verifique que você está na branch `master`
+    * Exemplo: `git branch`
+  * Mude para a branch `anderson-santana`
+    * Exemplo: `git checkout anderson-santana`
+
+4. Execute o código
+  * Exemplo: `npm run`
+
+---
+
 ## Organização do código
 
 O código é dividido em **2 páginas** e **7 componentes**.
