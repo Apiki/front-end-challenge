@@ -1,0 +1,30 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.post-image {
+  border-radius: 10px;
+}
+
+.container-about-author {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color:lightsteelblue;
+  padding: 5px;
+}
+
+.author-avatar {
+  margin-right: 10px;
+  border-radius: 10px;
+}

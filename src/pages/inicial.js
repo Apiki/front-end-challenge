@@ -1,8 +1,8 @@
-import React from 'react';
-import PostCard from '../components/postCard';
-import Header from '../components/header';
-import { fetchPosts, getHeaders } from '../services/index';
-import './inicial.css';
+import React from "react";
+import PostCard from "../components/postCard";
+import Header from "../components/header";
+import { fetchPosts, getHeaders } from "../services/index";
+import "./inicial.css";
 
 class Inicial extends React.Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class Inicial extends React.Component {
       data: [],
       pagAtual: 1,
       pagTotal: 1,
-    }
+    };
 
     this.handleClick = this.handleClick.bind(this);
   }
@@ -23,53 +23,55 @@ class Inicial extends React.Component {
       data: await fetchPosts(pagAtual),
       pagTotal: await getHeaders(),
     });
-  };
+  }
 
   async handleClick(command) {
     const { pagAtual, pagTotal } = this.state;
-    if (command === 'next') {
+    if (command === "next") {
       if (pagAtual < pagTotal) {
         await this.setState((state) => ({
           pagAtual: state.pagAtual + 1,
-        }))
+        }));
       }
-    } else if (command === 'prev') {
+    } else if (command === "prev") {
       if (pagAtual > 1) {
         await this.setState((state) => ({
           pagAtual: state.pagAtual - 1,
-        }))
+        }));
       }
     }
     this.setState({
       data: await fetchPosts(this.state.pagAtual),
-    })
+    });
   }
 
   render() {
-    const { data } = this.state
+    const { data } = this.state;
     return (
       <div>
         <header>
-          <Header/>
+          <Header />
         </header>
 
-        <div className='container-posts'>
-          { data.map((post, index) => <PostCard key = { index } dados = { post }/>) }
+        <div className="container-posts">
+          {data.map((post, index) => (
+            <PostCard key={index} dados={post} />
+          ))}
         </div>
-        
-        <footer>
-        <div className='container-buttons'>
-          <div className='button' onClick={ () => this.handleClick('prev') }>
-          Voltar uma página
-          </div>
 
-          <div className='button' onClick={ () => this.handleClick('next') }>
-            Carregar mais...
+        <footer>
+          <div className="container-buttons">
+            <div className="button" onClick={() => this.handleClick("prev")}>
+              Voltar uma página
+            </div>
+
+            <div className="button" onClick={() => this.handleClick("next")}>
+              Carregar mais...
+            </div>
           </div>
-        </div>
         </footer>
       </div>
-    )
+    );
   }
 }
 
