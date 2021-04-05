@@ -2,88 +2,290 @@ import { domToReact, attributesToProps } from 'html-react-parser';
 
 const options = {
   replace: (domNode) => {
-    if (!domNode.attribs) {
-
+    if (domNode.attribs) {
+      console.log('att', domNode);
+      if (domNode.attribs.class === 'wp-block-coblocks-click-to-tweet__text') {
+        return (
+          <p className='details-p-tweet'>
+            {domToReact(domNode.children, options)}
+          </p>
+        );
+      }
+      if (domNode.attribs.class === 'gform_not_found') {
+        return (
+          <p className='details-p-notfound'>
+            {domToReact(domNode.children, options)}
+          </p>
+        );
+      }
+      if (domNode.attribs.class === 'wp-block-code') {
+        return (
+          <pre className='details-pre-block'>
+            {domToReact(domNode.children, options)}
+          </pre>
+        );
+      }
+      if (domNode.attribs.class === 'wp-block-preformatted') {
+        return (
+          <pre className='details-pre-preformatted'>
+            {domToReact(domNode.children, options)}
+          </pre>
+        );
+      }
+      if (domNode.attribs.class === 'tw-data-text tw-ta tw-text-small') {
+        return (
+          <pre className='details-pre-small'>
+            {domToReact(domNode.children, options)}
+          </pre>
+        );
+      }
+      if (domNode.attribs.class === 'highlight') {
+        return (
+          <pre className='details-pre-highlight'>
+            {domToReact(domNode.children, options)}
+          </pre>
+        );
+      }
+      if (domNode.attribs.class === 'wp-block-table is-style-stripes' || domNode.attribs.class === 'wp-block-table is-style-regular') {
+        return (
+          <figure className='details-figure-blocktable'>
+            {domToReact(domNode.children, options)}
+          </figure>
+        );
+      }
+      if (domNode.attribs.class === 'wp-block-image') {
+        return (
+          <figure className='details-figure-blockimage'>
+            {domToReact(domNode.children, options)}
+          </figure>
+        );
+      }
+      if (domNode.attribs.class === 'wp-block-image size-large' || domNode.attribs.class === 'wp-block-image floated__img') {
+        return (
+          <figure className='details-figure-blockimage-large'>
+            {domToReact(domNode.children, options)}
+          </figure>
+        );
+      }
+      if (domNode.attribs.class === 'aligncenter size-large is-resized' || domNode.attribs.class === 'aligncenter size-large') {
+        return (
+          <figure className='details-figure-aligncenter-large'>
+            {domToReact(domNode.children, options)}
+          </figure>
+        );
+      }
+      if (domNode.attribs.class === 'wp-caption aligncenter' || domNode.attribs.class === 'aligncenter') {
+        return (
+          <figure className='details-figure-aligncenter'>
+            {domToReact(domNode.children, options)}
+          </figure>
+        );
+      }
+      if (domNode.attribs.class === 'wp-caption alignright' || domNode.attribs.class === 'wp-caption alignleft' || domNode.attribs.class === 'wp-caption alignnone') {
+        return (
+          <figure className='details-figure-align'>
+            {domToReact(domNode.children, options)}
+          </figure>
+        );
+      }
+      if (domNode.attribs.class === 'wp-caption-text') {
+        return (
+          <figcaption className='details-figcaption-text'>
+            {domToReact(domNode.children, options)}
+          </figcaption>
+        );
+      }
+      if (!domNode.attribs.class && domNode.name === 'iframe') {
+        const props = attributesToProps(domNode.attribs);
+        props.className = 'details-default-iframe';
+        return (
+          <iframe title={props.title} {...props}>
+            {domToReact(domNode.children, options)}
+          </iframe>
+        );
+      }
+      if (!domNode.attribs.class && domNode.name === 'a') {
+        const props = attributesToProps(domNode.attribs);
+        return (
+          <a className='details-default-a' {...props}>
+            {domToReact(domNode.children, options)}
+          </a>
+        );
+      }
+      if (domNode.attribs.class === 'tm-ctt-btn') {
+        const props = attributesToProps(domNode.attribs);
+        props.className = 'details-link-tm-ctt-btn';
+        console.log('link', props);
+        return (<a {...props}>
+          {domToReact(domNode.children, options)}
+        </a>);
+      }
+      if (domNode.attribs.class === 'external text') {
+        const props = attributesToProps(domNode.attribs);
+        props.className = 'details-link-externaltext';
+        return (
+          <a {...props}>
+            {domToReact(domNode.children, options)}
+          </a>
+        );
+      }
+      if (domNode.attribs.class === 'image') {
+        const props = attributesToProps(domNode.attribs);
+        props.className = 'details-link-image';
+        return (
+          <a {...props}>
+            {domToReact(domNode.children, options)}
+          </a>
+        );
+      }
+      if (domNode.attribs.class === 'mw-redirect') {
+        const props = attributesToProps(domNode.attribs);
+        props.className = 'details-link-redirect';
+        return (
+          <a {...props}>
+            {domToReact(domNode.children, options)}
+          </a>
+        );
+      }
+      if (domNode.attribs.class === 'wp-block-coblocks-click-to-tweet__twitter-btn') {
+        const props = attributesToProps(domNode.attribs);
+        props.className = 'details-link-twitter-btn';
+        return (
+          <a {...props}>
+            {domToReact(domNode.children, options)}
+          </a>
+        );
+      }
+      if (domNode.attribs.class === 'wp-block-coblocks-click-to-tweet' || domNode.attribs.class === 'wp-block-quote wp-block-coblocks-click-to-tweet') {
+        return (
+          <blockquote className='details-blockquote'>
+            {domToReact(domNode.children, options)}
+          </blockquote>
+        );
+      }
+      if (domNode.attribs.class === 'wp-video-shortcode') {
+        return (
+          <video className='details-video'>
+            {domToReact(domNode.children, options)}
+          </video>
+        );
+      }
+      if (domNode.attribs.class === 'wikitable' || domNode.attribs.class === 'widefat' || domNode.attribs.class === 'has-fixed-layout') {
+        return (
+          <table className='details-table'>
+            {domToReact(domNode.children, options)}
+          </table>
+        );
+      }
+      if (domNode.attribs.class === 'notranslate') {
+        return (
+          <span className='details-span-notranslate'>
+            {domToReact(domNode.children, options)}
+          </span>
+        );
+      }
+      if (domNode.attribs.class === 'arg-type' || domNode.attribs.class === 'arg-name' || domNode.attribs.class === 'arg-default') {
+        return (
+          <span className='details-span-arg'>
+            {domToReact(domNode.children, options)}
+          </span>
+        );
+      }
+      if (domNode.attribs.class === 'nt' || domNode.attribs.class === 'na' || domNode.attribs.class === 's') {
+        return (
+          <span className='details-span-ntnas'>
+            {domToReact(domNode.children, options)}
+          </span>
+        );
+      }
+      if (domNode.attribs.class === 'goog-text-highlight') {
+        return (
+          <span className='details-span-goog-text-highlight'>
+            {domToReact(domNode.children, options)}
+          </span>
+        );
+      }
+      if (domNode.attribs.class === 'mw-headline') {
+        return (
+          <span className='details-span-headline'>
+            {domToReact(domNode.children, options)}
+          </span>
+        );
+      }
+    }
+    if (domNode.name) {
+      if (domNode.name === 'code') {
+        console.log('code');
+        return (
+          <code className='details-default-code'>
+            {domToReact(domNode.children, options)}
+          </code>
+        );
+      }
       if (domNode.name === 'p') {
+        console.log('outer here');
         return (
-          <h2 className='details-default-p'>
+          <p className='details-default-p'>
             {domToReact(domNode.children, options)}
-          </h2>
+          </p>
         );
       }
-
-      if (domNode.name === 'a') {
-        return (
-          <h2 className='details-default-a'>
-            {domToReact(domNode.children, options)}
-          </h2>
-        );
-      }
-
       if (domNode.name === 'table') {
         return (
-          <h2 className='details-default-table'>
+          <table className='details-default-table'>
             {domToReact(domNode.children, options)}
-          </h2>
+          </table>
         );
       }
-
       if (domNode.name === 'ol') {
         return (
-          <h2 className='details-default-ol'>
+          <ol className='details-default-ol'>
             {domToReact(domNode.children, options)}
-          </h2>
+          </ol>
         );
       }
-
       if (domNode.name === 'ul') {
         return (
-          <h2 className='details-default-ul'>
+          <ul className='details-default-ul'>
             {domToReact(domNode.children, options)}
-          </h2>
+          </ul>
         );
       }
-
       if (domNode.name === 'li') {
         return (
-          <h2 className='details-default-li'>
+          <li className='details-default-li'>
             {domToReact(domNode.children, options)}
-          </h2>
+          </li>
         );
       }
-
       if (domNode.name === 'i') {
         return (
-          <h2 className='details-default-i'>
+          <i className='details-default-i'>
             {domToReact(domNode.children, options)}
-          </h2>
+          </i>
         );
       }
-
       if (domNode.name === 'b') {
         return (
-          <h2 className='details-default-b'>
+          <b className='details-default-b'>
             {domToReact(domNode.children, options)}
-          </h2>
+          </b>
         );
       }
-
       if (domNode.name === 'strong') {
         return (
-          <h2 className='details-default-strong'>
+          <strong className='details-default-strong'>
             {domToReact(domNode.children, options)}
-          </h2>
+          </strong>
         );
       }
-
       if (domNode.name === 'em') {
         return (
-          <h2 className='details-default-em'>
+          <em className='details-default-em'>
             {domToReact(domNode.children, options)}
-          </h2>
+          </em>
         );
       }
-
       if (domNode.name === 'h2') {
         return (
           <h2 className='details-default-h2'>
@@ -91,288 +293,49 @@ const options = {
           </h2>
         );
       }
-
       if (domNode.name === 'h3') {
         return (
-          <h2 className='details-default-h3'>
+          <h3 className='details-default-h3'>
             {domToReact(domNode.children, options)}
-          </h2>
+          </h3>
         );
       }
-
       if (domNode.name === 'h4') {
         return (
-          <h2 className='details-default-h4'>
+          <h4 className='details-default-h4'>
             {domToReact(domNode.children, options)}
-          </h2>
+          </h4>
         );
       }
-
       if (domNode.name === 'pre') {
         return (
-          <h2 className='details-default-pre'>
+          <pre className='details-default-pre'>
             {domToReact(domNode.children, options)}
-          </h2>
+          </pre>
         );
       }
-
-      if (domNode.name === 'iframe') {
-        return (
-          <h2 className='details-default-iframe'>
-            {domToReact(domNode.children, options)}
-          </h2>
-        );
-      }
-
       if (domNode.name === 'code') {
         return (
-          <h2 className='details-default-code'>
+          <code className='details-default-code'>
             {domToReact(domNode.children, options)}
-          </h2>
+          </code>
         );
       }
-
       if (domNode.name === 'blockquote') {
         return (
-          <h2 className='details-default-blockquote'>
+          <blockquote className='details-default-blockquote'>
             {domToReact(domNode.children, options)}
-          </h2>
+          </blockquote>
         );
       }
-
       if (domNode.name === 'div') {
         return (
-          <h2 className='details-default-div'>
+          <div className='details-default-div'>
             {domToReact(domNode.children, options)}
-          </h2>
+          </div>
         );
       }
-
-      return;
     }
-
-    if (domNode.attribs.class === 'wp-block-coblocks-click-to-tweet__text') {
-      return (
-        <p className='details-p-tweet'>
-          {domToReact(domNode.children, options)}
-        </p>
-      );
-    }
-
-    if (domNode.attribs.class === 'gform_not_found') {
-      return (
-        <p className='details-p-notfound'>
-          {domToReact(domNode.children, options)}
-        </p>
-      );
-    }
-
-    if (domNode.attribs.class === 'wp-block-code') {
-      return (
-        <pre className='details-pre-block'>
-          {domToReact(domNode.children, options)}
-        </pre>
-      );
-    }
-
-    if (domNode.attribs.class === 'wp-block-preformatted') {
-      return (
-        <pre className='details-pre-preformatted'>
-          {domToReact(domNode.children, options)}
-        </pre>
-      );
-    }
-
-    if (domNode.attribs.class === 'tw-data-text tw-ta tw-text-small') {
-      return (
-        <pre className='details-pre-small'>
-          {domToReact(domNode.children, options)}
-        </pre>
-      );
-    }
-
-    if (domNode.attribs.class === 'highlight') {
-      return (
-        <pre className='details-pre-highlight'>
-          {domToReact(domNode.children, options)}
-        </pre>
-      );
-    }
-
-    if (domNode.attribs.class === 'wp-block-table is-style-stripes' || domNode.attribs.class === 'wp-block-table is-style-regular') {
-      return (
-        <figure className='details-figure-blocktable'>
-          {domToReact(domNode.children, options)}
-        </figure>
-      );
-    }
-
-    if (domNode.attribs.class === 'wp-block-image') {
-      return (
-        <figure className='details-figure-blockimage'>
-          {domToReact(domNode.children, options)}
-        </figure>
-      );
-    }
-
-    if (domNode.attribs.class === 'wp-block-image size-large' || domNode.attribs.class === 'wp-block-image floated__img') {
-      return (
-        <figure className='details-figure-blockimage-large'>
-          {domToReact(domNode.children, options)}
-        </figure>
-      );
-    }
-
-    if (domNode.attribs.class === 'aligncenter size-large is-resized' || domNode.attribs.class === 'aligncenter size-large') {
-      return (
-        <figure className='details-figure-aligncenter-large'>
-          {domToReact(domNode.children, options)}
-        </figure>
-      );
-    }
-
-    if (domNode.attribs.class === 'wp-caption aligncenter' || domNode.attribs.class === 'aligncenter') {
-      return (
-        <figure className='details-figure-aligncenter'>
-          {domToReact(domNode.children, options)}
-        </figure>
-      );
-    }
-
-    if (domNode.attribs.class === 'wp-caption alignright' || domNode.attribs.class === 'wp-caption alignleft' || domNode.attribs.class === 'wp-caption alignnone') {
-      return (
-        <figure className='details-figure-align'>
-          {domToReact(domNode.children, options)}
-        </figure>
-      );
-    }
-
-    if (domNode.attribs.class === 'wp-caption-text') {
-      return (
-        <figcaption className='details-figcaption-text'>
-          {domToReact(domNode.children, options)}
-        </figcaption>
-      );
-    }
-
-    if (domNode.attribs.class === 'external text') {
-      const props = attributesToProps(domNode.attribs);
-      return (
-        <a className='details-link-externaltext' {...props}>
-          {domToReact(domNode.children, options)}
-        </a>
-      );
-    }
-
-    if (domNode.attribs.class === 'image') {
-      const props = attributesToProps(domNode.attribs);
-      return (
-        <a className='details-link-image' {...props}>
-          {domToReact(domNode.children, options)}
-        </a>
-      );
-    }
-
-    if (domNode.attribs.class === 'mw-redirect') {
-      const props = attributesToProps(domNode.attribs);
-      return (
-        <a className='details-link-redirect' {...props}>
-          {domToReact(domNode.children, options)}
-        </a>
-      );
-    }
-
-    if (domNode.attribs.class === 'tm-ctt-btn') {
-      const props = attributesToProps(domNode.attribs);
-      return (
-        <a className='details-link-tm-ctt-btn' {...props}>
-          {domToReact(domNode.children, options)}
-        </a>
-      );
-    }
-
-    if (domNode.attribs.class === 'wp-block-coblocks-click-to-tweet__twitter-btn') {
-      const props = attributesToProps(domNode.attribs);
-      return (
-        <a className='details-link-twitter-btn' {...props}>
-          {domToReact(domNode.children, options)}
-        </a>
-      );
-    }
-
-    if (domNode.attribs.class === 'wp-block-coblocks-click-to-tweet' || domNode.attribs.class === 'wp-block-quote wp-block-coblocks-click-to-tweet') {
-      return (
-        <blockquote className='details-blockquote'>
-          {domToReact(domNode.children, options)}
-        </blockquote>
-      );
-    }
-
-    if (domNode.name === 'code') {
-      return (
-        <code className='details-code'>
-          {domToReact(domNode.children, options)}
-        </code>
-      );
-    }
-
-    if (domNode.attribs.class === 'wp-video-shortcode') {
-      return (
-        <video className='details-video'>
-          {domToReact(domNode.children, options)}
-        </video>
-      );
-    }
-
-    if (domNode.attribs.class === 'wikitable' || domNode.attribs.class === 'widefat' || domNode.attribs.class === 'has-fixed-layout') {
-      return (
-        <table className='details-table'>
-          {domToReact(domNode.children, options)}
-        </table>
-      );
-    }
-
-    if (domNode.attribs.class === 'notranslate') {
-      return (
-        <span className='details-span-notranslate'>
-          {domToReact(domNode.children, options)}
-        </span>
-      );
-    }
-
-    if (domNode.attribs.class === 'arg-type' || domNode.attribs.class === 'arg-name' || domNode.attribs.class === 'arg-default') {
-      return (
-        <span className='details-span-arg'>
-          {domToReact(domNode.children, options)}
-        </span>
-      );
-    }
-
-    if (domNode.attribs.class === 'nt' || domNode.attribs.class === 'na' || domNode.attribs.class === 's') {
-      return (
-        <span className='details-span-ntnas'>
-          {domToReact(domNode.children, options)}
-        </span>
-      );
-    }
-
-    if (domNode.attribs.class === 'goog-text-highlight') {
-      return (
-        <span className='details-span-goog-text-highlight'>
-          {domToReact(domNode.children, options)}
-        </span>
-      );
-    }
-
-    if (domNode.attribs.class === 'mw-headline') {
-      return (
-        <span className='details-span-headline'>
-          {domToReact(domNode.children, options)}
-        </span>
-      );
-    }
-
   }
-};
-
+}
 export default options;

@@ -125,6 +125,8 @@ body {
 }
 .details-default-a{
   background-color: yellow;
+  width: fit-content;
+  margin: auto;
 }
 .details-default-b{
   color: darkred;
@@ -169,10 +171,11 @@ body {
   margin: auto;
 }
 .details-default-code{
-  background-color: silver;
+  background-color: white;
+  border: 1px solid black;
 }
 .details-default-blockquote{
-  background-color: silver;
+  background-color: white;
 }
 .details-default-div{
   display: flex;
