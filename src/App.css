@@ -153,6 +153,9 @@ body {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .details-default-pre {
+  background-color: white;
+  width: 50%;
+  overflow-x: auto;
   margin: auto;
 }
 .details-default-iframe {
