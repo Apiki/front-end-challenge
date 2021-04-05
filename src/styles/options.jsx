@@ -3,7 +3,6 @@ import { domToReact, attributesToProps } from 'html-react-parser';
 const options = {
   replace: (domNode) => {
     if (domNode.attribs) {
-      console.log('att', domNode);
       if (domNode.attribs.class === 'wp-block-coblocks-click-to-tweet__text') {
         return (
           <p className='details-p-tweet'>
@@ -46,7 +45,8 @@ const options = {
           </pre>
         );
       }
-      if (domNode.attribs.class === 'wp-block-table is-style-stripes' || domNode.attribs.class === 'wp-block-table is-style-regular') {
+      if (domNode.attribs.class === 'wp-block-table is-style-stripes' ||
+      domNode.attribs.class === 'wp-block-table is-style-regular') {
         return (
           <figure className='details-figure-blocktable'>
             {domToReact(domNode.children, options)}
@@ -60,28 +60,33 @@ const options = {
           </figure>
         );
       }
-      if (domNode.attribs.class === 'wp-block-image size-large' || domNode.attribs.class === 'wp-block-image floated__img') {
+      if (domNode.attribs.class === 'wp-block-image size-large' ||
+      domNode.attribs.class === 'wp-block-image floated__img') {
         return (
           <figure className='details-figure-blockimage-large'>
             {domToReact(domNode.children, options)}
           </figure>
         );
       }
-      if (domNode.attribs.class === 'aligncenter size-large is-resized' || domNode.attribs.class === 'aligncenter size-large') {
+      if (domNode.attribs.class === 'aligncenter size-large is-resized' ||
+      domNode.attribs.class === 'aligncenter size-large') {
         return (
           <figure className='details-figure-aligncenter-large'>
             {domToReact(domNode.children, options)}
           </figure>
         );
       }
-      if (domNode.attribs.class === 'wp-caption aligncenter' || domNode.attribs.class === 'aligncenter') {
+      if (domNode.attribs.class === 'wp-caption aligncenter' ||
+      domNode.attribs.class === 'aligncenter') {
         return (
           <figure className='details-figure-aligncenter'>
             {domToReact(domNode.children, options)}
           </figure>
         );
       }
-      if (domNode.attribs.class === 'wp-caption alignright' || domNode.attribs.class === 'wp-caption alignleft' || domNode.attribs.class === 'wp-caption alignnone') {
+      if (domNode.attribs.class === 'wp-caption alignright' ||
+      domNode.attribs.class === 'wp-caption alignleft' ||
+      domNode.attribs.class === 'wp-caption alignnone') {
         return (
           <figure className='details-figure-align'>
             {domToReact(domNode.children, options)}
@@ -156,7 +161,8 @@ const options = {
           </a>
         );
       }
-      if (domNode.attribs.class === 'wp-block-coblocks-click-to-tweet' || domNode.attribs.class === 'wp-block-quote wp-block-coblocks-click-to-tweet') {
+      if (domNode.attribs.class === 'wp-block-coblocks-click-to-tweet' ||
+      domNode.attribs.class === 'wp-block-quote wp-block-coblocks-click-to-tweet') {
         return (
           <blockquote className='details-blockquote'>
             {domToReact(domNode.children, options)}
@@ -170,7 +176,9 @@ const options = {
           </video>
         );
       }
-      if (domNode.attribs.class === 'wikitable' || domNode.attribs.class === 'widefat' || domNode.attribs.class === 'has-fixed-layout') {
+      if (domNode.attribs.class === 'wikitable' ||
+      domNode.attribs.class === 'widefat' ||
+      domNode.attribs.class === 'has-fixed-layout') {
         return (
           <table className='details-table'>
             {domToReact(domNode.children, options)}
@@ -184,14 +192,18 @@ const options = {
           </span>
         );
       }
-      if (domNode.attribs.class === 'arg-type' || domNode.attribs.class === 'arg-name' || domNode.attribs.class === 'arg-default') {
+      if (domNode.attribs.class === 'arg-type' ||
+      domNode.attribs.class === 'arg-name' ||
+      domNode.attribs.class === 'arg-default') {
         return (
           <span className='details-span-arg'>
             {domToReact(domNode.children, options)}
           </span>
         );
       }
-      if (domNode.attribs.class === 'nt' || domNode.attribs.class === 'na' || domNode.attribs.class === 's') {
+      if (domNode.attribs.class === 'nt' ||
+      domNode.attribs.class === 'na' ||
+      domNode.attribs.class === 's') {
         return (
           <span className='details-span-ntnas'>
             {domToReact(domNode.children, options)}
@@ -215,7 +227,6 @@ const options = {
     }
     if (domNode.name) {
       if (domNode.name === 'code') {
-        console.log('code');
         return (
           <code className='details-default-code'>
             {domToReact(domNode.children, options)}
@@ -223,7 +234,6 @@ const options = {
         );
       }
       if (domNode.name === 'p') {
-        console.log('outer here');
         return (
           <p className='details-default-p'>
             {domToReact(domNode.children, options)}

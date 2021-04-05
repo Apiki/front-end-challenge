@@ -2,15 +2,15 @@ import parse from 'html-react-parser'
 import { useContext } from 'react';
 import ApikiBlogContext from '../context/ApikiBlogContext';
 import options from '../styles/options';
+
 const PostDetails= () => {
-  const { data } = useContext(ApikiBlogContext);
-  console.log(data);
-  const { _embedded, title, content } = data[0];
+  const { details } = useContext(ApikiBlogContext);
+  const { _embedded, title, content } = details[0];
   const source = _embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url;
   return (
     <div>
       <img src={ source } alt='' className='details-main-img'/>
-      <h3 className='title'>{title.rendered}</h3>
+      <h3 className='details-main-title'>{title.rendered}</h3>
       <div>{
       parse(
         content.rendered, options

@@ -4,12 +4,13 @@ import getPost from '../services/getPost';
 import PostDetails from '../components/PostDetails';
 
 const PostPage = () => {
-  const { setData, loading, setLoading } = useContext(ApikiBlogContext);
+  const { setDetails, loading, setLoading } = useContext(ApikiBlogContext);
   const slug = window.location.pathname.slice(9);
   useEffect(() => {
     getPost(slug).then((response) => {
-      setData(response);
-       setLoading(false);
+      setLoading(true);
+      setDetails(response);
+      setLoading(false);
     });
   },[]);
   return (

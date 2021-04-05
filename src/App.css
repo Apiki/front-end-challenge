@@ -1,12 +1,10 @@
 body {
-  background-image: linear-gradient(to bottom right, dimgray, lightgray);
+  background-image: linear-gradient(to bottom right, dimgray, white);
 }
-
 #root div div {
   display: flex;
   flex-flow: column;
 }
-
 .main-page-title {
   margin: auto;
   justify-self: center;
@@ -14,7 +12,6 @@ body {
   margin-top: 2.5%;
   margin-bottom: 2.5%;
 }
-
 .card-container {
   background-color: white;
   width: 30%;
@@ -24,21 +21,17 @@ body {
   display: flex;
   margin-bottom: 3%;
 }
-
 .card-title {
   margin: auto;
   margin: 5%;
 }
-
 .card-link {
   margin: auto;
 }
-
 .card-img {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }
-
 .main-page-load-more {
   background-color: #555555;
   border: 5px ridge darkgray;
@@ -52,7 +45,6 @@ body {
   margin: auto;
   justify-self: center;
 }
-
 .main-page-load-more:hover {
   background-color: white;
   border: 5px ridge darkgray;
@@ -66,121 +58,116 @@ body {
   margin: auto;
   justify-self: center;
 }
-
 .details-main-img {
   width: 40%;
   margin: auto;
   margin-top: 2.5%;
   border: 5px ridge darkgray;
 }
-
-.title {
+.details-main-title {
   margin: auto;
-  margin-top: 2.5%;
+  width: fit-content;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
-
-.details-subtitle {
-  margin: auto;
-  margin-top: 5%;
-}
-
-.details-p-notfound .details-p-tweet {
+.details-p-notfound, .details-p-tweet {
   margin-top: 1%;
   margin-bottom: 1%;
   margin-left: 10%;
   margin-right: 10%;
 }
-
 .details-blockquote {
   background-color: white;
   font-style: italic;
   font-size: small;
 }
-
-.details-link-externaltext .details-link-image .details-link-redirect .details-link-tm-ctt-btn .details-link-twitter-btn {
+.details-link-externaltext,
+.details-link-image,
+.details-link-redirect,
+.details-link-tm-ctt-btn,
+.details-link-twitter-btn {
   background-color: yellow;
 }
-
 .details-table thead th {
   border: 5px ridge darkgray;
 }
-
 .details-table tbody td {
   border: 5px ridge lightgray;
 }
-
-.details-pre-block .details-pre-preformatted .details-pre-small .details-pre-highlight {
+.details-pre-block,
+.details-pre-preformatted,
+.details-pre-small,
+.details-pre-highlight {
   margin: auto;
 }
-
 .details-video {
   width: fit-content;
 }
-
-.details-default-p{
+.details-default-p {
   margin-top: 1%;
   margin-bottom: 1%;
   margin-left: 10%;
   margin-right: 10%;
 }
-.details-default-a{
+.details-default-a {
   background-color: yellow;
   width: fit-content;
   margin: auto;
 }
-.details-default-b{
+.details-default-b {
   color: darkred;
 }
-.details-default-i{
+.details-default-i {
   text-decoration-line: overline;
 }
-.details-default-h2{
+/* .details-default-h3,
+.details-default-h4 { */
+.details-default-h2 {
   margin: auto;
-  margin-top: 5%;
+  width: fit-content;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
-.details-default-h3{
-  margin: auto;
-  margin-top: 5%;
-}
-.details-default-h4{
-  margin: auto;
-  margin-top: 5%;
-}
-.details-default-table{
+.details-default-table {
+  margin: 2.5%;
   border: gray 3px solid;
 }
-.details-default-ol{
+.details-default-table thead th, .details-default-table tbody td {
+  margin: 2.5%;
+  border: white 3px solid;
+}
+.details-default-ol {
   margin: auto;
 }
-.details-default-ul{
+.details-default-ul {
   margin: auto;
 }
-.details-default-li{
+.details-default-li {
   background-color: lightgreen;
 }
-.details-default-strong{
+.details-default-strong {
   size: 3%;
 }
-.details-default-em{
+.details-default-em {
   size: 3%;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-.details-default-pre{
+.details-default-pre {
   margin: auto;
 }
-.details-default-iframe{
+.details-default-iframe {
   margin: auto;
 }
-.details-default-code{
+.details-default-code {
   background-color: white;
   border: 1px solid black;
 }
-.details-default-blockquote{
+.details-default-blockquote {
   background-color: white;
 }
-.details-default-div{
+.details-default-div {
   display: flex;
 }
-
 .details-footer {
   display: flex;
   width: 100%;
@@ -192,31 +179,113 @@ body {
   justify-content: center;
   font-size: xx-large;
 }
-
-/* details-p-tweet
-details-p-notfound
-details-pre-block
-details-pre-preformatted
-details-pre-small        
-details-pre-highlight
-details-figure-blocktable
-details-figure-blockimage
-figure details-figure-blockimage-large
-details-figure-aligncenter-large
-details-figure-aligncenter
-details-figure-align
-details-figcaption-text
-details-link-externaltext
-details-link-image
-details-link-redirect
-details-link-tm-ctt-btn
-details-link-twitter-btn
-details-blockquote
-details-code
-details-video
-details-table
-details-span-notranslate
-details-span-arg
-details-span-ntnas
-details-span-goog-text-highlight
-details-span-headline */
+img {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+.details-p-tweet {
+  size: 5%;
+  margin: auto;
+}
+.details-p-notfound {
+  background-color: pink;
+  color: red;
+  margin: auto;
+}
+.details-pre-block {
+  margin: auto;
+  width: fit-content;
+  display: block;
+}
+.details-pre-preformatted {
+  margin: auto;
+  color: blueviolet;
+}
+.details-pre-small {
+  margin: auto;
+  size: 2%;
+}
+.details-pre-highlight {
+  margin: auto;
+  background-color: blueviolet;
+}
+.details-figure-blocktable {
+  width: fit-content;
+  margin: auto;
+}
+.details-figure-blockimage {
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+.details-figure-blockimage-large {
+  margin: auto;
+  display: block;
+  width: 50%;
+}
+.details-figure-aligncenter-large {
+  margin: auto;
+  width: auto;
+}
+.details-figure-aligncenter {
+  margin: auto;
+  width: fit-content;
+}
+.details-figure-align {
+  margin: auto;
+  width: 30%;
+}
+.details-figcaption-text {
+  margin: auto;
+  width: fit-content;
+  color: greenyellow;
+  background-color: white;
+  border: 1px solid greenyellow;
+}
+.details-link-externaltext {
+  background-color: goldenrod;
+  width: auto;
+  margin: auto;
+}
+.details-link-image,
+.details-link-redirect,
+.details-link-tm-ctt-btn {
+  background-color: orange;
+  width: fit-content;
+  margin: auto;
+}
+.details-link-twitter-btn {
+  margin: auto;
+  width: auto;
+  border: orange 1px dashed;
+}
+.details-blockquote {
+  background-color: white;
+  border: yellowgreen 1px dashed;
+}
+.details-code {
+  background-color: white;
+  border: violet 1px solid;
+}
+.details-video {
+  width: 50%;
+  margin: auto;
+}
+.details-table {
+  border: white ridge 2px;
+}
+.details-span-notranslate,
+.details-span-arg,
+.details-span-ntnas {
+  margin: auto;
+  background-color: white ;
+  text-decoration: teal;
+  text-decoration-style: dotted;
+}
+.details-span-goog-text-highlight {
+  background-color: violet;
+}
+.details-span-headline {
+  color: blueviolet;
+}

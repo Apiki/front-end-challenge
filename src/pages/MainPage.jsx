@@ -14,7 +14,7 @@ const MainPage = () => {
         setLoading(false);
       });
     }
-  });
+  },[]);
 
   return (
     !loading ?
