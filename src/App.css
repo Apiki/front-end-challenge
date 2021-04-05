@@ -120,8 +120,8 @@ body {
 .details-default-i {
   text-decoration-line: overline;
 }
-/* .details-default-h3,
-.details-default-h4 { */
+.details-default-h3,
+.details-default-h4,
 .details-default-h2 {
   margin: auto;
   width: fit-content;

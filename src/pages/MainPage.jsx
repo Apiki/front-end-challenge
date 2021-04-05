@@ -5,11 +5,12 @@ import PostsList from '../components/PostsList';
 import getAll from '../services/getAll';
 
 const MainPage = () => {
-  const { loading, setLoading, setData, continous, setContinous } = useContext(ApikiBlogContext);
+  const { loading, setLoading, setData, continous, setContinous, setDetails } = useContext(ApikiBlogContext);
   useEffect(() => {
     if (!continous) {
       getAll().then((response) => {
         setData(response);
+        setDetails(response); //set something in order to details page don't need refresh 
         setContinous(true);
         setLoading(false);
       });
