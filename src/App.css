@@ -24,6 +24,7 @@ body {
 .card-title {
   margin: auto;
   margin: 5%;
+  overflow-x: auto;
 }
 .card-link {
   margin: auto;
