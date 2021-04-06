@@ -1,0 +1,52 @@
+.main {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container-button {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.home-button {
+  font-size: large;
+  width: 300px;
+}
+
+.social-icons {
+  height: 30px;
+  padding: 3px;
+}
+
+.container-social-media {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 300px;
+}
+
+.container-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+}
+
+.logo-apiki {
+  padding: 4px;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .home-button {
+    font-size: large;
+    width: auto;
+  }
+
+  .container-logo {
+    justify-content: flex-end;
+  }
+}
