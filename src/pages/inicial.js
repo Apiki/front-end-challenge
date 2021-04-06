@@ -53,6 +53,11 @@ class Inicial extends React.Component {
           <Header />
         </header>
 
+        <div className="titulo">
+          <h1>Blog Apiki</h1>
+          <h3>Desenvolvimento</h3>
+        </div>
+
         <div className="container-posts">
           {data.map((post, index) => (
             <PostCard key={index} dados={post} />

@@ -11,6 +11,7 @@ import youtube from "../images/youtube.png";
 
 class Header extends React.Component {
   render() {
+    const width = window.innerWidth;
     return (
       <div className="main">
         <div className="container-button">
@@ -25,34 +26,36 @@ class Header extends React.Component {
           </a>
         </div>
 
-        <div className="container-social-media">
-          <a href="https://www.facebook.com/ApikiWordPress" target="blank">
-            <img className="social-icons" src={facebook} alt="Facebook" />
-          </a>
+        {width > 768 && (
+          <div className="container-social-media">
+            <a href="https://www.facebook.com/ApikiWordPress" target="blank">
+              <img className="social-icons" src={facebook} alt="Facebook" />
+            </a>
 
-          <a href="https://twitter.com/apikiWordPress" target="blank">
-            <img className="social-icons" src={twitter} alt="Twitter" />
-          </a>
+            <a href="https://twitter.com/apikiWordPress" target="blank">
+              <img className="social-icons" src={twitter} alt="Twitter" />
+            </a>
 
-          <a href="https://www.linkedin.com/company/apiki/" target="blank">
-            <img className="social-icons" src={linkedin} alt="LinkedIn" />
-          </a>
+            <a href="https://www.linkedin.com/company/apiki/" target="blank">
+              <img className="social-icons" src={linkedin} alt="LinkedIn" />
+            </a>
 
-          <a href="https://www.instagram.com/apikiwordpress/" target="blank">
-            <img className="social-icons" src={instagram} alt="Instagram" />
-          </a>
+            <a href="https://www.instagram.com/apikiwordpress/" target="blank">
+              <img className="social-icons" src={instagram} alt="Instagram" />
+            </a>
 
-          <a
-            href="https://www.youtube.com/channel/UC__ToR3hqjs1ZktdLIWqYFA"
-            target="blank"
-          >
-            <img className="social-icons" src={youtube} alt="YouTube" />
-          </a>
+            <a
+              href="https://www.youtube.com/channel/UC__ToR3hqjs1ZktdLIWqYFA"
+              target="blank"
+            >
+              <img className="social-icons" src={youtube} alt="YouTube" />
+            </a>
 
-          <a href="https://github.com/Apiki" target="blank">
-            <img className="social-icons" src={github} alt="GitHub" />
-          </a>
-        </div>
+            <a href="https://github.com/Apiki" target="blank">
+              <img className="social-icons" src={github} alt="GitHub" />
+            </a>
+          </div>
+        )}
       </div>
     );
   }

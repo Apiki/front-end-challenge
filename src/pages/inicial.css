@@ -1,3 +1,17 @@
+.titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo h1 {
+  font-size: 55px;
+}
+
+.titulo h3 {
+  font-size: x-large;
+}
+
 .container-posts {
   display: flex;
   flex-wrap: wrap;
@@ -26,7 +40,23 @@
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: 4px;
-  text-decoration: none;  
+  text-decoration: none;
   background-color: white;
-  border-color:black;
+  border-color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .container-posts {
+    flex-direction: column;
+    /* background-color: blue; */
+    align-items: center;
+  }
+
+  .titulo h1 {
+    font-size: xx-large;
+  }
+
+  .titulo h3 {
+    font-size: larger;
+  }
 }

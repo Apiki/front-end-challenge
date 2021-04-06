@@ -55,11 +55,13 @@ class Interna extends React.Component {
           <div className="post-container">
             <img className="post-image" src={imgURL} alt={slug} />
             {data !== undefined ? <h1>{data.title.rendered}</h1> : <p />}
+            <div className='wordpress-content'>
             {data !== undefined ? (
               ReactHtmlParser(data.content.rendered)
             ) : (
               <p />
             )}
+            </div>
           </div>
         </div>
         <footer>{data !== undefined ? this.aboutAuthor(author) : <p />}</footer>
