@@ -22,9 +22,12 @@ class PostCard extends React.Component {
     return (
       <div className="container-card">
         <img className="img-card" src={imgURL} alt={altTxt}></img>
-        <p>{rendered}</p>
+        <p className="post-title">
+          <strong>{rendered}</strong>
+        </p>
         <Link to={`/${slug}`}>
-          <p>{slug}</p>
+          {/* <p>{slug}</p> */}
+          <div className="button-more">Saiba mais</div>
         </Link>
       </div>
     );
