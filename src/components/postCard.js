@@ -26,7 +26,6 @@ class PostCard extends React.Component {
           <strong>{rendered}</strong>
         </p>
         <Link to={`/${slug}`}>
-          {/* <p>{slug}</p> */}
           <div className="button-more">Saiba mais</div>
         </Link>
       </div>
