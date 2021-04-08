@@ -1,0 +1,75 @@
+.flex {
+  display: flex;
+}
+
+.card__container {
+  align-items: center;
+  border-bottom: darkgray solid 1px;
+  flex-direction: column;
+  margin-bottom: 30px;
+  margin: auto;
+  padding: 5px;
+  width: 95%;
+}
+
+.card__content {
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 02px 10px;
+}
+
+.card__img {
+  width: 100%;
+}
+
+.card__title {
+  font-size: 25px;
+  text-align: left;
+}
+
+.card__author__container {
+  margin-top: 5px;
+  text-align: left;
+}
+
+.card__author__by {
+  color: #565656;
+}
+
+.card__author__name {
+  color: #565656;
+  margin-left: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .card__container {
+    width: 80%;
+  }
+
+  .card__content {
+    align-items: flex-start;
+    flex-direction: column;
+    height: 130px;
+    justify-content: space-between;
+    margin: 02px 10px;
+  }
+
+  .card__container {
+    flex-direction: row;
+    border-bottom: none;
+  }
+
+  .card__img {
+    border-radius: 20px;
+    width: 300px;
+  }
+  .card__title {
+    font-size: 30px;
+    text-align: left;
+  }
+
+  .card__author__container {
+    font-size: 25px;
+  }
+}
