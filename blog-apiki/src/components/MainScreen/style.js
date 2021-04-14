@@ -1,18 +1,12 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-`;
-
 export const Button = styled.button`
   background: #7159;
+  border-radius: 3px;
+  color: #ffffff;
   font-size: 1em;
   margin: 1em;
   padding: 0.25em 5em;
-  border-radius: 3px;
-  color: #ffffff;
   outline: thin dotted;
   outline: 0px auto -webkit-focus-ring-color;
   outline-offset: 0px;
@@ -26,4 +20,11 @@ export const Button = styled.button`
   a {
     text-decoration: none;
   }
+`;
+
+export const Container = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 25px;
 `;

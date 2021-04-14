@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Container, Paragraph } from './styles';
+import { Button, Container, Paragraph, Image } from './styles';
 
 const PostCard = ({
   post: {
@@ -11,17 +11,16 @@ const PostCard = ({
 }) => {
   return (
     <Container>
-      <img
-        style={{ width: '100%', maxHeight: '50%' }}
+      <Image
         src={
           _embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url
         }
         alt={`${slug}`}
       />
       <Paragraph>{rendered}</Paragraph>
-      <Button>
-        <Link to={`/post/${slug}`}>Ler postagem</Link>
-      </Button>
+      <Link to={`/post/${slug}`}>
+        <Button>Ler postagem</Button>
+      </Link>
     </Container>
   );
 };
