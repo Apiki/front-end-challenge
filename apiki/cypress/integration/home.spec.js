@@ -3,6 +3,11 @@ const CARD_POST_IMG = '.card-post__img';
 const CARD_POST_HEADER = '.card-post__header';
 const CARD_POST_LINK = '.card-post__link';
 
+const POST_DETAILS = '.post-details';
+const POST_DETAILS_IMG = '.post-details__img';
+const POST_DETAILS_TITLE = '.post-details__title';
+const POST_DETAILS_CONTENT = '.post-details__content';
+
 describe("1 - [INITIAL SCREEN] verifies if initial screen after load has the last 10 registered posts.", () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000/');
@@ -57,15 +62,16 @@ describe(`3 - [INTERNAL SCREEN] verifies if exist on screen the data of the post
   get(CARD_POST_LINK).first().click();
 
   it('should have an image on screen', () => {
-    
+    get(POST_DETAILS_IMG).should('exist');
   });
 
   it('should have the correspondent title on screen', () => {
+    get(POST_DETAILS_TITLE).should('exist');
     cy.contains(CORRESPONDENT_TITLE);
   });
   
   it('should have the correspondent content on screen', () => {
-
+    get(POST_DETAILS_CONTENT).should('exist');
   });
 })
 
