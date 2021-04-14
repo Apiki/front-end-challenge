@@ -10,14 +10,14 @@ const MainScreen = () => {
   const [loading, setLoading] = useState(true);
   const [pages, setPages] = useState(1);
 
-  const nextPost = () => {
+  const nextPagePost = () => {
     if (pages >= totalPages) {
       setPages(1);
     }
     setPages((prevCount) => prevCount + 1);
   };
 
-  /*  const previousPost = () => {
+  /*  const previousPagePost = () => {
     if (pages > 1) {
       console.log(pages);
       setPages((prevCount) => prevCount - 1);
@@ -45,8 +45,8 @@ const MainScreen = () => {
       {data.map((data) => (
         <PostCard key={data.id.toString()} post={data} />
       ))}
-      <Button onClick={nextPost}>Carregar mais</Button>
-      {/*  <button onClick={previousPost}>Post anterior!</button> */}
+      <Button onClick={nextPagePost}>Carregar mais</Button>
+      {/*  <Button onClick={previousPagePost}>Post anterior!</Button> */}
     </Container>
   );
 };

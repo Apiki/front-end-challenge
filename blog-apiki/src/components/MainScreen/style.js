@@ -20,6 +20,9 @@ export const Button = styled.button`
   a {
     text-decoration: none;
   }
+  @media (max-width: 1500px) {
+    display: none;
+  }
 `;
 
 export const Container = styled.div`

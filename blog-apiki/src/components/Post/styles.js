@@ -47,4 +47,5 @@ export const Image = styled.img`
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
+  width: 50%;
 `;

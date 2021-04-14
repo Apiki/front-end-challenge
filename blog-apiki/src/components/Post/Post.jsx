@@ -28,7 +28,6 @@ const Post = () => {
     <Container>
       <Content>
         <Image
-          style={{ width: '50%' }}
           src={
             data[0]._embedded['wp:featuredmedia'][0].media_details.sizes.large
               .source_url
