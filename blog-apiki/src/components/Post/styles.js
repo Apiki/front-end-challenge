@@ -39,6 +39,10 @@ export const Content = styled.div`
   table tr td {
     background: #f0ffff;
     text-align: justify;
+    @media (max-width: 640px) {
+      font-size: 1.1em;
+      margin: 1.1em 0;
+    }
   }
 
   figure img {
@@ -47,14 +51,17 @@ export const Content = styled.div`
       display: block;
       margin-left: auto;
       margin-right: auto;
-      margin-bottom: 50px;
+      margin-top: 50px;
       width: 70%;
       height: 70%;
     }
   }
-  p {
+  p,
+  h1,
+  h2,
+  h3 {
     @media (max-width: 640px) {
-      font-size: 1.5em;
+      font-size: 1.1em;
       margin: 1.1em 0;
     }
   }
@@ -68,6 +75,6 @@ export const Image = styled.img`
   margin-bottom: 50px;
   width: 50%;
   @media (max-width: 640px) {
-    width: 88%;
+    width: 100%;
   }
 `;
