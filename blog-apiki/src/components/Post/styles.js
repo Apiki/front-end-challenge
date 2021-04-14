@@ -20,6 +20,7 @@ export const Content = styled.div`
     color: #4672bd;
     text-decoration: underline;
   }
+
   h1,
   h2 {
     font-size: 28px;
@@ -39,6 +40,24 @@ export const Content = styled.div`
     background: #f0ffff;
     text-align: justify;
   }
+
+  figure img {
+    @media (max-width: 1558px) {
+      border-radius: 7px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 50px;
+      width: 70%;
+      height: 70%;
+    }
+  }
+  p {
+    @media (max-width: 640px) {
+      font-size: 1.5em;
+      margin: 1.1em 0;
+    }
+  }
 `;
 
 export const Image = styled.img`
@@ -48,4 +67,7 @@ export const Image = styled.img`
   margin-right: auto;
   margin-bottom: 50px;
   width: 50%;
+  @media (max-width: 640px) {
+    width: 88%;
+  }
 `;

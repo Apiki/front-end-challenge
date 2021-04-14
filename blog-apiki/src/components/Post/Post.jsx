@@ -34,9 +34,8 @@ const Post = () => {
           }
           alt=""
         />
-        <h1 className="">{data[0].title.rendered}</h1>
+        <h1>{data[0].title.rendered}</h1>
         <article
-          className=""
           dangerouslySetInnerHTML={{ __html: data[0].content.rendered }}
         />
       </Content>
