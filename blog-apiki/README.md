@@ -8,4 +8,4 @@ Ao clicar em umas das postagens o usuário deverá ser redirecionado para a pág
 
 &lt; BLOG APIKI DEV &gt;
 
-![projeto-2021-04-13_23 43 08 (online-video-cutter com)](https://user-images.githubusercontent.com/21336683/114648030-796a7b80-9cb4-11eb-9cf5-e0ebadb5ad45.gif)
+<img src="https://user-images.githubusercontent.com/21336683/114648030-796a7b80-9cb4-11eb-9cf5-e0ebadb5ad45.gif" width="900" height="450" />
