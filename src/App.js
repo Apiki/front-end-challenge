@@ -1,9 +1,10 @@
+import Card from "./Components/Card";
 import DataProvider from "./Provider/DataContext";
 
 function App() {
   return (
     <DataProvider>
-      Oi
+      <Card />
     </DataProvider>
   );
 }

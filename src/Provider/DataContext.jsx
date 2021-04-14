@@ -12,7 +12,7 @@ const DataProvider = ({ children }) => {
   useEffect(() => {
     const axiosData = async () => {
       const response = await axios.get(endpoint);
-      const { data } = response.data;
+      const data = await response.data;
       const { numPages } = response.headers['x-wp-totalpages']
       console.log(response)
 
