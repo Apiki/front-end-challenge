@@ -9,3 +9,7 @@ Ao clicar em umas das postagens o usuário deverá ser redirecionado para a pág
 &lt; BLOG APIKI DEV &gt;
 
 <img src="https://user-images.githubusercontent.com/21336683/114648030-796a7b80-9cb4-11eb-9cf5-e0ebadb5ad45.gif" width="800" height="350" />
+
+&lt; BLOG APIKI DEV &gt; (MOBILE)
+
+<img src="https://user-images.githubusercontent.com/21336683/114713612-af851b00-9d07-11eb-8bb9-0588158feb18.gif" width="800" height="350" />
