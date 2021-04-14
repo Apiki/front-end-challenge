@@ -8,12 +8,12 @@ Ao clicar em umas das postagens o usuário deverá ser redirecionado para a pág
 
 #### Tecnologias utilizadas:
 
-*React;
-*Hooks;
-*Styled Components;
-*HTML;
-*CSS;
-*JavaScriptES6.
+- React;
+- Hooks;
+- Styled Components;
+- HTML;
+- CSS;
+- JavaScriptES6.
 
 &lt; BLOG APIKI DEV &gt;
 
