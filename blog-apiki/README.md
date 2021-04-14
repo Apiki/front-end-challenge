@@ -23,7 +23,7 @@ Ao clicar em umas das postagens o usuário deverá ser redirecionado para a pág
 
 <img src="https://user-images.githubusercontent.com/21336683/114713612-af851b00-9d07-11eb-8bb9-0588158feb18.gif" width="250" height="450" />
 
-Ficaria extremamente feliz em receber algum feedback :smiley:
+Ficaria extremamente feliz em receber algum feedback :smiley: <br>
 **Contato**
 <br>
 <br>
