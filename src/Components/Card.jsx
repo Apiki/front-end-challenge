@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { DateContext } from '../Provider/DataContext';
+import '../Styles/styles.css';
 
 function Card() {
   const {
@@ -13,10 +14,10 @@ function Card() {
       {arr.map((post) => {
         const {source_url, slug} = post._embedded["wp:featuredmedia"][0]
         return (
-          <div key={post.id}>
+          <div className="cardContainer" key={post.id}>
+            <h3>{post.title.rendered}</h3>
             <img src={source_url} alt={slug}></img>
-            <div>{post.title.rendered}</div>
-            <div>{post.link}</div>
+            <a href={post.link}>{post.link}</a>
           </div>
         )
       })}

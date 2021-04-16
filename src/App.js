@@ -1,10 +1,10 @@
-import Card from "./Components/Card";
+import Home from "./Pages/Home";
 import DataProvider from "./Provider/DataContext";
 
 function App() {
   return (
     <DataProvider>
-      <Card />
+      <Home />
     </DataProvider>
   );
 }
