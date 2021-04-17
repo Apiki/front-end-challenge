@@ -1,0 +1,130 @@
+.container-home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.card { 
+  border-radius: 4px;
+  box-shadow: 0 0 5px #ccc;
+  display: flex;
+  margin-bottom: 1%;
+  padding: 15px 10px;
+  text-align: center;
+  width: 48%;
+}
+
+.card:hover {
+  box-shadow: 0 0 10px rgb(134, 134, 134);
+}
+
+img {
+  border-radius: 6px;
+  object-fit: cover;
+  width: 90%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a h2 {
+  color: #52a0e1;
+}
+
+p {
+  color: #000;
+}
+
+button {
+  background: linear-gradient(to top, #f4d200, #ea6e01);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: larger;
+  font-weight: 800;
+  height: 5vh;
+  letter-spacing: 1px;
+  margin-top: 1%;
+  width: 35%;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  box-shadow: 0 0 15px rgb(134, 134, 134);
+}
+
+@media (max-width: 650px) {
+  .container-home {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .card {
+    align-self: center;
+    border-radius: 4px;
+    box-shadow: 0 0 5px #ccc;
+    display: flex;
+    margin-bottom: 3%;
+    padding: 15px 10px;
+    text-align: center;
+    width: 90%;
+  }
+
+  button {
+    align-self: center;
+    background: linear-gradient(to top, #f4d200, #ea6e01);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: larger;
+    font-weight: 800;
+    height: 5vh;
+    letter-spacing: 1px;
+    width: 50%;
+  }
+
+  a h2 {
+    font-size: x-large;
+  }
+}
+
+@media (max-width: 450px) {
+  .container-home {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .card {
+    align-self: center;
+    border-radius: 4px;
+    box-shadow: 0 0 5px #ccc;
+    display: flex;
+    margin-bottom: 3%;
+    padding: 15px 10px;
+    text-align: center;
+    width: 90%;
+  }
+
+  button {
+    align-self: center;
+    background: linear-gradient(to top, #f4d200, #ea6e01);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: larger;
+    font-weight: 800;
+    height: 5vh;
+    letter-spacing: 1px;
+    width: 50%;
+  }
+
+  a h2 {
+    font-size: large;
+  }
+}
