@@ -5,9 +5,8 @@ import '../Styles/styles.css';
 function Card() {
   const {
     arr,
+    showMorePosts
   } = useContext(DateContext);
-
-  console.log(arr)
 
   return (
     <div>
@@ -21,6 +20,12 @@ function Card() {
           </div>
         )
       })}
+      <button
+        type="button"
+        onClick={ showMorePosts }
+      >
+        Carregar Mais
+      </button>
 
     </div>
   )

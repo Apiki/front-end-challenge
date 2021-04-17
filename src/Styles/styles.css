@@ -23,11 +23,11 @@
 }
 
 .cardContainer:nth-child(odd) {
-  background: yellow;
+  background: #ccc;
 }
 
 .cardContainer:nth-child(even) {
-  background: red;
+  background: #aaa;
 }
 
 .cardContainer h3 {
