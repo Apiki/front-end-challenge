@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 import React, { createContext, useEffect, useState } from 'react';
-import axios from 'axios'
+import axios from 'axios';
 
 export const DateContext = createContext();
 
@@ -10,35 +11,35 @@ const DataProvider = ({ children }) => {
   const [numberPages, setNumberPages] = useState();
   const [numberPosts, setNumberPosts] = useState();
   const [count, setCount] = useState(1);
+  const [dataIntern, setDataIntern] = useState([]);
+  const [redirect, setRedirect] = useState(false);
 
   useEffect(() => {
     const axiosData = async () => {
       const response = await axios.get(endpoint);
       const data = await response.data;
-      const numPages = response.headers['x-wp-totalpages']
-      const numPosts = response.headers['x-wp-total']
+      const numPages = response.headers['x-wp-totalpages'];
+      const numPosts = response.headers['x-wp-total'];
 
       setArr(data);
       setNumberPages(numPages);
       setNumberPosts(numPosts);
-    }
+    };
     axiosData();
   }, []);
 
   const showMorePosts = () => {
-    
-    if(count <= numberPages) {
+    if (count <= numberPages) {
       const axiosNewPage = async () => {
-        const response = await axios.get(`${endpoint}&page=${count+1}`);
+        const response = await axios.get(`${endpoint}&page=${count + 1}`);
         const data = await response.data;
+
         setArr(data);
-      
+      };
+      axiosNewPage();
+      setCount(count + 1);
     }
-    axiosNewPage();
-    setCount(count + 1);
-    
-  }
-}
+  };
 
   const store = {
     arr,
@@ -48,12 +49,14 @@ const DataProvider = ({ children }) => {
     numberPosts,
     setNumberPosts,
     showMorePosts,
+    dataIntern,
+    setDataIntern,
+    redirect,
+    setRedirect,
   };
 
-  
-
   return (
-    <DateContext.Provider value={store}>
+    <DateContext.Provider value={ store }>
       {
         children
       }
@@ -61,4 +64,4 @@ const DataProvider = ({ children }) => {
   );
 };
 
-export default DataProvider
+export default DataProvider;

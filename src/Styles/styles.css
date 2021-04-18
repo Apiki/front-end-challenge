@@ -17,16 +17,16 @@
 .cardContainer {
   align-items: center;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: center;
   padding-top: 1.25rem;
 }
 
-.cardContainer:nth-child(odd) {
+.cardContainer:nth-child( odd ) {
   background: #ccc;
 }
 
-.cardContainer:nth-child(even) {
+.cardContainer:nth-child( even ) {
   background: #aaa;
 }
 
@@ -36,12 +36,12 @@
 
 .cardContainer img {
   margin-top: 0.5rem;
-  max-width: 80%;
   max-height: 85vh;
+  max-width: 80%;
 }
 
 .cardContainer a {
+  color: red;
   margin-top: 0.5rem;
   text-decoration: none;
-  color: red;
 }

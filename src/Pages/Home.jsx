@@ -7,10 +7,9 @@ function Home() {
     <div className="homeContainer">
       <h1>Apiki Blog</h1>
       <Card />
-    </div> 
+    </div>
 
-  )
-
+  );
 }
 
 export default Home;
