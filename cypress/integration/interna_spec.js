@@ -2,7 +2,7 @@
 /// <reference types="cypress" />
 
 describe("Testes do componente <Interna/ >", () => {
-  it("faz a chamada da Api pelo slug di post", () => {
+  it("faz a chamada da Api pelo slug do post", () => {
     cy.visit("http://localhost:3000/", {
       onBeforeLoad(win) {
         cy.spy(win, "fetch");

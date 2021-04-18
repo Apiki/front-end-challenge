@@ -23,6 +23,26 @@
   width: 50%;
 }
 
+.container-details figure[class*="wp-caption"] {
+  align-self: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.container-details figure[class*="wp-caption"] a{
+  border: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+}
+
+.container-details figure[class*="wp-caption"] a img {
+  height: 30vh;
+  object-fit: fill;
+  width: 100%;
+}
+
 .container-details figure[class*="aligncenter"] img {
   height: 60vh;
   object-fit: fill;
@@ -113,7 +133,7 @@
 }
 
 .wp-block-table {
-  background-color: lightgray;
+  /* background-color: lightgray; */
   margin-bottom: 1%;
   margin-top: 1%;
 }
