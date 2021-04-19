@@ -23,6 +23,7 @@ function Content() {
     const { data } = await axiosData(`slug=${slug}`);
     setDataIntern(data);
     setLoading(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   console.log(loading);

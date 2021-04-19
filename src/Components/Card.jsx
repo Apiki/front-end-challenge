@@ -28,6 +28,7 @@ function Card() {
     setNumberPages(numPages);
     setNumberPosts(numPosts);
     setLoading(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const showMorePosts = () => {
