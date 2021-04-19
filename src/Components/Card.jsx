@@ -51,28 +51,34 @@ function Card() {
 
         return (
           <div className="cardContainer" key={ post.id }>
-            <h3>{post.title.rendered}</h3>
-            <img src={ url } alt={ post.slug } />
-            <button
-              type="button"
-              // eslint-disable-next-line sonarjs/no-use-of-empty-return-value
-              onClick={ () => {
-                history.push(`/intern/${post.slug}`);
-                setLoading(true);
-              } }
-            >
-              Ver mais...
-            </button>
+            <div className="imgContainer">
+              <img src={ url } alt={ post.slug } />
+            </div>
+            <div className="titleContainer">
+              <h3>{post.title.rendered}</h3>
+              <button
+                type="button"
+                // eslint-disable-next-line sonarjs/no-use-of-empty-return-value
+                onClick={ () => {
+                  history.push(`/intern/${post.slug}`);
+                  setLoading(true);
+                } }
+              >
+                Ver mais...
+              </button>
+            </div>
           </div>
         );
       })}
 
-      <button
-        type="button"
-        onClick={ showMorePosts }
-      >
-        Carregar Mais
-      </button>
+      <div className="buttonContainer">
+        <button
+          type="button"
+          onClick={ showMorePosts }
+        >
+          Carregar Mais
+        </button>
+      </div>
 
     </div>
   );

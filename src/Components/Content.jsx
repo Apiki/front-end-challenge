@@ -33,9 +33,9 @@ function Content() {
   // eslint-disable-next-line no-underscore-dangle
   const { source_url: url } = dataIntern[0]._embedded['wp:featuredmedia'][0];
   return (
-    <div>
-      <h3>{dataIntern[0].title.rendered}</h3>
+    <div className="contentContainer">
       <img src={ url } alt={ dataIntern.slug } />
+      <h1>{dataIntern[0].title.rendered}</h1>
       <div>{Parser(dataIntern[0].content.rendered)}</div>
     </div>
   );

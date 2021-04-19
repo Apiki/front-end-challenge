@@ -4,44 +4,126 @@
   padding: 0;
 }
 
+body {
+  background: rgba(119, 114, 255, 0.5);
+}
+
 .homeContainer {
-  background: #ccc;
   display: flex;
   flex-direction: column;
 }
 
 .homeContainer h1 {
+  background: linear-gradient(329.54deg, #3c3980 20%, #7772ff 70%);
+  color: #c1bfff;
+  padding: 1rem;
   text-align: center;
 }
 
 .cardContainer {
   align-items: center;
+  border-radius: 10px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  margin: 1rem;
   padding-top: 1.25rem;
 }
 
 .cardContainer:nth-child( odd ) {
-  background: #ccc;
+  background: linear-gradient(329.54deg, #7772ff 30%, #3c3980 70%);
 }
 
 .cardContainer:nth-child( even ) {
-  background: #aaa;
+  background: linear-gradient(329.54deg, #3c3980 30%, #7772ff 70%);
 }
 
 .cardContainer h3 {
   letter-spacing: 0.1rem;
 }
 
-.cardContainer img {
-  margin-top: 0.5rem;
-  max-height: 85vh;
-  max-width: 80%;
+.imgContainer, .titleContainer {
+  align-content: center;
+  color: #c1bfff;
+  text-align: center;
+  width: 50%;
 }
 
-.cardContainer a {
-  color: red;
-  margin-top: 0.5rem;
-  text-decoration: none;
+.imgContainer img {
+  padding: 1.25rem;
+  width: 80%;
+}
+
+.titleContainer button {
+  background: #c1bfff;
+  border: 1px solid #c1bfff;
+  border-radius: 10px;
+  color: #423eb3;
+  letter-spacing: 0.1rem;
+  margin-top: 2rem;
+  outline: none;
+  padding: 1rem;
+}
+
+
+.buttonContainer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.buttonContainer button {
+  background: #423eb3;
+  border: 1px solid #423eb3;
+  border-radius: 10px;
+  color: #c1bfff;
+  letter-spacing: 0.1rem;
+  margin: 1.5rem;
+  outline: none;
+  padding: 1rem;
+}
+
+.titleContainer button:hover {
+  background: #413db3;
+  border: 1px solid #c1bfff;
+  color: #c1bfff;
+}
+
+.buttonContainer button:hover {
+  background: #c1bfff;
+  border: 1px solid #413db3;
+  color: #423eb3;
+}
+
+.contentContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.contentContainer img {
+  margin-bottom: 1rem;
+  width: 50%;
+}
+
+.contentContainer div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.contentContainer div p {
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+}
+
+.contentContainer div > p:nth-child( 1 ) {
+  margin-top: 1rem;
+}
+
+.contentContainer div h2 {
+  margin-top: 1.2rem;
+}
+
+.wp-block-group {
+  margin-top: 1rem;
 }
