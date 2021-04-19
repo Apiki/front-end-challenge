@@ -117,7 +117,7 @@ button:hover {
     background: linear-gradient(to top, #f4d200, #ea6e01);
     border-radius: 6px;
     cursor: pointer;
-    font-size: larger;
+    font-size: smaller;
     font-weight: 800;
     height: 5vh;
     letter-spacing: 1px;

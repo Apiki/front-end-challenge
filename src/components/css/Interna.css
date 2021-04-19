@@ -12,6 +12,14 @@
   margin-top: 2%;
 }
 
+pre {
+  color: red;
+  font-size: small;
+  margin-bottom: 1%;
+  margin-top: 1%;
+  white-space: pre-wrap;
+}
+
 .container-details figure[class*="wp-block-image"] {
   display: flex;
   justify-content: center;
@@ -32,12 +40,12 @@
 }
 
 .container-details figure[class*="wp-caption"] a{
-  border: 1px solid lightgray;
   display: flex;
   justify-content: center;
 }
 
 .container-details figure[class*="wp-caption"] a img {
+  border: 1px solid lightgray;
   height: 30vh;
   object-fit: fill;
   width: 100%;
@@ -173,6 +181,11 @@ thead th {
     font-size: unset;
     font-weight: 500;
     margin-right: 3%;
+  }
+  .container-details figure[class*="wp-caption"] a img {
+    height: 30vh;
+    object-fit: fill;
+    width: 90vw;
   }
 }
 
