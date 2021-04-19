@@ -1,31 +1,47 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import axios from 'axios';
-import { DateContext } from '../Provider/DataContext';
+import { Context } from '../Provider/Context';
 import '../Styles/styles.css';
+import Loading from './Loading';
+import axiosData from '../services/requestAPI';
 
 function Card() {
   const history = useHistory();
 
-  const DELAY = 6500;
+  // const DELAY = 1000;
   const {
     arr,
-    setDataIntern,
-    showMorePosts,
-    setRedirect,
-  } = useContext(DateContext);
+    loading,
+    setLoading,
+    setArr,
+    setNumberPages,
+    setNumberPosts,
+    count,
+    setCount,
+    numberPages,
+  } = useContext(Context);
 
-  function renderInternPage(slug) {
-    const endpointSlug = `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=${slug}`;
-    const axiosInternPage = async () => {
-      const response = await axios.get(endpointSlug);
-      const dataInternPage = await response.data;
-      setDataIntern(dataInternPage);
-      setRedirect(true);
-      setTimeout(history.push, DELAY, '/intern');
-    };
-    axiosInternPage();
-  }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(async () => {
+    const { data, numPages, numPosts } = await axiosData('categories=518');
+    setArr(data);
+    setNumberPages(numPages);
+    setNumberPosts(numPosts);
+    setLoading(false);
+  }, []);
+
+  const showMorePosts = () => {
+    if (count <= numberPages) {
+      const axiosNewPage = async () => {
+        const { data } = await axiosData(`categories=518&page=${count + 1}`);
+        setArr(data);
+      };
+      axiosNewPage();
+      setCount(count + 1);
+    }
+  };
+
+  if (loading) return <Loading />;
 
   return (
     <div>
@@ -41,8 +57,8 @@ function Card() {
               type="button"
               // eslint-disable-next-line sonarjs/no-use-of-empty-return-value
               onClick={ () => {
-                renderInternPage(post.slug);
-                // redirectToIntern();
+                history.push(`/intern/${post.slug}`);
+                setLoading(true);
               } }
             >
               Ver mais...
