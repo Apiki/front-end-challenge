@@ -1,19 +1,42 @@
+import mockedPosts from "../../src/mocks/posts";
+
 const CARD_POST = '.card-post';
-const CARD_POST_IMG = '.card-post__img';
-const CARD_POST_HEADER = '.card-post__header';
 const CARD_POST_LINK = '.card-post__link';
+const CARD_POST_IMG = '.card-post-front__img';
+const CARD_POST_HEADER = '.card-post-front__header';
 
 const POST_DETAILS = '.post-details';
 const POST_DETAILS_IMG = '.post-details__img';
 const POST_DETAILS_TITLE = '.post-details__title';
 const POST_DETAILS_CONTENT = '.post-details__content';
 
-describe("1 - [INITIAL SCREEN] verifies if initial screen after load has the last 10 registered posts.", () => {
-  beforeEach(() => {
-    cy.visit('http://localhost:3000/');
-  });
+const apiPostsResponse = () => Promise.resolve({
+  json: () => Promise.resolve(mockedPosts),
+  headers: {
+    get: () => Promise.resolve({ 'x-wp-totalpages': 17 }),
+  },
+});
 
-  it('should have 10 posts on screen', () => {
+beforeEach(() => {
+  cy.visit('http://localhost:3000/', {
+    onBeforeLoad(win) {
+      win.fetch = apiPostsResponse;
+      cy.spy(win, 'fetch');
+    },
+  });
+});
+
+describe("1 - [INITIAL SCREEN] verifies if initial screen after load has the last 10 registered posts.", () => {
+
+  it('verifies if are doing request to api when loading the page', async () => {
+    cy.window()
+      .its('fetch')
+      .should('be.calledWith', 'https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=1');
+
+    cy.contains('Como criar Web Stories no WordPress');
+  })
+
+  it  ('should have 10 posts on screen', () => {
     cy.get(CARD_POST).should('have.length', 10);
   });
 
@@ -34,12 +57,10 @@ describe("1 - [INITIAL SCREEN] verifies if initial screen after load has the las
 
 describe(`2 - [INITIAL SCREEN] it should have a button called 'Carregar mais...' on screen
 that load more 10 posts on screen.`, () => {
-  beforeEach(() => {
-    cy.visit('http://localhost:3000/');
-  });
+  
 
   it("should have a button with a text 'Carregar mais...'", () => {
-    cy.contains('Carregar mais...').should('have.type', 'button');
+    cy.contains('Carregar mais...');
   });
 
   it("should load more 10 posts on screen on click it.", () => {
@@ -53,18 +74,15 @@ that load more 10 posts on screen.`, () => {
 });
 
 describe(`3 - [INTERNAL SCREEN] verifies if exist on screen the data of the post clicked`, () => {
-  beforeEach(() => {
-    cy.visit('http://localhost:3000/');
-  });
-    
-  it('should have the data correspondent to post clicked', () => {
-    const CORRESPONDENT_TITLE = cy.get(CARD_POST_HEADER).first();
-    cy.get(CARD_POST_LINK).first().click();
+  it('should have the data correspondent to post clicked', async () => {
+    cy.get(CARD_POST_HEADER).first().then(($header) => {
+      cy.get(CARD_POST_LINK).first().click();
 
-    cy.get(POST_DETAILS_IMG).should('exist');
-    cy.get(POST_DETAILS_TITLE).should('exist');
-    cy.contains(CORRESPONDENT_TITLE);
-    cy.get(POST_DETAILS_CONTENT).should('exist');
+      cy.get(POST_DETAILS_IMG).should('exist');
+      cy.get(POST_DETAILS_TITLE).should('exist');
+      cy.get(POST_DETAILS_CONTENT).should('exist');
+      cy.contains($header.text());
+    })
+
   });
 })
-
