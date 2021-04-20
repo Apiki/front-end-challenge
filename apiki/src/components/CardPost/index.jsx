@@ -2,13 +2,20 @@ import { Link } from "react-router-dom";
 
 import './style.css';
 
-function CardPost({ srcImg, header, link, slug }) {
+function CardPost({ srcImg, header, content, slug }) {
   return (
-    <div className="card-post">
-      <h1 className="card-post__header">{ header }</h1>
-      <img className="card-post__img" src={ srcImg } alt=""/>
-      <Link className="card-post__link" to={ link } slug={ slug } />
-    </div>
+    <section className="card-post">
+      <div className="card-post__holes"></div>
+      <div className="card-post__coil"></div>
+      <Link className="card-post__link card-post-front" to={`/post-details/${slug}`} slug={ slug }>
+        <header className="card-post-front__header">{ header }</header>
+        <img className="card-post-front__img" src={ srcImg } alt=""/>
+        <p className="card-post-front__footer">
+          {content.rendered.replace(/<.*?>/g, '').slice(0,25)}
+          <span>...ver mais</span>              
+        </p>
+      </Link>
+    </section>
   );
 };
 
