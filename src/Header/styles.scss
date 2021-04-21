@@ -1,0 +1,35 @@
+.header {
+  background-color: #87868a;
+  padding: 2rem 0;
+  font-size: 1.6rem;
+
+  &__container {
+    max-width: 110rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    text-transform: uppercase;
+
+    &-list {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    &-link:link,
+    &-link:visited {
+      display: block;
+      padding: 0.5rem;
+      color: #fff;
+      transition: all 0.2s;
+    }
+
+    &-link:hover {
+      color: #ba007c;
+    }
+  }
+}
