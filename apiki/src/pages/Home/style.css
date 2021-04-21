@@ -1,0 +1,21 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 5px;
+}
+
+.home__logo {
+  padding: 10px;
+  width: 20%;
+  min-width: 150px;
+}
+
+.home__cards-post {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 70px;
+}

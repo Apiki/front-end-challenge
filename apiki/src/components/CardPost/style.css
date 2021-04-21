@@ -1,0 +1,92 @@
+.card-post {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  background-color: rgb(154, 206, 154);
+  margin: 10px 0.5%;
+  max-width: 330px;
+  min-width: 170px;
+  width: 32%;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 1em;
+  font-family: 'Dancing Script', cursive;
+  box-shadow: grey 1px 3px;
+}
+
+.card-post__holes {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 2px;
+  border-radius: 50%;
+  box-shadow: 0 13px 0 #fff, 0 25px 0 #fff, 0 37px 0 #fff, 0 49px 0 #fff, 0 61px 0 #fff, 0 73px 0 #fff, 0 85px 0 #fff, 0 97px 0 #fff, 0 109px 0 #fff, 0 121px 0 #fff, 0 133px 0 #fff, 0 145px 0 #fff, 0 157px 0 #fff;
+}
+
+.card-post__coil {
+  width: 10px;
+  height: 5px;
+  position: absolute;
+  left: -3px;
+  border-radius: 30% 30%;
+  box-shadow: 0 16px 0 #000, 0 28px 0 #000, 0 40px 0 #000, 0 52px 0 #000, 0 64px 0 #000, 0 76px 0 #000, 0 88px 0 #000, 0 100px 0 #000, 0 112px 0 #000, 0 124px 0 #000, 0 136px 0 #000, 0 148px 0 #000, 0 160px 0 #000;
+}
+
+.card-post-front {
+  transform-style: preserve-3d;
+  background-color: rgb(154, 206, 154);
+  color: black;
+  height: 100%;
+  border-radius: 10px;
+  margin-left: 13px;
+  top: 0; left: 0;
+  transform-origin: left center;
+  transition: transform 1s ease-in-out, box-shadow .35s ease-in-out;
+}
+
+.card-post:hover .card-post-front {
+  transform: rotateY(-30deg) scale(1);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+  box-shadow: rgb(37, 36, 36) 3px 3px;
+  
+}
+
+.card-post-front:hover {
+  cursor: default;
+  text-decoration: none;
+  color: black;
+}
+
+.card-post-front__header {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+.card-post-front__img {
+  width: 100%;
+  height: 100px;
+}
+
+.card-post-front__footer {
+  margin-top: 5px;
+}
+
+.card-post-front__header,
+.card-post-front__footer {
+  padding: 2px 0 0 15px;
+  line-height: 15px;
+}
+
+.card-post-front__footer span:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.card-post-front__link {
+  text-decoration: none;
+}
+
