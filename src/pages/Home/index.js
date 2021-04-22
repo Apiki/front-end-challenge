@@ -1,42 +1,57 @@
 import React, { useEffect, useState } from 'react';
+import { api } from '../../services/api';
 
 import './styles.scss';
 
 const Home = () => {
   const [data, setData] = useState([]);
-  const [total, setTotal] = useState(0);
-  const [limit, setLimit] = useState(10);
+  const [page, setPage] = useState(1);
+  const [totalPage, setTotalPage] = useState(0);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function loadPosts() {
-      const response = await fetch(
-        'https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518'
+      setLoading(true);
+      const response = await api.get(
+        `/posts?_embed&categories=518&page=${page}`
       );
-      console.log(response.headers['X-WP-Total']);
-      const data = await response.json();
-      setTotal();
-      setData(data);
+
+      setTotalPage(response.headers['x-wp-totalpages']);
+
+      setData((posts) => [...posts, ...response.data]);
+      setLoading(false);
     }
 
     loadPosts();
-  }, []);
+  }, [page]);
 
-  console.log(data);
+  function handleClick() {
+    if (page === totalPage || loading) {
+      return;
+    }
+
+    setPage(Number(page) + 1);
+  }
 
   return (
     <section className='container'>
-      <div>
-        <h2>{data[0]?.title.rendered}</h2>
-        <img
-          src={
-            data[0]?._embedded['wp:featuredmedia'][0].media_details.sizes
-              .thumbnail.source_url
-          }
-          alt='immageeee'
-        />
-        <p>{data[0]?._embedded.author[0].name}</p>
-        <a href={data[0]?.link}>{data[0]?.slug}</a>
-      </div>
+      {data.map((post) => {
+        return (
+          <div key={post.id}>
+            <h2>{post.title.rendered}</h2>
+            <img
+              src={
+                post._embedded['wp:featuredmedia'][0].media_details.sizes
+                  .thumbnail.source_url
+              }
+              alt='immageeee'
+            />
+            <p>{post._embedded.author[0].name}</p>
+            <a href={post.link}>{post.slug}</a>
+          </div>
+        );
+      })}
+      <button onClick={handleClick}>Carregar mais</button>
     </section>
   );
 };
