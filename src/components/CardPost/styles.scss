@@ -19,8 +19,9 @@
     padding: 2rem;
 
     &-text {
-      min-height: 6rem;
+      min-height: 7rem;
       margin-bottom: 3rem;
+      text-overflow: ellipsis;
     }
   }
 
