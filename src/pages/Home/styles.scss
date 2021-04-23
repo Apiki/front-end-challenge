@@ -1,4 +1,47 @@
-.container {
+.section-home {
+  padding: 8rem 0;
+
+  .box-button {
+    text-align: center;
+
+    button {
+      border: none;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      padding: 1.5rem 4rem;
+      color: #fff;
+      background-color: hsl(320, 100%, 36%);
+      border-radius: 5rem;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        filter: brightness(0.9);
+        transform: translateY(-0.3rem);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+      }
+
+      &:active,
+      &:focus {
+        outline: none;
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+
+.posts-container {
   max-width: 110rem;
   margin: 0 auto;
+  // border: 1px solid red;
+}
+
+.posts-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-content: center;
+  gap: 2.5rem;
+
+  margin-bottom: 6rem;
 }

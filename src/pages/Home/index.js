@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import CardPost from '../../components/CardPost';
 import { api } from '../../services/api';
 
 import './styles.scss';
@@ -9,6 +10,7 @@ const Home = () => {
   const [page, setPage] = useState(1);
   const [totalPage, setTotalPage] = useState(0);
   const [loading, setLoading] = useState(true);
+  useState();
 
   useEffect(() => {
     async function loadPosts() {
@@ -19,7 +21,7 @@ const Home = () => {
 
       setTotalPage(response.headers['x-wp-totalpages']);
 
-      setData((posts) => [...posts, ...response.data]);
+      setData((prevState) => [...prevState, ...response.data]);
       setLoading(false);
     }
 
@@ -35,26 +37,16 @@ const Home = () => {
   }
 
   return (
-    <section>
-      <h1>Últimos Posts adcionados</h1>
-      <div className='container'>
-        {data.map((post) => {
-          return (
-            <div key={post.id}>
-              <h2>{post.title.rendered}</h2>
-              <img
-                src={
-                  post._embedded['wp:featuredmedia'][0].media_details.sizes
-                    .thumbnail.source_url
-                }
-                alt='immageeee'
-              />
-              <p>{post._embedded.author[0].name}</p>
-              <Link to={`/post/${post.slug}`}>{post.slug}</Link>
-            </div>
-          );
-        })}
-        <button onClick={handleClick}>Carregar mais</button>
+    <section className='section-home'>
+      <div className='posts-container'>
+        <div className='posts-content'>
+          {data.map((post) => {
+            return <CardPost key={post.id} post={post} />;
+          })}
+        </div>
+        <div className='box-button'>
+          <button onClick={handleClick}>Carregar mais</button>
+        </div>
       </div>
     </section>
   );
