@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { api } from '../../services/api';
 
+import './styles.scss';
+
 const Post = () => {
   const [data, setData] = useState();
   let { slug } = useParams();
@@ -21,14 +23,20 @@ const Post = () => {
       {data &&
         data.map((post) => {
           return (
-            <div key={post.id}>
-              <img
-                src={
-                  post._embedded['wp:featuredmedia'][0].media_details.sizes
-                    .medium_large.source_url
-                }
-                alt='ilustratção'
-              />
+            <div key={post.id} className='post-container'>
+              <div className='post-container__featured-img'>
+                {/* <img
+                  src={
+                    post._embedded['wp:featuredmedia'][0].media_details.sizes
+                      .medium_large.source_url
+                  }
+                  alt='ilustratção'
+                /> */}
+                <img
+                  src={post._embedded['wp:featuredmedia'][0].source_url}
+                  alt='ilustratção'
+                />
+              </div>
               <h1>{post.title.rendered}</h1>
               <div
                 dangerouslySetInnerHTML={{ __html: post.content.rendered }}
