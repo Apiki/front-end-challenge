@@ -1,7 +1,7 @@
 .header {
-  background-color: #87868a;
+  background-color: #fff;
   padding: 2rem 0;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 
   &__container {
     max-width: 110rem;
@@ -22,9 +22,10 @@
 
     &-link:link,
     &-link:visited {
+      font-weight: 500;
       display: block;
       padding: 0.5rem;
-      color: #fff;
+      color: #212121;
       transition: all 0.2s;
     }
 
