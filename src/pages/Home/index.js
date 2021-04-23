@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { api } from '../../services/api';
 
 import './styles.scss';
@@ -34,24 +35,27 @@ const Home = () => {
   }
 
   return (
-    <section className='container'>
-      {data.map((post) => {
-        return (
-          <div key={post.id}>
-            <h2>{post.title.rendered}</h2>
-            <img
-              src={
-                post._embedded['wp:featuredmedia'][0].media_details.sizes
-                  .thumbnail.source_url
-              }
-              alt='immageeee'
-            />
-            <p>{post._embedded.author[0].name}</p>
-            <a href={post.link}>{post.slug}</a>
-          </div>
-        );
-      })}
-      <button onClick={handleClick}>Carregar mais</button>
+    <section>
+      <h1>Últimos Posts adcionados</h1>
+      <div className='container'>
+        {data.map((post) => {
+          return (
+            <div key={post.id}>
+              <h2>{post.title.rendered}</h2>
+              <img
+                src={
+                  post._embedded['wp:featuredmedia'][0].media_details.sizes
+                    .thumbnail.source_url
+                }
+                alt='immageeee'
+              />
+              <p>{post._embedded.author[0].name}</p>
+              <Link to={`/post/${post.slug}`}>{post.slug}</Link>
+            </div>
+          );
+        })}
+        <button onClick={handleClick}>Carregar mais</button>
+      </div>
     </section>
   );
 };

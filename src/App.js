@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Header } from './components/Header';
 import Home from './pages/Home';
+import Post from './pages/Post';
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
           <main>
             <Route exact path='/'>
               <Home />
+            </Route>
+            <Route path='/post/:slug'>
+              <Post />
             </Route>
           </main>
         </>
