@@ -33,4 +33,55 @@
       color: #ba007c;
     }
   }
+
+  &__menu-button {
+    display: none;
+    height: 4.8rem;
+    width: 5.2rem;
+    background: url('../../assets/img/icon-hamburger.svg') no-repeat center
+      center;
+
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &__container {
+      padding: 0 3rem;
+    }
+
+    &__menu {
+      display: none;
+    }
+
+    &__menu {
+      &.active {
+        display: block;
+        position: absolute;
+        top: 6.25rem;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 2rem;
+        z-index: 20;
+      }
+
+      &.active &-list {
+        background-color: #fff;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+        height: 40%;
+        border-radius: 1rem;
+      }
+
+      &-button {
+        display: block;
+      }
+    }
+  }
 }

@@ -34,14 +34,36 @@
 .posts-container {
   max-width: 110rem;
   margin: 0 auto;
-  // border: 1px solid red;
 }
 
 .posts-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+
   align-content: center;
   gap: 2.5rem;
 
   margin-bottom: 6rem;
+}
+
+@media (min-width: 96.6rem) {
+  .posts-content {
+    grid-template-columns: inherit;
+  }
+}
+
+@media (max-width: 768px) {
+  .posts-container {
+    padding: 0 3rem;
+  }
+
+  .posts-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 475px) {
+  .posts-content {
+    grid-template-columns: 1fr;
+  }
 }

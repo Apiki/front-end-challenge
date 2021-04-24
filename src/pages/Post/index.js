@@ -25,13 +25,6 @@ const Post = () => {
           return (
             <div key={post.id} className='post-container'>
               <div className='post-container__featured-img'>
-                {/* <img
-                  src={
-                    post._embedded['wp:featuredmedia'][0].media_details.sizes
-                      .medium_large.source_url
-                  }
-                  alt='ilustratção'
-                /> */}
                 <img
                   src={post._embedded['wp:featuredmedia'][0].source_url}
                   alt='ilustratção'

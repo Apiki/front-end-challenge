@@ -35,6 +35,8 @@
   }
 
   p {
+    font-size: 1.8rem;
+    line-height: 1.7;
     margin-bottom: 2.4rem;
   }
 
@@ -92,6 +94,43 @@
         padding: 1rem;
         border: 1px solid #aaa;
       }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .post-container {
+    padding: 0 3rem;
+
+    &__featured-img {
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+    h1 {
+      font-size: 2.8rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+    }
+
+    a {
+      font-size: 1.4rem;
+    }
+  }
+
+  .post-container div ~ div {
+    img {
+      max-width: 100%;
+      object-fit: contain;
+      height: auto;
     }
   }
 }
