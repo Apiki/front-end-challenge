@@ -9,8 +9,13 @@ import '../Css/InitialPage.css';
 
 function InitialPage() {
   const {
-    posts
+    posts,
+    setMediaPost,
   } = useContext(BlogContext);
+
+  useEffect(() => {
+    setMediaPost('');
+  }, [setMediaPost]);
 
   useEffect(() => {}, [posts]);
 

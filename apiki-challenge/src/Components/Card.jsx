@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import BlogContext from '../Context/BlogContext';
 import { fetchFunction } from '../Api/index';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import '../Css/Card.css';
 
 function Card(props) {
@@ -20,12 +21,15 @@ function Card(props) {
 
   return (
     <div className="card-container">
-      <Link to={ `/post/${slug}` } onClick={ () => handleClick()}>
+      <Link onClick={ () => handleClick()} to={ `/post/${slug}` } >
         <h2>{ title }</h2>
       </Link>
-      {/* <button type="button" onClick={ () => handleClick() }>Botão</button> */}
     </div>
   );
 }
+
+Card.propTypes = {
+  post: PropTypes.object.isRequired,
+};
 
 export default Card;
