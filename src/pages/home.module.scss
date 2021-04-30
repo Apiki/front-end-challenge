@@ -1,0 +1,23 @@
+.homeContainer {
+    padding: 2rem; 
+}
+
+.morePost {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+        background: #fff;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 1.5rem;
+        margin-top: 3rem;
+    
+        transition: filter 0.2s;
+
+        &:hover {
+            filter: brightness(0.9);  
+        }
+    }
+}

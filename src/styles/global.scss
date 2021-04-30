@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1080px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 720px) {
+    html {
+        font-size: 87.5%; 
+    }
+}
+
+body {
+    background: #EFF0F5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+}

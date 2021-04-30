@@ -1,0 +1,344 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20210428.192825.4168.0.001.json",
+    "dumpEventTime": "2021-04-28T19:28:25Z",
+    "dumpEventTimeStamp": "1619648905119",
+    "processId": 4168,
+    "cwd": "C:\\Users\\Queiroz\\Documents\\Rafaela\\Projetos\\front-end-challenge",
+    "commandLine": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\Queiroz\\Documents\\Rafaela\\Projetos\\front-end-challenge\\node_modules\\.bin\\\\..\\next\\dist\\bin\\next",
+      "dev"
+    ],
+    "nodejsVersion": "v12.13.0",
+    "wordSize": 32,
+    "arch": "ia32",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "12.13.0",
+      "v8": "7.7.299.13-node.12",
+      "uv": "1.32.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.39.2",
+      "napi": "5",
+      "llhttp": "1.1.4",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1d",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019a",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "lts": "Erbium",
+      "headersUrl": "https://nodejs.org/download/release/v12.13.0/node-v12.13.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.13.0/node-v12.13.0.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v12.13.0/win-x86/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "6.1.7601",
+    "osVersion": "Windows 7 Professional Service Pack 1",
+    "osMachine": "i686",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i3-2100 CPU @ 3.10GHz",
+        "speed": 3093,
+        "user": 7348879,
+        "nice": 0,
+        "sys": 2370669,
+        "idle": 38070140,
+        "irq": 65957
+      },
+      {
+        "model": "Intel(R) Core(TM) i3-2100 CPU @ 3.10GHz",
+        "speed": 3093,
+        "user": 7833995,
+        "nice": 0,
+        "sys": 2100974,
+        "idle": 37854235,
+        "irq": 12246
+      },
+      {
+        "model": "Intel(R) Core(TM) i3-2100 CPU @ 3.10GHz",
+        "speed": 3093,
+        "user": 3193683,
+        "nice": 0,
+        "sys": 1028545,
+        "idle": 43566851,
+        "irq": 2917
+      },
+      {
+        "model": "Intel(R) Core(TM) i3-2100 CPU @ 3.10GHz",
+        "speed": 3093,
+        "user": 1690723,
+        "nice": 0,
+        "sys": 340830,
+        "idle": 45757402,
+        "irq": 1887
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "Conexão local",
+        "internal": false,
+        "mac": "e0:69:95:e0:0b:2b",
+        "address": "fe80::89c0:c5d1:875d:10c5",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 11
+      },
+      {
+        "name": "Conexão local",
+        "internal": false,
+        "mac": "e0:69:95:e0:0b:2b",
+        "address": "192.168.1.16",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      }
+    ],
+    "host": "Queiroz-PC"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+  ],
+  "javascriptHeap": {
+    "totalMemory": 807862272,
+    "totalCommittedMemory": 807862272,
+    "usedMemory": 782851172,
+    "availableMemory": 24234320,
+    "memoryLimit": 815792128,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 262144,
+        "capacity": 262008,
+        "used": 22100,
+        "available": 239908
+      },
+      "new_space": {
+        "memorySize": 16777216,
+        "committedMemory": 16777216,
+        "capacity": 8384256,
+        "used": 792712,
+        "available": 7591544
+      },
+      "old_space": {
+        "memorySize": 490278912,
+        "committedMemory": 490278912,
+        "capacity": 484353976,
+        "used": 484265220,
+        "available": 88756
+      },
+      "code_space": {
+        "memorySize": 3833856,
+        "committedMemory": 3833856,
+        "capacity": 3080512,
+        "used": 3080512,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 2625536,
+        "committedMemory": 2625536,
+        "capacity": 1922080,
+        "used": 1922080,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 292954112,
+        "committedMemory": 292954112,
+        "capacity": 291744132,
+        "used": 291744132,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 1130496,
+        "committedMemory": 1130496,
+        "capacity": 1024416,
+        "used": 1024416,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 8384256,
+        "used": 0,
+        "available": 8384256
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 790.051,
+    "kernelCpuSeconds": 61.011,
+    "cpuConsumptionPercent": 6.06991,
+    "maxRss": 923480064,
+    "pageFaults": {
+      "IORequired": 5384181,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 65878,
+      "writes": 40583
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "": "C:=C:\\Users\\Queiroz\\Documents\\Rafaela\\Projetos\\front-end-challenge",
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "APPDATA": "C:\\Users\\Queiroz\\AppData\\Roaming",
+    "ChocolateyInstall": "C:\\ProgramData\\chocolatey",
+    "ChocolateyLastPathUpdate": "132633584598195950",
+    "CommonProgramFiles": "C:\\Program Files\\Common Files",
+    "COMPUTERNAME": "QUEIROZ-PC",
+    "ComSpec": "C:\\Windows\\system32\\cmd.exe",
+    "FP_NO_HOST_CHECK": "NO",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Users\\Queiroz",
+    "INIT_CWD": "C:\\Users\\Queiroz\\Documents\\Rafaela\\Projetos\\front-end-challenge",
+    "LOCALAPPDATA": "C:\\Users\\Queiroz\\AppData\\Local",
+    "LOGONSERVER": "\\\\QUEIROZ-PC",
+    "NODE": "C:\\Program Files\\nodejs\\node.exe",
+    "NODE_ENV": "development",
+    "npm_config_argv": "{\"remain\":[],\"cooked\":[\"run\",\"dev\"],\"original\":[\"dev\"]}",
+    "npm_config_bin_links": "true",
+    "npm_config_ignore_optional": "",
+    "npm_config_ignore_scripts": "",
+    "npm_config_init_license": "MIT",
+    "npm_config_init_version": "1.0.0",
+    "npm_config_registry": "https://registry.yarnpkg.com",
+    "npm_config_save_prefix": "^",
+    "npm_config_strict_ssl": "true",
+    "npm_config_user_agent": "yarn/1.22.5 npm/? node/v12.13.0 win32 ia32",
+    "npm_config_version_commit_hooks": "true",
+    "npm_config_version_git_message": "v%s",
+    "npm_config_version_git_sign": "",
+    "npm_config_version_git_tag": "true",
+    "npm_config_version_tag_prefix": "v",
+    "npm_execpath": "C:\\Program Files\\Yarn\\bin\\yarn.js",
+    "npm_lifecycle_event": "dev",
+    "npm_lifecycle_script": "next dev",
+    "npm_node_execpath": "C:\\Program Files\\nodejs\\node.exe",
+    "npm_package_dependencies_next": "10.2.0",
+    "npm_package_dependencies_react": "17.0.2",
+    "npm_package_dependencies_react_dom": "17.0.2",
+    "npm_package_dependencies_sass": "^1.32.11",
+    "npm_package_description": "Este desafio tem como objetivo te avaliar como desenvolvedor Front-end: JavaScript, HTML, CSS e lógica de programação.",
+    "npm_package_devDependencies_typescript": "^4.2.4",
+    "npm_package_devDependencies__types_node": "^15.0.1",
+    "npm_package_devDependencies__types_react": "^17.0.4",
+    "npm_package_name": "front-end-challenge",
+    "npm_package_private": "true",
+    "npm_package_readmeFilename": "README.md",
+    "npm_package_scripts_build": "next build",
+    "npm_package_scripts_dev": "next dev",
+    "npm_package_scripts_start": "next start",
+    "npm_package_version": "0.1.0",
+    "NUMBER_OF_PROCESSORS": "4",
+    "OS": "Windows_NT",
+    "Path": "C:\\Users\\Queiroz\\AppData\\Local\\Temp\\yarn--1619634883832-0.24604050413562684;C:\\Users\\Queiroz\\Documents\\Rafaela\\Projetos\\front-end-challenge\\node_modules\\.bin;C:\\Users\\Queiroz\\AppData\\Local\\Yarn\\Data\\link\\node_modules\\.bin;C:\\Program Files\\libexec\\lib\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Program Files\\lib\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\HP\\Common\\HPDestPlgIn\\;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\HP\\Common\\HPDestPlgIn\\;C:\\Users\\Queiroz\\AppData\\Local\\Yarn\\bin;C:\\Users\\Queiroz\\AppData\\Roaming\\npm;C:\\Users\\Queiroz\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Program Files\\MySQL\\MySQL Server 5.7\\bin;C:\\Users\\Queiroz\\AppData\\Local\\Programs\\Microsoft VS Code\\bin",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JSE;.WSF;.WSH;.MSC",
+    "PROCESSOR_ARCHITECTURE": "x86",
+    "PROCESSOR_IDENTIFIER": "x86 Family 6 Model 42 Stepping 7, GenuineIntel",
+    "PROCESSOR_LEVEL": "6",
+    "PROCESSOR_REVISION": "2a07",
+    "ProgramData": "C:\\ProgramData",
+    "ProgramFiles": "C:\\Program Files",
+    "PROMPT": "$P$G",
+    "PSModulePath": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules",
+    "PUBLIC": "C:\\Users\\Public",
+    "SESSIONNAME": "Console",
+    "SystemDrive": "C:",
+    "SystemRoot": "C:\\Windows",
+    "TEMP": "C:\\Users\\Queiroz\\AppData\\Local\\Temp",
+    "TMP": "C:\\Users\\Queiroz\\AppData\\Local\\Temp",
+    "TRACE_ID": "3165dea206dae8ee",
+    "USERDOMAIN": "Queiroz-PC",
+    "USERNAME": "Queiroz",
+    "USERPROFILE": "C:\\Users\\Queiroz",
+    "windir": "C:\\Windows",
+    "windows_tracing_flags": "3",
+    "windows_tracing_logfile": "C:\\BVTBin\\Tests\\installpackage\\csilogfile.log",
+    "YARN_WRAP_OUTPUT": "false"
+  },
+  "sharedObjects": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\Windows\\SYSTEM32\\ntdll.dll",
+    "C:\\Program Files\\Avast Software\\Avast\\aswhook.dll",
+    "C:\\Windows\\system32\\kernel32.dll",
+    "C:\\Windows\\system32\\KERNELBASE.dll",
+    "C:\\Windows\\system32\\dbghelp.dll",
+    "C:\\Windows\\system32\\msvcrt.dll",
+    "C:\\Windows\\system32\\WS2_32.dll",
+    "C:\\Windows\\system32\\RPCRT4.dll",
+    "C:\\Windows\\system32\\NSI.dll",
+    "C:\\Windows\\system32\\ADVAPI32.dll",
+    "C:\\Windows\\SYSTEM32\\sechost.dll",
+    "C:\\Windows\\system32\\USER32.dll",
+    "C:\\Windows\\system32\\GDI32.dll",
+    "C:\\Windows\\system32\\LPK.dll",
+    "C:\\Windows\\system32\\USP10.dll",
+    "C:\\Windows\\system32\\IPHLPAPI.DLL",
+    "C:\\Windows\\system32\\WINNSI.DLL",
+    "C:\\Windows\\system32\\PSAPI.DLL",
+    "C:\\Windows\\system32\\USERENV.dll",
+    "C:\\Windows\\system32\\profapi.dll",
+    "C:\\Windows\\system32\\CRYPT32.dll",
+    "C:\\Windows\\system32\\MSASN1.dll",
+    "C:\\Windows\\system32\\bcrypt.dll",
+    "C:\\Windows\\system32\\WINMM.dll",
+    "C:\\Windows\\system32\\IMM32.DLL",
+    "C:\\Windows\\system32\\MSCTF.dll",
+    "C:\\Windows\\system32\\powrprof.dll",
+    "C:\\Windows\\system32\\SETUPAPI.dll",
+    "C:\\Windows\\system32\\CFGMGR32.dll",
+    "C:\\Windows\\system32\\OLEAUT32.dll",
+    "C:\\Windows\\system32\\ole32.dll",
+    "C:\\Windows\\system32\\DEVOBJ.dll",
+    "C:\\Windows\\system32\\uxtheme.dll",
+    "C:\\Windows\\system32\\mswsock.dll",
+    "C:\\Windows\\System32\\wshtcpip.dll",
+    "C:\\Windows\\System32\\wship6.dll",
+    "C:\\Windows\\system32\\bcryptprimitives.dll",
+    "C:\\Windows\\system32\\dhcpcsvc6.DLL",
+    "C:\\Windows\\system32\\dhcpcsvc.DLL",
+    "C:\\Windows\\system32\\cryptbase.dll",
+    "C:\\Windows\\system32\\apphelp.dll",
+    "C:\\Windows\\system32\\DNSAPI.dll",
+    "C:\\Windows\\system32\\rasadhlp.dll",
+    "C:\\Windows\\System32\\fwpuclnt.dll",
+    "C:\\Windows\\system32\\NLAapi.dll",
+    "C:\\Windows\\system32\\napinsp.dll",
+    "C:\\Windows\\system32\\pnrpnsp.dll",
+    "C:\\Windows\\System32\\winrnr.dll"
+  ]
+}
