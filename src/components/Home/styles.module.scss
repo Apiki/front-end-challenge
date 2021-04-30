@@ -1,0 +1,86 @@
+.post {
+    ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.4rem;
+        
+        li { 
+            border-radius: 1rem;
+            display: flow-root;
+            background: #fff;
+            cursor: pointer;
+            
+            transition: transform .2s;
+
+            &:hover {
+                box-shadow: 0 20px 50px rgb(197, 197, 197);
+                -ms-transform: scale(1.05); /* IE 9 */
+                -webkit-transform: scale(1.05); /* Safari 3-8 */
+                transform: scale(1.05); 
+            }
+
+            a {
+                display: block;
+                color: #000;
+                font-weight: 600;
+                font-size: small;
+                text-decoration: none;
+                padding: 0.5rem;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            p {
+                font-size: 1.2rem;
+                text-align: justify;
+                padding: 0.5rem;
+                color: #555658;
+            }
+
+            img {
+                width: 50rem;
+                height: 10rem;
+                border-radius: 0.5rem 0.5rem 0 0;
+            }
+        }
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .post {
+        ul {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .post {
+        ul {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .post {
+        ul {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .post {
+        ul {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+} 
