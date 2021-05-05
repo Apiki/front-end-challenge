@@ -1,0 +1,22 @@
+header {
+  background: #333333;
+  height: 66px;
+  box-shadow: 0 0 1em gold;
+}
+
+header .logo {
+  float: left;
+  height: inherit;
+  margin-left: 2em;
+}
+
+header .logo-img {
+  padding: 9px;
+  height: 90%;
+}
+
+@media only screen and (max-width: 770px) {
+  header .logo {
+    margin-left: .5em;
+  }
+}
