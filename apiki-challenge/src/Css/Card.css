@@ -1,0 +1,27 @@
+.card-container {
+    align-items: center;
+    border: 1px solid #0F559D;
+    border-radius: 50px;
+    box-shadow:  10px 10px 16px #0F559D, 
+                -1px -1px 1px #0F559D;
+    color: #0F559D;
+    display: flex;
+    flex-flow: column;
+    margin: 30px auto;
+    max-width: 55%; 
+    padding: 35px;
+    width: 55%;
+  background-color: white;
+  }
+
+.card-container:hover {
+  transition: 1s;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/* FFFFCC amarelo claro
+0F559D azul
+84634D marron
+E29630 laranja*/
