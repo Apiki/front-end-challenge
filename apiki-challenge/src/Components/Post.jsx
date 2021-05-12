@@ -13,7 +13,7 @@ function Post() {
 
   return (
     <div className="post-page">
-      <img src={ logo } alt="logo-apiki"/>
+      <img className="imageBlog" src={ logo } alt="logo-apiki"/>
       { !mediaPost ? <img src={ loading } alt="loading"/> : <h1>{ mediaPost['title']['rendered'] }</h1> }
       { mediaPost && <div dangerouslySetInnerHTML={{__html: mediaPost['content']['rendered']}} /> }
     </div>
