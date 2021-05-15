@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+body {
+    background: #fafafa;
+}
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.Header {
+    background: rgb(201, 199, 199);
+    width: 100%;
+}
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.Header ul{
+   display: flex;
+   gap: 10px; 
+}
+.Header li a {
+    border-radius: 5px;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+.Header img {
+    display: block;
+}
+.List {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-content: center;
+    gap: 3.7rem;
+    padding: 50px 0;
+}
+.CardList {
+    background: #fff;
+    max-width: 350px;
+}
+.Footer {
+    background: rgb(201, 201, 201);
+}
