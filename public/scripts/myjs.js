@@ -23,13 +23,13 @@ const setCardContent = async (url) => {
       class="c-post__img"
     />
     <div class="c-post__content">
-      <h2 class="c-post__title">${title.rendered}</h2>
+      <h2 class="c-post__title"><a href="/post/${slug}">${title.rendered}</a></h2>
       <p class="c-post__author">BY <span>${_embedded.author[0].name}</span></p>
       <div class="c-post__call">${excerpt.rendered}</div>
     </div>
   </div>
     `
-   postsContents.push(divPostContent)
+    postsContents.push(divPostContent)
   })
 
   return postsContents
