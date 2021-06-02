@@ -91,8 +91,34 @@ header .container {
 
 .c-post__img img {
   width: 70%;
+  margin: 3rem 0;
 }
 
-.c-post__content p {
-  padding: 2rem 0;
+.c-post__content h2 {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+
+.c-post__content p,
+.c-post__content .wp-block-coblocks-gist {
+  color: #212121;
+  margin-bottom: 2rem;
+}
+
+.c-post__content .wp-block-coblocks-gist {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.wp-block-image {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.wp-block-image img {
+  width: 75rem;
+  height: 71.3rem;
 }

@@ -37,7 +37,6 @@ const setCardContent = async (url) => {
 
 const insertPostBefore = async () => {
   const cardContents = await setCardContent('https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518')
-  console.log(cardContents)
 
   const divPosts = document.querySelector('.c-posts')
 
@@ -58,8 +57,6 @@ const showMorePosts = async event => {
 
   const divPosts = document.querySelector('.c-posts')
   const lastPost = divPosts.lastChild.previousElementSibling
-  
-  console.log(lastPost)
 
   morePosts.forEach(post => {
     lastPost.insertAdjacentElement('beforebegin', post)
