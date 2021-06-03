@@ -30,14 +30,26 @@ p {
   font-family: "Lato", sans-serif;
 }
 
+@media (min-width: 2000px) {
+  html {
+    font-size: 140%;
+  }
+}
+
 @media (max-width: 1080px) {
   html {
     font-size: 93.75%;
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   html {
     font-size: 87.5%;
+  }
+}
+
+@media (max-width: 425px) {
+  html {
+    font-size: 56.25%;
   }
 }
