@@ -54,6 +54,15 @@ header .container {
   justify-content: space-between;
 }
 
+.h-medias {
+  display: flex;
+  align-items: center;
+}
+
+.h-medias a {
+  margin-right: 1rem;
+}
+
 .c-posts {
   margin: 5rem 0;
 }
@@ -109,4 +118,38 @@ header .container {
   font-weight: bold;
   font-size: 1.8rem;
   padding: 0.5rem 0;
+}
+
+footer .container {
+  border-top: 0.2rem solid #ddd;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.f-about,
+.f-pages {
+  margin-top: 3rem;
+}
+
+.f-about h2,
+.f-about p,
+.f-pages h2 {
+  margin-bottom: 2rem;
+}
+
+.f-about p,
+.f-pages p {
+  line-height: 1.5;
+}
+
+.f-pages {
+  display: flex;
+  flex-direction: column;
+}
+
+.f-pages a {
+  line-height: 1.5;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #5a5a5a;
 }

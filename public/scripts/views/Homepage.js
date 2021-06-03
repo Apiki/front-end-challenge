@@ -1,5 +1,4 @@
 import AbstractView from "./AbstractView.js"
-
 export default class extends AbstractView {
   constructor(params) {
     super(params)
@@ -19,7 +18,7 @@ export default class extends AbstractView {
     const data = await this._fetchData(slug)
     const {content, date, excerpt, title, _embedded} = data[0]
 
-    console.log()
+    console.log(data[0])
     return `
       <div class="content">
         <div class="c-title">
@@ -32,7 +31,7 @@ export default class extends AbstractView {
         <div class="c-post__author">
           <img
             src=${_embedded.author[0].avatar_urls["96"]}
-            alt="x"
+            alt=${_embedded.author[0].name}
           />
           <p>By <span>${_embedded.author[0].name}</span> - ${date}</p>
         </div>
@@ -44,6 +43,13 @@ export default class extends AbstractView {
         </div>
         <div class="c-post__content">
           ${content.rendered}
+        </div>
+      </div>
+      <div class="author-card">
+        <img src=${_embedded.author[0].avatar_urls["96"]} alt=${_embedded.author[0].name} class="author-avatar" />
+        <div class="author-info">
+          <h2><a href=${_embedded.author[0].link} >${_embedded.author[0].name}</a></h2>
+          <p>${_embedded.author[0].description}</p>
         </div>
       </div>
     `

@@ -12,7 +12,7 @@ const setCardContent = async (url) => {
   const postsContents = []
 
   posts.forEach(post => {
-    const {excerpt, id, title, slug, _embedded} = post
+    const {excerpt, title, slug, _embedded} = post
     const divPostContent = document.createElement('div')
 
     divPostContent.innerHTML = `
