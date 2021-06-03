@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #fff;
+  --black: #000;
+
+  --gray-1: #f5f5f5;
+  --gray-2: #a0a0a9;
+  --gray-3: #5a5a5a;
+  --gray-4: #3c3c3c;
+
+  --pink: #a81a79;
+}
+
+body {
+  background: var(--gray-1);
+}
+
+h2,
+h3,
+span {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
