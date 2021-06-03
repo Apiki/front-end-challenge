@@ -1,4 +1,5 @@
 import Homepage from "./views/Homepage.js"
+import PostPage from "./views/PostPage.js"
 
 const pathToRegex = path =>{
   return new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$")
@@ -16,7 +17,7 @@ const getParams = match => {
 const router = async () => {
   const routes = [
     { path: "/", view: Homepage },
-    { path: "/post/:id", view: Homepage }
+    { path: "/post/:id", view: PostPage }
   ]
  
   // Test each route for potential match
