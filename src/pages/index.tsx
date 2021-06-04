@@ -1,70 +1,69 @@
 import { GetStaticProps } from "next"
+import { useEffect, useState } from "react"
 
 import styles from "../styles/home.module.scss"
 
 import PostCard from "../components/PostCard"
-import api from "../services/api"
-
-import { format } from "date-fns"
-import ptBR from "date-fns/locale/pt-BR"
+import { getPosts } from "../utils/getPosts"
 
 type Post = {
   id: number
   title: string
   description: string
   thumbnail: string
-  created_at: string
+  createdAt: string
   slug: string
   author: string
 }
 
 type HomeProps = {
-  posts: Post
+  posts: Array<Post>
+  totalPages: number
 }
 
-const Home = ({ posts }: HomeProps) => {
+const Home = (props: HomeProps) => {
+  const [page, setPage] = useState(1)
+  const [posts, setPosts] = useState(props.posts)
+
+  useEffect(() => {
+    const callGetPosts = async () => {
+      const { posts: morePosts } = await getPosts(page)
+      const allPosts = [...posts, ...morePosts]
+      setPosts(allPosts)
+    }
+
+    if (page > 1 && page <= props.totalPages) {
+      callGetPosts()
+    }
+  }, [page])
+
   return (
     <div className={styles.homeContainer}>
       <h2>Postagens</h2>
       <section>
         <main>
-          {posts.map(post => (
-            <PostCard key={post.id} data={post} />
+          {posts.map((post, index) => (
+            <PostCard key={index} data={post} />
           ))}
         </main>
+
+        {page < props.totalPages && (
+          <span onClick={() => setPage(page + 1)} className={styles.loadMore}>
+            Carregar mais
+          </span>
+        )}
       </section>
     </div>
   )
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { data } = await api.get("")
-  const posts = data.map(post => {
-    const description = post.excerpt.rendered
-      .replace("<p>", "")
-      .replace("</p>", "")
-    const createdAt = format(new Date(post.date), "d MMM, yyyy", {
-      locale: ptBR,
-    })
-
-    return {
-      id: post.id,
-      title: post.title.rendered,
-      description,
-      thumbnail:
-        post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail
-          .source_url,
-      createdAt,
-      slug: post.slug,
-      author: post._embedded.author[0].name
-        ? post._embedded.author[0].name
-        : null,
-    }
-  })
+  const { posts, totalPages } = await getPosts(1)
 
   return {
     props: {
       posts,
+      totalPages,
     },
     revalidate: 60 * 60 * 8, // 8 hours
   }

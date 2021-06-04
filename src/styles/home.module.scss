@@ -26,6 +26,7 @@
 
     margin: 3rem 0;
     padding: 4rem 8rem;
+    background: var(--white);
 
     @media (min-width: 2000px) {
       padding: 4rem 20rem;
@@ -39,12 +40,18 @@
       padding: 4rem 2rem;
     }
 
-    background: var(--white);
-
     main {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+    }
+
+    .loadMore {
+      display: flex;
+      align-self: center;
+
+      color: var(--gray-4);
+      cursor: pointer;
     }
   }
 }
