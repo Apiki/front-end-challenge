@@ -1,10 +1,9 @@
 .h-posts {
-  margin: 5rem 0;
+  margin: 5rem auto;
+  width: 100%;
 }
 
 .h-post__item {
-  width: 80rem;
-  height: 18rem;
   background: #e6e6e9;
   border-radius: 0.75rem;
 
@@ -21,11 +20,12 @@
 }
 
 .h-post__content h2 {
-  margin: 1rem 0;
+  margin: 1rem 1rem 0 0;
 }
 
 .h-post__author {
   font-size: 1.1rem;
+  margin-top: 1rem;
 }
 
 .h-post__author span {
@@ -33,7 +33,7 @@
 }
 
 .h-post__call {
-  margin: 1rem 0;
+  margin: 1rem 1rem 0 0;
   padding: 0.8rem 0;
 }
 
@@ -59,4 +59,65 @@
 
 .h-show-more .btn:hover {
   cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  :root {
+    font-size: 56.25%;
+  }
+
+  .h-post__item img {
+    width: 21rem;
+    max-height: 15rem;
+    margin-right: 1.5rem;
+  }
+}
+
+@media (max-width: 760px) {
+  :root {
+    font-size: 50%;
+  }
+
+  .h-post__content,
+  .h-post__content p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .h-post__content h2 {
+    white-space: normal;
+    font-size: 1.75rem;
+  }
+
+  .h-post__item img {
+    width: 17.25rem;
+    max-height: 12rem;
+    margin-right: 1.5rem;
+  }
+
+  footer .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container .f-pages {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 660px) {
+  .container {
+    width: 90%;
+  }
+
+  .content,
+  header,
+  footer {
+    min-width: 400px;
+  }
+
+  .h-post__content p:last-child {
+    display: none;
+  }
 }

@@ -36,6 +36,11 @@ p {
   margin: 0 auto;
 }
 
+.content {
+  width: 100%;
+  margin: 0 auto;
+}
+
 header {
   width: 100%;
   height: 6rem;
@@ -72,6 +77,10 @@ footer .container {
 .f-about,
 .f-pages {
   margin-top: 3rem;
+}
+
+.f-about {
+  margin-right: 3rem;
 }
 
 .f-about h2,
