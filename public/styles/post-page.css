@@ -58,16 +58,18 @@
 }
 
 .wp-block-image {
+  width: 100%;
   margin: 3rem 0 5rem 0;
   text-align: center;
 }
 
 .wp-block-image img {
-  width: 75rem;
+  width: 80%;
+  height: 40%;
 }
 
 .author-card {
-  width: 70%;
+  width: 90%;
   padding: 2rem;
   background-color: #c7c7c7;
   margin: 3rem 0;
@@ -76,10 +78,58 @@
 }
 
 .author-card img {
+  max-height: 10rem;
   margin-right: 2rem;
   border-radius: 50%;
 }
 
 .author-card .author-info h2 {
   margin-bottom: 2rem;
+}
+
+@media (max-width: 1000px) {
+  :root {
+    font-size: 56.25%;
+  }
+
+  .wp-block-image {
+    width: 100%;
+  }
+
+  .author-card img {
+    max-height: 9rem;
+    margin-right: 2rem;
+    border-radius: 50%;
+  }
+
+  .author-card .author-info h2 {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 760px) {
+  :root {
+    font-size: 50%;
+  }
+
+  .wp-block-image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 660px) {
+  .content,
+  header,
+  footer {
+    min-width: 450px;
+  }
+
+  .author-card .author-info {
+    display: flex;
+    align-items: center;
+  }
+
+  .author-card p {
+    display: none;
+  }
 }
