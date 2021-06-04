@@ -1,0 +1,60 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 3rem;
+
+  cursor: pointer;
+
+  aside {
+    flex: none;
+
+    img {
+      width: 9.4rem;
+
+      @media (max-width: 375px) {
+        width: 7rem;
+      }
+
+      @media (max-width: 325px) {
+        width: 6rem;
+      }
+    }
+  }
+
+  .content {
+    width: 23rem;
+    margin-left: 1.5rem;
+
+    h3 {
+      color: var(--pink);
+      margin-bottom: 1rem;
+    }
+
+    span {
+      font-size: 0.85rem;
+      color: var(--gray-3);
+    }
+
+    @media (max-width: 375px) {
+      .description {
+        display: none;
+      }
+
+      margin-left: 1rem;
+    }
+
+    div {
+      margin-top: 1rem;
+
+      strong {
+        font-family: "Lexend Deca", sans-serif;
+        font-size: 0.9rem;
+      }
+
+      span:last-child {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
