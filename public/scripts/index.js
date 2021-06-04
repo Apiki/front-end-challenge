@@ -19,8 +19,7 @@ const router = async () => {
     { path: "/", view: Homepage },
     { path: "/post/:id", view: PostPage }
   ]
- 
-  // Test each route for potential match
+
   const potentialMatches = routes.map(route => {
     return {
       route,
@@ -38,8 +37,22 @@ const router = async () => {
   }
 
   const view = new match.route.view(getParams(match))
+  
+  let page = 1
 
-  document.querySelector("#app").innerHTML = await view.getHtml()
+  const divApp = document.querySelector("#app")
+  
+  divApp.innerHTML = await view.getHtml()
+
+  const btnShowMore = document.querySelector('#showMore') 
+  
+  btnShowMore ? btnShowMore.addEventListener('click', async event => {
+    event.preventDefault()
+
+    page++
+
+    await view.showMore(page)
+  }) : btnShowMore
 }
 
 window.addEventListener("popstate", router)

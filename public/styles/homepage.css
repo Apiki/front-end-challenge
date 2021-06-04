@@ -1,73 +1,8 @@
-:root {
-  font-family: "Montserrat", sans-serif;
-  font-size: 62.5%;
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-  color: #000;
-}
-
-body {
-  background: #f5f5f5;
-}
-
-h1 {
-  font-size: 3.2rem;
-}
-
-h2 {
-  font-size: 2.2rem;
-}
-
-p {
-  font-size: 1.6rem;
-  color: #5a5a5a;
-}
-
-.container {
-  width: 80%;
-  margin: 0 auto;
-}
-
-header {
-  width: 100%;
-  height: 6rem;
-
-  margin-bottom: 3rem;
-
-  background-image: linear-gradient(to right, #67666a, #000);
-  color: white;
-
-  display: flex;
-  align-items: center;
-}
-
-header .container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.h-medias {
-  display: flex;
-  align-items: center;
-}
-
-.h-medias a {
-  margin-right: 1rem;
-}
-
-.c-posts {
+.h-posts {
   margin: 5rem 0;
 }
 
-.c-post__item {
+.h-post__item {
   width: 80rem;
   height: 18rem;
   background: #e6e6e9;
@@ -78,38 +13,40 @@ header .container {
   display: flex;
 }
 
-.c-post__item img {
+.h-post__item img {
   width: 26rem;
   margin-right: 3rem;
 
   border-radius: 0.75rem;
 }
 
-.c-post__content h2 {
+.h-post__content h2 {
   margin: 1rem 0;
 }
 
-.c-post__author {
+.h-post__author {
   font-size: 1.1rem;
 }
 
-.c-post__author span {
+.h-post__author span {
   font-weight: bold;
 }
 
-.c-post__call {
+.h-post__call {
   margin: 1rem 0;
   padding: 0.8rem 0;
 }
 
-.c-show-more {
+.h-show-more {
+  margin-bottom: 5rem;
+
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
 
-.c-show-more .btn {
+.h-show-more .btn {
   width: 20rem;
   background: #ba007c;
   color: white;
@@ -120,36 +57,6 @@ header .container {
   padding: 0.5rem 0;
 }
 
-footer .container {
-  border-top: 0.2rem solid #ddd;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.f-about,
-.f-pages {
-  margin-top: 3rem;
-}
-
-.f-about h2,
-.f-about p,
-.f-pages h2 {
-  margin-bottom: 2rem;
-}
-
-.f-about p,
-.f-pages p {
-  line-height: 1.5;
-}
-
-.f-pages {
-  display: flex;
-  flex-direction: column;
-}
-
-.f-pages a {
-  line-height: 1.5;
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #5a5a5a;
+.h-show-more .btn:hover {
+  cursor: pointer;
 }

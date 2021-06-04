@@ -7,13 +7,15 @@ export default class {
     document.title = title
   }
 
-  _setUrl(page, slug = "") {
+  _setUrl(page, param = null) {
     let endpoint = "https://blog.apiki.com/wp-json/wp/v2/posts?_embed"
     
     if(page == "post") {
-      endpoint += `&slug=${slug}`
+      endpoint += `&slug=${param}`
     } else if(page == "home") {
       endpoint += `&categories=518`
+    } else if(page == "new") {
+      endpoint += `&categories=518&page=${param}`
     }
     
     return endpoint
