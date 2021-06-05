@@ -1,0 +1,117 @@
+.container {
+  min-height: calc(100vh - 210px);
+
+  main {
+    display: flex;
+    justify-content: center;
+
+    background: var(--white);
+    margin: 3rem 0;
+    padding: 1.5rem 0 2rem;
+
+    .content {
+      width: 30rem;
+
+      @media (max-width: 360px) {
+        width: 27rem;
+      }
+
+      h2 {
+        color: var(--pink);
+        margin-bottom: 1.3rem;
+      }
+
+      span {
+        color: var(--gray-2);
+        font-family: "Lato", sans-serif;
+        font-size: 1.1rem;
+      }
+
+      section {
+        margin: 2rem 0;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        margin: 2rem 0;
+      }
+
+      footer {
+        margin-top: 2rem;
+
+        span {
+          font-size: 0.9rem;
+          color: var(--gray-3);
+          font-family: "Lato", sans-serif;
+        }
+
+        span:last-child {
+          margin-left: 1.5rem;
+        }
+
+        strong {
+          font-size: 0.9rem;
+          font-family: "Lexend Deca", sans-serif;
+        }
+      }
+
+      div {
+        p {
+          margin-bottom: 1rem;
+          font-size: 1.1rem;
+          color: var(--gray-5);
+        }
+
+        a {
+          color: var(--pink);
+          text-decoration: none;
+        }
+
+        ul {
+          padding-left: 2.5rem;
+        }
+
+        li {
+          font-size: 1.1rem;
+          font-family: "Lato", sans-serif;
+          margin-bottom: 1.5rem;
+          color: var(--gray-5);
+          list-style: square;
+        }
+
+        table {
+          font-family: "Lexend Deca", sans-serif;
+          text-align: center;
+          margin: 2rem 0;
+          border-collapse: collapse;
+
+          th {
+            color: #5a5a5f;
+            background: var(--white);
+            padding: 1rem 0;
+          }
+
+          tr {
+            padding: 1rem 0;
+          }
+
+          td {
+            color: #5a5f63;
+            margin: 0;
+            padding: 1rem 0;
+          }
+
+          tr:nth-child(odd) {
+            background: #f0f0f0;
+          }
+        }
+
+        pre {
+          overflow: hidden;
+          padding: 2rem 0;
+        }
+      }
+    }
+  }
+}

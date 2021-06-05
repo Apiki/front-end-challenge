@@ -7,6 +7,7 @@ export const getPosts = async (page: number) => {
   const { data, headers } = await api.get("", {
     params: {
       page,
+      categories: 518,
     },
   })
 
