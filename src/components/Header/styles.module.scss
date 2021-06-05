@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 8rem;
+  height: 80px;
+
+  background: var(--black);
+
+  @media (min-width: 2000px) {
+    padding: 0 20rem;
+  }
+
+  @media (max-width: 425px) {
+    padding: 0 4rem;
+  }
+
+  div {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}
