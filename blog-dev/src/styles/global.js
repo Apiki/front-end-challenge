@@ -11,6 +11,11 @@ export default createGlobalStyle`
     font-family: 'Rubik', sans-serif;
   }
 
+  html {
+    /* a cada 1rem será considera 10px */
+    font-size: 62.5%;
+  }
+
   body {
     background: #fff;
     color: #000;
