@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import api from '../../services/api';
 
-import { HomeContainer } from './styles';
+import { HomeContainer, LoadingDiv } from './styles';
 
 import { Header } from '../../components/Header';
 import { Card } from '../../components/Card';
@@ -36,7 +36,9 @@ export function Home() {
       
       <HomeContainer>
         {loading ? (
-          <p>Loading...</p>
+          <LoadingDiv>
+            <p>Loading...</p>
+          </LoadingDiv>
         ) : (
           <Card posts={posts} />
         )}

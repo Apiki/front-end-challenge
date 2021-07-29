@@ -33,7 +33,11 @@ export const CardContent = styled.div`
     padding: 0;
   }
 
-  > h3 {
+  > a {
+    text-decoration: none;
+  }
+
+  > a h3 {
     color: #000;
     font-size: 3.0rem;
   }
