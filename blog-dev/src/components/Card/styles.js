@@ -2,9 +2,10 @@ import styled from 'styled-components';
 
 
 export const CardContainer = styled.div`
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 2rem;
+  margin-bottom: 4rem;
+  padding: 4rem 2rem;
   overflow: hidden;
   border-radius: 16px;
   background: #ddd;
@@ -16,13 +17,11 @@ export const CardContainer = styled.div`
 
 export const ImgDiv = styled.div`
   position: relative;
-  overflow: hidden;
-  width: 18.0rem;
-  border-radius: 8px;
+  height: 140px;
 
   > img {
-    width: 100%;
-    heigth: auto;
+    width: auto;
+    height: 100%;
   }
 `;
 
@@ -36,11 +35,11 @@ export const CardContent = styled.div`
 
   > h3 {
     color: #000;
-    font-size: 3.6rem;
+    font-size: 3.0rem;
   }
 
   p {
     margin-top: 1rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 `;

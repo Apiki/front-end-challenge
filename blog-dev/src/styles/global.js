@@ -8,7 +8,7 @@ export default createGlobalStyle`
     outline: 0;
     box-sizing: border-box;
 
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
   }
 
   html {

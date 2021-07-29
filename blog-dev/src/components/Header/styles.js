@@ -7,14 +7,18 @@ export const HeaderTag = styled.header`
 
 export const HeaderContainer = styled.div`
   height: 38vh;
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 
-  > h1 {
-    font-size: 4.2rem;
+  > a {
+    text-decoration: none;
+  }
+
+  > a h1 {
+    font-size: 4.6rem;
     color: #000;
     margin: 0;
   }
