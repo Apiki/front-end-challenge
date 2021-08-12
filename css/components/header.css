@@ -1,0 +1,12 @@
+#header h1 {
+  display: flex;
+  justify-content: center;
+  color: #212529;
+}
+#header p {
+  display: flex;
+  justify-content: center;
+  font-size: 1.3em;
+  color: grey;
+  font-weight: lighter;
+}

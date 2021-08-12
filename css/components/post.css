@@ -1,0 +1,24 @@
+#post__title {
+  font-weight: bolder;
+}
+
+.post__excerpt {
+  font-weight: lighter;
+  font-size: 1.4rem;
+  color: grey;
+}
+
+.post__author {
+  font-weight: normal;
+  font-style: italic;
+  color: grey;
+}
+.post__img img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+#post__content h2 {
+  margin: 3% 0;
+}

@@ -1,25 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog apiki para devs</title>
-  <link rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title></title>
+  <meta name="description" content="O melhor blog do mundo do desenvolvimento web. Conteúdo exclusivo, de devs para devs.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
 </head>
 <body>
-  <div id="post" class="container">
-  <img id="post__image" src="" class="img-fluid">
-  <h1 id="post__title" class = "text-success"></h1>
-<div id="post__content"></div>
+  <div class="navbar navbar-expand-sm sticky-top">
+    <a class="navbar__img" href="index.html">
+      <img src="css/images/apiki-logo.png" alt="apiki logo">
+    </a>
+  </div>
+  
+  <div class="container mt-3 p-3">
+    <div id="post" class="container">
+      <h1 id="post__title" class="pt-3"></h1>
+      <p class="post__excerpt"></p>
+      <p class="post__author"></p>
+    </div>
+  </div>
+  <div class="post__img mb-4 d-flex">
+    <img id="post__image" src="" class="img-fluid">
+  </div>
+<div id="content" class="container">
+  <div id="post__content" class="container"
+  ></div>
 </div>
 
-<div id ="footer" class="container">
-  <a class="btn btn-ghost" href="#">voltar ao blog..</a>
-</div>
-<div>
-  
-</div>
+  <div class="footer">
+    <div class="footer__links">
+      <a href="https://github.com/mathiasbarreto" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/mathiasbarreto/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="footer-copyright">
+      made with <i class="fas fa-heart"></i> by mathi
+    </div>
+  </div>
+
+
   <script src = js/single.js></script>
 </body>
 </html>

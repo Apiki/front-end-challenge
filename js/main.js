@@ -8,14 +8,22 @@ const fetchPosts = (url) => {
     .then((data) => {
       const posts = document.getElementById('feed');
       data.forEach((post) => {
-        const card = `
-          <div class="card-product">
-            <a href = './single.html?slug=${post.slug}'><img src= "${post._embedded['wp:featuredmedia'][0].source_url}" />
-            <div class="card-product-infos">
-              <h2>${post.title.rendered}</h2>
-              </a>
+        const card = `  
+        <a href='./single.html?slug=${post.slug}'>
+          <div class="card m-2">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                  <img class= "postcard__img" src="${post._embedded['wp:featuredmedia'][0].source_url}" />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body postcard__infos">
+                  <h2 class="postcard__h2 card-title">${post.title.rendered}</h2>
+                  <p className="postcard__excerpt card-text">${post.excerpt.rendered}</p>
+                </div>
+              </div>
+            </div>
           </div>
-    </div>`;
+        </a>`;
         posts.insertAdjacentHTML('beforeend', card);
       });
     });
