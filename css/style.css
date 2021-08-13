@@ -1,0 +1,55 @@
+@import url('components/navbar.css');
+@import url('components/cards.css');
+@import url('components/button.css');
+@import url('components/footer.css');
+@import url('components/header.css');
+@import url('components/post.css');
+
+a {
+  text-decoration: none !important;
+}
+
+a h2 {
+  text-decoration: none;
+  color: #212529;
+}
+
+a h2:hover {
+  color: #007bff;
+}
+a p {
+  color: gray;
+  font-size: 1.1em;
+  font-weight: lighter;
+  opacity: 1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 480px) {
+  h2 {
+    font-weight: 500;
+  }
+  p {
+    font-size: 21px;
+    line-height: 32px;
+    margin-bottom: -0.46em;
+    letter-spacing: -0.003em;
+    font-weight: 400;
+  }
+}
+@media (max-width: 480px) {
+  h2 {
+    font-weight: 500;
+  }
+  p {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: -0.46em;
+    letter-spacing: -0.003em;
+    font-weight: 400;
+  }
+}
