@@ -1,0 +1,76 @@
+.header-container {
+  // @extend .flex-row-center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: darken($primary_color, 70);
+  height: 70px;
+  padding: 8px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  // width: 100%;
+  // position: fixed;  
+  // top: 0;
+}
+.apiki-logo {
+      height: 45px;
+      margin-left: 20px;
+      padding: 15px 0;
+      align-self: flex-start;
+}
+
+
+.search-bar-container {
+    background-color: $background;
+    border-radius: 1px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid gray;
+    border-radius: 10px;
+    height: 28px;
+
+    & input {
+      justify-self: center;
+      background: transparent;
+      align-self: center;
+      text-align: center;
+      border: none;
+      min-width: 300px;
+      padding: 8px;
+      flex-grow: 2;
+
+        &:focus {
+          outline: none;
+        };
+      }
+
+      & button {
+        height: 31px;
+        border: none;
+        background: transparent;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    & img {
+      height: 12px;
+    }
+}
+
+.social-media-container {
+  @extend .flex-row-center;
+  padding-right: 20px;
+  & a {
+    margin: 4px;
+  }
+  & img {
+    height: 40px;
+  }
+}
