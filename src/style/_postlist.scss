@@ -1,0 +1,118 @@
+.main-body {
+ @extend .flex-column-center;
+font-size: 1.1em;
+}
+
+.navbar {
+  @extend .flex-row-center;
+  margin-top: 100px;
+  min-width: 1000px;
+  justify-content: center;
+  list-style-type: none;
+  color: $second_text_color;
+
+  & li {
+    padding-right: 15px;
+    padding-left: 15px;
+    border-right: 1px solid $second_text_color;
+
+    & a{
+      text-decoration: none;
+      color: $second_text_color;
+    }
+  }
+}
+
+.title {
+  @extend .flex-column-center;
+  margin-top: 0px;
+  & h1 {
+    align-self: center;
+    color: $title_color;
+    font-size: 3em;
+    margin-bottom: 8px;
+  }
+  & h2 {
+    align-self: center;
+    color: $second_text_color;
+    margin-top: 3px;
+  }
+}
+
+.main-content {
+  @extend  .flex-row-center;
+}
+
+.post-wrapper {
+  width: 70%;
+  min-width: 950px;
+  max-width: 1200px;
+  padding: 15px;
+  align-self: center;
+  margin-top: 0;
+}
+
+.post-card {
+  @extend .flex-row-center;
+  border-radius: 5px;
+  transition: box-shadow 100ms;
+  height: 250px;
+  padding: 20px;
+  justify-self: center;
+  overflow:hidden;
+
+  
+  &:hover{
+    box-shadow: 0px 0px 12px $shadow_color;
+  }
+  
+  & img {
+    height: 250px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px $shadow_color;
+  }
+  
+  & h2, p {
+    color: $title_color;
+  }
+}
+
+.card-container {
+  margin: 15px;
+
+  & a{
+    text-decoration: none;
+    }
+
+  & a:hover { 
+    box-shadow: 0px 0px 12px $shadow_color;
+  }
+}
+
+.card-title {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  color: $title_color;
+  width: 100%;
+
+  & p{
+    color: $second_text_color;
+  }
+}
+
+.pages{
+  // justify-self: center;
+  color: $second_text_color;
+  align-self: center;
+}
+
+.author {
+  align-self: flex-end;
+
+  & span{
+    text-transform: capitalize;
+    font-weight: 1000;
+  }
+}

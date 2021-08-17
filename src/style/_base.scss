@@ -1,0 +1,25 @@
+$primary_color: rgb(0, 0, 0);
+$background: white;
+$shadow_color: darken($background, 30);
+$title_color: darken($primary_color, 70);
+$second_text_color: lighten($primary_color, 50);
+$text_color: darken($primary_color, 60);
+
+body {
+  background-color: $background;
+  color: darken($primary_color, 90);
+  margin: 0;
+  font-family:myriadPro,Arial, Helvetica, sans-serif;
+}
+
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

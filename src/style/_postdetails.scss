@@ -1,0 +1,47 @@
+.main-body-post {
+  @extend .flex-column-center;
+  align-items: center;
+font-size: 1.4em;
+}
+
+.post-title {
+
+  & h1 {
+    margin-bottom: 0px;
+    color: $title_color;
+  }
+
+  & p {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-size: 0.7em;
+    color: $second_text_color;
+  }
+
+}
+
+.post-wrapper {
+  margin-top: 100px;
+  width: 70%;
+  // text-align: justify;
+  overflow: auto;
+
+  & img {
+    width: 100%;
+    border-radius: 0.2em;
+  }
+}
+
+.post-body {
+  color: $second_text_color;
+  
+  & h2, h1 h3, h4, th {
+    color: $title_color;
+  }
+  
+  & a {
+    text-decoration: none;
+    font-weight: 800;
+    color: darken($second_text_color, 10);
+  }
+}

@@ -1,0 +1,35 @@
+.footer-container{
+  @extend .flex-row-center;
+  background-color: lighten($primary_color, 20);
+  height: 200px;
+  padding: 25px;
+  color: white;
+  justify-content: space-around;
+  margin-top: 15px;
+
+    & img {
+      height: 45px;
+      margin-left: 20px;
+      padding: 15px 0;
+    }
+}
+
+.about {
+  width: 40%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.signature-container {
+  @extend .flex-row-center;
+  justify-content: space-around;
+  width: 40%;
+
+  & .social-media {
+    border-left: 1px solid lighten($primary_color, 30);
+  }
+
+  & h3 {
+    margin-top: 0;
+  }
+}
