@@ -2,7 +2,7 @@ import './style.css';
 
 function Home() {
   return (
-    <>
+    <html>
       <header className="Header">
         <div className="container">
           <figure>
@@ -10,7 +10,7 @@ function Home() {
           </figure>
           <nav>
               <ul>
-                <li><a href="#">WEB STORIES</a></li>
+                <li><a href="#">NOTICIAS</a></li>
                 <li><a href="#">DESENVOLVIMENTO</a></li>
                 <li><a href="#">CONTATO</a></li>
               </ul>
@@ -87,7 +87,7 @@ function Home() {
       <footer className="Footer">
       
       </footer>
-    </>
+    </html>
   );
 }
 

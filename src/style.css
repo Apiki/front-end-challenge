@@ -1,56 +1,69 @@
 * {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background: #fafafa;
+  background: #fafafa;
 }
+
 .container {
-    max-width: 1170px;
-    margin: 0 auto;
+  margin: 0 auto;
+  max-width: 1170px;
 }
+
 .Header {
-    background: rgb(201, 199, 199);
-    width: 100%;
+  background: rgb(201, 199, 199);
+  width: 100%;
 }
+
 header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 0;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
 }
+
 .Header ul{
-   display: flex;
-   gap: 10px; 
+  display: flex;
+  gap: 10px; 
 }
+
 .Header li a {
-    border-radius: 5px;
-    display: block;
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
+  border-radius: 5px;
+  color: #000;
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
 }
+
 .Header img {
-    display: block;
+  display: block;
 }
+
+.Container {
+  padding: 30px;
+}
+
 .List {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-content: center;
-    gap: 3.7rem;
-    padding: 50px 0;
+  align-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.7rem;
+  padding: 30px 0;
 }
+
 .CardList {
-    background: #fff;
-    max-width: 350px;
+  background: #fff;
+  max-width: 350px;
 }
+
 .Button {
-    bottom: -150px;
-    position: absolute;
-    right:50px;
+  text-align: center;
+  margin: 10px;
 }
+
 .Footer {
-    background: rgb(201, 201, 201);
+  background: rgb(201, 201, 201);
 }
