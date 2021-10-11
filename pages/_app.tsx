@@ -2,11 +2,13 @@
 import { GetServerSideProps } from 'next'
 import Router from 'next/router'
 import NProgress from 'nprogress'
+import { ToastContainer } from 'react-toastify'
 
 import { ThemeProvider } from 'styled-components'
 import Header from '../components/header'
 
 import { GlobalStyle, theme } from '../components/styles/global'
+import 'react-toastify/dist/ReactToastify.css'
 
 Router.events.on('routeChangeStart', () => {
   NProgress.start()
@@ -21,6 +23,7 @@ function MyApp({ Component, pageProps }): JSX.Element {
       <ThemeProvider theme={theme}>
         <Header />
         <Component {...pageProps} />
+        <ToastContainer />
       </ThemeProvider>
     </>
   )

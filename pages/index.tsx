@@ -7,6 +7,8 @@ import { IPost } from '../types/post'
 import transformToPost from '../utils/transformToPost'
 import { SEO } from '../components/seo'
 
+import { toast } from 'react-toastify'
+
 interface PostsListsProps {
   posts: IPost[]
   total_pages: number
@@ -34,9 +36,12 @@ const Home: React.FC<PostsListsProps> = ({ posts, total_pages }) => {
       const newPosts = response.data.map((item: any) => transformToPost(item))
 
       setPostsList(postsList.concat(newPosts))
-
       setLoading(false)
     } catch (error) {
+      toast.error(
+        'Houve um erro no carregamento dos posts. Por favor, tente novamente mais tarde',
+        { theme: 'colored' }
+      )
       setLoading(false)
     }
   }, [page, postsList])
