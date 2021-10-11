@@ -9,3 +9,5 @@
   - caso esteja utilizando yarn, digite `yarn dev`no terminal aberto na raiz do projeto
   - caso esteja utilizando npm, digite `npm run dev`no terminal aberto na raiz do projeto
 - Abra o navegador de sua preferencia e digite `localhost:3000`
+
+> Este projeto está disponível também no seguinte endereço: ()[]
