@@ -6,5 +6,15 @@ export const Container = styled.div`
 	background-image: ${(props) => `url(${props.image})`};
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: initial;
+	background-position: center;
+	margin-top: 55px;
+
+	@media only screen and (min-width: 620px) {
+		margin-top: 65px;	
+	}
+	
+	@media only screen and (min-width: 920px) {
+		margin-top: 85px;
+		background-position: initial;
+	}
 `

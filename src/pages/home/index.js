@@ -15,7 +15,7 @@ const getKey = (pageIndex, previousPageData) => {
 const Home = () => {
 	const [hasMorePosts, setHasMorePosts] = useState(true)
 	const [posts, setPosts] = useState([])
-	const { data, loading, size, setSize } = useInfiniteAxios(getKey)
+	const { data, loading, isLoadingMore, size, setSize } = useInfiniteAxios(getKey)
 
 	useEffect(() => {
 		if (data?.length) {
@@ -33,7 +33,12 @@ const Home = () => {
 				title="Apiki DEV"
 				description="O melhor conteúdo sobre desenvolvimento da internet brasileira"
 			/>
-			<Posts posts={posts} seeMore={handleSeeMore} loading={loading} hasMorePosts={hasMorePosts} />
+			<Posts
+				posts={posts}
+				seeMore={handleSeeMore}
+				loading={loading || isLoadingMore}
+				hasMorePosts={hasMorePosts}
+			/>
 		</>
 	)
 }

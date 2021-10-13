@@ -5,10 +5,12 @@ export const Container = styled.div`
 	width: 100vw;
 	max-width: 1300px;
 	margin: 0 auto;
+
 	@media only screen and (min-width: 620px) {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 	}
+	
 	@media only screen and (min-width: 920px) {
 		grid-template-columns: repeat(3, 1fr);
 	}

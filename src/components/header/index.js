@@ -5,7 +5,7 @@ const Header = () => {
 		<Container>
 			<Wrapper>
 				<Link href="/">
-					<h1>Apiki Dev</h1>
+					<img src="/logo_apiki.webp" alt="Apiki Dev" />
 				</Link>
 			</Wrapper>
 		</Container>
