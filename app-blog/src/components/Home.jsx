@@ -18,13 +18,8 @@ function HomeComp() {
 
   return (
     <>
-      {/* <div>
-        { posts.map((post) => (
-          <p key={ post.id }>{ post.title.rendered }</p>
-        ))}
-      </div> */}
-      <Cards props={ posts }/>
-      Carregar mais...
+      <Cards posts={ posts } />
+      <button>Carregar mais...</button>
     </>
   );
 }
