@@ -9,7 +9,7 @@ function DetailsComp() {
   const fetchApi = async () => {
     const slug = location.pathname.split("/")[2]
     const data = await detailsPost(slug);
-    setPost(data);
+    setPost(data[0]);
   }
 
   useEffect(() => {
@@ -20,7 +20,7 @@ function DetailsComp() {
 
   return (
     <>
-      {post[0].title.rendered}
+      {post.title.rendered}
     </>
   );
 }

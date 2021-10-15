@@ -1,4 +1,4 @@
-const getPosts = async (page = 1) => {
+const getPosts = async (page) => {
   try {
     let endpoint = 'https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518';
     if (page) {
