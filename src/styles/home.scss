@@ -1,0 +1,97 @@
+#content{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Scheherazade New', serif;
+    margin-bottom: 20px;
+
+    img{
+        width: 200px;
+        margin-bottom: 10px;
+    }
+
+    h1{
+        margin-bottom: 10px;
+        font-weight: 400;
+    }
+
+    #div-cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0px 20px;
+        
+    }
+
+    #div-pages{
+        display: none;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0px 20px;
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+        width: 400px;
+
+        >div{
+            height: 350px;
+        }
+    
+        img{
+            width: 400px;
+            height:210px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        h2{
+            font-weight: 400;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        a{  
+            text-align: center;
+            text-decoration: none;
+            width:100%;
+            margin-top: 10px;
+            background: #188ECC;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 5px;
+            transition: filter 0.3s;
+
+            &:hover{
+                filter:brightness(0.9);
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    button{
+            width:100%;
+            margin-bottom: 20px;;
+            background: #F5A21E;
+            filter:brightness(0.9);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            transition: filter 0.3s;
+            width: 500px;
+
+            &:hover{
+                filter:brightness(0.8);
+                cursor: pointer;
+            }
+    }
+}
+
+
+

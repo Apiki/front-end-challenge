@@ -1,0 +1,57 @@
+#page-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-family: 'Scheherazade New', serif;
+    width: 100vw;
+    padding: 16px;
+
+    img#logo{
+        width:200px;
+        margin-bottom:20px;
+    }
+    img{
+        width: 70vw;
+        margin: 10px 0;
+        
+    }
+
+    >div{
+        img{
+            width: 50vw;
+            height: auto;
+            margin: 10px 0;
+        }
+    }
+        
+
+        a{
+            color: #188ECC;
+            text-decoration: none;
+    
+            &:hover{
+                filter: brightness(0.9);
+            }
+        }
+        p{
+            display: inline;
+        }
+    
+        h1{
+            color: #F57F20;
+        }
+    
+        h2{
+            color: #188ECC;
+        }
+    
+        ul, ol{
+            padding: 10px;
+            margin-left: 40px;
+        }
+    
+
+    
+}
