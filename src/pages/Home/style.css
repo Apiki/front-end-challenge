@@ -12,10 +12,11 @@
 }
 
 .homepage__load-button {
-  background: none;
+  background: var(--contrast-background-color);
+  padding: 0 10px;
+  color: var(--contrast-font-color);
   cursor: pointer;
   border: 0;
-  text-decoration: underline;
   font-size: 20px;
   margin: 15px 0;
   text-align: center;

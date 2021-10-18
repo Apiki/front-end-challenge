@@ -22,7 +22,7 @@ function PostItem({ post }) {
       <div className="post-item__cover round-borders">
         <img
           className="post-item__cover__img round-borders "
-          src={postImage.source_url}
+          src={postImage?.source_url}
           alt={featuredMedia.alt_text}
         />
       </div>

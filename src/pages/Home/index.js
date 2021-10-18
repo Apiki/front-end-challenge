@@ -9,6 +9,7 @@ import Loading from "../../components/Loading";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
+  const [retrievingPosts, setRetrievingPosts] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [pagesAmount, setPagesAmount] = useState();
   const [recentPosts, setRecentPosts] = useState([]);
@@ -19,10 +20,12 @@ export default function Home() {
     const nextPage = currentPage + 1;
 
     if (nextPage > pagesAmount) return;
+    setRetrievingPosts(true);
     const { data: morePosts } = await getRecentPosts(nextPage);
 
     setCurrentPage(nextPage);
     setRecentPosts((prevPosts) => [...prevPosts, ...morePosts]);
+    setRetrievingPosts(false);
   }
 
   // Run when the component mount
@@ -51,11 +54,11 @@ export default function Home() {
       </h2>
       <PostList posts={recentPosts} />
       <button
-        className="homepage__load-button"
+        className="homepage__load-button round-borders"
         onClick={handleLoadMoreButtonClick}
         type="button"
       >
-        Carregar mais...
+        {retrievingPosts ? "Carregando..." : "Carregar mais"}
       </button>
     </div>
   );
