@@ -1,0 +1,72 @@
+.spotlight {
+  width : 100%;
+  cursor: pointer;
+
+  /*Flex options*/
+  display  : flex;
+  flex-wrap: wrap;
+
+}
+
+.spotlight:hover .spotlight__cover__img {
+  transform: scale(1.1);
+}
+
+/* Spotlight Cover */
+.spotlight__cover {
+  width        : 60%;
+  overflow     : hidden;
+  border-radius: 10px;
+}
+
+.spotlight__cover__img {
+  max-width    : 100%;
+  height       : 100%;
+  border-radius: 10px;
+  transition   : transform 0.1s ease;
+}
+
+/* Spotlight info */
+.spotlight__info {
+  width  : 40%;
+  padding: 0 15px;
+
+  display        : flex;
+  flex-flow      : wrap column;
+  justify-content: center;
+}
+
+.spotlight__info__badge {
+  background-color: var(--contrast-background-color);
+  padding: 0 10px;
+  border-radius: 10px;
+
+  font-size: 15px;
+  color: var(--contrast-font-color);
+}
+
+
+.spotlight__info__badge svg {
+  position: relative;
+  top: 2px;
+
+  margin-right: 5px;
+}
+
+.spotlight__info__title {
+  color    : var(--primary-font-color);
+  font-size: 28px;
+}
+
+.spotlight__info__reading-time {
+  padding: 15px 0;
+  color  : #67676B;
+  font-size: 15px;
+}
+
+.spotlight__info__reading-time svg {
+  position: relative;
+  top: 5px;
+
+  margin-right: 5px;
+}

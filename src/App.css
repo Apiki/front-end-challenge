@@ -1,6 +1,9 @@
 :root {
   --primary-font-color: #091323;
   --smooth-font-color: #67676B;
+  --contrast-font-color: #F9FBFF;
+
+  --contrast-background-color: #5A8BD6;
 }
 
 *{
@@ -15,7 +18,11 @@ html,body{
 }
 
 .container {
-  max-width: 1024px;
+  max-width: 1114px;
+  width: 100%;
   margin: 0 auto;
 }
 
+.content {
+  margin-top: 30px;
+}
