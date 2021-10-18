@@ -5,6 +5,7 @@ import "./style.css";
 import getRecentPosts from "../../services/Posts/getRecentPosts";
 import Spotlight from "../../components/Spotlight";
 import PostList from "../../components/PostList";
+import Loading from "../../components/Loading";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -40,7 +41,7 @@ export default function Home() {
     getInitialPosts();
   }, []);
 
-  if (loading) return <h1>Carregando</h1>;
+  if (loading) return <Loading />;
 
   return (
     <div className="container">

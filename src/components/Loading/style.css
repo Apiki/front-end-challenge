@@ -1,0 +1,31 @@
+@keyframes twinkle {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primary-background-color);
+
+  /*Flex Options */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading__logo{
+  animation: twinkle 1.3s linear infinite;
+  max-width: 250px;
+}

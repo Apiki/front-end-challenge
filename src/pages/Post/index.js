@@ -9,6 +9,7 @@ import "./style.css";
 import getPost from "../../services/Posts/getPost";
 import getPostEmbeddedData from "../../utils/getPostEmbeddedData";
 import calculateReadingTime from "../../utils/calculateReadingTime";
+import Loading from "../../components/Loading";
 
 export default function Post({ match }) {
   const history = useHistory();
@@ -31,7 +32,7 @@ export default function Post({ match }) {
   }, []);
 
   // return a loading until the post load
-  if (loading) return <h1>Carregando</h1>;
+  if (loading) return <Loading />;
 
   // Alocate the data nedded on the post
   const { embedded, featuredMedia, postImage } = getPostEmbeddedData(post);
