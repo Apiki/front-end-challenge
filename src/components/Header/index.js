@@ -24,24 +24,17 @@ export default function Header() {
           <ul className="header__nav__list">
             {/* Loop through the items imported from headerItems and create a link */}
             {headerItems.map((item) => {
-              const { itemName, isExternal, href } = item;
+              const { itemName, href } = item;
 
-              return isExternal ? (
+              return (
                 <li key={item.itemName} className="header__nav__list__item">
                   <a
                     className="header__nav__list__item__text"
                     href={href}
-                    target="_blank"
                     rel="noreferrer"
                   >
                     {itemName}
                   </a>
-                </li>
-              ) : (
-                <li key={item.itemName} className="header__nav__list__item">
-                  <Link className="header__nav__list__item__text" to={href}>
-                    {itemName}
-                  </Link>
                 </li>
               );
             })}
