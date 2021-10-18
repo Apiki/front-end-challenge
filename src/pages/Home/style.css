@@ -1,0 +1,23 @@
+.homepage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.homepage__transition-title {
+  font-size: 28px;
+  margin-top: 30px;
+  text-align: center;
+  color: var(--primary-font-color);
+}
+
+.homepage__load-button {
+  background: var(--contrast-background-color);
+  padding: 0 10px;
+  color: var(--contrast-font-color);
+  cursor: pointer;
+  border: 0;
+  font-size: 20px;
+  margin: 15px 0;
+  text-align: center;
+}

@@ -1,0 +1,40 @@
+:root {
+  /* Font colors */
+  --primary-font-color: #091323;
+  --smooth-font-color: #67676B;
+  --contrast-font-color: #F9FBFF;
+
+  /* Background colors */
+  --primary-background-color: #F9FBFF;
+  --contrast-background-color: #5A8BD6;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html,body{
+  height: 100%;
+}
+
+a{
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1114px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+
+.content {
+  margin-top: 30px;
+}
+
+.round-borders {
+  border-radius: 10px;
+}
