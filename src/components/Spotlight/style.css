@@ -67,3 +67,23 @@
 
   margin-right: 5px;
 }
+
+@media screen and (max-width: 800px) {
+  .spotlight {
+    width : 100%;
+    cursor: pointer;
+
+    /*Flex options*/
+    display  : flex;
+    flex-wrap: wrap;
+  }
+
+  .spotlight__info, .spotlight__cover {
+    width   : 100%;
+
+  }
+
+  .spotlight__info{
+    margin-top: 30px;
+  }
+}
