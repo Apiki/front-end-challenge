@@ -1,18 +1,25 @@
 import React, { memo } from "react";
 import { AiFillClockCircle, AiFillStar } from "react-icons/ai";
+import { useHistory } from "react-router-dom";
 
 import calculateReadingTime from "../../utils/calculateReadingTime";
+import getPostEmbeddedData from "../../utils/getPostEmbeddedData";
 
 import "./style.css";
 
 function Spotlight({ mostRecentPost }) {
-  const embedded = mostRecentPost._embedded;
-  const featuredMedia = embedded["wp:featuredmedia"][0];
-  const postImage = featuredMedia.media_details.sizes.large;
+  const history = useHistory();
+  const { embedded, featuredMedia, postImage } =
+    getPostEmbeddedData(mostRecentPost);
   const readingTime = calculateReadingTime(mostRecentPost.content.rendered);
 
+  // When the user click on the post, redirect him/her to the post page
+  function handlePostClick() {
+    history.push(`/post/${mostRecentPost.slug}`);
+  }
+
   return (
-    <section className="spotlight">
+    <section className="spotlight" onClick={handlePostClick}>
       <div className="spotlight__cover round-borders">
         <img
           src={postImage.source_url}

@@ -14,14 +14,14 @@
 
 /* Spotlight Cover */
 .spotlight__cover {
-  width        : 60%;
-  overflow     : hidden;
+  width   : 60%;
+  overflow: hidden;
 }
 
 .spotlight__cover__img {
-  max-width    : 100%;
-  height       : 100%;
-  transition   : transform 0.1s ease;
+  max-width : 100%;
+  height    : 100%;
+  transition: transform 0.1s ease;
 }
 
 /* Spotlight info */
@@ -36,16 +36,16 @@
 
 .spotlight__info__badge {
   background-color: var(--contrast-background-color);
-  padding: 0 10px;
+  padding         : 0 10px;
 
   font-size: 15px;
-  color: var(--contrast-font-color);
+  color    : var(--contrast-font-color);
 }
 
 
 .spotlight__info__badge svg {
   position: relative;
-  top: 2px;
+  top     : 2px;
 
   margin-right: 5px;
 }
@@ -56,14 +56,14 @@
 }
 
 .spotlight__info__reading-time {
-  padding: 15px 0;
-  color  : #67676B;
+  padding  : 15px 0;
+  color    : #67676B;
   font-size: 15px;
 }
 
 .spotlight__info__reading-time svg {
   position: relative;
-  top: 5px;
+  top     : 5px;
 
   margin-right: 5px;
 }

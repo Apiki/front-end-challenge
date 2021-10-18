@@ -7,6 +7,7 @@ import Spotlight from "../../components/Spotlight";
 import PostList from "../../components/PostList";
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [pagesAmount, setPagesAmount] = useState();
   const [recentPosts, setRecentPosts] = useState([]);
@@ -33,31 +34,28 @@ export default function Home() {
       setPagesAmount(totalPages);
       setMostRecentPost(newestPost);
       setRecentPosts((prevPosts) => [...prevPosts, ...recentPostList]);
+      setLoading(false);
     }
 
     getInitialPosts();
   }, []);
 
-  return (
-    // TODO: add loading
+  if (loading) return <h1>Carregando</h1>;
 
+  return (
     <div className="container">
-      {mostRecentPost && (
-        <>
-          <Spotlight mostRecentPost={mostRecentPost} />
-          <h2 className="homepage__transition-title">
-            Fique por dentro dos posts mais recentes
-          </h2>
-          <PostList posts={recentPosts} />
-          <button
-            className="homepage__load-button"
-            onClick={handleLoadMoreButtonClick}
-            type="button"
-          >
-            Carregar mais...
-          </button>
-        </>
-      )}
+      <Spotlight mostRecentPost={mostRecentPost} />
+      <h2 className="homepage__transition-title">
+        Fique por dentro dos posts mais recentes
+      </h2>
+      <PostList posts={recentPosts} />
+      <button
+        className="homepage__load-button"
+        onClick={handleLoadMoreButtonClick}
+        type="button"
+      >
+        Carregar mais...
+      </button>
     </div>
   );
 }

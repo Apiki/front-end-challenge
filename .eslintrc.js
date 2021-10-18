@@ -32,5 +32,8 @@ module.exports = {
     "react/prop-types": 0,
     "react-hooks/exhaustive-deps": 0,
     "no-underscore-dangle": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "consistent-return": 0,
   },
 };

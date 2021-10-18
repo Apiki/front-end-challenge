@@ -11,11 +11,13 @@ export default function Header() {
     <header className="header">
       <div className="header__container container">
         <div className="header__logo">
-          <img
-            src="/logo.webp"
-            alt="Logo da Apiki"
-            className="header__logo__img"
-          />
+          <Link to="/">
+            <img
+              src="/logo.webp"
+              alt="Logo da Apiki"
+              className="header__logo__img"
+            />
+          </Link>
         </div>
 
         <nav className="header__nav">

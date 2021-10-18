@@ -1,18 +1,24 @@
 import React, { memo } from "react";
 import { AiFillClockCircle } from "react-icons/ai";
+import { useHistory } from "react-router-dom";
 
 import calculateReadingTime from "../../utils/calculateReadingTime";
+import getPostEmbeddedData from "../../utils/getPostEmbeddedData";
 
 import "./style.css";
 
 function PostItem({ post }) {
-  const embedded = post._embedded;
-  const featuredMedia = embedded["wp:featuredmedia"][0];
-  const postImage = featuredMedia.media_details.sizes.medium;
+  const history = useHistory();
+  const { embedded, featuredMedia, postImage } = getPostEmbeddedData(post);
   const readingTime = calculateReadingTime(post.content.rendered);
 
+  // When the user click on the post, redirect him/her to the post page
+  const handlePostClick = () => {
+    history.push(`/post/${post.slug}`);
+  };
+
   return (
-    <div className="post-item">
+    <div className="post-item" onClick={handlePostClick}>
       <div className="post-item__cover round-borders">
         <img
           className="post-item__cover__img round-borders "

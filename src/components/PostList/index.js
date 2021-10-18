@@ -7,7 +7,7 @@ export default function PostList({ posts }) {
   return (
     <section className="post-list">
       {posts.map((post) => (
-        <PostItem key={post.id} post={post} />
+        <PostItem key={post.slug} post={post} />
       ))}
     </section>
   );

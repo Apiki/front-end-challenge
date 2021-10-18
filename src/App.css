@@ -1,8 +1,10 @@
 :root {
+  /* Font colors */
   --primary-font-color: #091323;
   --smooth-font-color: #67676B;
   --contrast-font-color: #F9FBFF;
 
+  /* Background colors */
   --contrast-background-color: #5A8BD6;
 }
 
@@ -15,6 +17,10 @@
 
 html,body{
   height: 100%;
+}
+
+a{
+  text-decoration: none;
 }
 
 .container {
