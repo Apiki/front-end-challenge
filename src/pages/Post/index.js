@@ -48,6 +48,7 @@ export default function Post({ match }) {
             className="post__header__cover__img round-borders"
           />
         </div>
+
         <div className="post__header__info">
           <h1 className="spotlight__info__title">{post.title.rendered}</h1>
 
