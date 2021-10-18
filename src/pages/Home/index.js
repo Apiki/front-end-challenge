@@ -44,7 +44,7 @@ export default function Home() {
   if (loading) return <Loading />;
 
   return (
-    <div className="container">
+    <div className="container homepage">
       <Spotlight mostRecentPost={mostRecentPost} />
       <h2 className="homepage__transition-title">
         Fique por dentro dos posts mais recentes

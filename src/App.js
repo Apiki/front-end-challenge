@@ -5,6 +5,7 @@ import "./App.css";
 
 import Routes from "./routes";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <main className="content">
         <Routes />
       </main>
+      <Footer />
     </BrowserRouter>
   );
 }
