@@ -1,3 +1,5 @@
+// Calculate the reading time based on the amount of words of the text.
+
 export default function calculateReadingTime(text) {
   if (typeof text !== "string") return undefined;
 

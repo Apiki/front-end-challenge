@@ -21,8 +21,13 @@ html,body{
   max-width: 1114px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 2%;
 }
 
 .content {
   margin-top: 30px;
+}
+
+.round-borders {
+  border-radius: 10px;
 }

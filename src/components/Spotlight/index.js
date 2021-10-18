@@ -13,19 +13,19 @@ function Spotlight({ mostRecentPost }) {
 
   return (
     <section className="spotlight">
-      <div className="spotlight__cover">
+      <div className="spotlight__cover round-borders">
         <img
           src={postImage.source_url}
           alt={featuredMedia.alt_text}
-          className="spotlight__cover__img"
+          className="spotlight__cover__img round-borders"
         />
       </div>
 
       <div className="spotlight__info">
         <div className=".spotlight__info__badges">
-          <span className="spotlight__info__badge ">
+          <span className="spotlight__info__badge round-borders">
             <AiFillStar />
-            Mais recente
+            Acabou de sair do forno
           </span>
         </div>
 

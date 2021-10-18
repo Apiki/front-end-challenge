@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import "./style.css";
 import headerItems from "./headerItems";
 
+// TODO: add key on the mapped items
+
 export default function Header() {
   return (
     <header className="header">
