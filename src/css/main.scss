@@ -1,0 +1,17 @@
+.card{
+    min-height: 350px;
+}
+
+p img, figure, iframe, figure  img, a im {
+    width: 100% !important ;
+    height: auto;
+}
+iframe {
+    height: calc(100vw/1.77);
+}
+.img-thumbnail{
+    border: none !important; 
+    border-radius: 8px !important;
+}
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
