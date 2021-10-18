@@ -7,20 +7,35 @@ import Spotlight from "../../components/Spotlight";
 import PostList from "../../components/PostList";
 
 export default function Home() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pagesAmount, setPagesAmount] = useState();
   const [recentPosts, setRecentPosts] = useState([]);
   const [mostRecentPost, setMostRecentPost] = useState();
 
+  // Get more posts based on the page
+  async function handleLoadMoreButtonClick() {
+    const nextPage = currentPage + 1;
+
+    if (nextPage > pagesAmount) return;
+    const { data: morePosts } = await getRecentPosts(nextPage);
+
+    setCurrentPage(nextPage);
+    setRecentPosts((prevPosts) => [...prevPosts, ...morePosts]);
+  }
+
+  // Run when the component mount
   useEffect(() => {
     // Get the most recent posts and store them
-    async function getMostRecentPost() {
-      const recentPostsList = await getRecentPosts();
-      const newestPost = recentPostsList[0];
+    async function getInitialPosts() {
+      const { data: recentPostList, totalPages } = await getRecentPosts();
+      const newestPost = recentPostList[0];
 
+      setPagesAmount(totalPages);
       setMostRecentPost(newestPost);
-      setRecentPosts((prevPosts) => [...prevPosts, ...recentPostsList]);
+      setRecentPosts((prevPosts) => [...prevPosts, ...recentPostList]);
     }
 
-    getMostRecentPost();
+    getInitialPosts();
   }, []);
 
   return (
@@ -34,6 +49,13 @@ export default function Home() {
             Fique por dentro dos posts mais recentes
           </h2>
           <PostList posts={recentPosts} />
+          <button
+            className="homepage__load-button"
+            onClick={handleLoadMoreButtonClick}
+            type="button"
+          >
+            Carregar mais...
+          </button>
         </>
       )}
     </div>

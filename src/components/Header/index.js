@@ -25,7 +25,7 @@ export default function Header() {
               const { itemName, isExternal, href } = item;
 
               return isExternal ? (
-                <li className="header__nav__list__item">
+                <li key={item.itemName} className="header__nav__list__item">
                   <a
                     className="header__nav__list__item__text"
                     href={href}
@@ -36,7 +36,7 @@ export default function Header() {
                   </a>
                 </li>
               ) : (
-                <li className="header__nav__list__item">
+                <li key={item.itemName} className="header__nav__list__item">
                   <Link className="header__nav__list__item__text" to={href}>
                     {itemName}
                   </Link>

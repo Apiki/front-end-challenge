@@ -4,3 +4,13 @@
   text-align: center;
   color: var(--primary-font-color);
 }
+
+.homepage__load-button {
+  width: 100%;
+  cursor: pointer;
+  border: 0;
+  text-decoration: underline;
+  font-size: 20px;
+  margin: 15px 0;
+  text-align: center;
+}
