@@ -51,3 +51,9 @@
 .post-item__info__author {
   font-size: 14px;
 }
+
+@media screen and (max-width: 800px) {
+  .post-item {
+    width: 100%;
+  }
+}
