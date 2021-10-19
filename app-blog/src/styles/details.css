@@ -1,0 +1,24 @@
+body {
+  background-color: #ededed;
+}
+
+h2 {
+  background-color: #ededed;
+  margin: 40px 0;
+  padding: 15px 0 10px 0;
+  text-align: center;
+  width: 100%;
+}
+
+figure {
+  background-color: gainsboro;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.author {
+  display: flex;
+  font-family: 'Times New Roman', Times, serif;
+  justify-content: flex-start;
+  width: 90%;
+}

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getPosts } from '../services/apiHome';
 import Cards from './Card';
 import Header from './Header';
+import Footer from './Footer';
 
 function HomeComp() {
   const [posts, setPosts] = useState([]);
@@ -24,8 +25,7 @@ function HomeComp() {
   if (posts.length < 1) return 'Loading...'
 
   return (
-    <div className="d-flex flex-column mt-4 mb-4">
-      <Header />
+    <div className="d-flex flex-column mt-3">
       <div className="d-flex justify-content-center">
         <Cards posts={ posts } />
       </div>

@@ -3,9 +3,9 @@ import React from 'react';
 function Header() {
 
   return (
-    <nav class="navbar navbar-light bg-secondary">
-      <div class="container-fluid">
-        <a class="navbar-brand text-light" href="#">Apiki</a>
+    <nav className="navbar navbar-light bg-secondary mt-3">
+      <div className="container-fluid">
+        <span className="navbar-brand text-light">Apiki</span>
       </div>
     </nav>
   );
