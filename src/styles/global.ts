@@ -4,13 +4,15 @@ export default createGlobalStyle`
 :root {
     --text: 'black';
     --bgColor: #ffffff;
+    --bgHeaderColor: #ffffff;
     --border: '1px solid black',
   }
 
   [data-theme="dark"] {
     --text: #ffffff;
     --bgColor: #595761;
-    --border: 'none',
+    --bgHeaderColor: #222;
+    --border: '1px solid white',
   }
 
 html,
@@ -27,6 +29,14 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+svg {
+  color: var(--text);
+}
+
+header {
+  background-color: var(--bgHeaderColor);
 }
 
 * {
