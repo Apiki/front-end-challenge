@@ -3,9 +3,7 @@ import { useState, useEffect } from 'react';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import Card from '~/components/Card';
-import Footer from '~/components/Footer';
-import Header from '~/components/Header';
-import GlobalStyle from '~/styles/global';
+import { Container, Content, LoadMoreBtn } from '~/styles/pages/home';
 import getPosts from '~/utils/getPosts';
 
 type HomeProps = {
@@ -34,27 +32,20 @@ function Home(props: InferGetStaticPropsType<typeof getStaticProps>) {
   }, [currentPage]);
 
   return (
-    <div>
-      <GlobalStyle />
-      <Header />
-      <div>
-        <h2>Posts recentes</h2>
-        <section>
-          <main>
-            {posts.map((post, index) => (
-              <Card data={post} key={index} />
-            ))}
-          </main>
-
+    <Container>
+      <Content>
+        {posts.map((post, index) => (
+          <Card data={post} key={index} />
+        ))}
+        <LoadMoreBtn>
           {currentPage < props.totalPages && (
             <span onClick={() => setCurrentPage(currentPage + 1)}>
               Carregar mais
             </span>
           )}
-        </section>
-      </div>
-      <Footer />
-    </div>
+        </LoadMoreBtn>
+      </Content>
+    </Container>
   );
 }
 

@@ -5,14 +5,12 @@ export default createGlobalStyle`
     --text: 'black';
     --bgColor: #ffffff;
     --bgHeaderColor: #ffffff;
-    --border: '1px solid black',
   }
 
   [data-theme="dark"] {
     --text: #ffffff;
-    --bgColor: #595761;
-    --bgHeaderColor: #222;
-    --border: '1px solid white',
+    --bgColor: #181818;
+    --bgHeaderColor: #202020;
   }
 
 html,
@@ -23,7 +21,6 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: var(--bgColor);
   color: var(--text);
-  border: var(--border);
 }
 
 a {

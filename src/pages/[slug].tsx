@@ -1,31 +1,47 @@
+import { BsArrowLeftCircle } from 'react-icons/bs';
+
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 
+import {
+  Container,
+  Content,
+  PostImage,
+  PostContent,
+  PostAbout,
+} from '~/styles/pages/postInfo';
 import getPosts from '~/utils/getPosts';
 import getSlugPosts from '~/utils/getSlugPosts';
 
 function SlugPost({ post }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <div>
-      <main>
+    <Container>
+      <Link href="/">
+        <BsArrowLeftCircle size={30} className="back-btn" />
+      </Link>
+      <Content>
         <h2>{post.title}</h2>
-        <p>{post.description}</p>
-        <div>
+        <p className="post-description">{post.description}</p>
+        <PostAbout>
+          <span>
+            By{' '}
+            {post.author ? <strong>{post.author}</strong> : 'No author found!'}
+          </span>
+
+          <p>{post.createdAt}</p>
+        </PostAbout>
+        <PostImage>
           <Image
             src={post.thumbnail}
             alt={post.title}
-            width={840}
-            height={502}
+            width={720}
+            height={402}
           />
-        </div>
-        <div dangerouslySetInnerHTML={{ __html: post.content }} />
-        <div>
-          <span>By </span>
-          {post.author ? <strong>{post.author}</strong> : 'No author found!'}
-          <p>{post.createdAt}</p>
-        </div>
-      </main>
-    </div>
+        </PostImage>
+        <PostContent dangerouslySetInnerHTML={{ __html: post.content }} />
+      </Content>
+    </Container>
   );
 }
 
