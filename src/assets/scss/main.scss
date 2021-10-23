@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --crimson: crimson;
+}
+
+.is-primary {
+    background-color: var(--crimson) !important;
+}
