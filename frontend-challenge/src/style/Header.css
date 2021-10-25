@@ -17,7 +17,17 @@
 }
 
 .header--nav {
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.nav-links-icon {
+  color: rgb(146,146,150);
+  font-size: 20px;
+  padding: 5px;
+}
+
+.nav-links-icon:hover {
+  color: rgb(247,127,62);
 }
 
 .header--search-bar {
