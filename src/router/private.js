@@ -1,6 +1,7 @@
 const routes = [
   {
-    path: '*',
+    path: '/page/not-found',
+    name: 'NotFound',
     component: () => import('../views/public/Error/Page404.vue')
   }
 ]
@@ -8,8 +9,8 @@ const routes = [
 export default routes.map(route => {
   const meta = {
     public: true,
-    onlyLoggedOut: true,
-    layout: 'default'
+    onlyLoggedOut: true
+    //layout: 'default'
   }
   return { ...route, meta }
 })

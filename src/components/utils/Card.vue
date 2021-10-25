@@ -1,13 +1,15 @@
 <template>
-  <router-link :to="slug" class="post-card">
-    <img :src="image" class="post-image" />
+  <router-link :to="{ name: 'Post', params: { slug: slug } }" class="post-card">
+    <img
+      :src="image"
+      class="post-image"
+      width="100%"
+      height="200px"
+      :alt="title"
+    />
 
     <div class="content">
-      <h6 class="title">{{ title }}</h6>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-        iaculis mauris.
-      </p>
+      <h6 class="title" v-html="title"></h6>
       <time :datetime="post.date">Criado em: {{ post.date | dateBR }}</time>
     </div>
   </router-link>
@@ -30,7 +32,7 @@ export default {
       return this.post._embedded['wp:featuredmedia'][0].source_url
     },
     slug() {
-      return this.post._embedded['wp:featuredmedia'][0].slug
+      return this.post.slug
     }
   },
   filters: {
@@ -44,9 +46,6 @@ export default {
       }
       return date.toLocaleDateString('pt-BR', options)
     }
-  },
-  mounted() {
-    console.log(this.post.date)
   }
 }
 </script>
@@ -79,6 +78,11 @@ export default {
       color: var(--crimson);
       font-size: 0.8rem;
     }
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .columns {
+    margin: 0;
   }
 }
 </style>

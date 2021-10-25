@@ -2,11 +2,11 @@ import axios from 'axios'
 import Vue from 'vue'
 
 const api = axios.create({
-  baseURL: 'https://blog.apiki.com/wp-json/wp/v2',
+  baseURL: 'https://blog.apiki.com/wp-json/wp/v2'
   // headers: {
   //   'Access-Control-Allow-Origin': '*'
   // }
-  timeout: 3000
+  //timeout: 3000
 })
 
 const errors = [400, 401, 404, 500]

@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <component :is="layout">
-      <router-view></router-view>
+      <keep-alive max="2">
+        <router-view></router-view>
+      </keep-alive>
     </component>
   </div>
 </template>
