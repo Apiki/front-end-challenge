@@ -2,7 +2,7 @@
 
 #### Meus comentários
 
-A Blog Apiki, é uma aplicação React, que consite em criar um site responsivo, e que cumpra seu objetivo de fornecer postagens atualizadas de acordo com a [API](https://blog.apiki.com/wp-json/wp/v2/). Sua idéia principal, é montar uma versão do blog da Apiki apenas para Devs.
+A Blog Apiki, é uma aplicação React, que consite em criar um site responsivo, e que cumpra seu objetivo de fornecer postagens atualizadas de acordo com a [API](https://blog.apiki.com/wp-json/wp/v2/). Sua idéia principal, é montar uma versão do blog da Apiki apenas para Devs, explorando conceitos como "*mobile first*", "*Single responsability*", "*Open closed*".
 
 
 **Ferramentas utilizadas:** *React, CSS, Java Script.*
