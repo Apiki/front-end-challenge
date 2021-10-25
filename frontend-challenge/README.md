@@ -2,15 +2,18 @@
 
 #### Meus comentários
 
-A Blog Apiki, é uma aplicação React, que consite em criar um site responsivo, e que cumpra seu objetivo de fornecer postagens atualizadas de acordo com a [API](https://blog.apiki.com/wp-json/wp/v2/). Sua idéia principal, é montar uma versão do blog da Apiki apenas para Devs, explorando conceitos como "*mobile first*", "*Single responsability*", "*Open closed*".
+A Blog Apiki, é uma aplicação React, que consite em criar um site responsivo, e que cumpra seu objetivo de fornecer postagens atualizadas de acordo com a [API](https://blog.apiki.com/wp-json/wp/v2/). Sua idéia principal, é montar uma versão do blog da Apiki apenas para Devs, explorando conceitos como "*mobile first*", "*Single responsability*", "*Open closed*", entre outros.
 
 
-**Ferramentas utilizadas:** *React, React Router, CSS, Java Script*
+**Ferramentas utilizadas:** *React, React Router, CSS, Java Script, Trello*
 
 
 **Em construção:**
 Este é um projeto desenvolvido de acordo com um desafio de frontend, proposto pela Apiki.
-*Link do repositório do desafio* [aqui](https://github.com/Apiki/front-end-challenge).
+
+*Link do repositório para o desafio* [aqui](https://github.com/Apiki/front-end-challenge).
+
+*Link do **Trello** para acompanhamento do projeto* [aqui](https://trello.com/b/vwYCZZTS/desafio-frontend-apiki).
 
 ---
 
