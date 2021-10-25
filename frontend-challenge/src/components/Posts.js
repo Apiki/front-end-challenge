@@ -1,6 +1,6 @@
 import React from 'react';
 import '../style/Posts.css';
-import Post from './Post';
+import PostCard from './PostCard';
 
 export default function Posts() {
   const exampleResponse = [
@@ -22,7 +22,7 @@ export default function Posts() {
   ];
 
   const exampleElement = exampleResponse.map((curr) => {
-    return <Post key={curr.title} img={curr.img} title={curr.title} content={curr.content} />
+    return <PostCard key={curr.title} img={curr.img} title={curr.title} content={curr.content} />
   });
 
   return (

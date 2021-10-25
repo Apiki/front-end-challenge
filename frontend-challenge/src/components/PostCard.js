@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style/Post.css';
+import '../style/PostCard.css';
 
 export default function Post({ img, title, content}) {
   return (
