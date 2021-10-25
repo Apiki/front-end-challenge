@@ -1,0 +1,15 @@
+.card {
+  background-color: rgb(246,248,250);
+  box-shadow: 0 0 1em rgb(214, 214, 214);
+  border-radius: 3%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.article--button {
+  align-self: center;
+  width: 100px;
+}
