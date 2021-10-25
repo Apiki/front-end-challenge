@@ -26,8 +26,9 @@ export default function Posts() {
   });
 
   return (
-    <main className="main">
-      <div className="main--container">{ exampleElement }</div>
+    <main className="main flex">
+      <h1 id="main--title">Postagens</h1>
+      <div className="main--container flex">{ exampleElement }</div>
     </main>
   )
 }

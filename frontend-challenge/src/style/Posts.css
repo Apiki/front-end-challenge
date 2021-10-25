@@ -1,0 +1,19 @@
+.flex {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  width: 100%;
+}
+
+#main--title {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.main--container {
+  justify-content: center;
+  width: 80%;
+}
