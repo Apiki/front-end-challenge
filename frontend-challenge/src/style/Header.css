@@ -34,6 +34,16 @@
   justify-content: center;
 }
 
+.header--form {
+  flex-wrap: nowrap;
+}
+
 #logo {
   width: 100px;
+}
+
+@media only screen and (max-width: 400px) {
+  .form--input {
+    width: 100px;
+  }
 }

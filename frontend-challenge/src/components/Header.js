@@ -1,6 +1,6 @@
 import React from 'react';
 import '../style/Header.css';
-import { AiFillGithub, AiFillLinkedin, AiFillInstagram } from "react-icons/ai";
+import { AiFillGithub, AiFillLinkedin, AiFillInstagram, AiOutlineSearch } from "react-icons/ai";
 
 export default function Header() {
   return (
@@ -16,9 +16,9 @@ export default function Header() {
         </nav>
       </div>
       <div className="header--container header--search-bar">
-        <form>
-          <input type="text" placeholder="Procurar postagem..." />
-          <button type="submit">Search</button>
+        <form className="header--form">
+          <input className="form--input" type="text" placeholder="Procurar..." />
+          <button className="form--button" type="submit"><AiOutlineSearch /></button>
         </form>
       </div>
     </header>
