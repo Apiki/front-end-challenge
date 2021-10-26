@@ -1,15 +1,47 @@
 .card {
+  align-items: center;
   background-color: rgb(246,248,250);
   box-shadow: 0 0 1em rgb(214, 214, 214);
   border-radius: 3%;
   display: flex;
   flex-direction: column;
   padding: 15px;
+  text-align: center;
   margin-bottom: 15px;
-  width: 100%;
+  width: 500px;
+}
+
+.article--img {
+  background-size: cover;
+  height: 200px;
+  width: 300px;
+}
+.article--title {
+  font-size: 1.5rem;
+  max-width: 500px;
 }
 
 .article--button {
-  align-self: center;
+  height: 40px;
   width: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 250px;
+  }
+
+  .article--img {
+    background-size: cover;
+    height: 150px;
+    width: 250px;
+  }
+  .article--title {
+    font-size: 1.2rem;
+    max-width: 300px;
+  }
+
+  .article--button {
+    width: 100px;
+  }
 }

@@ -4,6 +4,7 @@ import { v4 } from 'uuid';
 
 import PostCard from './PostCard';
 import basicFetch from '../api/basicFetch';
+import Loading from './Loading';
 
 const URL = 'https://blog.apiki.com/';
 const END_POINT = 'wp-json/wp/v2/posts?_embed&categories=518';
@@ -34,7 +35,7 @@ export default function Posts() {
     <main className="main flex">
       {console.log(blogApi)}
       <h1 id="main--title">Postagens</h1>
-      <div className="main--container flex">{ blogApi.length > 0 ? newCard : 'Carregando...' }</div>
+      <div className="main--container flex">{ blogApi.length > 0 ? newCard : <Loading /> }</div>
     </main>
   )
 }
