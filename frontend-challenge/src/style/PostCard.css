@@ -17,6 +17,7 @@
   width: 300px;
 }
 .article--title {
+  color: rgb(40, 40, 40);
   font-size: 1.5rem;
   max-width: 500px;
 }
