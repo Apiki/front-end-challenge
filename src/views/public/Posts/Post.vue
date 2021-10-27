@@ -63,4 +63,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media (min-width: 320px) and (max-width: 480px) {
+  .content {
+    padding: 30px;
+  }
+}
 </style>
