@@ -1,6 +1,6 @@
 import React from 'react';
 import '../style/Header.css';
-import { AiFillGithub, AiFillLinkedin, AiFillInstagram, AiOutlineSearch } from "react-icons/ai";
+import { AiFillGithub, AiFillLinkedin, AiFillInstagram } from "react-icons/ai";
 
 export default function Header() {
   return (
@@ -14,12 +14,6 @@ export default function Header() {
           <a className="nav-links-icon" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/pedrotoselli/"><AiFillLinkedin /></a>
           <a className="nav-links-icon" target="_blank" rel="noreferrer" href="https://github.com/Pedro-Toselli"><AiFillGithub /></a>
         </nav>
-      </div>
-      <div className="header--container header--search-bar">
-        <form className="header--form">
-          <input className="form--input" type="text" placeholder="Procurar..." />
-          <button className="form--button" type="submit"><AiOutlineSearch /></button>
-        </form>
       </div>
     </header>
   )

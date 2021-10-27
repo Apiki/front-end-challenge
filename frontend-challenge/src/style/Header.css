@@ -4,8 +4,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 20vh;
-  width: 100%;
+  height: 12vh;
+  width: 100vw;
 }
 
 .header--container {
@@ -34,16 +34,6 @@
   justify-content: center;
 }
 
-.header--form {
-  flex-wrap: nowrap;
-}
-
 #logo {
   width: 100px;
-}
-
-@media only screen and (max-width: 400px) {
-  .form--input {
-    width: 100px;
-  }
 }

@@ -18,3 +18,19 @@
   justify-content: center;
   width: 80%;
 }
+
+.main--button {
+  background-color: rgb(247,127,62);
+  border: none;
+  border-radius: 4%;
+  color: rgb(250,250,250);
+  font-weight: 800;
+  margin-top: 50px;
+  margin-bottom: 150px;
+  height: 50px;
+  width: 150px;
+}
+
+.main--button:hover {
+  background-color: rgb(252,207,59);
+}
