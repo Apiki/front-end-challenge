@@ -1,0 +1,22 @@
+
+li{
+    text-decoration: none;
+}
+a{
+    display:flex;
+    text-decoration: none;
+    color: black;
+
+}
+
+li img{
+    height: 100px;
+}
+
+
+.post-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 1rem;
+}

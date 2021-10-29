@@ -1,21 +1,41 @@
 import './content.css'
-import { Posts } from '../Posts'
+import { useState, useEffect } from 'react'
+import { Post } from '../Post';
 
 export function Content() {
 
-    return (
-        <div className="container">
+  const [posts, setPosts] = useState([]);
 
-            <section>
-                <h1>Desenvolvimento WordPress</h1>
-                <p>Desenvolva seu negócio, desenvolvendo com WordPress</p>
-            </section>
+  async function GetData() {
+    useEffect(() => {
+      fetch('https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518')
+        .then(response => response.json())
+        .then(data => setPosts(data))
+    }, [])
+  }
 
+  GetData()
 
-            <main>
-                <h3>Últimas postagens</h3>
-                <Posts />
-            </main>
-        </div>
-    )
+  return (
+    <div className="container">
+
+      <section>
+        <h1>Desenvolvimento WordPress</h1>
+        <p>Desenvolva seu negócio, desenvolvendo com WordPress</p>
+      </section>
+
+      <main>
+        <h3>Últimas postagens</h3>
+        <ul>
+          {
+            posts.map(post => {
+              return (
+                <Post key={post.id} post={post} />
+              )
+            })
+          }
+        </ul>
+      </main>
+    </div>
+  )
 }

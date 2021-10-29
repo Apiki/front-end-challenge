@@ -1,3 +1,13 @@
 section{
     padding: 30px 0px;
+
+}
+
+ul{
+    margin-top: 2rem;
+    list-style-type: none;
+}
+
+li{
+    margin-bottom: 2rem;
 }
