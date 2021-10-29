@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+
+  > div {
+    margin: 5px;
+  }
+
+  .title {
+    display: block;
+    width: 100%;
+    margin: 25px 0;
+    font-weight: 700;
+    font-size: 2.1em;
+  }
+}
+

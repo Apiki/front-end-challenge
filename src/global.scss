@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  min-width: 360px;
+  max-width: 70%;
+  margin: auto;
+  background-color: rgb(248, 248, 248);
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 1000px) {
+  body {
+    max-width: 90%;
+  }
+}

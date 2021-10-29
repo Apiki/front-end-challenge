@@ -1,0 +1,235 @@
+.container {
+  display: flex;
+  width: 100%;
+  margin: 10px 0 15px;
+  height: auto;
+
+  .content {
+    width: 68%;
+    margin: 15px 1% 0;
+    background-color: #fbfbfb;
+    box-shadow: 0px 1px 1px 1px #dad2d2;
+    border-radius: 2px;
+    padding: 10px;
+    height: 100%;
+
+    .title {
+      margin-bottom: 5px;
+
+      h1 {
+        font-weight: 700;
+        margin-bottom: 5px;
+        background-color: #929090;
+        border-radius: 2px;
+        padding: 1px;
+      }
+
+      h4 {
+        font-style: italic;
+        font-weight: 400;
+        background-color: #dedede;
+        margin-bottom: 10px;
+        padding: 2px;
+        width: 100%;
+      }
+    }
+
+    .htmlParse {
+      > *,
+      > {
+        margin: 2px;
+      }
+
+      > * h1,
+      > * h2,
+      > * h3,
+      > h1,
+      > h2,
+      > h3 {
+        margin: 15px 0 !important;
+      }
+
+      > * h2,
+      > h2 {
+        margin-left: 10px;
+      }
+
+      > * p,
+      > p {
+        margin: 0px;
+        background-color: rgb(243, 235, 235);
+        padding: 2px;
+        box-shadow: 0px 0.5px 0.5px 0.5px #dad2d2;
+        line-height: 20px;
+      }
+
+      > * h3,
+      > h3,
+      > * h4,
+      > h4,
+      > * video,
+      > video {
+        margin: 10px 10px 0 15px;
+        text-transform: capitalize;
+        background-color: #818181;
+        padding: 1px;
+        border-radius: 2px;
+      }
+
+      > * a,
+      > a {
+        font-style: italic;
+      }
+
+      > * img,
+      > img {
+        max-width: 90%;
+        border-radius: 2px;
+        box-shadow: 0px 0.5px 0.5px 0.5px #dad2d2;
+        margin: 10px 0;
+      }
+
+      > * pre,
+      > pre {
+        width: 95%;
+        margin: 20px auto;
+        background-color: #f5f5f5;
+        box-sizing: border-box;
+        padding: 2px;
+        height: auto;
+        white-space: pre-wrap;
+      }
+
+      > * ul,
+      > ul,
+      > * ol,
+      > ol {
+        width: 90%;
+        box-sizing: border-box;
+        padding: 4px;
+        margin: 10px 20px;
+        background-color: #aed8ff;
+        list-style-type: none;
+      }
+
+      > * iframe,
+      > iframe {
+        margin: 10px;
+      }
+
+      > * blockquote,
+      > blockquote {
+        width: 90%;
+        margin: 15px;
+        background-color: #f1f1f1;
+        border: solid 1px #b7b7b7;
+        > a {
+          margin-left: 5px;
+          font-size: 0.9rem;
+        }
+      }
+
+      > * figure,
+      > figure {
+        border: solid 1px #b7b7b7;
+        margin: 5px;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 4px;
+      }
+
+      > * td,
+      > td {
+        height: 25px;
+        text-align: center;
+      }
+
+      > * table,
+      > table {
+        width: 90%;
+        margin: 10px auto;
+        background-color: #dad2d2;
+      }
+
+      > * p img,
+      > p img {
+        width: auto;
+        display: block;
+      }
+    }
+  }
+
+  .author {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    margin: 15px 1% 0;
+    padding: 4px;
+    width: 28%;
+
+    .authorPerfil {
+      display: flex;
+      align-items: center;
+      padding: 2px;
+      margin-top: 10px;
+
+      background-color: #fbfbfb;
+      border-radius: 2px;
+      box-shadow: 0px 1px 1px 1px #dad2d2;
+
+      > span {
+        margin-left: 10%;
+      }
+
+      > img {
+        border-radius: 50%;
+      }
+    }
+
+    > p {
+      background-color: #fbfbfb;
+      border-radius: 2px;
+      box-shadow: 0px 1px 1px 1px #dad2d2;
+      padding: 0 4px 4px 4px;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+
+    .content {
+      width: 100%;
+      box-sizing: border-box;
+
+      > * img, > img {
+        width: 90vw;
+        
+        box-sizing: border-box;
+      }
+
+      > * figure, > figure,
+      > * figcaption, > figcaption,
+      > * a, > a ,
+      > * pre, > pre {
+        width: 90vw!important;
+        box-sizing: border-box!important;
+      }
+    }
+
+    .author {
+      width: 90%;
+      margin: auto;
+    }
+  }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 1000px) {
+  .container {
+    width: 100%;
+  }
+}
