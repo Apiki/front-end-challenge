@@ -1,0 +1,24 @@
+.load-button{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.load-button button{
+    border: none;
+    width: 100%;
+    padding: 2rem;
+    transition: 0.4s;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+
+}
+
+.load-button button:hover{
+    background: hotpink;
+    color: white;
+}

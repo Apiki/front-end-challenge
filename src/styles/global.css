@@ -1,6 +1,20 @@
 *{
-    margin: 0;
+    box-sizing: border-box;
     padding: 0;
-    box-sizing: border-box; 
+    margin: 0;
+}
 
+body{
+    background: rgb(231, 230, 230);
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container{
+    max-width: 1120px;
+    margin: 0 auto;
 }
