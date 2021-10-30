@@ -1,6 +1,7 @@
 
 li{
     text-decoration: none;
+    max-width: 900px;
 }
 a{
     display:flex;
@@ -11,6 +12,7 @@ a{
 
 li img{
     height: 100px;
+    border-radius: 0.5rem;
 }
 
 

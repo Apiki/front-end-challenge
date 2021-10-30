@@ -14,7 +14,7 @@ export function Content() {
     }, [])
   }
 
-  GetData()
+  GetData();
 
   return (
     <div className="container">
