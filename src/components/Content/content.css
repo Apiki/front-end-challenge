@@ -11,3 +11,18 @@ ul{
 li{
     margin-bottom: 2rem;
 }
+
+.load-button{
+    border: none;
+    width: 400px;
+    padding: 2rem;
+    transition: 0.4s;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+}
+
+
+.load-button:hover{
+    background: hotpink;
+    color: white;
+}
