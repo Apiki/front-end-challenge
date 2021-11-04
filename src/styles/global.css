@@ -5,16 +5,14 @@
 }
 
 body{
-    background: rgb(231, 230, 230);
+    background-color: rgb(218, 216, 216);
+    min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     font-family: 'Roboto', sans-serif;
-}
-
-button {
-    cursor: pointer;
 }
 
 .container{
     max-width: 1120px;
     margin: 0 auto;
+    padding: 0 2rem;
 }

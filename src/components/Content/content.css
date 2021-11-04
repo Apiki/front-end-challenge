@@ -1,6 +1,5 @@
 section{
     padding: 30px 0px;
-
 }
 
 ul{
@@ -12,17 +11,18 @@ li{
     margin-bottom: 2rem;
 }
 
-.load-button{
+button{
     border: none;
-    width: 400px;
+    width: 700px;
     padding: 2rem;
     transition: 0.4s;
     font-size: 1.2rem;
     border-radius: 1rem;
+    border: none;
+    cursor: pointer;
 }
 
-
-.load-button:hover{
-    background: hotpink;
+button:hover{
+    background: grey;
     color: white;
 }

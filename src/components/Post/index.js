@@ -4,6 +4,7 @@ import { React } from 'react'
 
 export function Post(props) {
 
+
     return (
         <li>
             <a href={props.post.link} target="blank">
@@ -13,8 +14,8 @@ export function Post(props) {
 
                 <div className="post-info">
                     <h3>{props.post.title.rendered}</h3>
-                    <p>autor: {props.post._embedded.author[0].name || 'not defined'}</p>
-                    <p>{props.post.excerpt.rendered}</p>
+                    <p>Escrito por {props.post._embedded.author[0].name || 'not defined'}</p>
+                    <p>{props.post.yoast_head_json.description}</p>
                 </div>
             </a>
         </li>
