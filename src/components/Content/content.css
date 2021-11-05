@@ -19,10 +19,9 @@ button{
     font-size: 1.2rem;
     border-radius: 1rem;
     border: none;
-    cursor: pointer;
 }
 
 button:hover{
-    background: grey;
+    background: rgb(92, 117, 226);
     color: white;
 }
