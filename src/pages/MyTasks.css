@@ -1,0 +1,54 @@
+.my-tasks-container {
+  background-color: #F0EDEE;
+  height: calc(100vh - 98px);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 50px;
+  flex-direction: column;
+}
+
+.my-tasks-container table {
+  margin: 50px;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+.my-tasks-container td,
+.my-tasks-container th {
+  border: 1px solid black;
+  padding: 10px 5px;
+}
+
+.my-tasks-container button {
+  box-shadow: rgb(145 184 179) 0px 1px 3px 0px inset;
+  background: linear-gradient(rgb(118, 141, 135) 5%, rgb(108, 124, 124) 100%) rgb(118, 141, 135);
+  border-radius: 5px;
+  border: 1px solid rgb(86, 105, 99);
+  display: inline-block;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  padding: 3px 10px;
+  margin: 0 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: rgb(43 102 94) 0px -1px 0px;
+}
+
+.my-tasks-container input,
+.my-tasks-container select {
+  padding: 3px;
+  font-size: 13px;
+  border-color: #cccccc;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 8px;
+  margin: 0 20px;
+}
+
+.my-tasks-container h4 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}

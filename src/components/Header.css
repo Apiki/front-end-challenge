@@ -1,0 +1,36 @@
+.header-container {
+  background-color: aquamarine;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.nav-container {
+  padding: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.nav-container a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 50px;
+}
+
+.nav-container button {
+  text-decoration: none;
+  background: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 50px;
+  cursor: pointer;
+}
