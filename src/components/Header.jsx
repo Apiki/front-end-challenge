@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import DataContext from '../context/DataContext';
 import logo from '../images/logo.png';
+import './Header.css';
 
 const Header = () => {
   const { isInLandingPage } = useContext(DataContext);
