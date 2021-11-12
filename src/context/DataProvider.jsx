@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import DataContext from './DataContext';
 
 const DataProvider = ({ children }) => {
-  const contextValue = 0;
+  const [isInLandingPage, setIsInLandingPage] = useState(true);
+
+  const contextValue = useMemo(() => ({
+    isInLandingPage,
+    setIsInLandingPage,
+  }), [isInLandingPage]);
 
   return (
     <DataContext.Provider value={contextValue}>
