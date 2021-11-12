@@ -1,0 +1,14 @@
+footer {
+  display: flex;
+  background: #0a2239;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+footer img {
+  width: 50px;
+}
