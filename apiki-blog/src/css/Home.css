@@ -11,3 +11,34 @@
   text-align: center;
   color: #252525;
 }
+
+#btn-load-more {
+  background-color: #252525;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  display: block;
+  padding: 10px 35px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+#btn-load-more:disabled {
+  background-color: #252525b4;
+}
+
+#home-btns-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#home-page-number {
+  border: 1px solid #252525;
+  border-radius: 2px;
+  padding: 10px 35px;
+  margin-bottom: 20px;
+}
