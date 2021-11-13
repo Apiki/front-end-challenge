@@ -16,6 +16,7 @@ const Router = () => (
       element={<PostPage />}
     />
     <Route
+      path="*"
       element={<NotFound />}
     />
   </Routes>
