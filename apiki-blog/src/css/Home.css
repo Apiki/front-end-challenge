@@ -1,0 +1,13 @@
+#home {
+  max-width: 960px;
+  margin: 0 auto;
+  margin: 10px;
+}
+
+#home-title {
+  font-size: 26px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  text-align: center;
+  color: #252525;
+}

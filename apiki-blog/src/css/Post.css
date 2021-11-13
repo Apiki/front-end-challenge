@@ -1,0 +1,28 @@
+#post {
+  margin: 20px 10px;
+  text-align: center;
+}
+
+#post-image {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+#post-infos {
+  margin-left: 10px;
+  text-align: left;
+}
+
+#post-infos > h2 {
+  color: #333;
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+#post-infos > p {
+  color: #555;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  margin: 5px 0;
+}
