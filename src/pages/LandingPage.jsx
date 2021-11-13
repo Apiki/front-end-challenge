@@ -1,16 +1,20 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import DataContext from '../context/DataContext';
 import PostCard from '../components/PostCard';
 import './LandingPage.css';
 
 const LandingPage = () => {
-  const { posts, getNewPosts } = useContext(DataContext);
+  const { posts, getNewPosts, setIsInLandingPage } = useContext(DataContext);
   const [page, setPage] = useState(2);
 
   function loadMorePosts() {
     getNewPosts(page);
     setPage(page + 1);
   }
+
+  useEffect(() => {
+    setIsInLandingPage(true);
+  }, []);
 
   return (
     <main className="landing-page-container">

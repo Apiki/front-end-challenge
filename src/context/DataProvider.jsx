@@ -15,7 +15,6 @@ const DataProvider = ({ children }) => {
 
   useEffect(() => {
     getLastestPosts().then((data) => {
-      console.log(data);
       setPosts(data);
     });
   }, []);

@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import LandingPage from '../pages/LandingPage';
 import NotFound from '../pages/NotFound';
+import PostPage from '../pages/PostPage';
 
 const Router = () => (
   <Routes>
@@ -11,7 +12,10 @@ const Router = () => (
       element={<LandingPage />}
     />
     <Route
-      path="/registro"
+      path="/artigo/:slug"
+      element={<PostPage />}
+    />
+    <Route
       element={<NotFound />}
     />
   </Routes>
