@@ -1,15 +1,9 @@
-#home {
-  max-width: 960px;
-  margin: 0 auto;
-  margin: 10px;
+body {
+  background-color: #ddd;
 }
 
-#home-title {
-  font-size: 26px;
-  font-family: 'Rubik', sans-serif;
-  font-weight: 500;
-  text-align: center;
-  color: #252525;
+#home {
+  margin: 0 auto;
 }
 
 #btn-load-more {
@@ -19,7 +13,7 @@
   color: #fff;
   display: block;
   padding: 10px 35px;
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto;
   font-size: 18px;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 500;
@@ -28,17 +22,4 @@
 
 #btn-load-more:disabled {
   background-color: #252525b4;
-}
-
-#home-btns-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-#home-page-number {
-  border: 1px solid #252525;
-  border-radius: 2px;
-  padding: 10px 35px;
-  margin-bottom: 20px;
 }
