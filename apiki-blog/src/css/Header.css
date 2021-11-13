@@ -1,0 +1,14 @@
+#header {
+  background-color: #1b1b1b;
+}
+
+#header-container {
+  max-width: 960px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+#apiki-logo {
+  width: 120px;
+}
