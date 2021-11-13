@@ -1,0 +1,21 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px 0;
+  background: #0a2239;
+}
+
+header .header-link {
+  width: 50px;
+  position: absolute;
+  height: 50px;
+  left: 20px;
+  background-size: cover;
+  background-image: url("../images/arrow-back.png");
+}
+
+header .header-logo {
+  width: 150px;
+}
