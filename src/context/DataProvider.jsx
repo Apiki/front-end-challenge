@@ -1,14 +1,31 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import DataContext from './DataContext';
+import { getLastestPosts, getNextPagePosts } from '../services/getData';
 
 const DataProvider = ({ children }) => {
   const [isInLandingPage, setIsInLandingPage] = useState(true);
+  const [posts, setPosts] = useState([]);
+
+  const getNewPosts = (page) => {
+    getNextPagePosts(page).then((data) => {
+      setPosts([...posts, ...data]);
+    });
+  };
+
+  useEffect(() => {
+    getLastestPosts().then((data) => {
+      console.log(data);
+      setPosts(data);
+    });
+  }, []);
 
   const contextValue = useMemo(() => ({
     isInLandingPage,
     setIsInLandingPage,
-  }), [isInLandingPage]);
+    posts,
+    getNewPosts,
+  }), [isInLandingPage, posts]);
 
   return (
     <DataContext.Provider value={contextValue}>
