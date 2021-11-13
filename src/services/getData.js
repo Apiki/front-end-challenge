@@ -11,7 +11,7 @@ function formatData({
     description: { __html: excerpt.rendered },
     title: title.rendered,
     author: embedded.author[0].name || '',
-    image: embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url,
+    image: embedded['wp:featuredmedia'][0].media_details.sizes.large.source_url,
   });
 }
 

@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import DataContext from '../context/DataContext';
 import PostCard from '../components/PostCard';
+import './LandingPage.css';
 
 const LandingPage = () => {
   const { posts, getNewPosts } = useContext(DataContext);
@@ -12,12 +13,18 @@ const LandingPage = () => {
   }
 
   return (
-    <main>
-      <h1>Blog Desenvolvimento</h1>
-      <div>
+    <main className="landing-page-container">
+      <h1 className="landing-page-container-title">Artigos sobre desenvolvimento</h1>
+      <div className="posts-container">
         {posts.map((post) => (<PostCard key={post.image} post={post} />))}
       </div>
-      <button onClick={loadMorePosts} type="button">Carregar mais</button>
+      <button
+        className="landing-page-container-button"
+        onClick={loadMorePosts}
+        type="button"
+      >
+        Carregar mais
+      </button>
     </main>
   );
 };

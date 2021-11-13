@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './PostCard.css';
+import { Link } from 'react-router-dom';
 
 const PostCard = ({ post }) => {
   const {
@@ -10,11 +12,13 @@ const PostCard = ({ post }) => {
   } = post;
 
   return (
-    <div>
-      {link}
-      <span dangerouslySetInnerHTML={description} />
-      {title}
-      <img src={image} alt={title} />
+    <div className="post-container">
+      <img className="post-image" src={image} alt={title} />
+      <div>
+        <h3 className="post-title">{title}</h3>
+        <span className="post-description" dangerouslySetInnerHTML={description} />
+        <Link className="post-link" to={`artigo/${link}`}>Ler mais</Link>
+      </div>
     </div>
   );
 };
