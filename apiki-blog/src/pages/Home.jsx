@@ -26,6 +26,7 @@ function Home () {
 
   return (
     <div id="home">
+
       {data.map((post) => {
         return (
           post._embedded['wp:featuredmedia'] && (
@@ -35,6 +36,7 @@ function Home () {
               image={post._embedded['wp:featuredmedia'][0].source_url}
               date={post._embedded['wp:featuredmedia'][0].date}
               author={post._embedded.author[0].name}
+              description={post.excerpt.rendered}
               link={post.slug}
             />
           )

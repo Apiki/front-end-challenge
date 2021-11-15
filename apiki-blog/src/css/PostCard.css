@@ -13,7 +13,7 @@
   text-align: left;
   margin: 0 15px 10px 15px;
   font-size: 20px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 500;
   color: #333;
 }
 
@@ -21,4 +21,18 @@
   text-align: left;
   margin: 10px 0 5px 15px;
   color: #555;
+}
+
+#postCard-description {
+  margin: 10px 15px 5px 10px;
+  text-align: left;
+  color: #555;
+}
+
+@media (min-width: 560px) {
+  #postCard {
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+  }
 }

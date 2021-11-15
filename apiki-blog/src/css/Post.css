@@ -11,7 +11,6 @@
 }
 
 #post h1 {
-  font-family: 'Rubik', sans-serif;
   font-weight: 500;
   font-size: 28px;
   padding-top: 10px;
@@ -21,19 +20,16 @@
 #post-subtitle {
   color: #555;
   margin: 10px 0;
-  font-family: 'Source Sans Pro', sans-serif;
   font-size: 22px;
 }
 
 #post-content p {
   color: #333;
   margin: 10px 0;
-  font-family: 'Source Sans Pro', sans-serif;
   font-size: 18px;
 }
 
 #post-content h2 {
-  font-family: 'Rubik', sans-serif;
   font-weight: 500;
   font-size: 22px;
   margin: 10px 0;

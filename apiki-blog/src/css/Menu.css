@@ -1,0 +1,43 @@
+#menu {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+#menu > h3 {
+  color: #fff;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+#menu-social-links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#menu-content-links {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  justify-content: center;
+}
+
+#menu-content-links li a {
+  color: rgba(255, 255, 255, 0.747);
+  display: inline-block;
+  margin: 5px 10px 5px;
+  font-weight: 500;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#menu-content-links li a:hover {
+  color: #fff;
+  transition: 0.5s;
+}
+
+#menu-social-links a img {
+  width: 40px;
+  cursor: pointer;
+}
