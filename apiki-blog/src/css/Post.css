@@ -51,8 +51,8 @@ hr {
 
 .post-container__content img {
   margin: 20px 0;
-  max-height: 250px;
   max-width: 100%;
+  height: auto;
 }
 
 .post-container__content tr {
@@ -68,16 +68,21 @@ hr {
   text-align: center;
 }
 
+.post-container__content pre {
+  background-color: #2b2b2b;
+  padding: 15px 0;
+  border-radius: 5px;
+  width: 100%;
+  overflow: auto;
+}
+
+.post-container__content pre code {
+  color: rgb(60, 255, 0);
+}
+
 .post-container__content li {
   color: #333;
   font-size: 18px;
   margin: 20px 20px;
   list-style-type: disc;
-}
-
-@media (min-width: 600px) {
-  .post-container__content img {
-    max-height: 400px;
-    max-width: 100%;
-  }
 }
