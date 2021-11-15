@@ -3,8 +3,8 @@
 }
 
 #post-container {
-  max-width: 960px;
   margin: 0 auto;
+  max-width: 960px;
   padding: 10px 0;
 }
 
@@ -13,29 +13,29 @@ hr {
 }
 
 #post-content {
-  max-width: 100%;
   margin: 0 20px;
+  max-width: 100%;
 }
 
 #post h1 {
   color: #252525;
   font-weight: 600;
   font-size: 30px;
-  padding-top: 10px;
   margin: 0 20px 10px;
+  padding-top: 10px;
 }
 
 #post-subtitle {
   color: #555;
-  margin: 10px 20px 30px;
   font-size: 20px;
+  margin: 10px 20px 30px;
 }
 
 #post-content p {
   color: #333;
-  margin: 10px 0;
   font-size: 20px;
   letter-spacing: 0.5px;
+  margin: 10px 0;
 }
 
 #post-content h2 {
@@ -46,8 +46,8 @@ hr {
 }
 
 #post-content img {
-  max-width: 100%;
   max-height: 250px;
+  max-width: 100%;
 }
 
 #post-content tr {
@@ -62,7 +62,7 @@ hr {
 
 @media (min-width: 600px) {
   #post-content img {
-    max-width: 100%;
     max-height: 400px;
+    max-width: 100%;
   }
 }

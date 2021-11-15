@@ -8,7 +8,6 @@ function Footer () {
       <div id="footer-container">
         <hr />
         <h1 id="footer-title">Apiki</h1>
-
         <p>Empresa especializada em WordPress com três unidades de negócios.</p>
         <p>Design e Desenvolvimento;</p>
         <p>Infra e Hospedagem;</p>

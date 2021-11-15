@@ -1,6 +1,6 @@
 #menu {
-  max-width: 960px;
   margin: 0 auto;
+  max-width: 960px;
 }
 
 #menu h3 {
@@ -15,21 +15,21 @@
 }
 
 #menu-content-links {
-  max-width: 960px;
-  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 15px;
   justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  max-width: 960px;
 }
 
 #menu-content-links li a {
   color: rgba(255, 255, 255, 74.7%);
-  display: inline-block;
-  margin: 5px 10px;
-  font-weight: 500;
-  transition: 0.5s;
   cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+  margin: 5px 10px;
+  transition: 0.5s;
 }
 
 #menu-content-links li a:hover {
@@ -38,7 +38,7 @@
 }
 
 #menu-social-links a img {
-  width: 35px;
   cursor: pointer;
   margin: 0 1rem;
+  width: 35px;
 }

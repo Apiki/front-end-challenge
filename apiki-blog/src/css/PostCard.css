@@ -1,8 +1,8 @@
 #postCard {
-  text-align: center;
   background-color: #fff;
   margin: 15px 0;
   padding: 20px 0 5px;
+  text-align: center;
 }
 
 #postCard-image {
@@ -10,29 +10,29 @@
 }
 
 #postCard-title {
-  text-align: left;
-  margin: 0 15px 10px;
+  color: #333;
   font-size: 20px;
   font-weight: 500;
-  color: #333;
+  margin: 0 15px 10px;
+  text-align: left;
 }
 
 #postCard-date {
-  text-align: left;
-  margin: 10px 0 5px 15px;
   color: #555;
+  margin: 10px 0 5px 15px;
+  text-align: left;
 }
 
 #postCard-description {
+  color: #555;
   margin: 10px 15px 5px 10px;
   text-align: left;
-  color: #555;
 }
 
 @media (min-width: 560px) {
   #postCard {
-    max-width: 600px;
     margin: 20px auto;
     display: flex;
+    max-width: 600px;
   }
 }
