@@ -2,11 +2,11 @@ body {
   background-color: #ddd;
 }
 
-#home {
+.home {
   margin: 0 auto;
 }
 
-#btn-load-more {
+.home__btn {
   background-color: #252525;
   border: none;
   border-radius: 2px;
@@ -19,6 +19,6 @@ body {
   padding: 10px 35px;
 }
 
-#btn-load-more:disabled {
+.home__btn:disabled {
   background-color: #252525b4;
 }

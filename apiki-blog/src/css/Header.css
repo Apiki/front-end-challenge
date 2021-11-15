@@ -1,9 +1,9 @@
-#header {
+header {
   background-color: #1b1b1b;
   padding: 5px 0;
 }
 
-#header-container {
+.header-container {
   align-items: center;
   display: flex;
   justify-content: space-around;
@@ -12,6 +12,6 @@
   padding: 10px 0;
 }
 
-#apiki-logo {
+.header__logo {
   width: 120px;
 }

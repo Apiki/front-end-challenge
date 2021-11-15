@@ -1,25 +1,25 @@
-#footer-container {
+.footer-container {
   margin: 0 auto;
   max-width: 700px;
 }
 
-#footer-title {
+.footer__title {
   color: #fff;
   text-align: center;
 }
 
-#footer-container p {
+.footer-container p {
   color: #555;
   margin: 5px 20px;
   text-align: center;
 }
 
-#footer-container p:last-of-type {
+.footer-container p:last-of-type {
   color: #252525;
   font-weight: 500;
   margin-top: 20px;
 }
 
-#footer-container p:first-of-type {
+.footer-container p:first-of-type {
   margin: 20px 0;
 }

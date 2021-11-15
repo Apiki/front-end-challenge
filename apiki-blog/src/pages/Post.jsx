@@ -19,12 +19,18 @@ function Post () {
   const { title, excerpt, content } = data
 
   return (
-    <div id="post">
-      <div id="post-container">
+    <div className="post">
+      <div className="post-container">
         <h1>{title.rendered}</h1>
-        <p id="post-subtitle" dangerouslySetInnerHTML={{ __html: excerpt.rendered }} />
+        <p
+          className="post-container__subtitle"
+          dangerouslySetInnerHTML={{ __html: excerpt.rendered }}
+        />
         <hr />
-        <p id="post-content" dangerouslySetInnerHTML={{ __html: content.rendered }} />
+        <p
+          className="post-container__content"
+          dangerouslySetInnerHTML={{ __html: content.rendered }}
+        />
       </div>
       <Footer />
     </div>

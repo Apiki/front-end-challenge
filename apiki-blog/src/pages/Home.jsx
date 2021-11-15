@@ -21,7 +21,7 @@ function Home () {
   if (!data.length) return <Loading />
 
   return (
-    <div id="home">
+    <div className="home">
       {data.map((post) => {
         return (
           post._embedded['wp:featuredmedia'] && (
@@ -41,7 +41,7 @@ function Home () {
       <button
         disabled={page === totalPages}
         onClick={() => fetchApiByPage(page, data, setData, setPage)}
-        id="btn-load-more"
+        className="home__btn"
       >
         Carregar mais...
       </button>

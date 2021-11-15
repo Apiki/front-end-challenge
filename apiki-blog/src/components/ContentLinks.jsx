@@ -2,7 +2,7 @@ import React from 'react'
 
 function ContentLinks () {
   return (
-    <ul id="menu-content-links">
+    <ul className="menu-content__links">
       <li>
         <a href="https://blog.apiki.com/web-stories/">Web Stories</a>
       </li>

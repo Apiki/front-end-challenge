@@ -14,8 +14,8 @@ function Header () {
   const [open, setOpen] = React.useState(false)
 
   return (
-    <header id="header">
-      <div id="header-container">
+    <header>
+      <div className="header-container">
         <Hamburger
           size={30}
           onToggle={(toggled) => setOpen(toggled)}
@@ -23,7 +23,7 @@ function Header () {
         />
 
         <Link to="/">
-          <img id="apiki-logo" src={apikiLogo} alt="Apiki logo" />
+          <img className="header__logo" src={apikiLogo} alt="Apiki logo" />
         </Link>
 
         <a href="https://apiki.com/" target="_blank" rel="noreferrer">

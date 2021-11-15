@@ -1,15 +1,15 @@
-#postCard {
+.post-card {
   background-color: #fff;
   margin: 15px 0;
   padding: 20px 0 5px;
   text-align: center;
 }
 
-#postCard-image {
+.post-card__image {
   max-width: 100%;
 }
 
-#postCard-title {
+.post-card__title {
   color: #333;
   font-size: 20px;
   font-weight: 500;
@@ -17,20 +17,20 @@
   text-align: left;
 }
 
-#postCard-date {
+.post-card__date {
   color: #555;
-  margin: 10px 0 5px 15px;
+  margin: 10px 0 5px 10px;
   text-align: left;
 }
 
-#postCard-description {
+.post-card__description {
   color: #555;
   margin: 10px 15px 5px 10px;
   text-align: left;
 }
 
 @media (min-width: 560px) {
-  #postCard {
+  .post-card {
     margin: 20px auto;
     display: flex;
     max-width: 600px;

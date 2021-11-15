@@ -7,7 +7,7 @@ import '../css/Menu.css'
 
 function Menu () {
   return (
-    <div id="menu">
+    <div className="menu">
       <ContentLinks />
       <SocialLinks />
     </div>

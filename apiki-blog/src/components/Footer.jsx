@@ -4,10 +4,10 @@ import '../css/Footer.css'
 
 function Footer () {
   return (
-    <footer id="footer">
-      <div id="footer-container">
+    <footer>
+      <div className="footer-container">
         <hr />
-        <h1 id="footer-title">Apiki</h1>
+        <h1 className="footer__title">Apiki</h1>
         <p>Empresa especializada em WordPress com três unidades de negócios.</p>
         <p>Design e Desenvolvimento;</p>
         <p>Infra e Hospedagem;</p>

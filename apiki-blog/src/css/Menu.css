@@ -1,20 +1,26 @@
-#menu {
+.menu {
   margin: 0 auto;
   max-width: 960px;
 }
 
-#menu h3 {
+.menu h3 {
   color: #fff;
   font-weight: 500;
   margin-left: 20px;
 }
 
-#menu-social-links {
+.menu-social__links {
   display: flex;
   justify-content: center;
 }
 
-#menu-content-links {
+.menu-social__links a img {
+  cursor: pointer;
+  margin: 0 1rem;
+  width: 35px;
+}
+
+.menu-content__links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -23,7 +29,7 @@
   max-width: 960px;
 }
 
-#menu-content-links li a {
+.menu-content__links li a {
   color: rgba(255, 255, 255, 74.7%);
   cursor: pointer;
   display: inline-block;
@@ -32,13 +38,7 @@
   transition: 0.5s;
 }
 
-#menu-content-links li a:hover {
+.menu-content__links li a:hover {
   color: #fff;
   transition: 0.5s;
-}
-
-#menu-social-links a img {
-  cursor: pointer;
-  margin: 0 1rem;
-  width: 35px;
 }

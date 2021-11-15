@@ -8,13 +8,13 @@ function Post ({ title, image, link, author, description, date }) {
   const formatedDate = new Date(date).toLocaleDateString()
 
   return (
-    <div id="postCard">
+    <div className="post-card">
       <Link to={`/post/${link}`}>
-        <h2 id="postCard-title">{title}</h2>
-        <img id="postCard-image" src={image} alt={title} />
-        <p id="postCard-date">{`${author || 'Blog'} - ${formatedDate}`}</p>
+        <h2 className="post-card__title">{title}</h2>
+        <img className="post-card__image" src={image} alt={title} />
+        <p className="post-card__date">{`${author || 'Blog'} - ${formatedDate}`}</p>
         <p
-          id="postCard-description"
+          className="post-card__description"
           dangerouslySetInnerHTML={{ __html: description }}
         />
       </Link>
