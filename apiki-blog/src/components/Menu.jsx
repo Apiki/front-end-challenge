@@ -12,49 +12,62 @@ function Menu () {
     <div id="menu">
       <ul id="menu-content-links">
         <li>
-          <a>Web Stories</a>
+          <a href="https://blog.apiki.com/web-stories/">Web Stories</a>
         </li>
         <li>
-          <a>Desenvolvimento</a>
+          <a href="https://blog.apiki.com/infra/">Infra</a>
         </li>
         <li>
-          <a>Infra</a>
+          <a href="https://blog.apiki.com/mobile/">Mobile</a>
         </li>
         <li>
-          <a>Mobile</a>
+          <a href="https://blog.apiki.com/performance/">Performance</a>
         </li>
         <li>
-          <a>Performance</a>
+          <a href="https://blog.apiki.com/seguranca/">Segurança</a>
         </li>
         <li>
-          <a>Segurança</a>
+          <a href="https://blog.apiki.com/seo/">SEO</a>
         </li>
         <li>
-          <a>SEO</a>
-        </li>
-        <li>
-          <a>E-commerce</a>
+          <a href="https://blog.apiki.com/e-commerce/">E-commerce</a>
         </li>
       </ul>
 
       <ul id="menu-social-links">
         <li>
-          <a>
+          <a
+            href="https://www.facebook.com/ApikiWordPress"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={facebookIcon} />
           </a>
         </li>
         <li>
-          <a>
+          <a
+            href="https://www.instagram.com/apikiwordpress/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={instagramIcon} />
           </a>
         </li>
         <li>
-          <a>
+          <a
+            href="https://www.linkedin.com/company/apiki/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={linkedinIcon} />
           </a>
         </li>
         <li>
-          <a>
+          <a
+            href="https://www.youtube.com/channel/UC__ToR3hqjs1ZktdLIWqYFA"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={youtubeIcon} />
           </a>
         </li>
