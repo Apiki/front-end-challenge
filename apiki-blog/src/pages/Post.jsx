@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
-import ReactLoading from 'react-loading'
+
+import Loading from '../components/Loading'
 
 import '../css/Post.css'
 
@@ -14,22 +15,23 @@ function Post () {
       .then((response) => setData(response.data[0]))
   }, [])
 
-  console.log(data)
-
-  if (!data) return <ReactLoading color="#252525" />
+  if (!data) return <Loading />
 
   const { title, excerpt, content } = data
 
   return (
     <div id="post">
       <div id="post-container">
-      <h1>{title.rendered}</h1>
-      <p id="post-subtitle" dangerouslySetInnerHTML={{ __html: excerpt.rendered }}></p>
+        <h1>{title.rendered}</h1>
+        <p
+          id="post-subtitle"
+          dangerouslySetInnerHTML={{ __html: excerpt.rendered }}
+        ></p>
 
-      <p
-        id="post-content"
-        dangerouslySetInnerHTML={{ __html: content.rendered }}
-      ></p>
+        <p
+          id="post-content"
+          dangerouslySetInnerHTML={{ __html: content.rendered }}
+        ></p>
       </div>
     </div>
   )

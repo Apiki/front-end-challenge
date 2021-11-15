@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
-import ReactLoading from 'react-loading'
 
+import Loading from '../components/Loading'
 import PostCard from '../components/PostCard'
 
 import fetchApiByPage from '../services/fetchApiByPage'
@@ -22,11 +22,10 @@ function Home () {
       })
   }, [])
 
-  if (!data.length) return <ReactLoading color="#252525" />
+  if (!data.length) return <Loading />
 
   return (
     <div id="home">
-
       {data.map((post) => {
         return (
           post._embedded['wp:featuredmedia'] && (
