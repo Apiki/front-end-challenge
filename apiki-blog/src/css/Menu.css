@@ -11,7 +11,7 @@
 
 #menu-social-links {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 #menu-content-links {
@@ -38,6 +38,7 @@
 }
 
 #menu-social-links a img {
-  width: 40px;
+  width: 35px;
   cursor: pointer;
+  margin: 0 1rem;
 }

@@ -16,7 +16,11 @@ function Header () {
   return (
     <header id="header">
       <div id="header-container">
-        <Hamburger onToggle={(toggled) => setOpen(toggled)} color="#fff" />
+        <Hamburger
+          size={30}
+          onToggle={(toggled) => setOpen(toggled)}
+          color="#fff"
+        />
 
         <Link to="/">
           <img id="apiki-logo" src={apikiLogo} alt="Apiki logo" />

@@ -28,6 +28,8 @@ function Post () {
           dangerouslySetInnerHTML={{ __html: excerpt.rendered }}
         ></p>
 
+        <hr />
+
         <p
           id="post-content"
           dangerouslySetInnerHTML={{ __html: content.rendered }}
