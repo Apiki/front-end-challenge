@@ -1,5 +1,6 @@
 import React from 'react'
-import axios from 'axios'
+
+import fetchHome from '../services/fetchHome'
 
 import Loading from '../components/Loading'
 import PostCard from '../components/PostCard'
@@ -14,12 +15,7 @@ function Home () {
   const [totalPages, setTotalPages] = React.useState(null)
 
   React.useEffect(() => {
-    axios
-      .get('https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518')
-      .then((response) => {
-        setData(response.data)
-        setTotalPages(Number(response.headers['x-wp-totalpages']))
-      })
+    fetchHome(setData, setTotalPages)
   }, [])
 
   if (!data.length) return <Loading />

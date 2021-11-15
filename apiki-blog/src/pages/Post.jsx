@@ -1,5 +1,6 @@
 import React from 'react'
-import axios from 'axios'
+
+import fetchPost from '../services/fetchPost'
 
 import Loading from '../components/Loading'
 import Footer from '../components/Footer'
@@ -10,10 +11,7 @@ function Post () {
   const [data, setData] = React.useState(null)
 
   React.useEffect(() => {
-    const link = location.pathname.split('/')[2]
-    axios
-      .get(`https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=${link}`)
-      .then((response) => setData(response.data[0]))
+    fetchPost(setData)
   }, [])
 
   if (!data) return <Loading />
@@ -24,19 +22,10 @@ function Post () {
     <div id="post">
       <div id="post-container">
         <h1>{title.rendered}</h1>
-        <p
-          id="post-subtitle"
-          dangerouslySetInnerHTML={{ __html: excerpt.rendered }}
-        ></p>
-
+        <p id="post-subtitle" dangerouslySetInnerHTML={{ __html: excerpt.rendered }} />
         <hr />
-
-        <p
-          id="post-content"
-          dangerouslySetInnerHTML={{ __html: content.rendered }}
-        ></p>
+        <p id="post-content" dangerouslySetInnerHTML={{ __html: content.rendered }} />
       </div>
-
       <Footer />
     </div>
   )

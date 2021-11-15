@@ -16,7 +16,7 @@ function Post ({ title, image, link, author, description, date }) {
         <p
           id="postCard-description"
           dangerouslySetInnerHTML={{ __html: description }}
-        ></p>
+        />
       </Link>
     </div>
   )
