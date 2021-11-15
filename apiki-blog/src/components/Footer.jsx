@@ -1,5 +1,7 @@
 import React from 'react'
 
+import SocialLinks from './SocialLinks'
+
 import '../css/Footer.css'
 
 function Footer () {
@@ -15,6 +17,8 @@ function Footer () {
         <p>Em resumo, só fazemos uma coisa em WordPress: tudo.</p>
         <p>2020 Apiki - Empresa especializada em WordPress.</p>
       </div>
+
+      <SocialLinks />
     </footer>
   )
 }

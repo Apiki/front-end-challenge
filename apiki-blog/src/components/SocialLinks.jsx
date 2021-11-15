@@ -7,7 +7,7 @@ import youtubeIcon from '../imgs/icons/youtube.svg'
 
 function SocialLinks () {
   return (
-    <ul className="menu-social__links">
+    <ul className="footer-social__links">
       <li>
         <a
           href="https://www.facebook.com/ApikiWordPress"

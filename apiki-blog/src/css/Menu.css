@@ -9,17 +9,6 @@
   margin-left: 20px;
 }
 
-.menu-social__links {
-  display: flex;
-  justify-content: center;
-}
-
-.menu-social__links a img {
-  cursor: pointer;
-  margin: 0 1rem;
-  width: 35px;
-}
-
 .menu-content__links {
   display: flex;
   flex-wrap: wrap;

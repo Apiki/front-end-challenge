@@ -21,5 +21,17 @@
 }
 
 .footer-container p:first-of-type {
-  margin: 20px 0;
+  margin: 0px 0;
+}
+
+.footer-social__links {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.footer-social__links a img {
+  cursor: pointer;
+  margin: 0 1rem;
+  width: 35px;
 }
