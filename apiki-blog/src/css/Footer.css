@@ -3,15 +3,14 @@
   max-width: 700px;
 }
 
-.footer__title {
-  color: #fff;
-  text-align: center;
-}
-
 .footer-container p {
   color: #555;
   margin: 5px 20px;
   text-align: center;
+}
+
+.footer-container p:first-of-type {
+  margin: 15px 0;
 }
 
 .footer-container p:last-of-type {
@@ -20,8 +19,9 @@
   margin-top: 20px;
 }
 
-.footer-container p:first-of-type {
-  margin: 0px 0;
+.footer__title {
+  color: #fff;
+  text-align: center;
 }
 
 .footer-social__links {
@@ -32,6 +32,6 @@
 
 .footer-social__links a img {
   cursor: pointer;
-  margin: 0 1rem;
+  margin: 0 20px;
   width: 35px;
 }

@@ -2,25 +2,6 @@
   background-color: #fff;
 }
 
-.post-container {
-  margin: 0 auto;
-  max-width: 700px;
-  padding: 10px 0;
-}
-
-hr {
-  margin: 0 20px;
-}
-
-.post-container__content {
-  margin: 20px 20px 0;
-  max-width: 100%;
-}
-
-.post-container__image {
-  max-width: 100%;
-}
-
 .post h1 {
   color: #252525;
   font-weight: 600;
@@ -29,17 +10,15 @@ hr {
   padding-top: 10px;
 }
 
-.post-container__subtitle {
-  color: #555;
-  font-size: 20px;
-  margin: 20px 20px 30px;
+.post-container {
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 10px 0;
 }
 
-.post-container__content p {
-  color: #333;
-  font-size: 20px;
-  letter-spacing: 0.5px;
-  margin: 10px 0;
+.post-container__content {
+  margin: 20px 20px 0;
+  max-width: 100%;
 }
 
 .post-container__content h2 {
@@ -49,18 +28,42 @@ hr {
   margin-top: 35px;
 }
 
+.post-container__content h3 {
+  color: #252525;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.post-container__content p {
+  color: #333;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  margin: 10px 0;
+}
+
+.post-container__image {
+  max-width: 100%;
+  margin-top: 60px;
+}
+
+.post-container__subtitle {
+  color: #555;
+  font-size: 20px;
+  margin: 20px 20px 30px;
+}
+
 .post-container__content img {
   margin: 20px 0;
   max-width: 100%;
   height: auto;
 }
 
-.post-container__content tr {
-  color: #252525;
-}
-
 .post-container__content table {
   border: 1px solid #252525;
+}
+
+.post-container__content tr {
+  color: #252525;
 }
 
 .post-container__content td {
@@ -70,6 +73,7 @@ hr {
 
 .post-container__content pre {
   background-color: #2b2b2b;
+  margin: 10px 0;
   padding: 15px 0;
   border-radius: 5px;
   width: 100%;
@@ -85,4 +89,8 @@ hr {
   font-size: 18px;
   margin: 20px 20px;
   list-style-type: disc;
+}
+
+hr {
+  margin: 0 20px;
 }

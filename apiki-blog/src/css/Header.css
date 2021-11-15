@@ -1,6 +1,9 @@
 header {
   background-color: #1b1b1b;
   padding: 5px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 .header-container {
