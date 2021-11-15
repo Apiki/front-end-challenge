@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+.post-card:first-of-type {
+  margin-top: 80px;
+}
+
 .post-card__image {
   max-width: 100%;
 }

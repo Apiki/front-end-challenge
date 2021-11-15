@@ -36,9 +36,10 @@
 
 .post-container__content p {
   color: #333;
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 0.5px;
   margin: 10px 0;
+  overflow-wrap: break-word;
 }
 
 .post-container__image {
@@ -87,7 +88,7 @@
 .post-container__content li {
   color: #333;
   font-size: 18px;
-  margin: 20px 20px;
+  margin: 20px;
   list-style-type: disc;
 }
 
