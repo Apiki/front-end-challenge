@@ -1,12 +1,12 @@
 .menu {
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 60rem;
 }
 
 .menu h3 {
   color: #fff;
   font-weight: 500;
-  margin-left: 20px;
+  margin-left: 1.25rem;
 }
 
 .menu-content__links {
@@ -14,8 +14,8 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
-  margin-bottom: 15px;
-  max-width: 960px;
+  margin-bottom: 0.9rem;
+  max-width: 60rem;
 }
 
 .menu-content__links li a {
@@ -23,7 +23,7 @@
   cursor: pointer;
   display: inline-block;
   font-weight: 500;
-  margin: 5px 10px;
+  margin: 0.3rem 0.625rem;
   transition: 0.5s;
 }
 

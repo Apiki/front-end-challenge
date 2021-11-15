@@ -1,6 +1,6 @@
 header {
   background-color: #1b1b1b;
-  padding: 5px 0;
+  padding: 0.313rem 0;
   position: fixed;
   width: 100%;
   top: 0;
@@ -11,10 +11,10 @@ header {
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
-  max-width: 960px;
-  padding: 10px 0;
+  max-width: 60rem;
+  padding: 0.625rem 0;
 }
 
 .header__logo {
-  width: 120px;
+  width: 7.5rem;
 }

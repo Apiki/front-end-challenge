@@ -9,15 +9,15 @@ body {
 .home__btn {
   background-color: #252525;
   border: none;
-  border-radius: 2px;
+  border-radius: 0.125rem;
   color: #fff;
   cursor: pointer;
   display: block;
-  letter-spacing: 0.5px;
-  font-size: 18px;
+  letter-spacing: 0.03rem;
+  font-size: 1.125rem;
   font-weight: 500;
-  margin: 0 auto 20px;
-  padding: 10px 35px;
+  margin: 0 auto 1.25rem;
+  padding: 0.625rem 2.1rem;
   transition: 0.5s;
 }
 

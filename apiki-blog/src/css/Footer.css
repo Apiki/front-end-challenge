@@ -1,22 +1,22 @@
 .footer-container {
   margin: 0 auto;
-  max-width: 700px;
+  max-width: 43.75rem;
 }
 
 .footer-container p {
   color: #555;
-  margin: 5px 20px;
+  margin: 0.3rem 1.25rem;
   text-align: center;
 }
 
 .footer-container p:first-of-type {
-  margin: 15px 0;
+  margin: 0.9rem 0;
 }
 
 .footer-container p:last-of-type {
   color: #252525;
   font-weight: 500;
-  margin-top: 20px;
+  margin-top: 0.9rem;
 }
 
 .footer__title {
@@ -27,11 +27,11 @@
 .footer-social__links {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 
 .footer-social__links a img {
   cursor: pointer;
-  margin: 0 20px;
-  width: 35px;
+  margin: 0 1.25rem;
+  width: 2.1rem;
 }

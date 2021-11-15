@@ -1,12 +1,12 @@
 .post-card {
   background-color: #fff;
-  margin-bottom: 15px;
-  padding: 20px 0 5px;
+  margin-bottom: 0.9rem;
+  padding: 1.25rem 0 0.3rem;
   text-align: center;
 }
 
 .post-card:first-of-type {
-  margin-top: 80px;
+  margin-top: 5rem;
 }
 
 .post-card__image {
@@ -15,28 +15,27 @@
 
 .post-card__title {
   color: #333;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 500;
-  margin: 0 15px 10px;
-  text-align: left;
+  margin: 0 0.9rem 0.625rem;
 }
 
 .post-card__date {
   color: #555;
-  margin: 10px 0 5px 10px;
+  margin: 0.625rem 0 0.3rem 0.625rem;
   text-align: left;
 }
 
 .post-card__description {
   color: #555;
-  margin: 10px 15px 5px 10px;
+  margin: 0.625rem 0.9rem 0.3rem 0.625rem;
   text-align: left;
 }
 
-@media (min-width: 560px) {
+@media (min-width: 35.5rem) {
   .post-card {
-    margin: 20px auto;
+    margin: 1.25rem auto;
     display: flex;
-    max-width: 700px;
+    max-width: 43.75rem;
   }
 }
