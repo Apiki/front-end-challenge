@@ -1,0 +1,25 @@
+#footer-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+#footer-title {
+  color: #fff;
+  text-align: center;
+}
+
+#footer-container > p {
+  color: #555;
+  text-align: center;
+  margin: 5px 20px;
+}
+
+#footer-container > p:last-of-type {
+  color: #252525;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+#footer-container > p:first-of-type {
+  margin: 20px 0;
+}

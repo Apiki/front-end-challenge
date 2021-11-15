@@ -2,7 +2,7 @@
   text-align: center;
   background-color: #fff;
   margin: 15px 0;
-  padding: 20px 0 5px 0;
+  padding: 20px 0 5px;
 }
 
 #postCard-image {
@@ -11,7 +11,7 @@
 
 #postCard-title {
   text-align: left;
-  margin: 0 15px 10px 15px;
+  margin: 0 15px 10px;
   font-size: 20px;
   font-weight: 500;
   color: #333;

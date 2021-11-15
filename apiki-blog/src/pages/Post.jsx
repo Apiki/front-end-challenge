@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 
 import Loading from '../components/Loading'
+import Footer from '../components/Footer'
 
 import '../css/Post.css'
 
@@ -35,6 +36,8 @@ function Post () {
           dangerouslySetInnerHTML={{ __html: content.rendered }}
         ></p>
       </div>
+
+      <Footer />
     </div>
   )
 }

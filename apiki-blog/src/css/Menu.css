@@ -24,9 +24,9 @@
 }
 
 #menu-content-links li a {
-  color: rgba(255, 255, 255, 0.747);
+  color: rgba(255, 255, 255, 74.7%);
   display: inline-block;
-  margin: 5px 10px 5px;
+  margin: 5px 10px;
   font-weight: 500;
   transition: 0.5s;
   cursor: pointer;
