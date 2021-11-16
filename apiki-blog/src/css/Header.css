@@ -12,9 +12,9 @@ header {
   justify-content: space-around;
   margin: 0 auto;
   max-width: 960px;
-  padding: 0.625rem 0;
+  padding: 10px 0;
 }
 
 .header__logo {
-  width: 7.5rem;
+  width: 120px;
 }
