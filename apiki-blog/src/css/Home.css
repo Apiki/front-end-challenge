@@ -1,0 +1,32 @@
+body {
+  background-color: #ddd;
+}
+
+.home {
+  margin: 0 auto;
+}
+
+.home__btn {
+  background-color: #252525;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  letter-spacing: 0.5px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0 auto 1.25rem;
+  padding: 10px 35px;
+  transition: 0.5s;
+}
+
+.home__btn:hover {
+  background-color: #fdd201;
+  color: #252525;
+  transition: 0.5s;
+}
+
+.home__btn:disabled {
+  background-color: #252525b4;
+}

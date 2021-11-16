@@ -1,0 +1,41 @@
+.post-card {
+  background-color: #fff;
+  margin-bottom: 0.9rem;
+  padding: 20px 0 5px;
+  text-align: center;
+}
+
+.post-card:first-of-type {
+  margin-top: 5rem;
+}
+
+.post-card__image {
+  max-width: 100%;
+}
+
+.post-card__title {
+  color: #333;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0 0.9rem 0.625rem;
+}
+
+.post-card__date {
+  color: #555;
+  margin: 0.625rem 0 0.3rem 0.625rem;
+  text-align: left;
+}
+
+.post-card__description {
+  color: #555;
+  margin: 0.625rem 0.9rem 0.3rem 0.625rem;
+  text-align: left;
+}
+
+@media (min-width: 560px) {
+  .post-card {
+    margin: 1.25rem auto;
+    display: flex;
+    max-width: 500px;
+  }
+}

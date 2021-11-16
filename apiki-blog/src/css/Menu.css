@@ -1,0 +1,33 @@
+.menu {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.menu h3 {
+  color: #fff;
+  font-weight: 500;
+  margin-left: 1.25rem;
+}
+
+.menu-content__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 0.9rem;
+  max-width: 960px;
+}
+
+.menu-content__links li a {
+  color: rgba(255, 255, 255, 74.7%);
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+  margin: 0.3rem 0.625rem;
+  transition: 0.5s;
+}
+
+.menu-content__links li a:hover {
+  color: #fff;
+  transition: 0.5s;
+}
