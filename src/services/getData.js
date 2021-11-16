@@ -14,13 +14,14 @@ export const defaultData = {
 function formatData({
   slug, content, excerpt, title, _embedded: embedded,
 }) {
+  const { large, medium } = embedded['wp:featuredmedia'][0].media_details.sizes;
   return ({
     link: slug,
     content: { __html: content.rendered },
     description: { __html: excerpt.rendered },
     title: title.rendered,
     author: embedded.author[0].name || '',
-    image: embedded['wp:featuredmedia'][0].media_details.sizes.large.source_url,
+    image: large ? large.source_url : medium.source_url,
   });
 }
 

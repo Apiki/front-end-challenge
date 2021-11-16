@@ -18,13 +18,19 @@ const LandingPage = () => {
 
   return (
     <main className="landing-page-container">
-      <h1 className="landing-page-container-title">Artigos sobre desenvolvimento</h1>
+      <h1
+        className="landing-page-container-title"
+        data-testid="landing-page-title"
+      >
+        Artigos sobre desenvolvimento
+      </h1>
       <div className="posts-container">
         {posts.map((post) => (<PostCard key={post.image} post={post} />))}
       </div>
       <button
         className="landing-page-container-button"
         onClick={loadMorePosts}
+        data-testid="landing-page-button"
         type="button"
       >
         Carregar mais
