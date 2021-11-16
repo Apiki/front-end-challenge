@@ -1,6 +1,6 @@
 .menu {
   margin: 0 auto;
-  max-width: 60rem;
+  max-width: 960px;
 }
 
 .menu h3 {
@@ -15,7 +15,7 @@
   justify-content: center;
   margin: 0 auto;
   margin-bottom: 0.9rem;
-  max-width: 60rem;
+  max-width: 960px;
 }
 
 .menu-content__links li a {

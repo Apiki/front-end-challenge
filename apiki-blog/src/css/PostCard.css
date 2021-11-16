@@ -1,7 +1,7 @@
 .post-card {
   background-color: #fff;
   margin-bottom: 0.9rem;
-  padding: 1.25rem 0 0.3rem;
+  padding: 20px 0 5px;
   text-align: center;
 }
 
@@ -36,6 +36,6 @@
   .post-card {
     margin: 1.25rem auto;
     display: flex;
-    max-width: 43.75rem;
+    max-width: 700px;
   }
 }

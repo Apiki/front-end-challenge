@@ -1,6 +1,6 @@
 .footer-container {
   margin: 0 auto;
-  max-width: 43.75rem;
+  max-width: 700px;
 }
 
 .footer-container p {
@@ -33,5 +33,5 @@
 .footer-social__links a img {
   cursor: pointer;
   margin: 0 1.25rem;
-  width: 2.1rem;
+  width: 35px;
 }
