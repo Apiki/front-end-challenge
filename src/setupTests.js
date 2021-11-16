@@ -2,4 +2,7 @@
 // allows you to do things like:
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
+import MutationObserver from '@sheerun/mutationobserver-shim';
 import '@testing-library/jest-dom/extend-expect';
+
+window.MutationObserver = MutationObserver;
