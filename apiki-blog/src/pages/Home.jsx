@@ -22,21 +22,21 @@ function Home () {
 
   return (
     <div className="home">
-      {data.map((post) => {
-        return (
-          post._embedded['wp:featuredmedia'] && (
-            <PostCard
-              key={post.id}
-              title={post.title.rendered}
-              image={post._embedded['wp:featuredmedia'][0].source_url}
-              date={post._embedded['wp:featuredmedia'][0].date}
-              author={post._embedded.author[0].name}
-              description={post.excerpt.rendered}
-              link={post.slug}
-            />
+        {data.map((post) => {
+          return (
+            post._embedded['wp:featuredmedia'] && (
+              <PostCard
+                key={post.id}
+                title={post.title.rendered}
+                image={post._embedded['wp:featuredmedia'][0].source_url}
+                date={post._embedded['wp:featuredmedia'][0].date}
+                author={post._embedded.author[0].name}
+                description={post.excerpt.rendered}
+                link={post.slug}
+              />
+            )
           )
-        )
-      })}
+        })}
 
       <button
         disabled={page === totalPages}
