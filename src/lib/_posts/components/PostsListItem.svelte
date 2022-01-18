@@ -4,7 +4,7 @@
 	export let post: TPost;
 </script>
 
-<a class="posts-list-item" href={post.slug}>
+<a class="posts-list-item" href={`/${post.slug}`}>
 	<div class="post-image" style={`background-image: url(${post.images.medium.source_url})`} />
 	<div class="post-infos">
 		<h2>{@html post.title}</h2>
