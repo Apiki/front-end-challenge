@@ -1,0 +1,46 @@
+.posts-list-container {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  
+  .posts-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 4rem;
+    padding: 4rem;
+  
+    &__item {
+      height: 30rem;
+      width: 20rem;
+      padding: 1.5rem;
+      border-radius: 5px;
+      transition: all 0.2s;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+  
+     
+  
+      &__title {
+        font-size: 3rem;
+        padding-bottom: 1rem;
+      }
+  
+      &__description {
+        font-size: 1.2rem;
+      }
+  
+      &__img {
+        height: 6rem;
+      }
+      
+      &__install-btn {
+        color: white;
+    
+        
+      }
+    }
+  }
