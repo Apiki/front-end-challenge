@@ -1,6 +1,6 @@
 {
 	"name": "1v1me-sveltekit",
-	"version": "0.0.1-beta",
+	"version": "0.0.1-alpha",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
