@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://next-js-tailwindcss-template.vercel.app
+
+# Sitemaps
+Sitemap: https://next-js-tailwindcss-template.vercel.app/sitemap.xml

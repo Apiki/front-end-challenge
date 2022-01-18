@@ -1,0 +1,43 @@
+@import './_page.css';
+@import './_post-content.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: optional;
+	src: url('/fonts/Inter.woff2') format('woff2');
+}
+
+@layer base {
+	html,
+	body {
+		@apply bg-stone-100 dark:bg-stone-800;
+		@apply text-stone-800 dark:text-stone-100;
+	}
+
+	a {
+		@apply text-stone-700 dark:text-stone-50;
+		@apply underline underline-offset-2;
+	}
+
+	.app {
+		overflow: hidden;
+		width: 100%;
+	}
+	.app .layout,
+	.app .layout-main {
+		transition: all 0.3s ease;
+	}
+
+	.container {
+		max-width: 30rem;
+		@apply flex-auto mx-auto relative;
+		@apply px-8 md:px-12 lg:px-16 xl:px-20;
+		@apply py-8 md:py-12 lg:py-16 xl:py-20;
+	}
+}

@@ -1,0 +1,25 @@
+.page-title {
+	@apply font-bold leading-tight tracking-tighter;
+	@apply text-3xl md:text-4xl lg:text-5xl;
+}
+.page-descr {
+	margin-top: 0.5em;
+	@apply font-semibold leading-tight tracking-tighter;
+	@apply text-xl md:text-2xl lg:text-3xl;
+}
+
+.page-listing {
+	@apply mt-4 sm:mt-8 md:mt-12 lg:mt-16 xl:mt-20;
+}
+
+.page-btn {
+	@apply bg-pink-900 text-pink-200;
+	@apply border-0 cursor-pointer flex font-semibold items-center justify-center leading-snug no-underline rounded-full;
+	@apply h-11 lg:h-16 px-6 lg:px-12 pb-1 gap-3;
+	@apply text-base md:text-lg lg:text-2xl;
+}
+.page-buttons {
+	@apply flex flex-col md:flex-row  justify-center;
+	@apply gap-4 sm:gap-8;
+	@apply mt-4 sm:mt-8 md:mt-12 lg:mt-16 xl:mt-20;
+}
