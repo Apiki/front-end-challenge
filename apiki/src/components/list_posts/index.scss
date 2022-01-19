@@ -1,46 +1,57 @@
+@import "../../sass/shared";
+
 .posts-list-container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.posts-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 4rem;
+  padding: 4rem;
+
+  &__item {
+    height: 30rem;
+    width: 20rem;
+    padding: 1.5rem;
+    border-radius: 5px;
+    background-color: $violet-blue-crayola;
+    transition: all 0.2s;
     display: flex;
     flex-flow: column nowrap;
-  }
-  
-  .posts-list {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    gap: 4rem;
-    padding: 4rem;
-  
-    &__item {
-      height: 30rem;
-      width: 20rem;
-      padding: 1.5rem;
-      border-radius: 5px;
-      transition: all 0.2s;
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: center;
-      justify-content: space-between;
-      text-align: center;
-  
-     
-  
-      &__title {
-        font-size: 3rem;
-        padding-bottom: 1rem;
-      }
-  
-      &__description {
-        font-size: 1.2rem;
-      }
-  
-      &__img {
-        height: 6rem;
-      }
-      
-      &__install-btn {
-        color: white;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1rem 2rem rgba($black, 0.2);
+    text-align: center;
+
+    &:hover {
+      background-color: $medium-aquamarine;
+    }
+
+    &__title {
+      font-size: 3rem;
+      border-bottom: 1px solid rgba($black, 0.25);
+      padding-bottom: 1rem;
+    }
+
+    &__description {
+      font-size: 1.2rem;
+    }
+
+    &__img {
+      height: 6rem;
+    }
     
-        
+    &__install-btn {
+      color: white;
+      background-color: $eerie-black;
+  
+      &:hover {
+        color: $medium-aquamarine;
+        transform: translateY(-2px);
       }
     }
   }
+}
