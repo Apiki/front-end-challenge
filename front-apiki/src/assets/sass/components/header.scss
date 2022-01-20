@@ -1,0 +1,22 @@
+header{ 
+  height: 60px;
+  background: linear-gradient(90deg, #67666a 0%, #000000 100%);
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  img {
+    height:40px;
+    display:flex;
+  }
+  input{
+    display:flex;
+    height:40px;
+    width:300px;
+    border-radius:20px;
+    padding-left: 30px;
+    &:focus-visible {
+      outline: -webkit-focus-ring-color auto 0px;
+    }
+  }
+
+}

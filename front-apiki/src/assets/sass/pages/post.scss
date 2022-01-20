@@ -1,0 +1,30 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../../assets/fonts/Roboto-Regular.ttf)
+}
+
+.post-page{
+  padding-top: 30px;
+  h1{
+    font-size:42px;
+    color:#121212;
+  }
+  .subtitle{
+    color:#a0a0a0;
+    font-size:24px;
+    margin-bottom:20px;
+  }
+  img{max-width:100%;}
+
+  .post-title-container{
+    margin-bottom:30px;
+  }
+  .post-author-container{
+    img{
+      border-radius:10px;
+    }
+    span{
+      margin-left:10px;
+    }
+  }
+}
