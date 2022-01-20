@@ -52,4 +52,3 @@ Seja criativo, construa um layout pensando no usuário final, e sinta-se a vonta
 1. Efetue o fork deste repositório e crie um branch com o seu nome e sobrenome. (exemplo: fulano-dasilva);
 1. Após finalizar o desafio, crie um Pull Request;
 1. Aguarde algum contribuidor realizar o code review;
->>>>>>> 274282acaa3b7a957c601b4f8f76dcfac27cc559
