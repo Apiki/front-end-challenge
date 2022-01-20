@@ -1,5 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
 body {
   font-family: "Roboto Condensed", sans-serif !important;
+  background: linear-gradient(45deg, #876445, #CA965C, #EEC373, #F4DFBA);
+  background-size: 400% 400%;
+  animation: colors 5s ease infinite;
+}
+
+@keyframes colors {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

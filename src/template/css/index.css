@@ -1,6 +1,76 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
 body {
   font-family: "Roboto Condensed", sans-serif !important;
+  background: linear-gradient(45deg, #876445, #CA965C, #EEC373, #F4DFBA);
+  background-size: 400% 400%;
+  animation: colors 5s ease infinite;
+}
+
+@keyframes colors {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+#get-posts {
+  background-color: #F4DFBA !important;
+  border-radius: 2rem 2rem 0 0;
+  padding: 1.5rem;
+}
+#get-posts #content .card {
+  border-radius: 1rem;
+}
+#get-posts #content .card button, #get-posts #content .card a {
+  transition: 1s;
+  padding: 0.8rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 30px -10px #cccccc;
+  box-shadow: 0 6px 30px -10px #cccccc;
+}
+#get-posts #content .card button i, #get-posts #content .card a i {
+  opacity: 0.3;
+  transition: 0.5s;
+}
+#get-posts #content .card button:hover, #get-posts #content .card a:hover {
+  transform: translateX(5px) translateY(-7px);
+  background-color: #EEC373;
+  font-weight: bold;
+  color: white;
+}
+#get-posts #content .card button:hover i, #get-posts #content .card a:hover i {
+  color: white;
+  opacity: 1;
+}
+#get-posts #content #load-posts {
+  font-size: 1.5em;
+  transition: 0.5s;
+  padding: 0.8rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 30px -10px #cccccc;
+  box-shadow: 0 6px 30px -10px #cccccc;
+}
+#get-posts #content #load-posts:hover {
+  transform: translateX(5px) translateY(-7px);
+  background-color: #EEC373;
+  font-weight: bold;
+  color: white;
+}
+#get-posts #content #load-posts:hover i {
+  color: white;
+  opacity: 1;
+}
+
+#content-post {
+  background-color: #F4DFBA !important;
+  border-radius: 2rem 2rem 0 0;
+  padding: 1.5rem;
+  overflow: auto;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -9,19 +9,28 @@ export default class Content extends Component {
         page: 2,
         totalPage: 0,
         totalPost: 0,
+        lastPage: false,
     }
-   async componentDidMount(){
-       let response = await GetPosts(this.state.url)
-       this.setState({posts:  response.data})
-       this.setState({totalPage:  response.headers['x-wp-totalpages']})
-       this.setState({totalPost:  response.headers['x-wp-total']})
-   }
+    async componentDidMount(){
+        let response = await GetPosts(this.state.url)
+        this.setState({posts:  response.data})
+        this.setState({totalPage:  response.headers['x-wp-totalpages']})
+        this.setState({totalPost:  response.headers['x-wp-total']})
+    }
     render(){
         var {posts} = this.state;
         var {url} = this.state;
         var {page} = this.state;
-        var {totalPage} = this.state;
-        // var {totalPost} = this.state;
+        var {lastPage} = this.state;
+        
+        function classButton(){
+            if (!lastPage) {
+                return 'col btn d-flex justify-content-center align-items-center m-4';
+            }else{
+                return 'd-none';
+            }
+        }
+            
         return(
         <div id="content">
             <div className="container">
@@ -29,15 +38,15 @@ export default class Content extends Component {
                     {posts.map(post=>(
                         <Cards key={'card-geral'+post.id} post={post}  />
                     ))}
-                    <div className="col d-flex justify-content-center align-items-center">
-                        <button type="button" className="btn btn-outline-primary m-4" onClick={async () => {
-                            let responseTwo = await GetPosts(url + '&page=' + page)
-                            if (page <= totalPage) {
-                                this.setState({page: page + 1})
-                            }
-                            this.setState({posts: posts.concat(responseTwo.data)}) 
-                        } } >Carregar próximos posts</button>
-                    </div>
+                    <button id="load-posts" type="button" className={classButton()} onClick={async () => {
+                        let responseTwo = await GetPosts(url + '&page=' + page)
+                        this.setState({page: page + 1})
+                        if (this.state.page === this.state.totalPage) {
+                            this.setState({lastPage: true})
+                        }
+                        this.setState({posts: posts.concat(responseTwo.data)}
+                        ) 
+                    } } ><i className="fas fa-search-plus mx-3"></i>Carregar próximos posts</button>
                 </div>
             </div>
         </div>

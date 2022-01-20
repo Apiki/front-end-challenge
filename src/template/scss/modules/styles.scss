@@ -1,4 +1,19 @@
-
+@import 'variables';
 body{
     font-family: 'Roboto Condensed', sans-serif !important;
+    background: linear-gradient(45deg, $first, $sec, $thir, $four);
+    background-size: 400% 400%;
+    animation: colors 5s ease infinite;
+}
+
+@keyframes colors {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }

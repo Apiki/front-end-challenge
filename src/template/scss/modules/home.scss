@@ -1,0 +1,47 @@
+#get-posts {
+    background-color: $four !important;
+    border-radius: 2rem 2rem 0 0;
+    padding: 1.5rem;
+    #content{
+        .card{
+            border-radius: 1rem;
+            button, a{
+                transition: 1s;
+                padding: 0.8rem;
+                border-radius: 1rem;
+                box-shadow: 0 6px 30px -10px rgba(#CCCCCC, 1);box-shadow: 0 6px 30px -10px rgba(#CCCCCC, 1);
+                i {
+                    opacity: 0.3;
+                    transition: 0.5s;
+                }
+            }
+            button:hover, a:hover{
+                transform: translateX(5px) translateY(-7px);
+                background-color: $thir;
+                font-weight: bold;
+                color: white;
+                i{
+                    color: white;
+                    opacity: 1;
+                }
+            }
+        }
+        #load-posts{
+            font-size: 1.5em;
+            transition: 0.5s;
+            padding: 0.8rem;
+            border-radius: 1rem;
+            box-shadow: 0 6px 30px -10px rgba(#CCCCCC, 1);box-shadow: 0 6px 30px -10px rgba(#CCCCCC, 1);
+        }
+        #load-posts:hover{
+            transform: translateX(5px) translateY(-7px);
+            background-color: $thir;
+            font-weight: bold;
+            color: white;
+            i{
+                color: white;
+                opacity: 1;
+            }
+        }
+    }
+}
