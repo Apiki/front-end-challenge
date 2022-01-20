@@ -1,0 +1,32 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../../assets/fonts/Roboto-Regular.ttf)
+}
+
+.postItem{
+  margin:30px 0px;
+  img{
+    max-width:100%;
+  }
+  h5{
+    margin: 15px 0;
+    padding:0px 40px;
+  }
+  a{
+    color:#333;
+    text-decoration:none;
+  }
+  span{
+    padding:0px 40px;
+    img{
+      width:30px;
+      margin-right:10px;
+    }
+  }
+  .item_body {
+    box-shadow: 0px 8px 20px rgba(62,70,79,0.2);
+    border-radius: 10px;
+    padding: 0px 0px 50px 0px;
+    min-height:400px;
+  }
+}
