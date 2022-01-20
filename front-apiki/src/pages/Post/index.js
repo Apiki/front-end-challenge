@@ -23,7 +23,7 @@ const Post = () => {
   return (
     <Container className="post-page">
       <Row>
-      <Col xs="12" md="8">
+      <Col xs="12" md="8" className="content">
       <p id="breadcrumbs"><span><a>Início</a> » <span class="breadcrumb_last" aria-current="page">Blog do Desenvolvedor</span></span></p>
       {isLoading && <div className="loader"><ReactLoading type={"spin"} color={"#28a6ed"} height={150} width={150} /></div>}
 

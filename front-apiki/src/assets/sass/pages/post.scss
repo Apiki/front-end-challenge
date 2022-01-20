@@ -5,6 +5,16 @@
 
 .post-page{
   padding-top: 30px;
+  .content{
+    background-color: #fff;
+    padding: 50px;
+    box-shadow: 0px 8px 20px rgba(62,70,79,0.2);
+    margin-top:30px;
+    h2{
+      margin-top:40px;
+      margin-bottom:20px;
+    }
+  } 
   h1{
     font-size:42px;
     color:#121212;
@@ -14,7 +24,10 @@
     font-size:24px;
     margin-bottom:20px;
   }
-  img{max-width:100%;}
+  img{
+    max-width:100%;
+    height:auto;
+  }
 
   .post-title-container{
     margin-bottom:30px;
@@ -22,6 +35,7 @@
   .post-author-container{
     img{
       border-radius:10px;
+      width: 30px;
     }
     span{
       margin-left:10px;
