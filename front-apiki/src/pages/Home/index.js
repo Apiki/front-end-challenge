@@ -44,7 +44,7 @@ const Home = () => {
             <Row>
               {posts.map((post) => <PostItem key={post.id} post={post} />)}
             </Row>
-            {!isLoading && <Button variant="outline-primary" disabled={disableButton} onClick={renderMorePosts}>Continuar Lendo</Button>}
+            {!isLoading && <Button variant="outline-primary" disabled={disableButton} onClick={renderMorePosts}>Carregar mais...</Button>}
             {isLoading && <div> <ReactLoading type={"spin"} color={"#28a6ed"} height={150} width={150} /></div>}
           </Col>
           <Col xs="12" md="4">
