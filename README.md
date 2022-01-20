@@ -1,3 +1,16 @@
+## Desenvolvido por André Della'Santa Barciela Freire
+
+O projeto foi desenvolvido utilizando React.JS
+
+O layout foi construído com o auxílio  do framework Bootstrap.
+Como mecanismo de oganização de Css foi utilizado o SASS
+
+## Para iniciar o projeto
+
+No diretório do projeto abra o terminal e execute
+
+### `npm start`
+
 # Desafio - Front-end Developer
 Este desafio tem como objetivo te avaliar como desenvolvedor Front-end: JavaScript, HTML, CSS e lógica de programação.
 
