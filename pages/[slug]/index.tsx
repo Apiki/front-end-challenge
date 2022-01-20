@@ -7,8 +7,8 @@ const Home = (props: PostPage) => {
   return (
     <>
       <Head>
-        <title>Apiki Dev Blog - GGTest</title>
-        <meta name="description" content="Teste usando React, next, react-query e styled components para o desafio da Apiki" />
+        <title>{props.post.title.rendered} - GGTest</title>
+        <meta name="description" content={props.post.excerpt.rendered} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Post {...props} />
