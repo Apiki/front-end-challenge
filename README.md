@@ -2,7 +2,8 @@
 
 O projeto foi desenvolvido utilizando React.JS
 
-O layout foi construído com o auxílio  do framework Bootstrap
+O layout foi construído com o auxílio  do framework Bootstrap.
+Como mecanismo de oganização de Css foi utilizado o SASS
 
 ## Para iniciar o projeto
 
