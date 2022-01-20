@@ -1,4 +1,9 @@
 ## Desenvolvido por André Della'Santa Barciela Freire
+
+O projeto foi desenvolvido utilizando React.JS
+
+O layout foi construído com o auxílio  do framework Bootstrap
+
 ## Para iniciar o projeto
 
 No diretório do projeto abra o terminal e execute
