@@ -3,7 +3,7 @@ import styled from "styled-components/macro";
 export const Container = styled.article`
 	display: flex;
 	max-width: 900px;
-	width: 100%;
+	width: 90%;
 	margin: 50px auto;
 	flex-direction: column;
 	justify-content: center;
@@ -27,10 +27,11 @@ export const Title = styled.h1`
 
 export const Content = styled.p`
 	text-align: justify;
-	width: 90%;
+	width: 100%;
 	margin: 0 auto;
 	table, td, tr{
 		border: 1px solid black;
+		text-align: center;
 	}
 	h2 {
 		margin: 10px 0;

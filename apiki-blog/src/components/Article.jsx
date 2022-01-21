@@ -5,7 +5,8 @@ import {Container,
         Title, 
         Description, 
         ContainerInfo,
-        ContainerImage} from '../styles/ArticleList'
+        ContainerImage,
+        By} from '../styles/ArticleList'
 
 const Article = (props) => {
   const navigate = useNavigate()
@@ -22,6 +23,7 @@ const Article = (props) => {
       <Description>
         {props.article_description}
       </Description>
+      <By>Por: {props.author}</By>
     </ContainerInfo>
   </Container>
   )

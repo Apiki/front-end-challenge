@@ -15,7 +15,7 @@ export const Container = styled.article`
     padding: 10px;
     cursor: pointer;
     &:hover {
-        background: #eee;
+        background: #ddd;
     }
     @media screen and (max-width: 650px){
         flex-direction: column;
@@ -38,7 +38,6 @@ export const ContainerInfo = styled.div`
     padding-left: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
 `
 
 export const Title = styled.h1`
@@ -56,4 +55,8 @@ export const Description = styled.p`
     @media screen and (max-width: 650px){
         text-align: center;
     }
+`
+export const By = styled.p`
+    font-weight: 600;
+    margin: 10px 0;
 `

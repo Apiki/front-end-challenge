@@ -6,10 +6,8 @@ import { PageProvider } from '../context/PageContext'
 const Home = () => {
   return (
       <PageProvider>
-          <Suspense fallback='<h1>Loading</h1>'>
-            <ArticleList />
-            <Pagination />
-          </Suspense>
+        <ArticleList />
+        <Pagination />
       </PageProvider>
   )
 };

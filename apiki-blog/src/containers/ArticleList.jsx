@@ -13,6 +13,7 @@ const ArticleList = () => {
       const getData = async() => {
         const articles_list = await services.getArticleList(pageCurrent, setPageTotal)
         setArticles(articles_list)
+        console.log(articles_list)
       }
       getData()
     }, [pageCurrent])
@@ -28,6 +29,7 @@ const ArticleList = () => {
           img_desc={article._embedded['wp:featuredmedia'][0].alt_text} 
           article_title={article.title.rendered} 
           article_description={article.yoast_head_json.og_description}
+          author={article._embedded.author[0].name}
           slug={article.slug}
         />)
       )}

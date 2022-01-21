@@ -3,10 +3,10 @@ import styled from "styled-components/macro";
 export const Container = styled.div`
     height: 40px;
     width: 100%;
-    background: #BBB;
+    background: #999;
     position: fixed;
     top: 0;
-		display: flex;
+	display: flex;
 
 `
 
@@ -19,6 +19,11 @@ export const ContainerInner = styled.div`
 	a {
 		margin-left: 20px;
 		font-weight: 600;
+		font-size: 0.9rem;
+		color: #fff;
+		&:hover {
+			border-bottom: 2px solid #fff;
+		}
 	}
 `
 
