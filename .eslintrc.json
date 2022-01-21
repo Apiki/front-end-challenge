@@ -1,0 +1,29 @@
+{
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "standard",
+    "standard-jsx",
+    "standard-react"
+  ],
+  "plugins": [
+    "only-warn"
+  ],
+  "rules": {
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "always-multiline"
+      }
+    ],
+    "react/react-in-jsx-scope": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error", {
+      "ignoreRestSiblings": true
+    }]
+  }
+}
