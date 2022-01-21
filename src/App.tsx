@@ -3,7 +3,7 @@ import { GlobalStyle } from './ui'
 import { HOME } from './routes'
 import { Home } from './pages'
 
-function App() {
+function App () {
   return (
     <BrowserRouter>
       <Routes>
