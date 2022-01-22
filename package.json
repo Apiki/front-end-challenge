@@ -59,5 +59,18 @@
   "devDependencies": {
     "husky": "^7.0.4",
     "lint-staged": "^12.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/**.{js,jsx,ts,tsx}": [
+      "eslint"
+    ],
+    "src/**/**.{ts,tsx,json,md}": [
+      "prettier --write"
+    ]
   }
 }
