@@ -8,10 +8,6 @@ export function Home () {
       <Header />
       <S.ContainerMain>
         <h1>Desenvolvimento</h1>
-        <h1>Desenvolvimento</h1>
-        <h1>Desenvolvimento</h1>
-        <h1>Desenvolvimento</h1>
-        <h1>Desenvolvimento</h1>
       </S.ContainerMain>
     </>
   )
