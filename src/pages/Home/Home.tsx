@@ -1,4 +1,5 @@
 import { Header } from '../../ui/components/Header'
+
 import * as S from './Home.styled'
 
 export function Home () {
