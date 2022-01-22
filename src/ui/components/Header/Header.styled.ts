@@ -2,8 +2,7 @@ import styled from 'styled-components'
 import { theme } from '../../../config'
 
 export const ContainerNav = styled.div`
-  width: 100%;
-  height: 140px;
+  height: 100px;
   background: ${theme.colors.white};
 
   nav {
@@ -13,16 +12,13 @@ export const ContainerNav = styled.div`
   }
 
   h1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
+    margin: 30px 70px 90px 50px;
     color: ${theme.colors.blue}
   }
 
   ul {
     text-align: center;
-    margin-top: -20px;
+    margin-top: -120px;
   }
 
   li {
