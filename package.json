@@ -9,7 +9,6 @@
     "eject": "react-scripts eject",
     "lint": "eslint src --ext ts,tsx",
     "lint:fix": "yarn lint --fix",
-    "prettier:check": "prettier -c",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit"
   },
   "dependencies": {
@@ -56,5 +55,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "lint-staged": "^12.2.2"
   }
 }
