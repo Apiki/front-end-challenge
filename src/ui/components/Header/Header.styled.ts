@@ -28,7 +28,7 @@ export const ContainerNav = styled.div`
 
     :hover {
       text-decoration: underline;
-      color: ${theme.colors.orange};
+      color: ${theme.colors.blue};
     }
   }
 
