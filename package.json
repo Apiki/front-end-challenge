@@ -9,7 +9,8 @@
     "eject": "react-scripts eject",
     "lint": "eslint src --ext ts,tsx",
     "lint:fix": "yarn lint --fix",
-    "type-check": "tsc --project tsconfig.json --pretty --noEmit"
+    "type-check": "tsc --project tsconfig.json --pretty --noEmit",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
@@ -59,11 +60,6 @@
   "devDependencies": {
     "husky": "^7.0.4",
     "lint-staged": "^12.2.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "src/**/**.{js,jsx,ts,tsx}": [
