@@ -85,7 +85,7 @@ const ArticleDetail = () => {
 						</ContainerImageAuthor>
 						<ContainerInfo>
 							<Name>{article.author_name}</Name>
-							<Description>{article.description}</Description>
+							<Description>{article.author_description}</Description>
 						</ContainerInfo>
 					</div>
 				</ContainerAuthor>

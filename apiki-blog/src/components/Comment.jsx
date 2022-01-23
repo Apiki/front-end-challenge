@@ -9,7 +9,7 @@ const Comment = ({img_src, author_name, content, children}) => {
       <CommentImage src={img_src} />
     </ContainerCommentImage>
     <ContainerCommentInfo>
-      <p>{author_name}</p>
+      <p className='author_name'>{author_name}</p>
       <p dangerouslySetInnerHTML={{__html: content}}/>
       <p className='comments' onClick={() => setToggle(!toggle)}>Comentários: {children.length}</p>
       {toggle && <pre>

@@ -98,7 +98,7 @@ export const ContainerCommentList = styled.div`
 `
 export const ContainerComment = styled.div`
 	display: flex;
-	margin: 10px auto;
+	margin: 10px;
 	max-width: 900px;
 `
 export const ContainerCommentImage = styled.div`
@@ -125,9 +125,15 @@ export const ContainerCommentInfo = styled.div`
 		align-text: center;
 		font-weight: 600;
 	}
+	.author_name{
+		font-weight: 600;
+	}
 	p {
 		margin: 5px 0;
 		font-size: 0.9rem;
 		text-align: justify;
+	}
+	pre {
+		font-family: Montserrat, Helvetica, Arial, sans-serif;
 	}
 `

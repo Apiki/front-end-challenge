@@ -16,6 +16,7 @@ export const ContainerInner = styled.div`
 	max-width: 900px;
 	margin: 0 auto;
 	align-items: center;
+	padding: 0 10px;
 	a {
 		margin-left: 20px;
 		font-weight: 600;
