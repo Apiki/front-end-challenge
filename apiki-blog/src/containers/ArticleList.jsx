@@ -19,21 +19,23 @@ const ArticleList = () => {
       author_name: '',
       slug: ''
     }])
+
     useEffect(() => {
       const getData = async() => {
         const articles_list = await services.getArticleList(pageCurrent, setPageTotal)
-        const article_array = []
-        articles_list.map((article) => {
-          article_array.push({
+        const article_array = articles_list.map((article) => ({
             id: article.id,
-            img_src: article._embedded['wp:featuredmedia'][0].source_url,
-            img_alt: article._embedded['wp:featuredmedia'][0].alt_text,
+            img_src: article._embedded['wp:featuredmedia']?.length 
+              && article._embedded['wp:featuredmedia'][0].source_url,
+            img_alt: article._embedded['wp:featuredmedia']?.length
+              && article._embedded['wp:featuredmedia'][0].alt_text,
             article_title: article.title.rendered, 
             article_description: article.excerpt.rendered,
-            author_name: article._embedded.author[0].name,
+            author_name: article._embedded.author?.length 
+              && article._embedded.author[0].name,
             slug: article.slug
           })
-        })
+        )
         setArticles([...article_array]) 
       }
       getData()

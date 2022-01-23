@@ -39,15 +39,19 @@ const ArticleDetail = () => {
 			const article_data = await services.getArticle(params.slug)
 			setArticle({
 				id: article_data[0].id,
-				img_src: article_data[0]._embedded['wp:featuredmedia'][0].source_url,
+				img_src: article_data[0]._embedded['wp:featuredmedia']?.length
+					&& article_data[0]._embedded['wp:featuredmedia'][0].source_url,
 				img_alt: article_data[0].alt_text,
 				title: article_data[0].title.rendered,
 				created_at: article_data[0].date,
 				modified_at: article_data[0].modified,
 				content: article_data[0].content.rendered,
-				author_avatar: article_data[0]._embedded.author[0].avatar_urls['96'],
-				author_name: article_data[0]._embedded.author[0].name,
-				author_description: article_data[0]._embedded.author[0].description
+				author_avatar: article_data[0]._embedded.author?.length
+					&& article_data[0]._embedded.author[0].avatar_urls['96'],
+				author_name: article_data[0]._embedded.author?.length
+					&& article_data[0]._embedded.author[0].name,
+				author_description: article_data[0]._embedded.author?.length
+					&& article_data[0]._embedded.author[0].description
 			})
 		}
 		getData()
