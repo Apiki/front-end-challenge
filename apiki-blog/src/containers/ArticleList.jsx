@@ -34,7 +34,6 @@ const ArticleList = () => {
             slug: article.slug
           })
         })
-        console.log(article_array)
         setArticles([...article_array]) 
       }
       getData()

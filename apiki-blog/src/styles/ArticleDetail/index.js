@@ -55,9 +55,13 @@ export const Content = styled.p`
 
 export const ContainerAuthor = styled.div`
 	display: flex;
+	flex-direction: column;
 	width: 100%;
 	max-width: 900px;
 	margin: 20px auto;
+	div {
+		display: flex;
+	}
 `
 
 export const ContainerImageAuthor = styled.div`
@@ -85,4 +89,45 @@ export const Name = styled.h2`
 
 export const Description = styled.p`
 	align-text: justify;
+`
+export const ContainerCommentList = styled.div`
+	display: flex;
+	margin: 0 auto;
+	max-width: 900px;
+	flex-direction: column;
+`
+export const ContainerComment = styled.div`
+	display: flex;
+	margin: 10px auto;
+	max-width: 900px;
+`
+export const ContainerCommentImage = styled.div`
+	display: flex;
+	padding: 10px;
+	height: 100%;
+	justify-items: center;
+`
+
+export const CommentImage = styled.img`
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	object-fit: fill;
+`
+
+export const ContainerCommentInfo = styled.div`
+	display: flex:
+	flex-direction: column;
+	align-items: space-between;
+	justify-content: flex-start;
+	.comments {
+		cursor: pointer;
+		align-text: center;
+		font-weight: 600;
+	}
+	p {
+		margin: 5px 0;
+		font-size: 0.9rem;
+		text-align: justify;
+	}
 `

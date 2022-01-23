@@ -16,6 +16,7 @@ import {
 	ContainerDate} from '../styles/ArticleDetail';
 import Header from '../containers/Header';
 import Date from '../components/Date';
+import CommentList from '../containers/CommentList';
 
 const ArticleDetail = () => {
 	const [article, setArticle] = useState({
@@ -29,7 +30,8 @@ const ArticleDetail = () => {
 		author_avatar: '',
 		author_name: '',
 		author_description: ''
-	}) 
+	})
+
 	const params = useParams()
 
 	useEffect(()=>{
@@ -47,7 +49,6 @@ const ArticleDetail = () => {
 				author_name: article_data[0]._embedded.author[0].name,
 				author_description: article_data[0]._embedded.author[0].description
 			})
-			console.log(article_data[0])
 		}
 		getData()
 	}, [params])
@@ -77,14 +78,18 @@ const ArticleDetail = () => {
 					<Content dangerouslySetInnerHTML={{__html: article.content}}/>
 				</Container>
 				<ContainerAuthor>
-					<ContainerImageAuthor>
-						<ImageAuthor src={article.author_avatar}/>
-					</ContainerImageAuthor>
-					<ContainerInfo>
-						<Name>{article.author_name}</Name>
-						<Description>{article.description}</Description>
-					</ContainerInfo>
+					<h2>Autor</h2>
+					<div>
+						<ContainerImageAuthor>
+							<ImageAuthor src={article.author_avatar}/>
+						</ContainerImageAuthor>
+						<ContainerInfo>
+							<Name>{article.author_name}</Name>
+							<Description>{article.description}</Description>
+						</ContainerInfo>
+					</div>
 				</ContainerAuthor>
+				{article.id !== 0 && <CommentList post={article.id}/>}
 			</>
     )
 };

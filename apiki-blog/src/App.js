@@ -1,5 +1,3 @@
-import ArticleDetail from "./pages/ArticleDetail";
-import Home from "./pages/Home";
 import { GlobalStyle } from "./styles/global";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import React, { Suspense } from "react";
