@@ -1,6 +1,6 @@
 
-export const getFormatedDate = () => {
-    const date = new Date()
+export const getFormatedDate = (datetime) => {
+    const date = new Date(datetime)
     const day = date.getDay() < 10 ? 
       '0' + date.getDay().toString() : 
       date.getDay().toString()

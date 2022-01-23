@@ -13,10 +13,9 @@ const CommentList = ({post}) => {
   },])
 
   const CommentTree = (id, comment_data) => {
-    const comment_list = []
-    comment_data.filter((comment) => comment.parent === id)
+    const comment_list = comment_data.filter((comment) => comment.parent === id)
     .map((comment) => 
-      comment_list.push({
+      ({
         id: comment.id,
         author_avatar: comment.author_avatar_urls[48],
         author_name: comment.author_name,
