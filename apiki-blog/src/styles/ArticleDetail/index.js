@@ -9,6 +9,11 @@ export const Container = styled.article`
 	justify-content: center;
 `
 
+export const ContainerDate = styled.div`
+	display: flex;
+	justify-content: space-between;
+`
+
 export const ContainerImage = styled.div`
   width: 100%;
 `

@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro'
 
-export const ConstainerPostList = styled.div`
+export const ContainerArticleList = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -25,6 +25,7 @@ export const Container = styled.article`
 export const ContainerImage = styled.div`
     display: flex;
     min-width: 300px;
+    max-width: 300px;
     height: 157.5px;
 `
 

@@ -19,11 +19,9 @@ const Article = (props) => {
       />
     </ContainerImage>
     <ContainerInfo>
-      <Title>{props.article_title}</Title>
-      <Description>
-        {props.article_description}
-      </Description>
-      <By>Por: {props.author}</By>
+      <Title dangerouslySetInnerHTML={{__html: props.article_title}} />
+      <Description dangerouslySetInnerHTML={{__html: props.article_description}} />
+      <By>By {props.author}</By>
     </ContainerInfo>
   </Container>
   )

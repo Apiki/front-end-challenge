@@ -1,25 +1,37 @@
 import axios from "axios"
 
-const URL_BASE = 'https://blog.apiki.com/wp-json/wp/v2/'
-const ARTICLE_LIST = 'posts?_embed&categories=518'
-const ARTICLE = 'posts?_embed&slug='
+const endpoints = {
+    ARTICLE_LIST: 'posts?_embed&categories=518',
+    ARTICLE: 'posts?_embed&slug=',
+    ABOUT: 'types/post'
+}
+
+const ApikiClient = axios.create({
+    baseURL: 'https://blog.apiki.com/wp-json/wp/v2/',
+    headers: {
+      'Accept': 'application/json',
+    }
+  });
 
 const services = {
     getArticleList: async (page, setPage) => {
         const PAGE = page > 1 ? `&page=${page}` : ''
-        const request = await axios.get(URL_BASE+ARTICLE_LIST+PAGE)
-        .then((response) => {
-            const headers = response.headers['x-wp-totalpages']
-            console.log(headers)
-            setPage(headers)
-            return response.data
-        })
-        return request
+        try {
+            const request = await ApikiClient.get(endpoints.ARTICLE_LIST+PAGE)
+            const total_pages = request.headers['x-wp-totalpages']
+            setPage(total_pages)
+            return request.data
+        }catch (error) {
+            throw error;
+        }
     },
     getArticle: async (slug) => {
-        const request = await axios.get(URL_BASE+ARTICLE+`${slug}`)
-        .then((response) => response.data)
-        return request
+        const request = await ApikiClient.get(endpoints.ARTICLE+`${slug}`)
+        return request.data
+    },
+    getAbout: async () => {
+        const request = await ApikiClient.get(endpoints.ABOUT)
+        return request.data
     }
 
 }

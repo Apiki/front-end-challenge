@@ -15,7 +15,7 @@ const Pagination = () => {
       <NumberPage 
       onClick={() => setPageCurrent(page)}
       key={page}
-      active={page === pageCurrent ? true : false}>
+      active={page == pageCurrent ? true : false}>
         {page}
       </NumberPage>
     )}

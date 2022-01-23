@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import { GlobalStyle } from "./styles/global";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import React, { Suspense } from "react";
+import { PageProvider } from "./context/PageContext";
 
 function App() {
   const HomePage = React.lazy(() => import('./pages/Home'))
@@ -10,12 +11,14 @@ function App() {
   return (
     <Suspense fallback={<h1>Loading</h1>}>
       <GlobalStyle />
-      <Router>
-        <Routes>
-          <Route path="/" exact element={<HomePage/>} />
-          <Route path="/:slug" element={<Article />} />
-        </Routes>
-      </Router>
+      <PageProvider>
+        <Router>
+          <Routes>
+            <Route path="/" exact element={<HomePage/>} />
+            <Route path="/:slug" element={<Article />} />
+          </Routes>
+        </Router>
+      </PageProvider>
     </Suspense>
   );
 }
