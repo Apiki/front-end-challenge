@@ -17,6 +17,7 @@ import {
 import Header from '../containers/Header';
 import Date from '../components/Date';
 import CommentList from '../containers/CommentList';
+import { MetaTags } from 'react-meta-tags';
 
 const ArticleDetail = () => {
 	const [article, setArticle] = useState({
@@ -30,6 +31,19 @@ const ArticleDetail = () => {
 		author_avatar: '',
 		author_name: '',
 		author_description: ''
+	})
+
+	const [metatags, setMetaTags] =  useState({
+		og_description: '',
+		og_locale: '',
+		og_type: '',
+		og_title: '',
+		og_image: '',
+		og_site_name: '',
+		twitter_card: '',
+		twitter_image: '',
+		twitter_creator: '',
+		twitter_site: ''
 	})
 
 	const params = useParams()
@@ -53,12 +67,43 @@ const ArticleDetail = () => {
 				author_description: article_data[0]._embedded.author?.length
 					&& article_data[0]._embedded.author[0].description
 			})
+			const base_url_yoast = article_data[0].yoast_head_json
+			setMetaTags({
+				og_description: base_url_yoast.og_description,
+				og_locale: base_url_yoast.og_locale,
+				og_type: base_url_yoast.og_type,
+				og_title: base_url_yoast.og_title,
+				og_image: base_url_yoast.og_image?.length
+					&& base_url_yoast.og_image[0].url,
+				og_site_name: base_url_yoast.og_site_name,
+				twitter_card: base_url_yoast.twitter_card,
+				twitter_image: base_url_yoast.twitter_image,
+				twitter_creator: base_url_yoast.twitter_creator,
+				twitter_site: base_url_yoast.twitter_site
+			})
 		}
 		getData()
 	}, [params])
 
   return (
 			<>
+				<MetaTags>
+          <title>{metatags.og_title}</title>
+          <link rel="canonical" href={params} />
+          <meta
+            name="description"
+            content={metatags.og_description}
+          />
+          <meta property="og:title" content={metatags.og_title} />
+          <meta property="og:image" content={metatags.og_image} />
+					<meta property="og:type" content={metatags.og_type} />
+					<meta property="og:locale" content={metatags.og_locale} />
+					<meta property="og:site_name" content={metatags.og_site_name} />
+					<meta property="twitter:card" content={metatags.twitter_card} />
+					<meta property="twitter:creator" content={metatags.twitter_creator} />
+					<meta property="twitter:site" content={metatags.twitter_site} />
+					<meta property="twitter:image" content={metatags.twitter_image} />
+				</MetaTags>
 				<Header />
 				<Container key={article.id}>
           <ContainerImage>
