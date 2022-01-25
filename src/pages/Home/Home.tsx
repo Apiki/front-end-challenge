@@ -10,11 +10,10 @@ export function Home () {
   console.log(posts)
 
   return (
-    <>
+    <S.Content>
       <Header />
+      <h2>Desenvolvimento</h2>
       <S.ContainerMain>
-        <h1>Desenvolvimento</h1>
-
         <ul>
           {posts.map((post) => (
             <li>
@@ -24,6 +23,6 @@ export function Home () {
           ))}
         </ul>
       </S.ContainerMain>
-    </>
+    </S.Content>
   )
 }

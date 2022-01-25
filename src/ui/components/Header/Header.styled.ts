@@ -3,12 +3,13 @@ import { theme } from 'src/config'
 
 export const ContainerNav = styled.div`
   height: 100px;
-  background: ${theme.colors.white};
 
   nav {
     position: fixed;
-    top: 0;
     width: 100%;
+    background: ${theme.colors.white};
+    height: 100px;
+    box-shadow: 0 0.1px 0.5px black;
   }
 
   h1 {
