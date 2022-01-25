@@ -1,0 +1,9 @@
+
+@media screen and (max-device-width: 480px) {
+  .card {
+    margin-top: 20px;
+    background-color: lightgray;
+    width: 260px;
+    height: 350px;
+  }
+}
