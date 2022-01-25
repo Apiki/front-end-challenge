@@ -6,7 +6,7 @@ export default function Card({img, slug, title, link}) {
     <div className='card'>
       <img src={img} alt={slug} />
       <h2>{title}</h2>
-      <p>{link}</p>
+      <a target="_blank" href={link} rel="noreferrer">Link para postagem</a>
     </div>
   );
 }
