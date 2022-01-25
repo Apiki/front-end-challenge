@@ -1,6 +1,6 @@
 export type Post = {
-  id: number;
-  title: string;
-  thumbnail: string;
-  link: string;
+  id?: number;
+  title?: string;
+  thumbnail?: string;
+  link?: string;
 }

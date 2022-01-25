@@ -1,8 +1,12 @@
 export const theme = {
   colors: {
     white: '#FFFFFF',
-    blue: '#188ecc',
-    orange: '#f5872f',
+    blue: {
+      500: '#188ecc',
+    },
+    orange: {
+      400: '#f5872f',
+    },
     neutral: {
       100: '#FEFDFF',
       200: '#F4F5FE',

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { theme } from '../../../config'
+import { theme } from 'src/config'
 
 export const ContainerNav = styled.div`
   height: 100px;
@@ -13,7 +13,7 @@ export const ContainerNav = styled.div`
 
   h1 {
     margin: 30px 70px 90px 50px;
-    color: ${theme.colors.blue}
+    color: ${theme.colors.blue[500]}
   }
 
   ul {
@@ -28,7 +28,7 @@ export const ContainerNav = styled.div`
 
     :hover {
       text-decoration: underline;
-      color: ${theme.colors.blue};
+      color: ${theme.colors.blue[500]};
     }
   }
 
