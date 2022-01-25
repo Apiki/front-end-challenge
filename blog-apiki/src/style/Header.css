@@ -1,0 +1,19 @@
+#header {
+  background-color: #222;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  text-align: center;
+
+  height: 8vh;
+  width: 100vw;
+}
+
+#header h1{
+  color: rgb(200, 200, 200);
+  font-size: 1.3rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 500;
+}
