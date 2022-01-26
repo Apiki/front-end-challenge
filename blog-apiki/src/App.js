@@ -1,10 +1,13 @@
+import { Route, Routes } from "react-router";
+import Home from "./pages/Home";
 import News from "./components/News";
-// import Home from "./pages/Home";
 
 function App() {
   return (
-    // <Home />
-    <News />
+    <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path=":slug" element={<News />} />
+    </Routes>
   );
 }
 

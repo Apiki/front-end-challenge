@@ -1,4 +1,4 @@
-* {
+#news-body * {
   padding: 5px;
 }
 
@@ -23,18 +23,24 @@
   width: 100%;
 }
 
-p {
+#news-body p {
   max-width: 450px;
   align-self: center;
 }
 
-h1, h2, h3, h4{
+#news-body h1, h2, h3, h4{
   text-align: center;
   padding: 10px;
 }
 
-figcaption {
+#news-body figcaption {
   text-align: center;
+}
+
+#news-body img {
+  background-size: cover;
+  height: 250px;
+  width: 250px;
 }
 
 #news-img {

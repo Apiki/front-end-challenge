@@ -6,18 +6,18 @@ import '../style/News.css';
 
 export default function News() {
   const [news, setNews] = useState('');
-  const url = 'wordpress-escolha-site-pequenas-empresas';
+  const location = window.location.pathname
+  const slug = location.replace(/^./, "");
 
   useEffect(() => {
+
     api
-      .get(`/posts?_embed&slug=${url}`)
+      .get(`/posts?_embed&slug=${slug}`)
       .then((response) => setNews(response.data[0]))
       .catch((err) => {
         console.error("Ocorreu um erro:" + err);
       });
-  }, [url]);
-
-  console.log(news)
+  }, []);
 
   const createNews = () => {
     if (news) {
