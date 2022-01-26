@@ -14,11 +14,14 @@ function getPosts () {
 }
 
 export function usePosts () {
-  const { data = [], ...rest } = useQuery({
+  const { isLoading, data = [], ...rest } = useQuery({
     queryKey: 'posts',
     queryFn: getPosts,
     select: (data) => data.map(post => ({
       thumbnail: post._embedded['wp:featuredmedia'][0]?.source_url,
+      id: post.id,
+      title: post.title.rendered,
+      link: post.link,
     })),
   })
 

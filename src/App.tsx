@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { GlobalStyle } from './ui'
-import { HOME } from './routes'
-import { Home } from './pages'
+import { HOME, ABOUT } from './routes'
+import { Home, About } from './pages'
 
 function App () {
   return (
@@ -10,6 +10,7 @@ function App () {
       <BrowserRouter>
         <Routes>
           <Route path={HOME} element={<Home />} />
+          <Route path={ABOUT} element={<About />} />
         </Routes>
         <GlobalStyle />
       </BrowserRouter>

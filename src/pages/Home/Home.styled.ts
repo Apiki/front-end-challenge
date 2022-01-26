@@ -9,12 +9,33 @@ export const Content = styled.div`
 `
 
 export const ContainerMain = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 60px;
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 250px));
+    text-align: center;
+    justify-content: center;
+    margin: 0 0 20px 0;
+    grid-row-gap: 10px;
+
+    li {
+      a {
+        color: ${theme.colors.orange[400]}
+      }
+    }
+  }
 
   img {
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 300px;
+    transition: 1s;
+    border-radius: 8px;
+
+    :hover {
+      width: 420px;
+      height: 320px;
+      opacity: 85%;
+    }
   }
 `

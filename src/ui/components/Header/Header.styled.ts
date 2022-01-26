@@ -10,6 +10,7 @@ export const ContainerNav = styled.div`
     background: ${theme.colors.white};
     height: 100px;
     box-shadow: 0 0.1px 0.5px black;
+    z-index: 99;
   }
 
   h1 {
@@ -29,7 +30,7 @@ export const ContainerNav = styled.div`
 
     :hover {
       text-decoration: underline;
-      color: ${theme.colors.blue[500]};
+      color: ${theme.colors.orange[400]};
     }
   }
 

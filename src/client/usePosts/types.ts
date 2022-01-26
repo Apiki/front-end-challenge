@@ -4,4 +4,11 @@ export type PostRaw = {
       source_url: string
     }[]
   },
+  title: {
+    rendered: string
+  }
+  link: {
+    slug: string
+  }
+  id: number;
 }
