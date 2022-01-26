@@ -1,50 +1,105 @@
-#news-body * {
+@media screen and (max-device-width: 480px) {
+  #news-body p {
+    padding: 10px 0;
+    align-self: center;
+    font-size: 0.8rem;
+    max-width: 200px;
+  }
+
+  #news-body table, ul, ol{
+    margin-top: 15px;
+    align-self: center;
+    font-size: 0.6rem;
+    max-width: 200px;
+  }
+
+  #news-body pre{
+    font-size: 0.4rem;
+  }
+
+  #news-body h1, h2, h3, h4{
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px;
+    max-width: 280px;
+  }
+
+  #news-body img {
+    background-size: cover;
+    height: 250px;
+    width: 250px;
+  }
+
+  #news-img {
+    margin: 0 auto;
+    padding: 30px;
+    width: 350px;
+  }
+}
+
+@media screen and (min-width: 481px){
+  #news-body p {
+    padding: 10px 0;
+    align-self: center;
+    font-size: 0.8rem;
+    max-width: 300px;
+  }
+
+  #news-body table, ul, ol{
+    margin-top: 15px;
+    align-self: center;
+    font-size: 0.6rem;
+    max-width: 200px;
+  }
+
+  #news-body pre{
+    font-size: 0.4rem;
+  }
+
+  #news-body h1, h2, h3, h4{
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 10px;
+    max-width: 280px;
+  }
+
+  #news-body img {
+    background-size: cover;
+    height: 250px;
+    width: 350px;
+  }
+
+  #news-img {
+    margin: 0 auto;
+    padding: 30px;
+    width: 350px;
+  }
+}
+
+.display-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 5px;
 }
 
 #news-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  position: relative;
-  height: 100%;
   width: 100vw;
 }
 
 .news-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
   height: 100%;
   width: 100%;
-}
-
-#news-body p {
-  max-width: 450px;
-  align-self: center;
-}
-
-#news-body h1, h2, h3, h4{
-  text-align: center;
-  padding: 10px;
 }
 
 #news-body figcaption {
   text-align: center;
 }
 
-#news-body img {
-  background-size: cover;
-  height: 250px;
-  width: 250px;
-}
-
-#news-img {
-  margin: 0 auto;
-  padding: 30px;
-  width: 350px;
+#news-body figure{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

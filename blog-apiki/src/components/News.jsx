@@ -29,7 +29,7 @@ export default function News() {
 
   const renderNews = () => {
     return (
-      <div className='news-content'>
+      <div className='news-content display-flex'>
         <h1>{news.title.rendered}</h1>
         <img
         id='news-img'
@@ -53,9 +53,9 @@ export default function News() {
 
 
   return (
-    <div id='news-body'>
-      <div className='news-content'>{news ? renderNews() : ''}</div>
-      <div id="news" className='news-content'></div>
+    <div id='news-body' className='display-flex'>
+      <div className='news-content display-flex'>{news ? renderNews() : ''}</div>
+      <div id="news" className='news-content display-flex'></div>
     </div>
   )
 }
