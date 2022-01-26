@@ -1,8 +1,10 @@
-import Home from "./pages/Home";
+import News from "./components/News";
+// import Home from "./pages/Home";
 
 function App() {
   return (
-    <Home />
+    // <Home />
+    <News />
   );
 }
 

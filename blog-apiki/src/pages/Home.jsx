@@ -4,6 +4,7 @@ import api from '../services/api';
 import Card from '../components/Card';
 import Header from '../components/Header';
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
+import defaultImg from '../images/default.png';
 
 export default function Home() {
   const [news, setNews] = useState([]);
@@ -59,7 +60,7 @@ export default function Home() {
               img={
                 curr['_embedded']['wp:featuredmedia']
                 ? curr['_embedded']['wp:featuredmedia'][0]['source_url']
-                : ''
+                : defaultImg
             }
               slug={curr.slug}
               title={curr.title.rendered}

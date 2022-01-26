@@ -1,0 +1,44 @@
+* {
+  padding: 5px;
+}
+
+#news-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  position: relative;
+  height: 100%;
+  width: 100vw;
+}
+
+.news-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  height: 100%;
+  width: 100%;
+}
+
+p {
+  max-width: 450px;
+  align-self: center;
+}
+
+h1, h2, h3, h4{
+  text-align: center;
+  padding: 10px;
+}
+
+figcaption {
+  text-align: center;
+}
+
+#news-img {
+  margin: 0 auto;
+  padding: 30px;
+  width: 350px;
+}
