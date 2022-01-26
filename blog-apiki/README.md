@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+### Boas vindas ao repositório do projeto Apiki's Blog!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Descrição:
 
-## Available Scripts
+Este repositório faz parte de um desafio técnico proposto pela empresa Apiki.
 
-In the project directory, you can run:
+Queremos montar uma versão do blog da Apiki apenas para Devs, e queremos que essa seja uma solução headless, esta nova versão terá as seguintes páginas:
 
-### `npm start`
+ - Página inicial: Listará as últimas postagens do blog com a categoria Desenvolvimento;
+ - Interna: Exibirá o conteúdo da postagem;
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+</br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Link para repositório do desafio [aqui](https://github.com/Pedro-Toselli/front-end-challenge) </br>
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Ferramentas:
 
-### `npm run build`
+- React - [documentação](https://pt-br.reactjs.org/)
+- React router - [documentação](https://reactrouter.com/docs/en/v6)
+- React icons - [documentação](https://react-icons.github.io/react-icons/)
+- React Testing library - [documentação](https://testing-library.com/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<details>
+  <Summary>Como rodar a aplicação localmente</Summary>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  Em caso de dúvidas ou erros, fique à vontade para me contatar em phtoselli@gmail.com
 
-### `npm run eject`
+  </br>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Abrindo a aplicação no navegador local
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Vamos baixar o repositório do projeto e rodar a aplicação localmente em sua máquina:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Antes de seguir o passo a passo, crie uma "nova pasta" em seu computador e abra ela no terminal.
 
-## Learn More
+1. dentro da pasta criada, clone o projeto do github, utilizando o seguinte comando no seu terminal:
+~~~cmd
+  git clone git@github.com:Pedro-Toselli/front-end-challenge.git
+~~~
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Entre na pasta do repositório clonado.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+~~~cmd
+  cd front-end-challenge
+~~~
 
-### Code Splitting
+3. Acesse a branch com nome "pedro-toselli"
+~~~cmd
+  git checkout -b pedro-toselli
+~~~
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Entre na pasta do desafio.
+~~~cmd
+  cd blog-apiki
+~~~
 
-### Analyzing the Bundle Size
+5. Instale as dependências do projeto para não haver conflitos, utilizando o seguinte comando no terminal:
+~~~cmd
+  npm install
+~~~
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+6. Inicie o projeto localmente com o comando:
+~~~cmd
+  npm start
+~~~
 
-### Making a Progressive Web App
+</details>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+#### Funcionalidades:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Ter acesso à uma página com diversas notícias.
+- Acessar os detalhes da notícia.
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+#### Critérios de avaliação:
+- Organização do código;
+- Responsividade;
+- Reaproveitamento de código;
+- SEO;
 
-### `npm run build` fails to minify
+</br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
