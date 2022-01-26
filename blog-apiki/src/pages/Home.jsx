@@ -3,6 +3,7 @@ import '../style/Home.css'
 import api from '../services/api';
 import Card from '../components/Card';
 import Header from '../components/Header';
+import { BsFillArrowUpCircleFill } from "react-icons/bs";
 
 export default function Home() {
   const [news, setNews] = useState([]);
@@ -42,6 +43,10 @@ export default function Home() {
 
     }
 
+  const VoltarAoTopo = () => {
+    window.scrollTo(0, 0)
+  }
+
   return (
     <>
       <Header />
@@ -63,8 +68,11 @@ export default function Home() {
           ))
           : 'Carregando...'
         }
+        <button id='carregar-mais-btn' onClick={() => CarregarMais()}>Carregar mais...</button>
       </div>
-      <button id='carregar-mais-btn' onClick={() => CarregarMais()}>Carregar mais...</button>
+        <button id='topo-btn' onClick={() => VoltarAoTopo()}>
+          <BsFillArrowUpCircleFill/>
+        </button>
     </>
   );
 }
