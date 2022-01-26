@@ -10,7 +10,7 @@ export const ContainerNav = styled.div`
     background: ${theme.colors.white};
     height: 100px;
     box-shadow: 0 0.1px 0.5px black;
-    z-index: 99;
+    z-index: 1;
   }
 
   h1 {

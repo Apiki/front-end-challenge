@@ -14,7 +14,7 @@ function getPosts () {
 }
 
 export function usePosts () {
-  const { isLoading, data = [], ...rest } = useQuery({
+  const { data = [], ...rest } = useQuery({
     queryKey: 'posts',
     queryFn: getPosts,
     select: (data) => data.map(post => ({

@@ -7,8 +7,7 @@ export type PostRaw = {
   title: {
     rendered: string
   }
-  link: {
-    slug: string
-  }
+  slug: string
+  link: string
   id: number;
 }

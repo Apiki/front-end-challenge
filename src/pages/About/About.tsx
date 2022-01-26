@@ -6,12 +6,12 @@ export function About () {
     <>
       <Header />
       <S.ContentMain>
-        <p>Somos a primeira empresa do Brasil especializada em WordPress. Desenvolvemos negócios como sites, blogs e lojas virtuais no mundo inteiro.
-          Mais do que simples desenvolvedores de software, somos o parceiro estratégico ideal para quem deseja construir negócios.
-          A Apiki é uma mistura de ousadia, inovação, marketing e tecnologia. Nascendo à frente do seu tempo, em 2008, a empresa
-          precisava de um nome que representasse sua essência. ‘Api’ é a grafia “à brasileira” da pronúncia de ‘up’ (acima),
-          abreviação de ‘updated’ (atualizado). Ainda foi adicionado ao nome a letra K, representando marketing, e a I, de internet.
-          Resultado: Apiki. Orgulhosamente, uma empresa especializada, e que faz absolutamente TUDO em WordPress.
+        <p>We are the first company in Brazil specialized in WordPress. We develop businesses such as websites, blogs and virtual stores all over the world.
+          More than just software developers, we are the ideal strategic partner for those who want to build businesses.
+          Apiki is a mix of boldness, innovation, marketing and technology. Born ahead of its time, in 2008, the company
+          needed a name that represented its essence. ‘Api’ is the “Brazilian” spelling of the pronunciation of ‘up’ (above),
+          short for 'updated'. The letter K was also added to the name, representing marketing, and the letter I, for internet.
+          Result: API. Proudly, a specialized company that does absolutely EVERYTHING in WordPress.
         </p>
       </S.ContentMain>
     </>

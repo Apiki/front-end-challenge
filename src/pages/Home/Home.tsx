@@ -10,16 +10,15 @@ export function Home () {
   return (
     <S.Content>
       <Header />
-      <h2>Desenvolvimento</h2>
+      <h2>Development</h2>
       <S.ContainerMain>
         <ul>
           {posts.map((post) => (
             <li key={post.id}>
               <img src={post.thumbnail} alt={post.title} />
               <h3>{post.title}</h3>
-              <Link to={`${post.link}`}>Ver mais</Link>
+              <Link to={`${post.link}`}>View more</Link>
             </li>
-
           ))}
         </ul>
       </S.ContainerMain>

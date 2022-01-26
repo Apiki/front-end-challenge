@@ -8,18 +8,18 @@ export function Header () {
         <nav>
           <h1>Apiki.</h1>
           <ul>
-            <Link to='/'><li>Início</li></Link>
-            <Link to='/sobre'><li>Sobre</li></Link>
+            <Link to='/'><li>Home</li></Link>
+            <Link to='/sobre'><li>About</li></Link>
           </ul>
         </nav>
       </S.ContainerNav>
 
       <S.ContainerHeader>
         <S.ContentHeader>
-          <h1>Blog da Apiki para devs</h1>
+          <h1>Apiki blog for devs</h1>
           <span>
-            Acelere na direção dos seus objetivos. Transforme sua carreira em
-            uma jornada de evolução contínua através das melhores tecnologias.
+            Accelerate towards your goals. Transform your career into a journey
+            of continuous evolution through the best technologies.
           </span>
         </S.ContentHeader>
       </S.ContainerHeader>
