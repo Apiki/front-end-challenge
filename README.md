@@ -1,47 +1,90 @@
-# Desafio - Front-end Developer
-Este desafio tem como objetivo te avaliar como desenvolvedor Front-end: JavaScript, HTML, CSS e lógica de programação.
+### Boas vindas ao repositório do projeto Apiki's Blog!
 
-## O Desafio
-Queremos montar uma versão do blog da Apiki apenas para Devs, e queremos que essa seja uma solução headless, esta nova versão terá as seguintes páginas: 
+#### Descrição:
 
-- Página inicial: Listará as últimas postagens do blog com a categoria **Desenvolvimento**; 
-- Interna: Exibirá o conteúdo da postagem;
+Este repositório faz parte de um desafio técnico proposto pela empresa Apiki.
+
+Queremos montar uma versão do blog da Apiki apenas para Devs, e queremos que essa seja uma solução headless, esta nova versão terá as seguintes páginas:
+
+ - Página inicial: Listará as últimas postagens do blog com a categoria Desenvolvimento;
+ - Interna: Exibirá o conteúdo da postagem;
+
+</br>
+
+Link para repositório do desafio [aqui](https://github.com/Pedro-Toselli/front-end-challenge) </br>
+
+---
+
+#### Ferramentas:
+
+- React - [documentação](https://pt-br.reactjs.org/)
+- React router - [documentação](https://reactrouter.com/docs/en/v6)
+- React icons - [documentação](https://react-icons.github.io/react-icons/)
+- React Testing library - [documentação](https://testing-library.com/)
+
+---
+
+<details>
+  <Summary>Como rodar a aplicação localmente</Summary>
+
+  Em caso de dúvidas ou erros, fique à vontade para me contatar em phtoselli@gmail.com
+
+  </br>
 
 
-## Requesitos
-- Utilizar os dados da API do nosso blog: https://blog.apiki.com/wp-json/wp/v2/;
+### Abrindo a aplicação no navegador local
 
-## Diferencial
-- Utilizar alguma metodologia para a organização de seu CSS (BEMCSS, OOCSS, SMACSS... o que preferir :D);
-- Escolha uma lib para criação de interfaces de usuário (React ou Angular); 
+Vamos baixar o repositório do projeto e rodar a aplicação localmente em sua máquina:
 
-### Página inicial
-Para montar esta página você precisará consumir do seguinte endpoint: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518`, ele já te retornará as últimas 10 postagens cadastradas, cada item do array deve representar uma card contendo:
+Antes de seguir o passo a passo, crie uma "nova pasta" em seu computador e abra ela no terminal.
 
-- Imagem destacada: Você encontrará um atributo chamado `_embedded`, dentro deste atributo você encontrará o `wp:featuredmedia`;
-- Título;
-- Link para a postagem: O link deverá conter o atributo `slug`;
+1. dentro da pasta criada, clone o projeto do github, utilizando o seguinte comando no seu terminal:
+~~~cmd
+  git clone git@github.com:Pedro-Toselli/front-end-challenge.git
+~~~
 
-Ao final da listagem deve haver um botão nomeado **Carregar mais...**, Quando o usuário clicar neste botão você deverá fazer uma nova requisição para o mesmo endpoint informando o parâmetro `page`, este parâmetro deve receber o número da próxima página, exemplo: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=2`. Você deve estar se perguntando, "como sei se haverá uma próxima página?", isso é simples, no **Header** de resposta desta requisição virá 2 atributos necessários para essa façanha `X-WP-Total` que diz a quantidade total de postagens que essa categoria possui, e o parâmetro `X-WP-TotalPages` que te informará qual o total de páginas de postagens que essa categoria possui.
+2. Entre na pasta do repositório clonado.
 
-### Interna
-Para montar esta página você precisará consumir do seguinte endpoint: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=wordpress-escolha-site-pequenas-empresas`, lembre-se de substituir o `slug` dado como exemplo pelo slug definido no **Link para a postagem** da **Página inicial**, o layout deve conter os seguintes elementos:
+~~~cmd
+  cd front-end-challenge
+~~~
 
-- Imagem destacada;
-- Título;
-- Conteúdo;
+3. Acesse a branch com nome "pedro-toselli"
+~~~cmd
+  git checkout -b pedro-toselli
+~~~
 
-Seja criativo, construa um layout pensando no usuário final, e sinta-se a vontade para incrementar o layout com outros atributos disponíveis no JSON retornado. 
+4. Entre na pasta do desafio.
+~~~cmd
+  cd blog-apiki
+~~~
 
-## Critérios de avaliação
+5. Instale as dependências do projeto para não haver conflitos, utilizando o seguinte comando no terminal:
+~~~cmd
+  npm install
+~~~
 
+6. Inicie o projeto localmente com o comando:
+~~~cmd
+  npm start
+~~~
+
+</details>
+
+---
+
+#### Funcionalidades:
+
+- Ter acesso à uma página com diversas notícias.
+- Acessar os detalhes da notícia.
+
+
+#### Critérios de avaliação:
 - Organização do código;
 - Responsividade;
 - Reaproveitamento de código;
 - SEO;
 
-## Como submeter seu projeto
+</br>
 
-1. Efetue o fork deste repositório e crie um branch com o seu nome e sobrenome. (exemplo: fulano-dasilva);
-1. Após finalizar o desafio, crie um Pull Request;
-1. Aguarde algum contribuidor realizar o code review;
+---
