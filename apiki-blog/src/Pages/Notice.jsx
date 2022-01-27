@@ -4,8 +4,8 @@ import NoticeContent from "../Components/NoticeContent";
 export default function Notice() {
   
   return (
-  <>
-    <NoticeContent />
-  </>
-)
+    <>
+      <NoticeContent />
+    </>
+  );
 }

@@ -1,9 +1,15 @@
+import React from "react";
+
 export default function Button(props) {
   
-  return <button type="button" 
-  onClick={ () => props.setPage(props.page + 1) }
-  disabled={ props.page >= props.headers ? true : false }
-> 
-Mais notícias 
-</button>
+  const {page, headers, setPage} = props
+
+  return (
+    <button type="button" 
+      onClick={ () => setPage(page + 1) }
+      disabled={ page >= headers ? true : false }
+    > 
+      Mais notícias 
+    </button>
+  );
 }
