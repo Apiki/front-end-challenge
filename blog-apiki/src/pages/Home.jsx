@@ -21,7 +21,6 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    console.log('loop?')
     if (news.length >= response['x-wp-total']) {
       document.getElementById('carregar-mais-btn').disabled = true
   }
@@ -49,13 +48,15 @@ export default function Home() {
   }
 
   return (
-    <>
+    <div>
       <Header />
       <div className='home-news'>
         {
           news?
           news.map(curr => (
             <Card
+              data-testid='card'
+              className='card'
               key={curr.id}
               img={
                 curr['_embedded']['wp:featuredmedia']
@@ -71,9 +72,9 @@ export default function Home() {
         }
         <button id='carregar-mais-btn' onClick={() => CarregarMais()}>Carregar mais...</button>
       </div>
-        <button id='topo-btn' onClick={() => VoltarAoTopo()}>
+        <button data-testid='topo-btn' id='topo-btn' onClick={() => VoltarAoTopo()}>
           <BsFillArrowUpCircleFill/>
         </button>
-    </>
+    </div>
   );
 }
