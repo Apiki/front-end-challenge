@@ -25,10 +25,12 @@ export default function Posts() {
   }, [headers])
 
   return (
-    <main>
+    <section>
       { loading ? "Carregando..." : <PostCard posts={posts} /> }
-      <Button text={"Voltar para o início"} page={0} setPage={setPage}/>
-      <Button text={"Mais notícias"} page={page} headers={headers} setPage={setPage} />
-    </main>
+      <div id="button-div">
+        <Button text={"Voltar para o início"} page={0} setPage={setPage}/>
+        <Button text={"Mais notícias"} page={page} headers={headers} setPage={setPage} />
+      </div>
+    </section>
   );
 }

@@ -28,8 +28,8 @@ export default function NoticeContent() {
       {loading ? "Carregando..." :
       <div>
         <h1>{title.rendered}</h1> 
-        <img src={_embedded["wp:featuredmedia"][0].source_url} alt="banner" />
-        <p dangerouslySetInnerHTML={{ __html: content.rendered  }} />
+        <img id="feat-image" src={_embedded["wp:featuredmedia"][0].source_url} alt="banner" />
+        <p id="page-content" dangerouslySetInnerHTML={{ __html: content.rendered  }} />
       </div>
       }
     </div>

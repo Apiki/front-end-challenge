@@ -7,7 +7,7 @@ export default function PostCard(props) {
 
   return posts.map((post) => {
     return (
-      <div key={post.id}>
+      <div id="post-card" key={post.id}>
         <Link to={post.slug}>
           <h2> {post.title.rendered}</h2>
         </Link>
