@@ -1,5 +1,11 @@
+import React from "react";
+import NoticeContent from "../Components/NoticeContent";
+
 export default function Notice() {
-  return <div>
-    <h1>Noticia 1</h1>
-  </div>;
+  
+  return (
+    <div>
+    <NoticeContent />
+  </div>
+)
 }
