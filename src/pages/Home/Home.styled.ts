@@ -4,7 +4,17 @@ import { theme } from 'src/config'
 export const Content = styled.div`
   h2 {
     color: ${theme.colors.neutral[900]};
-    margin: 60px;
+    padding: 80px 0 0 120px;
+  }
+
+  button {
+    background: ${theme.colors.orange[400]};
+    color: ${theme.colors.white};
+    width: 50px;
+    height: 50px;
+    border: 0;
+    border-radius: 50%;
+    margin: 0 0 50px 40px;
   }
 `
 
@@ -18,14 +28,10 @@ export const ContainerMain = styled.div`
     justify-content: center;
     margin: 0 0 20px 0;
     grid-row-gap: 10px;
-
-    li {
-      a {
-        color: ${theme.colors.orange[400]}
-      }
-    }
   }
+`
 
+export const List = styled.li`
   img {
     width: 400px;
     height: 300px;
@@ -37,5 +43,9 @@ export const ContainerMain = styled.div`
       height: 320px;
       opacity: 85%;
     }
+  }
+
+  a {
+    color: ${theme.colors.orange[400]}
   }
 `

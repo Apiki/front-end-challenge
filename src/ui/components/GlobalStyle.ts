@@ -24,6 +24,10 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   ul {
     list-style: none;
   }
