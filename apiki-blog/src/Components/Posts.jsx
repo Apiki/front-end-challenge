@@ -27,7 +27,8 @@ export default function Posts() {
   return (
     <main>
       { loading ? "Carregando..." : <PostCard posts={posts} /> }
-      <Button page={page} headers={headers} setPage={setPage} />
+      <Button text={"Voltar para o início"} page={0} setPage={setPage}/>
+      <Button text={"Mais notícias"} page={page} headers={headers} setPage={setPage} />
     </main>
   );
 }
