@@ -3,9 +3,9 @@ import Posts from '../Components/Posts';
 
 export default function Home() {
   return (
-    <div>
-      <h1>Home</h1> 
+    <>
+      <a href="/"><h1>Home</h1> </a>
       <Posts />
-    </div>
+    </>
   );
 }

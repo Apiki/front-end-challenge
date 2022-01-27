@@ -1,29 +1,30 @@
 import React, { useEffect, useState } from "react";
-import { getPosts, getHeaders } from "../Services/api";
+import { getPosts } from "../Services/api";
+import Button from "./Button";
 
 export default function Posts() {
   const [posts, setPosts] = useState([]);
-  const [headers, setHeaders] = useState([]);
+  const [headers, setHeaders] = useState();
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     async function fetchApi() {
       const postsFromApi = await getPosts(page);
-      setPosts(postsFromApi)
-      setHeaders(await getHeaders())
+      setPosts(postsFromApi[0]);
+      setHeaders(postsFromApi[1]);
     }
     fetchApi()
   }, [page])
 
   useEffect(() => {
-    if (headers[1]) {
+    if (headers) {
       setLoading(false)
     }
   }, [headers])
 
   return (
-    <div>
+    <main>
       {loading ? "Carregando..." : posts.map((post) => {
         return (
           <div key={post.id}>
@@ -36,12 +37,7 @@ export default function Posts() {
         }
         )
       }
-      <button type="button" 
-        onClick={ () => setPage(page + 1) }
-        disabled={ page === 17 ? true : false }
-      > 
-      Mais notícias 
-      </button> 
-    </div>
+      <Button page={page} headers={headers} setPage={setPage} />
+    </main>
   )
 }

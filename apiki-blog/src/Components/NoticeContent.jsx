@@ -13,7 +13,7 @@ export default function NoticeContent() {
       setNotice(noticeFromApi[0])
     }
     fetchApi()
-  }, [])
+  }, [slug])
 
   useEffect(() => {
     if (notice.id) {
