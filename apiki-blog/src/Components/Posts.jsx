@@ -12,15 +12,14 @@ export default function Posts() {
     fetchApi()
   }, [])
 
-  useEffect(() => {
-    console.log(posts)
-  }, [posts])
-
   return <div>
     {posts.map((post) => {
       return (
-        <div>
+        <div key={post.id}>
+          <a href={post.slug}>
           <h2> {post.title.rendered}</h2>
+          </a>
+          <img src={post._embedded["wp:featuredmedia"][0].source_url} alt="img" />
         </div>)
     })}
   </div>;
