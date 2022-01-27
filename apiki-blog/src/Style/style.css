@@ -57,3 +57,42 @@ button:disabled {
   cursor: not-allowed;
 }
 
+@media only screen and (min-width: 700px) {
+  body {
+    font-size: 18px
+  }
+  
+  #home-menu {
+    max-width: 15vw;
+  }
+
+  section {
+    align-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  #post-card {
+    display: flex;
+    max-width: 50vw;
+    min-width: 45vw;
+  }
+
+  p img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+  #button-div {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }

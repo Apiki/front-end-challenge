@@ -25,12 +25,14 @@ export default function Posts() {
   }, [headers])
 
   return (
+    <>
     <section>
       { loading ? "Carregando..." : <PostCard posts={posts} /> }
+    </section>
       <div id="button-div">
         <Button text={"Voltar para o início"} page={0} setPage={setPage}/>
         <Button text={"Mais notícias"} page={page} headers={headers} setPage={setPage} />
       </div>
-    </section>
+    </>
   );
 }
