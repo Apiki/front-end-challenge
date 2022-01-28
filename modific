@@ -1,0 +1,15 @@
+Página inicial: Listará as últimas postagens do blog com a categoria **Desenvolvimento**; 
+- Interna: Exibirá o conteúdo da postagem;
+
+## Requisitos
+- Escolha uma lib para criação de interfaces de usuário (React, Vue ou Angular); 
+
+## Requesitos
+- Utilizar os dados da API do nosso blog: https://blog.apiki.com/wp-json/wp/v2/;
+
+## Diferencial
+- Utilizar alguma metodologia para a organização de seu CSS (BEMCSS, OOCSS, SMACSS... o que preferir :D);
+- Escolha uma lib para criação de interfaces de usuário (React ou Angular); 
+
+### Página inicial
+Para montar esta página você precisará consumir do seguinte endpoint: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518`, ele já te retornará as últimas 10 postagens cadastradas, cada item do array deve representar uma card contendo:
