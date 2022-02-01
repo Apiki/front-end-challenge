@@ -7,7 +7,7 @@
 	import '$styles/global.css';
 </script>
 
-<div class={`layout ${$page.path}`}>
+<div class={`layout ${$page.url.pathname}`}>
 	<a class="sr-only focus:not-sr-only" id="top" href="#skip">Skip to content</a>
 
 	<Navbar />
