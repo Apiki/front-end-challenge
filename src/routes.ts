@@ -1,2 +1,2 @@
 export const HOME = '/'
-export const ABOUT = '/sobre'
+export const ABOUT = '/about'

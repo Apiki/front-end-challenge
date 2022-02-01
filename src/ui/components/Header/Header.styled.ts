@@ -72,11 +72,12 @@ export const ContentHeader = styled.div`
     animation: go-back 1s infinite alternate;
 
     @keyframes go-back {
-    from {
-      transform: translateY(50px);
-    }
-    to {
-      transform: translateX(0);
+      from {
+        transform: translateY(50px);
+      }
+      to {
+        transform: translateX(0);
+      }
     }
   }
 `

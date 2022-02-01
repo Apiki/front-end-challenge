@@ -1,4 +1,4 @@
-import { Header } from 'src/ui'
+import { Footer, Header } from 'src/ui'
 import * as S from './About.styled'
 
 export function About () {
@@ -14,6 +14,7 @@ export function About () {
           Result: API. Proudly, a specialized company that does absolutely EVERYTHING in WordPress.
         </p>
       </S.ContentMain>
+      <Footer />
     </>
   )
 }

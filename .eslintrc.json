@@ -10,7 +10,6 @@
     "only-warn"
   ],
   "rules": {
-    "prettier.spaceBeforeFunctionParen": false,
     "comma-dangle": [
       "error",
       {

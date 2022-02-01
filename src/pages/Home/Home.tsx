@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom'
 
 import { usePosts } from 'src/client/usePosts/usePosts'
-import { Header } from 'src/ui'
+import { Footer, Header } from 'src/ui'
 import { FiArrowUp } from 'react-icons/fi'
 
 import * as S from './Home.styled'
 
-export function Home() {
+export function Home () {
   const { posts } = usePosts()
 
-  function goBackTop() {
+  function goBackTop () {
     window.scrollTo(0, 0)
   }
 
@@ -31,6 +31,7 @@ export function Home() {
       <button title='Go back top' onClick={() => goBackTop()}>
         <FiArrowUp />
       </button>
+      <Footer />
     </S.Content>
   )
 }

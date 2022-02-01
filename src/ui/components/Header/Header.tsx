@@ -9,7 +9,7 @@ export function Header () {
           <h1>Apiki.</h1>
           <ul>
             <Link to='/'><li>Home</li></Link>
-            <Link to='/sobre'><li>About</li></Link>
+            <Link to='/about'><li>About</li></Link>
           </ul>
         </nav>
       </S.ContainerNav>
