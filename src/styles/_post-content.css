@@ -1,0 +1,45 @@
+.post-content a {
+	@apply font-semibold text-cyan-900;
+}
+.post-content p {
+	margin-top: 1em;
+}
+
+.post-content h2 {
+	margin-top: 1em;
+	@apply font-semibold leading-none tracking-tighter;
+	@apply text-lg sm:text-xl md:text-2xl lg:text-3xl;
+}
+
+.post-content ul {
+	@apply list-disc pl-8;
+	@apply my-2 sm:my-4 md:my-6 lg:my-8 xl:my-10;
+}
+
+.post-content figure {
+	margin: 2em 0;
+}
+.post-content figure img {
+	@apply h-auto max-w-full;
+}
+
+.post-content table {
+	@apply border border-stone-300 text-sm;
+	@apply my-2 sm:my-4 md:my-6 lg:my-8 xl:my-10;
+}
+.post-content table td,
+.post-content table th {
+	@apply p-3;
+}
+.post-content table th {
+	@apply font-bold;
+}
+.post-content table tr:nth-child(odd) td {
+	@apply bg-stone-200;
+}
+
+.post-content pre {
+	margin-top: 1em;
+	@apply bg-stone-900 overflow-auto text-stone-100;
+	@apply p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10;
+}

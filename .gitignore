@@ -1,5 +1,65 @@
-# Dependency directories
-node_modules/
+.DS_Store
+node_modules
+/node_modules
+/.svelte
+/.svelte-kit
+/build
+/.vercel_build_output
+/workers-site
+*.log
 
-# Next.js build output
-.next
+/zold_*
+
+# Ignore the xml
+static/sitemap.xml
+static/feed.xml
+static/rss.xml
+
+# Storybook files #
+###################
+storybook-static
+storybook-static/*
+
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Jest files #
+#############################
+coverage
+coverage/*
+
+
+# KDE/Linux generated files #
+#############################
+.directory
+
+# Runtime data #
+################
+pids
+*.pid
+*.seed
+*.pid.lock
+*.eslintcache
+
+# environment files #
+#####################
+/.env
+/.env.*
+/.env.local
+/.env.*.local
+!.env.example
