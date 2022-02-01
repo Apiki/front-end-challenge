@@ -6,16 +6,6 @@ export const Content = styled.div`
     color: ${theme.colors.neutral[900]};
     padding: 80px 0 0 120px;
   }
-
-  button {
-    background: ${theme.colors.orange[400]};
-    color: ${theme.colors.white};
-    width: 50px;
-    height: 50px;
-    border: 0;
-    border-radius: 50%;
-    margin: 0 0 50px 40px;
-  }
 `
 
 export const ContainerMain = styled.div`
@@ -23,7 +13,7 @@ export const ContainerMain = styled.div`
 
   ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 250px));
+    grid-template-columns: repeat(auto-fit, minmax(346px, 420px));
     text-align: center;
     justify-content: center;
     margin: 0 0 20px 0;
@@ -41,11 +31,24 @@ export const List = styled.li`
     :hover {
       width: 420px;
       height: 320px;
-      opacity: 85%;
     }
   }
 
   a {
     color: ${theme.colors.orange[400]}
+  }
+`
+
+export const ButtonLoadMore = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    background: none;
+    color: ${theme.colors.orange[400]};
+    border: 0;
+    font-size: 20px;
+    text-decoration: underline;
   }
 `
