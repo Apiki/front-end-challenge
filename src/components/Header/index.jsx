@@ -4,10 +4,20 @@ import "./style/style.css";
 const Header = () => {
   return (
     <header>
-      <h1>New Dev</h1>
+      <h1>
+        <a href="/">New Dev</a>
+      </h1>
       <nav>
         <ul>
-          <li></li>
+          <li>
+            <a href="/">Contato</a>
+          </li>
+          <li>
+            <a href="/">Campeonatos</a>
+          </li>
+          <li>
+            <a href="/">Eventos</a>
+          </li>
         </ul>
       </nav>
     </header>

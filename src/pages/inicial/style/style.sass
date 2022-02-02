@@ -1,0 +1,26 @@
+@import ../../../style/global.sass
+
+#container
+  margin: 30px var(--global-margin) var(--global-margin) var(--global-margin)
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 40px
+
+#navigation
+  border-top: 2px solid rgba(255, 255, 255, 0.1)
+  padding: 40px 0 0 0 !important
+  margin: 0 var(--global-margin) 80px var(--global-margin) !important
+  @include horizontal-list
+
+  ul
+    display: flex
+    justify-content: space-between
+
+    li
+      flex: 0 0 calc(100% / 3 - 30px)
+
+      a
+        background: #fff
+        padding: 15px
+        border-radius: 5px
+        display: block

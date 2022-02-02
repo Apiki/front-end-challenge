@@ -24,3 +24,14 @@ body
   img
     max-width: 100%
     height: auto
+
+@mixin reset-list
+  margin: 0
+  padding: 0
+  list-style: none
+
+@mixin horizontal-list
+  @include reset-list
+
+  li
+    display: inline-block

@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,500;0,600;1,300;1,500;1,600&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Press+Start+2P&display=swap");
+:root {
+  --cor-um: #222;
+  --global-margin: 5%;
+  --fonte-corpo: 'Open Sans', sans-serif;
+  --fonte-alternativa: 'Chakra Petch';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #0b0e22;
+  background-attachment: fixed;
+  font-family: var(--fonte-corpo);
+}
+
+body a {
+  text-decoration: none;
+}
+
+body img {
+  max-width: 100%;
+  height: auto;
+}
+
+#container {
+  margin: 30px var(--global-margin) var(--global-margin) var(--global-margin);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+#navigation {
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 40px 0 0 0 !important;
+  margin: 0 var(--global-margin) 80px var(--global-margin) !important;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#navigation li {
+  display: inline-block;
+}
+
+#navigation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#navigation ul li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% / 3 - 30px);
+          flex: 0 0 calc(100% / 3 - 30px);
+}
+
+#navigation ul li a {
+  background: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  display: block;
+}
+/*# sourceMappingURL=style.css.map */

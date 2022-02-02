@@ -30,7 +30,40 @@ body img {
 
 header {
   background: #131738;
+  border-bottom: 2px solid #FFA800;
   padding: 15px var(--global-margin);
   margin: 0 0 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header h1 {
+  font-family: var(--fonte-alternativa);
+}
+
+header h1 a {
+  color: #fff;
+}
+
+header nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header nav li {
+  display: inline-block;
+}
+
+header nav a {
+  margin: 0 0 0 15px;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

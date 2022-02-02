@@ -28,44 +28,30 @@ body img {
   height: auto;
 }
 
-#container {
-  margin: 30px var(--global-margin) var(--global-margin) var(--global-margin);
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
-
-#container .post {
+.post {
   background: #131738;
   color: #fff;
   border-radius: 5px;
 }
 
-#container .post a {
-  color: #fff;
-}
-
-#container .post a img {
+.post img {
   display: block;
   border-radius: 5px 5px 0 0;
 }
 
-#container .post a .post__info {
+.post .post__info {
   padding: 25px;
   border-top: 2px solid #ea00d9;
 }
 
-#container .post a .post__info h2 {
-  font-size: 18px;
+.post .post__info h2 {
+  font-size: 20px;
   font-family: var(--fonte-alternativa);
 }
 
-#container .post a .post__info h2 p {
-  text-align: justify;
+.post .post__info p {
   display: block;
-  margin: 15px 0 0 0;
+  margin: 10px 0 0 0;
   font-size: 15px;
 }
 /*# sourceMappingURL=style.css.map */

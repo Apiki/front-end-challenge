@@ -2,5 +2,21 @@
 
 header
   background: #131738
+  border-bottom: 2px solid #FFA800
   padding: 15px var(--global-margin)
   margin: 0 0 40px 0
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  h1
+    font-family: var(--fonte-alternativa)
+
+    a
+      color: #fff
+
+  nav
+    @include horizontal-list
+    a
+      margin: 0 0 0 15px
+      color: #fff
