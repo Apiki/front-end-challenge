@@ -10,10 +10,16 @@ const Inicial = () => {
     "https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518"
   );
   const [postagens, setPostagens] = useState([]);
+  const [totalPostagens, setTotalPostagens] = useState();
+  const [totalPaginas, setTotalPaginas] = useState();
+  const [paginaAtual, setPaginaAtual] = useState(2);
 
-  const handleMorePosts = () => {
+  const handleMorePosts = (e) => {
+    e.preventDefault();
+    setPaginaAtual(paginaAtual + 1);
+
     setPostsURL(
-      "https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=2"
+      `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=${paginaAtual}`
     );
   };
 
@@ -21,11 +27,12 @@ const Inicial = () => {
     const fetchPostagens = async () => {
       const response = await axios.get(postsURL);
       setPostagens(response.data);
-      console.log(response);
+      setTotalPostagens(response.headers["x-wp-total"]);
+      setTotalPaginas(response.headers["x-wp-totalpages"]);
     };
 
     fetchPostagens();
-  }, []);
+  }, [postagens]);
 
   return (
     <>

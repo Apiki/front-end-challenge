@@ -8,7 +8,7 @@ const Post = (props) => {
     .replace("<p>", "")
     .replace("</p>", "");
 
-  console.log(props.data);
+  // console.log(props.data);
 
   return (
     <div className="post">
