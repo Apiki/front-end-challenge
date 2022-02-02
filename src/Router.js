@@ -9,7 +9,7 @@ const Router = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" exact element={<Inicial />} />
-        <Route path="/:slug" exact element={<Interna />} />
+        <Route path="/:slug" element={<Interna />} />
       </Routes>
     </BrowserRouter>
   );

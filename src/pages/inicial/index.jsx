@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Header from "../../components/Header";
 import Post from "../../components/Post";
 import api from "../../services/api";
 
@@ -17,7 +18,7 @@ const Inicial = () => {
 
   return (
     <>
-      <h1>Página inicial</h1>
+      <Header />
       <section id="container">
         {postagens.map((postagem, index) => (
           <Post key={index} data={postagem} />

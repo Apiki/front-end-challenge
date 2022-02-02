@@ -27,4 +27,10 @@ body img {
   max-width: 100%;
   height: auto;
 }
-/*# sourceMappingURL=global.css.map */
+
+header {
+  background: #131738;
+  padding: 15px var(--global-margin);
+  margin: 0 0 40px 0;
+}
+/*# sourceMappingURL=style.css.map */

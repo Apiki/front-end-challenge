@@ -7,15 +7,16 @@ const Post = (props) => {
   const excerpt = props.data.excerpt.rendered
     .replace("<p>", "")
     .replace("</p>", "");
-  console.log();
-  console.log(props.data);
+
   return (
     <div className="post">
-      <img src={image} alt="" />
-      <div className="post__info">
-        <h2>{title}</h2>
-        <p>{excerpt}</p>
-      </div>
+      <a href={"/" + props.data.slug}>
+        <img src={image} alt="" />
+        <div className="post__info">
+          <h2>{title}</h2>
+          <p>{excerpt}</p>
+        </div>
+      </a>
     </div>
   );
 };

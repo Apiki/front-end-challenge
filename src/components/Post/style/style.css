@@ -14,10 +14,13 @@
 }
 
 body {
-  background-image: -webkit-gradient(linear, right top, left bottom, from(#8e1986), color-stop(#6d247e), color-stop(#4f2772), color-stop(#342562), color-stop(#1d214f), color-stop(#1d214f), color-stop(#1d214f), color-stop(#1d214f), color-stop(#342562), color-stop(#4f2772), color-stop(#6d247e), to(#8e1986));
-  background-image: linear-gradient(to left bottom, #8e1986, #6d247e, #4f2772, #342562, #1d214f, #1d214f, #1d214f, #1d214f, #342562, #4f2772, #6d247e, #8e1986);
+  background: #0b0e22;
   background-attachment: fixed;
   font-family: var(--fonte-corpo);
+}
+
+body a {
+  text-decoration: none;
 }
 
 body img {
@@ -26,12 +29,12 @@ body img {
 }
 
 #container {
-  margin: 30px var(--global-margin);
+  margin: 30px var(--global-margin) var(--global-margin) var(--global-margin);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 40px;
 }
 
 #container .post {
@@ -40,22 +43,26 @@ body img {
   border-radius: 5px;
 }
 
-#container .post img {
+#container .post a {
+  color: #fff;
+}
+
+#container .post a img {
   display: block;
   border-radius: 5px 5px 0 0;
 }
 
-#container .post .post__info {
+#container .post a .post__info {
   padding: 25px;
-  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  border-top: 2px solid #ea00d9;
 }
 
-#container .post .post__info h2 {
+#container .post a .post__info h2 {
   font-size: 18px;
   font-family: var(--fonte-alternativa);
 }
 
-#container .post .post__info p {
+#container .post a .post__info h2 p {
   text-align: justify;
   display: block;
   margin: 15px 0 0 0;

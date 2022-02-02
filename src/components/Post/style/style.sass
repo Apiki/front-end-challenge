@@ -1,33 +1,33 @@
 @import '../../../style/global.sass'
 
 #container
-  margin: 30px var(--global-margin)
+  margin: 30px var(--global-margin) var(--global-margin) var(--global-margin)
   display: grid
   grid-template-columns: repeat(3, 1fr)
-  gap: 30px
+  gap: 40px
 
   .post
     background: #131738
-    // border: 2px solid rgba(255, 255, 255, 0.2)
     color: #fff
     border-radius: 5px
 
-    img
-      display: block
-      // margin: -2px -2px 0 -2px
-      // max-width: calc( 100% + 4px )
-      border-radius: 5px 5px 0 0
+    a
+      color: #fff
 
-    .post__info
-      padding: 25px
-      border-top: 2px solid rgba(255, 255, 255, 0.2)
-
-      h2
-        font-size: 18px
-        font-family: var(--fonte-alternativa)
-
-      p
-        text-align: justify
+      img
         display: block
-        margin: 15px 0 0 0
-        font-size: 15px
+        border-radius: 5px 5px 0 0
+
+      .post__info
+        padding: 25px
+        border-top: 2px solid #ea00d9
+
+        h2
+          font-size: 18px
+          font-family: var(--fonte-alternativa)
+
+          p
+            text-align: justify
+            display: block
+            margin: 15px 0 0 0
+            font-size: 15px

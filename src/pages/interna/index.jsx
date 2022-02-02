@@ -1,21 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
 const Interna = () => {
-  // const [postagens, setPostagens] = useState([]);
+  const params = useParams();
+  const [post, setPost] = useState([]);
 
-  // useEffect(() => {
-  //   const fetchPostagens = async () => {
-  //     const response = await api;
+  useEffect(() => {
+    const fetchPostagens = async () => {
+      const response = await axios.get(
+        "https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=" + params.slug
+      );
 
-  //     setPostagens(response.data);
-  //   };
+      setPost(response.data);
+    };
 
-  //   fetchPostagens();
-  // }, []);
+    fetchPostagens();
+  }, []);
 
-  // console.log(postagens);
-
-  return <div></div>;
+  if (post.length != 0) {
+    return (
+      <>
+        <h1>Achei</h1>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <h1>Não achei</h1>
+      </>
+    );
+  }
 };
 
 export default Interna;
