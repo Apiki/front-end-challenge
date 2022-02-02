@@ -27,7 +27,7 @@ export function Home () {
         </ul>
       </S.ContainerMain>
       <S.ButtonLoadMore>
-        <button onClick={() => fetchNextPage()}>Carregar mais posts</button>
+        <button onClick={() => fetchNextPage()}>Load more posts</button>
       </S.ButtonLoadMore>
       <ButtonBackTop />
       <Footer />
