@@ -14,7 +14,7 @@
 }
 
 body {
-  background: #0b0e22;
+  background: #eee;
   background-attachment: fixed;
   font-family: var(--fonte-corpo);
 }
@@ -29,9 +29,13 @@ body img {
 }
 
 .post {
-  background: #131738;
-  color: #fff;
+  background: white;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  color: #222;
   border-radius: 5px;
+  -webkit-box-shadow: 4px 4px 0px 0 #dfdfdf;
+          box-shadow: 4px 4px 0px 0 #dfdfdf;
 }
 
 .post img {

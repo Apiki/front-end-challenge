@@ -15,7 +15,7 @@ const Inicial = () => {
   const [paginaAtual, setPaginaAtual] = useState(2);
 
   const handleMorePosts = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     setPaginaAtual(paginaAtual + 1);
 
     setPostsURL(
@@ -26,6 +26,7 @@ const Inicial = () => {
   useEffect(() => {
     const fetchPostagens = async () => {
       const response = await axios.get(postsURL);
+      // console.log(response);
       setPostagens(response.data);
       setTotalPostagens(response.headers["x-wp-total"]);
       setTotalPaginas(response.headers["x-wp-totalpages"]);
