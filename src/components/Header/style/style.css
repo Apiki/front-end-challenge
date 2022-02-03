@@ -46,7 +46,8 @@ header {
 }
 
 header h1 {
-  font-size: 16px;
+  font-family: var(--fonte-alternativa);
+  font-size: 18px;
 }
 
 header h1 a {

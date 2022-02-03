@@ -26,13 +26,14 @@ const Inicial = () => {
         .then((response) => {
           setPostagens(response.data);
         });
+
+      console.log(postagens);
     }
   };
 
   useEffect(() => {
     const fetchPostagens = async () => {
       const response = await axios.get(postsURL);
-      // console.log(response);
       setPostagens(response.data);
       setTotalPostagens(response.headers["x-wp-total"]);
       setTotalPaginas(response.headers["x-wp-totalpages"]);
@@ -48,7 +49,7 @@ const Inicial = () => {
       <section id="site-intro">
         <h2>{totalPostagens} postagens nesta categoria</h2>
         <p>
-          Página {paginaAtual} de {totalPaginas}
+          Página <b>{paginaAtual}</b> de {totalPaginas}
         </p>
       </section>
 

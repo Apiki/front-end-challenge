@@ -13,8 +13,8 @@
   z-index: 1
 
 #container::before
-  box-shadow: -4px -4px 0px 0 #dfdfdf
   content: ""
+  box-shadow: -4px -4px 0px 0 #dfdfdf
   width: calc(100% + 200px)
   height: 250px
   background: #eee
@@ -28,29 +28,27 @@
 #site-intro
   position: relative
   z-index: -1
-  padding: 20px 0 170px 0
+  padding: 10px 0 180px 0
   text-align: center
 
   h2
-    font-family: var(--fonte-alternativa)
-    margin: 0 0 10px 0
+    // font: 30px var(--fonte-alternativa)
+    margin: 0 0 10px
 
 #navigation
-  border-top: 2px solid #FFA800
   padding: 40px 0 0 0 !important
   margin: 0 var(--global-margin) 80px var(--global-margin) !important
   @include horizontal-list
 
-  ul
-    display: flex
-    justify-content: center
+  li
+    display: block
 
-    li
-      flex: 0 0 calc(100% / 3 - 30px)
-
-      a
-        background: #fff
-        padding: 15px 20px
-        border-radius: 5px
-        display: block
-        text-align: center
+    a
+      background: #fff
+      color: #222
+      font-weight: 600
+      font-size: 18px
+      padding: 15px 20px
+      border-radius: 5px
+      display: block
+      text-align: right
