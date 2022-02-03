@@ -2,17 +2,16 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import Post from "../../components/Post";
-import api from "../../services/api";
 import "./style/style.css";
 
 const Inicial = () => {
-  const [postsURL, setPostsURL] = useState(
-    "https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518"
-  );
+  const postsURL =
+    "https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518";
   const [postagens, setPostagens] = useState([]);
   const [totalPostagens, setTotalPostagens] = useState();
   const [totalPaginas, setTotalPaginas] = useState();
   const [paginaAtual, setPaginaAtual] = useState(1);
+  const [categoria, setCategoria] = useState();
 
   const handleMorePosts = (e) => {
     // e.preventDefault();
@@ -26,14 +25,14 @@ const Inicial = () => {
         .then((response) => {
           setPostagens(response.data);
         });
-
-      console.log(postagens);
     }
   };
 
   useEffect(() => {
     const fetchPostagens = async () => {
       const response = await axios.get(postsURL);
+
+      setCategoria(response.data[0]._embedded["wp:term"][0][0].slug);
       setPostagens(response.data);
       setTotalPostagens(response.headers["x-wp-total"]);
       setTotalPaginas(response.headers["x-wp-totalpages"]);
@@ -47,7 +46,10 @@ const Inicial = () => {
       <Header />
 
       <section id="site-intro">
-        <h2>{totalPostagens} postagens nesta categoria</h2>
+        <h2>
+          {totalPostagens} postagens na categoria{" "}
+          <span className="text-with-shadow">{categoria}</span>
+        </h2>
         <p>
           Página <b>{paginaAtual}</b> de {totalPaginas}
         </p>

@@ -6,16 +6,31 @@
   color: #222
   border-radius: 5px
   box-shadow: 4px 4px 0px 0 #dfdfdf
+  position: relative
 
   a
     color: #333
+
+  a.post__author
+    position: absolute
+    width: 100%
+    display: flex
+    justify-content: flex-end
+    top: 0
+    right: 0
+    margin: 20px 15px 0 0
+
+    img
+      width: 8%
+      border-radius: 100%
+      border: 3px solid rgba(255, 255, 255, 0.3)
 
   img
     display: block
     border-radius: 5px 5px 0 0
 
   .post__info
-    padding: 25px
+    padding: 25px 25px 65px 25px
     border-top: 2px solid #ea00d9
 
     h2
@@ -26,3 +41,16 @@
       display: block
       margin: 10px 0 0 0
       font-size: 15px
+
+    .post__info__date
+      position: absolute
+      font-size: 13px
+      left: 0
+      bottom: 0
+      font-weight: 600
+      margin: 0 0 25px 25px
+      opacity: 0.7
+
+      i
+        display: inline-block
+        margin: 0 5px 0 0
