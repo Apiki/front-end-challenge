@@ -69,3 +69,17 @@
     a:hover
       top: -10px
       box-shadow: inset 0 -100px 0 0 rgba(0, 0, 0, 0.1)
+
+/* Breakpoints */
+// Tablet
+@media screen and (max-width: 992px)
+  #container
+    grid-template-columns: repeat(2, 1fr)
+
+    .post:hover
+      top: 0
+
+// Celular
+@media screen and (max-width: 500px)
+  #container,
+    grid-template-columns: 1fr

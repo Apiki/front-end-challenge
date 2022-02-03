@@ -169,7 +169,7 @@ const Interna = () => {
       </>
     );
   } else {
-    return null;
+    return <h1>Conteudo não encontrado</h1>;
   }
 };
 

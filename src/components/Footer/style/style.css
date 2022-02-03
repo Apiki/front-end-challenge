@@ -2,10 +2,12 @@
 :root {
   --cor-um: #111;
   --cor-dois: #dfdfdf;
+  --cor-tres: #fff;
   --cor-realce: #e7aa30;
   --global-margin: 5%;
   --fonte-corpo: 'Open Sans', sans-serif;
   --fonte-alternativa: 'Chakra Petch';
+  --sombra-padrao: 0 1px 4px 1px rgba(10, 10, 10, 0.1);
 }
 
 * {
@@ -93,5 +95,36 @@ body img {
   position: absolute;
   left: 0;
   z-index: -1;
+}
+
+/* Breakpoints */
+@media screen and (max-width: 992px) {
+  #footer ul {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #footer.single {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #footer h2 {
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
+  #footer ul {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 /*# sourceMappingURL=style.css.map */

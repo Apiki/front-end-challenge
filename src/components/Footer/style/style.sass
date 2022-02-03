@@ -33,3 +33,29 @@
   position: absolute
   left: 0
   z-index: -1
+
+/* Breakpoints */
+// Tablet
+@media screen and (max-width: 992px)
+  #footer
+    ul
+      grid-template-columns: repeat(2, 1fr)
+
+// Small Tablet
+@media screen and (max-width: 700px)
+
+  #footer.single
+    margin: 0
+
+// Celular
+@media screen and (max-width: 500px)
+
+  #footer
+    flex-direction: column
+
+    h2
+      margin: 0 0 20px 0
+      text-align: center
+
+    ul
+      grid-template-columns: 1fr

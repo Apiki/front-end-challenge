@@ -202,4 +202,33 @@ header.single {
 #footer.single::before {
   display: none;
 }
+
+/* Breakpoints */
+@media screen and (max-width: 700px) {
+  #post .post__image {
+    position: relative;
+    width: unset;
+    background-size: cover;
+    max-height: 40vh;
+  }
+  #post .post__image .title h1 {
+    text-align: center;
+  }
+  #post .post__info {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #footer.single {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #post .post__image {
+    position: relative;
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=style.css.map */
