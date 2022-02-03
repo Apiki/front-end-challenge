@@ -42,8 +42,6 @@ const Interna = () => {
       textPostagemContainer.innerHTML = textoPostagem;
     }, 300);
 
-    console.log(post[0].link);
-
     return (
       <>
         <Header single={true} />
