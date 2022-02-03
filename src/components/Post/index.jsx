@@ -12,12 +12,13 @@ const Post = (props) => {
 
   return (
     <div className="post">
-      <a href={"/" + props.data.slug}> </a>
-      <img src={image} alt="" />
-      <div className="post__info">
-        <h2>{title}</h2>
-        <p>{excerpt}</p>
-      </div>
+      <a href={"/" + props.data.slug}>
+        <img src={image} alt="" />
+        <div className="post__info">
+          <h2>{title}</h2>
+          <p>{excerpt}</p>
+        </div>
+      </a>
     </div>
   );
 };

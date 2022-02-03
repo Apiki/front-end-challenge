@@ -68,4 +68,9 @@ header nav a {
   margin: 0 0 0 20px;
   color: #444;
 }
+
+header.single {
+  padding: 30px var(--global-margin);
+  margin: 0;
+}
 /*# sourceMappingURL=style.css.map */

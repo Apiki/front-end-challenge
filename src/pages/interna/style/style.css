@@ -1,1 +1,31 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,500;0,600;1,300;1,500;1,600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Press+Start+2P&display=swap");
+:root {
+  --cor-um: #222;
+  --global-margin: 5%;
+  --fonte-corpo: 'Open Sans', sans-serif;
+  --fonte-alternativa: 'Chakra Petch';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  background-attachment: fixed;
+  font-family: var(--fonte-corpo);
+}
+
+body a {
+  text-decoration: none;
+}
+
+body img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: -4px;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,9 +1,9 @@
 import React from "react";
 import "./style/style.css";
 
-const Header = () => {
+const Header = (props) => {
   return (
-    <header>
+    <header className={props.single ? "single" : null}>
       <h1>
         <a href="/">New Dev</a>
       </h1>

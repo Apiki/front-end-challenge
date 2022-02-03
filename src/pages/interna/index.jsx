@@ -20,10 +20,18 @@ const Interna = () => {
   }, []);
 
   if (post.length != 0) {
+    const image = post[0]._embedded["wp:featuredmedia"][0].source_url;
+    const altTitle = post[0]._embedded["wp:featuredmedia"][0].alt_text;
     return (
       <>
-        <Header />
-        <h1>Achei</h1>
+        <Header single={true} />
+
+        <div id="single">
+          <div className="left-container">
+            <img src={image} alt={altTitle} />
+          </div>
+          <div className="right-container"></div>
+        </div>
       </>
     );
   } else {
