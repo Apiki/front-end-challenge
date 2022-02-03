@@ -1,1 +1,21 @@
 @import '../../../style/global.sass'
+
+#footer
+  @include horizontal-list
+  background: var(--cor-um)
+  display: flex
+
+  h2
+    color: var(--cor-realce)
+    flex: 0 0 30%
+
+  ul
+    flex: 0 0 70%
+    margin: 0
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 20px
+
+    a
+      color: var(--cor-dois)
+      // margin: 0 20px 0 0

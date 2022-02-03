@@ -1,9 +1,10 @@
 import React from "react";
+import "./style/style.css";
 
-const Footer = () => {
+const Footer = (props) => {
   return (
-    <div id="footer">
-      <h1>New Dev</h1>
+    <div id="footer" className={props.single ? "single" : {}}>
+      <h2>New Dev</h2>
       <ul>
         <li>
           <a href="">Legal</a>
@@ -16,18 +17,6 @@ const Footer = () => {
         </li>
         <li>
           <a href="">Trabalhe Conosco</a>
-        </li>
-        <li>
-          <a href=""></a>
-        </li>
-        <li>
-          <a href=""></a>
-        </li>
-        <li>
-          <a href=""></a>
-        </li>
-        <li>
-          <a href=""></a>
         </li>
       </ul>
     </div>

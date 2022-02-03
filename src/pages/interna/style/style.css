@@ -43,29 +43,25 @@ body img {
 }
 
 header.single {
-  position: relative;
+  position: fixed;
+  top: 0;
 }
 
-#single {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+#post {
+  margin: 50px auto 0 auto;
 }
 
-#single .left-container {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 40%;
-          flex: 0 0 40%;
-  position: relative;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+#post .post__image {
+  position: fixed;
+  height: calc(100vh - 50px);
+  width: 35%;
 }
 
-#single .left-container .title {
+#post .post__image .title {
   position: absolute;
   bottom: 0;
   height: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,75 +72,103 @@ header.single {
       -ms-flex-pack: end;
           justify-content: flex-end;
   padding: 7%;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#111), to(transparent));
-  background-image: linear-gradient(to top, #111, transparent);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#000), to(transparent));
+  background-image: linear-gradient(to top, #000, transparent);
 }
 
-#single .left-container .title h1 {
+#post .post__image .title h1 {
   text-align: right;
   color: #fff;
   font-size: 25px;
 }
 
-#single .post__info {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 60%;
-          flex: 1 0 60%;
+#post .post__info {
+  width: calc(70% - 0);
   background: #fff;
   padding: 3%;
+  margin: 50px 0 0 35%;
 }
 
-#single .post__info p {
+#post .post__info .post__info__header {
+  padding: 0 0 10px 0;
+  margin: 0 0 30px 0;
+  border-bottom: 1px solid var(--cor-dois);
+}
+
+#post .post__info .post__info__header .post__info__author {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--cor-um);
+  margin: 10px 0 0 0;
+}
+
+#post .post__info .post__info__header .post__info__author img {
+  border-radius: 100%;
+  width: 25px;
+  display: inline-block;
+  margin: 0 10px 0 0;
+}
+
+#post .post__info .post__content p {
   margin-bottom: 20px;
 }
 
-#single .post__info h2,
-#single .post__info h3,
-#single .post__info h4 {
+#post .post__info .post__content h2,
+#post .post__info .post__content h3,
+#post .post__info .post__content h4 {
   margin: 30px 0 15px 0;
 }
 
-#single .post__info h2,
-#single .post__info h3 {
+#post .post__info .post__content h2,
+#post .post__info .post__content h3 {
   font: 25px var(--fonte-alternativa);
 }
 
-#single .post__info table {
+#post .post__info .post__content table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
   margin-bottom: 20px;
 }
 
-#single .post__info table thead {
+#post .post__info .post__content table thead {
   background: #eee;
 }
 
-#single .post__info table thead th {
+#post .post__info .post__content table thead th {
   padding: 15px 10px;
 }
 
-#single .post__info table td, #single .post__info table th {
+#post .post__info .post__content table td, #post .post__info .post__content table th {
   border: 1px solid #dfdfdf;
   text-align: left;
   padding: 10px;
 }
 
-#single .post__info table tr:nth-child(even) {
+#post .post__info .post__content table tr:nth-child(even) {
   background-color: #eee;
 }
 
-#single .post__info img {
+#post .post__info .post__content img {
   display: block;
   margin: 0 auto 20px auto;
 }
 
-#single .post__info ul {
+#post .post__info .post__content ul {
   margin: 0 0 20px 40px;
 }
 
-#single .post__info a {
+#post .post__info .post__content a {
   border-bottom: 1px solid var(--cor-dois);
   color: var(--cor-um);
+}
+
+#footer.single {
+  margin: 0 0 0 35%;
+  padding: 3%;
 }
 /*# sourceMappingURL=style.css.map */
