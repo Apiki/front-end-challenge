@@ -39,7 +39,7 @@ body img {
 }
 
 #container {
-  background: #fff;
+  background: #eee;
   padding: 0px var(--global-margin) var(--global-margin) var(--global-margin);
   display: -ms-grid;
   display: grid;
@@ -52,9 +52,10 @@ body img {
 
 #container::before {
   content: "";
+  border-top: 1px solid #dfdfdf;
   width: calc(100% + 200px);
   height: 250px;
-  background: #fff;
+  background: #eee;
   border-radius: 100% 100% 0 0;
   margin: -100px -100px 0 -100px;
   position: absolute;
@@ -64,9 +65,9 @@ body img {
 }
 
 #site-intro {
-  background: radial-gradient(circle at 100% 80%, #fcc861, transparent 10%), radial-gradient(circle at 80% 50%, #ffaded99, transparent 45%), radial-gradient(circle at 0% 100%, #daf5ff, #daf5ff, transparent 15%);
+  background: #fff;
   z-index: -1;
-  padding: 150px 0 170px 0;
+  padding: 130px 0 170px 0;
   text-align: center;
 }
 

@@ -35,8 +35,8 @@ body img {
 }
 
 header {
-  padding: 50px var(--global-margin) 0 var(--global-margin);
-  margin: 0 0 40px 0;
+  padding: 20px var(--global-margin);
+  margin: 0 0 30px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,16 +48,17 @@ header {
           align-items: flex-start;
   z-index: 99;
   position: absolute;
-  height: 250px;
+  background: #222;
+  width: 100%;
+}
+
+header a {
+  color: #fff;
 }
 
 header h1 {
   font-family: var(--fonte-alternativa);
   font-size: 18px;
-}
-
-header h1 a {
-  color: #222;
 }
 
 header nav {
@@ -72,7 +73,7 @@ header nav li {
 
 header nav a {
   margin: 0 0 0 20px;
-  color: #444;
+  opacity: 0.8;
 }
 
 header.single {
