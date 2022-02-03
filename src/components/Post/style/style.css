@@ -14,7 +14,7 @@
 }
 
 body {
-  background: #eee;
+  background: #fff;
   background-attachment: fixed;
   font-family: var(--fonte-corpo);
 }
@@ -26,6 +26,7 @@ body a {
 body img {
   max-width: 100%;
   height: auto;
+  margin-bottom: -4px;
 }
 
 .post {

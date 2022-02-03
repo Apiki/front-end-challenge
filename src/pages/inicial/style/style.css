@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,500;0,600;1,300;1,500;1,600&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,500;0,600;1,300;1,500;1,600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Press+Start+2P&display=swap");
 :root {
   --cor-um: #222;
   --global-margin: 5%;
@@ -14,7 +14,7 @@
 }
 
 body {
-  background: #eee;
+  background: #fff;
   background-attachment: fixed;
   font-family: var(--fonte-corpo);
 }
@@ -26,15 +26,50 @@ body a {
 body img {
   max-width: 100%;
   height: auto;
+  margin-bottom: -4px;
+}
+
+#main {
+  overflow: hidden;
 }
 
 #container {
-  margin: 30px var(--global-margin) var(--global-margin) var(--global-margin);
+  background: #eee;
+  padding: 0px var(--global-margin) var(--global-margin) var(--global-margin);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+#container::before {
+  -webkit-box-shadow: -4px -4px 0px 0 #dfdfdf;
+          box-shadow: -4px -4px 0px 0 #dfdfdf;
+  content: "";
+  width: calc(100% + 200px);
+  height: 250px;
+  background: #eee;
+  border-radius: 100% 100% 0 0;
+  margin: -100px -100px 0 -100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+#site-intro {
+  position: relative;
+  z-index: -1;
+  padding: 20px 0 170px 0;
+  text-align: center;
+}
+
+#site-intro h2 {
+  font-family: var(--fonte-alternativa);
+  margin: 0 0 10px 0;
 }
 
 #navigation {

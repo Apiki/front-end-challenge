@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,500;0,600;1,300;1,500;1,600&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,500;0,600;1,300;1,500;1,600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Press+Start+2P&display=swap");
 :root {
   --cor-um: #222;
   --global-margin: 5%;
@@ -14,7 +14,7 @@
 }
 
 body {
-  background: #eee;
+  background: #fff;
   background-attachment: fixed;
   font-family: var(--fonte-corpo);
 }
@@ -26,5 +26,6 @@ body a {
 body img {
   max-width: 100%;
   height: auto;
+  margin-bottom: -4px;
 }
 /*# sourceMappingURL=global.css.map */

@@ -12,15 +12,21 @@ const Inicial = () => {
   const [postagens, setPostagens] = useState([]);
   const [totalPostagens, setTotalPostagens] = useState();
   const [totalPaginas, setTotalPaginas] = useState();
-  const [paginaAtual, setPaginaAtual] = useState(2);
+  const [paginaAtual, setPaginaAtual] = useState(1);
 
   const handleMorePosts = (e) => {
     // e.preventDefault();
-    setPaginaAtual(paginaAtual + 1);
+    if (paginaAtual <= totalPaginas) {
+      setPaginaAtual(paginaAtual + 1);
 
-    setPostsURL(
-      `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=${paginaAtual}`
-    );
+      axios
+        .get(
+          `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=${paginaAtual}`
+        )
+        .then((response) => {
+          setPostagens(response.data);
+        });
+    }
   };
 
   useEffect(() => {
@@ -33,11 +39,19 @@ const Inicial = () => {
     };
 
     fetchPostagens();
-  }, [postagens]);
+  }, []);
 
   return (
-    <>
+    <div id="main">
       <Header />
+
+      <section id="site-intro">
+        <h2>{totalPostagens} postagens nesta categoria</h2>
+        <p>
+          Página {paginaAtual} de {totalPaginas}
+        </p>
+      </section>
+
       <section id="container">
         {postagens.map((postagem, index) => (
           <Post key={index} data={postagem} />
@@ -53,7 +67,7 @@ const Inicial = () => {
           </li>
         </ul>
       </div>
-    </>
+    </div>
   );
 };
 

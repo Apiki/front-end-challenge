@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,500;0,600;1,300;1,500;1,600&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,500;0,600;1,300;1,500;1,600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Press+Start+2P&display=swap");
 :root {
   --cor-um: #222;
   --global-margin: 5%;
@@ -14,7 +14,7 @@
 }
 
 body {
-  background: #0b0e22;
+  background: #fff;
   background-attachment: fixed;
   font-family: var(--fonte-corpo);
 }
@@ -26,12 +26,11 @@ body a {
 body img {
   max-width: 100%;
   height: auto;
+  margin-bottom: -4px;
 }
 
 header {
-  background: #131738;
-  border-bottom: 2px solid #FFA800;
-  padding: 15px var(--global-margin);
+  padding: 50px var(--global-margin) 0 var(--global-margin);
   margin: 0 0 40px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -42,14 +41,16 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 99;
+  position: relative;
 }
 
 header h1 {
-  font-family: var(--fonte-alternativa);
+  font-size: 16px;
 }
 
 header h1 a {
-  color: #fff;
+  color: #222;
 }
 
 header nav {
@@ -63,7 +64,7 @@ header nav li {
 }
 
 header nav a {
-  margin: 0 0 0 15px;
-  color: #fff;
+  margin: 0 0 0 20px;
+  color: #444;
 }
 /*# sourceMappingURL=style.css.map */

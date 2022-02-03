@@ -1,22 +1,26 @@
 @import '../../../style/global.sass'
 
 header
-  background: #131738
-  border-bottom: 2px solid #FFA800
-  padding: 15px var(--global-margin)
+  // background: #222
+  // border-bottom: 2px solid #FFA800
+  padding: 50px var(--global-margin) 0 var(--global-margin)
   margin: 0 0 40px 0
   display: flex
   justify-content: space-between
   align-items: center
+  z-index: 99
+  position: relative
 
   h1
-    font-family: var(--fonte-alternativa)
+    // font-family: var(--fonte-alternativa)
+    font-size: 16px
 
     a
-      color: #fff
+      color: #222
 
   nav
     @include horizontal-list
+
     a
-      margin: 0 0 0 15px
-      color: #fff
+      margin: 0 0 0 20px
+      color: #444

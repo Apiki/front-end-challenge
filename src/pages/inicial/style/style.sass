@@ -1,10 +1,39 @@
 @import ../../../style/global.sass
 
+#main
+  overflow: hidden
+
 #container
-  margin: 30px var(--global-margin) var(--global-margin) var(--global-margin)
+  background: #eee
+  padding: 0px var(--global-margin) var(--global-margin) var(--global-margin)
   display: grid
   grid-template-columns: repeat(3, 1fr)
   gap: 40px
+  position: relative
+  z-index: 1
+
+#container::before
+  box-shadow: -4px -4px 0px 0 #dfdfdf
+  content: ""
+  width: calc(100% + 200px)
+  height: 250px
+  background: #eee
+  border-radius: 100% 100% 0 0
+  margin: -100px -100px 0 -100px
+  position: absolute
+  left: 0
+  top: 0
+  z-index: 0
+
+#site-intro
+  position: relative
+  z-index: -1
+  padding: 20px 0 170px 0
+  text-align: center
+
+  h2
+    font-family: var(--fonte-alternativa)
+    margin: 0 0 10px 0
 
 #navigation
   border-top: 2px solid #FFA800
