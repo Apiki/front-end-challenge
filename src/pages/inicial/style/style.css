@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,500;0,600;1,300;1,500;1,600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Press+Start+2P&display=swap");
 :root {
   --cor-um: #222;
+  --cor-dois: #dfdfdf;
+  --cor-realce: #f1d296;
   --global-margin: 5%;
   --fonte-corpo: 'Open Sans', sans-serif;
   --fonte-alternativa: 'Chakra Petch';
@@ -14,7 +16,7 @@
 }
 
 body {
-  background: #fff;
+  background: #eee;
   background-attachment: fixed;
   font-family: var(--fonte-corpo);
 }
@@ -34,12 +36,17 @@ body img {
   transition: all 0.4s ease-in-out;
 }
 
+.text-underlined, #site-intro h2 .categoria {
+  boder-bottom: 1px solid var(--cor-realce);
+  display: inline-block;
+  padding-bottom: 2px;
+}
+
 #main {
   overflow: hidden;
 }
 
 #container {
-  background: #eee;
   padding: 0px var(--global-margin) var(--global-margin) var(--global-margin);
   display: -ms-grid;
   display: grid;
@@ -48,55 +55,65 @@ body img {
   gap: 40px;
   position: relative;
   z-index: 1;
-}
-
-#container::before {
-  content: "";
-  border-top: 1px solid #dfdfdf;
-  width: calc(100% + 200px);
-  height: 250px;
-  background: #eee;
-  border-radius: 100% 100% 0 0;
-  margin: -100px -100px 0 -100px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 0;
+  top: -90px;
+  margin-bottom: -90px;
 }
 
 #site-intro {
-  background: #fff;
-  z-index: -1;
-  padding: 130px 0 170px 0;
+  z-index: 1;
+  padding: 130px 0 140px 0;
   text-align: center;
+  position: relative;
+  min-height: 350px;
+}
+
+#site-intro * {
+  position: relative;
+  z-index: 2;
 }
 
 #site-intro h2 {
-  margin: 0 0 10px;
+  margin: 0 0 15px 0;
 }
 
-#navigation {
-  padding: 40px 0 0 0 !important;
-  margin: 0 var(--global-margin) 80px var(--global-margin) !important;
+#site-intro p {
+  font-size: 18px;
+}
+
+#site-intro::before {
+  top: 0;
+  content: "";
+  width: calc(100% + 200px);
+  height: 350px;
+  background: #fff;
+  border-radius: 0 0 100% 100%;
+  margin: 0px -100px 0 -100px;
+  position: absolute;
+  left: 0;
+}
+
+#pagination {
+  margin: 0px var(--global-margin) 80px var(--global-margin) !important;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-#navigation li {
+#pagination li {
   display: inline-block;
 }
 
-#navigation li {
+#pagination li {
   display: block;
 }
 
-#navigation li a {
+#pagination li a {
   background: #fff;
   color: #222;
+  border: 1px solid #dfdfdf;
   font-weight: 600;
   font-size: 18px;
-  padding: 15px 20px;
+  padding: 20px;
   border-radius: 5px;
   display: block;
   text-align: right;

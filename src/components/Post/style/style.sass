@@ -31,7 +31,7 @@
 
   .post__info
     padding: 25px 25px 65px 25px
-    border-top: 2px solid #ea00d9
+    border-top: 2px solid var(--cor-realce)
 
     h2
       font-size: 20px
@@ -44,17 +44,30 @@
 
     .post__info__date
       position: absolute
-      font-size: 13px
-      left: 0
+      font-size: 11px
+      right: 0
       bottom: 0
-      font-weight: 600
-      margin: 0 0 25px 25px
+      font-weight: 700
+      margin: 0 0 25px -20px
       opacity: 0.7
+      border-radius: 2px 0 0 2px
+      background: #dfdfdf
+      padding: 4px 12px
+      font-family: 'Montserrat'
 
       i
-        display: inline-block
+        width: 0
+        height: 0
+        overflow: hidden
         margin: 0 5px 0 0
+        @extend .transition-4ms
 
 .post:hover
   outline-color: transparent
-  box-shadow: 6px 6px 0px 0 #FFA800, -6px -6px 0px 0 #ea00d9
+  box-shadow: 6px 6px 0px 0 var(--cor-realce)
+
+  .post__info__date
+    i
+      width: auto
+      height: auto
+      display: inline-block

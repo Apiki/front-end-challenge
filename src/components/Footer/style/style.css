@@ -36,53 +36,8 @@ body img {
   transition: all 0.4s ease-in-out;
 }
 
-.text-underlined {
-  -webkit-text-decoration: underline solid var(--cor-realce);
-          text-decoration: underline solid var(--cor-realce);
-}
-
-header {
-  padding: 20px var(--global-margin);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  z-index: 99;
-  position: absolute;
-  background: #222;
-  border-bottom: 2px solid #f1d296;
-  width: 100%;
-}
-
-header a {
-  color: #fff;
-}
-
-header h1 {
-  font-size: 18px;
-}
-
-header h1:first-letter {
-  color: #f1d296;
-}
-
-header nav {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-header nav li {
-  display: inline-block;
-}
-
-header nav a {
-  margin: 0 0 0 20px;
-  opacity: 0.8;
+.text-with-shadow {
+  -webkit-box-shadow: inset 0 -15px 0 0 var(--cor-realce);
+          box-shadow: inset 0 -15px 0 0 var(--cor-realce);
 }
 /*# sourceMappingURL=style.css.map */

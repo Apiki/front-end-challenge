@@ -10,7 +10,7 @@ const Post = (props) => {
   const data = props.data.date.slice(0, 10);
   const autor = props.data._embedded.author[0];
 
-  console.log(autor.link);
+  console.log(autor);
 
   return (
     <div className="post">
@@ -22,6 +22,7 @@ const Post = (props) => {
           href={autor.link ? autor.link : {}}
           className="post__author"
           target="_blank"
+          title={"Publicado por " + autor.name}
         >
           <img src={autor.avatar_urls[48]} alt="" />
         </a>

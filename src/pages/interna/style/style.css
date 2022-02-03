@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,500;0,600;1,300;1,500;1,600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Press+Start+2P&display=swap");
 :root {
   --cor-um: #222;
+  --cor-dois: #dfdfdf;
+  --cor-realce: #f1d296;
   --global-margin: 5%;
   --fonte-corpo: 'Open Sans', sans-serif;
   --fonte-alternativa: 'Chakra Petch';
@@ -14,7 +16,7 @@
 }
 
 body {
-  background: #fff;
+  background: #eee;
   background-attachment: fixed;
   font-family: var(--fonte-corpo);
 }
@@ -27,5 +29,122 @@ body img {
   max-width: 100%;
   height: auto;
   margin-bottom: -4px;
+}
+
+.transition-4ms {
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.text-underlined {
+  boder-bottom: 1px solid var(--cor-realce);
+  display: inline-block;
+  padding-bottom: 2px;
+}
+
+header.single {
+  position: relative;
+}
+
+#single {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#single .left-container {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+#single .left-container .title {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 7%;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#111), to(transparent));
+  background-image: linear-gradient(to top, #111, transparent);
+}
+
+#single .left-container .title h1 {
+  text-align: right;
+  color: #fff;
+  font-size: 25px;
+}
+
+#single .post__info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 60%;
+          flex: 1 0 60%;
+  background: #fff;
+  padding: 3%;
+}
+
+#single .post__info p {
+  margin-bottom: 20px;
+}
+
+#single .post__info h2,
+#single .post__info h3,
+#single .post__info h4 {
+  margin: 30px 0 15px 0;
+}
+
+#single .post__info h2,
+#single .post__info h3 {
+  font: 25px var(--fonte-alternativa);
+}
+
+#single .post__info table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#single .post__info table thead {
+  background: #eee;
+}
+
+#single .post__info table thead th {
+  padding: 15px 10px;
+}
+
+#single .post__info table td, #single .post__info table th {
+  border: 1px solid #dfdfdf;
+  text-align: left;
+  padding: 10px;
+}
+
+#single .post__info table tr:nth-child(even) {
+  background-color: #eee;
+}
+
+#single .post__info img {
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+#single .post__info ul {
+  margin: 0 0 20px 40px;
+}
+
+#single .post__info a {
+  border-bottom: 1px solid var(--cor-dois);
+  color: var(--cor-um);
 }
 /*# sourceMappingURL=style.css.map */

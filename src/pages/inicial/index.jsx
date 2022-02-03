@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Post from "../../components/Post";
 import "./style/style.css";
@@ -48,7 +49,7 @@ const Inicial = () => {
       <section id="site-intro">
         <h2>
           {totalPostagens} postagens na categoria{" "}
-          <span className="text-with-shadow">{categoria}</span>
+          <span className="text-underlined">{categoria}</span>
         </h2>
         <p>
           Página <b>{paginaAtual}</b> de {totalPaginas}
@@ -61,7 +62,7 @@ const Inicial = () => {
         ))}
       </section>
 
-      <div id="navigation">
+      <div id="pagination">
         <ul>
           <li>
             <a href="#" className="next" onClick={handleMorePosts}>
@@ -70,6 +71,8 @@ const Inicial = () => {
           </li>
         </ul>
       </div>
+
+      <Footer />
     </div>
   );
 };
