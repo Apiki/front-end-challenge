@@ -26,6 +26,7 @@ const Interna = () => {
     const textoPostagem = post[0].content.rendered;
     const titulo = post[0].title.rendered;
     const autor = post[0]._embedded.author[0];
+    const permalink = post[0].link;
 
     setTimeout(() => {
       const textPostagemContainer = document
@@ -41,6 +42,8 @@ const Interna = () => {
       textPostagemContainer.innerHTML = textoPostagem;
     }, 300);
 
+    console.log(post[0].link);
+
     return (
       <>
         <Header single={true} />
@@ -53,7 +56,6 @@ const Interna = () => {
           </div>
           <div className="post__info">
             <div className="post__info__header">
-              {/* <h2>{titulo}</h2> */}
               {autor.avatar_urls != undefined ? (
                 <a
                   href={autor.link ? autor.link : {}}
@@ -65,6 +67,99 @@ const Interna = () => {
                   {autor.name}
                 </a>
               ) : null}
+
+              <ul className="post__info__header__share-buttons">
+                <li>
+                  <a
+                    className="share-facebook"
+                    href={
+                      "https://www.facebook.com/sharer/sharer.php?u=" +
+                      permalink
+                    }
+                    title="Share on Facebook"
+                    target="_blank"
+                  >
+                    <i className="fab fa-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="share-twitter"
+                    href={
+                      "https://twitter.com/intent/tweet?url=" +
+                      permalink +
+                      "&text=" +
+                      titulo
+                    }
+                    title="Tweet this"
+                    target="_blank"
+                  >
+                    <i className="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="share-pinterest"
+                    href={
+                      "//pinterest.com/pin/create/%20button?url=" + permalink
+                    }
+                    target="_blank"
+                    title="Pin it"
+                  >
+                    <i className="fab fa-pinterest"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="share-linkedin"
+                    href={
+                      "http://www.linkedin.com/shareArticle?mini=true&url=" +
+                      permalink +
+                      "&title=" +
+                      titulo
+                    }
+                    title="Share on Linkedin"
+                    target="_blank"
+                  >
+                    <i className="fab fa-linkedin"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="share-whatsapp"
+                    href={
+                      "https://api.whatsapp.com/send?text=" +
+                      titulo +
+                      ": " +
+                      permalink
+                    }
+                    data-action="share/whatsapp/share"
+                    title="Share on Whatsapp"
+                    target="_blank"
+                  >
+                    <i className="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="share-email"
+                    href={
+                      "mailto:type%20email%20address%20here?subject=" +
+                      titulo +
+                      " de " +
+                      autor.name +
+                      "&body=" +
+                      titulo +
+                      " - " +
+                      permalink
+                    }
+                    title="Email to a friend/colleague"
+                    target="_blank"
+                  >
+                    <i className="fas fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
             <div className="post__content"></div>
           </div>

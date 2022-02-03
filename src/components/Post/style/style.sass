@@ -5,8 +5,8 @@
   color: #222
   border-radius: 5px
   overflow: hidden
-  outline: 1px solid #dfdfdf
   position: relative
+  top: 0
   @extend .transition-4ms
 
   a
@@ -64,7 +64,8 @@
 
 .post:hover
   outline-color: transparent
-  box-shadow: 6px 6px 0px 0 var(--cor-realce)
+  box-shadow: var(--sombra-padrao)
+  top: -10px
 
   .post__info__date
     i

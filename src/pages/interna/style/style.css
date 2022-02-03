@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,500;0,600;1,300;1,500;1,600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Press+Start+2P&display=swap");
 :root {
-  --cor-um: #222;
+  --cor-um: #111;
   --cor-dois: #dfdfdf;
-  --cor-realce: #f1d296;
+  --cor-tres: #fff;
+  --cor-realce: #e7aa30;
   --global-margin: 5%;
   --fonte-corpo: 'Open Sans', sans-serif;
   --fonte-alternativa: 'Chakra Petch';
+  --sombra-padrao: 0 1px 4px 1px rgba(10, 10, 10, 0.1);
 }
 
 * {
@@ -83,16 +85,24 @@ header.single {
 }
 
 #post .post__info {
-  width: calc(70% - 0);
   background: #fff;
   padding: 3%;
   margin: 50px 0 0 35%;
 }
 
 #post .post__info .post__info__header {
-  padding: 0 0 10px 0;
+  padding: 0 0 15px 0;
   margin: 0 0 30px 0;
   border-bottom: 1px solid var(--cor-dois);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #post .post__info .post__info__header .post__info__author {
@@ -111,6 +121,23 @@ header.single {
   width: 25px;
   display: inline-block;
   margin: 0 10px 0 0;
+}
+
+#post .post__info .post__info__header .post__info__header__share-buttons {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#post .post__info .post__info__header .post__info__header__share-buttons li {
+  display: inline-block;
+}
+
+#post .post__info .post__info__header .post__info__header__share-buttons a {
+  color: var(--cor-um);
+  font-size: 18px;
+  margin: 0 0 0 10px;
+  opacity: 0.5;
 }
 
 #post .post__info .post__content p {
@@ -169,6 +196,10 @@ header.single {
 
 #footer.single {
   margin: 0 0 0 35%;
-  padding: 3%;
+  padding: 40px 3%;
+}
+
+#footer.single::before {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

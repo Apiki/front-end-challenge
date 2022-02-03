@@ -5,11 +5,7 @@ header.single
   top: 0
 
 #post
-  // display: flex
-  // max-width: 1000px
   margin: 50px auto 0 auto
-  // overflow: hidden
-  // border-radius: 5px
 
   .post__image
     position: fixed
@@ -33,16 +29,17 @@ header.single
         font-size: 25px
 
   .post__info
-    width: calc(70% - 0)
     background: #fff
     padding: 3%
     margin: 50px 0 0 35%
-    // text-align: justify
 
     .post__info__header
-      padding: 0 0 10px 0
+      padding: 0 0 15px 0
       margin: 0 0 30px 0
       border-bottom: 1px solid var(--cor-dois)
+      display: flex
+      justify-content: space-between
+      align-items: center
 
       .post__info__author
         display: inline-flex
@@ -55,6 +52,15 @@ header.single
           width: 25px
           display: inline-block
           margin: 0 10px 0 0
+
+      .post__info__header__share-buttons
+        @include horizontal-list
+
+        a
+          color: var(--cor-um)
+          font-size: 18px
+          margin: 0 0 0 10px
+          opacity: 0.5
 
     .post__content
       p
@@ -102,4 +108,7 @@ header.single
 
 #footer.single
   margin: 0 0 0 35%
-  padding: 3%
+  padding: 40px 3%
+
+#footer.single::before
+  display: none

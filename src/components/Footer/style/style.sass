@@ -4,6 +4,8 @@
   @include horizontal-list
   background: var(--cor-um)
   display: flex
+  padding: 40px var(--global-margin)
+  position: relative
 
   h2
     color: var(--cor-realce)
@@ -18,4 +20,16 @@
 
     a
       color: var(--cor-dois)
-      // margin: 0 20px 0 0
+
+#footer::before
+  top: 0
+  content: ""
+  width: calc(100% + 200px)
+  height: 100px
+  background: var(--cor-um)
+  border-top: 5px solid var(--cor-realce)
+  border-radius: 100% 100% 0 0
+  margin: -30px -100px 0 -100px
+  position: absolute
+  left: 0
+  z-index: -1

@@ -4,7 +4,6 @@
   overflow: hidden
 
 #container
-  // background: #eee
   padding: 0px var(--global-margin) var(--global-margin) var(--global-margin)
   display: grid
   grid-template-columns: repeat(3, 1fr)
@@ -13,6 +12,7 @@
   z-index: 1
   top: -90px
   margin-bottom: -90px
+  min-height: 90vh
 
 #site-intro
   z-index: 1
@@ -24,6 +24,7 @@
   *
     position: relative
     z-index: 2
+    color: var(--cor-tres)
 
   h2
     margin: 0 0 15px 0
@@ -37,10 +38,9 @@
 #site-intro::before
   top: 0
   content: ""
-  // border-top: 3px solid #f1d296
   width: calc(100% + 200px)
   height: 350px
-  background: #fff
+  background: #222
   border-radius: 0 0 100% 100%
   margin: 0px -100px 0 -100px
   position: absolute
@@ -54,12 +54,18 @@
     display: block
 
     a
-      background: #fff
-      color: #222
-      border: 1px solid #dfdfdf
+      background: var(--cor-realce)
+      color: var(--cor-tres)
       font-weight: 600
       font-size: 18px
       padding: 20px
       border-radius: 5px
       display: block
-      text-align: right
+      text-align: center
+      position: relative
+      top: 0
+      transition: all 0.2s ease-in-out
+
+    a:hover
+      top: -10px
+      box-shadow: inset 0 -100px 0 0 rgba(0, 0, 0, 0.1)

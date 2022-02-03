@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,500;0,600;1,300;1,500;1,600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Press+Start+2P&display=swap");
 :root {
-  --cor-um: #222;
+  --cor-um: #111;
   --cor-dois: #dfdfdf;
-  --cor-realce: #f1d296;
+  --cor-tres: #fff;
+  --cor-realce: #e7aa30;
   --global-margin: 5%;
   --fonte-corpo: 'Open Sans', sans-serif;
   --fonte-alternativa: 'Chakra Petch';
@@ -57,6 +58,7 @@ body img {
   z-index: 1;
   top: -90px;
   margin-bottom: -90px;
+  min-height: 90vh;
 }
 
 #site-intro {
@@ -70,6 +72,7 @@ body img {
 #site-intro * {
   position: relative;
   z-index: 2;
+  color: var(--cor-tres);
 }
 
 #site-intro h2 {
@@ -85,7 +88,7 @@ body img {
   content: "";
   width: calc(100% + 200px);
   height: 350px;
-  background: #fff;
+  background: #222;
   border-radius: 0 0 100% 100%;
   margin: 0px -100px 0 -100px;
   position: absolute;
@@ -108,14 +111,23 @@ body img {
 }
 
 #pagination li a {
-  background: #fff;
-  color: #222;
-  border: 1px solid #dfdfdf;
+  background: var(--cor-realce);
+  color: var(--cor-tres);
   font-weight: 600;
   font-size: 18px;
   padding: 20px;
   border-radius: 5px;
   display: block;
-  text-align: right;
+  text-align: center;
+  position: relative;
+  top: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+#pagination li a:hover {
+  top: -10px;
+  -webkit-box-shadow: inset 0 -100px 0 0 rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 -100px 0 0 rgba(0, 0, 0, 0.1);
 }
 /*# sourceMappingURL=style.css.map */

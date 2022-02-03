@@ -7,18 +7,17 @@ header
   align-items: flex-start
   z-index: 99
   position: absolute
-  background: #222
-  border-bottom: 2px solid #f1d296
+  background: var(--cor-um)
   width: 100%
 
   a
-    color: #fff
+    color: var(--cor-tres)
 
   h1
     font-size: 18px
 
   h1:first-letter
-    color: #f1d296
+    color: var(--cor-realce)
 
   nav
     @include horizontal-list
@@ -26,3 +25,6 @@ header
     a
       margin: 0 0 0 20px
       opacity: 0.8
+
+    a:hover
+      opacity: 1

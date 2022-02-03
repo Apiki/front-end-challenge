@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,500;0,600;1,300;1,500;1,600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Press+Start+2P&display=swap");
 :root {
-  --cor-um: #222;
+  --cor-um: #111;
   --cor-dois: #dfdfdf;
-  --cor-realce: #f1d296;
+  --cor-tres: #fff;
+  --cor-realce: #e7aa30;
   --global-margin: 5%;
   --fonte-corpo: 'Open Sans', sans-serif;
   --fonte-alternativa: 'Chakra Petch';
+  --sombra-padrao: 0 1px 4px 1px rgba(10, 10, 10, 0.1);
 }
 
 * {
@@ -37,8 +39,9 @@ body img {
 }
 
 .text-underlined {
-  -webkit-text-decoration: underline solid var(--cor-realce);
-          text-decoration: underline solid var(--cor-realce);
+  boder-bottom: 1px solid var(--cor-realce);
+  display: inline-block;
+  padding-bottom: 2px;
 }
 
 header {
@@ -54,13 +57,12 @@ header {
           align-items: flex-start;
   z-index: 99;
   position: absolute;
-  background: #222;
-  border-bottom: 2px solid #f1d296;
+  background: var(--cor-um);
   width: 100%;
 }
 
 header a {
-  color: #fff;
+  color: var(--cor-tres);
 }
 
 header h1 {
@@ -68,7 +70,7 @@ header h1 {
 }
 
 header h1:first-letter {
-  color: #f1d296;
+  color: var(--cor-realce);
 }
 
 header nav {
@@ -84,5 +86,9 @@ header nav li {
 header nav a {
   margin: 0 0 0 20px;
   opacity: 0.8;
+}
+
+header nav a:hover {
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */

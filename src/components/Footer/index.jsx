@@ -3,7 +3,7 @@ import "./style/style.css";
 
 const Footer = (props) => {
   return (
-    <div id="footer" className={props.single ? "single" : {}}>
+    <div id="footer" className={props.single ? "single" : null}>
       <h2>New Dev</h2>
       <ul>
         <li>
