@@ -21,6 +21,7 @@
       }
     ],
     "react/react-in-jsx-scope": "off",
+    "import/export": "off",
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": ["error", {
       "ignoreRestSiblings": true

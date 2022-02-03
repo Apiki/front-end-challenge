@@ -1,7 +1,9 @@
 import axios from 'axios'
 
+export const baseURL = process.env.REACT_APP_API_URL || ''
+
 const api = axios.create({
-  baseURL: 'https://blog.apiki.com/wp-json/wp/v2',
+  baseURL,
 })
 
 export default api
