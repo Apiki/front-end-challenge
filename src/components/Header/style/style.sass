@@ -1,0 +1,30 @@
+@import '../../../style/global.sass'
+
+header
+  padding: 20px var(--global-margin)
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  z-index: 99
+  position: absolute
+  background: var(--cor-um)
+  width: 100%
+
+  a
+    color: var(--cor-tres)
+
+  h1
+    font-size: 18px
+
+  h1:first-letter
+    color: var(--cor-realce)
+
+  nav
+    @include horizontal-list
+
+    a
+      margin: 0 0 0 20px
+      opacity: 0.8
+
+    a:hover
+      opacity: 1

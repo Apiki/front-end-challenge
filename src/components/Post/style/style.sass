@@ -1,0 +1,74 @@
+@import '../../../style/global.sass'
+
+.post
+  background: rgba(255, 255, 255,1)
+  color: #222
+  border-radius: 5px
+  overflow: hidden
+  position: relative
+  top: 0
+  @extend .transition-4ms
+
+  a
+    color: #333
+
+  a.post__author
+    position: absolute
+    width: 100%
+    display: flex
+    justify-content: flex-end
+    top: 0
+    right: 0
+    margin: 18px 15px 0 0
+
+    img
+      width: 8%
+      border-radius: 100%
+      border: 3px solid rgba(255, 255, 255, 0.3)
+
+  img
+    display: block
+
+  .post__info
+    padding: 25px 25px 65px 25px
+    border-top: 2px solid var(--cor-realce)
+
+    h2
+      font-size: 20px
+      font-family: var(--fonte-alternativa)
+
+    p
+      display: block
+      margin: 10px 0 0 0
+      font-size: 15px
+
+    .post__info__date
+      position: absolute
+      font-size: 11px
+      right: 0
+      bottom: 0
+      font-weight: 700
+      margin: 0 0 25px -20px
+      opacity: 0.7
+      border-radius: 2px 0 0 2px
+      background: #dfdfdf
+      padding: 4px 12px
+      font-family: 'Montserrat'
+
+      i
+        width: 0
+        height: 0
+        overflow: hidden
+        margin: 0 5px 0 0
+        @extend .transition-4ms
+
+.post:hover
+  outline-color: transparent
+  box-shadow: var(--sombra-padrao)
+  top: -10px
+
+  .post__info__date
+    i
+      width: auto
+      height: auto
+      display: inline-block

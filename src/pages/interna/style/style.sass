@@ -1,0 +1,142 @@
+@import ../../../style/global.sass
+
+header.single
+  position: fixed
+  top: 0
+
+#post
+  margin: 50px auto 0 auto
+
+  .post__image
+    position: fixed
+    height: calc(100vh - 50px)
+    width: 35%
+
+    .title
+      position: absolute
+      bottom: 0
+      height: 100%
+      width: 100%
+      display: flex
+      align-items: flex-end
+      justify-content: flex-end
+      padding: 7%
+      background-image: linear-gradient(to top, #000, transparent)
+
+      h1
+        text-align: right
+        color: #fff
+        font-size: 25px
+
+  .post__info
+    background: #fff
+    padding: 3%
+    margin: 50px 0 0 35%
+
+    .post__info__header
+      padding: 0 0 15px 0
+      margin: 0 0 30px 0
+      border-bottom: 1px solid var(--cor-dois)
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+      .post__info__author
+        display: inline-flex
+        align-items: center
+        color: var(--cor-um)
+        margin: 10px 0 0 0
+
+        img
+          border-radius: 100%
+          width: 25px
+          display: inline-block
+          margin: 0 10px 0 0
+
+      .post__info__header__share-buttons
+        @include horizontal-list
+
+        a
+          color: var(--cor-um)
+          font-size: 18px
+          margin: 0 0 0 10px
+          opacity: 0.5
+
+    .post__content
+      p
+        margin-bottom: 20px
+
+      h2,
+      h3,
+      h4
+        margin: 30px 0 15px 0
+
+      h2,
+      h3
+        font: 25px var(--fonte-alternativa)
+
+      table
+        font-family: arial, sans-serif
+        border-collapse: collapse
+        width: 100%
+        margin-bottom: 20px
+
+        thead
+          background: #eee
+
+          th
+            padding: 15px 10px
+
+        td, th
+          border: 1px solid #dfdfdf
+          text-align: left
+          padding: 10px
+
+        tr:nth-child(even)
+          background-color: #eee
+
+      img
+        display: block
+        margin: 0 auto 20px auto
+
+      ul
+        margin: 0 0 20px 40px
+
+      a
+        border-bottom: 1px solid var(--cor-dois)
+        color: var(--cor-um)
+
+#footer.single
+  margin: 0 0 0 35%
+  padding: 40px 3%
+
+#footer.single::before
+  display: none
+
+/* Breakpoints */
+// Small Tablet
+@media screen and (max-width: 700px)
+  #post
+    .post__image
+      position: relative
+      width: unset
+      background-size: cover
+      max-height: 40vh
+
+      .title
+        h1
+          text-align: center
+
+    .post__info
+      margin: 0
+
+// Small Tablet
+@media screen and (max-width: 700px)
+  #footer.single
+    margin: 0
+
+// Celular
+@media screen and (max-width: 500px)
+  #post .post__image
+    position: relative
+    width: 100%

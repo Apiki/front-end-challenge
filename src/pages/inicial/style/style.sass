@@ -1,0 +1,85 @@
+@import ../../../style/global.sass
+
+#main
+  overflow: hidden
+
+#container
+  padding: 0px var(--global-margin) var(--global-margin) var(--global-margin)
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 40px
+  position: relative
+  z-index: 1
+  top: -90px
+  margin-bottom: -90px
+  min-height: 90vh
+
+#site-intro
+  z-index: 1
+  padding: 130px 0 140px 0
+  text-align: center
+  position: relative
+  min-height: 350px
+
+  *
+    position: relative
+    z-index: 2
+    color: var(--cor-tres)
+
+  h2
+    margin: 0 0 15px 0
+
+    .categoria
+      @extend .text-underlined
+
+  p
+    font-size: 18px
+
+#site-intro::before
+  top: 0
+  content: ""
+  width: calc(100% + 200px)
+  height: 350px
+  background: #222
+  border-radius: 0 0 100% 100%
+  margin: 0px -100px 0 -100px
+  position: absolute
+  left: 0
+
+#pagination
+  margin: 0px var(--global-margin) 80px var(--global-margin) !important
+  @include horizontal-list
+
+  li
+    display: block
+
+    a
+      background: var(--cor-realce)
+      color: var(--cor-tres)
+      font-weight: 600
+      font-size: 18px
+      padding: 20px
+      border-radius: 5px
+      display: block
+      text-align: center
+      position: relative
+      top: 0
+      transition: all 0.2s ease-in-out
+
+    a:hover
+      top: -10px
+      box-shadow: inset 0 -100px 0 0 rgba(0, 0, 0, 0.1)
+
+/* Breakpoints */
+// Tablet
+@media screen and (max-width: 992px)
+  #container
+    grid-template-columns: repeat(2, 1fr)
+
+    .post:hover
+      top: 0
+
+// Celular
+@media screen and (max-width: 500px)
+  #container,
+    grid-template-columns: 1fr

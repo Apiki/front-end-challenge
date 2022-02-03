@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,500;0,600;1,300;1,500;1,600&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Press+Start+2P&display=swap");
+:root {
+  --cor-um: #111;
+  --cor-dois: #dfdfdf;
+  --cor-tres: #fff;
+  --cor-realce: #e7aa30;
+  --global-margin: 5%;
+  --fonte-corpo: 'Open Sans', sans-serif;
+  --fonte-alternativa: 'Chakra Petch';
+  --sombra-padrao: 0 1px 4px 1px rgba(10, 10, 10, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #eee;
+  background-attachment: fixed;
+  font-family: var(--fonte-corpo);
+}
+
+body a {
+  text-decoration: none;
+}
+
+body img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: -4px;
+}
+
+.transition-4ms {
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.text-underlined {
+  boder-bottom: 1px solid var(--cor-realce);
+  display: inline-block;
+  padding-bottom: 2px;
+}
+
+header.single {
+  position: fixed;
+  top: 0;
+}
+
+#post {
+  margin: 50px auto 0 auto;
+}
+
+#post .post__image {
+  position: fixed;
+  height: calc(100vh - 50px);
+  width: 35%;
+}
+
+#post .post__image .title {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 7%;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#000), to(transparent));
+  background-image: linear-gradient(to top, #000, transparent);
+}
+
+#post .post__image .title h1 {
+  text-align: right;
+  color: #fff;
+  font-size: 25px;
+}
+
+#post .post__info {
+  background: #fff;
+  padding: 3%;
+  margin: 50px 0 0 35%;
+}
+
+#post .post__info .post__info__header {
+  padding: 0 0 15px 0;
+  margin: 0 0 30px 0;
+  border-bottom: 1px solid var(--cor-dois);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#post .post__info .post__info__header .post__info__author {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--cor-um);
+  margin: 10px 0 0 0;
+}
+
+#post .post__info .post__info__header .post__info__author img {
+  border-radius: 100%;
+  width: 25px;
+  display: inline-block;
+  margin: 0 10px 0 0;
+}
+
+#post .post__info .post__info__header .post__info__header__share-buttons {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#post .post__info .post__info__header .post__info__header__share-buttons li {
+  display: inline-block;
+}
+
+#post .post__info .post__info__header .post__info__header__share-buttons a {
+  color: var(--cor-um);
+  font-size: 18px;
+  margin: 0 0 0 10px;
+  opacity: 0.5;
+}
+
+#post .post__info .post__content p {
+  margin-bottom: 20px;
+}
+
+#post .post__info .post__content h2,
+#post .post__info .post__content h3,
+#post .post__info .post__content h4 {
+  margin: 30px 0 15px 0;
+}
+
+#post .post__info .post__content h2,
+#post .post__info .post__content h3 {
+  font: 25px var(--fonte-alternativa);
+}
+
+#post .post__info .post__content table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#post .post__info .post__content table thead {
+  background: #eee;
+}
+
+#post .post__info .post__content table thead th {
+  padding: 15px 10px;
+}
+
+#post .post__info .post__content table td, #post .post__info .post__content table th {
+  border: 1px solid #dfdfdf;
+  text-align: left;
+  padding: 10px;
+}
+
+#post .post__info .post__content table tr:nth-child(even) {
+  background-color: #eee;
+}
+
+#post .post__info .post__content img {
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+#post .post__info .post__content ul {
+  margin: 0 0 20px 40px;
+}
+
+#post .post__info .post__content a {
+  border-bottom: 1px solid var(--cor-dois);
+  color: var(--cor-um);
+}
+
+#footer.single {
+  margin: 0 0 0 35%;
+  padding: 40px 3%;
+}
+
+#footer.single::before {
+  display: none;
+}
+
+/* Breakpoints */
+@media screen and (max-width: 700px) {
+  #post .post__image {
+    position: relative;
+    width: unset;
+    background-size: cover;
+    max-height: 40vh;
+  }
+  #post .post__image .title h1 {
+    text-align: center;
+  }
+  #post .post__info {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #footer.single {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #post .post__image {
+    position: relative;
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

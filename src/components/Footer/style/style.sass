@@ -1,0 +1,61 @@
+@import '../../../style/global.sass'
+
+#footer
+  @include horizontal-list
+  background: var(--cor-um)
+  display: flex
+  padding: 40px var(--global-margin)
+  position: relative
+
+  h2
+    color: var(--cor-realce)
+    flex: 0 0 30%
+
+  ul
+    flex: 0 0 70%
+    margin: 0
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 20px
+
+    a
+      color: var(--cor-dois)
+
+#footer::before
+  top: 0
+  content: ""
+  width: calc(100% + 200px)
+  height: 100px
+  background: var(--cor-um)
+  border-top: 5px solid var(--cor-realce)
+  border-radius: 100% 100% 0 0
+  margin: -30px -100px 0 -100px
+  position: absolute
+  left: 0
+  z-index: -1
+
+/* Breakpoints */
+// Tablet
+@media screen and (max-width: 992px)
+  #footer
+    ul
+      grid-template-columns: repeat(2, 1fr)
+
+// Small Tablet
+@media screen and (max-width: 700px)
+
+  #footer.single
+    margin: 0
+
+// Celular
+@media screen and (max-width: 500px)
+
+  #footer
+    flex-direction: column
+
+    h2
+      margin: 0 0 20px 0
+      text-align: center
+
+    ul
+      grid-template-columns: 1fr
