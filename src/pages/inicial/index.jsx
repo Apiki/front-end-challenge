@@ -11,12 +11,12 @@ const Inicial = () => {
   const [postagens, setPostagens] = useState([]);
   const [totalPostagens, setTotalPostagens] = useState();
   const [totalPaginas, setTotalPaginas] = useState();
-  const [paginaAtual, setPaginaAtual] = useState(1);
+  const [paginaAtual, setPaginaAtual] = useState(2);
   const [categoria, setCategoria] = useState();
 
   const handleMorePosts = (e) => {
-    // e.preventDefault();
     if (paginaAtual <= totalPaginas) {
+      console.log(paginaAtual);
       setPaginaAtual(paginaAtual + 1);
 
       axios
@@ -52,7 +52,7 @@ const Inicial = () => {
           <span className="text-underlined">{categoria}</span>
         </h2>
         <p>
-          Página <b>{paginaAtual}</b> de {totalPaginas}
+          Página <b>{paginaAtual - 1}</b> de {totalPaginas}
         </p>
       </section>
 

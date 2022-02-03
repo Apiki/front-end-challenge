@@ -19,9 +19,7 @@ const Post = (props) => {
 
     excerptContainer.innerHTML = excerpt;
     titleContainer.innerHTML = title;
-
-    console.log(excerptContainer);
-  }, 300);
+  }, 1000);
 
   return (
     <div className="post" data-id={id}>
