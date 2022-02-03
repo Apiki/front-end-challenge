@@ -27,7 +27,9 @@ const Post = (props) => {
         </a>
       ) : null}
       <div className="post__info">
-        <h2>{title}</h2>
+        <h2>
+          <a href={"/" + props.data.slug}>{title}</a>
+        </h2>
         <p>{excerpt}</p>
         <span className="post__info__date">
           <i className="far fa-calendar-alt"></i> {data}

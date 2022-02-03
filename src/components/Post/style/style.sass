@@ -2,11 +2,12 @@
 
 .post
   background: rgba(255, 255, 255,1)
-  backdrop-filter: blur(2px)
   color: #222
   border-radius: 5px
-  box-shadow: 4px 4px 0px 0 #dfdfdf
+  overflow: hidden
+  outline: 1px solid #eee
   position: relative
+  @extend .transition-4ms
 
   a
     color: #333
@@ -18,7 +19,7 @@
     justify-content: flex-end
     top: 0
     right: 0
-    margin: 20px 15px 0 0
+    margin: 18px 15px 0 0
 
     img
       width: 8%
@@ -27,7 +28,6 @@
 
   img
     display: block
-    border-radius: 5px 5px 0 0
 
   .post__info
     padding: 25px 25px 65px 25px
@@ -54,3 +54,7 @@
       i
         display: inline-block
         margin: 0 5px 0 0
+
+.post:hover
+  outline-color: transparent
+  box-shadow: 6px 6px 0px 0 #FFA800, -6px -6px 0px 0 #ea00d9

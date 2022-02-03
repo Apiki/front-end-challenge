@@ -29,6 +29,11 @@ body img {
   margin-bottom: -4px;
 }
 
+.transition-4ms {
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
 header {
   padding: 50px var(--global-margin) 0 var(--global-margin);
   margin: 0 0 40px 0;
@@ -38,11 +43,12 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   z-index: 99;
-  position: relative;
+  position: absolute;
+  height: 250px;
 }
 
 header h1 {
