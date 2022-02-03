@@ -1,0 +1,35 @@
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 0;
+}
+
+.main__title {
+  font-size: 3rem;
+  padding: 1.5rem 0;
+}
+
+.main__subtitle {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.main__button {
+  background-color: #ff0000;
+  border-color: #f0f8f0;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 18px -5px rgba(255, 0, 0, 0.78);
+  color: #f0f8f0;
+  cursor: pointer;
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+  padding: 0.5rem 3rem;
+  transition: all ease-in-out 0.4s;
+}
+
+.main__button:hover {
+  background-color: #f0f8f0;
+  border-color: #ff0000;
+  color: #ff0000;
+}
