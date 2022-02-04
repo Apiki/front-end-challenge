@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import Header from "./Components/Header";
-import Main from "./Components/Main";
+import Main from "./Pages/Main";
 
 function App() {
   return (
