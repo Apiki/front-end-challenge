@@ -7,6 +7,7 @@ const Post = ({ post }) => {
   const content = post.excerpt.rendered;
   const formatedContent = content.replace("<p>", "").replace("</p>", "");
 
+  const autor = "Descohecido";
   return (
     <section className="post">
       <figure className="post__image--box">
@@ -28,12 +29,7 @@ const Post = ({ post }) => {
       <article className="post__box">
         <h3 className="post__title">{post.title.rendered}</h3>
         <p className="post__date">Publicado em: {year}</p>
-        <p className="post__author">
-          By:{" "}
-          {post._embedded.author.map((author) => {
-            return author.name;
-          })}
-        </p>
+        <p className="post__author">By: {post._embedded.author[0].name}</p>
         <p className="post__description">{formatedContent}</p>
         <Link to={`/${post.slug}`} className="post__link">
           Acesse a página
