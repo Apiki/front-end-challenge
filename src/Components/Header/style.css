@@ -1,5 +1,20 @@
 header {
   background-color: #000000;
   padding: 1rem 0;
-  text-align: center;
+}
+
+.header__link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header__box {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.header__text {
+  font-size: 2rem;
+  margin-left: 0.5rem;
 }

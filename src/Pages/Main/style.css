@@ -29,7 +29,12 @@ main {
 }
 
 .main__button:hover {
+  background-color: #8b0000;
+}
+
+.main__button:disabled {
+  cursor: default;
   background-color: #f0f8f0;
+  color: #8b0000;
   border-color: #ff0000;
-  color: #ff0000;
 }

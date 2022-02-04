@@ -5,8 +5,21 @@ import { basicFetch, fetchPages } from "../../API";
 
 const Main = () => {
   const [posts, setPosts] = useState([]);
-  const [page, setPage] = useState(2);
+  const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+  const [disabledNext, setDisabledNext] = useState(false);
+
+  const handleNext = () => {
+    window.scrollTo(0, 0);
+    const correctedPage = page + 1;
+    const newTotal = Number(totalPages) + 1;
+    if (correctedPage >= newTotal) {
+      setDisabledNext(true);
+    } else {
+      getNewPages(correctedPage);
+    }
+    setPage(page + 1);
+  };
 
   const getData = async () => {
     const data = await basicFetch();
@@ -21,6 +34,8 @@ const Main = () => {
 
   useEffect(async () => {
     getData();
+    setPage(1);
+    setDisabledNext(false);
   }, []);
 
   return (
@@ -34,16 +49,17 @@ const Main = () => {
           <Post post={post} key={post.id} />
         ))}
       </section>
-      <button
-        className="main__button"
-        onClick={() => {
-          getNewPages(page);
-          setPage(page + 1);
-          console.log(page);
-        }}
-      >
-        Carregar Mais
-      </button>
+      <section className="main__buttons-box">
+        <button
+          disabled={disabledNext}
+          className="main__button"
+          onClick={() => {
+            handleNext();
+          }}
+        >
+          Próxima Página
+        </button>
+      </section>
     </main>
   );
 };
