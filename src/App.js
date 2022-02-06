@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import Header from "./Components/Header";
+import Intern from "./Pages/Intern";
 import Main from "./Pages/Main";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" exact element={<Main />} />
+          <Route path="/:slug" element={<Intern />} />
         </Switch>
       </Router>
     </div>

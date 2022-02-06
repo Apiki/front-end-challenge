@@ -12,3 +12,9 @@ export async function fetchPages(page) {
   const json = await requisition.json();
   return json;
 }
+
+export async function fetchPost(slug) {
+  const requisition = await fetch(`${BASE_URL}&slug=${slug}`);
+  const json = await requisition.json();
+  return json;
+}

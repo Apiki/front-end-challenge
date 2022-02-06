@@ -1,7 +1,6 @@
 .post {
   align-items: center;
   display: flex;
-  /* justify-content: space-around; */
   padding: 2.5rem 3rem;
 }
 
@@ -25,13 +24,29 @@
   margin-bottom: 1rem;
 }
 
+.post__date {
+  margin-bottom: 0.5rem;
+}
+
 .post__author {
+  align-items: center;
+  display: flex;
   margin-bottom: 1rem;
+}
+
+.post__author--name {
+  text-transform: capitalize;
+}
+
+.post__author--avatar {
+  border-radius: 100%;
+  margin-left: 1rem;
+  width: 10%;
 }
 
 .post__description {
   font-size: 1.3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .post__link {
