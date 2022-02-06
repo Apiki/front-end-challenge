@@ -22,7 +22,7 @@ const Main = () => {
   };
 
   const getData = async () => {
-    const data = await basicFetch();
+    const data = await basicFetch(page);
     setPosts(data[0]);
     setTotalPages(data[1]);
   };

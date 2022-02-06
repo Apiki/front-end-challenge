@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 
 const Post = ({ post }) => {
   const content = post.excerpt.rendered.replace("<p>", "").replace("</p>", "");
-  const image = post._embedded["wp:featuredmedia"][0].source_url;
-  const altText = post._embedded["wp:featuredmedia"][0].alt_text;
+  const image = post._embedded["wp:featuredmedia"];
   const title = post.title.rendered;
   const author = post._embedded.author[0];
   const date = post.date.slice(0, 10).replaceAll("-", "/");
@@ -12,8 +11,12 @@ const Post = ({ post }) => {
   return (
     <section className="post">
       <figure className="post__image--box">
-        {post._embedded["wp:featuredmedia"] ? (
-          <img className="post__image" src={image} alt={altText} />
+        {image ? (
+          <img
+            className="post__image"
+            src={image[0].source_url}
+            alt={image[0].alt_text}
+          />
         ) : (
           <img
             src="https://cdn.neemo.com.br/uploads/settings_webdelivery/logo/3957/image-not-found.jpg"

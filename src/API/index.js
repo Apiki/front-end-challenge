@@ -1,7 +1,7 @@
 const BASE_URL = "https://blog.apiki.com/wp-json/wp/v2/posts?_embed";
 
-export async function basicFetch() {
-  const requisition = await fetch(`${BASE_URL}&categories=518`);
+export async function basicFetch(page) {
+  const requisition = await fetch(`${BASE_URL}&categories=518&page=${page}`);
   const json = await requisition.json();
   const totalPages = requisition.headers.get("X-WP-TotalPages");
   return [json, totalPages];
