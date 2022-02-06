@@ -10,10 +10,12 @@ export const Title = styled.h1`
 export const Text = styled.p`
     margin: 0 auto;
 
-    width: 50rem;
-    padding: 1rem;
+    width: 80%;
+    padding: 3rem;
 `;
 
 export const ContentContainer = styled.div`
     margin-top: 5rem; 
+    width: 100%;
+    overflow: hidden;
 `;

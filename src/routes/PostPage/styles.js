@@ -22,6 +22,8 @@ export const Title = styled.h1`
 export const MainContainer = styled.div`
     padding: 1rem;
     color: #4e5154;
+
+    @media (max-width:)
 `;
 
 export const ContentContainer = styled.div`

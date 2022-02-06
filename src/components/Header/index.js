@@ -1,12 +1,12 @@
 import React from 'react';
 import { Container, Title, Link, LinkContainer } from './styles';
 
-export function Header() {
+export function Header({ category, text }) {
     return(
         <Container>
             <Title>Apiki Blog</Title>
             <LinkContainer>
-                <Link href="/about">About</Link>
+                <Link href={`${category}`}>{text}</Link>
             </LinkContainer>
         </Container>
     )

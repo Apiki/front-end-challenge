@@ -32,7 +32,7 @@ export default function Post() {
 
   return (
     <>
-        <Header />
+        <Header category={"/"} text={"Home"}/>
         {post.map(({ _embedded, title, content }, index) =>
         _embedded["wp:featuredmedia"] ? (
           _embedded["wp:featuredmedia"].map(({ source_url }) => {

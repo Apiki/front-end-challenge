@@ -17,7 +17,7 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="postpage/:slug" element={<PostPage />} />
-      <Route path="about" element={<About />} />
+      <Route path="Sobre" element={<About />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById('root')

@@ -7,13 +7,14 @@ export const Container = styled.div`
 `;
 
 export const Button = styled.button`
-    padding: 0.5rem;
+    font-size: 1.5rem;
+    padding: 1rem;
     margin-bottom: 2rem;
     border: none;
     border-radius: 1rem;
     color: #fff;
-    width: 10rem;
-    background-color: var(--btn-color);
+    width: 13.5rem;
+    background-color: #3945E3;
     transition: filter 0.2s;
     animation: fadein 2s;
 
