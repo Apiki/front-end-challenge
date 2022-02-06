@@ -16,11 +16,17 @@ const Intern = () => {
     await fetchItem();
   }, []);
 
+  console.log(item);
+
   if (item.length > 0) {
     const image = item[0]._embedded["wp:featuredmedia"];
     const content = item[0].content.rendered;
+    const subtitle = item[0].excerpt.rendered
+      .replace("<p>", "")
+      .replace("</p>", "");
     const title = item[0].title.rendered;
     const author = item[0]._embedded.author[0];
+    const date = item[0].date.slice(0, 10).replaceAll("-", "/");
 
     setTimeout(() => {
       const textBox = document.querySelector(".intern__content");
@@ -32,23 +38,26 @@ const Intern = () => {
       <>
         <section className="intern">
           <section className="intern__info">
-            <h1 className="intern__info__ title">{title}</h1>
+            <h1 className="intern__info__title">{title}</h1>
+            <p className="intern__info__subtitle">{subtitle}</p>
             <section className="intern__info__header">
               {author.avatar_urls != undefined ? (
-                <a
-                  href={author.link ? author.link : {}}
-                  className="intern__info__author"
-                  target="_blank"
-                  rel="noreferrer"
-                  title={"Publicado por " + author.name}
-                >
-                  <img
-                    src={author.avatar_urls[48]}
-                    alt=""
-                    className="intern__info__icon"
-                  />{" "}
-                  Publicado por {author.name}
-                </a>
+                <div className="intern__info__author">
+                  <a
+                    href={author.link ? author.link : {}}
+                    className="intern__info__link"
+                    target="_blank"
+                    rel="noreferrer"
+                    title={"Publicado por " + author.name}
+                  >
+                    <img
+                      src={author.avatar_urls[48]}
+                      alt=""
+                      className="intern__info__icon"
+                    />{" "}
+                    Publicado por {author.name}
+                  </a>
+                </div>
               ) : (
                 <section className="intern__info__author">
                   <img
@@ -59,6 +68,7 @@ const Intern = () => {
                   <p className="intern__info__text">Sem autor</p>
                 </section>
               )}
+              <p className="intern__info__date">Publicado em {date}</p>
             </section>
           </section>
           <figure className="intern__image--box">

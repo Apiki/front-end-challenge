@@ -1,5 +1,4 @@
 .intern {
-  background-color: #c1c1c1;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -7,7 +6,6 @@
 }
 
 .intern__image--box {
-  background-color: #fff;
   padding: 3rem 0 1rem 0;
   width: 100%;
 }
@@ -17,31 +15,87 @@
 }
 
 .intern__info {
-  background-color: #fff;
-  margin: 0 5rem;
+  margin: 0 3rem;
   padding-top: 2rem;
 }
 
-.intern__info__header {
-  background-color: #fff;
-  margin: 0 5rem;
-  text-align: center;
+.intern__info__title,
+.intern__info__subtitle,
+.intern__info__date,
+.intern__info__author {
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  text-align: left;
+  width: 80%;
 }
 
 .intern__info__title {
   font-size: 2rem;
 }
 
-.intern__info__author {
+.intern__info__subtitle {
+  font-size: 1.5rem;
+}
+
+.intern__info__link {
   align-items: center;
+  color: #000;
   display: flex;
   font-size: 1.1rem;
-  margin: 0.5rem 0 0 2.45rem;
+  text-decoration: none;
+  transition: all ease 0.3s;
+}
+
+.intern__info__link a:hover {
+  color: #3b3b3b;
+  text-decoration: underline;
 }
 
 .intern__info__icon {
   background-color: #c1c1c1;
   border-radius: 100%;
   margin-right: 1rem;
-  width: 3%;
+  width: 2.5rem;
+}
+
+.intern__info__date {
+  color: #545454;
+}
+
+.intern__content {
+  text-align: left;
+  margin: 3rem auto;
+  width: 80%;
+}
+
+.intern__content a {
+  color: #535353;
+  font-size: 1.3rem;
+  transition: all ease 0.3s;
+}
+
+.intern__content a:hover {
+  color: #000;
+}
+
+.intern__content h1,
+.intern__content h2,
+.intern__content h3,
+.intern__content h4 {
+  font-size: 2rem;
+  margin: 1.5rem 0;
+}
+
+.intern__content img {
+  margin: 1.5rem 0;
+}
+
+.intern__content p {
+  font-size: 1.3rem;
+  margin: 1rem 0;
+  line-height: 2rem;
+}
+
+.intern__content table {
+  margin: 1.5rem 0;
 }
