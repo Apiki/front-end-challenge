@@ -7,6 +7,7 @@ const Header = () => {
         <a href="/" className="header__link">
           <div className="header__box">
             <img
+              className="header__image"
               src="https://blog.apiki.com/wp-content/uploads/sites/2/2020/04/marca-apiki-blog-h552.png"
               alt="Apiki logo"
             />

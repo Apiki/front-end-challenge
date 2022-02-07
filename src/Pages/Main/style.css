@@ -7,20 +7,16 @@ main {
 
 .main__title {
   font-size: 3rem;
-  padding: 1.5rem 0;
-}
-
-.main__subtitle {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
 }
 
 .main__button {
-  background-color: #ff0000;
-  border-color: #f0f8f0;
+  background-color: var(--red);
+  border-color: var(--dark-white);
   border-radius: 0.5rem;
   box-shadow: 5px 5px 18px -5px rgba(255, 0, 0, 0.78);
-  color: #f0f8f0;
+  color: var(--dark-white);
   cursor: pointer;
   font-size: 1.6rem;
   margin-top: 1.5rem;
@@ -29,12 +25,18 @@ main {
 }
 
 .main__button:hover {
-  background-color: #8b0000;
+  background-color: var(--dark-red);
 }
 
 .main__button:disabled {
   cursor: default;
-  background-color: #f0f8f0;
-  color: #8b0000;
-  border-color: #ff0000;
+  background-color: var(--dark-white);
+  color: var(--dark-red);
+  border-color: var(--red);
+}
+
+@media (max-width: 480px) {
+  .main__title {
+    padding: 1.5rem 0;
+  }
 }

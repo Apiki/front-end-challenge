@@ -9,7 +9,8 @@ const Main = () => {
   const [totalPages, setTotalPages] = useState(1);
   const [disabledNext, setDisabledNext] = useState(false);
 
-  const handleNext = () => {
+  const handleNext = (event) => {
+    event.preventDefault();
     window.scrollTo(0, 0);
     const correctedPage = page + 1;
     const newTotal = Number(totalPages) + 1;
@@ -40,10 +41,9 @@ const Main = () => {
 
   return (
     <main>
-      <h1 className="main__title">Página inicial</h1>
-      <h2 className="main__subtitle">
+      <h1 className="main__title">
         Navegue pelos melhores posts do nosso blog!
-      </h2>
+      </h1>
       <section className="main__posts">
         {posts.map((post) => (
           <Post post={post} key={post.id} />
@@ -53,8 +53,8 @@ const Main = () => {
         <button
           disabled={disabledNext}
           className="main__button"
-          onClick={() => {
-            handleNext();
+          onClick={(event) => {
+            handleNext(event);
           }}
         >
           Próxima Página

@@ -8,6 +8,7 @@ import "./App.css";
 import Header from "./Components/Header";
 import Intern from "./Pages/Intern";
 import Main from "./Pages/Main";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/:slug" element={<Intern />} />
         </Switch>
       </Router>
+      <Footer />
     </div>
   );
 }

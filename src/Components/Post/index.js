@@ -2,9 +2,19 @@ import "./style.css";
 import { Link } from "react-router-dom";
 
 const Post = ({ post }) => {
-  const content = post.excerpt.rendered.replace("<p>", "").replace("</p>", "");
+  const content = post.excerpt.rendered
+    .replace("<p>", "")
+    .replace("</p>", "")
+    .replace("&#8220;", "")
+    .replace("&#8221;", "")
+    .replace("&nbsp;", "")
+    .replace("&nbsp;", "")
+    .replace("[&hellip;]", ".");
   const image = post._embedded["wp:featuredmedia"];
-  const title = post.title.rendered;
+  const title = post.title.rendered
+    .replace("&#8220;", "")
+    .replace("&#8221;", "")
+    .replace("&#8211;", "");
   const author = post._embedded.author[0];
   const date = post.date.slice(0, 10).replaceAll("-", "/");
 
@@ -26,11 +36,13 @@ const Post = ({ post }) => {
         )}
       </figure>
       <article className="post__box">
-        <h3 className="post__title">{title}</h3>
+        <Link to={`/${post.slug}`} className="post__link">
+          <h3 className="post__title">{title}</h3>
+        </Link>
         <p className="post__date">Publicado em: {date}</p>
         {post._embedded.author[0].avatar_urls != undefined ? (
           <section className="post__author">
-            <p className="post__author--name">By: {author.name}</p>
+            <p className="post__author--name">Por: {author.name}</p>
             <img
               className="post__author--avatar"
               src={author.avatar_urls[48]}
@@ -48,9 +60,6 @@ const Post = ({ post }) => {
           </section>
         )}
         <p className="post__description">{content}</p>
-        <Link to={`/${post.slug}`} className="post__link">
-          Acesse a página
-        </Link>
       </article>
     </section>
   );

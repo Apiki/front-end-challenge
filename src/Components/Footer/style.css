@@ -1,0 +1,29 @@
+footer {
+  align-items: center;
+  background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.footer__text,
+.footer__link {
+  color: var(--white);
+  font-size: 1.3rem;
+}
+
+.footer__link {
+  text-decoration: none;
+  transition: all ease 0.3s;
+}
+
+.footer__link:hover {
+  color: var(--light-grey);
+}
+
+@media (max-width: 400px) {
+  .footer__link,
+  .footer__text {
+    font-size: 1rem;
+  }
+}

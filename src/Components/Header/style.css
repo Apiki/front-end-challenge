@@ -1,10 +1,10 @@
 header {
-  background-color: #000000;
+  background-color: var(--black);
   padding: 1rem 0;
 }
 
 .header__link {
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
 }
 
@@ -18,3 +18,13 @@ header {
   font-size: 2rem;
   margin-left: 0.5rem;
 }
+
+@media (max-width: 460px) {
+  .header__image {
+    width: 40%;
+  }
+
+  .header__text {
+    font-size: 1.5rem;
+  }
+} ;

@@ -15,18 +15,16 @@
 }
 
 .intern__info {
-  margin: 0 3rem;
-  padding-top: 2rem;
+  margin: 3rem auto;
+  text-align: left;
+  width: 80%;
 }
 
 .intern__info__title,
 .intern__info__subtitle,
 .intern__info__date,
 .intern__info__author {
-  margin: 0 auto;
   padding-bottom: 1rem;
-  text-align: left;
-  width: 80%;
 }
 
 .intern__info__title {
@@ -39,27 +37,27 @@
 
 .intern__info__link {
   align-items: center;
-  color: #000;
+  color: var(--black);
   display: flex;
   font-size: 1.1rem;
   text-decoration: none;
   transition: all ease 0.3s;
 }
 
-.intern__info__link a:hover {
-  color: #3b3b3b;
+.intern__info__link:hover {
+  color: var(--dark-grey);
   text-decoration: underline;
 }
 
 .intern__info__icon {
-  background-color: #c1c1c1;
+  background-color: var(--light-grey);
   border-radius: 100%;
   margin-right: 1rem;
   width: 2.5rem;
 }
 
 .intern__info__date {
-  color: #545454;
+  color: var(--dark-grey);
 }
 
 .intern__content {
@@ -69,13 +67,13 @@
 }
 
 .intern__content a {
-  color: #535353;
+  color: var(--dark-grey);
   font-size: 1.3rem;
   transition: all ease 0.3s;
 }
 
 .intern__content a:hover {
-  color: #000;
+  color: var(--black);
 }
 
 .intern__content h1,
@@ -88,6 +86,8 @@
 
 .intern__content img {
   margin: 1.5rem 0;
+  max-width: 100%;
+  height: auto;
 }
 
 .intern__content p {

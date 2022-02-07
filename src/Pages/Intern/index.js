@@ -23,8 +23,16 @@ const Intern = () => {
     const content = item[0].content.rendered;
     const subtitle = item[0].excerpt.rendered
       .replace("<p>", "")
-      .replace("</p>", "");
-    const title = item[0].title.rendered;
+      .replace("</p>", "")
+      .replace("&#8220;", "")
+      .replace("&#8221;", "")
+      .replace("&nbsp;", "")
+      .replace("&nbsp;", "")
+      .replace("[&hellip;]", ".");
+    const title = item[0].title.rendered
+      .replace("&#8220;", "")
+      .replace("&#8221;", "")
+      .replace("&#8211;", "");
     const author = item[0]._embedded.author[0];
     const date = item[0].date.slice(0, 10).replaceAll("-", "/");
 
@@ -80,6 +88,7 @@ const Intern = () => {
               />
             ) : (
               <img
+                className="intern__image"
                 src="https://cdn.neemo.com.br/uploads/settings_webdelivery/logo/3957/image-not-found.jpg"
                 alt="Sem imagem"
               />
