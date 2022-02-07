@@ -13,13 +13,12 @@ const Main = () => {
     event.preventDefault();
     window.scrollTo(0, 0);
     const correctedPage = page + 1;
-    const newTotal = Number(totalPages) + 1;
-    if (correctedPage >= newTotal) {
+    if (correctedPage >= Number(totalPages)) {
       setDisabledNext(true);
     } else {
-      getNewPages(correctedPage);
+      setPage(page + 1);
     }
-    setPage(page + 1);
+    getNewPages(correctedPage);
   };
 
   const getData = async () => {
