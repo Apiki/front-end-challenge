@@ -1,0 +1,66 @@
+/* 
+Parte geral da pagina
+*/
+#geral{
+  padding-top: 10px;
+  padding-left: 300px;
+  background-color: #FFFFFF;
+}
+#tit_inicio{
+  font-size: 60px;
+}
+
+#paragrafo_inicio{
+  font-size: 20px ;
+}
+
+#qartigos{
+  margin-bottom: 40px;
+}
+
+#conteudo{
+  display: inline-flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#conteudo_escrito{
+  margin-left: 20px ;
+}
+
+#tit_card{
+  font-size: 25px;
+  color: black;
+}
+
+#paragrafo_card{
+  font-size: 20px;
+  padding-right: 300px;
+  margin-top: 30px;
+}
+
+#foto{
+  width: 350px;
+  height: 250px;
+  border-radius: 25px;
+}
+
+/* 
+Paginação 
+*/
+#btn_paginacao{
+  margin: 10px;
+  text-align: center;
+}
+#btn_paginacao_cont{
+  margin: 10px;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  background-color: #BA007C;
+  color: #FFFFFF;
+}
+  
+
+
