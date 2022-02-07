@@ -7,7 +7,7 @@ const routes: Routes = [
   {
   path:'',
   component: TemplateComponent,
-  loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule),  //se Path Vazio, carrega a Página Inicial.
+  loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule),  //se Path Vazio, carrega o template.
   }
 ];
 
