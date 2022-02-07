@@ -1,0 +1,49 @@
+
+/* 
+Parte geral da pagina
+*/
+
+#geral_int{
+    padding: 100px;
+}
+
+#header_int{
+    margin-left: 50px;
+    text-align: center;    
+    
+}
+
+#tit_cont{
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 100px;
+}
+
+/* 
+Botão voltar
+*/
+#voltar{
+    margin-left: 50px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+}
+
+#foto_int{
+    text-align: center;
+    width: 650px;
+    border-radius: 25px;
+    margin-bottom: 100px;
+}
+
+#conteudo_escrito{
+    text-align: left;
+    font-size: 18px;
+}
