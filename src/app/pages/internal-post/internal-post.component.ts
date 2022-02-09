@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InternalPostService } from './internal-post.service';
 
 @Component({
   selector: 'app-internal-post',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InternalPostComponent implements OnInit {
 
-  constructor() { }
+  constructor(private internalPost: InternalPostService) { }
 
   ngOnInit(): void {
+    this.internalPost.openNotice().subscribe(dados =>
+      {
+        console.log(dados)
+      })
   }
 
 }

@@ -1,1 +1,17 @@
-<p>initial works!</p>
+<div *ngFor="let teste of notices">
+    <div *ngFor="let autor of teste._embedded.author">
+        <p-card header="{{teste.title.rendered}}" subheader="{{autor.name}}" [style]="{width: '360px'}"
+            styleClass="p-card-shadow">
+            <ng-template pTemplate="header">
+                <img alt="Card">
+            </ng-template>
+            {{teste.excerpt.rendered}}
+            <ng-template pTemplate="footer">
+                <p-button label="Save" icon="pi pi-check"></p-button>
+                <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary"
+                    [style]="{'margin-left': '.5em'}"></p-button>
+            </ng-template>
+        </p-card>
+    </div>
+</div>
+<button pButton (click)="loadMore()"> Carrega aí por favor</button>

@@ -4,11 +4,11 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class InitialService {
+export class InternalPostService {
 
   constructor(private http: HttpClient) { }
 
-  getNotice(page: number){
-    return this.http.get<any>(`https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=${page}`);
+  openNotice(){
+    return this.http.get<any>(`https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=2`);
   }
 }
