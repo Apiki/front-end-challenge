@@ -1,0 +1,30 @@
+{
+  "name": "apiki-front-challenge",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "axios": "^0.25.0",
+    "next": "12.0.10",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-html-parser": "^2.0.2",
+    "react-icons": "^4.3.1",
+    "sass": "^1.49.7"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.15",
+    "@types/react": "17.0.39",
+    "@types/react-html-parser": "^2.0.2",
+    "eslint": "8.8.0",
+    "eslint-config-next": "12.0.10",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1",
+    "typescript": "4.5.5"
+  }
+}

@@ -1,0 +1,69 @@
+*, 
+*:before, 
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-family: 'Manrope', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  --fs-huge: 3rem;
+  --fs-extralarge: 2rem;
+  --fs-large: 1.5rem;
+  --fs-medium: 1.125rem;
+
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+
+  --gray-50: #F8FBFC;
+  --gray-200: #E5EDF0;
+  --gray-300: #C4D3D9;
+  --gray-600: #475E69;
+  --gray-700: #334A55;
+  --gray-900: #0F1F2A;
+
+  --primary-500: #00B3FF;
+  --primary-600: #008FCC;
+}
+
+html,
+body {
+  background: var(--gray-50);
+  color: var(--gray-700);
+  font-family: var(--font-family);
+}
+
+#__next {
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 6rem 1rem 10rem;
+}
+
+body, button {
+  font: 400 1rem var(--font-family);
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--gray-900);
+  font-weight: var(--fw-bold);
+  line-height: 1.2;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
