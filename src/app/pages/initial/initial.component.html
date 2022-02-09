@@ -1,17 +1,20 @@
-<div *ngFor="let teste of notices">
-    <div *ngFor="let autor of teste._embedded.author">
-        <p-card header="{{teste.title.rendered}}" subheader="{{autor.name}}" [style]="{width: '360px'}"
-            styleClass="p-card-shadow">
-            <ng-template pTemplate="header">
-                <img alt="Card">
-            </ng-template>
-            {{teste.excerpt.rendered}}
-            <ng-template pTemplate="footer">
-                <p-button label="Save" icon="pi pi-check"></p-button>
-                <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary"
-                    [style]="{'margin-left': '.5em'}"></p-button>
-            </ng-template>
-        </p-card>
+<div class="grid p-fluid">
+    <div *ngFor="let dados of notices" class="col-12 md:col-4">
+        <div *ngFor="let autor of dados._embedded.author">
+            <p-card header="{{dados.title.rendered}}" subheader="{{autor.name}}"
+                styleClass="p-card-shadow" class="m-7">
+                <ng-template pTemplate="header">
+                    <img alt="Card" src="{{dados._embedded['wp:featuredmedia'][0].source_url }}">
+                </ng-template>
+                <div innerHTML="{{dados.excerpt.rendered}}"></div>
+
+                <ng-template pTemplate="footer">
+                    <button pButton pRipple type="button" label="Leia Mais"
+                        class="p-button-rounded justify-content-center" icon="pi pi-eye"></button>
+                </ng-template>
+            </p-card>
+        </div>
     </div>
 </div>
-<button pButton (click)="loadMore()"> Carrega aí por favor</button>
+
+<button pButton (click)="handleLoadMore()">Carrega aí por favor</button>

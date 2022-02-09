@@ -9,31 +9,32 @@ import { InitialService } from './initial.service';
 
 })
 export class InitialComponent implements OnInit {
-notices: any[] = [];
+
 page: number = 1;
+  notices: any;
 
 constructor(private initialService: InitialService) { }
 ngOnInit(): void {
 
-  this.getNotices();
-  
+this.getNotices();
+
 }
 
 getNotices() {
 
   this.initialService.getNotice(this.page).subscribe(notices => {
     if (this.notices == undefined) {
-      this.notices = notices
+      this.notices = notices;
       console.log(this.notices);
+      
     } else {
       this.notices = this.notices.concat(notices)
       console.log(this.notices);
     }
   });
-
 }
 
-loadMore(){
+handleLoadMore(){
   this.page++;
   this.initialService.getNotice(this.page)
   this.getNotices();
