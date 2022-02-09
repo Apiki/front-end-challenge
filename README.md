@@ -1,12 +1,31 @@
 # Desafio - Front-end Developer
 Este desafio tem como objetivo te avaliar como desenvolvedor Front-end: JavaScript, HTML, CSS e lógica de programação.
 
+## Executando o projeto
+Antes de executar o projeto renomeie o arquivo `.env.example` para `.env.local`. O arquivo deve estar deste modo, por exemplo:
+```bash
+# URL onde a aplicação está sendo executada. No caso abaixo, executando na máquina local
+NEXT_PUBLIC_APP_URL = 'http://localhost:3000'
+
+# URL base da API onde estaremos consumindo os dados, neste caso a URL da API da Apiki
+# Para este projeto é importante que a URL seja a mesma contida na seção Requisitos deste README
+NEXT_PUBLIC_API_URL = "https://blog.apiki.com/wp-json/wp/v2"
+```
+
+Após configurar o projeto precisamos instalar as dependências e então poderemos executá-lo. Para isso abra o terminal na pasta contendo o projeto e execute os seguintes comandos (sem o _$_):
+```bash
+$ npm install
+# ou yarn install
+
+$ npm run dev
+# ou yarn dev
+```
+
 ## O Desafio
 Queremos montar uma versão do blog da Apiki apenas para Devs, e queremos que essa seja uma solução headless, esta nova versão terá as seguintes páginas: 
 
 - Página inicial: Listará as últimas postagens do blog com a categoria **Desenvolvimento**; 
 - Interna: Exibirá o conteúdo da postagem;
-
 
 ## Requisitos
 - Utilizar os dados da API do nosso blog: https://blog.apiki.com/wp-json/wp/v2/;
