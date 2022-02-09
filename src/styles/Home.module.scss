@@ -1,0 +1,28 @@
+.header {
+  h1 {
+    font-size: var(--fs-huge);
+    margin-bottom: 1.25rem;
+  }
+
+  p {
+    font-size: var(--fs-medium);
+  }
+}
+
+.articles {
+  margin-top: 4rem;
+  display: grid;
+
+  gap: 2rem;
+}
+
+@media (min-width: 40em) {
+  .articles {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.loadMore {
+  text-align: center;
+  margin-top: 4rem;
+}
