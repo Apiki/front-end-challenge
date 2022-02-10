@@ -1,79 +1,75 @@
 <header class="header-container">
-    <div class="logo-container">
+  <div class="logo-container">
 
-        <img src="" alt="">
-        <a class="logo" href="" (click)="navigateHome()">
-            <img src="../../assets/images/marca-apiki-blog.webp" alt="Logo da Apiki">
-        </a>
-    </div>
-    <div class="social-media-container">
-            <a href="https://web.facebook.com/ApikiWordPress?_rdc=1&_rdr" target="_blank" ><button pButton  pRipple icon="pi pi-facebook" class="p-button-rounded p-button-text p-button-info"></button>
-            </a>
-            <a href="https://www.linkedin.com/company/apiki/" target="_blank" ><i pButton  pRipple class="p-button-rounded p-button-text"   icon="pi pi-linkedin"></i></a>
-           <a href="https://www.instagram.com/apikiwordpress/" target="_blank" ><button pButton  pRipple class="p-button-rounded p-button-text"  icon="pi pi-instagram"></button></a>
-           <a href="https://twitter.com/apikiWordPress/" target="_blank" ><button pButton pRipple class="p-button-rounded p-button-text" icon="pi pi-twitter"></button></a>
-           <a href="https://www.youtube.com/channel/UC__ToR3hqjs1ZktdLIWqYFA" target="_blank" ><button pButton  pRipple class="p-button-rounded p-button-text" icon="pi pi-youtube"></button></a>
-           <a href="https://github.com/Apiki" target="_blank" ><button pButton pRipple class="p-button-rounded p-button-text" icon="pi pi-github"></button></a>
-           <a href="https://blog.apiki.com/" target="_blank" ><button pButton pRipple class="p-button-rounded p-button-text" icon="pi pi-wifi"></button></a>
-    </div>
-  </header>
+      <img src="" alt="">
+      <a class="logo" href="" (click)="navigateHome()">
+          <img src="../../assets/images/marca-apiki-blog.webp" alt="Logo da Apiki">
+      </a>
+  </div>
+  <div class="social-media-container align-itens-center justify-content-center">
+          <a href="https://web.facebook.com/ApikiWordPress?_rdc=1&_rdr" target="_blank" ><button pButton  pRipple  type="button" icon="pi pi-facebook" class="p-button-rounded p-button-text cursor-pointer"></button>
+          </a>
+        <a href="https://www.linkedin.com/company/apiki/" target="_blank" ><button pButton  pRipple class="p-button-rounded p-button-text cursor-pointer"   icon="pi pi-linkedin"></button></a>
+        <a href="https://www.instagram.com/apikiwordpress/" target="_blank" ><button pButton  pRipple class="p-button-rounded p-button-text cursor-pointer"  icon="pi pi-instagram"></button></a>
+        <a href="https://twitter.com/apikiWordPress/" target="_blank" ><button pButton pRipple class="p-button-rounded p-button-text cursor-pointer" icon="pi pi-twitter"></button></a>
+        <a href="https://www.youtube.com/channel/UC__ToR3hqjs1ZktdLIWqYFA" target="_blank" ><button pButton  pRipple class="p-button-rounded p-button-text cursor-pointer" icon="pi pi-youtube"></button></a>
+        <a href="https://github.com/Apiki" target="_blank"><button pButton pRipple class="p-button-rounded p-button-text cursor-pointer" icon="pi pi-github"></button></a>
+        <a href="https://blog.apiki.com/" target="_blank"><button pButton pRipple class="p-button-rounded p-button-text cursor-pointer" icon="pi pi-wifi"></button></a>
+  </div>
+</header>
 
 <div style="margin: 4rem">
-  <router-outlet></router-outlet>
-</div>
+
+<router-outlet></router-outlet>
+
+</div> 
 
 
 
-<footer>
-    <div class="main-content">
-      <div class="left box">
-        <h2>Sobre Nós</h2>
-        <div class="content">
-          <p>A Apiki é a primeira empresa especializada em WordPress do Brasil. Com mais de 13 anos de existência, fazemos tudo que seu projeto em WordPress precisa para alcançar o sucesso.</p>
-          <div class="social">
-            <a href="https://facebook.com/coding.np"><span class="fab fa-facebook-f"></span></a>
-            <a href="#"><span class="fab fa-twitter"></span></a>
-            <a href="https://instagram.com/coding.np"><span class="fab fa-instagram"></span></a>
-            <a href="https://youtube.com/c/codingnepal"><span class="fab fa-youtube"></span></a>
-          </div>
-        </div>
-      </div>
-      <div class="center box">
-        <h2>Endereço</h2>
-        <div class="content">
-          <div class="place">
-            <span class="text">Governador Valadares – MG</span><br>
-            <span class="text">Avenida Minas Gerais</span><br>
-            <span class="text">700, Lojas 15 e 16, Centro.</span> <br>
-            <span class="text">CEP: 35010-151</span>
-          </div>
-          <div class="phone">
-            <span class="fas fa-phone-alt"></span>
-            <span class="text">+55 33 3278-1002</span>
-          </div>
-        </div>
-      </div>
-      <div class="right box">
-        <h2>Contate-nos</h2>
-        <div class="content">
-          <form action="#">
-            <div class="email">
-              <div class="text">Email *</div>
-              <input type="email" required>
-            </div>
-            <div class="msg">
-              <div class="text">Message *</div>
-              <textarea rows="2" cols="25" required></textarea>
-            </div>
-            <div class="btn">
-              <button type="submit">Send</button>
-            </div>
-          </form>
-        </div>
-      </div>
+<footer class="footer-distributed">
+
+  <div class="footer-left">
+
+    <h3><span><a href="https://apiki.com/"><img src="https://apiki.com/wp-content/uploads/2020/11/apiki-logo-pb.png" alt="Apiki_logo" style="width: 10rem;"> </a></span></h3>
+
+    <p class="footer-links">
+      <a href="#">Home</a>
+      ·
+      <a href="#">Blog</a>
+      ·
+      <a href="#">Pricing</a>
+      ·
+      <a href="#">About</a>
+      ·
+      <a href="#">Faq</a>
+      ·
+      <a href="#">Contact</a>
+    </p>
+
+    <p class="footer-company-name">Apiki © 2022</p>
+
+    <div class="footer-icons">
+
+      <button pButton  pRipple  type="button" icon="pi pi-facebook" class="p-button-rounded p-button-text cursor-pointer" onclick="location.href='https://web.facebook.com/ApikiWordPress?_rdc=1&_rdr';"></button>
+      <button pButton pRipple class="p-button-rounded p-button-text cursor-pointer" icon="pi pi-twitter" onclick="location.href='https://web.facebook.com/ApikiWordPress?_rdc=1&_rdr';"></button>
+      <button pButton  pRipple class="p-button-rounded p-button-text cursor-pointer" icon="pi pi-linkedin" onclick="location.href='https://www.linkedin.com/company/apiki/';"></button>
+     <button pButton pRipple class="p-button-rounded p-button-text cursor-pointer" icon="pi pi-github" onclick="location.href='https://github.com/Apiki';"></button>
     </div>
-    <div class="bottom">
-        <span class="credit">Criado por <a href="https://www.linkedin.com/in/andr%C3%A9-parada-538aa9212/">André Parada</a> | </span>
-        <span>2022 Todos os direitos reservados.</span>
-    </div>
-  </footer>
+
+  </div>
+
+  <div class="footer-right">
+
+    <p>Contact Us</p>
+
+    <form action="#" method="post">
+
+      <input type="text" name="email" placeholder="Email">
+      <textarea name="message" placeholder="Message"></textarea>
+      <button>Send</button>
+
+    </form>
+
+  </div>
+
+</footer>

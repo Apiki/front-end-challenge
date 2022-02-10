@@ -1,5 +1,5 @@
 header{
-    position: fixed;
+    position: relative;
     top: 0px;
     width: 100%;
     background: #111;
@@ -8,151 +8,224 @@ header{
     justify-content: space-between;
 }
 
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+* {
+  font-family: Roboto;
 }
 
-footer{
-  position: relative;
-  bottom: 0px;
+.footer-distributed{
+	background: #444;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	font: bold 16px sans-serif;
+	text-align: left;
+	padding: 50px 60px 40px;
+	overflow: hidden;
+}
+
+section {
   width: 100%;
-  background: #111;
-  color: #d9d9d9;
-}
-.main-content{
-  display: flex;
-}
-.main-content .box{
-  flex-basis: 50%;
-  padding: 10px 20px;
-}
-.box h2{
-  font-size: 1.125rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-.box .content{
-  margin: 20px 0 0 0;
-  position: relative;
-}
-.box .content:before{
-  position: absolute;
-  content: '';
-  top: -10px;
-  height: 2px;
-  width: 100%;
-  background: #1a1a1a;
-}
-.box .content:after{
-  position: absolute;
-  content: '';
-  height: 2px;
-  width: 15%;
-  background: #f12020;
-  top: -10px;
-}
-.left .content p{
-  text-align: justify;
-}
-.left .content .social{
-  margin: 20px 0 0 0;
-}
-.left .content .social a{
-  padding: 0 2px;
-}
-.left .content .social a span{
-  height: 40px;
-  width: 40px;
-  background: #1a1a1a;
-  line-height: 40px;
+  display: inline-block;
+  background: #ccc;
+  height: 60vh;
   text-align: center;
-  font-size: 18px;
-  border-radius: 5px;
-  transition: 0.3s;
-}
-.left .content .social a span:hover{
-  background: #f12020;
-}
-.center .content .fas{
-  font-size: 1.4375rem;
-  background: #1a1a1a;
-  height: 45px;
-  width: 45px;
-  line-height: 45px;
-  text-align: center;
-  border-radius: 50%;
-  transition: 0.3s;
-  cursor: pointer;
-}
-.center .content .fas:hover{
-  background: #f12020;
-}
-.center .content .text{
-  font-size: 1.0625rem;
-  font-weight: 500;
-  padding-left: 10px;
-}
-.center .content .phone{
-  margin: 15px 0;
-}
-.right form .text{
-  font-size: 1.0625rem;
-  margin-bottom: 2px;
-  color: #656565;
-}
-.right form .msg{
-  margin-top: 10px;
-}
-.right form input, .right form textarea{
-  width: 100%;
-  font-size: 1.0625rem;
-  background: #151515;
-  padding-left: 10px;
-  border: 1px solid #222222;
-}
-.right form input:focus,
-.right form textarea:focus{
-  outline-color: #3498db;
-}
-.right form input{
-  height: 35px;
-}
-.right form .btn{
-  margin-top: 10px;
-}
-.right form .btn button{
-  height: 40px;
-  width: 100%;
-  border: none;
-  outline: none;
-  background: #f12020;
-  font-size: 1.0625rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: .3s;
-}
-.right form .btn button:hover{
-  background: #000;
-}
-.bottom center{
-  padding: 5px;
-  font-size: 0.9375rem;
-  background: #151515;
-}
-.bottom center span{
-  color: #656565;
-}
-.bottom center a{
-  color: #f12020;
-  text-decoration: none;
-}
-.bottom center a:hover{
+  font-size: 22px;
+  font-weight: 700;
   text-decoration: underline;
 }
+
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	float: left;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Roboto', cursive;
+	margin: 0 0 10px;
+}
+
+.footer-distributed h3 span{
+	color:  #5383d3;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer social icons */
+
+.footer-distributed .footer-icons{
+	margin-top: 40px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	float: right;
+}
+
+.footer-distributed .footer-right p{
+	display: inline-block;
+	vertical-align: top;
+	margin: 15px 42px 0 0;
+	color: #ffffff;
+}
+
+/* The contact form */
+
+.footer-distributed form{
+	display: inline-block;
+}
+
+.footer-distributed form input,
+.footer-distributed form textarea{
+	display: block;
+	border-radius: 3px;
+	box-sizing: border-box;
+	background-color:  #1f2022;
+	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+	border: none;
+	resize: none;
+
+	font: inherit;
+	font-size: 14px;
+	font-weight: normal;
+	color:  #d1d2d2;
+
+	width: 400px;
+	padding: 18px;
+}
+
+.footer-distributed ::-webkit-input-placeholder {
+	color:  #5c666b;
+}
+
+.footer-distributed ::-moz-placeholder {
+	color:  #5c666b;
+	opacity: 1;
+}
+
+.footer-distributed :-ms-input-placeholder{
+	color:  #5c666b;
+}
+
+
+.footer-distributed form input{
+	height: 55px;
+	margin-bottom: 15px;
+}
+
+.footer-distributed form textarea{
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.footer-distributed form button{
+	border-radius: 3px;
+	background-color:  #33383b;
+	color: #ffffff;
+	border: 0;
+	padding: 15px 50px;
+	font-weight: bold;
+	float: right;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 1000px) {
+
+	.footer-distributed {
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer-distributed form input,
+	.footer-distributed form textarea{
+		width: 250px;
+	}
+
+	.footer-distributed form button{
+		padding: 10px 35px;
+	}
+
+}
+
+@media (max-width: 800px) {
+
+	.footer-distributed{
+		padding: 30px;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-right{
+		float: none;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+
+	.footer-distributed .footer-left{
+		margin-bottom: 40px;
+	}
+
+	.footer-distributed form{
+		margin-top: 30px;
+	}
+
+	.footer-distributed form{
+		display: block;
+	}
+
+	.footer-distributed form button{
+		float: none;
+	}
+}
+
+
 @media screen and (max-width: 767px) {
     header{
         position: relative;

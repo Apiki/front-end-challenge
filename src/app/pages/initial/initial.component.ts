@@ -11,7 +11,9 @@ import { InitialService } from './initial.service';
 export class InitialComponent implements OnInit {
 
 page: number = 1;
-  notices: any;
+notices: any;
+aut: any;
+slug: string;
 
 constructor(private initialService: InitialService) { }
 ngOnInit(): void {
@@ -22,9 +24,15 @@ this.getNotices();
 
 getNotices() {
 
-  this.initialService.getNotice(this.page).subscribe(notices => {
+  this.initialService.getNotice(this.page).subscribe((notices: any) => {
     if (this.notices == undefined) {
       this.notices = notices;
+      for(let Autores of notices){
+        if(Autores._embedded.author[0].name == undefined)
+        {
+          Autores._embedded.author[0].name = 'Autor Desconhecido'
+        }
+      }
       console.log(this.notices);
       
     } else {
@@ -32,6 +40,11 @@ getNotices() {
       console.log(this.notices);
     }
   });
+}
+
+handleReadMore(link:string){
+  
+  console.log('Linkzada:' +link)
 }
 
 handleLoadMore(){

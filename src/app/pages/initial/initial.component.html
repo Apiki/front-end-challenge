@@ -1,20 +1,62 @@
-<div class="grid p-fluid">
+<!-- <div class="grid p-fluid">
     <div *ngFor="let dados of notices" class="col-12 md:col-4">
         <div *ngFor="let autor of dados._embedded.author">
-            <p-card header="{{dados.title.rendered}}" subheader="{{autor.name}}"
-                styleClass="p-card-shadow" class="m-7">
-                <ng-template pTemplate="header">
-                    <img alt="Card" src="{{dados._embedded['wp:featuredmedia'][0].source_url }}">
-                </ng-template>
-                <div innerHTML="{{dados.excerpt.rendered}}"></div>
+            <div>
+                <img alt="Card" class="h-13rem w-full" src="{{dados._embedded['wp:featuredmedia'][0].source_url }}">
+            </div>
+            <div styleClass="p-card-shadow" class="card container">
+                <h1 class="limiteDivTitle m-0"> <strong innerHTML="{{dados.title.rendered}}"></strong> </h1>
+                <h3><small><b innerHTML="{{autor.name}}"></b></small></h3>
+                <div innerHTML="{{dados.excerpt.rendered}}" class="limiteDiv"></div>
 
-                <ng-template pTemplate="footer">
+                <div>
                     <button pButton pRipple type="button" label="Leia Mais"
-                        class="p-button-rounded justify-content-center" icon="pi pi-eye"></button>
-                </ng-template>
-            </p-card>
+                        class="p-button-rounded justify-content-center" icon="pi pi-eye"
+                        (click)="handleReadMore(dados._embedded['wp:featuredmedia'][0].slug)"></button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+-->
+
+
+<div class="container" >
+    <div *ngFor="let dados of notices">
+    <div class="card" *ngFor="let autor of dados._embedded.author">
+        <div class="card__header">
+            <img src="{{dados._embedded['wp:featuredmedia'][0].source_url }}" alt="Image Card" class="card__image"
+                width="600">
+        </div>
+        <div class="card__body">
+            <span class="tag tag-blue">Desenvolvimento</span>
+           <a (click)="handleReadMore(dados._embedded['wp:featuredmedia'][0].slug)"><h4 innerHTML="{{dados.title.rendered}}"></h4></a> 
+            <p innerHTML="{{dados.excerpt.rendered}}"></p>
+        </div>
+        <div class="card__footer">
+            <div class="user">
+                <img src="https://i.pravatar.cc/40?img=1" alt="user__image" class="user__image">
+                <div class="user__info">
+                    <h5 innerHTML="{{autor.name}}"></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <button pButton (click)="handleLoadMore()">Carrega aí por favor</button>
