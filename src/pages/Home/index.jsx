@@ -4,7 +4,7 @@ import Header from "../../components/Header"
 
 const index = () => {
   return (
-    <div className="test">
+    <div>
       <Header />
       
       {/* Navagiation */}

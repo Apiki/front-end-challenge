@@ -1,7 +1,15 @@
+@font-face {
+  font-family: Montserrat;
+  src: url("../src/fonts/Montserrat-Thin.ttf");
+}
+
+
 :root {
   --body-bg-color: #212529;
+
   --primary-color: #e3e8ec;
- 
+  --secondary-color: #c0c5c9;
+
   --link-color: #ba007c;
   --link-color-hover: #7c0053 ;
 
@@ -26,10 +34,10 @@ body {
 
   /* dev */
   background-color: var(--body-bg-color);
+  font-family: 'Montserrat', sans-serif;
   color: var(--primary-color);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Montserrat', sans-serif;
 }
