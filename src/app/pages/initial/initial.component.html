@@ -30,7 +30,7 @@
         </div>
         <div class="card__body">
             <span class="tag tag-blue">Desenvolvimento</span>
-           <a (click)="handleReadMore(dados._embedded['wp:featuredmedia'][0].slug)"><h4 innerHTML="{{dados.title.rendered}}"></h4></a> 
+           <a (click)="handleReadMore(dados.slug)"><h4 innerHTML="{{dados.title.rendered}}"></h4></a> 
             <p innerHTML="{{dados.excerpt.rendered}}"></p>
         </div>
         <div class="card__footer">

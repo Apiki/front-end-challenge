@@ -1,3 +1,5 @@
+import { InternalPostService } from './../internal-post/internal-post.service';
+import { Router, RouterModule } from '@angular/router';
 import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { InitialService } from './initial.service';
@@ -15,7 +17,11 @@ notices: any;
 aut: any;
 slug: string;
 
-constructor(private initialService: InitialService) { }
+constructor(
+  private initialService: InitialService,
+  private route: Router,
+  private internalService: InternalPostService
+  ) { }
 ngOnInit(): void {
 
 this.getNotices();
@@ -43,8 +49,8 @@ getNotices() {
 }
 
 handleReadMore(link:string){
-  
-  console.log('Linkzada:' +link)
+  this.internalService.slug = link
+  this.route.navigate(['/internal-post'])
 }
 
 handleLoadMore(){

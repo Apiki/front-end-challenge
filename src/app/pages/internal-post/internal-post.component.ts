@@ -8,12 +8,15 @@ import { InternalPostService } from './internal-post.service';
 })
 export class InternalPostComponent implements OnInit {
 
+  showNotice: any;
+
   constructor(private internalPost: InternalPostService) { }
 
   ngOnInit(): void {
     this.internalPost.openNotice().subscribe(dados =>
       {
-        console.log(dados)
+        this.showNotice = dados
+        console.log(this.showNotice)
       })
   }
 

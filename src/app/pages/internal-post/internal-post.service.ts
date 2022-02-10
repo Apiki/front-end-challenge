@@ -6,9 +6,13 @@ import { Injectable } from '@angular/core';
 })
 export class InternalPostService {
 
+  slug: string;
+
   constructor(private http: HttpClient) { }
 
-  openNotice(){
-    return this.http.get<any>(`https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=2`);
+  openNotice() {
+    console.log(this.slug)
+    console.log('link do link:' +this.http.get<any>(`https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=${this.slug}`))
+    return this.http.get<any>(`https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=${this.slug}`);
   }
 }

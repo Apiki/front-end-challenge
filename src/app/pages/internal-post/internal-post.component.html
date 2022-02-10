@@ -1,1 +1,27 @@
-<p>internal-post works!</p>
+<p-card>
+<div class="container" >
+    <div *ngFor="let dados of showNotice">
+    <div class="card" *ngFor="let autor of dados._embedded.author">
+        <h1 class="title" innerHTML="{{dados.title.rendered}}"></h1>
+
+
+        <div class="card__header">
+            <img src="{{dados._embedded['wp:featuredmedia'][0].source_url }}" alt="Image Card" class="card__image">
+        </div>
+        <div class="card__body">
+            <span class="tag tag-blue">Desenvolvimento</span>
+           <a><h4 innerHTML="{{dados.title.rendered}}"></h4></a> 
+            <p innerHTML="{{dados.excerpt.rendered}}"></p>
+        </div>
+        <div class="card__footer">
+            <div class="user">
+                <img src="https://i.pravatar.cc/40?img=1" alt="user__image" class="user__image">
+                <div class="user__info">
+                    <h5 innerHTML="{{autor.name}}"></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</p-card>

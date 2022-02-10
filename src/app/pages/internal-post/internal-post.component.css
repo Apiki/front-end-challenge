@@ -1,0 +1,10 @@
+.card__header{
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+.card__image{
+    display: flex;
+    max-height: 30rem;
+}
