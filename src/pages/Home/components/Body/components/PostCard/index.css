@@ -1,0 +1,55 @@
+.post__card {
+  height: 500px;
+  width: 380px;
+  transform: translateY(-30px);
+}
+
+.post__card {
+  overflow: hidden;
+}
+
+.post__card__img__overlay {
+  background: linear-gradient(0deg, #000000ee, #000000b6, #0101017a, #01010128, #14141400);
+  background-size: 170% 170%;
+  height: 272px;
+  position: absolute;
+  width: 100%;
+  transition: all ease 0.7s;
+}
+
+.post__card__img__overlay:hover {
+  background-position: 100%;
+  cursor: pointer;
+}
+
+.post__card__img img {
+  width: 100%;
+}
+
+.post__card__title {
+  white-space: wrap;
+  overflow: hidden;
+  height: 80px;
+  position: absolute;
+  z-index: 100;
+  margin-top: 180px;
+  padding-left: 12px;
+  color: white;
+  filter: brightness(0.9);
+  text-overflow: ellipsis;
+}
+
+.post__card__title:hover {
+  cursor: pointer;
+}
+
+.post__card__title:hover ~ .post__card__img > .post__card__img__overlay {
+  background-position: 100%;
+}
+
+.post__card__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+}

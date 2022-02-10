@@ -1,0 +1,15 @@
+.body {
+  box-shadow: 0px 1px 30px 1px rgba(0,0,0,0.62);
+  display: flex;
+  justify-content: start;
+  background-color: var(--bg-color);
+}
+
+.body__PostCards {
+  display: flex;
+  margin: 0 auto;
+  max-width: 80vw;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 90px;
+}

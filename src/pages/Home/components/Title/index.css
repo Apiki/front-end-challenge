@@ -1,0 +1,22 @@
+.homePage__background {
+  background-image: url(https://apiki.com/wp-content/uploads/2021/04/sparkles-.png);
+  background-repeat: repeat;
+  background-size: auto;
+  opacity: 0.5;
+  background-attachment: fixed;
+  background-color: #24272b;
+}
+
+.homePage__title {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.473) 0%, rgba(1,1,1,0.6) 5%, rgba(20,20,20,0) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 350px;
+}
+
+.homePage__title h1 {
+  padding-bottom: 50px;
+  font-size: 2.6rem;
+  color: rgb(255, 255, 255);
+}

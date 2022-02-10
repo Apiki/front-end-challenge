@@ -1,5 +1,5 @@
 .header__container {
-  background: linear-gradient(90deg, rgba(89,91,92,1) 0%, rgb(14, 14, 14) 100%);
+  background: linear-gradient(90deg, rgb(67, 68, 70) 0%, rgb(14, 14, 14) 100%);
   width: 100%;
 }
 
@@ -12,7 +12,7 @@
 
 .header {
   display: grid;
-  grid-template-columns: 1.2fr 5fr 1.8fr;
+  grid-template-columns: 1.1fr 5fr 1.7fr;
   grid-template-areas: "logo search mediaIcons";
   align-items: center;
   justify-content: space-between;
@@ -46,9 +46,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 20px;
+  margin-left: 16px;
   width: 60%;
-  height: 62%;
+  height: 66%;
   border-radius: 20px;
   background-color: white;
 }
@@ -63,6 +63,7 @@
 
 .header__search__bar__icon {
   color: var(--link-color);
+  filter: opacity(0.8);
 }
 
 .header_social__media {
