@@ -1,27 +1,21 @@
-<p-card>
-<div class="container" >
-    <div *ngFor="let dados of showNotice">
-    <div class="card" *ngFor="let autor of dados._embedded.author">
-        <h1 class="title" innerHTML="{{dados.title.rendered}}"></h1>
 
+<button pButton label="Voltar" icon="pi pi-arrow-left" routerLink="/"></button>
 
-        <div class="card__header">
-            <img src="{{dados._embedded['wp:featuredmedia'][0].source_url }}" alt="Image Card" class="card__image">
-        </div>
-        <div class="card__body">
-            <span class="tag tag-blue">Desenvolvimento</span>
-           <a><h4 innerHTML="{{dados.title.rendered}}"></h4></a> 
+<div class="blog-container" *ngFor="let dados of showNotice">
+    <div class="blog-title">
+        <h1 innerHTML="{{dados.title.rendered}}"></h1>
+        <div class="sub-title">
             <p innerHTML="{{dados.excerpt.rendered}}"></p>
         </div>
-        <div class="card__footer">
-            <div class="user">
-                <img src="https://i.pravatar.cc/40?img=1" alt="user__image" class="user__image">
-                <div class="user__info">
-                    <h5 innerHTML="{{autor.name}}"></h5>
-                </div>
-            </div>
-        </div>
     </div>
+
+    <img src="{{dados._embedded['wp:featuredmedia'][0].source_url}}" alt="card__image">
+
+    <div class="blog-body">
+
+        <div class="blog-content">
+            <p innerHTML="{{dados.content.rendered}}"></p>
+            <p class="published-date">Publicado em:{{dados.date}}</p>
+        </div>
+    </div>    
 </div>
-</div>
-</p-card>

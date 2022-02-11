@@ -238,7 +238,9 @@ section {
         flex-direction: column;
     }
   footer{
+	position: relative;
     bottom: 0px!important;
+	
   }
   .main-content{
     flex-wrap: wrap;

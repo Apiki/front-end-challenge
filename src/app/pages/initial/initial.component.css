@@ -33,7 +33,9 @@ img {
 }
 
 .card {
-  display: flex;
+  padding: 1rem;
+  display: grid;
+  grid-auto-rows: minmax(100px, auto);
   flex-direction: column;
   width: clamp(20rem, calc(20rem + 2vw), 22rem);
   overflow: hidden;
@@ -44,6 +46,14 @@ background: linear-gradient(to right, #FFFFFF, #ECE9E6);
 
 }
 
+.excerpt{
+  display: grid;
+  grid-auto-rows: minmax(100px, auto);
+}
+.title{
+  display: grid;
+  grid-auto-rows: 90px;
+}
 
 
 .card__body {
@@ -106,3 +116,25 @@ background: linear-gradient(to bottom, #ef473a, #cb2d3e);
 .user__info > small {
   color: #666;
 }
+
+.card__header img{
+  max-height: 180px;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}

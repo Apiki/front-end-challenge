@@ -30,12 +30,12 @@
         </div>
         <div class="card__body">
             <span class="tag tag-blue">Desenvolvimento</span>
-           <a (click)="handleReadMore(dados.slug)"><h4 innerHTML="{{dados.title.rendered}}"></h4></a> 
-            <p innerHTML="{{dados.excerpt.rendered}}"></p>
+           <a (click)="handleReadMore(dados.slug)"><h4 class="title" innerHTML="{{dados.title.rendered}}"></h4></a> 
+            <p innerHTML="{{dados.excerpt.rendered}}" class="excerpt"></p>
         </div>
         <div class="card__footer">
             <div class="user">
-                <img src="https://i.pravatar.cc/40?img=1" alt="user__image" class="user__image">
+                <img src="{{image}}" alt="user__image" class="user__image">
                 <div class="user__info">
                     <h5 innerHTML="{{autor.name}}"></h5>
                 </div>
@@ -46,17 +46,5 @@
 </div>
 
 
+<p-button label="Carregar mais" icon="pi pi-arrow-circle-down" (click)="handleLoadMore()" styleClass="p-button-lg" ></p-button>
 
-
-
-
-
-
-
-
-
-
-
-
-
-<button pButton (click)="handleLoadMore()">Carrega aí por favor</button>

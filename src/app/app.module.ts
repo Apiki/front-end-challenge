@@ -14,7 +14,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { InitialComponent } from './pages/initial/initial.component';
 import { InternalPostComponent } from './pages/internal-post/internal-post.component';
-
+import {TableModule} from 'primeng/table';
 
 
 @NgModule({
@@ -32,6 +32,7 @@ import { InternalPostComponent } from './pages/internal-post/internal-post.compo
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
+    TableModule
     
  
     

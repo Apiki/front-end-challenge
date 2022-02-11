@@ -16,6 +16,7 @@ page: number = 1;
 notices: any;
 aut: any;
 slug: string;
+image: string;
 
 constructor(
   private initialService: InitialService,
@@ -37,6 +38,7 @@ getNotices() {
         if(Autores._embedded.author[0].name == undefined)
         {
           Autores._embedded.author[0].name = 'Autor Desconhecido'
+
         }
       }
       console.log(this.notices);
@@ -44,6 +46,14 @@ getNotices() {
     } else {
       this.notices = this.notices.concat(notices)
       console.log(this.notices);
+    }
+    
+    for(let image of notices){
+      image = image._embedded.author[0].avatar_urls[48]
+      this.image = image
+     
+      
+      console.log(this.image)
     }
   });
 }

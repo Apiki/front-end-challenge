@@ -1,10 +1,37 @@
+*{
+    position: relative;
+}
 .card__header{
     align-items: center;
     justify-items: center;
     justify-content: center;
 }
 
-.card__image{
-    display: flex;
+.blog-container{
     max-height: 30rem;
+    width: 46rem;
+    margin-top: 10px;
+}
+
+
+.blog-title h1{
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+.blog-title .sub-title{
+    font-size: 1.3rem;
+    line-height: 1.4em;
+    margin-bottom: 20px;
+    color: #a0a0a0;
+}
+
+.blog-container img{
+    max-height: 30rem;
+    width: 46rem;
+}
+
+.blog-container .blog-content {
+    max-height: 30rem;
+    width: 30rem;
+    font-size: 1.2rem;
 }
