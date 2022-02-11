@@ -10,6 +10,8 @@
   --primary-color: #e7ecf0;
   --secondary-color: #c0c5c9;
 
+  --card-description-color: #2e2e30;
+
   --link-color: #ba007c;
   --link-color-hover: #7c0053 ;
 
@@ -36,6 +38,7 @@ body {
   background-color: var(--body-bg-color);
   font-family: 'Montserrat', sans-serif;
   color: var(--primary-color);
+  text-rendering: optimizeLegibility;
 }
 
 code {

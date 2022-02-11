@@ -12,6 +12,9 @@ const index = () => {
         <PostCard image={PostCardExampleImage}/>
         <PostCard image={PostCardExampleImage2}/>
         <PostCard image={PostCardExampleImage}/>
+        <PostCard image={PostCardExampleImage}/>
+        <PostCard image={PostCardExampleImage}/>
+        <PostCard image={PostCardExampleImage}/>
       </div>
     </div>
   )
