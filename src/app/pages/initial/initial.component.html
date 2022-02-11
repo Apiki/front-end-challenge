@@ -1,26 +1,3 @@
-<!-- <div class="grid p-fluid">
-    <div *ngFor="let dados of notices" class="col-12 md:col-4">
-        <div *ngFor="let autor of dados._embedded.author">
-            <div>
-                <img alt="Card" class="h-13rem w-full" src="{{dados._embedded['wp:featuredmedia'][0].source_url }}">
-            </div>
-            <div styleClass="p-card-shadow" class="card container">
-                <h1 class="limiteDivTitle m-0"> <strong innerHTML="{{dados.title.rendered}}"></strong> </h1>
-                <h3><small><b innerHTML="{{autor.name}}"></b></small></h3>
-                <div innerHTML="{{dados.excerpt.rendered}}" class="limiteDiv"></div>
-
-                <div>
-                    <button pButton pRipple type="button" label="Leia Mais"
-                        class="p-button-rounded justify-content-center" icon="pi pi-eye"
-                        (click)="handleReadMore(dados._embedded['wp:featuredmedia'][0].slug)"></button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
--->
-
-
 <div class="container" >
     <div *ngFor="let dados of notices">
     <div class="card" *ngFor="let autor of dados._embedded.author">
@@ -30,12 +7,12 @@
         </div>
         <div class="card__body">
             <span class="tag tag-blue">Desenvolvimento</span>
-           <a (click)="handleReadMore(dados.slug)"><h4 class="title" innerHTML="{{dados.title.rendered}}"></h4></a> 
+           <a (click)="handleReadMore(dados.slug)"><h4 class="title" innerHTML="{{dados.title.rendered}}" style="cursor: pointer;"></h4></a> 
             <p innerHTML="{{dados.excerpt.rendered}}" class="excerpt"></p>
         </div>
         <div class="card__footer">
             <div class="user">
-                <img src="{{image}}" alt="user__image" class="user__image">
+                <img src="{{dados._embedded.author[0].imgAuthor}}"  alt="user__image" class="user__image">
                 <div class="user__info">
                     <h5 innerHTML="{{autor.name}}"></h5>
                 </div>

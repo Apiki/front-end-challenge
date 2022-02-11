@@ -1,21 +1,21 @@
-
 <button pButton label="Voltar" icon="pi pi-arrow-left" routerLink="/"></button>
+<p-card class="card-container">
+    <div class="blogDiv"  *ngFor="let dados of showNotice">
+        <div class="blog-title">
+            <h1 innerHTML="{{dados.title.rendered}}"></h1>
+            <div class="sub-title">
+                <p innerHTML="{{dados.excerpt.rendered}}"></p>
+            </div>
+        </div>
 
-<div class="blog-container" *ngFor="let dados of showNotice">
-    <div class="blog-title">
-        <h1 innerHTML="{{dados.title.rendered}}"></h1>
-        <div class="sub-title">
-            <p innerHTML="{{dados.excerpt.rendered}}"></p>
+        <img src="{{dados._embedded['wp:featuredmedia'][0].source_url}}" alt="card__image">
+
+        <div class="blog-body">
+
+            <div class="blog-content">
+                <p innerHTML="{{dados.content.rendered}}"></p>
+                <p class="published-date">Publicado em:{{dados.date}}</p>
+            </div>
         </div>
     </div>
-
-    <img src="{{dados._embedded['wp:featuredmedia'][0].source_url}}" alt="card__image">
-
-    <div class="blog-body">
-
-        <div class="blog-content">
-            <p innerHTML="{{dados.content.rendered}}"></p>
-            <p class="published-date">Publicado em:{{dados.date}}</p>
-        </div>
-    </div>    
-</div>
+</p-card>

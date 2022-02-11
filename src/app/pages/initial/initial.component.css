@@ -53,6 +53,12 @@ background: linear-gradient(to right, #FFFFFF, #ECE9E6);
 .title{
   display: grid;
   grid-auto-rows: 90px;
+  transition: all 0.5s;
+}
+
+.title:hover{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 

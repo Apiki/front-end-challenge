@@ -6,9 +6,12 @@
     justify-items: center;
     justify-content: center;
 }
+.card-container{
+    margin-top: 10px;
+    width: 46rem;
+}
 
-.blog-container{
-    max-height: 30rem;
+.blogDiv{
     width: 46rem;
     margin-top: 10px;
 }
