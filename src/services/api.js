@@ -1,7 +1,13 @@
-import axios from 'axios';
+const API_BASE = "https://blog.apiki.com/wp-json/wp/v2";
 
-const api = axios.create({
-  baseURL: "https://blog.apiki.com/wp-json/wp/v2/",
-})
+const baseFetch = async (endpoint) => {
+  const req = await fetch(`${API_BASE}${endpoint}`);
+  const json = await req.json();
+  return json;
+}
 
-export default api;
+export const GetPosts = async () => {
+  return [
+    await baseFetch("/posts?_embed&categories=518")
+  ]
+}

@@ -5,6 +5,7 @@ import Title from "./components/Title"
 import Body from "./components/Body"
 
 const index = () => {
+
   return (
     <div>
       <Header />

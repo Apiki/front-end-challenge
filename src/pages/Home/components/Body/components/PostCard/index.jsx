@@ -1,33 +1,63 @@
 import "./index.css"
 
 import {
+  BsPlayCircle
+} from "react-icons/bs"
+
+import {
   FaRegComment
 } from "react-icons/fa"
 
 const index = ({
-  image,
+  title,
+  description,
+  previewImage,
+  format,
+  slug,
+  authorName,
+  authorLink,
 }) => {
+
   return (
     <div className="post__card">
-      <div className="post__card__title">
-        <h2>Como criar Web Stotires no WordPress Como criar Web Stotires no WordPress</h2>
-      </div>
       <div className="post__card__img">
-        <div className="post__card__img__overlay"></div>
-        <img src={image} alt="Post Card" />
+        {
+          format === "video" ?
+            <div className="post__card__img__overlay post__card__img__overlay--video">
+              <BsPlayCircle size={70} />
+            </div>
+            :
+            <div className="post__card__img__overlay"></div>
+        }
+        <img src={previewImage} alt="Post Card" />
       </div>
       <div className="post__card__description">
+        <div className="post__card__title">
+          <h3>{title}</h3>
+        </div>
         <div className="post__card__description__info">
-          <p>By: <span className="post__card__description__author">Leandro Vieira</span></p>
+          {authorName === undefined ?
+            <div>
+              <span></span>
+              <span className="post__card__description__author">{authorName}</span>
+            </div>
+            :
+            <div>
+              <span>By: </span>
+              <span className="post__card__description__author">{authorName}</span>
+            </div>
+          }
           <div className="post__card__description__comments__count">
             <FaRegComment size={14} />
             <span>2</span>
           </div>
         </div>
-        <p className="post__card__description__abstract">O Google entrou pesado no jogo da audiência através do formato Stories. E você precisa saber criar Web Stories no...</p>
+        <p className=".post__card__description__abstract">{description}</p>
       </div>
     </div>
   )
 }
+
+// .post__card__description__abstract
 
 export default index

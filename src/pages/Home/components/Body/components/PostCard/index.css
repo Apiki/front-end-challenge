@@ -1,5 +1,5 @@
 .post__card {
-  height: 500px;
+  height: 600px;
   width: 380px;
   transform: translate(0, -30px);
 }
@@ -13,9 +13,9 @@
 }
 
 .post__card__img__overlay {
-  background: linear-gradient(0deg, #000000da, #000000ab, #01010180, #01010113, #14141400);
+  background: linear-gradient(0deg, #000000da, #0000009c, #01010180, #01010113, #14141400);
   background-size: 170% 170%;
-  height: 277px;
+  height: 230px;
   position: absolute;
   width: 102.2%;
   transition: all ease 0.7s;
@@ -25,40 +25,30 @@
   z-index: 99;
 }
 
+.post__card__img__overlay--video {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.164);
+  align-items: center;
+  justify-content: center;
+  transition: all ease 0.5s;
+}
+
+.post__card__img__overlay--video:hover {
+  cursor: pointer;
+}
+
 .post__card__img__overlay:hover {
   background-position: 100%;
   cursor: pointer;
 }
 
 .post__card__img img {
-  width: 102%;
+  height: 230px;
+  width: 388px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   z-index: 98;
-}
-
-.post__card__title {
-  white-space: wrap;
-  overflow: hidden;
-  height: 80px;
-  position: absolute;
-  z-index: 100;
-  margin-top: 182px;
-  padding-left: 12px;
-  color: white;
-  filter: brightness(1);
-  text-overflow: ellipsis;
-  z-index: 100;
-  transition: all ease 0.5s;
-}
-
-.post__card__title:hover {
-  cursor: pointer;
-}
-
-.post__card__title:hover ~ .post__card__img > .post__card__img__overlay {
-  background-position: 100%;
 }
 
 .post__card__description {
@@ -68,19 +58,46 @@
   margin: 0 auto;
   margin-left: 10px;
   padding: 0 12px;
-  padding-top: 215px;
-  margin-top: -215px;
+  padding-top: 100px;
+  margin-top: -100px;
   border-radius: 8px;
   width: 95%;
   z-index: 90;
   font-size: 1.05rem;
 }
 
+.post__card__title {
+  white-space: wrap;
+  overflow: hidden;
+  width: 90%;
+  border-radius: 10px;
+  z-index: 100;
+  color: white;
+  filter: brightness(1);
+  text-overflow: ellipsis;
+  z-index: 100;
+  transition: all ease 0.5s;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.post__card__title h2 {
+  margin: 0;
+}
+
+.post__card__title:hover {
+  cursor: pointer;
+}
+
+.post__card__title:hover~.post__card__img>.post__card__img__overlay {
+  background-position: 100%;
+}
+
 .post__card__description__info {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  padding-top: 80px;
   padding-right: 20px;
   font-size: 1.05rem;
 }
@@ -89,7 +106,7 @@
   font-weight: bold;
 }
 
-.post__card__description__author { 
+.post__card__description__author {
   cursor: pointer;
 }
 
