@@ -13,13 +13,19 @@ const index = ({
   description,
   previewImage,
   format,
-  slug,
   authorName,
   authorLink,
+  commentsAccount,
+  slug,
+  link,
+  ribbonPostDate,
 }) => {
 
   return (
     <div className="post__card">
+      <div className="post__card__label__ribbon">
+        {ribbonPostDate}
+      </div>
       <div className="post__card__img">
         {
           format === "video" ?
@@ -32,7 +38,7 @@ const index = ({
         <img src={previewImage} alt="Post Card" />
       </div>
       <div className="post__card__description">
-        <div className="post__card__title">
+        <div className="post__card__description__title">
           <h3>{title}</h3>
         </div>
         <div className="post__card__description__info">
@@ -44,12 +50,12 @@ const index = ({
             :
             <div>
               <span>By: </span>
-              <span className="post__card__description__author">{authorName}</span>
+              <a href={authorLink} className="post__card__description__author">{authorName}</a>
             </div>
           }
           <div className="post__card__description__comments__count">
             <FaRegComment size={14} />
-            <span>2</span>
+            <span>{commentsAccount}</span>
           </div>
         </div>
         <p className=".post__card__description__abstract">{description}</p>

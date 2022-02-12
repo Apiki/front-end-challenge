@@ -13,3 +13,11 @@
   flex-wrap: wrap;
   gap: 90px;
 }
+
+@media (max-width: 600px)
+{
+  .body__PostCards { 
+    gap: 10px;
+    margin-right: 52px;
+  }
+}
