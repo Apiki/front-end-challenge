@@ -1,5 +1,6 @@
-<button pButton label="Voltar" icon="pi pi-arrow-left" routerLink="/"></button>
+
 <p-card class="card-container">
+    <button pButton label="Voltar" icon="pi pi-arrow-left" routerLink="/"></button>
     <div class="blogDiv"  *ngFor="let dados of showNotice">
         <div class="blog-title">
             <h1 innerHTML="{{dados.title.rendered}}"></h1>

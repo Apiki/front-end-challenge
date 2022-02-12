@@ -1,27 +1,30 @@
-<div class="container" >
+<div class="container">
     <div *ngFor="let dados of notices">
-    <div class="card" *ngFor="let autor of dados._embedded.author">
-        <div class="card__header">
-            <img src="{{dados._embedded['wp:featuredmedia'][0].source_url }}" alt="Image Card" class="card__image"
-                width="600">
-        </div>
-        <div class="card__body">
-            <span class="tag tag-blue">Desenvolvimento</span>
-           <a (click)="handleReadMore(dados.slug)"><h4 class="title" innerHTML="{{dados.title.rendered}}" style="cursor: pointer;"></h4></a> 
-            <p innerHTML="{{dados.excerpt.rendered}}" class="excerpt"></p>
-        </div>
-        <div class="card__footer">
-            <div class="user">
-                <img src="{{dados._embedded.author[0].imgAuthor}}"  alt="user__image" class="user__image">
-                <div class="user__info">
-                    <h5 innerHTML="{{autor.name}}"></h5>
+        <div class="card" *ngFor="let autor of dados._embedded.author">
+            <div class="card__header">
+                <img src="{{dados._embedded['wp:featuredmedia'][0].source_url }}" alt="Image Card" class="card__image"
+                    width="600">
+            </div>
+            <div class="card__body">
+                <span class="tag tag-blue">Desenvolvimento</span>
+                <a (click)="handleReadMore(dados.slug)">
+                    <h4 class="title" innerHTML="{{dados.title.rendered}}" style="cursor: pointer;"></h4>
+                </a>
+                <p innerHTML="{{dados.excerpt.rendered}}" class="excerpt"></p>
+            </div>
+            <div class="card__footer">
+                <div class="user">
+                    <img src="{{dados._embedded.author[0].imgAuthor}}" alt="user__image" class="user__image">
+                    <div class="user__info">
+                        <h5 innerHTML="{{autor.name}}"></h5>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+        <div class="btn">
+        <p-button label="Carregar mais" icon="pi pi-arrow-circle-down" (click)="handleLoadMore()" styleClass="p-button-lg">
+        </p-button>
+    </div>
 </div>
-</div>
-
-
-<p-button label="Carregar mais" icon="pi pi-arrow-circle-down" (click)="handleLoadMore()" styleClass="p-button-lg" ></p-button>
 

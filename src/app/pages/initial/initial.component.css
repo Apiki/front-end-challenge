@@ -21,7 +21,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1200px;
   margin-block: 2rem;
   gap: 2rem;
 }
@@ -67,6 +66,7 @@ background: linear-gradient(to right, #FFFFFF, #ECE9E6);
   display: flex;
   flex-direction: column;
   gap: .5rem;
+  max-height: 310px;
 }
 
 
@@ -144,3 +144,7 @@ background: linear-gradient(to bottom, #ef473a, #cb2d3e);
 }
 
 .pagination a:hover:not(.active) {background-color: #ddd;}
+
+.btn{
+  align-content: center;
+}
