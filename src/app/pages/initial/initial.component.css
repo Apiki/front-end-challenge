@@ -146,5 +146,5 @@ background: linear-gradient(to bottom, #ef473a, #cb2d3e);
 .pagination a:hover:not(.active) {background-color: #ddd;}
 
 .btn{
-  align-content: center;
+  text-align: center;
 }

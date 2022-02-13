@@ -12,8 +12,4 @@ export class AppComponent {
 
   ngOnInit(): void {
   }
-  navigateHome() {
-    this.menuService.navigateHome();
-    return false;
-  }
 }
