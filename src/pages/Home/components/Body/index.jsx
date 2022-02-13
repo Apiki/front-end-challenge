@@ -43,6 +43,7 @@ const index = () => {
               authorName={post._embedded.author[0].name}
               authorLink={post._embedded.author[0].link}
               commentsAccount={post._embedded.replies ? post._embedded.replies.length : "0"}
+              rendered={post.excerpt.rendered}
               slug={post.slug}
               link={post.link}
               postDate={convertDate(post.modified)}

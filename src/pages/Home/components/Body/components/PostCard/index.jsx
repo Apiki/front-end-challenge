@@ -1,5 +1,6 @@
 import "./index.css"
 import { Link } from "react-dom"
+import parser from "html-react-parser"
 
 import {
   BsPlayCircle
@@ -20,6 +21,7 @@ const index = ({
   slug,
   link,
   postDate,
+  rendered,
 }) => {
 
   return (
@@ -66,7 +68,7 @@ const index = ({
             <span>{commentsAccount}</span>
           </div>
         </div>
-        <p className=".post__card__description__abstract">{description}</p>
+        <div className=".post__card__description__abstract">{parser(rendered)}</div>
       </div>
     </div>
   )
