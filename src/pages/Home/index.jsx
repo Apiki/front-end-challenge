@@ -1,7 +1,6 @@
 import "./index.css"
 
 import Header from "../../components/Header"
-import Title from "./components/Title"
 import Body from "./components/Body"
 
 const index = () => {
@@ -9,11 +8,7 @@ const index = () => {
   return (
     <div>
       <Header />
-      <Title />
       <Body />
-      {/* Title */}
-
-      {/* Content */}
     </div>
   )
 }

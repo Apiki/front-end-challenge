@@ -1,4 +1,5 @@
 import "./index.css"
+import { Link } from "react-dom"
 
 import {
   BsPlayCircle
@@ -18,25 +19,32 @@ const index = ({
   commentsAccount,
   slug,
   link,
-  ribbonPostDate,
+  postDate,
 }) => {
 
   return (
     <div className="post__card">
-      <div className="post__card__label__ribbon">
-        {ribbonPostDate}
-      </div>
-      <div className="post__card__img">
-        {
-          format === "video" ?
-            <div className="post__card__img__overlay post__card__img__overlay--video">
-              <BsPlayCircle size={70} />
-            </div>
-            :
-            <div className="post__card__img__overlay"></div>
-        }
-        <img src={previewImage} alt="Post Card" />
-      </div>
+      {
+        authorName ?
+          <div className="post__card__label__ribbon">
+            <span>By: </span><span>{authorName}</span>
+          </div>
+          :
+          ""
+      }
+      {/* <Link to={link} > */}
+        <div className="post__card__img">
+          {
+            format === "video" ?
+              <div className="post__card__img__overlay post__card__img__overlay--video">
+                <BsPlayCircle size={70} />
+              </div>
+              :
+              <div className="post__card__img__overlay"></div>
+          }
+          <img src={previewImage} alt="Post Card" />
+        </div>
+      {/* </Link> */}
       <div className="post__card__description">
         <div className="post__card__description__title">
           <h3>{title}</h3>
@@ -63,7 +71,5 @@ const index = ({
     </div>
   )
 }
-
-// .post__card__description__abstract
 
 export default index

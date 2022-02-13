@@ -6,23 +6,27 @@ import { GetPosts } from '../../../../services/api'
 import convertDate from "../../../../utils/convertDate"
 
 import PostCard from './components/PostCard'
+import PostCardLoading from './components/PostCardLoading'
+import ButtonShowMore from './components/ButtonShowMore'
 
 const index = () => {
 
+  const [page, setPage] = useState(1)
   const [postsList, setPostsList] = useState([]);
 
   useEffect(() => {
-    const loadPosts = async () => {
-      let list = await GetPosts();
-      setPostsList(list[0])
-    }
-
     loadPosts();
+
   }, []);
 
-  console.log(postsList)
+  const loadPosts = async () => {
+    const list = await GetPosts(page);
+    setPostsList([...postsList, ...list[0]])
 
-  //{post._embedded["wp:featuredmedia"][0].source_url}
+    setPage(page + 1)
+  }
+
+  console.log(postsList)
 
   return (
     <div className="body">
@@ -41,13 +45,28 @@ const index = () => {
               commentsAccount={post._embedded.replies ? post._embedded.replies.length : "0"}
               slug={post.slug}
               link={post.link}
-              ribbonPostDate={convertDate(post.modified)}
+              postDate={convertDate(post.modified)}
             />
           ))
         }
+        {
+          postsList.length === 0 ?
+            <>
+              <PostCardLoading />
+              <PostCardLoading />
+              <PostCardLoading />
+              <PostCardLoading />
+            </>
+            :
+            ""
+        }
+        {console.log("postList :" + postsList.length)}
+        {console.log("pages :" + (page * 10 -9))}
+
       </div>
+      <ButtonShowMore loadMorePosts={() => loadPosts()} />
     </div>
   )
 }
 
-export default index
+export default index;
