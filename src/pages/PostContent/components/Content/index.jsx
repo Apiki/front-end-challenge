@@ -52,7 +52,7 @@ const index = ({
       <hr />
       {
         authorImage ?
-          <div className="post__info" id="postInfo" data-anime="toFix">
+          <div className="post__info">
             <img src={authorImage} alt="author Image" />
             <p>{authorName}</p>
             <p>{authorDescription}</p>

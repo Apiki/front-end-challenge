@@ -5,6 +5,7 @@ import { GetPostContent } from "../../services/api"
 
 import Header from "../../components/Header"
 import Content from "./components/Content"
+import ContentLoading from "./components/ContentLoading"
 import ButtonBackToHome from "./components/ButtonBackToHome"
 
 import { useLocation } from "react-router-dom";
@@ -49,6 +50,12 @@ const index = () => {
               authorImage={post._embedded.author[0].avatar_urls ? post._embedded.author[0].avatar_urls[96] : ""}
             />
           ))
+        }
+        {
+          postContent.length === 0 ?
+            <ContentLoading />
+            :
+            ""
         }
         <ButtonBackToHome />
       </div>
