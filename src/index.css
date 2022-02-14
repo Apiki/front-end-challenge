@@ -13,7 +13,7 @@
   --card-description-color: #2e2e30;
   --card__label__ribbon:#881361;
 
-  --link-color: #ba007c;
+  --link-color: #c40283;
   --link-color-hover: #9e016a ;
 
 }
@@ -40,6 +40,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: var(--primary-color);
   text-rendering: optimizeLegibility;
+
+  letter-spacing: .05em
 }
 
 code {

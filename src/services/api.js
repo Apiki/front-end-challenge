@@ -20,6 +20,6 @@ export const GetPosts = async (page) => {
 
 export const GetPostContent = async (slug) => {
   return [
-    await baseFetchGetPostContent("/posts?_embed&", slug)
+    await baseFetchGetPostContent("/posts?_embed", slug)
   ]
 }

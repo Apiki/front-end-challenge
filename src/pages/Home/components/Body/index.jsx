@@ -26,18 +26,15 @@ const index = () => {
     setPage(page + 1)
   }
 
-  console.log(postsList)
-
   return (
     <div className="body">
       <div className="body__PostCards">
         {
           postsList.map((post, key) => (
             <PostCard
-              key={key}
-              previewImage={post._embedded["wp:featuredmedia"][0].source_url}
+              key={post.id}
+              previewImage={post._embedded["wp:featuredmedia"] ? post._embedded["wp:featuredmedia"][0].source_url : post._embedded["wp:term"][0][0].yoast_head_json.og_image[0].url}
               title={post.title.rendered}
-              description={post.yoast_head_json.description}
               format={post.format}
               slug={post.slug}
               authorName={post._embedded.author[0].name}
@@ -45,7 +42,6 @@ const index = () => {
               commentsAccount={post._embedded.replies ? post._embedded.replies.length : "0"}
               rendered={post.excerpt.rendered}
               slug={post.slug}
-              link={post.link}
               postDate={convertDate(post.modified)}
             />
           ))

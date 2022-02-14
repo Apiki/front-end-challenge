@@ -1,0 +1,18 @@
+.post__content__return__button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100px;
+  padding: 10px 10px 10px 16px;
+  margin-bottom: 14px;
+  background-color: rgb(70, 70, 70);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  transition: all ease 0.1s;
+}
+
+.post__content__return__button:hover {
+  cursor: pointer;
+  filter: brightness(90%);
+}

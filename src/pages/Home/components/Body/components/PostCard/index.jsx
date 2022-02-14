@@ -12,14 +12,12 @@ import {
 
 const index = ({
   title,
-  description,
   previewImage,
   format,
   authorName,
   authorLink,
   commentsAccount,
   slug,
-  link,
   postDate,
   rendered,
 }) => {
@@ -29,12 +27,12 @@ const index = ({
       {
         authorName ?
           <div className="post__card__label__ribbon">
-            <span>By: </span><span>{authorName}</span>
+            <span>By: </span><a href={authorLink}>{authorName}</a>
           </div>
           :
           ""
       }
-      <Link to={`/post`} state={{ slug }} >
+      <Link to={`/post/${slug}`} state={{ slug }} >
         <div className="post__card__img">
           {
             format === "video" ?
@@ -47,23 +45,14 @@ const index = ({
           <img src={previewImage} alt="Post Card" />
         </div>
       </Link>
-
       <div className="post__card__description">
         <div className="post__card__description__title">
-          <h3>{title}</h3>
+          <Link to={`/post/`} state={{ slug }} >
+            <div>{title}</div>
+          </Link>
         </div>
         <div className="post__card__description__info">
-          {authorName === undefined ?
-            <div>
-              <span></span>
-              <span className="post__card__description__author">{authorName}</span>
-            </div>
-            :
-            <div>
-              <span>By: </span>
-              <a href={authorLink} className="post__card__description__author">{authorName}</a>
-            </div>
-          }
+          <span className="post__card__description__date">{postDate}</span>
           <div className="post__card__description__comments__count">
             <FaRegComment size={14} />
             <span>{commentsAccount}</span>

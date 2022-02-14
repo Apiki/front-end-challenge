@@ -24,6 +24,12 @@
   letter-spacing: 2px;
 }
 
+.post__card__label__ribbon a{
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .post__card__label__ribbon::after {
   position: absolute;
   content: "";
@@ -114,11 +120,14 @@
   z-index: 100;
   transition: all ease 0.5s;
   font-size: 1.2rem;
-  margin: 0;
+  margin: 14px 0px;
 }
 
-.post__card__title h2 {
-  margin: 0;
+.post__card__description__title a {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
 }
 
 .post__card__title:hover {
@@ -137,15 +146,10 @@
   font-size: 1.05rem;
 }
 
-.post__card__description__author {
+.post__card__description__date {
   font-weight: bold;
   text-decoration: none;
   color: var(--link-color);
-}
-
-.post__card__description__author:hover {
-  cursor: pointer;
-  color: var(--link-color-hover);
 }
 
 .post__card__description__comments__count {
