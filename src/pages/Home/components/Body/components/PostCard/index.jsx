@@ -1,5 +1,5 @@
 import "./index.css"
-import { Link } from "react-dom"
+import { Link } from "react-router-dom"
 import parser from "html-react-parser"
 
 import {
@@ -34,7 +34,7 @@ const index = ({
           :
           ""
       }
-      {/* <Link to={link} > */}
+      <Link to={`/post`} state={{ slug }} >
         <div className="post__card__img">
           {
             format === "video" ?
@@ -46,7 +46,8 @@ const index = ({
           }
           <img src={previewImage} alt="Post Card" />
         </div>
-      {/* </Link> */}
+      </Link>
+
       <div className="post__card__description">
         <div className="post__card__description__title">
           <h3>{title}</h3>

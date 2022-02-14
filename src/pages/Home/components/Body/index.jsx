@@ -57,13 +57,12 @@ const index = () => {
               <PostCardLoading />
               <PostCardLoading />
               <PostCardLoading />
+              <PostCardLoading />
+              <PostCardLoading />
             </>
             :
             ""
         }
-        {console.log("postList :" + postsList.length)}
-        {console.log("pages :" + (page * 10 -9))}
-
       </div>
       <ButtonShowMore loadMorePosts={() => loadPosts()} />
     </div>

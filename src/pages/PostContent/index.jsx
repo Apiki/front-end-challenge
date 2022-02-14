@@ -1,30 +1,50 @@
-import exampleImg from '../../assets/PostCardExampleImg2.png'
-import exampleImg2 from '../../assets/PostCardExampleImg.png'
+import { useEffect, useState } from "react"
+
+import exampleImg from "../../assets/PostCardExampleImg2.png"
+import exampleImg2 from "../../assets/PostCardExampleImg.png"
+
 import "./index.css"
+import { GetPostContent } from "../../services/api"
 
 import Header from "../../components/Header"
+import ButtonBackToHome from "./components/ButtonBackToHome"
 
-import {
-  BsArrowLeft
-} from "react-icons/bs"
+import { useLocation } from "react-router-dom";
 
 const index = () => {
+
+  const [postContent, setPostContent] = useState({
+    // title: "test"
+  });
+
+  useEffect(() => {
+    loadPostContent();
+
+  }, []);
+
+  const location = useLocation();
+  const { slug } = location.state;
+
+  const loadPostContent = async () => {
+    const list = await GetPostContent(slug);
+    setPostContent(list[0][0])
+  }
+
+  console.log(postContent)
+
   return (
     <>
       <Header />
-      <div className='post__content'>
-        <button className='post__content__return__button'>
-          <BsArrowLeft />
-          <span>Voltar</span>
-        </button>
-        <div className='post__content__header'>
-          <img className='post_content__header__image' src={exampleImg} alt="" />
-          <div className='post__content__Info'>
+      <div className="post__content">
+        <ButtonBackToHome />
+        <div className="post__content__header">
+          <img className="post_content__header__image" src={exampleImg} alt="" />
+          <div className="post__content__Info">
             <h2>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero optio, magni
+              {postContent.title}
             </h2>
             <div>
-              <img className='post__content__author__image' src={exampleImg2} alt="" />
+              <img className="post__content__author__image" src={exampleImg2} alt="" />
               <span>By: Lorem Silva</span>
             </div>
             <br />
@@ -44,10 +64,7 @@ const index = () => {
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos libero deleniti veniam, earum necessitatibus accusantium modi a id voluptatem. Vel dignissimos eum inventore perspiciatis iste modi doloribus reprehenderit nulla quae?</p>
         <br />
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius facilis veniam dolorem delectus eveniet nostrum quaerat magni, aut dignissimos ipsam possimus, architecto deserunt sit modi, corporis sequi reprehenderit corrupti enim.</p>
-        <button className='post__content__return__button'>
-          <BsArrowLeft />
-          <span>Voltar</span>
-        </button>
+        <ButtonBackToHome />
       </div>
     </>
   )

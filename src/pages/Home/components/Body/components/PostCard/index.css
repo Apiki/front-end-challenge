@@ -59,6 +59,7 @@
 .post__card__img__overlay--video {
   display: flex;
   background-color: rgba(0, 0, 0, 0.164);
+  color: white;
   align-items: center;
   justify-content: center;
   transition: all ease 0.5s;

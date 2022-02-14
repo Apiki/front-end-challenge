@@ -1,15 +1,11 @@
 import './App.css'
 
-import Home from "./pages/Home"
-import PostContent from "./pages/PostContent"
+import Router from "./pages/Router"
 
 function App() {
 
   return (
-    <div>
-      <Home />
-      {/* <PostContent /> */}
-    </div>
+    <Router />
   )
 }
 
