@@ -13,7 +13,7 @@
 
 .post__card__label__ribbon {
   position: absolute;
-  background-color: var(--card__label__ribbon);
+  background-color: var(--card-label-ribbon);
   color: #ebebeb;
   top: 10px;
   right: -24px;
@@ -41,8 +41,8 @@
   border-left-width: 8px;
   border-bottom-width: 5px;
   border-right-width: 8px;
-  border-top-color: var(--card__label__ribbon);
-  border-left-color: var(--card__label__ribbon);
+  border-top-color: var(--card-label-ribbon);
+  border-left-color: var(--card-label-ribbon);
   border-bottom-color: transparent;
   border-right-color: transparent;
   filter: brightness(70%);
@@ -92,7 +92,7 @@
 }
 
 .post__card__description {
-  height: 260px;
+  height: 252px;
   overflow: hidden;
   box-shadow: #0000001a 0px 1px 1px 0px inset, #0e0e0e40 0px 50px 100px -20px, #0000004d 0px 30px 60px -30px;
   border: 1px solid #5e5e5e;
@@ -149,7 +149,7 @@
 .post__card__description__date {
   font-weight: bold;
   text-decoration: none;
-  color: var(--link-color);
+  color: var(--link-color-hover);
 }
 
 .post__card__description__comments__count {

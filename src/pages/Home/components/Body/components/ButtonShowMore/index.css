@@ -1,7 +1,7 @@
 .button__show__more {
   margin: 0 auto;
   width: 200px;
-  background-color: var(--link-color);
+  background-color: var(--button-color);
   color: white;
   font-size: 1.2rem;
   border-radius: 5px;
@@ -14,5 +14,5 @@
 
 .button__show__more:hover {
   cursor: pointer;
-  filter: brightness(80%);
+  background-color: var(--button-color-hover);
 }

@@ -10,12 +10,14 @@ const index = ({
   postImage,
   postExerpt,
   postContent,
+  postDate,
+  postModifiedDate,
   authorName,
+  authorTitle,
   authorDescription,
   authorImage,
   authorLink,
-  postDate,
-  postModifiedDate,
+  authorTwitter,
 }) => {
 
   useEffect(() => {
@@ -29,12 +31,16 @@ const index = ({
         <div className="post__body__author">
           {
             authorImage ?
-              <img src={authorImage} alt="authorImage" />
+              <a href={authorLink}>
+                <img src={authorImage} alt="authorImage" />
+              </a>
               :
               ""
           }
           <div>
-            <p>{authorName}</p>
+            <a href={authorLink} >
+              <p>{authorName}</p>
+            </a>
             <div>
               <span>{convertDate(postDate)}</span>
               <span>last modified -</span>
@@ -52,10 +58,12 @@ const index = ({
       <hr />
       {
         authorImage ?
-          <div className="post__info">
+          <div className="post__info__aside">
             <img src={authorImage} alt="author Image" />
             <p>{authorName}</p>
+            <p>{authorTitle}</p>
             <p>{authorDescription}</p>
+            <p>{authorTwitter}</p>
             <a href={authorLink}>Acessar Perfil</a>
           </div>
           :

@@ -16,13 +16,12 @@ const index = () => {
           </div>
         </div>
         <h2></h2>
-        <h3> </h3>
+        <h3></h3>
         <div className="post__body__image--loading"></div>
         <div className="post__body__content--loaging">
         </div>
       </article>
-      <hr />
-      <div className="post__info--loading">
+      <div className="post__info__aside--loading">
         <div> </div>
         <p> </p>
         <p> </p>

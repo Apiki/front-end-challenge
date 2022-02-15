@@ -11,10 +11,13 @@
   --secondary-color: #c0c5c9;
 
   --card-description-color: #2e2e30;
-  --card__label__ribbon:#881361;
+  --card-label-ribbon:#881361;
 
-  --link-color: #c40283;
-  --link-color-hover: #9e016a ;
+  --button-color: #c00281;
+  --button-color-hover: #aa0272;
+
+  --link-color: #db0293;
+  --link-color-hover: #bb007d ;
 
 }
 

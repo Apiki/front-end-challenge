@@ -8,7 +8,8 @@ import {
   FaYoutube,
   FaGithub,
   FaSignal,
-  FaSearch
+  FaSearch,
+  FaBars,
 } from "react-icons/fa"
 
 import ApikiLogo from "../../../../assets/apiki-logo.png"
@@ -30,6 +31,9 @@ const index = () => {
             </label>
           </div>
           <div className="header__bar_social__media">
+            <div className="header__bar_social__media-reduced">
+              <FaBars size={25} />
+            </div>
             <a href="https://www.facebook.com/ApikiWordPress">
               <FaFacebookF className="header__bar_social__media__icons" />
             </a>

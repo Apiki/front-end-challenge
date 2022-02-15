@@ -27,8 +27,6 @@ const index = () => {
     setPostContent([...post[0]])
   }
 
-  console.log(postContent)
-
   return (
     <div>
       <Header />
@@ -44,10 +42,12 @@ const index = () => {
               postContent={post.content.rendered}
               postDate={post.date}
               postModifiedDate={post.modified}
-              authorName={post._embedded.author[0].name}
+              authorName={post._embedded?.author[0]?.name}
+              authorTitle={post._embedded?.author[0]?.yoast_head_json?.title}
               authorLink={post._embedded.author[0].link}
               authorDescription={post._embedded.author[0].description}
               authorImage={post._embedded.author[0].avatar_urls ? post._embedded.author[0].avatar_urls[96] : ""}
+              authorTwitter={post._embedded?.author[0]?.yoast_head_json?.twitter_site}             
             />
           ))
         }

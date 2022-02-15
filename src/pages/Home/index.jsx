@@ -6,10 +6,10 @@ import Body from "./components/Body"
 const index = () => {
 
   return (
-    <div>
+    <>
       <Header />
       <Body />
-    </div>
+    </>
   )
 }
 
