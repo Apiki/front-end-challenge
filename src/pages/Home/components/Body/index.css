@@ -30,3 +30,11 @@
     margin-right: 52px;
   }
 }
+
+@media (max-width: 480px)
+{
+  .body__PostCards {
+    padding: 0px;
+    gap: 0px;
+  }
+}

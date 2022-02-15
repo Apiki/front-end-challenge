@@ -165,3 +165,13 @@
 .post__card__description__abstract {
   font-size: 1.1rem;
 }
+
+@media (max-width: 480px)
+{
+  .post__card {
+    transform: scale(80%) translate(0, -100px);
+  }
+  .post__card:hover {
+    transform: scale(85%) translate(0, -100px);
+  }
+}
