@@ -56,6 +56,16 @@
   animation: loading 3s ease-out infinite;
 }
 
+@media (max-width: 480px) {
+  .post__card--loading {
+    transform: scale(80%) translate(0, -100px);
+  }
+
+  .post__card--loading:hover {
+    transform: scale(85%) translate(0, -100px);
+  }
+}
+
 @keyframes loading {
   0% {
     background-position: 0%;

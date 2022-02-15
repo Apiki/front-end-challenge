@@ -21,15 +21,6 @@
 
 }
 
-/* colors
-#313866
-#50409A
-#964EC2
-#FF7BBF 
-#BA007C 
-*/
-
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -38,7 +29,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /* dev */
   background-color: var(--body-bg-color);
   font-family: 'Montserrat', sans-serif;
   color: var(--primary-color);

@@ -63,6 +63,4 @@ const index = () => {
   )
 }
 
-// [Object.keys(avatar_urls)[Object.keys(avatar_urls).length - 1]]
-
 export default index

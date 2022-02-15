@@ -130,6 +130,11 @@
   font-weight: bold;
   color: white;
   text-decoration: none;
+  transition: all ease 0.4s;
+}
+
+.post__card__description__title a:hover {
+  color: var(--link-color);
 }
 
 .post__card__title:hover {

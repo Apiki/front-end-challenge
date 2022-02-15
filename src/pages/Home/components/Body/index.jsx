@@ -35,11 +35,6 @@ const index = () => {
     setPageToGo(pageToGo + 1)
   }
 
-  console.log("totalOfPages :" + totalOfPages)
-  console.log("actualPage :" + (actualPage))
-  console.log("pageToGo :" + pageToGo)
-  console.log("")
-
   return (
     <div className="body">
       <div className="body__PostCards">
