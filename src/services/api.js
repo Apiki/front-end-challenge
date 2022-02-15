@@ -23,3 +23,9 @@ export const GetPostContent = async (slug) => {
     await baseFetchGetPostContent("/posts?_embed", slug)
   ]
 }
+
+export const GetTotalPages = async () => {
+  const req = await fetch(`https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=1`);
+  let totalOfPages = req.headers.get("X-WP-TotalPages")
+  return totalOfPages;
+}

@@ -24,7 +24,7 @@
   letter-spacing: 2px;
 }
 
-.post__card__label__ribbon a{
+.post__card__label__ribbon a {
   color: white;
   text-decoration: none;
   cursor: pointer;
@@ -83,6 +83,8 @@
 .post__card__img img {
   height: 230px;
   width: 388px;
+  min-height: 230px;
+  min-width: 388px;
   background-color: #3a3a3a;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -166,11 +168,11 @@
   font-size: 1.1rem;
 }
 
-@media (max-width: 480px)
-{
+@media (max-width: 480px) {
   .post__card {
     transform: scale(80%) translate(0, -100px);
   }
+
   .post__card:hover {
     transform: scale(85%) translate(0, -100px);
   }

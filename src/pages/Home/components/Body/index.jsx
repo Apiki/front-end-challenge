@@ -1,7 +1,7 @@
 import "./index.css"
 
 import { useState, useEffect } from "react"
-import { GetPosts } from '../../../../services/api'
+import { GetPosts, GetTotalPages } from '../../../../services/api'
 
 import convertDate from "../../../../utils/convertDate"
 
@@ -11,20 +11,34 @@ import ButtonShowMore from './components/ButtonShowMore'
 
 const index = () => {
 
-  const [page, setPage] = useState(1)
+  const [pageToGo, setPageToGo] = useState(1)
+  const [actualPage, setActualPage] = useState(1)
+  const [totalOfPages, setTotalOfPages] = useState()
   const [postsList, setPostsList] = useState([]);
 
   useEffect(() => {
     loadPosts();
-
+    getTotalOfPages()
   }, []);
 
+  const getTotalOfPages = async () => {
+    const total = await GetTotalPages()
+
+    setTotalOfPages(total)
+  }
+
   const loadPosts = async () => {
-    const list = await GetPosts(page);
+    setActualPage(actualPage + 1)
+    const list = await GetPosts(pageToGo);
     setPostsList([...postsList, ...list[0]])
 
-    setPage(page + 1)
+    setPageToGo(pageToGo + 1)
   }
+
+  console.log("totalOfPages :" + totalOfPages)
+  console.log("actualPage :" + (actualPage))
+  console.log("pageToGo :" + pageToGo)
+  console.log("")
 
   return (
     <div className="body">
@@ -47,7 +61,7 @@ const index = () => {
           ))
         }
         {
-          postsList.length === 0 ?
+          postsList.length === 0 || actualPage != pageToGo ?
             <>
               <PostCardLoading />
               <PostCardLoading />
@@ -60,7 +74,12 @@ const index = () => {
             ""
         }
       </div>
-      <ButtonShowMore loadMorePosts={() => loadPosts()} />
+      {
+        pageToGo > totalOfPages ?
+          ""
+          :
+          <ButtonShowMore loadMorePosts={() => loadPosts()} />
+      }
     </div>
   )
 }

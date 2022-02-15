@@ -14,9 +14,9 @@ const index = () => {
 
   const [postContent, setPostContent] = useState([]);
 
+
   useEffect(() => {
     loadPostContent();
-
   }, []);
 
   const location = useLocation();
