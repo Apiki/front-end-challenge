@@ -1,0 +1,42 @@
+@font-face {
+  font-family: Montserrat;
+  src: url("../src/fonts/Montserrat-Thin.ttf");
+}
+
+
+:root {
+  --body-bg-color: #24272b;
+
+  --primary-color: #e7ecf0;
+  --secondary-color: #c0c5c9;
+
+  --card-description-color: #2e2e30;
+  --card-label-ribbon:#881361;
+
+  --button-color: #c00281;
+  --button-color-hover: #aa0272;
+
+  --link-color: #db0293;
+  --link-color-hover: #bb007d ;
+
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: var(--body-bg-color);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--primary-color);
+  text-rendering: optimizeLegibility;
+
+  letter-spacing: .05em
+}
+
+code {
+  font-family: 'Montserrat', sans-serif;
+}

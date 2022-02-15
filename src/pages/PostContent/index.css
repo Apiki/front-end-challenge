@@ -1,0 +1,7 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}

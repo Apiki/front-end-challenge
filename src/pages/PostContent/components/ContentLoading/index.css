@@ -1,0 +1,109 @@
+.post__content__container--loading {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-left: 50px;
+}
+
+.post__content__container--loading hr {
+  border-color: #666666;
+  margin: 0;
+}
+
+.post__body--loading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px 5% 20px 10px;
+  width: 75%;
+  color: white;
+}
+
+.post__body__image--loading {
+  height: 90px;
+  width: 90%;
+  background: linear-gradient(90deg, #505050, #797878, #505050);
+  background-size: 300% 300%;
+  animation: loading 3s ease-out infinite;
+}
+
+.post__body--loading h2 {
+  height: 100px;
+  width: 70%;
+  background: linear-gradient(90deg, #505050, #797878, #505050);
+  background-size: 300% 300%;
+  animation: loading 3s ease-out infinite;
+}
+
+.post__body--loading h3 {
+  height: 40px;
+  width: 500px;
+  background: linear-gradient(90deg, #505050, #797878, #505050);
+  background-size: 300% 300%;
+  animation: loading 3s ease-out infinite;
+}
+
+.post__body__author__img--loading {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #505050, #797878, #505050);
+  background-size: 300% 300%;
+  animation: loading 3s ease-out infinite;
+}
+
+.post__body__content--loading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.post__info--loading div {
+  margin-left: 30px;
+  margin-top: 100px;
+  height: 50px;
+  width: 50px;
+  background: linear-gradient(90deg, #505050, #797878, #505050);
+  background-size: 300% 300%;
+  animation: loading 3s ease-out infinite;
+}
+
+.post__info__aside--loading p {
+  margin-left: 30px;
+  height: 10px;
+  width: 100px;
+  background: linear-gradient(90deg, #505050, #797878, #505050);
+  background-size: 300% 300%;
+  animation: loading 3s ease-out infinite;
+}
+
+
+@media (max-width: 1300px) {
+  .post__info--loading {
+    margin-top: 20px;
+    display: none;
+  }
+
+  .post__body--loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    margin: 0;
+    padding: 0 10px;
+  }
+}
+
+@keyframes loading {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 300%;
+  }
+}
