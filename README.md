@@ -1,6 +1,6 @@
 # Desafio FrontEnd Apiki
 
-<img src="https://i.imgur.com/j2XPvoe.gif" height="350px" alt="Preview">
+<img src="https://i.imgur.com/j2XPvoe.gif" height="300px" alt="Preview">
 
 > Confira a live Preview do Projeto: <a href ="/">link</a>
 
