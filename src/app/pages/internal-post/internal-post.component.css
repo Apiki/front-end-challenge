@@ -1,0 +1,39 @@
+*{
+    position: relative;
+}
+
+.blog-page{
+    justify-content: center;
+    display: flex;
+}
+.blog-title{
+    text-align: center;
+}
+
+.blog-title h1{
+    font-weight: 500;
+    font-size: 2.5rem;
+    margin-top: 10px;
+}
+.blog-title .sub-title{
+    font-size: 1.3rem;
+    line-height: 1.4em;
+    margin-bottom: 20px;
+    color: #a0a0a0;
+}
+
+.blog-title .title-img img{
+    width: 80%;
+}
+
+.blog-body{
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+.blog-body figure[class*="wp-block-image"]{
+    display: flex;
+    width: 50%;
+}
