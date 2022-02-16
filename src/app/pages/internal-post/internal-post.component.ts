@@ -19,5 +19,5 @@ export class InternalPostComponent implements OnInit {
         console.log(this.showNotice)
       })
   }
-
+  
 }

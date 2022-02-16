@@ -1,25 +1,19 @@
 *{
     position: relative;
 }
-.card__header{
-    align-items: center;
-    justify-items: center;
+
+.blog-page{
     justify-content: center;
+    display: flex;
 }
-.card-container{
-    margin-top: 10px;
-    width: 46rem;
+.blog-title{
+    text-align: center;
 }
-
-.blogDiv{
-    width: 46rem;
-    margin-top: 10px;
-}
-
 
 .blog-title h1{
     font-weight: 500;
     font-size: 2.5rem;
+    margin-top: 10px;
 }
 .blog-title .sub-title{
     font-size: 1.3rem;
@@ -28,13 +22,18 @@
     color: #a0a0a0;
 }
 
-.blog-container img{
-    max-height: 30rem;
-    width: 46rem;
+.blog-title .title-img img{
+    width: 80%;
 }
 
-.blog-container .blog-content {
-    max-height: 30rem;
-    width: 30rem;
-    font-size: 1.2rem;
+.blog-body{
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+.blog-body figure[class*="wp-block-image"]{
+    display: flex;
+    width: 50%;
 }

@@ -87,18 +87,6 @@ background: linear-gradient(to bottom, #2F80ED, #56CCF2);
   color: #fafafa;
 }
 
-.tag-brown {
-  background: #D1913C;
-background: linear-gradient(to bottom, #FFD194, #D1913C);
-  color: #fafafa;
-}
-
-.tag-red {
-  background: #cb2d3e;
-background: linear-gradient(to bottom, #ef473a, #cb2d3e);
-  color: #fafafa;
-}
-
 .card__body h4 {
   font-size: 1.5rem;
   text-transform: capitalize;
