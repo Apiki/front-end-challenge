@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;700&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding:0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #EEE;
+}
+
+.container{
+  min-width: 320px;
+  max-width: 1200px;
+  margin:auto;
+}
+
+.postsArea--titleArea{
+  text-align:center;
+  padding:40px 0;
+}
+
+.postsArea--title{
+  margin:0;
+  padding:0;
+  letter-spacing: 2px;
+  color:#444;
+}
+
+.NotFound{
+  text-align:center;
+  font-size:30px;
+}
+
+@media (max-width: 600px){
+  .postsArea--title{
+    font-size:22px;
+  }
+}
