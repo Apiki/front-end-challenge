@@ -51,8 +51,10 @@ function PostsCards() {
             dangerouslySetInnerHTML={{ __html: post[0].content.rendered }}
             className="post-content"
           ></div>
-
-          <h4>Escrito por: {post[0]._embedded.author[0].name}</h4>
+          <div className="author">
+            <h4>{post[0]._embedded.author[0].name}</h4>
+            <p>"{post[0]._embedded.author[0].description}"</p>
+          </div>
           <footer>
             <a href="#">↟ Voltar ao início</a>
             <Link to={"/"}>↻ Voltar à página principal</Link>

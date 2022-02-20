@@ -1,11 +1,10 @@
 import "./style.css";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/apikiLogo.png";
 
 export function Header() {
   return (
     <div className="container-header">
-      <img src={logo} alt="Dindin logo" />
-      <h1>Tech Blog</h1>
+      <img src={logo} alt="apiki logo" />
     </div>
   );
 }

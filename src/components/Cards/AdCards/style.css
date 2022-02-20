@@ -1,0 +1,39 @@
+.grid {
+  display: grid;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.grid-template-columns {
+  grid-template-columns: 200px 200px;
+}
+
+.item {
+  margin: 5px;
+
+  font-size: 1.5em;
+}
+
+.item:hover {
+  cursor: pointer;
+}
+
+.item img {
+  width: 1.5em;
+}
+
+.item p {
+  font-size: 0.6em;
+}
+
+h1 {
+  font-size: 1.25em;
+  font-weight: normal;
+  margin-bottom: 1em;
+}
+
+.container img {
+  border-radius: 0.5em;
+  height: 4.5em;
+  width: 7em;
+}

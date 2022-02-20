@@ -1,20 +1,19 @@
-async function getPosts(setPosts) {
-    
+async function getMorePosts(setMorePosts, nextPage) {
     try {
       const response = await fetch(
-        "https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518",
+        `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=${nextPage}`,
         {
           method: "GET",
           headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "application/json"
           },
         }
       );
 
       const data = await response.json();
-      
-      setPosts(data);
       console.log(data)
+      setMorePosts(data);
+     
       
       return data;
     } catch (error) {
@@ -22,4 +21,4 @@ async function getPosts(setPosts) {
     } 
   }
 
-  export default getPosts;
+  export default getMorePosts;
