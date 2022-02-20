@@ -1,0 +1,63 @@
+.main-content {
+  padding: 2em;
+}
+
+.post-info {
+  color: rgb(93, 110, 110);
+}
+
+.main-content img {
+  margin-bottom: 2em;
+  border-radius: 3em;
+}
+
+.post-content {
+  padding: 2em;
+}
+
+.post-content p,
+h2,
+h3,
+h4 {
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+.post-content ul,
+ol {
+  margin-left: 2em;
+  margin-bottom: 2em;
+}
+
+.post-content img {
+  display: none;
+}
+
+.post-info {
+  display: flex;
+  gap: 1em;
+}
+
+.wp-block-code {
+  padding: 2em;
+  background-color: rgb(187, 223, 211);
+  border-radius: 1em;
+  margin-bottom: 1em;
+}
+
+table {
+  margin-bottom: 1em;
+}
+
+td {
+  text-align: center;
+  border: 1px solid black;
+  padding: 0.2em;
+}
+
+footer a {
+  background-color: rgb(65, 85, 197);
+  color: #fff;
+  padding: 1em;
+  border-radius: 0.5em;
+}
