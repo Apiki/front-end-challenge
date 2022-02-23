@@ -9,10 +9,10 @@ function Home() {
       <Header></Header>
       <div className="main-container">
         <div className="container-left">
-          <HomeCards></HomeCards>
+          <HomeCards />
         </div>
         <div className="container-right">
-          <AdCards></AdCards>
+          <AdCards />
         </div>
       </div>
     </>

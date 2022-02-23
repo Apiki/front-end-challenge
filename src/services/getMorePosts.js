@@ -1,4 +1,4 @@
-async function getMorePosts(setMorePosts, nextPage) {
+async function getMorePosts(setPosts, posts, nextPage) {
     try {
       const response = await fetch(
         `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=${nextPage}`,
@@ -11,8 +11,9 @@ async function getMorePosts(setMorePosts, nextPage) {
       );
 
       const data = await response.json();
-      console.log(data)
-      setMorePosts(data);
+      
+      setPosts([...posts, ...data]);
+      
      
       
       return data;

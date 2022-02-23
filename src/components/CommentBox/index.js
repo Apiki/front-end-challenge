@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import "./style.scss"
 
-const CommentBox = () => {
+export const CommentBox = () => {
   const [showComments, setShowComments] = useState(false);
   const [comments, setComments] = useState([]);
 
@@ -12,6 +13,7 @@ const CommentBox = () => {
     setComments((prevComments) => prevComments.filter((comment) => comment.id !== id));
   }
   
+  console.log(comments)
   return(
     <div className="comment-box">
       <h2>Join the Discussion!</h2>
@@ -27,7 +29,7 @@ const CommentBox = () => {
         <div className="comment-list">
           {comments.map((comment) => <Comment 
             author={comment.author} 
-            body={comment.body} 
+            body={comment.comment} 
             id={comment.id}
             removeComment={removeComment}
           />)}
@@ -40,6 +42,7 @@ const CommentBox = () => {
 const CommentForm = ({addComment}) => {
   const [author, setAuthor] = useState('');
   const [comment, setComment] = useState('');
+  
 
   const handleCommentSubmit = ({author, comment, event}) => {
     event.preventDefault();
@@ -50,7 +53,7 @@ const CommentForm = ({addComment}) => {
     <form className="comment-form" onSubmit={(event) => handleCommentSubmit({author, comment, event})}>
       <div className="comment-form-fields">
         <input placeholder="Name" required onChange={({target}) => setAuthor(target.value)} value={author}></input><br />
-        <textarea placeholder="Comment" rows="4" required ref={({target}) => setComment(target.value)} value={comment}></textarea>
+        <textarea placeholder="Comment" rows="4" required onChange={({target}) => setComment(target.value)} value={comment}></textarea>
       </div>
       <div className="comment-form-actions">
         <button type="submit">Post Comment</button>

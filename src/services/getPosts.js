@@ -14,7 +14,8 @@ async function getPosts(setPosts) {
       const data = await response.json();
       
       setPosts(data);
-      console.log(data)
+      
+      
       
       return data;
     } catch (error) {
