@@ -21,11 +21,13 @@ button {
   }
 }
 .comment-box {
-  max-width: 37.5rem;
+  max-width: 50rem;
   color: #fff;
-  background-color: #909090;
+  background-color: rgb(108, 129, 248);
   border-radius: 0.875rem;
   padding: 0.2rem 1rem 2rem;
+  margin-left: 2em;
+  margin-bottom: 2em;
 }
 .comment-form {
   background-color: #fff;

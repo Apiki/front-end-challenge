@@ -16,28 +16,28 @@ function AdCards() {
     <>
       <div>
         <h1>Ofertas Exclusivas!</h1>
-        <section class="container grid grid-template-columns">
-          <div class="item">
+        <section className="container grid grid-template-columns">
+          <div className="item">
             <img src={aliAd} alt="Aliexpress Ad" />
             <p>AliExpress Compre Fácil</p>
           </div>
-          <div class="item">
+          <div className="item">
             <img src={englishAd} alt="English Ad" />
             <p>Aprenda Inglês Online</p>
           </div>
-          <div class="item">
+          <div className="item">
             <img src={nvidiaAd} alt="Nvidia Ad" />
             <p>Acelere sua criatividade</p>
           </div>
-          <div class="item">
+          <div className="item">
             <img src={soubAd} alt="Soub! Ad" />
             <p>Melhores Preços</p>
           </div>
-          <div class="item">
+          <div className="item">
             <img src={spotifyAd} alt="Spotify Ad" />
             <p>Encontre Sua Música</p>
           </div>
-          <div class="item">
+          <div className="item">
             <img src={realityAd} alt="Reality Ad" />
             <p>Realidade Violada</p>
           </div>
@@ -46,20 +46,20 @@ function AdCards() {
 
       <div>
         <h1>Compartilhe</h1>
-        <section class="grid">
-          <div class="item">
+        <section className="social">
+          <div className="social-icons">
             <img src={whatsapp} alt="Whatsapp icon" />
           </div>
-          <div class="item">
+          <div className="social-icons">
             <img src={twitter} alt="Twitter icon" />
           </div>
-          <div class="item">
+          <div className="social-icons">
             <img src={linkedin} alt="Linkedin icon" />
           </div>
-          <div class="item">
+          <div className="social-icons">
             <img src={facebook} alt="Facebook icon" />
           </div>
-          <div class="item">
+          <div className="social-icons">
             <img src={telegram} alt="Telegram icon" />
           </div>
         </section>

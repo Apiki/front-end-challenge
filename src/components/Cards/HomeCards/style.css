@@ -32,3 +32,10 @@ p {
 .post-title p {
   color: rgb(93, 110, 110);
 }
+
+.load-btn {
+  color: #fff;
+  background-color: rgb(108, 129, 248);
+  margin-left: 2em;
+  margin-bottom: 2em;
+}

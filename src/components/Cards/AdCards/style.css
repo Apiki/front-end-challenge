@@ -32,8 +32,20 @@ h1 {
   margin-bottom: 1em;
 }
 
+.container {
+  margin-bottom: 2em;
+}
+
 .container img {
   border-radius: 0.5em;
   height: 4.5em;
   width: 7em;
+}
+
+.social {
+  display: flex;
+}
+
+.social-icons {
+  margin-right: 1em;
 }

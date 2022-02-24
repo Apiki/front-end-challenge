@@ -38,7 +38,8 @@ ol {
   gap: 1em;
 }
 
-.wp-block-code {
+.wp-block-code,
+pre {
   padding: 2em;
   background-color: rgb(187, 223, 211);
   border-radius: 1em;
@@ -56,8 +57,22 @@ td {
 }
 
 footer a {
-  background-color: rgb(65, 85, 197);
+  background-color: rgb(108, 129, 248);
   color: #fff;
   padding: 1em;
   border-radius: 0.5em;
+}
+
+.skeleton-loading {
+  padding: 2em;
+}
+
+.skeleton-h {
+  margin-top: 2em;
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+
+.skeleton-p {
+  margin-left: 5em;
 }

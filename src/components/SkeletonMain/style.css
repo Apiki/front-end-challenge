@@ -1,0 +1,11 @@
+.skeleton-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+
+.skeleton-text {
+  margin-left: 1em;
+  margin-bottom: 0.1em;
+}

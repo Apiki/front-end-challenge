@@ -13,17 +13,16 @@ export const CommentBox = () => {
     setComments((prevComments) => prevComments.filter((comment) => comment.id !== id));
   }
   
-  console.log(comments)
   return(
     <div className="comment-box">
-      <h2>Join the Discussion!</h2>
+      <h2>Deixe um comentário</h2>
       <CommentForm addComment={addComment}/>
       <button id="comment-reveal" onClick={() => setShowComments((prevState) => !prevState)}>
-        {showComments ? 'Hide Comments' : 'Show Comments'}
+        {showComments ? 'Esconder Comentários' : 'Mostrar Comentários'}
       </button>
-      <h3>Comments</h3>
+      <h3>Comentários</h3>
       <h4 className="comment-count">
-        {comments.length ? `${comments.length} comment${comments.length === 1 ? '' : 's'}` : 'No comments yet'}
+        {comments.length ? `${comments.length} comentário${comments.length === 1 ? '' : 's'}` : 'Nenhum comentário ainda'}
       </h4>
       {showComments && (
         <div className="comment-list">
@@ -52,11 +51,11 @@ const CommentForm = ({addComment}) => {
   return (
     <form className="comment-form" onSubmit={(event) => handleCommentSubmit({author, comment, event})}>
       <div className="comment-form-fields">
-        <input placeholder="Name" required onChange={({target}) => setAuthor(target.value)} value={author}></input><br />
-        <textarea placeholder="Comment" rows="4" required onChange={({target}) => setComment(target.value)} value={comment}></textarea>
+        <input placeholder="Nome" required onChange={({target}) => setAuthor(target.value)} value={author}></input><br />
+        <textarea placeholder="Comentário" rows="4" required onChange={({target}) => setComment(target.value)} value={comment}></textarea>
       </div>
       <div className="comment-form-actions">
-        <button type="submit">Post Comment</button>
+        <button type="submit">Postar Comentário</button>
       </div>
     </form>
   );

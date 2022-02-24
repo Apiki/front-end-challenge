@@ -1,46 +1,33 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-//import PostsContext from "../../../contexts";
+import PostsContext from "../../../contexts";
 import getPosts from "../../../services/getPosts";
 import getMorePosts from "../../../services/getMorePosts";
 import "./style.css";
 import noIMG from "../../../assets/noIMG.png";
 
-function HomeCards() {
-  //const { posts, setPosts } = useContext(PostsContext);
-  const [loading, setLoading] = useState(true);
-  const [loadingMorePosts, setLoadingMorePosts] = useState(false);
-  const [posts, setPosts] = useState([]);
+import SkeletonMain from "../../SkeletonMain";
 
-  const [counter, setCounter] = useState(2);
+function HomeCards() {
+  const { posts, setPosts } = useContext(PostsContext);
+  const [loading, setLoading] = useState(false);
+  const [loadingMorePosts, setLoadingMorePosts] = useState(false);
+
+  const [counter, setCounter] = useState(3);
 
   useEffect(() => {
-    getPosts(setPosts, posts);
-    // async function loadData() {
-    //   try {
-    //     const response = await fetch(
-    //       "https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518",
-    //       {
-    //         method: "GET",
-    //         headers: {
-    //           "Content-Type": "application/json",
-    //         },
-    //       }
-    //     );
+    async function loadData() {
+      const data = await getPosts(setPosts, posts);
 
-    //     const data = await response.json();
+      if (data) {
+        setLoading(true);
+      }
+    }
 
-    //     setPosts(data);
-    //   } catch (error) {
-    //     console.log(error);
-    //   } finally {
-    //     setLoading(false);
-    //   }
-    // }
-    // loadData();
+    loadData();
+    setLoading(false);
   }, []);
-
-  console.log(posts);
 
   function handleDate(date) {
     const formattedDate = new Date(date).toLocaleDateString("pt-BR");
@@ -49,50 +36,18 @@ function HomeCards() {
 
   function loadMorePosts() {
     setCounter((value) => value + 1);
-    console.log(counter);
     getMorePosts(setPosts, posts, counter);
-    // if (data) {
-    //   setLoading(true);
-    //   console.log(data);
-
-    //   console.log(counter);
-    // }
-
-    // async function loadData() {
-    //   try {
-    //     setLoadingMorePosts(true);
-    //     const response = await fetch(
-    //       `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=${counter}`,
-    //       {
-    //         method: "GET",
-    //         headers: {
-    //           "Content-Type": "application/json",
-    //         },
-    //       }
-    //     );
-
-    //     const data = await response.json();
-    //     console.log([...posts, ...data]);
-
-    //     setPosts([...posts, ...data]);
-    //   } catch (error) {
-    //     console.log(error);
-    //   } finally {
-    //     setLoadingMorePosts(false);
-    //   }
-    // }
-    // loadData();
   }
 
-  // if (loading) {
-  //   return <p>Loading...</p>;
-  // }
+  if (!loading) {
+    return <SkeletonMain />;
+  }
 
   return (
     <>
       <div className="cards">
         {posts.map((post) => (
-          <div className="card">
+          <div className="card" key={post.id}>
             <div className="post-img">
               <Link to={`/post/${post.slug}`}>
                 <img
@@ -122,11 +77,10 @@ function HomeCards() {
           </div>
         ))}
       </div>
-      {loadingMorePosts ? (
-        <p>Loading...</p>
-      ) : (
-        <button onClick={loadMorePosts}>Carregar mais...</button>
-      )}
+
+      <button className="load-btn" onClick={loadMorePosts}>
+        Carregar mais...
+      </button>
     </>
   );
 }
