@@ -1,0 +1,10 @@
+.main-container {
+  display: flex;
+  margin-left: 10%;
+}
+
+.container-right {
+  margin-top: 2em;
+  position: fixed;
+  right: 20em;
+}

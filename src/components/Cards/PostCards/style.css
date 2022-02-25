@@ -1,0 +1,78 @@
+.main-content {
+  padding: 2em;
+}
+
+.post-info {
+  color: rgb(93, 110, 110);
+}
+
+.main-content img {
+  border-radius: 3em;
+  margin-bottom: 2em;
+}
+
+.post-content {
+  padding: 2em;
+}
+
+.post-content p,
+h2,
+h3,
+h4 {
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+.post-content ul,
+ol {
+  margin-bottom: 2em;
+  margin-left: 2em;
+}
+
+.post-content img {
+  display: none;
+}
+
+.post-info {
+  display: flex;
+  gap: 1em;
+}
+
+.wp-block-code,
+pre {
+  background-color: rgb(187, 223, 211);
+  border-radius: 1em;
+  margin-bottom: 1em;
+  padding: 2em;
+}
+
+table {
+  margin-bottom: 1em;
+}
+
+td {
+  border: 1px solid black;
+  padding: 0.2em;
+  text-align: center;
+}
+
+footer a {
+  background-color: rgb(108, 129, 248);
+  border-radius: 0.5em;
+  color: #fff;
+  padding: 1em;
+}
+
+.skeleton-loading {
+  padding: 2em;
+}
+
+.skeleton-h {
+  margin-top: 2em;
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+
+.skeleton-p {
+  margin-left: 5em;
+}

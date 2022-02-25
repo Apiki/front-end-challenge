@@ -1,0 +1,41 @@
+.cards {
+  padding: 2em;
+}
+
+.card {
+  align-items: center;
+  border-bottom: 1px solid rgb(226, 219, 211);
+  display: flex;
+  gap: 2em;
+  height: 12em;
+  margin-bottom: 2em;
+  width: 50em;
+}
+
+.card img {
+  border-radius: 0.5em;
+  max-width: 10em;
+}
+
+.slug {
+  background-color: rgb(226, 219, 211);
+  border-radius: 0.5em;
+  padding: 0.1em;
+}
+
+.post-title h2,
+p {
+  margin-bottom: 0.2em;
+  margin-top: 0.2em;
+}
+
+.post-title p {
+  color: rgb(93, 110, 110);
+}
+
+.load-btn {
+  background-color: rgb(108, 129, 248);
+  color: #fff;
+  margin-left: 2em;
+  margin-bottom: 2em;
+}

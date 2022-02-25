@@ -1,0 +1,48 @@
+.grid {
+  display: grid;
+}
+
+.grid-template-columns {
+  grid-template-columns: 200px 200px;
+}
+
+.item {
+  font-size: 1.5em;
+  margin: 5px;
+}
+
+.item:hover {
+  cursor: pointer;
+}
+
+.item img {
+  width: 1.5em;
+}
+
+.item p {
+  font-size: 0.6em;
+}
+
+h1 {
+  font-size: 1.25em;
+  font-weight: normal;
+  margin-bottom: 1em;
+}
+
+.container {
+  margin-bottom: 2em;
+}
+
+.container img {
+  border-radius: 0.5em;
+  height: 4.5em;
+  width: 7em;
+}
+
+.social {
+  display: flex;
+}
+
+.social-icons {
+  margin-right: 1em;
+}

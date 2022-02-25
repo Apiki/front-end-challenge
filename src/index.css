@@ -1,0 +1,23 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(223, 237, 248);
+  font-family: Rubik;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+@media (max-width: 1700px) {
+  .container-right {
+    display: none;
+  }
+}
