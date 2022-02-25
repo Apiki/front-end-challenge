@@ -21,10 +21,7 @@ function AdCards() {
             <img src={aliAd} alt="Aliexpress Ad" />
             <p>AliExpress Compre Fácil</p>
           </div>
-          <div className="item">
-            <img src={englishAd} alt="English Ad" />
-            <p>Aprenda Inglês Online</p>
-          </div>
+
           <div className="item">
             <img src={nvidiaAd} alt="Nvidia Ad" />
             <p>Acelere sua criatividade</p>
@@ -33,13 +30,18 @@ function AdCards() {
             <img src={soubAd} alt="Soub! Ad" />
             <p>Melhores Preços</p>
           </div>
+
+          <div className="item">
+            <img src={realityAd} alt="Reality Ad" />
+            <p>Realidade Violada</p>
+          </div>
           <div className="item">
             <img src={spotifyAd} alt="Spotify Ad" />
             <p>Encontre Sua Música</p>
           </div>
           <div className="item">
-            <img src={realityAd} alt="Reality Ad" />
-            <p>Realidade Violada</p>
+            <img src={englishAd} alt="English Ad" />
+            <p>Aprenda Inglês Online</p>
           </div>
         </section>
       </div>

@@ -3,7 +3,7 @@
   align-items: center;
   padding-left: 5em;
 
-  width: 100%;
+  min-width: 100vh;
   height: 3em;
   color: #fff;
 
