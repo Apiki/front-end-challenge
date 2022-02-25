@@ -1,19 +1,16 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import PostsContext from "../../../contexts";
-import getPosts from "../../../services/getPosts";
-import getMorePosts from "../../../services/getMorePosts";
-import "./style.css";
 import noIMG from "../../../assets/noIMG.png";
-
+import PostsContext from "../../../contexts";
+import getMorePosts from "../../../services/getMorePosts";
+import getPosts from "../../../services/getPosts";
 import SkeletonMain from "../../SkeletonMain";
+import "./style.css";
 
 function HomeCards() {
   const { posts, setPosts } = useContext(PostsContext);
   const [loading, setLoading] = useState(false);
-  const [loadingMorePosts, setLoadingMorePosts] = useState(false);
-
   const [counter, setCounter] = useState(3);
 
   useEffect(() => {

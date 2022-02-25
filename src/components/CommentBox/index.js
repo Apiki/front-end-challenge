@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import "./style.scss"
+import "./style.scss";
 
 export const CommentBox = () => {
   const [showComments, setShowComments] = useState(false);

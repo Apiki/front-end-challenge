@@ -1,5 +1,5 @@
-import "./style.css";
 import logo from "../../assets/apikiLogo.png";
+import "./style.css";
 
 export function Header() {
   return (

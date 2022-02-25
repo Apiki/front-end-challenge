@@ -1,13 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import "./style.css";
-import { useState, useEffect } from "react";
-import getPost from "../../../services/getPost";
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
-import { CommentBox } from "../../CommentBox";
-
+import { useEffect, useState } from "react";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import { Link, useParams } from "react-router-dom";
+import getPost from "../../../services/getPost";
+import { CommentBox } from "../../CommentBox";
+import "./style.css";
 
 function PostsCards() {
   const [post, setPost] = useState([]);

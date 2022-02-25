@@ -7,13 +7,13 @@
 }
 
 body {
-  font-family: Rubik;
   background-color: rgb(223, 237, 248);
+  font-family: Rubik;
 }
 
 a {
-  text-decoration: none;
   color: #000;
+  text-decoration: none;
 }
 
 @media (max-width: 1700px) {

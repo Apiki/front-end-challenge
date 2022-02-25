@@ -1,6 +1,6 @@
 footer {
   display: flex;
+  gap: 3em;
   justify-content: flex-start;
   padding: 2em;
-  gap: 3em;
 }

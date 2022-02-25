@@ -6,10 +6,10 @@ $red: #fc3f00;
 button {
   border: none;
   border-radius: 0.25rem;
+  display: inline-block;
   font-size: 0.75rem;
   font-weight: bold;
   padding: 0.75em; // 12px/16px
-  display: inline-block;
   text-decoration: none;
 
   &:hover {
@@ -21,13 +21,13 @@ button {
   }
 }
 .comment-box {
-  max-width: 50rem;
-  color: #fff;
   background-color: rgb(108, 129, 248);
   border-radius: 0.875rem;
-  padding: 0.2rem 1rem 2rem;
+  color: #fff;
+  max-width: 50rem;
   margin-left: 2em;
   margin-bottom: 2em;
+  padding: 0.2rem 1rem 2rem;
 }
 .comment-form {
   background-color: #fff;
@@ -54,8 +54,7 @@ button {
     font-style: italic;
   }
 }
-.comment-form-actions {
-}
+
 .comment-count {
   color: $dark-grey;
 }
@@ -75,8 +74,8 @@ button {
   margin-bottom: 1rem;
 }
 .comment-footer-delete {
-  padding: 0.2rem 0;
   color: $dark-grey;
+  padding: 0.2rem 0;
   text-decoration: none;
 
   &:hover {

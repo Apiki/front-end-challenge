@@ -1,15 +1,15 @@
-import "./style.css";
 import aliAd from "../../../assets/aliAd.png";
 import englishAd from "../../../assets/englishAd.png";
+import facebook from "../../../assets/facebook.png";
+import linkedin from "../../../assets/linkedin.png";
 import nvidiaAd from "../../../assets/nvidiaAd.png";
 import realityAd from "../../../assets/realityAd.png";
 import soubAd from "../../../assets/soubAd.png";
 import spotifyAd from "../../../assets/spotifyAd.png";
-import whatsapp from "../../../assets/whatsapp.png";
-import twitter from "../../../assets/twitter.png";
-import linkedin from "../../../assets/linkedin.png";
-import facebook from "../../../assets/facebook.png";
 import telegram from "../../../assets/telegram.png";
+import twitter from "../../../assets/twitter.png";
+import whatsapp from "../../../assets/whatsapp.png";
+import "./style.css";
 
 function AdCards() {
   return (
