@@ -7,7 +7,7 @@ Queremos montar uma versão do blog da Apiki apenas para Devs, e queremos que es
 - Página inicial: Listará as últimas postagens do blog com a categoria **Desenvolvimento**; 
 - Interna: Exibirá o conteúdo da postagem;
 
-## Requesitos
+## Requisitos
 - Utilizar os dados da API do nosso blog: https://blog.apiki.com/wp-json/wp/v2/;
 
 ## Diferencial
