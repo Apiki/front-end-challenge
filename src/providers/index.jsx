@@ -1,9 +1,12 @@
 import { PagesPostsProvider } from "./pagesPosts";
+import { PostInternalProvider } from "./postInternal";
 
 const Providers = ({children}) => {
     return(
         <PagesPostsProvider>
-            {children}
+            <PostInternalProvider>
+                {children}
+            </PostInternalProvider>            
         </PagesPostsProvider>
     )
 }

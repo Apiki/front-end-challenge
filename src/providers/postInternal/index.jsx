@@ -2,14 +2,17 @@ import { createContext, useEffect, useState } from "react";
 import { postApi } from "../../services/api";
 
 export const PostInternalContext = createContext()
+const storage = localStorage.getItem("ClickedPost")
 
 export const PostInternalProvider = ({children}) => {
-    const [post, setPost] = useState()
+    const [post, setPost] = useState('')
+    const [postSlug, setPostSlug] = useState(JSON.parse(storage))
 
-    const fullPost = async (slug) => {
+    const fullPost = async (postSlug) => {
+        console.log(postSlug)
             await postApi
-            .get(slug)
-            .then((res) => console.log(res))
+            .get(postSlug)
+            .then((res) => setPost(res.data))
             .catch((err) => console.log(err))
         }
     
@@ -17,7 +20,10 @@ export const PostInternalProvider = ({children}) => {
     return(
         <PostInternalContext.Provider
         value={{
-            post
+            fullPost,
+            post,
+            postSlug,
+            setPostSlug
         }}>        
             {children}
         </PostInternalContext.Provider>
