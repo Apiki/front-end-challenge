@@ -1,0 +1,26 @@
+.post-container {
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  margin: auto;
+  border-radius: 2px;
+  display: inline-block;
+
+  &-img {
+    background-color: #009cde;
+    width: 100%;
+
+    img {
+      margin: auto;
+      width: 60%;
+      margin-bottom: 0;
+    }
+  }
+
+  &-content {
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
