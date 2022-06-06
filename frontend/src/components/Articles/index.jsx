@@ -10,7 +10,7 @@ import ButtonLoadMore from '../Button/LoadMore';
 
 export default function Articles() {
   const [loading, setLoading] = useState(false);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(15);
   const [posts, setPosts] = useState([]);
   const [totalPage, setTotalPage] = useState(15);
   const [postList, setPostList] = useState([]);
@@ -60,7 +60,7 @@ export default function Articles() {
 
   return (
     <section className="c-articles">
-      <h2 className="c-articles__title">All Articles</h2>
+      <h2 className="c-articles__title">Todos os artigos</h2>
       <div className="c-articles__wrapper">
         {!loading ? (
           postList.map(
@@ -93,9 +93,10 @@ export default function Articles() {
           </SkeletonTheme>
         )}
       </div>
+
       <ButtonLoadMore
         page={page}
-        totalPage={totalPage}
+        totalPage={totalPage - 1}
         action={handleLoadMoreClick}
       />
     </section>

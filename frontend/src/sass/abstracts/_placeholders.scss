@@ -18,4 +18,8 @@
   padding: function.torem(24);
   text-transform: uppercase;
   transition: all 0.3s linear;
+
+  &:hover{
+    background-color: function.color("black-700");
+  }
 }

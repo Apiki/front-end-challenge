@@ -8,14 +8,15 @@ $colors: (
   "primary": #000,
   "secondary": #fff,
   "gray-500": #808080,
-  "purple-500": #8b33ff
+  "purple-500": #8b33ff,
+  "black-700": #414141,
 );
 $fontWeight: (
   "regular": 400,
   "medium": 500,
   "semibold": 600,
   "bold": 700,
-  "extrabold": 800
+  "extrabold": 800,
 );
 $breakpoints: (
   "sm": 375px,
