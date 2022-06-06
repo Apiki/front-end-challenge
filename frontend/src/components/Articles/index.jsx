@@ -46,7 +46,7 @@ export default function Articles() {
     })();
   }, [page]);
 
-  const handleResetWindow = () => {
+  const handleResetWindowClick = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
@@ -70,7 +70,7 @@ export default function Articles() {
               _embedded: { 'wp:featuredmedia': featuredMedia },
             }) => (
               <Link
-                onClick={() => handleResetWindow()}
+                onClick={() => handleResetWindowClick()}
                 className="c-articles__link"
                 key={slug}
                 to={`article/${slug}`}
