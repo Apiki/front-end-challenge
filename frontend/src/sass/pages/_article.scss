@@ -7,12 +7,20 @@
   &__figure {
     width: 100%;
     height: 100%;
+    max-height: function.torem(400);
+    overflow: hidden;
+
+    span{
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__image {
     width: 100%;
     object-fit: cover;
     height: 100%;
+    
   }
 
   &__content {
@@ -29,6 +37,7 @@
       width: 100%;
       object-fit: contain;
       height: 100%;
+      max-height: function.torem(400);
     }
   }
 

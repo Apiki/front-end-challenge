@@ -71,8 +71,8 @@ function Article() {
                     effect="blur"
                     src={
                       featuredMedia
-                        ? featuredMedia[0]?.media_details.sizes.large
-                          .source_url
+                        ? featuredMedia[0]?.media_details.sizes?.large
+                          ?.source_url
                         : gradient
                     }
                   />

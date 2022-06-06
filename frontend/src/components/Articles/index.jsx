@@ -79,7 +79,7 @@ export default function Articles() {
                   title={title.rendered}
                   image={
                     featuredMedia
-                      ? featuredMedia[0]?.media_details.sizes.medium.source_url
+                      ? featuredMedia[0]?.media_details.sizes.medium?.source_url
                       : gradient
                   }
                 />
