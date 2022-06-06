@@ -10,7 +10,7 @@ import ButtonLoadMore from '../Button/LoadMore';
 
 export default function Articles() {
   const [loading, setLoading] = useState(false);
-  const [page, setPage] = useState(15);
+  const [page, setPage] = useState(1);
   const [posts, setPosts] = useState([]);
   const [totalPage, setTotalPage] = useState(15);
   const [postList, setPostList] = useState([]);

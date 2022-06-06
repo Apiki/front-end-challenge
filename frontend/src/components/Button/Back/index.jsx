@@ -4,7 +4,7 @@ import chevronLeft from '../../../assets/images/sprite-svg/chevronLeft.svg';
 
 export default function BackButton() {
   return (
-    <Link to="/" onClick={() => { window.scrollTo({
+    <Link alt="Back to home" title='Back to home' to="/" onClick={() => { window.scrollTo({
       top: 0,
       behavior: 'smooth',
     }) }}>
