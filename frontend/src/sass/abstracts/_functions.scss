@@ -1,0 +1,18 @@
+@use "./variables";
+@use "sass:map";
+
+// Function for get colors and insert array colors
+@function color($color, $palette: variables.$colors) {
+  @return map-get($palette, $color);
+}
+
+@function weight($fontWeight, $arr: variables.$fontWeight) {
+  @return map-get($arr, $fontWeight);
+}
+
+// PX to Rem transform function, value in function automatically entered as px and compiled to rem.
+@function torem($value) {
+  $remValue: calc($value / 16) + rem;
+
+  @return $remValue;
+}

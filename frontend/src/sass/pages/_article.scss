@@ -1,0 +1,49 @@
+@use "../abstracts/functions" as function;
+@use "../abstracts/mixins" as mixin;
+
+.p-article {
+  padding-bottom: function.torem(50);
+
+  &__figure {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  &__content {
+    display: grid;
+    grid-row-gap: function.torem(25);
+    width: 100%;
+    grid-template-columns: 100%;
+
+    figure {
+      width: 100% !important; 
+    }
+
+    img {
+      width: 100%;
+      object-fit: contain;
+      height: 100%;
+    }
+  }
+
+  .c-heading {
+    margin-top: 0;
+    padding-bottom: 0;
+
+    &__subtitle {
+      max-width: function.torem(626);
+    }
+  }
+
+  &__actions {
+    @include mixin.flex(center, space-between, 20);
+
+    margin-block: function.torem(60);
+  }
+}

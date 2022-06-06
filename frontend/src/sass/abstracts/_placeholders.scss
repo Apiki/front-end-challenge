@@ -1,0 +1,21 @@
+@use "./mixins" as mixin;
+@use "./functions" as function;
+
+%button {
+  align-items: center;
+  background-color: function.color("primary");
+  border-radius: function.torem(15);
+  border: none;
+  color: function.color("secondary");
+  cursor: pointer;
+  display: flex;
+  font-size: function.torem(16);
+  font-weight: function.weight("bold");
+  gap: function.torem(10);
+  justify-content: center;
+  margin-block: function.torem(60);
+  margin-inline: auto;
+  padding: function.torem(24);
+  text-transform: uppercase;
+  transition: all 0.3s linear;
+}

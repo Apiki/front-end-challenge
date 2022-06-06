@@ -1,0 +1,28 @@
+@use "../abstracts/functions" as function;
+
+.c-post {
+  width: 100%;
+
+  &__figure {
+    height: function.torem(176);
+    margin: 0;
+    width: 100%;
+  }
+
+  span {
+    height: 100%;
+    width: 100%;
+  }
+
+  &__image {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  &__title {
+    font-weight: function.weight("medium");
+    margin-top: function.torem(20);
+    text-align: center;
+  }
+}

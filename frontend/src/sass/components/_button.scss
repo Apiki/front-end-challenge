@@ -1,0 +1,27 @@
+@use "../abstracts/mixins" as mixin;
+@use "../abstracts/functions" as function;
+@use "../abstracts/placeholders";
+
+.c-button {
+  @extend %button;
+
+  &--disable {
+    user-select: none; /* Standard syntax */
+    pointer-events: none;
+    background-color: function.color("gray-500");
+    cursor: pointer;
+  }
+
+  &-back,
+  &-to-top {
+    @extend %button;
+
+    align-items: center;
+    background-color: transparent;
+    color: function.color("primary");
+    font-size: function.torem(16);
+    margin: 0;
+    padding: 0;
+    text-transform: none;
+  }
+}

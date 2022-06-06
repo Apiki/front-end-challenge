@@ -1,0 +1,16 @@
+@use "../abstracts/functions" as function;
+@use "../abstracts/mixins" as mixin;
+
+body,
+main {
+  background-color: function.color("secondary");
+  margin: 0 auto;
+  transition: 0.1s linear all;
+}
+
+.container {
+  overflow: hidden;
+  max-width: function.torem(854);
+  padding: function.torem(20);
+  margin: 0 auto;
+}

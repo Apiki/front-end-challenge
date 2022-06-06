@@ -1,0 +1,19 @@
+@use "../abstracts/mixins" as mixin;
+@use "../abstracts/functions" as function;
+
+.c-heading {
+  margin-block: function.torem(44);
+  padding-bottom: function.torem(54);
+  display: grid;
+  grid-row-gap: function.torem(32);
+
+  &__title {
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin: 0 auto;
+    text-align: center;
+    max-width: function.torem(450);
+  }
+}

@@ -1,0 +1,41 @@
+@use "../abstracts/mixins" as mixin;
+@use "../abstracts/functions" as function;
+
+.c-header {
+  @include mixin.flex(center, space-between, 2);
+
+  border-bottom: function.torem(1) solid function.color("gray-500");
+  margin-bottom: function.torem(50);
+  max-width: function.torem(1440);
+  padding: function.torem(30) function.torem(20);
+  margin-inline: auto;
+
+  &__figure {
+    width: function.torem(100);
+  }
+
+  &__logo {
+    width: 100%;
+    filter: grayscale(100%);
+  }
+
+  &__unlist {
+    list-style: none;
+  }
+
+  &__item {
+    line-height: function.torem(30);
+  }
+
+  &__link {
+    color: function.color("primary");
+    cursor: pointer;
+    font-size: function.torem(16);
+    text-decoration: none;
+    transition: color 0.3s linear;
+
+    &:hover {
+      color: function.color("gray-500");
+    }
+  }
+}

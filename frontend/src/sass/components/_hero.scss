@@ -1,0 +1,26 @@
+@use "../abstracts/mixins" as mixin;
+@use "../abstracts/functions" as function;
+
+.c-hero {
+  position: relative;
+
+  &__figure,
+  &__image {
+    width: 100%;
+  }
+
+  &::after {
+    border-bottom: function.torem(2) solid function.color("primary");
+    bottom: 0;
+    content: "";
+    height: function.torem(2);
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100%;
+
+    @include mixin.breakpoint(lg) {
+      width: function.torem(640);
+    }
+  }
+}

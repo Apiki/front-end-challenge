@@ -1,0 +1,42 @@
+@use "../abstracts/mixins" as mixin;
+@use "../abstracts/functions" as function;
+
+.c-articles {
+  margin-block: function.torem(56) function.torem(82);
+
+  @include mixin.breakpoint(lg) {
+    margin-block: function.torem(64) function.torem(113);
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-row-gap: function.torem(54);
+    grid-template-columns: repeat(auto-fit, minmax(function.torem(250), 1fr));
+    margin-inline: auto;
+    margin-top: function.torem(39);
+    max-width: function.torem(350);
+    align-items: flex-start;
+
+    @include mixin.breakpoint(lg) {
+      grid-gap: function.torem(64) function.torem(28);
+      justify-content: space-between;
+      margin-inline: auto;
+      max-width: 100%;
+      width: function.torem(636);
+    }
+  }
+
+  &__link {
+    color: function.color("primary");
+    text-decoration: none;
+    transition: 0.3s linear all;
+
+    &:hover {
+      color: function.color("gray-500");
+    }
+  }
+}

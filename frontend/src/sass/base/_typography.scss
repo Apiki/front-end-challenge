@@ -1,0 +1,105 @@
+@use "../abstracts/functions" as function;
+@use "../abstracts/mixins" as mixin;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+h1 {
+  font-size: function.torem(36);
+  line-height: function.torem(42.96);
+
+  @include mixin.breakpoint(xl) {
+    font-size: function.torem(54);
+    line-height: function.torem(54);
+  }
+}
+
+h2 {
+  font-size: function.torem(38.19);
+  line-height: function.torem(38.19);
+
+  @include mixin.breakpoint(xl) {
+    font-size: function.torem(44);
+    line-height: function.torem(51.2);
+  }
+}
+
+h3 {
+  font-size: function.torem(22);
+  line-height: function.torem(26);
+}
+
+h4 {
+  font-size: function.torem(26);
+  line-height: function.torem(31.03);
+
+  @include mixin.breakpoint(xl) {
+    font-size: function.torem(32);
+    line-height: function.torem(51.2);
+  }
+}
+
+p,
+a {
+  font-size: function.torem(16);
+  height: max-content;
+  line-height: function.torem(27.2);
+
+  @include mixin.breakpoint(xl) {
+    font-size: function.torem(20);
+    line-height: function.torem(34);
+  }
+}
+
+a {
+  color: function.color("purple-500");
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style-position: inside;
+
+  li {
+    margin-bottom: function.torem(20);
+  }
+}
+
+iframe, video {
+  max-width: function.torem(814) !important;
+  max-height: function.torem(400);
+  width: 100% !important;
+}
+
+
+
+table {
+  width: 100%;
+  margin-bottom: function.torem(20);
+
+  tr {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include mixin.breakpoint(xl) {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    td {
+      border-bottom: function.torem(1) solid function.color("gray-500");
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    th,
+    td {
+      text-align: inherit;
+      padding-block: function.torem(20);
+      padding-right: function.torem(10);
+
+      @include mixin.breakpoint(xl) {
+        padding-right: function.torem(20);
+      }
+    }
+  }
+}
