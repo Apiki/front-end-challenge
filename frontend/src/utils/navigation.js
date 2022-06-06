@@ -4,9 +4,4 @@ export const navigationLinks = [
     href: '/',
     name: 'blog',
   },
-  {
-    id: 2,
-    href: '/',
-    name: 'Links',
-  },
 ];
