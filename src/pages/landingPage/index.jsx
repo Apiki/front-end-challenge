@@ -1,24 +1,26 @@
 import React, { useContext } from "react"
+import { useNavigate } from "react-router-dom"
+import CardPost from "../../components/card"
 import { PagesPostsContext } from "../../providers/pagesPosts"
+import { PostInternalContext } from "../../providers/postInternal"
+import { ContainerPage } from "./styles"
 
 const LandingPage = () => {
     const {posts, loadMore, isLoading} = useContext(PagesPostsContext)
     
-
     return (
-            <>
+            <ContainerPage>
                 <h1>LANDING PAGE</h1>
-                {posts.map((post) => {
-                return(
-                    <div key={post.id}>
-                        <h3>{post.title.rendered}</h3>
-                        <span> Saiba mais</span>
-                    </div>
-                )
-                })}
-                {isLoading&& <p>loading...</p>}
+                <div className="container__cards">
+                    {posts.map((post) => {
+                    return(
+                        <CardPost post={post} key={post.id}/>
+                    )
+                    })}
+                    {isLoading&& <p>loading...</p>}
+                </div>
                 <button onClick={loadMore}>Carregar mais</button>
-            </>
+            </ContainerPage>
     )
 }
 
