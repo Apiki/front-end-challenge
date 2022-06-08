@@ -2,47 +2,58 @@ import axios, { AxiosResponseHeaders } from "axios";
 import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useEffect, useState } from "react";
 
 type BlogContextProps = {
-    blogData: BlogDataProps,
-    setBlogData: Dispatch<SetStateAction<BlogDataProps>>,
+    blogData: BlogDataProps[],
+    setBlogData: Dispatch<SetStateAction<BlogDataProps[]>>,
     blogHeaders: BlogHeaderProps,
     fetch__data: (pageNumber: number) => Promise<void>,
     pageNumber: number,
     setPageNumber: Dispatch<SetStateAction<number>>
-    isLoading: boolean,
+    isFetching: boolean,
 }
 
 type BlogContextProviderProps = {
     children: ReactNode
 }
 
-type BlogDataProps = [{
-    guid: { rendered: string },
+type BlogDataProps = {
     title: { rendered: string },
     date: string,
     excerpt: { rendered: string },
-    yoast_head_json: any
+    _embedded: {
+        author: Array<{ name: string }>,
+        ['wp:featuredmedia']: WpFeaturedMediaProps[],
+    }
+    yoast_head_json: {
+        twitter_misc: { ['Est. tempo de leitura']: string },
+        og_image: Array<{ url: string }>
+    }
+};
 
-}] | undefined;
+type WpFeaturedMediaProps = {
+    source_url: string,
+    slug: string,
+}
 
 type BlogHeaderProps = {
-    totalPagesPosts: number,
-    totalPages: number
-} | AxiosResponseHeaders | undefined;
+    ['x-wp-total']: number,
+    ['x-wp-totalpages']: number
+} | AxiosResponseHeaders;
 
 const BlogContext = createContext({} as BlogContextProps)
 
 export function BlogContextProvider({ children }: BlogContextProviderProps) {
-    const [blogData, setBlogData] = useState<BlogDataProps>()
-    const [blogHeaders, setBlogHeaders] = useState<BlogHeaderProps>()
+    const [blogData, setBlogData] = useState<BlogDataProps[]>([])
+    const [blogHeaders, setBlogHeaders] = useState<BlogHeaderProps>({})
     const [pageNumber, setPageNumber] = useState(1)
-    const [isLoading, setIsLoading] = useState(false)
+    const [isFetching, setIsFetching] = useState(false)
 
     async function fetch__data(pageNumber: number) {
-        setIsLoading(true)
+        setIsFetching(true)
         const response = await axios.get(`https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=${pageNumber}`)
-        setBlogData(response.data)
+        console.log(blogData.length);
+        blogData.length === 0 ? setBlogData(response.data) : setBlogData((prevValue) => [...prevValue, ...response.data])
         setBlogHeaders(response.headers)
-        setIsLoading(false)
+        setIsFetching(false)
     }
 
     useEffect(() => {
@@ -50,7 +61,7 @@ export function BlogContextProvider({ children }: BlogContextProviderProps) {
     }, [pageNumber])
 
     return (
-        <BlogContext.Provider value={{ fetch__data, blogData, blogHeaders, setBlogData, pageNumber, setPageNumber, isLoading }}>
+        <BlogContext.Provider value={{ fetch__data, blogData, blogHeaders, setBlogData, pageNumber, setPageNumber, isFetching }}>
             {children}
         </BlogContext.Provider>
     )

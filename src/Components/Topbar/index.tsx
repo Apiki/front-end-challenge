@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../../public/assets/logo.webp'
+import logo from '../../Public/assets/logo.webp'
 
 export default function Topbar() {
     return (
