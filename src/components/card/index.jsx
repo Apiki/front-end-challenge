@@ -26,7 +26,7 @@ const CardPost = ({post}) => {
                 } 
             </figure>
             <h3 >{post.title.rendered}</h3>            
-            <Button  onClick={() => handleClickPost(post.slug)}>Saiba mais</Button>
+            <Button onClick={() => handleClickPost(post.slug)}>Saiba mais</Button>
         </CardContainer>
     )
 } 

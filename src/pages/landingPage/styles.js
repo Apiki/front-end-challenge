@@ -4,7 +4,7 @@ export const ContainerPage = styled.div`
     width: 100vw;
     height: fit-content;
     min-height: 100vh;
-    background-color: #f2f2f2;
+    background-color: #e4ebf5;
     display: flex;
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
@@ -23,6 +23,7 @@ export const ContainerPage = styled.div`
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
+        justify-content: space-evenly;
         align-items: center;
         @media screen  and (min-width: 640px){
             flex-direction: row;
