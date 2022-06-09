@@ -1,0 +1,21 @@
+{
+  "name": "Blog Apiki",
+  "short_name": "Blog Apiki",
+  "icons": [
+    {
+      "src": "/img/favicon/favicon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/favicon/favicon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "background_color": "#890025",
+  "description": "Especialista em WordPress: Desenvolvimento, Suporte e Hospedagem",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#890025"
+}
