@@ -1,7 +1,7 @@
 # Apiki | Front-end Challenge (Finalizado)
 
 <div align="center">
-    <img width="300" src="https://i.imgur.com/p7UPJkt.png" alt="alurageek logo"/>
+    <img width="300" src="https://imgur.com/OAXkzhI.png" alt="alurageek logo"/>
 </div>
 
 - Projeto desenvolvido para o processo seletivo da Apiki, para o cargo de desenvolvedor Front-end.
