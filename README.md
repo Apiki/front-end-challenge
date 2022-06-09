@@ -26,7 +26,7 @@
 
 - Organização de pastas com os componentes, páginas e arquivo de busca de dados da API.
 
-- Desenvolvimento da página, conforme o layout planejado.
+- Desenvolvimento da página, conforme o layout planejado e implementação da responsividade.
 
 - Revisão, refatoração e finalização do código.
 
