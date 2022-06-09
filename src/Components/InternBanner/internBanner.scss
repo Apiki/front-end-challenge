@@ -1,0 +1,50 @@
+@use "../../App";
+.intern--banner__vertical {
+  height: inherit;
+  width: inherit;
+  background: linear-gradient(to top, rgba(1, 1, 1, 0.7) 70%, transparent 90%);
+}
+
+.intern--banner__content {
+  @include App.flex-column;
+  color: App.$light-text-color;
+  gap: 0.5rem;
+  left: 10%;
+  position: absolute;
+  top: 20%;
+  width: 80%;
+
+  &__title {
+    font-size: 3rem;
+  }
+
+  &__subtitle {
+    font-size: 1.2rem;
+  }
+
+  &__author {
+    @include App.flex-align-center;
+    gap: 0.5rem;
+
+    &__icon {
+      border-radius: 50%;
+      width: 48px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .intern--banner__content {
+    gap: 1rem;
+    left: 5%;
+    width: 90%;
+
+    &__title {
+      font-size: 1.5rem;
+    }
+
+    &__subtitle {
+      font-size: 1rem;
+    }
+  }
+}

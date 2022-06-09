@@ -1,0 +1,19 @@
+@use "../../App";
+
+.loader {
+  animation: spin 3s linear infinite;
+  border: 16px solid App.$third-text-color;
+  border-top: 16px solid App.$loading-color;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

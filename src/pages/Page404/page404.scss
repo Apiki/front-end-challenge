@@ -1,0 +1,52 @@
+@use "../../App";
+
+.page--404 {
+  @include App.flex-center;
+  gap: 1rem;
+  margin: 6rem 0;
+
+  &__content {
+    width: 40%;
+
+    &__image {
+      width: 100%;
+    }
+  }
+
+  &__container {
+    align-items: flex-start;
+    @include App.flex-column;
+    gap: 1.5rem;
+    width: 25%;
+
+    &__title {
+      align-self: center;
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    &__text {
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    &__link {
+      color: App.$text-color;
+      font-size: 1rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      position: relative;
+
+      &:before {
+        @include App.link-before;
+      }
+
+      &:hover:before {
+        @include App.link-before-hover;
+      }
+    }
+  }
+}

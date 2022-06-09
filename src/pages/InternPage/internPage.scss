@@ -1,0 +1,6 @@
+@use "../../App";
+
+.intern--page__loading {
+  @include App.flex-center;
+  margin-top: 15%;
+}

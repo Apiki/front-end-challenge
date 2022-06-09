@@ -1,47 +1,37 @@
-# Desafio - Front-end Developer
-Este desafio tem como objetivo te avaliar como desenvolvedor Front-end: JavaScript, HTML, CSS e lógica de programação.
+# Apiki | Front-end Challenge (Finalizado)
 
-## O Desafio
-Queremos montar uma versão do blog da Apiki apenas para Devs, e queremos que essa seja uma solução headless, esta nova versão terá as seguintes páginas: 
+<div align="center">
+    <img width="300" src="https://imgur.com/OAXkzhI.png" alt="alurageek logo"/>
+</div>
 
-- Página inicial: Listará as últimas postagens do blog com a categoria **Desenvolvimento**; 
-- Interna: Exibirá o conteúdo da postagem;
+- Projeto desenvolvido para o processo seletivo da Apiki, para o cargo de desenvolvedor Front-end.
 
+- Consiste em um blog, onde são utilizados dados fornecidos pela API que foi disponibilizada, voltado para devs.
 
-## Requesitos
-- Utilizar os dados da API do nosso blog: https://blog.apiki.com/wp-json/wp/v2/;
+## 🛠 Tecnologias utilizadas
 
-## Diferencial
-- Utilizar alguma metodologia para a organização de seu CSS (BEMCSS, OOCSS, SMACSS... o que preferir :D);
-- Escolha uma lib para criação de interfaces de usuário (React ou Angular); 
+- React <img align="center" alt="Marcus-React" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
 
-### Página inicial
-Para montar esta página você precisará consumir do seguinte endpoint: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518`, ele já te retornará as últimas 10 postagens cadastradas, cada item do array deve representar uma card contendo:
+- Sass <img align="center" alt="Marcus-SASS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg">
 
-- Imagem destacada: Você encontrará um atributo chamado `_embedded`, dentro deste atributo você encontrará o `wp:featuredmedia`;
-- Título;
-- Link para a postagem: O link deverá conter o atributo `slug`;
+- React Router Dom
 
-Ao final da listagem deve haver um botão nomeado **Carregar mais...**, Quando o usuário clicar neste botão você deverá fazer uma nova requisição para o mesmo endpoint informando o parâmetro `page`, este parâmetro deve receber o número da próxima página, exemplo: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=2`. Você deve estar se perguntando, "como sei se haverá uma próxima página?", isso é simples, no **Header** de resposta desta requisição virá 2 atributos necessários para essa façanha `X-WP-Total` que diz a quantidade total de postagens que essa categoria possui, e o parâmetro `X-WP-TotalPages` que te informará qual o total de páginas de postagens que essa categoria possui.
+- API - Fornecida pela Apiki
 
-### Interna
-Para montar esta página você precisará consumir do seguinte endpoint: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=wordpress-escolha-site-pequenas-empresas`, lembre-se de substituir o `slug` dado como exemplo pelo slug definido no **Link para a postagem** da **Página inicial**, o layout deve conter os seguintes elementos:
+## 🚀 Etapas do desenvolvimento
 
-- Imagem destacada;
-- Título;
-- Conteúdo;
+- Definição do layout da página.
 
-Seja criativo, construa um layout pensando no usuário final, e sinta-se a vontade para incrementar o layout com outros atributos disponíveis no JSON retornado. 
+- Instalação dos pacotes e frameworks necessários para o desenvolvimento.
 
-## Critérios de avaliação
+- Organização de pastas com os componentes, páginas e arquivo de busca de dados da API.
 
-- Organização do código;
-- Responsividade;
-- Reaproveitamento de código;
-- SEO;
+- Desenvolvimento da página, conforme o layout planejado e implementação da responsividade.
 
-## Como submeter seu projeto
+- Revisão, refatoração e finalização do código.
 
-1. Efetue o fork deste repositório e crie um branch com o seu nome e sobrenome. (exemplo: fulano-dasilva);
-1. Após finalizar o desafio, crie um Pull Request;
-1. Aguarde algum contribuidor realizar o code review;
+## 🙋🏻‍♂️ Autor
+
+- Marcus Vinícius Gomes Urani
+- [LinkedIn](https://www.linkedin.com/in/marcusurani).
+- [Portfólio](https://marcusurani.netlify.app).

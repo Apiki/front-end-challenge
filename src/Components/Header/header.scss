@@ -1,0 +1,50 @@
+@use "../../App";
+
+.header {
+  background-color: App.$alt-background;
+  color: App.$light-text-color;
+
+  &__container {
+    padding: 1rem 0;
+
+    &__link {
+      @include App.flex-center;
+      color: App.$light-text-color;
+      gap: 1rem;
+      text-decoration: none;
+      transition: opacity 0.3s ease-in-out;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    &__image {
+      width: 5%;
+    }
+
+    &__title {
+      font-size: 3rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &__container {
+      &__image {
+        width: 10%;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    &__container {
+      &__image {
+        width: 15%;
+      }
+    }
+  }
+}

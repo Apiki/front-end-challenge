@@ -1,0 +1,31 @@
+@use "../../App";
+
+.buttons {
+  @include App.flex-center;
+  gap: 2rem;
+
+  &__next--button,
+  &__back--button {
+    background-color: App.$button-background;
+    border: 1px solid App.$button-border;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    color: App.$third-text-color;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: App.$button-border;
+    }
+
+    &:disabled {
+      background-color: App.$button-border;
+      box-shadow: none;
+      color: App.$light-text-color;
+      cursor: not-allowed;
+    }
+  }
+}
