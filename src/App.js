@@ -1,27 +1,22 @@
-import React from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes as Switch,
-} from "react-router-dom";
-import "./App.css";
-import Header from "./Components/Header";
-import Intern from "./Pages/Intern";
-import Main from "./Pages/Main";
-import Footer from "./Components/Footer";
+import "./App.scss";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import HomePage from "./pages/HomePage";
+import Page404 from "./pages/Page404";
+import InternPage from "./pages/InternPage";
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <Header />
-      <Router>
-        <Switch>
-          <Route path="/" exact element={<Main />} />
-          <Route path="/:slug" element={<Intern />} />
-        </Switch>
-      </Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/:slug" element={<InternPage />} />
+        <Route path="*" element={<Page404 />} />
+      </Routes>
       <Footer />
-    </div>
+    </Router>
   );
 }
 

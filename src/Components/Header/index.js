@@ -1,20 +1,20 @@
-import "./style.css";
+import "./header.scss";
+import apikiLogo from "../../images/logo.svg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header>
-      <nav className="header__logo">
-        <a href="/" className="header__link">
-          <div className="header__box">
-            <img
-              className="header__image"
-              src="https://blog.apiki.com/wp-content/uploads/sites/2/2020/04/marca-apiki-blog-h552.png"
-              alt="Apiki logo"
-            />
-            <p className="header__text">| For Devs</p>
-          </div>
-        </a>
-      </nav>
+    <header className="header">
+      <section className="header__container">
+        <Link to="/" className="header__container__link">
+          <img
+            src={apikiLogo}
+            alt="apiki logo"
+            className="header__container__image"
+          />
+          <h1 className="header__container__title">| For devs</h1>
+        </Link>
+      </section>
     </header>
   );
 };

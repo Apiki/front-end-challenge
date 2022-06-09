@@ -1,0 +1,11 @@
+@use "../../App";
+
+.home--page {
+  margin: 6rem auto;
+  width: 80%;
+
+  &__loading {
+    @include App.flex-center;
+    height: 60vh;
+  }
+}

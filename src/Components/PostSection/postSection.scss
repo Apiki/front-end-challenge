@@ -1,0 +1,86 @@
+@use "../../App";
+
+.post {
+  @include App.flex-align-center;
+  gap: 4rem;
+  margin: 3rem 0;
+  width: 100%;
+
+  &__container {
+    width: 40%;
+
+    &__image {
+      width: 450px;
+    }
+  }
+
+  &__text__content {
+    @include App.flex-column;
+    gap: 1rem;
+    width: 60%;
+
+    &__title {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    &__details {
+      @include App.flex-column;
+      gap: 0.5rem;
+
+      &__author {
+        @include App.flex-align-center;
+        gap: 0.5rem;
+
+        &__icon {
+          border-radius: 50%;
+          width: 48px;
+        }
+      }
+    }
+  }
+
+  &__link {
+    color: App.$text-color;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    width: 12%;
+
+    &:before {
+      @include App.link-before;
+    }
+
+    &:hover:before {
+      @include App.link-before-hover;
+    }
+  }
+}
+
+@media (max-width: 1260px) {
+  .post {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    &__container {
+      width: 100%;
+
+      &__image {
+        width: 100%;
+      }
+    }
+
+    &__text__content {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .post__link {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+}
