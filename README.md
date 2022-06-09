@@ -45,3 +45,23 @@ Seja criativo, construa um layout pensando no usuário final, e sinta-se a vonta
 1. Efetue o fork deste repositório e crie um branch com o seu nome e sobrenome. (exemplo: fulano-dasilva);
 1. Após finalizar o desafio, crie um Pull Request;
 1. Aguarde algum contribuidor realizar o code review;
+
+
+## Dados do projeto
+
+Technology
+1. Next.JS | ReactJS
+
+First, install dependences:
+
+```bash
+yarn install
+# or
+yarn 
+```
+
+Second, run the development server:
+
+```bash
+yarn dev
+```
