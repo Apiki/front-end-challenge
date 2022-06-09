@@ -7,7 +7,7 @@
 
   &--disable {
     @extend %button;
-    user-select: none; /* Standard syntax */
+    user-select: none;
     pointer-events: none;
     background-color: function.color("gray-500");
     cursor: pointer;

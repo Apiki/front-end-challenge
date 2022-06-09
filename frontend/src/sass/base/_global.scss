@@ -14,3 +14,45 @@ main {
   padding: function.torem(20);
   margin: 0 auto;
 }
+
+// styles for dynamic elements
+iframe,
+video {
+  max-width: function.torem(814) !important;
+  max-height: function.torem(400);
+  width: 100% !important;
+}
+
+table {
+  width: 100%;
+  margin-bottom: function.torem(20);
+
+  tr {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include mixin.breakpoint(xl) {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    td {
+      border-bottom: function.torem(1) solid function.color("gray-500");
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    th,
+    td {
+      text-align: inherit;
+      padding-block: function.torem(20);
+      padding-right: function.torem(10);
+
+      @include mixin.breakpoint(xl) {
+        padding-right: function.torem(20);
+      }
+    }
+  }
+}

@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint-fix": "npx eslint src/**/*.{js,jsx,ts,tsx} --fix yarn run stylelint '*/*.scss'"
+    "lint-fix": "npx eslint src/**/*.{js,jsx,ts,tsx} --fix"
   },
   "dependencies": {
     "axios": "^0.27.2",
