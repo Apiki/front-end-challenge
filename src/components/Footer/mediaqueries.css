@@ -1,0 +1,31 @@
+@media (min-width: 672px) and (max-width: 1023px) {
+    .container-footer-fluid {
+        @apply h-full
+    }
+
+    .container-footer {
+        @apply w-[672px] gap-10
+    }
+}
+
+@media (max-width: 671px) {
+    .container-footer-fluid {
+        @apply h-full
+    }
+
+    .container-footer {
+        @apply gap-10
+    }
+
+    .back-top {
+        @apply right-[50%] bottom-0 translate-x-1/2
+    }
+
+
+}
+
+@media (max-width: 427px) {
+    .container-footer-fluid {
+        @apply h-full
+    }
+}

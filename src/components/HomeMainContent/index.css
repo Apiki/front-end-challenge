@@ -1,0 +1,15 @@
+.container-main-content-fluid {
+    @apply w-full bg-background-home-main-content
+}
+
+.container-main-content {
+    @apply w-[1216px] m-auto pt-14 pb-24
+}
+
+.title-main-content {
+    @apply flex flex-col gap-6 bg-transparent text-section-title-text-color
+}
+
+.home-main-content {
+    @apply flex mt-[42px] h-full
+}

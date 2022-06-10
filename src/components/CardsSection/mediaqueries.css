@@ -1,0 +1,37 @@
+@media (min-width: 1024px) and (max-width: 1215px) {
+
+    .container-content {
+        @apply max-w-[800px]
+    }
+
+    .cards-container {
+        @apply justify-center
+    }
+
+}
+
+@media (min-width: 672px) and (max-width: 1023px) {
+    .container-content {
+        @apply max-w-[672px]
+    }
+
+    .cards-container {
+        @apply justify-center
+    }
+}
+
+@media (max-width: 671px) {
+    .cards-container {
+        @apply justify-center
+    }
+}
+
+@media (max-width: 427px) {
+    .container-content {
+        @apply w-full
+    }
+
+    .cards-container {
+        @apply w-full
+    }
+}

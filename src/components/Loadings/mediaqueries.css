@@ -1,0 +1,5 @@
+@media (max-width: 671px) {
+    .loading-page img {
+        @apply animate-pulse w-[50%]
+    }
+}

@@ -1,0 +1,17 @@
+@media (max-width: 671px) {
+    .newsletter-card {
+        @apply mt-8 h-fit w-full
+    }
+
+    .newsletter-card-title {
+        @apply text-center
+    }
+
+    .newsletter-card-input-name {
+        @apply hidden
+    }
+
+    .newsletter-card-input-email {
+        @apply hidden
+    }
+}

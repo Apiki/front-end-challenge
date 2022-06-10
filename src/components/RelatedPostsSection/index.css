@@ -1,0 +1,3 @@
+.related-post-section {
+    @apply flex flex-wrap w-[336px] gap-[21.5px]
+}

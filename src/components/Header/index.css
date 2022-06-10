@@ -1,0 +1,15 @@
+header {
+    @apply bg-backgroundHeader w-full
+}
+
+nav {
+    @apply flex items-center justify-between max-w-[1216px] h-[72px] mx-auto
+}
+
+.button-newsletter {
+    @apply bg-gradient-principal h-12 w-52 text-white transition-all
+}
+
+.button-newsletter:hover {
+    @apply bg-gradient-principal-hover
+}

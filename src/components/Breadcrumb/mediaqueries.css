@@ -1,0 +1,36 @@
+/*apenas para telas bem pequenas*/
+@media (max-width: 340px) {
+    .breadcrumb a {
+        @apply text-[10px]
+    }
+}
+
+@media (min-width: 672px) and (max-width: 1023px) {
+
+    .slug-content-section .breadcrumb a:first-child,
+    .slug-content-section .breadcrumb a+svg:first-of-type {
+        @apply hidden
+    }
+
+    .slug-content-section .breadcrumb a {
+        @apply text-[10px]
+    }
+}
+
+
+
+@media (max-width: 671px) {
+
+    .slug-content-section .breadcrumb {
+        @apply hidden
+    }
+}
+
+@media (max-width: 417px) {
+
+    .slug-content-section .breadcrumb {
+        @apply hidden
+    }
+
+
+}

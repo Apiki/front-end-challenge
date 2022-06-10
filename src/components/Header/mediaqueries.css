@@ -1,0 +1,27 @@
+@media (min-width: 1024px) and (max-width: 1215px) {
+
+    nav {
+        @apply max-w-[800px]
+    }
+
+}
+
+@media (min-width: 672px) and (max-width: 1023px) {
+    nav {
+        @apply max-w-[672px]
+    }
+}
+
+@media (max-width: 671px) {
+    nav {
+        @apply px-4
+    }
+
+    nav .menu-mobile {
+        @apply flex
+    }
+
+    .button-newsletter {
+        @apply hidden
+    }
+}

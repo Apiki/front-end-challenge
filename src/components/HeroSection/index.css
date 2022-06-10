@@ -1,0 +1,35 @@
+.container-fluid-hero {
+    @apply w-full bg-white z-0
+}
+
+.hero-section {
+    @apply flex justify-between w-[1216px] h-[460px] mx-auto z-10
+}
+
+.hero-section-content {
+    @apply flex flex-col w-[696px] gap-12 pt-[60px]
+}
+
+.title-hero-section {
+    @apply text-[40px] font-extrabold text-hero-section-text-color
+}
+
+.hero-section-gradient {
+    @apply bg-hero-section-gradient bg-clip-text text-transparent
+}
+
+.subtitle-hero-section {
+    @apply text-2xl font-medium opacity-50 text-hero-section-text-color
+}
+
+.hero-section-social-media {
+    @apply flex flex-col gap-4
+}
+
+.hero-section-follow-us {
+    @apply text-hero-section-text-color font-medium
+}
+
+.logo-background {
+    @apply absolute right-0 top-[86px] z-[1] w-[448px] max-h-fit overflow-hidden
+}

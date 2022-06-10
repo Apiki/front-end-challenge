@@ -1,0 +1,112 @@
+.post-content-title-section-container-fluid {
+    @apply absolute top-[70px] right-0 w-[100vw] bg-backgroundHeader h-[480px]
+}
+
+.container-background {
+    @apply relative max-w-[1440px] m-auto h-full
+}
+
+.bg-right {
+    @apply absolute right-0 bottom-0
+}
+
+.bg-left {
+    @apply absolute left-0 bottom-0
+}
+
+.post-content-title-section {
+    @apply flex flex-col gap-[52px] items-center w-[1216px] m-auto pt-12
+}
+
+.post-content-title-section h1 {
+    @apply text-white text-[40px] leading-[130%] font-bold w-[1216px] text-center z-50
+}
+
+.post-content-title-section img {
+    @apply w-[854px] h-[480px] object-cover z-50
+}
+
+.slug-content-section {
+    @apply flex flex-col max-w-[800px] mr-[79px] gap-8
+}
+
+.slug-content-subtitle {
+    @apply font-medium text-[24px] text-backgroundHeader leading-[130%]
+}
+
+.postedBy-audioFile-share-content {
+    @apply flex flex-wrap items-end gap-24
+}
+
+.postedBy-audioFile {
+    @apply flex flex-col w-[520px] gap-8
+}
+
+.postedBy {
+    @apply flex justify-between
+}
+
+.author-profile {
+    @apply flex items-center gap-2
+}
+
+.author-profile .author-img {
+    @apply rounded-full w-12
+}
+
+.author-profile .card-name-author {
+    @apply text-backgroundHeader
+}
+
+.author-profile .card-name-author:hover {
+    @apply cursor-pointer
+}
+
+.postedData {
+    @apply flex items-center
+}
+
+.postedData p {
+    @apply flex items-center gap-2 text-xs text-backgroundHeader opacity-50
+}
+
+.audio-file {
+    @apply w-[520px] h-[56px] bg-[#828A92] rounded-full cursor-pointer
+}
+
+
+.share-content {
+    @apply flex flex-wrap gap-8 max-w-[184px]
+}
+
+.share-content .share-button {
+    @apply opacity-80
+}
+
+.share-content .share-button:hover {
+    @apply opacity-100
+}
+
+.separator-to-content {
+    @apply h-[2px] w-full bg-[#D9D9D9]
+}
+
+.content-rendered {
+    @apply flex flex-col gap-8 text-[#212529]
+}
+
+.content-rendered p {
+    @apply font-normal text-lg
+}
+
+.content-rendered h2 {
+    @apply font-medium text-[40px] leading-[150%]
+}
+
+.content-rendered .wp-block-table {
+    @apply mb-8
+}
+
+.content-rendered a {
+    @apply underline font-medium bg-gradient-principal bg-clip-text text-transparent
+}

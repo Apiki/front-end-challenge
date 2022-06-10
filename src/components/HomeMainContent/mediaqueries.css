@@ -1,0 +1,33 @@
+@media (min-width: 1024px) and (max-width: 1215px) {
+
+
+    .container-main-content {
+        @apply w-[100%]
+    }
+
+    .title-main-content {
+        @apply max-w-[800px] m-auto
+    }
+
+
+}
+
+@media (min-width: 672px) and (max-width: 1023px) {
+    .container-main-content {
+        @apply w-full
+    }
+
+    .title-main-content {
+        @apply max-w-[672px] m-auto
+    }
+}
+
+@media (max-width: 671px) {
+    .container-main-content {
+        @apply w-full px-4
+    }
+
+    .title-main-content {
+        @apply w-full m-auto
+    }
+}

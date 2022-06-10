@@ -1,0 +1,81 @@
+@media (min-width: 672px) and (max-width: 1023px) {
+    .card {
+        @apply w-[320px] m-0
+    }
+
+    .card-wrapper {
+        @apply flex flex-col h-full
+    }
+
+    .card-img-wrapper {
+        @apply w-full h-fit
+    }
+
+    .card-content {
+        @apply h-full justify-between
+    }
+
+    .card-title {
+        @apply h-fit min-h-min text-xl leading-[150%]
+    }
+
+    .card-subtitle p {
+        @apply w-full line-clamp-4 h-fit
+    }
+
+    .card-bottom {
+        @apply mt-0
+    }
+}
+
+@media (max-width: 671px) {
+    .card {
+        @apply m-0
+    }
+
+    .card:hover {
+        @apply scale-100
+    }
+}
+
+@media (max-width: 427px) {
+    .card {
+        @apply w-full h-[480px] m-0
+    }
+
+    .card-wrapper {
+        @apply h-full flex flex-col
+    }
+
+    .card-img-wrapper {
+        @apply w-full h-fit
+    }
+
+    .card-content {
+        @apply justify-between h-full
+    }
+
+    .card-content .card-title {
+        @apply text-xl leading-[150%] h-fit min-h-min
+    }
+
+    .card-content .card-subtitle p {
+        @apply text-sm leading-[150%] w-full h-fit
+    }
+
+    .card-name-author {
+        @apply text-xs
+    }
+
+    .card-data-post {
+        @apply font-medium text-[10px]
+    }
+
+    .card-reading-time {
+        @apply font-medium text-[10px]
+    }
+
+    .card-bottom {
+        @apply mt-0
+    }
+}

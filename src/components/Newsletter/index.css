@@ -1,0 +1,33 @@
+.newsletter-card {
+    @apply flex flex-col w-[336px] h-[400px] bg-white shadow-card-shadow pl-6 pt-10 pb-12 pr-[34px] gap-8 mt-[206px] z-50
+}
+
+.newsletter-card-title {
+    @apply font-medium text-hero-section-text-color
+}
+
+.newsletter-card-input-name {
+    @apply flex gap-3 p-3 items-center w-full border-solid border-2 border-hero-section-text-color text-hero-section-text-color opacity-50
+}
+
+.newsletter-card-input-name input {
+    @apply placeholder-hero-section-text-color outline-none font-medium
+}
+
+
+.newsletter-card-input-email {
+    @apply flex gap-3 p-3 items-center w-full border-solid border-2 border-hero-section-text-color text-hero-section-text-color opacity-50
+}
+
+.newsletter-card-input-email input {
+    @apply placeholder-hero-section-text-color outline-none font-medium
+}
+
+/*tailwind sobrepos globalmente não tirar .newsletter-card*/
+.newsletter-card .newsletter-card-button {
+    @apply bg-gradient-principal h-12 w-full text-white transition-all
+}
+
+.newsletter-card-button:hover {
+    @apply bg-gradient-principal-hover
+}

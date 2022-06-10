@@ -1,0 +1,44 @@
+@media (min-width: 1024px) and (max-width: 1215px) {
+    .post-content-container {
+        @apply w-full
+    }
+
+    .newsletter-and-related-post-content-aside-section {
+        @apply hidden
+    }
+}
+
+@media (min-width: 672px) and (max-width: 1023px) {
+    .post-content-container {
+        @apply w-full pt-[620px]
+    }
+
+    .newsletter-and-related-post-content-aside-section {
+        @apply hidden
+    }
+
+    .post-content-title-section {
+        @apply w-[672px]
+    }
+}
+
+@media (max-width: 671px) {
+    .post-content-container {
+        @apply flex flex-col gap-10 w-full pt-0
+    }
+
+    .newsletter-and-related-post-content-aside-section {
+        @apply hidden
+    }
+
+    .post-content-title-section {
+        @apply w-full
+    }
+
+}
+
+@media (max-width: 427px) {
+    .post-content-container {
+        @apply w-full pt-0
+    }
+}
