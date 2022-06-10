@@ -1,0 +1,23 @@
+@media (min-width: 1024px) and (max-width: 1215px) {
+    .related-post-section {
+        @apply hidden
+    }
+
+}
+
+@media (min-width: 672px) and (max-width: 1023px) {
+    .related-post-section {
+        @apply hidden
+    }
+
+}
+
+
+
+@media (max-width: 671px) {
+
+    .related-post-section {
+        @apply hidden
+    }
+
+}

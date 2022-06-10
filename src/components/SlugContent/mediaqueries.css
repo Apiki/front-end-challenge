@@ -1,0 +1,213 @@
+@media (min-width: 1024px) and (max-width: 1215px) {
+    .post-content-title-section h1 {
+        @apply w-[800px]
+    }
+
+    .post-content-title-section {
+        @apply w-[800px]
+    }
+
+    .slug-content-section {
+        @apply w-[800px] m-auto
+    }
+}
+
+@media (min-width: 672px) and (max-width: 1023px) {
+
+    .post-content-title-section {
+        @apply w-[672px]
+    }
+
+    .post-content-title-section h1 {
+        @apply w-full
+    }
+
+    .post-content-title-section img {
+        @apply h-fit
+    }
+
+    .slug-content-section {
+        @apply w-[672px] m-auto
+    }
+
+    .postedBy-audioFile-share-content {
+        @apply gap-8
+    }
+
+    .share-content {
+        @apply max-w-full gap-8
+    }
+
+}
+
+
+@media (max-width: 671px) {
+    .post-content-title-section-container-fluid {
+        @apply static w-full bg-white h-[392px]
+    }
+
+    .container-background {
+        @apply bg-backgroundHeader h-[277px]
+    }
+
+    .footer-background-left,
+    .footer-background-right {
+        @apply hidden
+    }
+
+    .post-content-title-section {
+        @apply w-full px-4 gap-8 pt-6
+    }
+
+    .bg-left,
+    .bg-right {
+        @apply hidden
+    }
+
+    .post-content-title-section h1 {
+        @apply w-full text-xl leading-[150%] min-h-[90px]
+    }
+
+    .post-content-title-section img {
+        @apply w-[385px] h-[246px] object-cover
+    }
+
+    .slug-content-section {
+        @apply w-full px-4
+    }
+
+    .slug-content-subtitle p {
+        @apply text-lg
+    }
+
+    .postedBy-audioFile-share-content {
+        @apply gap-8
+    }
+
+    .postedBy .author-img {
+        @apply w-8
+    }
+
+    .postedBy span,
+    .postedBy p {
+        @apply text-[11px]
+    }
+
+    .audio-file {
+        @apply w-full
+    }
+
+    .share-content {
+        @apply max-w-full gap-7
+    }
+
+    .slug-content-section .content-rendered h2 {
+        @apply text-2xl leading-[150%]
+    }
+
+}
+
+@media (max-width: 427px) {
+
+    .post-content-title-section-container-fluid {
+        @apply static w-full
+    }
+
+    .postedBy .author-img {
+        @apply w-6
+    }
+
+    .postedBy span,
+    .postedBy p {
+        @apply text-[8px]
+    }
+
+
+    .share-content {
+        @apply max-w-full gap-2
+    }
+
+    .wp-block-table {
+        @apply w-full
+    }
+
+    .wp-block-table table {
+        @apply max-w-full
+    }
+}
+
+
+/*Telas muito pequenas*/
+
+@media (max-width: 359px) {
+
+    .post-content-title-section-container-fluid {
+        @apply static w-full bg-white h-[300px]
+    }
+
+    .container-background {
+        @apply bg-backgroundHeader h-[222px]
+    }
+
+    .footer-background-left,
+    .footer-background-right {
+        @apply hidden
+    }
+
+    .post-content-title-section {
+        @apply w-full px-4 gap-8 pt-6
+    }
+
+    .bg-left,
+    .bg-right {
+        @apply hidden
+    }
+
+    .post-content-title-section h1 {
+        @apply w-full text-lg leading-[150%] min-h-[90px]
+    }
+
+    .post-content-title-section img {
+        @apply w-[288px] max-h-[151px] object-cover
+    }
+
+    .slug-content-section {
+        @apply w-full px-4
+    }
+
+    .slug-content-subtitle p {
+        @apply text-[17px]
+    }
+
+    .postedBy-audioFile-share-content {
+        @apply gap-6
+    }
+
+    .postedBy {
+        @apply flex-col gap-6
+    }
+
+    .postedBy .author-img {
+        @apply w-8
+    }
+
+    .postedBy span,
+    .postedBy p {
+        @apply text-[12px]
+    }
+
+    .audio-file {
+        @apply w-full
+    }
+
+    .share-content {
+        @apply max-w-full gap-7
+    }
+
+    .slug-content-section .content-rendered h2 {
+        @apply text-[20px] leading-[150%]
+    }
+}
+
+
+@media (max-width: 359px) {}

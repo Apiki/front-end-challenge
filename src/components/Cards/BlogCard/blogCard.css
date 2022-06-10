@@ -1,0 +1,69 @@
+/*Revisar o css para responsividade*/
+
+/*estrutura do card*/
+.card {
+    @apply bg-white flex flex-col w-[384px] h-[495px] shadow-card-shadow
+}
+
+.card:hover {
+    @apply scale-110
+}
+
+/*link para as paginas através do card inteiro*/
+.card-wrapper {
+    @apply flex flex-col w-full h-full
+}
+
+/*imagem do cabeçalho do card*/
+.card-img-wrapper {
+    @apply w-full h-fit
+    /*!Ver questão da sombra saindo fora da box!*/
+}
+
+.card-img-wrapper img {
+    @apply w-full h-full bg-cover shadow-img-wrapper
+}
+
+/*conteúdo do card*/
+.card-content {
+    @apply flex flex-col p-6 justify-between h-full
+}
+
+/*texto do titulo !atenção ao line-clamp*/
+
+.card-title {
+    @apply font-bold text-2xl text-cardTitle min-h-min line-clamp-3
+}
+
+/*texto do subtitulo !atenção ao line-clamp*/
+.card-subtitle p {
+    @apply text-cardSubtitle opacity-80 font-normal text-base w-[318px] leading-6 line-clamp-3
+}
+
+.card-avatar-author {
+    @apply w-12 h-12 rounded-full
+}
+
+.card-name-author {
+    @apply font-medium text-cardTitle opacity-90 text-base
+}
+
+.card-name-author:hover {
+    @apply opacity-100
+}
+
+.card-data-post {
+    @apply text-xs leading-[18px] font-medium text-cardTitle
+}
+
+.card-reading-time {
+    @apply text-xs leading-[18px] font-medium text-cardTitle
+}
+
+.btn-read-post:hover {
+    @apply text-cor2
+}
+
+.card-bottom {
+    @apply mt-0
+}

@@ -1,0 +1,19 @@
+.post-content-container {
+    @apply flex flex-wrap w-[1216px] m-auto pt-[740px] pb-20
+}
+
+.newsletter-and-related-post-content-aside-section {
+    @apply flex flex-col gap-[47px]
+}
+
+.newsletter-and-related-post-content-aside-section .newsletter-card {
+    @apply m-0
+}
+
+.related-post-content-aside-section {
+    @apply flex flex-col gap-[25px] h-[100%]
+}
+
+.related-post-content-aside-section .related-post-section {
+    @apply justify-start gap-8
+}

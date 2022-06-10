@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    @apply leading-[130%] tracking-[0.03em]
+}
+
+body {
+    @apply antialiased overflow-x-hidden overflow-y-visible
+}
+
+a:hover {
+    @apply text-cor2
+}

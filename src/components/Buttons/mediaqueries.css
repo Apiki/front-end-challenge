@@ -1,0 +1,31 @@
+@media (min-width: 1024px) and (max-width: 1215px) {
+    .container-button-next-page {
+        @apply m-auto
+    }
+}
+
+@media (min-width: 672px) and (max-width: 1023px) {
+    .container-button-next-page {
+        @apply m-auto
+    }
+}
+
+@media (max-width: 631px) {
+    .container-button-next-page {
+        @apply m-auto
+    }
+
+    .button-next-page {
+        @apply w-[384px]
+    }
+}
+
+@media (max-width: 427px) {
+    .container-button-next-page {
+        @apply m-auto
+    }
+
+    .button-next-page {
+        @apply w-[100%]
+    }
+}

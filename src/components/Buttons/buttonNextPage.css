@@ -1,0 +1,11 @@
+.container-button-next-page {
+    @apply max-w-[800px] flex items-center justify-center pt-10
+}
+
+.button-next-page {
+    @apply bg-gradient-principal h-12 w-[50%] text-white transition-all
+}
+
+.button-next-page:hover {
+    @apply bg-gradient-principal-hover
+}

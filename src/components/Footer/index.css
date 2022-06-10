@@ -1,0 +1,27 @@
+.container-footer-fluid {
+    @apply relative bg-background-footer w-full h-[356px]
+}
+
+.container-footer {
+    @apply flex flex-wrap max-w-[1216px] m-auto items-start h-full justify-center gap-40 py-[59px]
+}
+
+.about-apiki {
+    @apply flex flex-col text-white gap-8 items-center max-w-[280px] text-center
+}
+
+.about-apiki p {
+    @apply text-xs font-normal
+}
+
+.footer-background-left {
+    @apply absolute left-0 bottom-0
+}
+
+.footer-background-right {
+    @apply absolute right-0 bottom-0
+}
+
+.back-top {
+    @apply absolute right-[50%] bottom-0 translate-x-1/2 text-cor1
+}

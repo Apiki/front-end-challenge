@@ -1,0 +1,128 @@
+@media (min-width:1440px) {
+    .container-hero-section {
+        @apply relative flex w-[1440px] m-auto
+    }
+
+    .logo-background {
+        @apply top-[14px]
+    }
+}
+
+@media (min-width:1366px) and (max-width: 1439px) {
+    .logo-background {
+        @apply w-[411px]
+    }
+}
+
+
+@media (min-width:1280px) and (max-width:1364px) {
+    .container-hero-section {
+        @apply relative w-[100%] m-auto
+    }
+
+    .hero-section {
+        @apply w-[1216px]
+    }
+
+    .logo-background {
+        @apply top-[32px] w-[368px]
+    }
+}
+
+@media (min-width:1216px) and (max-width: 1279px) {
+    .container-hero-section {
+        @apply relative
+    }
+
+    .logo-background {
+        @apply w-[336px] top-[32px]
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1215px) {
+
+    .container-hero-section {
+        @apply relative w-[1024px] m-auto
+    }
+
+    .hero-section {
+        @apply w-[800px]
+    }
+
+    .logo-background {
+        @apply top-[14px] w-[429px]
+    }
+
+    .hero-section h1 {
+        @apply absolute leading-[150%] max-w-[696px] z-50
+    }
+
+    .subtitle-hero-section {
+        @apply mt-[200px]
+    }
+
+}
+
+@media (min-width: 672px) and (max-width: 1023px) {
+
+    .container-fluid-hero {
+        @apply h-[500px]
+    }
+
+    .container-hero-section {
+        @apply relative max-w-[768px] m-auto h-full
+    }
+
+    .hero-section {
+        @apply w-[672px]
+    }
+
+    .logo-background {
+        @apply top-[14px] w-[365px]
+    }
+
+    .hero-section h1 {
+        @apply absolute leading-[150%] max-w-[696px] z-50
+    }
+
+    .subtitle-hero-section {
+        @apply mt-[200px]
+    }
+
+
+}
+
+@media (max-width: 671px) {
+
+    .container-fluid-hero {
+        @apply w-full h-full
+    }
+
+    .container-hero-section {
+        @apply w-full px-4 h-full
+    }
+
+    .logo-background {
+        @apply hidden
+    }
+
+    .hero-section {
+        @apply w-full flex-col h-full
+    }
+
+    .hero-section-content {
+        @apply w-full gap-6 pt-10
+    }
+
+    .hero-section h1 {
+        @apply text-2xl leading-[130%] text-center w-full items-center
+    }
+
+    .subtitle-hero-section {
+        @apply text-base text-center
+    }
+
+    .hero-section-social-media {
+        @apply text-center items-center
+    }
+}

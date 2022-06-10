@@ -1,0 +1,3 @@
+.related-post-card {
+    @apply flex w-[336px] h-[166px] bg-gray-400 cursor-pointer
+}

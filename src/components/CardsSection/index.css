@@ -1,0 +1,7 @@
+.container-content {
+    @apply flex max-w-[1216px] mx-auto
+}
+
+.cards-container {
+    @apply flex flex-wrap max-w-[100%] self-start gap-x-8 gap-y-8
+}

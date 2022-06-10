@@ -1,0 +1,7 @@
+.loading-page {
+    @apply w-[100vw] h-[100vh] flex items-center justify-center bg-gradient-principal
+}
+
+.loading-page img {
+    @apply animate-pulse w-[18vw]
+}
