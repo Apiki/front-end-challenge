@@ -32,6 +32,8 @@
 # :rocket: Technologies
 This project was made using the follow technologies:
 
+* [Yarn](https://yarnpkg.com/)      
+* [Vite](https://vitejs.dev/)      
 * [Typescript](https://www.typescriptlang.org/)      
 * [React](https://reactjs.org/)      
 * [Tailwind](https://tailwindcss.com/)
