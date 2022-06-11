@@ -1,47 +1,61 @@
-# Desafio - Front-end Developer
-Este desafio tem como objetivo te avaliar como desenvolvedor Front-end: JavaScript, HTML, CSS e lógica de programação.
+<p align="center">	
+   <a href="https://www.linkedin.com/in/vinicios-alves/">
+      <img alt="Vinicios Silva" src="https://img.shields.io/badge/-ViniciosAlves-5965e0?style=flat&logo=Linkedin&logoColor=white" />
+   </a>
+  <img alt="Languages" src="https://img.shields.io/github/languages/count/LeonneBrito/dt.money?color=%235963C5" />
+  <a href="mailto:viniciossilvadev@gmail.com">
+   <img alt="Email" src="https://img.shields.io/badge/-viniciossilvadev%40gmail.com-%23525DCB" />
+  </a>
+</p>
 
-## O Desafio
-Queremos montar uma versão do blog da Apiki apenas para Devs, e queremos que essa seja uma solução headless, esta nova versão terá as seguintes páginas: 
+<p align="center">
+  Challenge Apiki Blog API.
+</p>
 
-- Página inicial: Listará as últimas postagens do blog com a categoria **Desenvolvimento**; 
-- Interna: Exibirá o conteúdo da postagem;
+<div align="center">
+  <sub> Made with 💖 by
+    <a href="https://github.com/VinewZ">Vinicios Silva.
+  </sub>
+</div>
 
+# 📌 Contents
 
-## Requesitos
-- Utilizar os dados da API do nosso blog: https://blog.apiki.com/wp-json/wp/v2/;
+* [Screenshots](#camera-screenshot) 
+* [Technologies](#rocket-technologies) 
+* [How to Run](#computer-how-to-run)
 
-## Diferencial
-- Utilizar alguma metodologia para a organização de seu CSS (BEMCSS, OOCSS, SMACSS... o que preferir :D);
-- Escolha uma lib para criação de interfaces de usuário (React ou Angular); 
+# :camera: Screenshots
+<div align="center">
+   <img src="./git/screen1.jpg" width="400px">
+</div>
 
-### Página inicial
-Para montar esta página você precisará consumir do seguinte endpoint: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518`, ele já te retornará as últimas 10 postagens cadastradas, cada item do array deve representar uma card contendo:
+# :rocket: Technologies
+This project was made using the follow technologies:
 
-- Imagem destacada: Você encontrará um atributo chamado `_embedded`, dentro deste atributo você encontrará o `wp:featuredmedia`;
-- Título;
-- Link para a postagem: O link deverá conter o atributo `slug`;
+* [Typescript](https://www.typescriptlang.org/)      
+* [React](https://reactjs.org/)      
+* [Tailwind](https://tailwindcss.com/)
+* [APIKI Api](https://blog.apiki.com/wp-json/wp/v2/posts?_embed)
 
-Ao final da listagem deve haver um botão nomeado **Carregar mais...**, Quando o usuário clicar neste botão você deverá fazer uma nova requisição para o mesmo endpoint informando o parâmetro `page`, este parâmetro deve receber o número da próxima página, exemplo: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=2`. Você deve estar se perguntando, "como sei se haverá uma próxima página?", isso é simples, no **Header** de resposta desta requisição virá 2 atributos necessários para essa façanha `X-WP-Total` que diz a quantidade total de postagens que essa categoria possui, e o parâmetro `X-WP-TotalPages` que te informará qual o total de páginas de postagens que essa categoria possui.
+# :computer: How to run
 
-### Interna
-Para montar esta página você precisará consumir do seguinte endpoint: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=wordpress-escolha-site-pequenas-empresas`, lembre-se de substituir o `slug` dado como exemplo pelo slug definido no **Link para a postagem** da **Página inicial**, o layout deve conter os seguintes elementos:
+```bash
+# Clone Repository
+$ git clone https://github.com/VinewZ/Apiki-Front-Challenge.git
+```
 
-- Imagem destacada;
-- Título;
-- Conteúdo;
+```bash
+# Install Dependencies
+$ yarn install
 
-Seja criativo, construa um layout pensando no usuário final, e sinta-se a vontade para incrementar o layout com outros atributos disponíveis no JSON retornado. 
+# Create a .env.local file at the root of the repository and create the environment variable
+VITE_API_URL = https://blog.apiki.com/wp-json/wp/v2/posts?_embed
 
-## Critérios de avaliação
+# Run Aplication
+$ yarn run dev
+```
+Go to http://localhost:3000/ to see the result.
 
-- Organização do código;
-- Responsividade;
-- Reaproveitamento de código;
-- SEO;
+Made with 💖 by [Vinicios Silva](https://www.linkedin.com/in/vinicios-alves/). 
 
-## Como submeter seu projeto
-
-1. Efetue o fork deste repositório e crie um branch com o seu nome e sobrenome. (exemplo: fulano-dasilva);
-1. Após finalizar o desafio, crie um Pull Request;
-1. Aguarde algum contribuidor realizar o code review;
+Thank you! 🌠
