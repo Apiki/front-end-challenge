@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useDateFormatter } from '../../Contexts/DateFormatter';
 import { usePostContext } from '../../Contexts/PostContext';
 
+
 export function PostContent() {
 
     const { postContent, getPostContent } = usePostContext()
@@ -10,7 +11,7 @@ export function PostContent() {
     const { slug } = useParams()
 
     useEffect(() => {
-        !postContent.title && getPostContent(slug)
+        !postContent.title && getPostContent(String(slug))
     }, [postContent])
 
     return (
