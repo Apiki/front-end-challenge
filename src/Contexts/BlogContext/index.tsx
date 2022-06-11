@@ -16,23 +16,20 @@ type BlogContextProviderProps = {
 }
 
 type BlogDataProps = {
+    id: number,
     title: { rendered: string },
     date: string,
     excerpt: { rendered: string },
     _embedded: {
         author: Array<{ name: string }>,
-        ['wp:featuredmedia']: WpFeaturedMediaProps[],
+        ['wp:featuredmedia']: Array<{ source_url: string }>,
     }
     yoast_head_json: {
         twitter_misc: { ['Est. tempo de leitura']: string },
         og_image: Array<{ url: string }>
     }
-};
-
-type WpFeaturedMediaProps = {
-    source_url: string,
     slug: string,
-}
+};
 
 type BlogHeaderProps = {
     ['x-wp-total']: number,
@@ -49,11 +46,11 @@ export function BlogContextProvider({ children }: BlogContextProviderProps) {
 
     async function fetch__data(pageNumber: number) {
         setIsFetching(true)
-        const response = await axios.get(`https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=${pageNumber}`)
-        console.log(blogData.length);
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}&page=${pageNumber}`)
         blogData.length === 0 ? setBlogData(response.data) : setBlogData((prevValue) => [...prevValue, ...response.data])
         setBlogHeaders(response.headers)
         setIsFetching(false)
+
     }
 
     useEffect(() => {
