@@ -1,0 +1,62 @@
+.card {
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+	background: white;
+	display: grid;
+	grid-template-columns: 0.8fr 1fr;
+}
+
+.imageHolder {
+	overflow: hidden;
+	cursor: pointer;
+	grid-row: 1/3;
+}
+
+.scaleDiv {
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	background-position: center;
+	background-size: cover;
+	transition: all 0.5s;
+}
+
+.imageHolder:hover .scaleDiv,
+.imageHolder:focus .scaleDiv {
+	transform: scale(1.2);
+}
+
+.title {
+	font-size: 1rem;
+	text-align: center;
+}
+
+.title:hover {
+	color: #6428ff;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 1.2rem;
+	padding: 1rem;
+}
+
+@media (max-width: 40rem) {
+	.wrapper {
+		gap: 0.5;
+		padding: 0;
+	}
+}
+
+.avatar {
+	display: initial;
+	height: 2rem;
+	width: 2rem;
+	border-radius: 50%;
+}
+
+.author {
+	font-size: 0.9rem;
+}

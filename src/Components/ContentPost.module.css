@@ -1,0 +1,72 @@
+.wrapper {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+	justify-content: center;
+	align-items: center;
+}
+
+.avatar {
+	border-radius: 50%;
+	height: 20px;
+	width: 20px;
+}
+
+.author {
+	font-size: 0.8rem;
+}
+
+.contentWrapper {
+	padding: 0 20vw;
+}
+
+.contentWrapper .text {
+	display: flex;
+	flex-direction: column;
+}
+
+.contentWrapper figure {
+	margin: 0;
+}
+
+.contentWrapper .mainImage img {
+	height: 500px;
+}
+
+.contentWrapper img,
+:global(.jeg_video_container) {
+	margin: 0 auto 2rem;
+	height: auto;
+}
+
+.contentWrapper table {
+	margin: 0 0 2rem;
+}
+
+.contentWrapper th,
+.contentWrapper td {
+	background-color: white;
+}
+
+.contentWrapper ul {
+	margin: 0 0 1rem;
+}
+
+.contentWrapper li {
+	margin: 0.3rem 0;
+}
+
+.text h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0.8em 0 0.5em;
+}
+
+.text p {
+	margin-bottom: 0.8em;
+	font-size: 0.9rem;
+	line-height: 1.5;
+}

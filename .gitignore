@@ -2,4 +2,8 @@
 node_modules/
 
 # Next.js build output
+<<<<<<< HEAD
 .next
+=======
+.next
+>>>>>>> 274282acaa3b7a957c601b4f8f76dcfac27cc559

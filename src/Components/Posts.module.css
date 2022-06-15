@@ -1,0 +1,13 @@
+.postsGrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+	padding: 0 4rem 2rem 4rem;
+}
+
+@media (max-width: 870px) {
+	.postsGrid {
+		grid-template-columns: 1fr;
+		padding: 0.5rem;
+	}
+}

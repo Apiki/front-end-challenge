@@ -1,0 +1,24 @@
+.button {
+	margin: 0 auto;
+	display: block;
+	color: white;
+	margin-bottom: 1.5rem;
+	padding: 0.5rem;
+	background-color: #333;
+	border: 1px solid #eee;
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: 0.2s ease;
+}
+
+.button:hover,
+.button:focus {
+	color: #333;
+	background-color: white;
+}
+
+.overPosts {
+	text-align: center;
+	margin-bottom: 1.5rem;
+}
