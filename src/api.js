@@ -8,3 +8,12 @@ export function POSTS_GET(pageNumber) {
 		},
 	};
 }
+
+export function POST_GET(slug) {
+	return {
+		url: `${API_URL}/posts?_embed&slug=${slug}`,
+		options: {
+			method: "GET",
+		},
+	};
+}

@@ -6,7 +6,6 @@
 }
 
 .imageHolder {
-	height: 25vh;
 	overflow: hidden;
 	cursor: pointer;
 	grid-row: 1/3;

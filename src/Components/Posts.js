@@ -3,6 +3,8 @@ import PostCard from "./PostCard";
 import styles from "./Posts.module.css";
 import { POSTS_GET } from "../api";
 import useFetch from "../Hooks/useFetch";
+import Loading from "./Helpers/Loading";
+import Error from "./Helpers/Error";
 
 const Posts = ({ page, setTotalPages }) => {
 	const { data, loading, error, request } = useFetch();
@@ -11,7 +13,7 @@ const Posts = ({ page, setTotalPages }) => {
 		async function getPosts() {
 			const { url, options } = POSTS_GET(page);
 
-			const { response, json } = await request(url, options);
+			const { response } = await request(url, options);
 
 			setTotalPages(Number(response.headers.get("x-wp-totalpages")));
 		}
@@ -19,9 +21,10 @@ const Posts = ({ page, setTotalPages }) => {
 		getPosts();
 	}, [page]);
 
+	if (loading) return <Loading />;
 	if (data)
 		return (
-			<div className={styles.postsGrid}>
+			<div className={`${styles.postsGrid} animeLeft`}>
 				{data.map((post) => (
 					<PostCard
 						key={post.id}
@@ -42,7 +45,7 @@ const Posts = ({ page, setTotalPages }) => {
 				))}
 			</div>
 		);
-	else return null;
+	else return <Error error={error} />;
 };
 
 export default Posts;

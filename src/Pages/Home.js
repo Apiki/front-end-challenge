@@ -1,15 +1,11 @@
 import React from "react";
 import Posts from "../Components/Posts";
 import styles from "./Home.module.css";
+import HeroSection from "../Components/HeroSection";
 
 const Home = () => {
 	const [pages, setPages] = React.useState([1]);
 	const [totalPages, setTotalPages] = React.useState(0);
-
-	React.useEffect(() => {
-		console.log("pages", pages.length);
-		console.log("total", totalPages);
-	}, [pages, totalPages]);
 
 	function handleClick() {
 		setPages((pages) => [...pages, pages.length + 1]);
@@ -17,9 +13,9 @@ const Home = () => {
 
 	return (
 		<section>
-			<div className={styles.titleWrapper}>
+			<HeroSection>
 				<h1>Blog</h1>
-			</div>
+			</HeroSection>
 			{pages.map((page, i) => (
 				<Posts
 					key={i}
