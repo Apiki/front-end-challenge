@@ -1,0 +1,7 @@
+Ordem de comentários
+
+// Dependencies
+// Components
+// Styles and contents
+// Props
+// Main
