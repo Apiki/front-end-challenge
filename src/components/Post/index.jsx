@@ -1,6 +1,14 @@
 import { useEffect, useState } from "react";
 import { ThemeProvider, useTheme } from "styled-components";
-import { PostWrapper, PostDescription, PostTitle, PostContent } from "./styles";
+import {
+  PostWrapper,
+  PostDescription,
+  PostTitle,
+  PostContent,
+  AuthorWrapper,
+  AuthorImg,
+  Author,
+} from "./styles";
 
 export const Post = ({ params }) => {
   const theme = useTheme();
@@ -34,9 +42,24 @@ export const Post = ({ params }) => {
         ) : (
           <>
             <PostTitle>{selectedPost[0].title.rendered}</PostTitle>
+
             <PostDescription>
               {selectedPost[0].yoast_head_json.description}
             </PostDescription>
+
+            <AuthorWrapper>
+              <AuthorImg
+                src={selectedPost[0]._embedded.author[0].avatar_urls["48"]}
+              />
+              <span>by</span>
+              <Author
+                target="_blank"
+                href={selectedPost[0]._embedded.author[0].link}
+              >
+                {selectedPost[0]._embedded.author[0].name}
+              </Author>
+            </AuthorWrapper>
+
             <PostContent
               id="content"
               dangerouslySetInnerHTML={{
