@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Layout } from "../components/Layout";
 import { PostCard } from "../components/PostCard";
 
 function Home() {
@@ -14,11 +15,11 @@ function Home() {
   console.log(posts);
 
   return (
-    <>
+    <Layout>
       {posts.map((post) => (
         <PostCard post={post} key={post.id} />
       ))}
-    </>
+    </Layout>
   );
 }
 
