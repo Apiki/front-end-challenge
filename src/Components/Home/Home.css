@@ -1,0 +1,32 @@
+.main-container{
+	text-align: center;
+	margin: auto;
+}
+
+.posts-container{
+	margin: 2em auto;
+	/*border: 1px solid black;*/
+	width: 800px;
+	text-align: center;
+}
+.posts-container img{
+	border-radius: 20px;
+}
+
+#carregar-mais{
+	border: 2px solid #6CC4A1;
+	border-radius: 5px;
+	background-color: #6CC4A1;
+	color: #fff;
+	padding: 0.8em;
+	margin: 1em auto;
+	cursor: pointer;
+	font-weight: 800;
+	transition: 1s;
+}
+
+#carregar-mais:hover{
+	color: #6CC4A1;
+	background-color: transparent;
+}
+
