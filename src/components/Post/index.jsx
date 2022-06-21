@@ -8,6 +8,7 @@ import {
   AuthorWrapper,
   AuthorImg,
   Author,
+  PostImg,
 } from "./styles";
 
 export const Post = ({ params }) => {
@@ -59,6 +60,8 @@ export const Post = ({ params }) => {
                 {selectedPost[0]._embedded.author[0].name}
               </Author>
             </AuthorWrapper>
+
+            <PostImg src={selectedPost[0].yoast_head_json.og_image[0].url} />
 
             <PostContent
               id="content"

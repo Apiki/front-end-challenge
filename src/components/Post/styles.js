@@ -50,6 +50,12 @@ export const Author = styled.a`
   text-decoration: none;
 `;
 
+export const PostImg = styled.img`
+  width: 100%;
+  margin: 20px 0;
+  border-radius: 10px;
+`;
+
 export const PostContent = styled.div`
   max-width: 660px;
   margin: 20px auto;
