@@ -20,6 +20,7 @@ export const PostCard = styled.div`
 
 export const CardImg = styled.img`
   width: 100%;
+  max-height: 183.75px;
   border-radius: 8px;
   margin-bottom: 15px;
 
