@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const PostsDisplay = styled.section`
+export const PostsDisplayWrapper = styled.section`
   max-width: 1170px;
   min-height: calc(100vh - 150px);
   margin: 0 auto;
@@ -39,7 +39,7 @@ export const CardDescription = styled.p`
   font-size: 14px;
   line-height: 1.2em;
   margin-bottom: 30px;
-  color: ${({ theme }) => theme.colors.postDescription};
+  color: ${({ theme }) => theme.colors.postContent};
 `;
 
 export const Button = styled.button`

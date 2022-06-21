@@ -3,8 +3,8 @@ export const light = {
 
   colors: {
     postTitle: "#121212",
-    postDescription: "#212121",
-    postDate: "#a0a0a0",
+    postContent: "#212121",
+    postDescription: "#A0A0A0",
     headerBackground: "#2a2a2a",
     buttonBackground: "#BA007C",
     buttonText: "#eaeff4",

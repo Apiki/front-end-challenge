@@ -1,30 +1,16 @@
-import { Header, Posts } from "./components";
-import { createGlobalStyle, ThemeProvider } from "styled-components";
-import { light } from "./themes/light";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Home } from "./pages/home";
+import { PostPage } from "./pages/postPage";
 
 function App() {
   return (
-    <>
-      <GlobalStyle />
-      <ThemeProvider theme={light}>
-        <Header />
-        <Posts />
-      </ThemeProvider>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path=":slug" element={<PostPage />} />
+      </Routes>
+    </Router>
   );
 }
-
-const GlobalStyle = createGlobalStyle`
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-  }
-
-  body, #root{
-    min-height: 100vh;
-  }
-`;
 
 export default App;

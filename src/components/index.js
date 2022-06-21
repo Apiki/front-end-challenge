@@ -1,2 +1,3 @@
 export * from "./Header";
-export * from "./Posts";
+export * from "./Post";
+export * from "./PostsDisplay";

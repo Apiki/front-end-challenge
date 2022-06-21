@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { ThemeProvider, useTheme } from "styled-components";
 import {
-  PostsDisplay,
+  PostsDisplayWrapper,
   PostCard,
   CardImg,
   CardTitle,
@@ -9,7 +10,7 @@ import {
   Button,
 } from "./styles";
 
-export const Posts = () => {
+export const PostsDisplay = () => {
   const theme = useTheme();
   const [data, setData] = useState([]);
   const [page, setPage] = useState(2);
@@ -32,11 +33,13 @@ export const Posts = () => {
   return (
     <ThemeProvider theme={theme}>
       <main>
-        <PostsDisplay>
+        <PostsDisplayWrapper>
           {data.map((item) => {
             return (
               <PostCard key={item.id}>
-                <CardImg src={item.yoast_head_json.og_image[0].url} />
+                <Link to={item.slug}>
+                  <CardImg src={item.yoast_head_json.og_image[0].url} />
+                </Link>
                 <CardTitle>{item.title.rendered}</CardTitle>
                 <CardDescription>
                   {item.yoast_head_json.description}
@@ -44,7 +47,7 @@ export const Posts = () => {
               </PostCard>
             );
           })}
-        </PostsDisplay>
+        </PostsDisplayWrapper>
         <Button onClick={() => loadMore()}>Carregar mais</Button>
       </main>
     </ThemeProvider>
