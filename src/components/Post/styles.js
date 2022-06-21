@@ -23,6 +23,33 @@ export const PostDescription = styled.h2`
   border-bottom: 2px solid #f0f0f0;
 `;
 
+export const AuthorWrapper = styled.div`
+  padding-top: 10px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  span {
+    font-size: 13px;
+    color: #a0a0a0;
+    margin-right: 5px;
+  }
+`;
+
+export const AuthorImg = styled.img`
+  width: 35px;
+  border-radius: 50%;
+  margin-right: 5px;
+`;
+
+export const Author = styled.a`
+  font-weight: 700;
+  font-size: 13px;
+  color: #a0a0a0;
+  text-decoration: none;
+`;
+
 export const PostContent = styled.div`
   max-width: 660px;
   margin: 20px auto;
