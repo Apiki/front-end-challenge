@@ -33,6 +33,11 @@ export const PostTitle = styled.h1`
   margin-bottom: 16px;
 
   color: ${({ theme }) => theme.colors.postTitle};
+
+  @media screen and (max-width: 720px) {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
 `;
 
 export const PostDescription = styled.h2`
@@ -42,6 +47,11 @@ export const PostDescription = styled.h2`
 
   color: ${({ theme }) => theme.colors.postDescription};
   border-bottom: 2px solid ${({ theme }) => theme.colors.border};
+
+  @media screen and (max-width: 720px) {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
 `;
 
 export const AuthorWrapper = styled.div`
@@ -62,6 +72,10 @@ export const AuthorImg = styled.img`
   width: 35px;
   border-radius: 50%;
   margin-right: 5px;
+
+  @media screen and (max-width: 720px) {
+    width: 25px;
+  }
 `;
 
 export const Author = styled.a`
@@ -87,6 +101,10 @@ export const PostContent = styled.div`
     font-weight: 400;
     margin: 0.83em 0 0.5022em;
     color: ${({ theme }) => theme.colors.postTitle};
+
+    @media screen and (max-width: 720px) {
+      font-size: 30px;
+    }
   }
 
   h3 {
