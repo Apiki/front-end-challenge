@@ -5,7 +5,7 @@ export function Header() {
   return (
     <Flex direction="column" align="center" py={4}>
       <Heading>Apiki Blog</Heading>
-      <Text mt={2}>Conteúdo Dev sobre Wordpress</Text>
+      <Text my={2}>Conteúdo sobre desenvolvimento Wordpress</Text>
     </Flex>
   );
 }
