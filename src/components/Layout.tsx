@@ -12,7 +12,12 @@ type LayoutProps = {
 export function Layout({ title, children }: LayoutProps) {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <>
+    <Box
+      bg="gray.50"
+      _dark={{
+        bg: "gray.900",
+      }}
+    >
       <Head>
         <title>{title ? `Apiki Blog - ${title}` : "Apiki Blog"}</title>
       </Head>
@@ -22,7 +27,7 @@ export function Layout({ title, children }: LayoutProps) {
       <Box px={{ base: 4, md: 6, lg: 8 }}>{children}</Box>
 
       <IconButton
-        aria-label="label"
+        aria-label="Color Mode Switcher"
         isRound
         size="lg"
         icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
@@ -31,6 +36,6 @@ export function Layout({ title, children }: LayoutProps) {
         right={4}
         onClick={toggleColorMode}
       />
-    </>
+    </Box>
   );
 }

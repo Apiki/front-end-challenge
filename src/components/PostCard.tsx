@@ -1,46 +1,30 @@
 import { Box, Flex, Image, Link, Text } from "@chakra-ui/react";
 import React from "react";
 import { format, parseISO } from "date-fns";
-
-type FeaturedMedia = {
-  source_url: string;
-  slug: string;
-};
-
-type Author = {
-  avatar_urls: {
-    24: string;
-    48: string;
-    96: string;
-  };
-  name: string;
-};
+import { ptBR } from "date-fns/locale";
+import { Post } from "../types/post";
 
 interface PostCardProps {
-  post: {
-    title: { rendered };
-    date: string;
-    _embedded: { "wp:featuredmedia": FeaturedMedia[]; author: Author[] };
-  };
+  post: Post;
 }
 
 export function PostCard({ post }: PostCardProps) {
-  const title = post?.title.rendered;
-  const img = post?._embedded["wp:featuredmedia"][0].source_url;
-  const authorName = post?._embedded.author[0].name;
-  const authorImg = post?._embedded.author[0].avatar_urls?.[96];
-  const date = format(parseISO(post.date), "dd MMM yyyy");
+  const author = {
+    name: post._embedded.author[0].name,
+    img: post._embedded.author[0].avatar_urls?.[96],
+  };
+  const date = format(parseISO(post.date), "dd MMM yyyy", { locale: ptBR });
 
   return (
     <Box
       mx="auto"
-      mb={4}
       rounded="lg"
       shadow="md"
       bg="white"
       _dark={{
-        bg: "gray.800",
+        bg: "whiteAlpha.200",
       }}
+      w="100%"
       maxW="2xl"
     >
       <Image
@@ -48,7 +32,7 @@ export function PostCard({ post }: PostCardProps) {
         w="full"
         h={64}
         fit="cover"
-        src={img}
+        src={post._embedded["wp:featuredmedia"][0].source_url}
         alt="Article"
       />
 
@@ -68,7 +52,7 @@ export function PostCard({ post }: PostCardProps) {
               textDecor: "underline",
             }}
           >
-            {title}
+            {post.title.rendered}
           </Link>
           <Text
             mt={2}
@@ -77,27 +61,23 @@ export function PostCard({ post }: PostCardProps) {
             _dark={{
               color: "gray.400",
             }}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie
-            parturient et sem ipsum volutpat vel. Natoque sem et aliquam mauris
-            egestas quam volutpat viverra. In pretium nec senectus erat. Et
-            malesuada lobortis.
-          </Text>
+            dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
+          />
         </Box>
 
         <Box mt={4}>
           <Flex alignItems="center">
             <Flex alignItems="center">
-              {authorImg && (
+              {author.img && (
                 <Image
                   h={10}
                   fit="cover"
                   rounded="full"
-                  src={authorImg}
+                  src={author.img}
                   alt="Avatar"
                 />
               )}
-              {authorName && (
+              {author.name && (
                 <Link
                   mx={2}
                   fontWeight="bold"
@@ -106,7 +86,7 @@ export function PostCard({ post }: PostCardProps) {
                     color: "gray.200",
                   }}
                 >
-                  {authorName}
+                  {author.name}
                 </Link>
               )}
             </Flex>
