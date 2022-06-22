@@ -30,7 +30,7 @@ export const Loader = styled.div`
 export const PostTitle = styled.h1`
   font-size: 42px;
   font-weight: 700;
-  margin-bottom: 0.4em;
+  margin-bottom: 16px;
 
   color: ${({ theme }) => theme.colors.postTitle};
 `;
@@ -38,7 +38,7 @@ export const PostTitle = styled.h1`
 export const PostDescription = styled.h2`
   font-size: 24px;
   font-weight: 400;
-  padding-bottom: 0.834em;
+  padding-bottom: 20px;
 
   color: ${({ theme }) => theme.colors.postDescription};
   border-bottom: 2px solid ${({ theme }) => theme.colors.border};

@@ -33,7 +33,7 @@ export const CardImg = styled.img`
 
 export const CardTitle = styled.h2`
   font-size: 16px;
-  line-height: 1.2em;
+  line-height: 19px;
   margin-bottom: 10px;
   color: ${({ theme }) => theme.colors.postTitle};
 
@@ -42,14 +42,14 @@ export const CardTitle = styled.h2`
 
 export const CardDescription = styled.p`
   font-size: 14px;
-  line-height: 1.2em;
+  line-height: 16px;
   margin-bottom: 30px;
   color: ${({ theme }) => theme.colors.postContent};
 `;
 
 export const Button = styled.button`
   font-size: 16px;
-  line-height: 1.2em;
+  line-height: 19px;
   font-weight: 700;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
