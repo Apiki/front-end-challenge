@@ -33,7 +33,7 @@ export const PostsDisplay = () => {
         return response.json();
       })
       .then((newData) => setData(data.concat(newData)))
-      .then(setPage(page + 1));
+      .then(setPage((prevState) => prevState + 1));
   };
 
   return (
