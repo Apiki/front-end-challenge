@@ -46,7 +46,11 @@ export const PostsDisplay = () => {
                 <Link to={item.slug}>
                   <CardImg src={item.yoast_head_json.og_image[0].url} />
                 </Link>
-                <CardTitle>{item.title.rendered}</CardTitle>
+
+                <Link to={item.slug}>
+                  <CardTitle>{item.title.rendered}</CardTitle>
+                </Link>
+
                 <CardDescription>
                   {item.yoast_head_json.description}
                 </CardDescription>

@@ -16,6 +16,10 @@ export const PostsDisplayWrapper = styled.section`
 export const PostCard = styled.article`
   width: 100%;
   max-width: 350px;
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 export const CardImg = styled.img`
