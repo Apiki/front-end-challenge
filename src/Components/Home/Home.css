@@ -3,14 +3,30 @@
 	margin: auto;
 }
 
-.posts-container{
+.card-container{
 	margin: 2em auto;
-	/*border: 1px solid black;*/
-	width: 800px;
+	max-width: 650px;
 	text-align: center;
+	padding: 1em;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-.posts-container img{
-	border-radius: 20px;
+
+.card-container img{
+	/*border-radius: 20px;*/
+	width: 100%;
+	height: 350px;
+	object-fit: cover;
+}
+.card-container a{
+	color: #000;
+}
+.card-container a:hover{
+	color: orange;
+	text-decoration: underline;
+}
+
+.card-container h2{
+	margin: 1em 0;
 }
 
 #carregar-mais{
@@ -22,7 +38,7 @@
 	margin: 1em auto;
 	cursor: pointer;
 	font-weight: 800;
-	transition: 1s;
+	transition: 0.4s;
 }
 
 #carregar-mais:hover{
@@ -30,3 +46,8 @@
 	background-color: transparent;
 }
 
+@media(max-width: 450px){
+	.card-container img{
+		height: 250px;
+	}
+}
