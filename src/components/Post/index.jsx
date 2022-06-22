@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ThemeProvider, useTheme } from "styled-components";
 import {
   PostWrapper,
+  Loader,
   PostDescription,
   PostTitle,
   PostContent,
@@ -39,7 +40,7 @@ export const Post = ({ params }) => {
     <ThemeProvider theme={theme}>
       <PostWrapper>
         {loading ? (
-          <h1>Carregando</h1>
+          <Loader />
         ) : (
           <>
             <PostTitle>{selectedPost[0].title.rendered}</PostTitle>
