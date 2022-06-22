@@ -13,7 +13,7 @@ export const PostsDisplayWrapper = styled.section`
   gap: 16px;
 `;
 
-export const PostCard = styled.div`
+export const PostCard = styled.article`
   width: 100%;
   max-width: 350px;
 `;
@@ -59,13 +59,13 @@ export const Button = styled.button`
   position: relative;
   left: calc(50% - 100px);
 
-  background-color: ${({ theme }) => theme.colors.buttonBackground};
+  background-color: ${({ theme }) => theme.colors.link};
   color: ${({ theme }) => theme.colors.buttonText};
 
   cursor: pointer;
 
   :hover {
-    color: white;
+    color: ${({ theme }) => theme.colors.buttonTextHover};
     filter: opacity(90%);
   }
 `;

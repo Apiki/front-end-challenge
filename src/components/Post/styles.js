@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const PostWrapper = styled.main`
+export const PostWrapper = styled.article`
   max-width: 798px;
   padding: 0 24px;
   margin: 24px auto;
@@ -20,7 +20,7 @@ export const PostDescription = styled.h2`
   padding-bottom: 0.834em;
 
   color: ${({ theme }) => theme.colors.postDescription};
-  border-bottom: 2px solid #f0f0f0;
+  border-bottom: 2px solid ${({ theme }) => theme.colors.border};
 `;
 
 export const AuthorWrapper = styled.div`
@@ -32,7 +32,7 @@ export const AuthorWrapper = styled.div`
 
   span {
     font-size: 13px;
-    color: #a0a0a0;
+    color: ${({ theme }) => theme.colors.postDescription};
     margin-right: 5px;
   }
 `;
@@ -46,7 +46,7 @@ export const AuthorImg = styled.img`
 export const Author = styled.a`
   font-weight: 700;
   font-size: 13px;
-  color: #a0a0a0;
+  color: ${({ theme }) => theme.colors.postDescription};
   text-decoration: none;
 `;
 
@@ -65,13 +65,14 @@ export const PostContent = styled.div`
     font-size: 35px;
     font-weight: 400;
     margin: 0.83em 0 0.5022em;
-    color: ${({ theme }) => theme.colors.postContent};
+    color: ${({ theme }) => theme.colors.postTitle};
   }
 
   h3 {
     font-size: 28px;
     font-weight: 400;
     margin: 1em 0 0.5em;
+    color: ${({ theme }) => theme.colors.postTitle};
   }
 
   p {
@@ -84,7 +85,7 @@ export const PostContent = styled.div`
 
   a {
     text-decoration: none;
-    color: ${({ theme }) => theme.colors.buttonBackground};
+    color: ${({ theme }) => theme.colors.link};
 
     :hover {
       color: ${({ theme }) => theme.colors.postContent};
@@ -100,24 +101,24 @@ export const PostContent = styled.div`
   table {
     padding-bottom: 18px;
     margin-bottom: 18px;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.border};
     border-collapse: collapse;
   }
 
   tbody tr {
     :nth-child(2n -1) {
-      background-color: #f0f0f0;
+      background-color: ${({ theme }) => theme.colors.border};
     }
   }
 
   th {
-    color: #5a5a5a;
+    color: ${({ theme }) => theme.colors.darkFocus};
     font-size: 15px;
     padding: 8px 20px;
   }
 
   td {
-    color: #7b7b7b;
+    color: ${({ theme }) => theme.colors.lightFocus};
     font-size: 15px;
     padding: 8px 20px;
   }
@@ -140,7 +141,7 @@ export const PostContent = styled.div`
     p {
       font-size: 26px;
       line-height: 1.25em;
-      color: #7b7b7b;
+      color: ${({ theme }) => theme.colors.lightFocus};
       margin-bottom: 1.25em;
       text-align: left;
     }

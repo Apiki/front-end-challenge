@@ -14,6 +14,7 @@ export const PostsDisplay = () => {
   const theme = useTheme();
   const [data, setData] = useState([]);
   const [page, setPage] = useState(2);
+  const [morePages, setMorePages] = useState(true);
 
   useEffect(() => {
     fetch("https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518")
@@ -25,7 +26,12 @@ export const PostsDisplay = () => {
     fetch(
       `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=${page}`
     )
-      .then((response) => response.json())
+      .then((response) => {
+        if (page == response.headers.get("X-WP-TotalPages")) {
+          setMorePages(false);
+        }
+        return response.json();
+      })
       .then((newData) => setData(data.concat(newData)))
       .then(setPage(page + 1));
   };
@@ -48,7 +54,7 @@ export const PostsDisplay = () => {
             );
           })}
         </PostsDisplayWrapper>
-        <Button onClick={() => loadMore()}>Carregar mais</Button>
+        {morePages && <Button onClick={() => loadMore()}>Carregar mais</Button>}
       </main>
     </ThemeProvider>
   );

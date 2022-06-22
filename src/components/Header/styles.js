@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
-  background-image: linear-gradient(to right, #66656a, #010101);
+  background-image: linear-gradient(
+    to right,
+    ${({ theme }) => theme.colors.lightBackground},
+    ${({ theme }) => theme.colors.darkBackground}
+  );
 `;
 
 export const HeaderWrapper = styled.div`

@@ -68,7 +68,7 @@ export const Post = ({ params }) => {
               dangerouslySetInnerHTML={{
                 __html: selectedPost[0].content.rendered,
               }}
-            ></PostContent>
+            />
           </>
         )}
       </PostWrapper>
