@@ -39,6 +39,7 @@ export function PostCard({ post }: PostCardProps) {
       <Box p={6}>
         <Box>
           <Link
+            href={post.slug}
             display="block"
             color="gray.800"
             _dark={{
