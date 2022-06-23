@@ -1,0 +1,133 @@
+.post__body {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding-inline: 3rem;
+}
+
+.post__image {
+  border-radius: 3rem;
+  margin-block: 5rem;
+  width: 100%;
+}
+
+.post__title {
+  padding-bottom: 2rem;
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 3rem;
+}
+
+.post__description {
+  padding-bottom: 5rem;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.post__content {
+  margin-bottom: 4rem;
+  overflow: hidden;
+
+  p + p {
+    margin-top: 1.3rem;
+  }
+
+  p { 
+    font-size: 1.5rem;
+
+    a {
+      font-size: 1.2rem;
+    }
+  }
+
+  a {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    margin-block: 4rem 2rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+    margin-block: 3rem 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+    margin-block: 2.5rem 1rem;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: 4rem 0;
+  }
+
+  iframe, video {
+    max-width: 100%;
+    height: auto;
+    margin-block: 3rem;
+  }
+  
+  ul, ol {
+    margin-block: 2rem;
+    list-style: initial;
+  }
+
+  li {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    font-style: italic;
+  }
+
+  figure {
+    max-width: 100%;
+  }
+
+  figure + h2 {
+    margin-top: 0;
+  }
+
+  pre {
+    margin-block: 2rem;
+    font-size: 1.5rem;
+    white-space: break-spaces;
+  }
+  
+  table {
+    width: fit-content;
+    max-width: 100%;
+    overflow-x: auto;
+    word-break: break-word;
+    margin: 1em 0 30px;
+    line-height: normal;
+    color: #7b7b7b;
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: #f0f0f0;
+  }
+   tr {
+    border-bottom: 1px solid #eee;
+  }
+
+  td, th {
+    font-size: .85em;
+    padding: 8px 20px;
+    text-align: left;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+  }
+
+  .wp-video {
+    max-width: 100%;
+  }
+}
+
+
+.post__author {
+  padding-bottom: 5rem;
+  font-size: 1.2rem;
+}
