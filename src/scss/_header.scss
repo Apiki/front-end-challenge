@@ -1,0 +1,42 @@
+.header {
+  border-bottom: 2px solid #188ecc;
+  background-color: #fff;
+}
+
+.header__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1.5rem; 
+}
+
+.header__logo {
+  width: 14rem;
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .header__item {
+    margin-right: 2.5rem;
+
+    .header__link {
+
+
+      svg {
+        width: 20px;
+        fill: #188ecc;
+      
+      }
+    }
+  }
+
+  .header__item:last-child {
+    margin-right: 0;
+  }
+}
+
+
+
