@@ -17,6 +17,7 @@ export function Layout({ title, children }: LayoutProps) {
       _dark={{
         bg: "gray.900",
       }}
+      minH="100vh"
     >
       <Head>
         <title>{title ? `Apiki Blog - ${title}` : "Apiki Blog"}</title>
