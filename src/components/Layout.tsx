@@ -12,13 +12,7 @@ type LayoutProps = {
 export function Layout({ title, children }: LayoutProps) {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Box
-      bg="gray.50"
-      _dark={{
-        bg: "gray.900",
-      }}
-      minH="100vh"
-    >
+    <Box minH="100vh" maxW="2xl" mx="auto">
       <Head>
         <title>{title ? `Apiki Blog - ${title}` : "Apiki Blog"}</title>
       </Head>

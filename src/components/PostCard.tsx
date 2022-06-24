@@ -2,6 +2,7 @@ import { Box, Flex, Image, Link, Text } from "@chakra-ui/react";
 import React from "react";
 import { format, parseISO } from "date-fns";
 import { ptBR } from "date-fns/locale";
+import ReactHtmlParser from "html-react-parser";
 import { Post } from "../types/post";
 
 interface PostCardProps {
@@ -24,17 +25,18 @@ export function PostCard({ post }: PostCardProps) {
       _dark={{
         bg: "whiteAlpha.200",
       }}
-      w="100%"
-      maxW="2xl"
+      mb={4}
     >
-      <Image
-        roundedTop="lg"
-        w="full"
-        h={64}
-        fit="cover"
-        src={post._embedded["wp:featuredmedia"][0].source_url}
-        alt="Article"
-      />
+      {post._embedded["wp:featuredmedia"] && (
+        <Image
+          roundedTop="lg"
+          w="full"
+          h={64}
+          fit="cover"
+          src={post._embedded["wp:featuredmedia"][0].source_url}
+          alt="Article"
+        />
+      )}
 
       <Box p={6}>
         <Box>
@@ -53,7 +55,7 @@ export function PostCard({ post }: PostCardProps) {
               textDecor: "underline",
             }}
           >
-            {post.title.rendered}
+            {ReactHtmlParser(post.title.rendered)}
           </Link>
           <Text
             mt={2}

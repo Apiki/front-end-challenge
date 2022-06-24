@@ -1,53 +1,85 @@
 import { PlusSquareIcon } from "@chakra-ui/icons";
-import { Button, Icon, SimpleGrid, Text, Skeleton } from "@chakra-ui/react";
-import axios from "axios";
+import { Button, Icon, Text, Spinner, Flex } from "@chakra-ui/react";
+import { Prose } from "@nikolovlazar/chakra-ui-prose";
+import { AxiosResponseHeaders } from "axios";
+import { GetStaticProps } from "next";
 import { useEffect, useState } from "react";
 import { Layout } from "../components/Layout";
 import { PostCard } from "../components/PostCard";
+import { Post } from "../types/post";
+import { getPosts } from "../utils";
 
-function HomePage() {
-  const [posts, setPosts] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+type HomePageProps = {
+  _posts: Post[];
+  headers: AxiosResponseHeaders;
+};
+
+function HomePage({ _posts, headers }: HomePageProps) {
+  const [posts, setPosts] = useState(_posts);
+  const [pageCount, setPageCount] = useState(1);
+  const [isMounted, setIsMounted] = useState(false);
+  const [isFetching, setIsFetching] = useState(true);
+
+  const maxPageCount = Number(headers["x-wp-totalpages"]);
 
   useEffect(() => {
-    axios
-      .get("https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518")
-      .then((res) => {
-        setPosts(res.data);
-        setIsLoading(false);
-      });
+    setIsMounted(true);
+    setIsFetching(false);
   }, []);
+
+  async function fetchPosts() {
+    setIsFetching(true);
+    if (pageCount < maxPageCount) {
+      const { posts: newPosts } = await getPosts(pageCount + 1);
+
+      setPageCount(pageCount + 1);
+      setPosts([...posts, ...newPosts]);
+      setIsFetching(false);
+    }
+  }
 
   return (
     <Layout>
-      <Skeleton isLoaded={!isLoading}>
-        <SimpleGrid
-          columns={[1, 2, 3]}
-          spacing={{ base: 2, md: 4, lg: 8 }}
-          pb={4}
-        >
-          {posts.map((post) => (
-            <PostCard post={post} key={post.id} />
-          ))}
+      {posts.map((post) => isMounted && <PostCard post={post} key={post.id} />)}
 
+      {pageCount < maxPageCount && (
+        <Flex mb={4}>
           <Button
+            display="inline-block"
+            mx="auto"
             h="100%"
-            variant="outline"
             py={4}
-            borderWidth={4}
-            borderStyle="dashed"
+            disabled={isFetching}
+            onClick={fetchPosts}
           >
-            <Icon
-              aria-label="Color Mode Switcher"
-              fontSize="3xl"
-              as={PlusSquareIcon}
-            />
-            <Text ml={2}>Carregar Mais</Text>
+            {isFetching ? (
+              <Spinner />
+            ) : (
+              <>
+                <Icon
+                  aria-label="Color Mode Switcher"
+                  fontSize="3xl"
+                  as={PlusSquareIcon}
+                />
+                <Text ml={2}>Carregar Mais</Text>
+              </>
+            )}
           </Button>
-        </SimpleGrid>
-      </Skeleton>
+        </Flex>
+      )}
     </Layout>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const { posts, headers } = await getPosts();
+
+  return {
+    props: {
+      _posts: posts,
+      headers,
+    },
+  };
+};
 
 export default HomePage;
