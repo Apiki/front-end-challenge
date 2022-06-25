@@ -9,7 +9,7 @@
 
 ✅ Botão "Carregar mais" fazendo novas requisições
 
-❌ Design/ajustar layout
+✅ Design/ajustar layout
 
 
 ## Página interna

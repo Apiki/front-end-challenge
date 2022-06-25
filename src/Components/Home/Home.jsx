@@ -4,6 +4,7 @@ import axios from 'axios';
 import {useState,useEffect} from 'react';
 //uuid para as keys únicas
 import { v4 as uuidv4 } from 'uuid';
+import Header from '../Header/Header';
 import PostPreview from '../PostPreview/PostPreview';
 import PostsLoadMore from '../PostsLoadMore/PostsLoadMore';
 
@@ -55,8 +56,9 @@ function Home(){
 
 
 	return(
-		<>
-			<div className="main-container">
+		<>	
+			<Header/>
+			<div className="main-container" id="postshome">
 				{
 				  posts.map(post => (
 				  	<PostPreview post={post} key={post.id}/>
@@ -70,8 +72,10 @@ function Home(){
 						))}
 						</div>
 					))
-				}		
-				<button id="carregar-mais" onClick={(e) => handleCarregarMais(e)}>Carregar mais...</button>
+				}	
+				<div className="container-button" style={{textAlign:'center'}}>	
+					<button id="carregar-mais" onClick={(e) => handleCarregarMais(e)}>Carregar mais...</button>
+				</div>
 			</div>
 		</>
 	)

@@ -1,19 +1,17 @@
 .post-container-c{
 	margin: 2em auto;
-	max-width: 800px;
+	max-width: 1000px;
 	text-align: justify;
 	padding: 2em;
-	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .post-container-c img{
-	/*border-radius: 20px;*/
 	width: 100%;
 	height: 350px;
 	object-fit: cover;
 }
 .post-container-c a{
-	color: #000;
+/*	color: #000;*/
 }
 .post-container-c a:hover{
 	color: orange;

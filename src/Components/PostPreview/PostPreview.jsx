@@ -1,19 +1,30 @@
 import {Link} from 'react-router-dom';
+import { format } from 'date-fns';
+import ptBR from 'date-fns/locale/pt-BR';
+
 
 function PostPreview({ post }) {
+
+	let postDate = format(new Date(post.date), 'dd/MM/yyyy', {
+  		locale: ptBR,
+  	})
 
 	return(
 		<>
 			<div className="card-container">
-				<img src={post._embedded["wp:featuredmedia"][0].media_details.sizes["jnews-featured-750"].source_url} alt="post media"/>
-				<br/>
-				<div className="format-container">
-					<h1>{post.title.rendered}</h1>
-					<div dangerouslySetInnerHTML={{__html: post.excerpt.rendered}}/>
+				<div className="img-container">
+					<Link to={`/${post.slug}`} target="_blank" rel="noreferrer" >
+						<img src={post._embedded["wp:featuredmedia"][0].media_details.sizes["jnews-featured-750"].source_url} alt="post media"/>
+					</Link>
 				</div>
-				<br/>
-				<Link to={`/${post.slug}`} target="_blank" rel="noreferrer" ><h4>Leia mais</h4></Link>
-				<br/>
+				<div className="format-container">
+					<Link to={`/${post.slug}`} target="_blank" rel="noreferrer" >
+						<p>{postDate}</p>
+						<h1>{post.title.rendered}</h1>
+						<br/>
+						<div dangerouslySetInnerHTML={{__html: post.excerpt.rendered}}/>
+					</Link>
+				</div>
 			</div>
 		</>
 	)

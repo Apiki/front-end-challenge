@@ -1,19 +1,30 @@
 import {Link} from 'react-router-dom';
-import ImgNotFound from '../NotFound/broken-1.png';
+import ImgNotFound from '../Img/broken-1.png';
+import { format } from 'date-fns';
+import ptBR from 'date-fns/locale/pt-BR';
 
 function PostsLoadMore({ post }) {
+	
+	let postDate = format(new Date(post.date), 'dd/MM/yyyy', {
+  		locale: ptBR,
+  	})
 
 	return(
 		<>
 			<div className="card-container">
-				<img src={post['_embedded']["wp:featuredmedia"] !== undefined ? post._embedded["wp:featuredmedia"][0].source_url : ImgNotFound} alt="post media"/>
-				<div className="format-container">
-					<h1>{post.title.rendered}</h1>
-					<div dangerouslySetInnerHTML={{__html: post.excerpt.rendered}}/>
+				<div className="img-container">
+					<Link to={`/${post.slug}`} target="_blank" rel="noreferrer" >
+						<img src={post['_embedded']["wp:featuredmedia"] !== undefined ? post._embedded["wp:featuredmedia"][0].source_url : ImgNotFound} alt="post media"/>
+					</Link>
 				</div>
-				<br/>
-				<Link to={`/${post.slug}`} target="_blank" rel="noreferrer" ><h4>Leia mais</h4></Link>
-				<br/>
+				<div className="format-container">
+					<Link to={`/${post.slug}`} target="_blank" rel="noreferrer" >
+						<p>{postDate}</p>
+						<h1>{post.title.rendered}</h1>
+						<br/>
+						<div dangerouslySetInnerHTML={{__html: post.excerpt.rendered}}/>
+					</Link>
+				</div>
 			</div>	
 		</>
 	)
