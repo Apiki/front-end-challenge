@@ -1,4 +1,4 @@
-import ImgNotFound from '../Img/broken-1.png';
+import DeafultImg from '../Img/wordpress-screen.jpg';
 import { Link } from 'react-router-dom';
 import { format } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
@@ -14,7 +14,7 @@ function PostsLoadMore({ post }) {
 			<div className="card-container">
 				<div className="img-container">
 					<Link to={`/${post.slug}`} target="_blank" rel="noreferrer" >
-						<img src={post._embedded["wp:featuredmedia"] !== undefined ? post._embedded["wp:featuredmedia"][0].source_url : ImgNotFound} alt="post media" />
+						<img src={post._embedded["wp:featuredmedia"] !== undefined ? post._embedded["wp:featuredmedia"][0].source_url : DeafultImg} alt="post media" />
 					</Link>
 				</div>
 				<div className="format-container">

@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import { format } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 import Avatar from '../../Img/avatar.png';
+import DeafultImg from '../../Img/wordpress-screen.jpg';
 
 function Post() {
 
@@ -29,7 +30,6 @@ function Post() {
 				postContent.map(contents => (
 					<div className="post-container-c" key={contents.id}>
 						<h1>{contents.title.rendered}</h1>
-						<br />
 						<div className="container-post-info">
 							<div style={{ display: 'flex', alignItems: 'center' }}>
 								<img src={contents._embedded.author[0].avatar_urls !== undefined ? contents._embedded.author[0].avatar_urls[24] : Avatar} alt="avatar do autor" />
@@ -40,6 +40,8 @@ function Post() {
 							&nbsp;<div className="black-square"><small>&#9642;</small></div> &nbsp;
 							<p><small>Tempo de leitura: {contents.yoast_head_json.twitter_misc["Est. tempo de leitura"]}</small></p>
 						</div>
+						<br/>
+						<img src={contents._embedded["wp:featuredmedia"] !== undefined ? contents._embedded["wp:featuredmedia"][0].source_url : DeafultImg} alt="Imagem destacada" id="post-featured-media"/>
 						<br />
 						<div className="article" dangerouslySetInnerHTML={{ __html: contents.content.rendered }} />
 					</div>

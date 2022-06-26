@@ -4,7 +4,11 @@
 	padding: 0.8em;
 	box-sizing: border-box;
 	font-family: 'Inter', sans-serif;
-	/*border: 1px solid #fff;*/
+}
+
+#post-featured-media{
+	height: auto;
+	width:100%;
 }
 
 .container-post-info {
