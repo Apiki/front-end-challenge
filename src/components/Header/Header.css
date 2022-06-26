@@ -1,0 +1,42 @@
+header {
+	height: 280px;
+	color: #fff;
+	text-align: center;
+}
+
+.container-banner {
+	margin-top: 5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container-banner img {
+	height: 80px;
+	width: 120px;
+	margin: 1em 0 0 1em;
+}
+
+header h1 {
+	font-size: 100px;
+	color: #039bd9;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+}
+
+
+@media(max-width: 700px) {
+
+	.container-banner img {
+		height: 40px;
+		width: 60px;
+	}
+
+	.container-banner h1 {
+		font-size: 40px;
+	}
+
+	header {
+		height: 120px;
+	}
+}

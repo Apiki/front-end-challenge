@@ -1,21 +1,22 @@
 # Desafio - Front-end Developer
 
-## Página inicial
+Tecnologias/libs utilizadas:
 
-✅ Cards com as 10 primeiras postagens, cada uma contendo:
-- ✅ Imagem destacada
-- ✅ Título
-- ✅ Link para a postagem com o atributo `slug`
+- React.js
+- uuid (para geração de keys únicas)
+- axios
+- express-handlebars 
+- date-fns (para formatação das datas)
+- react-router-dom
 
-✅ Botão "Carregar mais" fazendo novas requisições
+### Para instalar as dependências do projeto:
 
-✅ Design/ajustar layout
+```
+npm install
+```
 
+### Para rodar a plicação:
 
-## Página interna
-
-- ✅ Imagem destacada
-- ❌ Título
-- ✅ Conteúdo
-
-❌ Design/ajustar layout
+```
+npm start
+```
