@@ -4,8 +4,7 @@ Tecnologias/libs utilizadas:
 
 - React.js
 - uuid (para geração de keys únicas)
-- axios
-- express-handlebars 
+- axios 
 - date-fns (para formatação das datas)
 - react-router-dom
 
