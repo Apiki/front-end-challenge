@@ -1,0 +1,50 @@
+:root {
+  --verde-escuro: rgb(3, 107, 82);
+  --verde-claro: rgb(47, 193, 140);
+  --roxo-escuro: rgb(65, 25, 127);
+  --roxo-claro: rgb(137, 88, 163);
+  --azul-claro: rgb(0, 213, 226);
+  --azul-escuro: rgb(0, 109, 251);
+  --cinza-claro: rgb(225, 229, 235);
+  --cinza1: rgb(62, 66, 75);
+  --cinza2: rgb(40, 42, 47);
+  --cinza3: rgb(30, 31, 36);
+  --cinza4: rgb(26, 27, 28);
+  }
+
+
+.div-footer {
+  align-items: center;
+  background-color: var(--verde-escuro);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0px 35px;
+  width: 100%;
+}
+
+.links-social-midia {
+  display: flex;
+  gap: 30px;
+}
+
+.links-social-midia span {
+  font-weight: 700;
+}
+
+.link {
+  align-items: center;
+  color: black;
+  display: flex;
+  text-decoration: none;
+}
+
+.div-footer img {
+  height: 40px;
+  width: 40px;
+}
+
+.div-footer h5 {
+  font-size: large;
+  padding-top: 15px;
+}

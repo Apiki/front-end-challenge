@@ -1,0 +1,66 @@
+:root {
+  --verde-escuro: rgb(3, 107, 82);
+  --verde-claro: rgb(47, 193, 140);
+  --roxo-escuro: rgb(65, 25, 127);
+  --roxo-claro: rgb(137, 88, 163);
+  --azul-claro: rgb(0, 213, 226);
+  --azul-escuro: rgb(0, 109, 251);
+  --cinza-claro: rgb(225, 229, 235);
+  --cinza1: rgb(62, 66, 75);
+  --cinza2: rgb(40, 42, 47);
+  --cinza3: rgb(30, 31, 36);
+  --cinza4: rgb(26, 27, 28);
+  }
+
+.post_card_title {
+  color:var(--cinza1);
+  font-size: 150%;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.card-post h2 {
+  width: 800px;
+}
+
+.post_card_title:hover {
+  color: #ba007c;
+  text-decoration: none;
+}
+
+.div-info {
+  display: flex;
+  color: #5a5a5a;
+  font-size: 130%;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  width: 1000px;
+}
+
+.p-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-info p{
+  display: -webkit-box;
+  -webkit-line-clamp: 4 ;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.infos-post span {
+  color: #a0a0a0;
+  font-size: 60%;
+  text-transform: uppercase;
+}
+
+.img-post {
+  border-radius: 15px;
+  margin-right: 50px;
+}
+
+.card-post {
+  border-bottom: 3px solid black;
+}

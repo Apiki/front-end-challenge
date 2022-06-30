@@ -1,0 +1,17 @@
+.h1-inner-page {
+  font-size: 50px;
+}
+
+.h2-innerpage {
+  color: black;
+  font-size: 32px;
+}
+
+.content-innerpage h2{
+  font-size: 30px;
+}
+
+.inner-page-content {
+  margin: 20px auto;
+  width: 80%;
+}
