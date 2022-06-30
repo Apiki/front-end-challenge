@@ -1,0 +1,19 @@
+.div-loading {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  border: 8px solid rgba(0, 0, 0, .1);
+  border-left-color: #22a6b3;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
