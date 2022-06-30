@@ -1,0 +1,25 @@
+
+.bt{
+    margin-left: 1rem;
+    width: auto;
+}
+.nav{
+    font-size: 150%;
+    background: rgb(255, 255, 255);
+    margin-bottom: 1rem;
+}
+.logo{
+    width: 9%;
+    height: 7%;
+    margin-right: 50rem;
+    margin-left: 3rem;
+}
+.bt2{
+    width: 20%;
+    height: 15%;
+    font-size: 100%;
+    border-radius: 0;
+}
+.sombra{
+    
+}

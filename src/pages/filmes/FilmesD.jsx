@@ -3,7 +3,7 @@ import Caa from '../../components/card/Caa'
 import { useParams } from 'react-router-dom'
 import tmdb from '../../services/tmdb'
 import {Row,Col,Card} from 'react-bootstrap'
-import '../../App.css'
+import '../../app.module.css'
 import '../det.css'
 import { useLayoutEffect } from 'react'
 const FilmesD = () => {
@@ -30,7 +30,7 @@ const FilmesD = () => {
   return (
     <div className='cont'>
             
-    {filme && <><h1>{filme.title.rendered}</h1>
+    {filme && <><h1>{filme}</h1>
     
     <Row>
         <Col md={8}>

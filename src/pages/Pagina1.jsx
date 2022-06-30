@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../logo.svg';
-import '../App.css';
+import styles from '../app.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import carai from './footer.svg';
 
@@ -9,7 +9,7 @@ import carai from './footer.svg';
 
 const Pagina1 = () => {
   return (
-    <div className='app'> 
+    <div className={StyleSheet.app}> 
         
         
 

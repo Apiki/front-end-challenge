@@ -5,7 +5,7 @@ import {
   Route,
 } from "react-router-dom";
 
-import './App.css';
+import styles from './app.module.css';
 
 import Pagina1 from './pages/Pagina1';
 import Menu from "./components/menu/Menu";
@@ -30,12 +30,12 @@ function App() {
     }
   }, []);
     return ( 
-<div className='app'>
+<div className={styles.app}>
   <BrowserRouter>
         <Menu black={blackHeader}/> 
         
         <Routes>
-            <Route path="" element={<Pagina1/>}/>
+            <Route path="" element={<Filmes />}/>
                 
                 
                 <Route path="/filmes/populares" element={<Filmes />} />

@@ -1,0 +1,31 @@
+.landing{
+    background: url(./fundo.jpeg);
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 2rem;
+    padding-left: 15rem;
+    padding-bottom: 3rem;
+}
+.title{
+    font-size : 700%;
+    color: black;
+
+}
+.titlebox{
+    width: 50%;
+    margin-bottom: 3rem;
+}
+.rodabox{
+    width: 50%;
+    margin-bottom: 5rem;
+}
+.searchbox{
+   width: 90%;
+   flex-direction: row;
+   background-color: rgb(250, 250, 250);
+   border-radius: 3rem;
+   padding-left: 2rem;
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+   height: fit-content;
+}
