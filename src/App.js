@@ -4,10 +4,10 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from './app.module.css';
 
-import Pagina1 from './pages/Pagina1';
+
 import Menu from "./components/menu/Menu";
 import Filmes from "./pages/filmes/Filmes";
 import FilmesD from "./pages/filmes/FilmesD"
@@ -31,6 +31,7 @@ function App() {
   }, []);
     return ( 
 <div className={styles.app}>
+
   <BrowserRouter>
         <Menu black={blackHeader}/> 
         
@@ -40,13 +41,14 @@ function App() {
                 
                 <Route path="/filmes/populares" element={<Filmes />} />
             
-                <Route path="/filmes/detalhe/:id" element={<FilmesD />} />
+                <Route path="busca" element={<FilmesD />} />
                 
             
         
         </Routes>
         
   </BrowserRouter>
+  
   </div>
     );
 }

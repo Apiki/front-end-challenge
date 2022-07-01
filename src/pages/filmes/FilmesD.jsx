@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import Caa from '../../components/card/Caa'
-import { useParams } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 import tmdb from '../../services/tmdb'
 import {Row,Col,Card} from 'react-bootstrap'
 import '../../app.module.css'
@@ -8,6 +8,7 @@ import '../det.css'
 import { useLayoutEffect } from 'react'
 const FilmesD = () => {
     const params = useParams()
+    const location = useLocation();
     let [filme,setFilmes] = useState({})
     let [ator,setAtor] = useState([])
   useLayoutEffect(()=>{

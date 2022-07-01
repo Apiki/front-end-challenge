@@ -2,7 +2,8 @@
     background: url(./fundo.jpeg);
     width: 100%;
     height: fit-content;
-    margin-bottom: 2rem;
+    
+    padding-top: 3rem;
     padding-left: 15rem;
     padding-bottom: 3rem;
 }
@@ -13,19 +14,223 @@
 }
 .titlebox{
     width: 50%;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }
 .rodabox{
     width: 50%;
     margin-bottom: 5rem;
 }
+.search{
+    display: flex;
+    flex-direction: row;
+}
 .searchbox{
    width: 90%;
    flex-direction: row;
-   background-color: rgb(250, 250, 250);
-   border-radius: 3rem;
-   padding-left: 2rem;
+   background-color: white;
+   border-radius: 2rem;
+   padding-left: 3%;
    padding-top: 1rem;
-   padding-bottom: 1rem;
+   padding-bottom: 2rem;
    height: fit-content;
+   box-shadow: 0 0 1em rgb(111, 111, 111);
+}
+.form{
+    background-color:rgba(255, 255, 255, 0.1);
+    border:solid 1px;
+    border-color:#a2a2a2 ;
+    border-radius:10px;
+    width: 35rem;
+    height: 4rem;
+    color:black;
+  }
+.txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-style:italic;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:260px;
+    color: black;
+  }
+.fundol{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(19,0,255,1) 49%, rgba(200,200,200,1) 100%);
+} 
+.buttonArea {
+    
+  margin-left: 1rem;
+ }
+ .btbusca{
+    font-size: 130%;
+    width: 10rem;
+    height: 4rem;
+ }
+ .txt{
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 5rem;
+    color: black;
+    font-size: 220%;
+ } 
+ .listagem{
+    padding-top: 2rem;
+    margin-left: 3%;
+    margin-right: 3%;
+ }
+
+
+@media(max-width:1800px){
+
+    .listagem{
+        margin-left:2%;
+    }
+}
+@media (max-width:1199px){
+ .listagem{
+    margin-left: 5%;
+    margin-right: 1%;
+
+}}
+ /* area de responsividade */
+@media(max-width:1125px){
+    .searchbox{
+        padding-right: 10px;
+        margin-left: -90px;
+    }
+    .form{
+        width: 30rem;
+    }
+    
+}
+ @media(max-width: 1025px){
+    .form{
+        width: 25rem;
+    }
+ }
+ @media(max-width:928px){
+    .form{
+        width: 20rem;
+    }
+ }
+ @media(max-width: 842px){
+    .landing{
+        flex-direction: column;
+    }
+    .title{
+        font-size: 400%;
+    }
+    .searchbox{
+        flex-direction: column;
+        justify-items: center;
+    }
+    .search{
+        justify-content: center;
+        margin-left: 19%;
+        display: flex;
+        flex-direction: column;
+    }
+    .btbusca{
+        margin-left: 17%;
+    }
+    .txt{
+        font-size: 180%;
+    }
+ }
+
+ @media(max-width:767px){
+
+    .listagem{
+    margin-left: 35%;
+   }
+}
+ @media(max-width:710px){
+    .search{
+        margin-left:5%;
+    }
+ }
+@media(max-width:642px){
+    .landing{
+        flex-direction: column;
+        padding-left: 10%;
+    }
+    .title{
+        font-size: 400%;
+    }
+    .searchbox{
+        margin-left: 0;
+        flex-direction: column;
+        justify-items: center;
+    }
+    .search{
+        justify-content: center;
+        margin-left: 19%;
+        display: flex;
+        flex-direction: column;
+    }
+    .btbusca{
+        margin-left: 17%;
+    }
+    .txt{
+        font-size: 180%;
+    }
+    .listagem{
+        margin-left: 25%;
+        
+    }
+}
+@media(max-width:507px){
+    .search{
+        margin-left: 5%;
+    }
+}
+@media(max-width:465px){
+    .listagem{
+        margin-left: 10%;
+    }
+    .searchbox{
+width: 100%;
+margin-left: -5%;
+    }
+    .search{
+margin-left: 3%;
+    }
+}
+@media(max-width:390px){
+    .search{
+        margin-left: 14%;
+    }
+    .form{
+        width: 15rem;
+    }
+    .btbusca{
+        margin-left: 8%;
+    }
+    .title{
+        font-size: 350%;
+    }
+}
+@media(max-width:330px){
+    .listagem{
+        margin-left: 6%;
+    }
+    .search{
+        margin-left: 8%;
+    }
+    .title{
+        font-size: 300%;
+    }
+    .txt{
+        font-size: 150%;
+    }
+   
+}
+@media (max-width:300px){
+    .form{
+        width: 12rem;
+    }
+    .btbusca{
+        margin-left: 0;
+    }
 }
