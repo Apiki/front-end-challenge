@@ -5,7 +5,7 @@ const Ca = (x) => {
   return (
     <div>
       <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src={ x.imagem ?  x.imagem : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6pdTz5L8m-BnQaPfYvrKXSpvTxri_DDtSqw&usqp=CAU'} />
+  <Card.Img variant="top" src={ x.imagem ?  x.imagem : 'https://ibtaini.com/wp-content/themes/pandastore/assets/images/placeholders/post-placeholder.jpg'} />
   <Card.Body>
     <Card.Title>{x.marca} - {x.modelo}</Card.Title>
     <Card.Text className='text-dark'>

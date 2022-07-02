@@ -6,6 +6,7 @@ import styles from "./inicial.module.css"
 import { useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import {RiSearchEyeLine} from 'react-icons/ri'
+import Swal from 'sweetalert2'
 const Filmes = () => {
   // declaração de state 
   const { register, handleSubmit, getValues } = useForm();
@@ -25,25 +26,43 @@ const Filmes = () => {
       setPages(pega.headers["x-wp-totalpages"])
       const data= pega.data
       
+      setPage(2)
       setFilmes(data)
       
-      setPage(2)
       
     }
     data();
   },[])
+  
   function atualizar(){
-      if(page<pages){
-        async function data() {
-          const pega = await tmdb.get('posts?_embed&categories=518');
-          const data= pega.data
-          const nova = filmes.concat(data)
-          setFilmes(nova)
-        }
-        data();
+    if(page<pages){
+      async function d() {
+        console.log(page);
+        const pega = await tmdb.get('posts?_embed&categories=518&page='+ page);
+        const data= pega.data
+        const nova = filmes.concat(data)
+        console.log(nova);
+        setFilmes(nova)
         setPage(page+1)
-      }
-  }
+        console.log(page)
+         console.log(filmes);
+        
+      } 
+      d();
+      }else{
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Acabaram os posts!',
+          footer: 'Volte em breve'
+        })
+        }
+
+}   
+        
+       
+        
+      
   return (
 <>
    <div className={styles.landing}>
@@ -79,13 +98,15 @@ const Filmes = () => {
     <div className={styles.listagem}>
        <Row xs={1}  xxl={4} xl={4} md={2} sm={1} >
       
-      {filmes.map(item=>( 
+      {filmes && filmes.map(item=>( 
         <Col className='mb-3'>   
-          <Ca className={styles.card} id={item.slug} marca={item.title.rendered} modelo={item.status} imagem={item._embedded["wp:featuredmedia"][0].source_url} cor={item.link} ano={item.date_gmt} nomebotao='Mais detalhes' />  
+         
+          <Ca className={styles.card} id={item.slug} marca={item.title.rendered} modelo={item.status} imagem={ (item._embedded["wp:featuredmedia"]) ? (item._embedded["wp:featuredmedia"][0].source_url) : ("")}  cor={item.link} ano={item.date_gmt} nomebotao='Mais detalhes' /> 
+
         </Col>
       ))} 
       </Row>
-       <Button className={'btn' +styles.bt}onClick={atualizar()} >Ver mais</Button> 
+       <Button className={'btn' +styles.bt} onClick={atualizar} >Ver mais</Button> 
         
     </div>
   </div>
