@@ -1,0 +1,29 @@
+/* Cards and Margins MediaQueries */
+
+.grid-cards {
+    @apply grid grid-cols-5 gap-[30px] mt-8
+}
+
+@media (max-width: 1280px) {
+    .grid-cards {
+        @apply grid-cols-4
+    }
+}
+
+@media (max-width: 1060px) {
+    .grid-cards {
+        @apply grid-cols-3
+    }
+}
+
+@media (max-width: 880px) {
+    .grid-cards {
+        @apply grid-cols-2
+    }
+}
+
+@media (max-width: 462px) {
+    .grid-cards {
+        @apply grid-cols-1
+    }
+}

@@ -1,0 +1,32 @@
+/* Post Content MediaQueries */
+
+.post-rendered {
+    @apply text-2xl
+}
+
+.media-aside {
+    @apply px-5
+}
+
+.grid-header {
+    @apply grid grid-cols-2
+}
+
+@media (max-width: 1280px) {
+    .grid-header {
+        @apply grid-cols-1
+    }
+
+    .media-aside {
+        @apply px-0 pr-2
+    }
+}
+
+@media (max-width: 560px) {
+    .media-aside {
+        @apply px-0 pr-2 w-fit
+    }
+    .post-rendered {
+        @apply text-xs
+    }
+}
