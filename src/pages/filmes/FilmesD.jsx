@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from 'react'
-import Caa from '../../components/card/Caa'
+import logo from './logo.jpeg'
 import { useLocation, useParams } from 'react-router-dom'
 import tmdb from '../../services/tmdb'
 import {Row,Col,Card} from 'react-bootstrap'
@@ -44,11 +44,7 @@ const FilmesD = () => {
     
     <Row xs={1} xxl={10} xl={7} md={5} sm={3} >
       
-      {/*ator.map(item=>(
-         <Col className='mb-3'>   
-        <Caa id={item.id} marca={item.nome} modelo={item.original_name} imagem={item.profile_path} cor={item.character} ano={item.gender} nomebotao='Mais detalhes' />
-        </Col>
-      ))*/}
+    
       
       </Row>
 </div>

@@ -19,7 +19,8 @@
     width: 20%;
     height: 15%;
     font-size: 100%;
-    border-radius: 0;
+    margin-left: 2rem;
+    border-radius: 5px;
 }
 .eeee{
     margin: 0;

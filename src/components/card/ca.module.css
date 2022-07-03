@@ -1,0 +1,18 @@
+.bt{
+    color: antiquewhite;
+    background-color: black;
+    border-radius: 20px;
+    display: block;
+    width: 45%;
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
+}
+.ca{
+   border-radius: 20px;
+   box-shadow: 0 0 1em rgb(111, 111, 111);
+   margin-bottom: 1rem;
+}
+.cai{
+    border-radius: 20px;
+ }

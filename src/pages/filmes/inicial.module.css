@@ -1,5 +1,5 @@
 .landing{
-    background: url(./fundo.jpeg);
+    background: url(./fundo.jpg);
     width: 100%;
     height: fit-content;
     
@@ -56,7 +56,8 @@
     color: black;
   }
 .fundol{
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(19,0,255,1) 49%, rgba(200,200,200,1) 100%);
+    background: linear-gradient(0deg, rgba(145,190,212,1) 0%, rgba(217,232,245,1) 50%, rgba(255,255,255,1) 100%);
+    padding-bottom: 5rem;
 } 
 .buttonArea {
     
@@ -79,7 +80,32 @@
     margin-left: 3%;
     margin-right: 3%;
  }
-
+.bt{
+    background-color: blueviolet;
+    border-radius: 200px;
+    position: absolute;
+    
+    right: 50%;
+    
+    width: 4rem;
+    height: 4rem;
+    
+}
+.bt2{
+    background-color: rgba(137, 43, 226, 0.256);
+    border-radius: 200px;
+    position: fixed;
+    
+    right: 5%;
+    bottom: 5%;
+    width: 4rem;
+    height: 4rem;
+    
+}
+.icon{
+    width: 2rem;
+    height: 3rem;
+}
 @media (max-width:2700px){
     .searchbox{
         padding-left: 5%;
@@ -105,6 +131,9 @@
 @media (max-width:1199px){
     .search{
         margin-left: 4%;
+    }
+    .bt{
+        right: 47%;
     }
  .listagem{
     margin-left: 5%;
@@ -135,6 +164,9 @@
     }
  }
  @media(max-width:966px){
+    .bt{
+        right: 45%;
+    }
     .form{
         width: 20rem;
     }
@@ -168,6 +200,9 @@
 
     .listagem{
     margin-left: 35%;
+   }
+   .bt{
+    right: 41%;
    }
 }
  @media(max-width:710px){

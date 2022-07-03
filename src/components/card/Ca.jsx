@@ -1,20 +1,18 @@
 import React from 'react'
 import { Card, Button } from 'react-bootstrap';
 import {Link} from 'react-router-dom'
+import styles from './ca.module.css'
 const Ca = (x) => {
   return (
     <div>
-      <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src={ x.imagem ?  x.imagem : 'https://ibtaini.com/wp-content/themes/pandastore/assets/images/placeholders/post-placeholder.jpg'} />
+      <Card style={{ width: '18rem' , height: '21rem' }} className={styles.ca} >
+  <Card.Img variant="top" className={styles.cai} src={ x.imagem ?  x.imagem : 'https://ibtaini.com/wp-content/themes/pandastore/assets/images/placeholders/post-placeholder.jpg'} />
   <Card.Body>
     <Card.Title>{x.marca} - {x.modelo}</Card.Title>
-    <Card.Text className='text-dark'>
-      <strong className='text-dark'>idioma : </strong>{x.cor}
-    </Card.Text>
-    <Card.Text className='text-dark'>
-      <strong className='text-dark'>Ano : </strong>{x.ano}
-    </Card.Text>
-    <Button variant={x.core ? x.core : 'danger'}><Link className='btn text-white' to={'/filmes/detalhe/'+x.id}>{x.nomebotao}{' '}{x.id}</Link></Button>
+    
+    
+    <Link className={'btn '+styles.bt} to={'/filmes/detalhe/'+x.id}>{x.nomebotao}{' '}</Link>
+   
   </Card.Body>
 </Card>
     </div>

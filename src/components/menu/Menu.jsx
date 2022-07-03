@@ -3,6 +3,7 @@ import{ Nav,NavDropdown,Navbar,Container} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import styles from "./menu.module.css"
 import logo from './logo.jpeg'
+import {IoLanguage} from 'react-icons/io5'
 const Menu = ({black}) => {
   return (
 <div className='sombra' >
@@ -18,11 +19,12 @@ const Menu = ({black}) => {
       <Link className='nav-link' to="/filmes/populares" >Home</Link>
         <Link className='nav-link' to="/carros" >ajuda</Link>
         
-        <NavDropdown menuVariant='light' title="linguas" id="basic-nav-dropdown">
+        <NavDropdown className='no-after'  menuVariant='light' title={ <IoLanguage/> } id="basic-nav-dropdown">
           <Link className='nav-link' to="/en" >English</Link>
           <Link className='nav-link' to="/eps" >español</Link>      
         </NavDropdown>
       </Nav>
+      {'  '}
     <Link className={'btn btn-dark '+ styles.bt2} to={-1} >Sign Up</Link>
     </Navbar.Collapse>
   </Container>

@@ -6,7 +6,9 @@ import styles from "./inicial.module.css"
 import { useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import {RiSearchEyeLine} from 'react-icons/ri'
+import {AiOutlineArrowDown, AiOutlineArrowUp} from 'react-icons/ai'
 import Swal from 'sweetalert2'
+import logo from './logo.jpeg'
 const Filmes = () => {
   // declaração de state 
   const { register, handleSubmit, getValues } = useForm();
@@ -71,7 +73,7 @@ const Filmes = () => {
      <h1 className={styles.title}>Dream system</h1>
     </div>
     <div className={styles.rodabox}>
-     <h2 className='text-dark'>Aqui é onde você pode encontrar inumeras ideias para se atualizar no mundo dos softwares</h2>
+     <h2 className='text-dark'>Aqui é onde você pode encontrar inúmeras ideias para se atualizar no mundo dos softwares</h2>
      <h2 className='text-dark'>Um site idealizado para desenvolvedor!</h2>
     </div>
     <div className={styles.searchbox}>
@@ -95,21 +97,23 @@ const Filmes = () => {
    </div>
    <div className={styles.fundol}>
 
-    <div className={styles.listagem}>
+    <div className={styles.listagem} id="lista">
        <Row xs={1}  xxl={4} xl={4} md={2} sm={1} >
       
       {filmes && filmes.map(item=>( 
         <Col className='mb-3'>   
          
-          <Ca className={styles.card} id={item.slug} marca={item.title.rendered} modelo={item.status} imagem={ (item._embedded["wp:featuredmedia"]) ? (item._embedded["wp:featuredmedia"][0].source_url) : ("")}  cor={item.link} ano={item.date_gmt} nomebotao='Mais detalhes' /> 
+          <Ca className={styles.card} id={item.slug} marca={item.title.rendered} modelo={item.status} imagem={ (item._embedded["wp:featuredmedia"]) ? (item._embedded["wp:featuredmedia"][0].source_url) : ("")}  cor={item.link} ano={item.date_gmt} nomebotao='Sabia mais' /> 
 
         </Col>
-      ))} 
+      )) }
       </Row>
-       <Button className={'btn' +styles.bt} onClick={atualizar} >Ver mais</Button> 
-        
+      {filmes.lenght != 0  && <Button className={styles.bt} onClick={atualizar} ><AiOutlineArrowDown className={styles.icon}/></Button> }
+      
     </div>
   </div>
+  
+  <Button className={styles.bt2} href="#lista" ><AiOutlineArrowUp className={styles.icon} /></Button>
 </>
   )
 }

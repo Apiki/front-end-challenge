@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from './app.module.css';
-
+import Footer from './components/footer/Footer';
 
 import Menu from "./components/menu/Menu";
 import Filmes from "./pages/filmes/Filmes";
@@ -46,7 +46,7 @@ function App() {
             
         
         </Routes>
-        
+        <Footer/>
   </BrowserRouter>
   
   </div>
