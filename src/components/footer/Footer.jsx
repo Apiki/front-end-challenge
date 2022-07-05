@@ -5,11 +5,11 @@ import {BsFacebook} from 'react-icons/bs'
 import{AiOutlineTwitter, AiFillLinkedin} from 'react-icons/ai'
 const Footer = () => {
   return (
-    <div className={styles.rodape}>
-   <div className={styles.imagem}>
+  <div className={styles.rodape}>
+  <div className={styles.imagem}>
   <img src={logo} alt='' className={styles.lo}></img>
-  <h3>bla bla bla</h3>
-  <h3>bla bla bla</h3>
+  <h3>Our goal is at the</h3>
+  <h3>heart of all that we do.</h3>
     <div className={styles.icons}>
      <BsFacebook className={styles.icon}/>
      <AiOutlineTwitter className={styles.icon}/>

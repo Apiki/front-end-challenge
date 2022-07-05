@@ -12,6 +12,8 @@ const Post = ({black}) => {
   // declaração de state 
   const { register, handleSubmit, getValues } = useForm();
   const navigate = useNavigate()
+
+  // função que transfere a busca de posts como slug no url
   function receiveData() {
     const values = getValues();
     const pesquisa = values.busca.toLowerCase()
@@ -19,10 +21,12 @@ const Post = ({black}) => {
     console.log(newp);
     navigate("/busca/" + newp);
   }
+   // declaração de state 
   let [post,setPosts] = useState([])
   const [pages,setPages] = useState()
   let [page,setPage]=useState()
   
+  // react hook para puxar coisas da api
   useEffect(()=>{
     async function data() {
       const pega = await tmdb.get('posts?_embed&categories=518');
@@ -38,8 +42,11 @@ const Post = ({black}) => {
     data();
   },[])
   
+  // função que atualiza a lista de posts com sweet alert pra quando nao tem mais posts
   function atualizar(){
+    // se ainda tiver paginas na API pra atualizar
     if(page<pages){
+      // função de atualizar
       async function d() {
         console.log(page);
         const pega = await tmdb.get('posts?_embed&categories=518&page='+ page);
@@ -51,12 +58,15 @@ const Post = ({black}) => {
         console.log(page)
          console.log(post);
         
-      } 
+      } ]
+      // execução da função
       d();
       }else{
+        // sweet alert pra caso nao seja possivel atualizar a pagina com os posts
+        // bloco executado somente para quando nao tem mais paginas na API para serem puxadas
         Swal.fire({
           icon: 'error',
-          title: 'Oops...',
+          title: 'Oops!!!',
           text: 'Acabaram os posts!',
           footer: 'Volte em breve'
         })
@@ -69,6 +79,7 @@ const Post = ({black}) => {
       
   return (
 <>
+   {/* landing da pagina inicial */}
    <div className={styles.landing}>
     <div className={styles.titlebox}>
      <h1 className={styles.title}>APIKI API</h1>
@@ -78,18 +89,31 @@ const Post = ({black}) => {
      <h2 className='text-dark'>Aqui é onde você pode encontrar inúmeras ideias para se atualizar no mundo dos softwares</h2>
      <h2 className='text-dark'>Um site idealizado para desenvolvedor!</h2>
     </div>
+     {/* caixa de busca */}
     <div className={styles.searchbox} id="lista">
       <h1 className={styles.txt}>Pesquise o assunto que você está procurando aqui</h1>
       <div className={styles.search}>
                 <form
                   className="mb-3 "
-                  controlId="busca"
+                  controlid="busca"
                   placeholder="Buscar..."
                 >
                   <input type="text" className={styles.form} {...register("busca")} />
                 </form>
+                {/* js para adicionar o evento do enter clicar no botao de buscar */}
+                {
+                  document.addEventListener("keypress", function(e) {
+                    if(e.key === 'Enter') {
+                    
+                        var btn = document.querySelector("#submit");
+                      
+                      btn.click();
+                    
+                    }
+                  })
+                }
                 <div className={styles.buttonArea}>
-                <Button type="submit" className={"ml-3 "+ styles.btbusca} variant="dark" onClick={handleSubmit(receiveData)} >
+                <Button type="submit" id="submit" className={"ml-3 "+ styles.btbusca} variant="dark" onClick={handleSubmit(receiveData)} >
                   <RiSearchEyeLine />
                     Search Now
                 </Button>
@@ -97,6 +121,7 @@ const Post = ({black}) => {
               </div>
     </div>
    </div>
+   {/* area com o map dos posts da API apiki */}
    <div className={styles.fundol}>
 
     <div className={styles.listagem} >
@@ -114,7 +139,7 @@ const Post = ({black}) => {
       
     </div>
   </div>
-  
+  {/* botoes de assecibilidade do usuario mobile so aparecem nos dispositivos tablet e celular */}
   <Button className={styles.bt2} href="#lista"  ><AiOutlineArrowUp className={styles.icon} /></Button>
   <Button className={styles.bt3} href="#fim"  ><AiOutlineArrowDown className={styles.icon}/></Button>
 </>
