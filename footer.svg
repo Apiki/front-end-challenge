@@ -1,5 +1,5 @@
-<svg fill="none" width="800" height="700" xmlns="http://www.w3.org/2000/svg">
-	<foreignObject width="800px" height="700">
+<svg fill="none" width="800" height="900" xmlns="http://www.w3.org/2000/svg">
+	<foreignObject width="800px" height="900">
 		<div xmlns="http://www.w3.org/1999/xhtml">
 			<style>			
 				@keyframes gradientBackground {
@@ -31,7 +31,7 @@
 	                                justify-content: left;
 					margin: 0;
 					width: 100%;
-					height: 700px;
+					height: 900px;
 					background: linear-gradient(-45deg, #ff0011, #000000, #0000ff);
 					background-size: 600% 400%;
 					animation: gradientBackground 10s ease infinite;
@@ -41,7 +41,7 @@
 				}
         
         .wrapper {
-          height: 700px;
+          height: 900px;
           /*This part is important for centering*/
           display: flex;
 	  flex-direction:column;
