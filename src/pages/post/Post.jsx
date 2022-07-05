@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from 'react'
-import tmdb from '../../services/tmdb'
+import tmdb from '../../services/apiki'
 import{Row , Col, Button} from "react-bootstrap"
 import Ca from "../../components/card/Ca"
 import styles from "./inicial.module.css"
@@ -57,7 +57,7 @@ const Post = ({black}) => {
         setPage(page+1)
        
         
-      } ]
+      } 
       // execução da função
       d();
       }else{

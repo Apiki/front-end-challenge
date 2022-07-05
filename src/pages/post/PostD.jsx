@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import { useParams } from 'react-router-dom'
-import tmdb from '../../services/tmdb'
+import tmdb from '../../services/apiki'
 import {Row,Col} from 'react-bootstrap'
 import styles from './detalhe.module.css'
 import dayjs from 'dayjs'
@@ -22,10 +22,10 @@ const PostD = () => {
     data()}
     
   },[params.id])
-  
+  // separação de pagina pra slug e erro 404
   if (post && post !== undefined) {
     
-  
+  //pagina de pesquisa dentro do return
   return (
     <div className={styles.cont}>
             
@@ -34,7 +34,7 @@ const PostD = () => {
         <h3 className={styles.subtitle} >{post._embedded.author[0].name} - {dayjs(post.date_gmt).format("DD/MM/YYYY HH:mm:ss")}</h3>
      </>
      } 
-    
+      {/* conteudo da pagina em si */}
     <Row>
         <Col md={12}>
             {post.content && <p className={styles.corpo} dangerouslySetInnerHTML={{ __html: post.content.rendered }}></p> }
@@ -44,6 +44,7 @@ const PostD = () => {
 
 </div>
   )} else if (post === undefined){
+    //bloco para rederizar a imagem do erro
       return <img className={styles.erro} src={erro} alt="" />
   }
     }
