@@ -9,8 +9,8 @@ import styles from './app.module.css';
 import Footer from './components/footer/Footer';
 
 import Menu from "./components/menu/Menu";
-import Filmes from "./pages/filmes/Filmes";
-import FilmesD from "./pages/filmes/FilmesD"
+import Post from "./pages/filmes/Post";
+import PostD from "./pages/filmes/PostD"
 
 function App() {
   const [blackHeader, setblackHeader]= useState(false);
@@ -33,15 +33,15 @@ function App() {
 <div className={styles.app}>
 
   <BrowserRouter>
-        <Menu black={blackHeader}/> 
+        <Menu /> 
         
         <Routes>
-            <Route path="" element={<Filmes />}/>
+            <Route path="" element={<Post black={blackHeader} />}/>
                 
                 
-                <Route path="/filmes/populares" element={<Filmes />} />
+                
             
-                <Route path="busca" element={<FilmesD />} />
+                <Route path="/busca/:id" element={<PostD />} />
                 
             
         

@@ -8,10 +8,10 @@
     flex-direction: row;
     width: 100%;
     height: fit-content;
-    background: linear-gradient(0deg, rgba(111,111,111,1) 0%, rgba(132,147,159,1) 50%, rgba(145,190,212,1) 100%)
+    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 50%, rgba(145,190,212,1) 100%)
 }
 .rodape h3{
-    color: antiquewhite;
+    color: black;
 }
 .imagem{
     margin-left: 4rem;
@@ -28,7 +28,7 @@
     flex-direction: row;
 }
 .icon{
-    color: whitesmoke;
+    color: black;
     width: 3rem;
     height: 3rem;
 }

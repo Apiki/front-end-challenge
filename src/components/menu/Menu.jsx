@@ -2,7 +2,7 @@ import React from 'react'
 import{ Nav,NavDropdown,Navbar,Container} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import styles from "./menu.module.css"
-import logo from './logo.jpeg'
+import logo from './logo.png'
 import {IoLanguage} from 'react-icons/io5'
 const Menu = ({black}) => {
   return (
@@ -16,8 +16,8 @@ const Menu = ({black}) => {
     <Navbar.Toggle aria-controls="basic-navbar-nav"  className={styles.menu}/>
     <Navbar.Collapse id="basic-navbar-nav" className={styles.itens}>
       <Nav className="align-right">
-      <Link className='nav-link' to="/filmes/populares" >Home</Link>
-        <Link className='nav-link' to="/carros" >ajuda</Link>
+      <Link className='nav-link' to="" >Home</Link>
+        <Link className='nav-link' to="" >ajuda</Link>
         
         <NavDropdown className='no-after'  menuVariant='light' title={ <IoLanguage/> } id="basic-nav-dropdown">
           <Link className='nav-link' to="/en" >English</Link>

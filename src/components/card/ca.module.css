@@ -5,7 +5,7 @@
     display: block;
     width: 45%;
     position: absolute;
-    bottom: 3%;
+    bottom: 2%;
     right: 3%;
 }
 .ca{
@@ -14,5 +14,5 @@
    margin-bottom: 1rem;
 }
 .cai{
-    border-radius: 20px;
+    border-radius: 10px;
  }

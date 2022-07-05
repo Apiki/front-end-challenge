@@ -81,7 +81,7 @@
     margin-right: 3%;
  }
 .bt{
-    background-color: blueviolet;
+    background-color: rgb(0, 0, 226);
     border-radius: 200px;
     position: absolute;
     
@@ -92,7 +92,18 @@
     
 }
 .bt2{
-    background-color: rgba(137, 43, 226, 0.256);
+    background-color: rgba(0, 0, 226, 0.535);
+    border-radius: 200px;
+    position: fixed;
+    
+    right: 5%;
+    bottom: 13%;
+    width: 4rem;
+    height: 4rem;
+    
+}
+.bt3{
+    background-color: rgba(0, 0, 226, 0.535);
     border-radius: 200px;
     position: fixed;
     
@@ -106,7 +117,13 @@
     width: 2rem;
     height: 3rem;
 }
-@media (max-width:2700px){
+@media (max-width:3700px){
+    .bt2{
+        display: none;
+    }
+    .bt3{
+        display: none;
+    }
     .searchbox{
         padding-left: 5%;
     }
@@ -169,6 +186,12 @@
     }
     .form{
         width: 20rem;
+    }
+    .bt2{
+        display: block;
+    }
+    .bt3{
+        display: block;
     }
  }
  @media(max-width: 868px){

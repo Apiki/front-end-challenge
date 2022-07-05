@@ -25,7 +25,7 @@
 .eeee{
     margin: 0;
 }
-@media(max-width:2700px){
+@media(max-width:3700px){
     .eeee{margin-left: 0;margin-right: 0;padding-right: 0;}
     .nav{font-size: 170%;}
     .bt2{width: 10rem;margin-left: 2%;margin-right: 2%;}
