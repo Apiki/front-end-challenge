@@ -76,7 +76,7 @@
 <div class="container">
         <div class="wrapper">
             <div align="top" class="typing-demo">
-              <h3>Features</h3>
+              <h3>Features Extras</h3>
              <ul>
               <li>Projeto totalmente responsivo</li>
 	          <li>Design original com as cores da logo</li>     
@@ -85,6 +85,23 @@
               <li>Pagina de detalhes totalmente responsiva</li>
               <li>Tratamento da pagina de detalhes da API apiki</li>
             
+			 </ul>
+			 <h3>Features Alcançadas pagina inicial</h3>
+			 <ul>
+              <li>Imagem post</li>
+	          <li>Design original com as cores da logo</li>     
+              <li>Mecanismo de pesquisa</li>
+              <li>Mecanismos de acessibilidade para mobile:</li>
+              <li>Totalmente responsiva</li>
+              <li>Botão para subir para a barra de pesquisa</li>
+              <li>Botão para desce ao final da pagina </li>
+			 </ul> 
+			 <h3>Features Alcançadas pagina detalhes</h3>
+			 <ul>
+              <li>Titulo</li>
+	          <li>Author</li>     
+              <li>Conteudo totalmente responsivo</li>
+              <li>Imagens do conteudo responsivas</li>
 			 </ul> 
             </div>
         </div>
