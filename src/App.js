@@ -9,8 +9,8 @@ import styles from './app.module.css';
 import Footer from './components/footer/Footer';
 
 import Menu from "./components/menu/Menu";
-import Post from "./pages/filmes/Post";
-import PostD from "./pages/filmes/PostD"
+import Post from "./pages/post/Post";
+import PostD from "./pages/post/PostD"
 
 function App() {
   const [blackHeader, setblackHeader]= useState(false);

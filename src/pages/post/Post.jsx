@@ -18,7 +18,7 @@ const Post = ({black}) => {
     const values = getValues();
     const pesquisa = values.busca.toLowerCase()
     const newp = pesquisa.replace(/ /g,"-")
-    console.log(newp);
+   
     navigate("/busca/" + newp);
   }
    // declaração de state 
@@ -30,7 +30,7 @@ const Post = ({black}) => {
   useEffect(()=>{
     async function data() {
       const pega = await tmdb.get('posts?_embed&categories=518');
-      console.log(pega.headers["x-wp-totalpages"])
+     
       setPages(pega.headers["x-wp-totalpages"])
       const data= pega.data
       
@@ -52,11 +52,10 @@ const Post = ({black}) => {
         const pega = await tmdb.get('posts?_embed&categories=518&page='+ page);
         const data= pega.data
         const nova = post.concat(data)
-        console.log(nova);
+      
         setPosts(nova)
         setPage(page+1)
-        console.log(page)
-         console.log(post);
+       
         
       } ]
       // execução da função
