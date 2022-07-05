@@ -37,7 +37,7 @@
 					animation: gradientBackground 10s ease infinite;
 					border-radius: 10px;
 					color: white;
-					text-align: center;
+					text-align: left;
 				}
         
         .wrapper {
@@ -78,9 +78,12 @@
             <div align="top" class="typing-demo">
               <h3>Features</h3>
              <ul>
-              <li>por enquanto nao tem </li>
-	      <li>nenhuma Features</li>     
-              <li>para colocar aqui</li>
+              <li>Projeto totalmente responsivo</li>
+	          <li>Design original com as cores da logo</li>     
+              <li>Pagina inicial com mecanismo de pesquisa</li>
+              <li>Mecanismos de acessibilidade para mobile</li>
+              <li>Pagina de detalhes totalmente responsiva</li>
+              <li>Tratamento da pagina de detalhes da API apiki</li>
             
 			 </ul> 
             </div>
