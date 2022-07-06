@@ -1,0 +1,114 @@
+<svg fill="none" width="800" height="900" xmlns="http://www.w3.org/2000/svg">
+	<foreignObject width="800px" height="900">
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<style>			
+				@keyframes gradientBackground {
+					0% {
+						background-position: 0% 50%;
+					}
+					50% {
+						background-position: 100% 50%;
+					}
+					100% {
+						background-position: 0% 50%;
+					}
+				}
+			
+				.container {
+					font-family:
+						system-ui,
+						-apple-system,
+						'Segoe UI',
+						Roboto,
+						Helvetica,
+						Arial,
+						sans-serif,
+						'Apple Color Emoji',
+						'Segoe UI Emoji';
+					display: flex;
+					flex-direction: column;
+					align-items: left;
+	                                justify-content: left;
+					margin: 0;
+					width: 100%;
+					height: 900px;
+					background: linear-gradient(-45deg, #ff0011, #000000, #0000ff);
+					background-size: 600% 400%;
+					animation: gradientBackground 10s ease infinite;
+					border-radius: 10px;
+					color: white;
+					text-align: left;
+				}
+        
+        .wrapper {
+          height: 900px;
+          /*This part is important for centering*/
+          display: flex;
+	  flex-direction:column;
+          align-items: left;
+	  justify-content: left;
+          
+        }
+        .typing-demo {
+          width: 55ch;
+          animation: typing 5s steps(55), blink .3s step-end infinite alternate;
+          white-space: nowrap;
+          overflow: hidden;
+          border-right: 3px solid;
+          font-family: monospace;
+          font-size: 2em;
+        }
+				.typing-demo b {
+					text-decoration: underline;
+				}
+        @keyframes typing {
+          from {
+            width: 0
+          }
+        }
+            
+        @keyframes blink {
+          50% {
+            border-color: transparent
+          }
+        }
+			</style>
+<div class="container">
+        <div class="wrapper">
+            <div align="top" class="typing-demo">
+              <h3>Features Extras</h3>
+             <ul>
+              <li>Projeto totalmente responsivo</li>
+	          <li>Design original com as cores da logo</li>     
+              <li>Pagina inicial com mecanismo de pesquisa</li>
+              <li>Mecanismos de acessibilidade para mobile</li>
+              <li>Pagina de detalhes totalmente responsiva</li>
+              <li>Tratamento da pagina de detalhes da API apiki</li>
+            
+			 </ul>
+			 <h3>Features Alcançadas pagina inicial</h3>
+			 <ul>
+              <li>Imagem post</li>
+	          <li>Design original com as cores da logo</li>     
+              <li>Mecanismo de pesquisa</li>
+              <li>Mecanismos de acessibilidade para mobile:</li>
+              <li>Totalmente responsiva</li>
+              <li>Botão para subir para a barra de pesquisa</li>
+              <li>Botão para desce ao final da pagina </li>
+			 </ul> 
+			 <h3>Features Alcançadas pagina detalhes</h3>
+			 <ul>
+              <li>Titulo</li>
+	          <li>Author</li>     
+              <li>Conteudo totalmente responsivo</li>
+              <li>Imagens do conteudo responsivas</li>
+			 </ul> 
+            </div>
+        </div>
+</div>
+
+            
+       
+</div>
+	</foreignObject>
+</svg>

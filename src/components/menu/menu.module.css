@@ -1,0 +1,106 @@
+
+.bt{
+    margin-left: 1rem;
+    width: auto;
+}
+.nav{
+    font-size: 150%;
+    background: rgb(255, 255, 255);
+
+    box-shadow: 0 0 0.8em rgba(166, 165, 165, 0.576);
+}
+.logo{
+    width: 9%;
+    height: 7%;
+    margin-right: 40%;
+    margin-left: 2%;
+}
+.bt2{
+    width: 20%;
+    height: 15%;
+    font-size: 100%;
+    margin-left: 2rem;
+    border-radius: 5px;
+}
+.eeee{
+    margin: 0;
+}
+@media(max-width:3700px){
+    .eeee{margin-left: 0;margin-right: 0;padding-right: 0;}
+    .nav{font-size: 170%;}
+    .bt2{width: 10rem;margin-left: 2%;margin-right: 2%;}
+    .logo{margin-right: 130%;}
+}
+@media(max-width:2340px){
+    .logo{margin-right: 110%;}
+}
+@media(max-width:2100px){
+    .logo{margin-right: 90%;}
+}
+
+@media(max-width:1800px){
+    .logo{margin-right: 60%;}
+}
+@media(max-width:1400px){
+    .logo{
+        
+        margin-right: 58%;
+    }
+}
+@media(max-width:1250px){
+    .logo{margin-right: 40%;}
+    .bt2{
+        font-size: 80%;
+    }
+}
+@media (max-width:1025px) {
+    .bt2{
+        font-size: 80%;
+    }
+}
+@media(max-width:991px){
+   .nav{
+    
+    display: flex;
+    flex-direction: row;
+   }
+   .menu{
+    align-self: flex-start;
+   }
+}
+@media(max-width:768px){
+    .logo{
+        width: 20%;
+    }
+    .menu{
+        margin-top: 2%;
+    }
+}
+@media(max-width:620px){
+    .logo{
+        width: 25%;
+    }
+    .menu{
+        margin-top: 5%;
+    }
+    .itens{
+      padding-left: 40%;
+
+    }
+    .bt2{
+        width: fit-content;
+    }
+}
+@media(max-width:400px){
+    .menu{
+        margin-top: 3%;
+    }
+    .itens{
+        padding-left: 30%;
+    }
+}
+@media(max-width:324px){
+    .menu{
+        margin-top: 2%;
+    }
+}

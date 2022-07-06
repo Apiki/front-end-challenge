@@ -1,0 +1,160 @@
+.lo{
+    width: 15rem;
+    height: 10rem;
+}
+.rodape{
+    padding: 5rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 50%, rgba(145,190,212,1) 100%)
+}
+.rodape h3{
+    color: black;
+}
+.imagem{
+    margin-left: 4rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+.imagem h3{
+    padding-left: 2rem;
+}
+.icons{
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+.icon{
+    color: black;
+    width: 3rem;
+    height: 3rem;
+}
+.menu1{
+    margin-left: 20rem;
+    margin-right: 3rem;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+.menu2{
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+.menu3{
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+.desc1{
+    display: flex;
+    flex-direction: row;
+
+}
+.desc2{
+    display: flex;
+    flex-direction: row;
+
+}
+@media(max-width:1800px){
+    .menu1{
+        margin-left: 10rem;
+    }
+}
+@media(max-width:1450px){
+    .menu1{
+        margin-left: 5%;
+        margin-right: 1%;
+    }
+    .menu2{
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+    .menu3{
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+}
+@media(max-width:1200px){
+    .rodape h1{
+        font-size: 170%;
+    }
+    .rodape h3{
+        font-size: 140%;
+    }
+    .icon{
+        width: 2rem;
+        height: 2rem;
+    }
+    .imagem{
+        margin-left: 0;
+    }
+    .menu1{
+        margin-right: 0;
+    }
+    .menu2{
+        margin-right: 0;
+    }
+    .menu3{
+        margin-right: 0;
+    }
+}
+@media(max-width:940px){
+   .desc2{
+    flex-direction: column;
+   }
+   .menu1{
+    margin-left: 0;
+   }
+}
+@media(max-width:767px){
+    .desc1{
+        flex-direction: column;
+        margin-left: 10%;
+    }
+}
+@media(max-width:670px){
+    .desc1{
+        margin-left: 5%;
+    }
+}
+@media(max-width:630px){
+    .desc1{
+        margin-left: 0;
+    }
+}
+@media(max-width:610px){
+    .rodape{
+        flex-direction: column;
+
+    }
+}
+@media(max-width:390px){
+    .rodape{
+        padding: 3rem;
+    }
+    .menu1{
+        margin-top: 0;
+    }
+    .menu2{
+        margin-top: 0;
+    }
+    .menu3{
+        margin-top: 0;
+    }
+}
+@media(max-width:330px){
+    .rodape{
+        padding: 1rem;
+    }
+    .rodape h1{
+        font-size: 150%;
+    }
+    .rodape h3{
+        font-size: 110%;
+    }
+}

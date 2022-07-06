@@ -1,0 +1,319 @@
+.landing{
+    background: url(./fundo.jpg);
+    width: 100%;
+    height: fit-content;
+    
+    padding-top: 3rem;
+    padding-left: 15rem;
+    padding-bottom: 3rem;
+}
+.title{
+    font-size : 700%;
+    color: black;
+
+}
+.titlebox{
+    width: 50%;
+    margin-bottom: 5rem;
+}
+.rodabox{
+    width: 50%;
+    margin-bottom: 5rem;
+}
+.search{
+    display: flex;
+    flex-direction: row;
+}
+.searchbox{
+   width: 90%;
+   flex-direction: row;
+   background-color: white;
+   border-radius: 2rem;
+   padding-left: 3%;
+   padding-top: 1rem;
+   padding-bottom: 2rem;
+   height: fit-content;
+   box-shadow: 0 0 1em rgb(111, 111, 111);
+}
+.form{
+    background-color:rgba(255, 255, 255, 0.1);
+    border:solid 1px;
+    border-color:#a2a2a2 ;
+    border-radius:10px;
+    width: 35rem;
+    height: 4rem;
+    color:black;
+  }
+.txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-style:italic;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:260px;
+    color: black;
+  }
+.fundol{
+    background: linear-gradient(0deg, rgba(145,190,212,1) 0%, rgba(217,232,245,1) 50%, rgba(255,255,255,1) 100%);
+    padding-bottom: 5rem;
+} 
+.buttonArea {
+    
+  margin-left: 1rem;
+ }
+ .btbusca{
+    font-size: 130%;
+    width: 10rem;
+    height: 4rem;
+ }
+ .txt{
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 5rem;
+    color: black;
+    font-size: 220%;
+ } 
+ .listagem{
+    padding-top: 2rem;
+    margin-left: 3%;
+    margin-right: 3%;
+ }
+.bt{
+    background-color: rgb(0, 0, 226);
+    border-radius: 200px;
+    position: absolute;
+    
+    right: 50%;
+    
+    width: 4rem;
+    height: 4rem;
+    
+}
+.bt2{
+    background-color: rgba(0, 0, 226, 0.535);
+    border-radius: 200px;
+    position: fixed;
+    
+    right: 5%;
+    bottom: 13%;
+    width: 4rem;
+    height: 4rem;
+    
+}
+.bt3{
+    background-color: rgba(0, 0, 226, 0.535);
+    border-radius: 200px;
+    position: fixed;
+    
+    right: 5%;
+    bottom: 5%;
+    width: 4rem;
+    height: 4rem;
+    
+}
+.icon{
+    width: 2rem;
+    height: 3rem;
+}
+@media (max-width:3700px){
+    .bt2{
+        display: none;
+    }
+    .bt3{
+        display: none;
+    }
+    .searchbox{
+        padding-left: 5%;
+    }
+    .search{
+        margin-left: 2%;
+    }
+    .form{
+        width: 60rem;
+    }
+}
+@media(max-width:1800px){
+    .search{
+        margin-left: 5%;
+    }
+    .form{
+        width: 30rem;
+    }
+    .listagem{
+        margin-left:2%;
+    }
+}
+@media (max-width:1199px){
+    .search{
+        margin-left: 4%;
+    }
+    .bt{
+        right: 47%;
+    }
+ .listagem{
+    margin-left: 5%;
+    margin-right: 1%;
+
+}}
+ /* area de responsividade */
+@media(max-width:1125px){
+    .search{
+        margin-left: 5%;
+    }
+    .searchbox{
+
+        padding-right: 10px;
+        margin-left: -90px;
+    }
+    .form{
+        width: 30rem;
+    }
+    
+}
+ @media(max-width: 1070px){
+    .form{
+        width: 25rem;
+    }
+    .search{
+        margin-left: 5%;
+    }
+ }
+ @media(max-width:966px){
+    .bt{
+        right: 45%;
+    }
+    .form{
+        width: 20rem;
+    }
+    .bt2{
+        display: block;
+    }
+    .bt3{
+        display: block;
+    }
+ }
+ @media(max-width: 868px){
+    .landing{
+        flex-direction: column;
+    }
+    .title{
+        font-size: 400%;
+    }
+    .searchbox{
+        flex-direction: column;
+        justify-items: center;
+    }
+    .search{
+        justify-content: center;
+        margin-left: 19%;
+        display: flex;
+        flex-direction: column;
+    }
+    .btbusca{
+        margin-left: 17%;
+    }
+    .txt{
+        font-size: 180%;
+    }
+ }
+
+ @media(max-width:767px){
+
+    .listagem{
+    margin-left: 35%;
+   }
+   .bt{
+    right: 41%;
+   }
+}
+ @media(max-width:710px){
+    .search{
+        margin-left:5%;
+    }
+ }
+@media(max-width:642px){
+    .landing{
+        flex-direction: column;
+        padding-left: 10%;
+    }
+    .title{
+        font-size: 400%;
+    }
+    .searchbox{
+        margin-left: 0;
+        flex-direction: column;
+        justify-items: center;
+    }
+    .search{
+        justify-content: center;
+        margin-left: 19%;
+        display: flex;
+        flex-direction: column;
+    }
+    .btbusca{
+        margin-left: 17%;
+    }
+    .txt{
+        font-size: 180%;
+    }
+    .listagem{
+        margin-left: 25%;
+        
+    }
+}
+@media(max-width:507px){
+    .search{
+        margin-left: 5%;
+    }
+}
+@media(max-width:465px){
+    .listagem{
+        margin-left: 10%;
+    }
+    .searchbox{
+width: 100%;
+margin-left: -5%;
+    }
+    .search{
+margin-left: 3%;
+    }
+}
+@media(max-width:390px){
+    .search{
+        margin-left: 14%;
+    }
+    .form{
+        width: 15rem;
+    }
+    .btbusca{
+        margin-left: 8%;
+    }
+    .title{
+        font-size: 350%;
+    }
+}
+@media(max-width:330px){
+    .listagem{
+        margin-left: 6%;
+    }
+    .search{
+        margin-left: 8%;
+    }
+    .title{
+        font-size: 300%;
+    }
+    .txt{
+        font-size: 150%;
+    }
+   
+}
+@media (max-width:300px){
+    .form{
+        width: 12rem;
+    }
+    .btbusca{
+        margin-left: 0;
+    }
+}
