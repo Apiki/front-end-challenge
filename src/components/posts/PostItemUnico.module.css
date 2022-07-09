@@ -1,0 +1,26 @@
+.item {
+  margin: 1rem 0;
+}
+
+.image {
+  width: 100%;
+  object-fit:cover;
+  margin: 1rem 0;
+}
+
+.image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.content {
+  text-align: center;
+  padding: 1rem;  
+  width: 70%;
+}
+
+.content h3 {
+  font-size: 1.25rem;
+  color: #2c292b;
+}
+

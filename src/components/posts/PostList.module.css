@@ -1,0 +1,11 @@
+.list {
+ display: grid;
+ grid-template-columns: 2fr 2fr 2fr;
+}
+
+@media(max-width: 772px) {
+  .list {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
