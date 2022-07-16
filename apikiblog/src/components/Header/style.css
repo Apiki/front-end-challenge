@@ -4,7 +4,19 @@
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
     background-color: black;
+}
+
+@media (max-width: 450px) {
+    .containerHeader {
+        width: 100vw;
+    }
+}
+
+@media (max-width: 412px) {
+    .containerHeader {
+        width: 412px;
+    }
 }
