@@ -7,9 +7,4 @@ async function getPosts(page = 1) {
   return resultsWithHeaders;
 }
 
-async function getArticle(slug) {
-  const { data } = await Api.get(`/posts?_embed&slug=${slug}`);
-  return data;
-}
-
-export { getPosts, getArticle };
+export { getPosts };

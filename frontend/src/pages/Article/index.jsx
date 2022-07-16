@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import Skeleton from 'react-loading-skeleton';
 
-import { getArticle } from '../../services/v1/posts-service';
+import { getArticle } from '../../services/v1/article-service';
 import BackButton from '../../components/Button/Back';
 import gradient from '../../assets/images/gradient.jpg';
 import Heading from '../../components/Heading';
