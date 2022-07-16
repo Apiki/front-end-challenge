@@ -1,0 +1,15 @@
+Desafio Front and apiki - Consiste em um mini Blog consumindo Endpoints da api da APIKI.
+
+Foi Realizado usando as Biblioteca:
+
+"axios": "^0.27.2",
+"html-react-parser": "^3.0.1",
+"react": "^18.2.0",
+"html-react-parser": "^3.0.1",
+"react-router-dom": "^6.3.0"
+
+Instruções de Start local:
+
+- Assim que Clonar o Repositorio entrar na pasta "Apikblog"
+- Abrir o terminal e usar o comando npm i ou npm install para assim instalar as dependencias
+- Após instalar as dependencias usar o npm start para starta o api em react.
