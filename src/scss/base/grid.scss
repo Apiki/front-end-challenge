@@ -1,0 +1,73 @@
+/************************** VARIÁVEIS **************************/
+
+/** Define em qual largura da media o Desktop começa **/
+$breakpoint: 992px;
+
+/** Define a largura total do container da página **/
+$container-width: 1374px;
+
+/************************** MIXINS **************************/
+
+/** 
+* Mixin referente à geração de colunas para desktop.
+**/
+
+@mixin col() {
+    @for $i from 1 through 12 {
+        .col-#{$i} {
+            width: #{$i * 8.33333333333%};
+            padding: 0 12px;
+        }
+    }
+}
+
+@mixin col-lg() {
+    @for $i from 1 through 12 {
+        .col-lg-#{$i} {
+            width: #{$i * 8.33333333333%};
+            padding: 0 12px;
+        }
+    }
+}
+
+
+/** 
+* Mixin referente à geração de container.
+* @param $width {String} - Largura total do container.
+**/
+@mixin container($width) {
+    max-width: $width;
+    width: 100%;
+
+    margin: 0 auto;
+    padding: 0 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/************************** CLASSES DO SISTEMA DE GRID **************************/
+
+.container {
+    @include container($container-width);
+}
+
+.row {
+    display: flex;
+
+    margin: 0 -12px;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 991px) {
+        flex-wrap: wrap;
+    }
+}
+
+
+/** Classes para desktop **/
+@include col;
+
+@media screen and (min-width: $breakpoint) {
+    @include col-lg;
+}
