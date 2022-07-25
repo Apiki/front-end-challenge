@@ -1,0 +1,13 @@
+.header {
+  background-image: #fff;
+
+  a{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+
+    img{
+      filter: brightness(0);
+    }
+  }
+}
