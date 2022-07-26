@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff4e4;
+  background-image: linear-gradient(174.2deg, #fff4e4 7.1%, #f0f6ee 67.4%);
+  background-attachment: fixed;
+}
+
+.sticky-top {
+  position: sticky;
+  top: 0;
+}
+
+:root {
+  --toastify-color-progress-dark: linear-gradient(to right,
+      #99b2ddff,
+      #e9afa3ff);
+  --toastify-color-dark: #3a405a;
+  --toastify-color-error: #e9afa3ff;
+}
