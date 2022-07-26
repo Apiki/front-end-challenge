@@ -21,10 +21,11 @@ export default function useGetPosts({ posts, error }) {
   return (
     <>
       <Head>
-        <title>Tech Blog</title>
+        <title>Apiki Blog</title>
         <meta
           name="description"
-          content="Keep up to date with the latest trends in tech"
+          content="Desafio - Front-end Developer
+"
         />
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
@@ -37,7 +38,7 @@ export default function useGetPosts({ posts, error }) {
           <h2 className="text-2xl font-extrabold text-gray-900">
             Desenvolvimento
           </h2>
-          <div className="mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-6 auto-rows-[minmax(0,_2fr)]">
+          <div className="mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:gap-y-6 auto-rows-[minmax(0,_2fr)]">
             {jsxPosts}
           </div>
 

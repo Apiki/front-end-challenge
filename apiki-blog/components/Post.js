@@ -5,7 +5,7 @@ import { getDate } from "../utils/utils";
 
 export default function Post({ post, featuredMedia, id }) {
   return (
-    <div className="group relative bg-white p-4 rounded-lg self-start mb-4">
+    <div className="group relative bg-white p-4 rounded-lg self-start mb-4 h-full">
       <div className="relative w-full mt-6 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:h-48  shadow-md hover:brightness-50 transition ">
         <p className="card-text text-right absolute top-0 right-0 z-10 p-2 font-medium bg-white	rounded-bl-lg rounded-tr-lg">
           {getDate(post.modified)}
@@ -27,13 +27,13 @@ export default function Post({ post, featuredMedia, id }) {
           </a>
         </Link>
       </div>
-      <div className="col-md-8">
+      <div className="card_wrapper">
         <div className="card-body">
-          <h2 className="text-2xl font-medium pb-4  h-20">
-            {post.title?.rendered} -- {post.id}
+          <h2 className="text-2xl font-medium pb-4 ">
+            {post.title?.rendered}
           </h2>
           <div
-            className="card-text h-20"
+            className="card-text "
             dangerouslySetInnerHTML={{ __html: post.excerpt?.rendered }}
           ></div>
 

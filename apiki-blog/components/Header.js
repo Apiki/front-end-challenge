@@ -16,8 +16,8 @@ const navigation = [
     { name: 'Atendimento', href: 'https://apiki.com/atendimento/', current: false, target: true },
 ]
 const userNavigation = [
-    { name: 'Github', href: '#' },
-    { name: 'Linkedin', href: '#' },
+    { name: 'Github', href: 'https://github.com/Taleshs/front-end-challenge' },
+    { name: 'Linkedin', href: 'https://www.linkedin.com/in/taleshenriquesilva/' },
 ]
 
 function classNames(...classes) {
