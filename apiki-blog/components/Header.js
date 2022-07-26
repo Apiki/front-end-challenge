@@ -1,4 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
@@ -11,7 +10,7 @@ const user = {
 }
 const navigation = [
     { name: 'Home', href: 'https://apiki.com/', current: false, target: true },
-    { name: 'Blog', href: '#', current: true, target: false },
+    { name: 'Blog', href: '/', current: true, target: false },
     { name: 'Sobre a Apiki', href: 'https://apiki.com/empresa-especializada-em-wordpress/#', current: false, target: true },
     { name: 'Growth', href: 'https://apiki.com/growth-site-wp-care/', current: false, target: true },
     { name: 'Atendimento', href: 'https://apiki.com/atendimento/', current: false, target: true },
@@ -72,7 +71,7 @@ export default function Header() {
 
                                             </button>
 
-                                            {/* Profile dropdown */}
+                                            {/* Profile */}
                                             <Menu as="div" className="ml-3 relative">
                                                 <div>
                                                     <Menu.Button className="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
@@ -111,7 +110,7 @@ export default function Header() {
                                         </div>
                                     </div>
                                     <div className="-mr-2 flex md:hidden">
-                                        {/* Mobile menu button */}
+                                        {/* Mobile menu */}
                                         <Disclosure.Button className="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                                             <span className="sr-only">Open main menu</span>
                                             {open ? (
