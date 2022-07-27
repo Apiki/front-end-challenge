@@ -1,0 +1,17 @@
+.btn {
+    border-radius: 5px;
+    padding: 15px 16px 15px 24px;
+    transition: .3s;
+
+    @extend .text-btn;
+    
+    &.btn-primary {
+        background-color: $pink;
+        color: white;
+        border: 0;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}

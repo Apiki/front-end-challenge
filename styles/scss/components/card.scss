@@ -1,0 +1,39 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+    > .card-image {
+        height: 220px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    > .card-body {
+        border-radius: 0 0 10px 10px;
+    }   
+}
+
+.card-skeleton {
+    display: flex;
+    flex-direction: column;
+
+    > .card-image-skeleton {
+        height: 220px;
+        border-radius: 10px 10px 0 0;
+        background-color: #EEEDEF;
+    }
+
+    > .card-body-skeleton {
+        .title-card-skeleton {
+            height: 20px;
+            width: 100%;
+            background-color: #EEEDEF;
+        }
+
+        .date-card-skeleton {
+            height: 10px;
+            width: 20%;
+            background-color: #EEEDEF;
+        }
+    }
+}

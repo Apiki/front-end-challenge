@@ -1,0 +1,31 @@
+.title-card {
+    @include typography('Montserrat', sans-serif, 700, 16px, 16px);
+
+    @media screen and (min-width: $max-width-smartphone) {
+        font-size: 22px;
+        line-height: 22px;
+    }
+}
+
+.text-error {
+    @include typography('Montserrat', sans-serif, 700, 22px, 22px);
+
+    @media screen and (min-width: $max-width-smartphone) {
+        font-size: 42px;
+        line-height: 42px;
+    }
+}
+
+.date-card {
+    @include typography('Montserrat', sans-serif, 300, 10px, 10px);
+    
+    @media screen and (min-width: $max-width-smartphone) {
+        font-size: 12px;
+        line-height: 12px;
+    }
+}
+
+.text-btn {
+    @include typography('Montserrat', sans-serif, 700, 16px, 19px);
+}
+
