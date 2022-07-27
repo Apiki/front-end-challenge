@@ -1,0 +1,23 @@
+@use "./functions" as function;
+@use "./variables";
+
+@mixin fluid-size() {
+  font-size: calc(0.875rem + (26 - 14) * ((100vw - 18.75rem) / (1600 - 300)));
+}
+
+@mixin flex($align, $justify, $gap) {
+  align-items: $align;
+  display: flex;
+  gap: function.torem($gap);
+  justify-content: $justify;
+}
+
+@mixin breakpoint($value) {
+  // If the key exists in the map
+  @if map-has-key(variables.$breakpoints, $value) {
+    // Prints a media query based on the value
+    @media screen and (min-width: map-get(variables.$breakpoints, $value)) {
+      @content;
+    }
+  }
+}

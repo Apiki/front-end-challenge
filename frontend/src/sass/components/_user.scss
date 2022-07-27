@@ -1,0 +1,49 @@
+@use "../abstracts/functions" as function;
+@use "../abstracts/mixins" as mixin;
+
+.c-user {
+  @include mixin.flex(center, space-between, 2);
+
+  border-top: function.torem(1) solid function.color("gray-500");
+  margin-block: function.torem(53) function.torem(15);
+  padding-block: function.torem(24);
+  width: 100%;
+
+  &__details {
+    @include mixin.flex(center, space-between, 20);
+  }
+
+  &__avatar {
+    width: function.torem(56);
+    height: function.torem(56);
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__name,
+  &__published {
+    font-size: function.torem(13);
+    font-weight: function.weight("bold");
+    letter-spacing: function.torem(0.5);
+    line-height: function.torem(25);
+
+    @include mixin.breakpoint(xl) {
+      font-size: function.torem(16);
+    }
+  }
+
+  &__published {
+    text-transform: lowercase;
+    font-weight: function.weight("regular");
+  }
+
+  &__socials {
+    width: function.torem(30);
+    height: function.torem(30);
+  }
+}
