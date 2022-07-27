@@ -1,7 +1,10 @@
 .btn {
     border-radius: 5px;
-    padding: 15px 16px 15px 24px;
+    padding: 15px;
     transition: .3s;
+
+    display: flex;
+    align-items: center;
 
     @extend .text-btn;
     
@@ -13,5 +16,10 @@
         &:hover {
             opacity: 0.7;
         }
+    }
+
+    > img {
+        width: 18px;
+        margin-right: 10px;
     }
 }

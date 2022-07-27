@@ -3,8 +3,11 @@ import { useState, useEffect } from 'react';
 import Head from 'next/head'
 import { PostCard, PostCardSkeleton } from '../components/PostCard';
 import { getCategoryPosts } from '../services/posts';
-import { handlePostCardImage } from '../utils/helpers';
+import { formateDate, handlePostCardImage } from '../utils/helpers';
 import { Default } from '../themes/Default';
+import { Error } from '../components/Error';
+import ReloadIcon from "../public/icons/reload.svg";
+import { format } from 'date-fns';
 
 const Home = () => {
     const categoryId = 518;
@@ -12,6 +15,7 @@ const Home = () => {
     const [postsPage, setPostsPage] = useState(1);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
+    const [totalPages, setTotalpages] = useState(null);
 
     useEffect(() => {
         handleGetCategoryPosts([], 1);
@@ -19,17 +23,18 @@ const Home = () => {
 
     const nextPage = () => {
         const next = postsPage + 1;
+        handleGetCategoryPosts(posts, next);
         setPostsPage(next);
-        handleGetCategoryPosts(posts, postsPage);
     }
 
-    const handleGetCategoryPosts = async (current, page) => {
+    const handleGetCategoryPosts = (current, page) => {
         setLoading(true); 
         setError(false);  
 
         getCategoryPosts(categoryId, page)
         .then(res => {
-            setPosts(current.concat(res)); 
+            setPosts(current.concat(res.data)); 
+            setTotalpages(res.headers['x-wp-totalpages']);
             setLoading(false);  
         }).catch(() => {
             setLoading(false);  
@@ -67,6 +72,8 @@ const Home = () => {
                                 <>
                                     {posts?.length > 0 ? (
                                         <>
+                                            <h2 className='post-title'>Últimos Posts</h2>
+
                                             <div className='list-posts'>
                                                 {
                                                     posts.map((post, i) => 
@@ -77,15 +84,22 @@ const Home = () => {
                                                             }}
                                                             title={post?.title?.rendered}
                                                             slug={post?.slug}
-                                                            date={post?.date}
+                                                            date={formateDate(post?.date)}
                                                             key={`post-${i}`}
                                                         />
                                                     )
                                                 }
                                             </div>
-                                            <div className="pagination">
-                                                <button className="btn btn-primary" onClick={nextPage}>Carregar Mais</button>
-                                            </div>
+                                            {
+                                                totalPages > postsPage && (
+                                                    <div className="pagination">
+                                                        <button className="btn btn-primary" onClick={nextPage}>
+                                                            <img src={ReloadIcon.src} alt="" />
+                                                            Carregar Mais
+                                                        </button>
+                                                    </div>
+                                                )
+                                            }
                                         </>
                                     ) : (
                                         <div className="no-posts">
@@ -95,10 +109,7 @@ const Home = () => {
                                 </>
                             )
                         ) : (
-                            <div className="error">
-                                <h2 className="text-error mb-15">Ops, Tivemos um Problema!</h2>
-                                <button className="btn btn-primary">Recarregar Página</button>
-                            </div>
+                            <Error />
                         )
                     }
                     </div>

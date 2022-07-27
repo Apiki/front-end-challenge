@@ -1,5 +1,5 @@
 export const Footer = () => (
     <footer>
-        Todos os direitos reservados - 2022
+       <small>© 2020 <a href="https://apiki.com/" title="Apiki" target={"_blank"} rel="noreferrer">Apiki</a> - Empresa especializada em WordPress.</small>
     </footer>
 )

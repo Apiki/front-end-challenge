@@ -7,9 +7,11 @@ import { api } from './index';
  * @returns 
  */
  export const getCategoryPosts = (id, page) => {
-    return api.get(`/wp/v2/posts?_embed&categories=${id}&page=${page}`).then((res) => res.json());
+    return api.get(`/wp/v2/posts?_embed&categories=${id}&page=${page}`).then((res) => {
+        return res;
+    });
 }
 
 export const getPostDetails = (slug) => {
-    return api.get(`/wp/v2/posts?_embed&slug=${slug}`).then((res) => res.json());
+    return api.get(`/wp/v2/posts?_embed&slug=${slug}`).then((res) => res);
 }

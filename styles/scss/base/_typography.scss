@@ -1,4 +1,4 @@
-.title-card {
+.card-title {
     @include typography('Montserrat', sans-serif, 700, 16px, 16px);
 
     @media screen and (min-width: $max-width-smartphone) {
@@ -7,13 +7,30 @@
     }
 }
 
-.text-error {
-    @include typography('Montserrat', sans-serif, 700, 22px, 22px);
+.post-title {
+    @include typography('Montserrat', sans-serif, 700, 20px, 27px);
 
     @media screen and (min-width: $max-width-smartphone) {
-        font-size: 42px;
-        line-height: 42px;
+        font-size: 48px;
+        line-height: 56px;
     }
+}
+
+.post-excerpt {
+    @include typography('Montserrat', sans-serif, 300, 18px, 24px);
+
+    @media screen and (min-width: $max-width-smartphone) {
+        font-size: 22px;
+        line-height: 32px;
+    }
+}
+
+.post-date {
+    @include typography('Montserrat', sans-serif, 300, 12px, 19px);
+}
+
+.post-image-reference {
+    @include typography('Montserrat', sans-serif, 300, 12px, 24px);
 }
 
 .date-card {

@@ -1,6 +1,10 @@
 .theme-default {
-    padding-top: 90px;
     padding-bottom: 90px;
+    padding-top: 90px;
+
+    @media screen and (min-width: 992px) {
+        padding-top: 140px;
+    }
 
     .container {
         max-width: 1200px;

@@ -1,0 +1,199 @@
+.archive {
+    .post-content {
+        > .post-infos {
+            max-width: 920px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 30px;
+            border-bottom: 1px solid $excerpt;
+            margin-bottom: 30px;
+            
+            > .post-excerpt {
+                p {
+                    color: $excerpt;
+                }
+            }
+        }
+
+        > .post-featured-image,
+        > .post-text {
+            max-width: 780px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .post-featured-image {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                height: 378px;
+                width: 100%;
+                border-radius: 10px 10px 0 0;
+            }
+
+            .post-image-reference {
+                padding: 20px;
+                max-width: 640px;
+                width: 100%;
+                border-radius: 0 0 10px 10px;
+                background-color: #f8f9fa;
+            }
+        }
+
+        .post-text {
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            figure, pre {
+                margin-bottom: 32px;
+            }
+
+            pre.wp-block-code {
+                background: #2b2b2b;
+                padding: 15px;
+                overflow: auto;
+                border-radius: 10px;
+            }
+
+            h2, h3 {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 27px;
+                font-family: "Montserrat";
+            }
+
+            p {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 1rem;
+                line-height: 2rem;
+            }
+
+            a {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 1rem;
+                line-height: 2rem;
+                text-decoration: none;
+                color: $pink;
+                font-weight: 600;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            figure.wp-block-image {
+                img {
+                    border-radius: 10px 10px 0 0;
+                    width: 100%;
+                }
+
+                figcaption {
+                    margin: 3px 0 1em;
+                    font-size: 11px;
+                    color: $excerpt;
+                    font-family: 'Montserrat';
+                }
+            }
+
+            .blocks-gallery-grid {
+                margin-bottom: 40px;
+                padding: 0;
+
+                img {
+                    border-radius: 8px;
+                }
+            }
+
+            table {
+                overflow-x: hidden;
+                margin-bottom: 40px;
+
+                th,
+                td,
+                thead {
+                    border: none;
+                }
+
+                tr {
+
+                    th {
+                        text-align: left;
+                        padding: 12px 8px 16px;
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 1rem;
+                        line-height: 1.75rem;
+                    }
+
+                    td {
+                        padding: 12px 8px;
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 1rem;
+                        line-height: 2rem;
+                    }
+                }
+            }
+
+            blockquote {
+                margin-bottom: 40px;
+                padding-left: 16px;
+
+                p {
+                    margin-bottom: 10px;
+                }
+
+                cite {
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 1.125rem;
+                    line-height: 2rem;
+                }
+            }
+
+            ul {
+                margin-bottom: 40px;
+                padding-left: 20px;
+
+                li {
+                    list-style: square;
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 1rem;
+                    line-height: 2rem;
+                }
+            }
+
+            ol {
+                margin-bottom: 40px;
+                padding-left: 20px;
+
+                li {
+                    list-style: decimal;
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 1rem;
+                    line-height: 2rem;
+                }
+            }
+        }
+    }
+}

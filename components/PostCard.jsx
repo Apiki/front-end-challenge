@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export const PostCard = ({
@@ -9,9 +10,16 @@ export const PostCard = ({
     return (
         <Link href={`/post/${slug}`} title={title}>
             <article className="card">
-                <img src={image.src} alt={image.alt} className="card-image"/>
+                <img
+                    src={image.src}
+                    className="card-image"
+                    alt={image.alt}
+                    width={'100%'}
+                    height={"200px"}
+                    loading="lazy"
+                />
                 <div className="card-body p-15">
-                    <h2 className="title-card mb-15">{title}</h2>
+                    <h3 className="card-title mb-15">{title}</h3>
                     <small className="date-card">{date}</small>
                 </div>
             </article>

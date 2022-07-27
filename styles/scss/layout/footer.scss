@@ -2,5 +2,18 @@ footer {
     padding: 15px;
     color: black;
     text-align: center;
-    background-color: #f7f7f7;
+    padding: 30px 0 20px;
+    border-top: 1px solid $excerpt;
+
+    color: $excerpt;
+
+    @include typography('Montserrat', sans-serif, 400, 12px, 14px);
+
+    a {
+        color: #000;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
