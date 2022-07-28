@@ -11,7 +11,7 @@ import ReloadIcon from "../public/icons/reload.svg";
 const Home = () => {
     const categoryId = 518;
     const [posts, setPosts] = useState([]);
-    const [postsPage, setPostsPage] = useState(1);
+    const [currentPage, setCurrentPage] = useState(1);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
     const [totalPages, setTotalpages] = useState(null);
@@ -21,9 +21,9 @@ const Home = () => {
     }, []);
 
     const nextPage = () => {
-        const next = postsPage + 1;
+        const next = currentPage + 1;
         handleGetCategoryPosts(posts, next);
-        setPostsPage(next);
+        setCurrentPage(next);
     }
 
     const handleGetCategoryPosts = (current, page) => {
@@ -56,16 +56,11 @@ const Home = () => {
                         !error ? (
                             loading ? (
                                 <div className='list-posts'>
-                                    <PostCardSkeleton/>
-                                    <PostCardSkeleton/>
-                                    <PostCardSkeleton/>
-                                    <PostCardSkeleton/>
-                                    <PostCardSkeleton/>
-                                    <PostCardSkeleton/>
-                                    <PostCardSkeleton/>
-                                    <PostCardSkeleton/>
-                                    <PostCardSkeleton/>
-                                    <PostCardSkeleton/>
+                                    {
+                                        [...Array(10 * currentPage)].map((x, i) => 
+                                            <PostCardSkeleton key={`skeleton-home-${i}`}/>
+                                        )
+                                    }
                                 </div>
                             ) : (
                                 <>
@@ -90,7 +85,7 @@ const Home = () => {
                                                 }
                                             </div>
                                             {
-                                                totalPages > postsPage && (
+                                                totalPages > currentPage && (
                                                     <div className="pagination">
                                                         <button className="btn btn-primary" onClick={nextPage}>
                                                             <img src={ReloadIcon.src} alt="Carregar Mais" />

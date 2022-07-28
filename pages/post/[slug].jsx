@@ -58,9 +58,7 @@ const Post = ({data, err}) => {
 
                                                     <ul className='list-taxonomies'>
                                                         {
-                                                            data._embedded["wp:term"].map((el, i) => (
-                                                                <li key={`taxonomy-${i}`}>{el[0].name}</li>
-                                                            ))
+                                                            data._embedded["wp:term"].map((el, i) => el[0]?.name && (<li key={`taxonomy-${i}`}>{el[0]?.name}</li>))
                                                         }
                                                     </ul>
                                                 </div>

@@ -56,6 +56,10 @@
                 margin-bottom: 32px;
             }
 
+            img {
+                width: 100%;
+            }
+
             pre.wp-block-code {
                 background: #2b2b2b;
                 padding: 15px;
@@ -69,6 +73,10 @@
 
             p, a {
                 @extend .post-content;
+            }
+
+            p {
+                margin-bottom: 32px;
             }
 
             a {
