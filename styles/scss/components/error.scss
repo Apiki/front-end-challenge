@@ -1,0 +1,11 @@
+.error {
+    height: calc(100vh - 270px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .post-title {
+        margin-bottom: 30px;
+    }
+}

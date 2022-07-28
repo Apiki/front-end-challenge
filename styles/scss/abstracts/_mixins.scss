@@ -1,0 +1,14 @@
+/**
+* Mixin responsável por gerar os estilos dos tipos de fontes
+* @params $font-family {String} - O font family da tipografia
+* @params $type-font-family {String} - O tipo de familia da fonte
+* @params $font-weight {String} - O peso da fonte (ex. 100, 200, 300, 400, 500, bold, normal).
+* @params $font-size {String} - O tamanho da fonte.
+* @params $line-height {String} - A altura da linha.
+**/
+@mixin typography($font-family, $type-font-family, $font-weight, $font-size, $line-height) {
+	font-family: $font-family, $type-font-family;
+	font-weight: $font-weight;
+	font-size: $font-size;
+	line-height: $line-height;
+}
