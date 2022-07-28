@@ -1,74 +1,71 @@
-import { useEffect, useState } from 'react';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
+import HTMLReactParser from "html-react-parser";
+
 import { Default } from '../../themes/Default';
 import { getPostDetails } from '../../services/posts';
 import { Error } from '../../components/Error';
-import Image from 'next/image';
+import { formateDate, handleSingleFeaturedImage } from '../../utils/helpers';
 
-const Post = () => {    
-    const router = useRouter();
-    const { slug } = router.query;
-
-    const [post, setPost] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(false);
-
-    useEffect(() => {
-        if(slug) {
-            getPostDetails(slug).then(({data}) => {
-                setPost(data[0]);
-                setLoading(false);
-            }).catch(() => {
-                setError(true);
-                setLoading(false);
-            });
-        }
-    }, [slug]);
-    
+const Post = ({data, err}) => {    
     return (
         <>
             <Head>
-                <title>Blog Apiki | UEPA</title>
-                <meta name="description" content="Página inicial do site" />
-                <link rel="icon" href="/favicon.ico" />
+      
+                {
+                    data?.yoast_head ? (
+                        HTMLReactParser(data.yoast_head)
+                    ) : (
+                        <>
+                            <title>Ops, Ocorreu um erro no carregamento</title>
+                            <meta name="description" content="Ocorreu um erro no carregamento" />
+                            <link rel="icon" href="/favicon.ico" />
+                        </>
+                    )
+                }
             </Head>
 
             <Default>
-                <section className="archive">
+                <section className="single">
                     <div className="container">
-                        {!error ? (
+                        {!err ? (
                                 <div className="post-content">
-                                    {loading ? (
-                                        <div className="post-infos mb-15">
-                                            <div className='post-title-skeleton'></div>
-                                            <div className='post-excerpt-skeleton mb-15'></div>
-                                            <div className='post-date-skeleton mb-15'></div>
-                                        </div>
-                                    ) : (
-                                        <>
-                                            <div className="post-infos mb-15">
-                                                <h1 className="post-title mb-15">
-                                                    {post?.title?.rendered}
-                                                </h1>
-                                                <div className='post-excerpt mb-15' dangerouslySetInnerHTML={{__html: post?.excerpt?.rendered}}></div>
+                                    <div className="post-infos mb-15">
+                                        <h1 className="post-title mb-15">
+                                            {data?.title?.rendered}
+                                        </h1>
+                                        <div className='post-excerpt mb-15' dangerouslySetInnerHTML={{__html: data?.excerpt?.rendered}}></div>
                     
-                                                <small className='post-date'>
-                                                    {formateDate(post?.date)}
-                                                </small>
-                                            </div>
-                
-                                            <div className="post-featured-image mb-15">
+                                        <small className='post-date'>
+                                            Escrito por {data._embedded.author[0].name} em {formateDate(data?.date)}
+                                        </small>
+                                    </div>
+                                    {
+                                        handleSingleFeaturedImage(data)?.length > 0 && (
+                                            <figure className="post-featured-image mb-15">
                                                 <img
-                                                    src={post._embedded["wp:featuredmedia"][0].source_url}
-                                                    alt={post?.title?.rendered}
+                                                    src={handleSingleFeaturedImage(data)}
+                                                    alt={data?.title?.rendered}
                                                     loading="lazy"
                                                 />
-                                                <figcaption className='post-image-reference'>Fonte: Bla bla</figcaption>
-                                            </div>
-                                            <div className="post-text" dangerouslySetInnerHTML={{__html: post?.content?.rendered}}></div>
-                                        </>
-                                    )}
+                                            </figure>
+                                        )
+                                    }
+                                    <div className="post-text" dangerouslySetInnerHTML={{__html: data?.content?.rendered}}></div>
+                                        {
+                                            data._embedded["wp:term"].length > 0 && (
+                                                <div className="taxonomy">
+                                                    <span>Categorias e Tags: </span>
+
+                                                    <ul className='list-taxonomies'>
+                                                        {
+                                                            data._embedded["wp:term"].map((el, i) => (
+                                                                <li key={`taxonomy-${i}`}>{el[0].name}</li>
+                                                            ))
+                                                        }
+                                                    </ul>
+                                                </div>
+                                            )
+                                        }
                                 </div>
                             ) : <Error />
                         }
@@ -78,5 +75,32 @@ const Post = () => {
         </>
     )
 }
+
+export const getServerSideProps = async (context) => {
+    const { slug } = context.params;
+
+    try {
+        let {data} = await getPostDetails(slug);
+
+        if(data) {
+            return {
+                props: {
+                    data: data[0]
+                }
+            }
+        }
+    }   catch (e) {
+        console.log(e);
+
+        return {
+            props: {
+                err: true
+            }
+        }
+    }
+}
+  
+  
+  
 
 export default Post;

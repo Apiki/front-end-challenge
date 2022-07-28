@@ -1,4 +1,4 @@
-import { format, parseISO } from "date-fns";
+import { format } from "date-fns";
 
 /**
  * 
@@ -15,6 +15,16 @@ import { format, parseISO } from "date-fns";
     return postEmbed["wp:featuredmedia"][0].yoast_head_json?.og_image[0].url;   
 }
 
+export const handleSingleFeaturedImage = (postEmbed) => {
+    if(!postEmbed) return '';
+    if(!postEmbed?._embedded) return '';
+    if(!postEmbed?._embedded["wp:featuredmedia"]) return '';
+    if(!postEmbed?._embedded["wp:featuredmedia"][0]) return '';
+    if(!postEmbed?._embedded["wp:featuredmedia"][0].source_url) return '';
+
+    return postEmbed?._embedded["wp:featuredmedia"][0].source_url;
+}
+
 /**
  * Formata a data
  * @param {Date} date 
@@ -22,7 +32,7 @@ import { format, parseISO } from "date-fns";
  */
 export const formateDate = (date) => {
     return format(
-        parseISO(new Date(date)), 
-        "'Dia' dd 'de' MMMM', às ' HH:mm'h'"
+        new Date(date), 
+        "dd/MM/yyyy"
       )
 }

@@ -3,9 +3,9 @@ footer {
     color: black;
     text-align: center;
     padding: 30px 0 20px;
-    border-top: 1px solid $excerpt;
+    border-top: 1px solid $grey;
 
-    color: $excerpt;
+    color: $grey;
 
     @include typography('Montserrat', sans-serif, 400, 12px, 14px);
 

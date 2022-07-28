@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from "next/link";
-import Logo from "../../public/images/logo.webp"
+import Logo from "../../public/images/logo.webp";
 
 export const Header = () => (
     <header>

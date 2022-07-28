@@ -16,6 +16,10 @@
     }
 }
 
+.post-title-2 {
+    @include typography('Montserrat', sans-serif, 700, 20px, 27px);
+}
+
 .post-excerpt {
     @include typography('Montserrat', sans-serif, 300, 18px, 24px);
 
@@ -25,12 +29,20 @@
     }
 }
 
+.post-content {
+    @include typography('Montserrat', sans-serif, normal, 1rem, 2rem);
+}
+
 .post-date {
     @include typography('Montserrat', sans-serif, 300, 12px, 19px);
 }
 
 .post-image-reference {
     @include typography('Montserrat', sans-serif, 300, 12px, 24px);
+}
+
+.post-cite {
+    @include typography('Montserrat', sans-serif, 600, 1.125em, 2rem);
 }
 
 .date-card {

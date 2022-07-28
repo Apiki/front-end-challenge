@@ -2,7 +2,7 @@
     .post-title {
         margin-bottom: 20px;
         padding-bottom: 20px;
-        border-bottom: 1px solid $excerpt;
+        border-bottom: 1px solid $grey;
     }
 
     .list-posts {
@@ -10,7 +10,7 @@
         grid-gap: 20px;
 
         @media screen and (min-width: 768px) {
-            grid-template-columns: 50% 50%;
+            grid-template-columns: 49% 49%;
         }
 
         @media screen and (min-width: $min-width-desktop) {

@@ -7,7 +7,6 @@ import { formateDate, handlePostCardImage } from '../utils/helpers';
 import { Default } from '../themes/Default';
 import { Error } from '../components/Error';
 import ReloadIcon from "../public/icons/reload.svg";
-import { format } from 'date-fns';
 
 const Home = () => {
     const categoryId = 518;
@@ -94,7 +93,7 @@ const Home = () => {
                                                 totalPages > postsPage && (
                                                     <div className="pagination">
                                                         <button className="btn btn-primary" onClick={nextPage}>
-                                                            <img src={ReloadIcon.src} alt="" />
+                                                            <img src={ReloadIcon.src} alt="Carregar Mais" />
                                                             Carregar Mais
                                                         </button>
                                                     </div>

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import noImage from "../public/images/noimage.webp";
 
 export const PostCard = ({
     image,
@@ -11,7 +11,7 @@ export const PostCard = ({
         <Link href={`/post/${slug}`} title={title}>
             <article className="card">
                 <img
-                    src={image.src}
+                    src={image?.src?.length > 0 ? image.src : noImage.src}
                     className="card-image"
                     alt={image.alt}
                     width={'100%'}

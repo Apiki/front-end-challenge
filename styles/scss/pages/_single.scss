@@ -1,4 +1,4 @@
-.archive {
+.single {
     .post-content {
         > .post-infos {
             max-width: 920px;
@@ -6,24 +6,28 @@
             margin-left: auto;
             margin-right: auto;
             padding-bottom: 30px;
-            border-bottom: 1px solid $excerpt;
+            border-bottom: 1px solid $grey;
             margin-bottom: 30px;
+
+            > .post-title {
+                color: $pink;
+            }
             
             > .post-excerpt {
                 p {
-                    color: $excerpt;
+                    color: $grey;
                 }
             }
         }
 
-        > .post-featured-image,
-        > .post-text {
+        .post-featured-image,
+        .post-text,
+        .taxonomy {
             max-width: 780px;
             width: 100%;
             margin-left: auto;
             margin-right: auto;
         }
-
 
         .post-featured-image {
             display: flex;
@@ -34,17 +38,11 @@
                 width: 100%;
                 border-radius: 10px 10px 0 0;
             }
-
-            .post-image-reference {
-                padding: 20px;
-                max-width: 640px;
-                width: 100%;
-                border-radius: 0 0 10px 10px;
-                background-color: #f8f9fa;
-            }
         }
 
         .post-text {
+            margin-bottom: 32px;
+            
             h1,
             h2,
             h3,
@@ -52,7 +50,9 @@
             h5,
             h6,
             p,
-            figure, pre {
+            figure, 
+            pre, 
+            > div {
                 margin-bottom: 32px;
             }
 
@@ -64,28 +64,14 @@
             }
 
             h2, h3 {
-                font-style: normal;
-                font-weight: 700;
-                font-size: 20px;
-                line-height: 27px;
-                font-family: "Montserrat";
+                @extend .post-title-2;
             }
 
-            p {
-                font-family: 'Montserrat';
-                font-style: normal;
-                font-weight: normal;
-                font-size: 1rem;
-                line-height: 2rem;
+            p, a {
+                @extend .post-content;
             }
 
             a {
-                font-family: 'Montserrat';
-                font-style: normal;
-                font-weight: normal;
-                font-size: 1rem;
-                line-height: 2rem;
-                text-decoration: none;
                 color: $pink;
                 font-weight: 600;
 
@@ -94,7 +80,7 @@
                 }
             }
 
-            figure.wp-block-image {
+            figure {
                 img {
                     border-radius: 10px 10px 0 0;
                     width: 100%;
@@ -103,8 +89,8 @@
                 figcaption {
                     margin: 3px 0 1em;
                     font-size: 11px;
-                    color: $excerpt;
                     font-family: 'Montserrat';
+                    color: $grey;
                 }
             }
 
@@ -153,17 +139,14 @@
             blockquote {
                 margin-bottom: 40px;
                 padding-left: 16px;
+                border-left: 4px solid $pink;
 
                 p {
                     margin-bottom: 10px;
                 }
 
                 cite {
-                    font-family: 'Montserrat';
-                    font-style: normal;
-                    font-weight: 600;
-                    font-size: 1.125rem;
-                    line-height: 2rem;
+                    @extend .post-cite;
                 }
             }
 
@@ -173,11 +156,7 @@
 
                 li {
                     list-style: square;
-                    font-family: 'Montserrat';
-                    font-style: normal;
-                    font-weight: normal;
-                    font-size: 1rem;
-                    line-height: 2rem;
+                    @extend .post-content;
                 }
             }
 
@@ -187,13 +166,63 @@
 
                 li {
                     list-style: decimal;
-                    font-family: 'Montserrat';
-                    font-style: normal;
-                    font-weight: normal;
-                    font-size: 1rem;
-                    line-height: 2rem;
+                    @extend .post-content;
+                }
+            }
+        }
+        
+        .taxonomy {
+            display: flex;
+            flex-direction: column;
+
+            > span {
+                @extend .post-title-2;
+                margin-bottom: 10px;
+            }
+
+            .list-taxonomies {
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: -10px;
+                margin-right: -10px;
+
+                li {
+                    font-size: 12px;
+                    line-height: 13px;
+                    padding: 5px;
+                    border-radius: 10px;
+                    background-color: $pink;
+                    color: white;
+                    margin: 10px;
                 }
             }
         }
     }
+}
+
+// Skeleton 
+
+.post-title-skeleton {
+    width: 80%;
+    height: 40px;
+    background-color: #EEEDEF;
+    margin-bottom: 15px;
+}
+
+.post-excerpt-skeleton {
+    width: 100%;
+    height: 20px;
+    background-color: #EEEDEF;
+}
+
+.post-date-skeleton {
+    width: 20%;
+    height: 10px;
+    background-color: #EEEDEF;
+}
+
+.post-image-skeleton {
+    height: 378px;
+    width: 100%;
+    background-color: #EEEDEF;
 }
