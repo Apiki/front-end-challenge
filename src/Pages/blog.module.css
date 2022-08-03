@@ -1,0 +1,10 @@
+.img_post{
+   width: 30% !important;
+ }
+
+ @media only screen and (max-width: 600px)  {
+
+  .img_post{
+   width: 80% !important;
+ }
+ }
