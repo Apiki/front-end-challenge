@@ -1,8 +1,6 @@
 # Desafio - Front-end Developer
 Este desafio tem como objetivo te avaliar como desenvolvedor Front-end: JavaScript, HTML, CSS e lógica de programação.
 
-Tecnologias usadas -> frameworks React(JS) e BootStrap(CSS).
-
 ## O Desafio
 Queremos montar uma versão do blog da Apiki apenas para Devs, e queremos que essa seja uma solução headless, esta nova versão terá as seguintes páginas: 
 
