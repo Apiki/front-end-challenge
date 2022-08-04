@@ -5,9 +5,10 @@ type Data = {
   name: string
 }
 
+type Res = NextApiResponse<Data>
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: Res
 ) {
   res.status(200).json({ name: 'John Doe' })
 }
