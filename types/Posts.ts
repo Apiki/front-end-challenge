@@ -1,3 +1,5 @@
+import { AxiosRequestHeaders } from "axios";
+
 type Posts = Post[];
 
 export type Post = {
@@ -36,6 +38,12 @@ export type PostsProps = {
       excerpt: string;
     }
   ];
+  totalPages: number;
+};
+
+export type PostsResponse = {
+  data: Posts;
+  headers: AxiosRequestHeaders;
 };
 
 export default Posts;
