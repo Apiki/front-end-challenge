@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
-import axios from "axios";
+import axios, { AxiosRequestHeaders } from "axios";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
-import Posts, { PostsProps } from "../types/Posts";
+import Posts, { PostsProps, PostsResponse } from "../types/Posts";
 
-const Home: NextPage<PostsProps> = ({ posts }) => {
+const Home: NextPage<PostsProps> = ({ posts, totalPages }) => {
   return (
     <main>
       {posts.map((post) => {
@@ -14,11 +14,12 @@ const Home: NextPage<PostsProps> = ({ posts }) => {
           <article key={post.slug}>
             <h2>{post.title}</h2>
             <Image width={350} height={350 / ratio} src={post.image} />
-            <span dangerouslySetInnerHTML={{ __html: post.excerpt }}></span>
+            <span dangerouslySetInnerHTML={{ __html: post.excerpt }} />
             <a href={post.link}>{post.slug}</a>
           </article>
         );
       })}
+      <p>Total de páginas: {totalPages}</p>
     </main>
   );
 };
@@ -27,7 +28,10 @@ export const getStaticProps = async () => {
   const tenHours = 10 * 60 * 60;
   const lastTenPostsUrl =
     "https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518";
-  const { data: postsData }: { data: Posts } = await axios.get(lastTenPostsUrl);
+    
+  const { data: postsData, headers }: PostsResponse = await axios.get(
+    lastTenPostsUrl
+  );
 
   const posts = postsData.map((post) => {
     return {
@@ -44,6 +48,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       posts,
+      totalPages: headers["x-wp-totalpages"] ?? 1,
     },
     revalidate: tenHours, // 10 hours is the industry standard that complies with certain scripts
   };
