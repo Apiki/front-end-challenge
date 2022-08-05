@@ -27,7 +27,7 @@ export const getStaticProps = async () => {
   const tenHours = 10 * 60 * 60;
   const lastTenPostsUrl =
     "https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518";
-  const postsData: Posts = await (await axios.get(lastTenPostsUrl)).data; // @TODO: destruc as
+  const { data: postsData }: { data: Posts } = await axios.get(lastTenPostsUrl);
 
   const posts = postsData.map((post) => {
     return {
