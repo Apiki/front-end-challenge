@@ -9,7 +9,7 @@ const Home: NextPage<PostsProps> = ({ posts, totalPages }) => {
   return (
     <main>
       {posts.map((post) => {
-        const ratio = post.width / post.height ?? 1;
+        const ratio = post.imageWidth / post.imageHeight ?? 1;
         return (
           <article key={post.slug}>
             <h2>{post.title}</h2>
@@ -28,7 +28,7 @@ export const getStaticProps = async () => {
   const tenHours = 10 * 60 * 60;
   const lastTenPostsUrl =
     "https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518";
-    
+
   const { data: postsData, headers }: PostsResponse = await axios.get(
     lastTenPostsUrl
   );
@@ -39,8 +39,8 @@ export const getStaticProps = async () => {
       link: post.link,
       slug: post.slug,
       image: post._embedded["wp:featuredmedia"][0].source_url,
-      width: post._embedded["wp:featuredmedia"][0].media_details.width,
-      height: post._embedded["wp:featuredmedia"][0].media_details.height,
+      imageWidth: post._embedded["wp:featuredmedia"][0].media_details.width,
+      imageHeight: post._embedded["wp:featuredmedia"][0].media_details.height,
       excerpt: post.excerpt.rendered,
     };
   });

@@ -33,8 +33,8 @@ export type PostsProps = {
       link: string;
       slug: string;
       image: string;
-      width: number;
-      height: number;
+      imageWidth: number;
+      imageHeight: number;
       excerpt: string;
     }
   ];
