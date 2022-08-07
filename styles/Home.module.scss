@@ -1,127 +1,112 @@
-.container {
-  padding: 0 2rem;
+$apiki_primary_color: #f57f20;
+$apiki_secondary_color: #f5a21e;
+$apiki_tertiary_color: #fdd00a;
+$apiki_blue: #18acd3;
+
+.posts_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  padding: 0 20px;
+  min-height: 100vh;
+  background-color: $apiki_blue;
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
+.post_card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
+  padding: 20px;
+  position: relative;
+  border: solid 2px transparent;
   border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    border: solid 2px rgba($apiki_primary_color, 0.777);
+  }
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
+.post_title {
   font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.post_image {
+  width: 100%;
+  height: auto;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.post_description {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+.post_button {
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 10px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $apiki_primary_color;
+    color: #fff;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination_button {
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  margin: 2rem;
+
+  &:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
   }
 }
 
 @media (prefers-color-scheme: dark) {
-  .card,
+  .post_card,
   .footer {
     border-color: #222;
   }
-  .code {
-    background: #111;
+  .posts_container,
+  .post_card,
+  .post_button {
+    background-color: #111;
+  }
+  .pagination_button {
+    color: #fff;
+    background-color: #222;
+    &:hover {
+      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+    }
   }
   .logo img {
     filter: invert(1);

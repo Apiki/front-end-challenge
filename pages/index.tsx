@@ -12,10 +12,12 @@ const getTenPostsUrl =
   "https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518";
 
 const Home: NextPage<PostsProps> = ({ posts, totalPages }) => {
+  console.log("Renderizou");
   const [currentPage, setCurrentPage] = useState(1);
   const [pagePosts, setPagePosts] = useState<PostState[]>(posts);
 
   useEffect(() => {
+    console.log("Atualizou");
     if (currentPage > totalPages) {
       setCurrentPage(totalPages);
       return;
@@ -34,6 +36,7 @@ const Home: NextPage<PostsProps> = ({ posts, totalPages }) => {
 
       const _posts = postsData.map((post) => {
         // @TODO: DRY, create a function to do this
+        // API?
         return {
           title: post.title.rendered,
           link: post.link,
@@ -57,44 +60,58 @@ const Home: NextPage<PostsProps> = ({ posts, totalPages }) => {
     [currentPage];
 
   return (
-    <main>
-      {pagePosts.map((post) => {
-        const ratio = (post.imageWidth ?? 384) / (post.imageHeight ?? 202); // defaults to 1.9
-        return (
-          <article key={post.slug}>
-            <h2>{decode(post.title)}</h2>
-            {post.imageURL ? (
-              <Image
-                width={350}
-                height={350 / ratio}
-                src={post.imageURL}
-                alt={post.alt}
+    <>
+      <main
+        className={styles.posts_container}
+        role="main"
+        aria-label="Conteúdo Principal"
+      >
+        {pagePosts.map((post) => {
+          const ratio = (post.imageWidth ?? 384) / (post.imageHeight ?? 202); // defaults to 1.9
+          return (
+            <article className={styles.post_card} key={post.slug}>
+              <h2 className={styles.post_title}>{decode(post.title)}</h2>
+              {post.imageURL ? (
+                <Image
+                  className={styles.post_image}
+                  width={350}
+                  height={350 / ratio}
+                  src={post.imageURL}
+                  alt={post.alt}
+                />
+              ) : null}
+              <span
+                className={styles.post_description}
+                dangerouslySetInnerHTML={{ __html: post.excerpt }}
               />
-            ) : null}
-            <span dangerouslySetInnerHTML={{ __html: post.excerpt }} />
-            <Link href={`/post/${post.slug}`}>
-              <a>
-                <strong>Ler mais</strong>
-              </a>
-            </Link>
-          </article>
-        );
-      })}
-      {/*creates prev and next buttons*/}
+              <Link href={`/post/${post.slug}`}>
+                <a className={styles.post_button}>
+                  <strong>Ler mais</strong>
+                </a>
+              </Link>
+            </article>
+          );
+        })}
+      </main>
       <div className={styles.pagination}>
         {totalPages > 1 ? (
           <>
-            <button onClick={() => setCurrentPage(currentPage - 1)}>
-              Prev
+            <button
+              className={styles.pagination_button}
+              onClick={() => setCurrentPage(currentPage - 1)}
+            >
+              Anterior
             </button>
-            {"..."}
-            <button onClick={() => setCurrentPage(currentPage + 1)}>
-              Next
+            <button
+              className={styles.pagination_button}
+              onClick={() => setCurrentPage(currentPage + 1)}
+            >
+              Próxima
             </button>
           </>
         ) : null}
       </div>
-    </main>
+    </>
   );
 };
 
