@@ -9,7 +9,6 @@ $apiki_blue: #18acd3;
   grid-gap: 2rem;
   padding: 0 20px;
   min-height: 100vh;
-  background-color: $apiki_blue;
 }
 
 .post_card {
@@ -18,6 +17,7 @@ $apiki_blue: #18acd3;
   align-items: center;
   justify-content: center;
   padding: 20px;
+  padding-bottom: 40px;
   position: relative;
   border: solid 2px transparent;
   border-radius: 10px;
@@ -51,8 +51,9 @@ $apiki_blue: #18acd3;
   border: none;
   border-radius: 10px;
   padding: 10px 20px;
+  margin: 10px 0;
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease-in-out;
@@ -79,7 +80,6 @@ $apiki_blue: #18acd3;
   border-radius: 10px;
   padding: 10px 20px;
   background-color: #fff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   color: #000;
@@ -87,25 +87,35 @@ $apiki_blue: #18acd3;
   margin: 2rem;
 
   &:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    background-color: darken($apiki_primary_color, 5%);
+    color: #fff;
   }
 }
 
 @media (prefers-color-scheme: dark) {
-  .post_card,
-  .footer {
+  .post_card {
     border-color: #222;
+
+    &:hover {
+      border-color: rgba($apiki_blue, 0.777);
+    }
   }
-  .posts_container,
+
   .post_card,
   .post_button {
     background-color: #111;
   }
-  .pagination_button {
+  .post_button, .pagination_button {
     color: #fff;
+    background-color: #333;
+    &:hover {
+      background-color: $apiki_blue;
+    }
+  }
+  .pagination_button {
     background-color: #222;
     &:hover {
-      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+      background-color: rgba($apiki_blue, 0.777);
     }
   }
   .logo img {

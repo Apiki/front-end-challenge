@@ -1,4 +1,5 @@
 $apiki_blue: #18acd3;
+$apiki_secondary_color: #f5a21e;
 
 html,
 body {
@@ -16,14 +17,23 @@ a {
 
 * {
   box-sizing: border-box;
+  &::selection,
+  &::-moz-selection {
+    background-color: $apiki_secondary_color;
+    color: #fff;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
-  body {
+  html, body {
     color: white;
     background: black;
+  }
+  *::selection, *::-moz-selection {
+    background-color: #1c2bfa;
+    color: white;
   }
 }
