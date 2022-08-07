@@ -6,6 +6,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 import { PostsProps, PostsResponse, PostState } from "../types/Posts";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const getTenPostsUrl =
   "https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518";
@@ -24,6 +25,7 @@ const Home: NextPage<PostsProps> = ({ posts, totalPages }) => {
       return;
     }
 
+    // don't make useEffect async, make another func for it
     const getPosts = async () => {
       const { data: postsData }: PostsResponse = await axios.get(
         getTenPostsUrl,
@@ -31,6 +33,7 @@ const Home: NextPage<PostsProps> = ({ posts, totalPages }) => {
       );
 
       const _posts = postsData.map((post) => {
+        // @TODO: DRY, create a function to do this
         return {
           title: post.title.rendered,
           link: post.link,
@@ -69,7 +72,11 @@ const Home: NextPage<PostsProps> = ({ posts, totalPages }) => {
               />
             ) : null}
             <span dangerouslySetInnerHTML={{ __html: post.excerpt }} />
-            <a href={post.link}>{post.slug}</a>
+            <Link href={`/post/${post.slug}`}>
+              <a>
+                <strong>Ler mais</strong>
+              </a>
+            </Link>
           </article>
         );
       })}
