@@ -23,10 +23,11 @@ const Home: NextPage<PostsProps> = ({ posts, totalPages }) => {
       setCurrentPage(1);
       return;
     }
-    
+
     const getPosts = async () => {
       const { data: postsData }: PostsResponse = await axios.get(
-        `${getTenPostsUrl}&page=${currentPage}`
+        getTenPostsUrl,
+        { params: { page: currentPage } }
       );
 
       const _posts = postsData.map((post) => {
