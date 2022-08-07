@@ -12,12 +12,10 @@ const getTenPostsUrl =
   "https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518";
 
 const Home: NextPage<PostsProps> = ({ posts, totalPages }) => {
-  console.log("Renderizou");
   const [currentPage, setCurrentPage] = useState(1);
   const [pagePosts, setPagePosts] = useState<PostState[]>(posts);
 
   useEffect(() => {
-    console.log("Atualizou");
     if (currentPage > totalPages) {
       setCurrentPage(totalPages);
       return;
@@ -56,8 +54,7 @@ const Home: NextPage<PostsProps> = ({ posts, totalPages }) => {
     };
 
     getPosts();
-  }),
-    [currentPage];
+  }, [currentPage]);
 
   return (
     <>
