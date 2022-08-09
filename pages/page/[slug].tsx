@@ -1,4 +1,5 @@
 import type { GetServerSideProps, NextPage } from "next";
+import { MouseEvent } from "react";
 import { useRouter } from "next/router";
 import { decode } from "html-entities";
 import { sanitize } from "isomorphic-dompurify";
@@ -15,10 +16,16 @@ const getTenPostsUrl =
   "https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518";
 
 const Page: NextPage<PostsProps> = ({ posts, totalPages, page }) => {
-  console.log("Page.page ", page);
   const router = useRouter();
   const [currentPage, setCurrentPage] = useState(page);
   const [pagePosts, setPagePosts] = useState<PostState[]>(posts);
+
+  const handlePage = (event: MouseEvent, page: number) => {
+    const pageNumber = currentPage + page;
+    event.preventDefault();
+    setCurrentPage(pageNumber);
+    router.push(`/page/${pageNumber}`);
+  };
 
   useEffect(() => {
     if (currentPage > totalPages) {
@@ -115,13 +122,7 @@ const Page: NextPage<PostsProps> = ({ posts, totalPages, page }) => {
           <>
             <button
               className={styles.pagination_button}
-              onClick={(e) => {
-                e.preventDefault();
-                setCurrentPage(currentPage - 1);
-                router.push(`/page/${currentPage - 1}`, undefined, {
-                  scroll: false,
-                });
-              }}
+              onClick={(e) => handlePage(e, -1)}
               disabled={currentPage === 1}
             >
               Anterior
@@ -131,13 +132,7 @@ const Page: NextPage<PostsProps> = ({ posts, totalPages, page }) => {
             </span>
             <button
               className={styles.pagination_button}
-              onClick={(e) => {
-                e.preventDefault();
-                setCurrentPage(currentPage + 1);
-                router.push(`/page/${currentPage + 1}`, undefined, {
-                  scroll: false,
-                });
-              }}
+              onClick={(e) => handlePage(e, +1)}
               disabled={currentPage === totalPages}
             >
               Próxima
