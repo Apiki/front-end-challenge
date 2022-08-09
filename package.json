@@ -11,6 +11,8 @@
   "dependencies": {
     "axios": "^0.27.2",
     "html-entities": "^2.3.3",
+    "html-react-parser": "^3.0.1",
+    "isomorphic-dompurify": "^0.20.0",
     "next": "12.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
