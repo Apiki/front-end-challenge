@@ -1,48 +1,86 @@
-import axios from "axios";
 import Image from "next/image";
-// import { useRouter } from "next/router";
+import Head from "next/head";
+import { decode } from "html-entities";
+import { sanitize } from "isomorphic-dompurify";
+import parse from "html-react-parser";
+import styles from "../../styles/Post.module.scss";
 
-const url = "https://blog.apiki.com/wp-json/wp/v2/posts?_embed";
+import { useRouter } from "next/router";
+import { fetchPosts } from "../../utils/post";
+import {  GetStaticProps, NextPage } from "next";
+import { PostState, SinglePostProps, SinglePostParams } from "../../types/Posts";
+import AuthorSection from "../../components/AuthorSection";
 
-export const Post = ({ title, content, imageURL, imageHeight, imageWidth }) => {
+const url = "https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518";
+
+export const Post: NextPage<PostState> = ({
+  title,
+  excerpt,
+  authorName,
+  authorLink,
+  avatar,
+  date,
+  content,
+  imageURL,
+  imageHeight,
+  imageWidth,
+  yoast_head,
+}) => {
+  const router = useRouter();
+  const ratio = (imageWidth ?? 1080) / (imageHeight ?? 567);
+
   return (
-    <main>
-      <h2>{title}</h2>
-      <Image width={imageWidth} height={imageHeight} src={imageURL} />
-
-      <div dangerouslySetInnerHTML={{ __html: content }} />
-    </main>
+    <>
+      {/*use this lib, according to NextJS issue #17894*/}
+      {yoast_head ? <Head>{parse(yoast_head)}</Head> : null}
+      <div className={styles.outer_container}>
+        <main className={styles.post_container}>
+          <button className={styles.button_back} onClick={() => router.back()}>
+            Voltar
+          </button>
+          <Image width={1080} height={1080 / ratio} src={imageURL} />
+          <h1 className={styles.post_title}>{decode(title)}</h1>
+          <span
+            className={styles.post_subtitle}
+            dangerouslySetInnerHTML={{ __html: sanitize(decode(excerpt)) }}
+          ></span>
+          <hr />
+          <AuthorSection
+            avatar={avatar}
+            authorLink={authorLink}
+            authorName={authorName}
+            date={date}
+          />
+          <div
+            className={styles.post_content}
+            dangerouslySetInnerHTML={{ __html: sanitize(content) }}
+          />
+        </main>
+      </div>
+    </>
   );
 };
 
-export const getServerSideProps = async (ctx) => {
-  const { data: postData } = await axios.get(url, {
-    params: { slug: ctx.query.slug },
-  });
-  const post = postData;
-  return {
-    props: {
-      // @TODO: DRY
-      title: post[0].title.rendered,
-      content: post[0].content.rendered,
-      imageURL: post[0]._embedded["wp:featuredmedia"]?.[0]?.source_url ?? "",
-      imageWidth:
-        post[0]._embedded["wp:featuredmedia"]?.[0]?.media_details?.width ?? "",
-      imageHeight:
-        post[0]._embedded["wp:featuredmedia"]?.[0]?.media_details?.height ?? "",
-    },
-  };
+export const getStaticProps: GetStaticProps<SinglePostProps, SinglePostParams> = async (ctx) => {
+  const { slug } = ctx.params!; // see nextjs issue #16522
+  const tenHours = 60 * 60 * 10;
+  const postOptions = { params: { slug } };
+  const { posts } = await fetchPosts(url, postOptions);
+
+  return { props: { ...posts[0] }, revalidate: tenHours };
 };
 
-// export const getStaticPaths = async () => {
-//   const router = useRouter();
-//   const slug = router.query.slug as string;
-//   const { data: post } = await axios.get(url, { params: { slug } });
+export const getStaticPaths = async () => {
+  const allPostsOptions = { params: { posts_per_page: -1 } };
 
-//   return {
-//     paths: [{ params: { slug: post[0].slug } }],
-//     fallback: true,
-//   };
-// };
+  const { posts } = await fetchPosts(url, allPostsOptions);
+
+  return {
+    paths: posts.map((post) => ({
+      params: { slug: post.slug },
+    })),
+    fallback: false,
+  };
+};
 
 export default Post;
