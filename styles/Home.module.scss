@@ -3,12 +3,22 @@ $apiki_secondary_color: #f5a21e;
 $apiki_tertiary_color: #fdd00a;
 $apiki_blue: #18acd3;
 
+.blog_title {
+  background-color: $apiki_blue;
+  color: #fff;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
 .posts_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
-  padding: 0 20px;
-  min-height: 100vh;
+  padding: 20px;
+  padding-bottom: 0;
+  background-color: $apiki_blue;
 }
 
 .post_card {
@@ -16,8 +26,9 @@ $apiki_blue: #18acd3;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 500px;
   padding: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
   position: relative;
   border: solid 2px transparent;
   border-radius: 10px;
@@ -36,14 +47,18 @@ $apiki_blue: #18acd3;
   margin-bottom: 1rem;
 }
 
-.post_image {
-  width: 100%;
-  height: auto;
-}
-
 .post_description {
   font-size: 1.2rem;
   margin-bottom: 1rem;
+}
+
+.post_card_footer {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
 }
 
 .post_button {
@@ -51,9 +66,7 @@ $apiki_blue: #18acd3;
   border: none;
   border-radius: 10px;
   padding: 10px 20px;
-  margin: 10px 0;
-  position: absolute;
-  bottom: 0;
+  margin: 10px 20px;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease-in-out;
@@ -71,6 +84,13 @@ $apiki_blue: #18acd3;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: $apiki_blue;
+}
+
+.pagination_counter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
 }
 
 .pagination_button {
@@ -89,10 +109,25 @@ $apiki_blue: #18acd3;
   &:hover {
     background-color: darken($apiki_primary_color, 5%);
     color: #fff;
+
+    &:disabled {
+      background-color: #fff;
+      color: #ccc;
+    }
+  }
+
+  &:disabled {
+    color: #ccc;
+    cursor: not-allowed;
   }
 }
 
 @media (prefers-color-scheme: dark) {
+  .blog_title,
+  .posts_container,
+  .pagination {
+    background-color: #000;
+  }
   .post_card {
     border-color: #222;
 
@@ -105,7 +140,8 @@ $apiki_blue: #18acd3;
   .post_button {
     background-color: #111;
   }
-  .post_button, .pagination_button {
+  .post_button,
+  .pagination_button {
     color: #fff;
     background-color: #333;
     &:hover {
@@ -116,9 +152,50 @@ $apiki_blue: #18acd3;
     background-color: #222;
     &:hover {
       background-color: rgba($apiki_blue, 0.777);
+      &:disabled {
+        color: #222;
+        background-color: #111;
+      }
+    }
+    &:disabled {
+      color: #222;
+      background-color: #111;
     }
   }
   .logo img {
     filter: invert(1);
+  }
+}
+
+@media (max-width: 1080px) {
+  .posts_container {
+    grid-template-columns: 1fr;
+  }
+
+  .post_card {
+    height: auto;
+  }
+}
+
+@media (max-width: 512px) {
+
+  .blog_title {
+    font-size: 3rem;
+  }
+
+  .pagination_button {
+    font-size: 1rem;
+    margin: 10px;
+  }
+
+  .pagination_counter {
+    font-size: 1rem;
+  }
+
+}
+
+@media (max-width: 310px) {
+  .pagination {
+    flex-direction: column;
   }
 }
