@@ -1,0 +1,33 @@
+$apiki_tertiary_color: #fdd00a;
+$apiki_blue: #18acd3;
+
+.navbar {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 5px;
+  background-color: $apiki_blue;
+}
+
+.navbar_link {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+
+  &:hover {
+    color: $apiki_tertiary_color;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar {
+    background-color: #000;
+  }
+}
+
+@media (max-width: 512px) {
+  .navbar_link {
+    font-size: 4vw;
+  }
+}
