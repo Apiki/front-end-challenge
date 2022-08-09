@@ -1,0 +1,27 @@
+.post_author_section,
+.post_author_link {
+  display: flex;
+  align-items: center;
+}
+
+.post_author_avatar {
+  border-radius: 50%;
+}
+
+.post_author_name {
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-left: 15px;
+}
+
+.post_date {
+  font-style: italic;
+  margin-bottom: 0;
+  margin-left: 15px;
+}
+
+@media (max-width: 560px) {
+  #hideOnMobile {
+    display: none;
+  }
+}
