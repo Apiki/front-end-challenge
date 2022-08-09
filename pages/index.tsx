@@ -1,145 +1,27 @@
+import axios from "axios";
 import type { NextPage } from "next";
-import axios, { AxiosRequestHeaders } from "axios";
-import { decode } from "html-entities";
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.scss";
 import { PostsProps, PostsResponse, PostState } from "../types/Posts";
-import { useEffect, useState } from "react";
-import Link from "next/link";
+import { fetchPosts } from "../utils/post";
+import Page from "./page/[slug]";
 
 const getTenPostsUrl =
   "https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518";
 
-const Home: NextPage<PostsProps> = ({ posts, totalPages }) => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [pagePosts, setPagePosts] = useState<PostState[]>(posts);
-
-  useEffect(() => {
-    if (currentPage > totalPages) {
-      setCurrentPage(totalPages);
-      return;
-    }
-    if (currentPage < 1) {
-      setCurrentPage(1);
-      return;
-    }
-
-    // don't make useEffect async, make another func for it
-    const getPosts = async () => {
-      const { data: postsData }: PostsResponse = await axios.get(
-        getTenPostsUrl,
-        { params: { page: currentPage } }
-      );
-
-      const _posts = postsData.map((post) => {
-        // @TODO: DRY, create a function to do this
-        // API?
-        return {
-          title: post.title.rendered,
-          link: post.link,
-          slug: post.slug,
-          imageURL: post._embedded["wp:featuredmedia"]?.[0]?.source_url ?? "",
-          imageWidth:
-            post._embedded["wp:featuredmedia"]?.[0]?.media_details?.width ??
-            null,
-          imageHeight:
-            post._embedded["wp:featuredmedia"]?.[0]?.media_details?.height ??
-            null,
-          alt: post._embedded["wp:featuredmedia"]?.[0]?.alt_text ?? "",
-          excerpt: post.excerpt.rendered,
-        };
-      });
-      setPagePosts(_posts);
-    };
-
-    getPosts();
-  }, [currentPage]);
-
-  return (
-    <>
-      <main
-        className={styles.posts_container}
-        role="main"
-        aria-label="Conteúdo Principal"
-      >
-        {pagePosts.map((post) => {
-          const ratio = (post.imageWidth ?? 384) / (post.imageHeight ?? 202); // defaults to 1.9
-          return (
-            <article className={styles.post_card} key={post.slug}>
-              <h2 className={styles.post_title}>{decode(post.title)}</h2>
-              {post.imageURL ? (
-                <Image
-                  className={styles.post_image}
-                  width={350}
-                  height={350 / ratio}
-                  src={post.imageURL}
-                  alt={post.alt}
-                />
-              ) : null}
-              <span
-                className={styles.post_description}
-                dangerouslySetInnerHTML={{ __html: post.excerpt }}
-              />
-              <Link href={`/post/${post.slug}`}>
-                <a className={styles.post_button}>
-                  <strong>Ler mais</strong>
-                </a>
-              </Link>
-            </article>
-          );
-        })}
-      </main>
-      <div className={styles.pagination}>
-        {totalPages > 1 ? (
-          <>
-            <button
-              className={styles.pagination_button}
-              onClick={() => setCurrentPage(currentPage - 1)}
-            >
-              Anterior
-            </button>
-            <button
-              className={styles.pagination_button}
-              onClick={() => setCurrentPage(currentPage + 1)}
-            >
-              Próxima
-            </button>
-          </>
-        ) : null}
-      </div>
-    </>
-  );
+const Home: NextPage<PostsProps> = (props) => {
+  return <Page {...props} />;
 };
 
 export const getStaticProps = async () => {
-  const tenHours = 10 * 60 * 60;
+  const postsOptions = { params: { page: 1 } };
 
-  const { data: postsData, headers }: PostsResponse = await axios.get(
-    getTenPostsUrl
-  );
-
-  const posts: PostState[] = postsData.map((post) => {
-    return {
-      title: post.title.rendered,
-      link: post.link,
-      slug: post.slug,
-      imageURL: post._embedded["wp:featuredmedia"]?.[0]?.source_url ?? "",
-      imageWidth:
-        post._embedded["wp:featuredmedia"]?.[0]?.media_details?.width ?? null,
-      imageHeight:
-        post._embedded["wp:featuredmedia"]?.[0]?.media_details?.height ?? null,
-      alt: post._embedded["wp:featuredmedia"]?.[0]?.alt_text ?? "",
-      excerpt: post.excerpt.rendered,
-    };
-  });
+  const { posts, headers } = await fetchPosts(getTenPostsUrl, postsOptions);
 
   return {
     props: {
       posts,
       totalPages: parseInt(headers["x-wp-totalpages"] as string) ?? 1,
+      page: 1,
     },
-    revalidate: tenHours, // 10 hours is the industry standard that complies with certain scripts
   };
 };
 
