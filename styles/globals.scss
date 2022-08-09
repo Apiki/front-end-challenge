@@ -1,9 +1,9 @@
-$apiki_blue: #18acd3;
 $apiki_secondary_color: #f5a21e;
 
 html,
 body {
-  background-color: $apiki_blue;
+  overflow-x: hidden;
+  width: 100%;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -28,10 +28,7 @@ a {
   html {
     color-scheme: dark;
   }
-  html, body {
-    color: white;
-    background: black;
-  }
+
   *::selection, *::-moz-selection {
     background-color: #1c2bfa;
     color: white;
