@@ -7,8 +7,12 @@ import styles from "../../styles/Post.module.scss";
 
 import { useRouter } from "next/router";
 import { fetchPosts } from "../../utils/post";
-import {  GetStaticProps, NextPage } from "next";
-import { PostState, SinglePostProps, SinglePostParams } from "../../types/Posts";
+import { GetStaticProps, NextPage } from "next";
+import {
+  PostState,
+  SinglePostProps,
+  SinglePostParams,
+} from "../../types/Posts";
 import AuthorSection from "../../components/AuthorSection";
 
 const url = "https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518";
@@ -61,7 +65,10 @@ export const Post: NextPage<PostState> = ({
   );
 };
 
-export const getStaticProps: GetStaticProps<SinglePostProps, SinglePostParams> = async (ctx) => {
+export const getStaticProps: GetStaticProps<
+  SinglePostProps,
+  SinglePostParams
+> = async (ctx) => {
   const { slug } = ctx.params!; // see nextjs issue #16522
   const tenHours = 60 * 60 * 10;
   const postOptions = { params: { slug } };
@@ -71,9 +78,18 @@ export const getStaticProps: GetStaticProps<SinglePostProps, SinglePostParams> =
 };
 
 export const getStaticPaths = async () => {
-  const allPostsOptions = { params: { posts_per_page: -1 } };
+  const allPostsOptions = { params: { per_page: 100 } };
 
-  const { posts } = await fetchPosts(url, allPostsOptions);
+  const { posts, headers } = await fetchPosts(url, allPostsOptions);
+  const totalPages = parseInt(headers["x-wp-totalpages"] as string, 10);
+
+  for (let i = 2; i <= totalPages; i++) {
+    const postsOptions = { params: { per_page: 100, page: i } };
+    const { posts: _posts } = await fetchPosts(url, postsOptions);
+    _posts.forEach((post) => {
+      posts.push(post);
+    });
+  }
 
   return {
     paths: posts.map((post) => ({
