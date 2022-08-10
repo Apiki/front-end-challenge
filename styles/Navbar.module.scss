@@ -1,33 +1,25 @@
-$apiki_tertiary_color: #fdd00a;
-$apiki_blue: #18acd3;
+@import "Utils";
+@import "ApikiColors";
 
 .navbar {
-  display: flex;
-  align-items: center;
+  @extend %center-left;
   font-size: 1.5rem;
   color: #fff;
   padding: 5px;
   background-color: $apiki_blue;
+
+  @include dark-background;
 }
 
 .navbar_link {
-  display: flex;
-  align-items: center;
+  @extend %center-left;
   margin-left: 1rem;
 
   &:hover {
     color: $apiki_tertiary_color;
   }
-}
 
-@media (prefers-color-scheme: dark) {
-  .navbar {
-    background-color: #000;
-  }
-}
-
-@media (max-width: 512px) {
-  .navbar_link {
+  @include phone {
     font-size: 4vw;
   }
 }
