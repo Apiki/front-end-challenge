@@ -1,7 +1,5 @@
-$apiki_primary_color: #f57f20;
-$apiki_secondary_color: #f5a21e;
-$apiki_tertiary_color: #fdd00a;
-$apiki_blue: #18acd3;
+@import "ApikiColors";
+@import "Utils";
 
 .blog_title {
   background-color: $apiki_blue;
@@ -10,6 +8,12 @@ $apiki_blue: #18acd3;
   font-weight: bold;
   text-align: center;
   margin: 0;
+
+  @include phone {
+    font-size: 3rem;
+  }
+
+  @include dark-background;
 }
 
 .posts_container {
@@ -19,13 +23,16 @@ $apiki_blue: #18acd3;
   padding: 20px;
   padding-bottom: 0;
   background-color: $apiki_blue;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+  @include dark-background;
 }
 
 .post_card {
-  display: flex;
+  @extend %center;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 500px;
   padding: 20px;
   padding-bottom: 60px;
@@ -38,6 +45,18 @@ $apiki_blue: #18acd3;
 
   &:hover {
     border: solid 2px rgba($apiki_primary_color, 0.777);
+  }
+
+  @include tablet {
+    height: auto;
+  }
+
+  @include dark-background($dark_background_secondary) {
+    border-color: $dark_background_tertiary;
+
+    &:hover {
+      border-color: rgba($apiki_blue, 0.777);
+    }
   }
 }
 
@@ -55,147 +74,64 @@ $apiki_blue: #18acd3;
 .post_card_footer {
   position: absolute;
   bottom: 20px;
-  display: flex;
-  align-items: center;
+  @extend %center;
   justify-content: space-between;
   margin-top: 1rem;
 }
 
 .post_button {
-  font-size: 1rem;
-  border: none;
-  border-radius: 10px;
-  padding: 10px 20px;
-  margin: 10px 20px;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-  color: #000;
-  text-decoration: none;
-
-  &:hover {
-    background-color: $apiki_primary_color;
+  @extend %button;
+  @include dark-background($dark_background_quaternary) {
     color: #fff;
+    &:hover {
+      background-color: $apiki_blue;
+    }
   }
 }
 
 .pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %center;
   background-color: $apiki_blue;
+
+  @include smallPhone {
+    flex-direction: column;
+  }
+  @include dark-background;
 }
 
 .pagination_counter {
   font-size: 1.5rem;
   font-weight: bold;
   color: #fff;
+
+  @include phone {
+    font-size: 1rem;
+  }
 }
 
 .pagination_button {
+  @extend %button;
   font-size: 1.2rem;
   font-weight: bold;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  padding: 10px 20px;
-  background-color: #fff;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-  color: #000;
-  text-decoration: none;
   margin: 2rem;
 
-  &:hover {
-    background-color: darken($apiki_primary_color, 5%);
-    color: #fff;
-
-    &:disabled {
-      background-color: #fff;
-      color: #ccc;
-    }
-  }
-
-  &:disabled {
-    color: #ccc;
-    cursor: not-allowed;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .blog_title,
-  .posts_container,
-  .pagination {
-    background-color: #000;
-  }
-  .post_card {
-    border-color: #222;
-
-    &:hover {
-      border-color: rgba($apiki_blue, 0.777);
-    }
-  }
-
-  .post_card,
-  .post_button {
-    background-color: #111;
-  }
-  .post_button,
-  .pagination_button {
-    color: #fff;
-    background-color: #333;
-    &:hover {
-      background-color: $apiki_blue;
-    }
-  }
-  .pagination_button {
-    background-color: #222;
-    &:hover {
-      background-color: rgba($apiki_blue, 0.777);
-      &:disabled {
-        color: #222;
-        background-color: #111;
-      }
-    }
-    &:disabled {
-      color: #222;
-      background-color: #111;
-    }
-  }
-  .logo img {
-    filter: invert(1);
-  }
-}
-
-@media (max-width: 1080px) {
-  .posts_container {
-    grid-template-columns: 1fr;
-  }
-
-  .post_card {
-    height: auto;
-  }
-}
-
-@media (max-width: 512px) {
-
-  .blog_title {
-    font-size: 3rem;
-  }
-
-  .pagination_button {
+  @include phone {
     font-size: 1rem;
     margin: 10px;
   }
 
-  .pagination_counter {
-    font-size: 1rem;
-  }
-
-}
-
-@media (max-width: 310px) {
-  .pagination {
-    flex-direction: column;
+  @include dark-background($dark_background_tertiary) {
+    color: #fff;
+    &:hover {
+      background-color: rgba($apiki_blue, 0.777);
+      &:disabled {
+        color: $dark_background_tertiary;
+        background-color: $dark_background_secondary;
+      }
+    }
+    &:disabled {
+      color: $dark_background_tertiary;
+      background-color: $dark_background_secondary;
+    }
   }
 }
