@@ -1,7 +1,13 @@
+@import "Utils";
+
+%margin-author-section {
+  margin-bottom: 0;
+  margin-left: 15px;
+}
+
 .post_author_section,
 .post_author_link {
-  display: flex;
-  align-items: center;
+  @extend %center-left;
 }
 
 .post_author_avatar {
@@ -10,14 +16,12 @@
 
 .post_author_name {
   font-weight: bold;
-  margin-bottom: 0;
-  margin-left: 15px;
+  @extend %margin-author-section;
 }
 
 .post_date {
   font-style: italic;
-  margin-bottom: 0;
-  margin-left: 15px;
+  @extend %margin-author-section;
 }
 
 @media (max-width: 560px) {
