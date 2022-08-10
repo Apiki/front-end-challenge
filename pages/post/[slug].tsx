@@ -32,17 +32,30 @@ export const Post: NextPage<PostState> = ({
 }) => {
   const router = useRouter();
   const ratio = (imageWidth ?? 1080) / (imageHeight ?? 567);
+  const sizes = "(max-width: 1080px) 70vw, 1080px";
 
   return (
     <>
-      {/*use this lib, according to NextJS issue #17894*/}
+      {/*use this html react parser lib, according to NextJS issue #17894*/}
       {yoast_head ? <Head>{parse(yoast_head)}</Head> : null}
       <div className={styles.outer_container}>
         <main className={styles.post_container}>
           <button className={styles.button_back} onClick={() => router.back()}>
             Voltar
           </button>
-          <Image width={1080} height={1080 / ratio} src={imageURL} />
+          {imageURL ? (
+            <div style={{ width: 1080, height: 1080 / ratio }}>
+              <Image
+                layout="responsive"
+                objectFit="contain"
+                sizes={sizes}
+                width={1080}
+                height={1080 / ratio}
+                src={imageURL}
+              />
+            </div>
+          ) : null}
+
           <h1 className={styles.post_title}>{decode(title)}</h1>
           <span
             className={styles.post_subtitle}
@@ -59,6 +72,12 @@ export const Post: NextPage<PostState> = ({
             className={styles.post_content}
             dangerouslySetInnerHTML={{ __html: sanitize(content) }}
           />
+          <button
+            className={styles.button_back_bottom}
+            onClick={() => router.back()}
+          >
+            Voltar
+          </button>
         </main>
       </div>
     </>
