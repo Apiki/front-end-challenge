@@ -17,17 +17,18 @@ const getTenPostsUrl =
 
 const Page: NextPage<PostsProps> = ({ posts, totalPages, page }) => {
   const router = useRouter();
+  const sizes = " (max-width: 1080px) 70vw, 1080px";
   const [currentPage, setCurrentPage] = useState(page);
   const [pagePosts, setPagePosts] = useState<PostState[]>(posts);
 
   const handlePage = (event: MouseEvent, page: number) => {
     const pageNumber = currentPage + page;
     event.preventDefault();
-    setCurrentPage(pageNumber);
     router.push(`/page/${pageNumber}`);
   };
 
   useEffect(() => {
+    setCurrentPage(page);
     if (currentPage > totalPages) {
       setCurrentPage(totalPages);
       return;
@@ -45,12 +46,12 @@ const Page: NextPage<PostsProps> = ({ posts, totalPages, page }) => {
     };
 
     getPosts();
-  }, [currentPage]);
+  }, [currentPage, page]);
 
   return (
     <>
       <Head>
-        <title>Blog da Apiki | Desenvolvimento </title>
+        <title>Blog da Apiki | Desenvolvimento</title>
         <meta name="description" content="Blog da Apiki" />
         <meta
           name="keywords"
@@ -69,27 +70,27 @@ const Page: NextPage<PostsProps> = ({ posts, totalPages, page }) => {
       >
         {pagePosts.map((post) => {
           const ratio = (post.imageWidth ?? 384) / (post.imageHeight ?? 202); // defaults to 1.9
-          const post_date = new Date(post.date);
-          const date_options: Intl.DateTimeFormatOptions = {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          };
           return (
             <article
               role="card"
-              aria-label="Post Card"
+              aria-label="Post Card contendo um breve conteúdo do post, 
+              incluindo o título, autor, data de publicação e uma imagem"
               className={styles.post_card}
               key={post.slug}
             >
               <h2 className={styles.post_title}>{decode(post.title)}</h2>
               {post.imageURL ? (
-                <Image
-                  width={350}
-                  height={350 / ratio}
-                  src={post.imageURL}
-                  alt={post.alt}
-                />
+                <div style={{width: 350, height: 350 / ratio}}>
+                  <Image
+                    sizes={sizes}
+                    layout="responsive"
+                    objectFit="contain"
+                    width={350}
+                    height={350 / ratio}
+                    src={post.imageURL}
+                    alt={post.alt || post.title}
+                  />
+                </div>
               ) : null}
               <span
                 className={styles.post_description}
@@ -121,6 +122,8 @@ const Page: NextPage<PostsProps> = ({ posts, totalPages, page }) => {
         {totalPages > 1 ? (
           <>
             <button
+              role="button"
+              aria-label="Botão para ir para a página anterior"
               className={styles.pagination_button}
               onClick={(e) => handlePage(e, -1)}
               disabled={currentPage === 1}
@@ -131,6 +134,8 @@ const Page: NextPage<PostsProps> = ({ posts, totalPages, page }) => {
               {currentPage} de {totalPages}
             </span>
             <button
+              role="button"
+              aria-label="Botão para ir para a página seguinte"
               className={styles.pagination_button}
               onClick={(e) => handlePage(e, +1)}
               disabled={currentPage === totalPages}
