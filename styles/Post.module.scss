@@ -1,8 +1,9 @@
-$apiki_secondary_color: #f5a21e;
-$apiki_blue: #18acd3;
+@import "ApikiColors";
+@import "Utils";
 
 .outer_container {
   background-color: $apiki_blue;
+  @include dark-background;
 }
 
 .post_container {
@@ -12,13 +13,20 @@ $apiki_blue: #18acd3;
   width: 80vw;
   border: solid 3px rgba(lighten($apiki_secondary_color, 20%), 0.777);
   background-color: #fff;
+
+  @include mobile {
+    width: 100vw;
+    padding: 20px 5%;
+  }
+
+  @include dark-background($dark_background_tertiary) {
+    border: solid 3px $dark_background_secondary;
+  }
 }
 
-.button_back {
+%button_back {
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %center;
   top: 5px;
   left: 10px;
   width: 10vw;
@@ -37,11 +45,21 @@ $apiki_blue: #18acd3;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+
   &:hover {
     background-color: $apiki_blue;
     border: solid 2px rgba(lighten($apiki_blue, 20%), 0.777);
   }
+
+  @include tablet {
+    font-size: 1rem;
+  }
 }
+
+.button_back {
+  @extend %button_back;
+}
+
 .post_title {
   font-weight: bold;
   margin-bottom: 1rem;
@@ -56,7 +74,7 @@ $apiki_blue: #18acd3;
 
 .post_content {
   font-size: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
   max-width: 80vw;
 
   img,
@@ -66,33 +84,17 @@ $apiki_blue: #18acd3;
     max-width: 100%;
     height: auto;
   }
-}
 
-@media (prefers-color-scheme: dark) {
-  .outer_container {
-    background-color: #000;
-  }
-
-  .post_container {
-    border: solid 3px #111;
-    background-color: #222;
-  }
-}
-
-@media (max-width: 960px) {
-  .button_back {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .post_container {
-    width: 100vw;
-    padding: 20px 5%;
-  }
-
-  .post_content {
+  @include mobile {
     max-width: 90vw;
     padding: 0px;
   }
+}
+
+.button_back_bottom {
+  @extend %button_back;
+  top: auto;
+  bottom: 0;
+  left: calc(50% - 5vw);
+  margin-bottom: 1rem;
 }
