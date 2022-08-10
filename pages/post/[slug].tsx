@@ -26,13 +26,13 @@ export const Post: NextPage<PostState> = ({
   date,
   content,
   imageURL,
+  alt,
   imageHeight,
   imageWidth,
   yoast_head,
 }) => {
   const router = useRouter();
   const ratio = (imageWidth ?? 1080) / (imageHeight ?? 567);
-  const sizes = "(max-width: 1080px) 70vw, 1080px";
 
   return (
     <>
@@ -43,19 +43,14 @@ export const Post: NextPage<PostState> = ({
           <button className={styles.button_back} onClick={() => router.back()}>
             Voltar
           </button>
-          {imageURL ? (
-            <div style={{ width: 1080, height: 1080 / ratio }}>
-              <Image
-                layout="responsive"
-                objectFit="contain"
-                sizes={sizes}
-                width={1080}
-                height={1080 / ratio}
-                src={imageURL}
-              />
-            </div>
-          ) : null}
-
+          {imageURL && (
+            <Image
+              alt={alt || title}
+              width={1080}
+              height={1080 / ratio}
+              src={imageURL}
+            />
+          )}
           <h1 className={styles.post_title}>{decode(title)}</h1>
           <span
             className={styles.post_subtitle}

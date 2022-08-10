@@ -17,7 +17,6 @@ const getTenPostsUrl =
 
 const Page: NextPage<PostsProps> = ({ posts, totalPages, page }) => {
   const router = useRouter();
-  const sizes = " (max-width: 1080px) 70vw, 1080px";
   const [currentPage, setCurrentPage] = useState(page);
   const [pagePosts, setPagePosts] = useState<PostState[]>(posts);
 
@@ -80,17 +79,12 @@ const Page: NextPage<PostsProps> = ({ posts, totalPages, page }) => {
             >
               <h2 className={styles.post_title}>{decode(post.title)}</h2>
               {post.imageURL ? (
-                <div style={{width: 350, height: 350 / ratio}}>
-                  <Image
-                    sizes={sizes}
-                    layout="responsive"
-                    objectFit="contain"
-                    width={350}
-                    height={350 / ratio}
-                    src={post.imageURL}
-                    alt={post.alt || post.title}
-                  />
-                </div>
+                <Image
+                  width={350}
+                  height={350 / ratio}
+                  src={post.imageURL}
+                  alt={post.alt || post.title}
+                />
               ) : null}
               <span
                 className={styles.post_description}
