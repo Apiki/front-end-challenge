@@ -26,6 +26,7 @@ const AuthorSection: NextPage<AuthorSectionProps> = ({
           <a className={styles.post_author_link} href={authorLink}>
             {avatar && (
               <Image
+                alt={authorName || "Autor do post"}
                 className={styles.post_author_avatar}
                 width={48}
                 height={48}
