@@ -1,0 +1,77 @@
+@import "ApikiColors";
+
+%center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%center-left {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+%button {
+  font-size: 1rem;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 10px 20px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+
+  &:hover {
+    background-color: darken($apiki_primary_color, 5%);
+    color: #fff;
+
+    &:disabled {
+      background-color: #fff;
+      color: #ccc;
+    }
+  }
+
+  &:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 1080px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: 512px) {
+    @content;
+  }
+}
+
+@mixin smallPhone {
+  @media (max-width: 310px) {
+    @content;
+  }
+}
+
+@mixin dark {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
+
+@mixin dark-background ($color: $dark_background_primary) {
+  @media (prefers-color-scheme: dark) {
+    background-color: $color;
+    @content;
+  }
+}

@@ -1,0 +1,25 @@
+@import "Utils";
+@import "ApikiColors";
+
+.navbar {
+  @extend %center-left;
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 5px;
+  background-color: $apiki_blue;
+
+  @include dark-background;
+}
+
+.navbar_link {
+  @extend %center-left;
+  margin-left: 1rem;
+
+  &:hover {
+    color: $apiki_tertiary_color;
+  }
+
+  @include phone {
+    font-size: 4vw;
+  }
+}

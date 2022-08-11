@@ -1,0 +1,31 @@
+@import "Utils";
+
+%margin-author-section {
+  margin-bottom: 0;
+  margin-left: 15px;
+}
+
+.post_author_section,
+.post_author_link {
+  @extend %center-left;
+}
+
+.post_author_avatar {
+  border-radius: 50%;
+}
+
+.post_author_name {
+  font-weight: bold;
+  @extend %margin-author-section;
+}
+
+.post_date {
+  font-style: italic;
+  @extend %margin-author-section;
+}
+
+@media (max-width: 560px) {
+  #hideOnMobile {
+    display: none;
+  }
+}

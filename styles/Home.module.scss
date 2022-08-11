@@ -1,0 +1,137 @@
+@import "ApikiColors";
+@import "Utils";
+
+.blog_title {
+  background-color: $apiki_blue;
+  color: #fff;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+
+  @include phone {
+    font-size: 3rem;
+  }
+
+  @include dark-background;
+}
+
+.posts_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  padding: 20px;
+  padding-bottom: 0;
+  background-color: $apiki_blue;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+  @include dark-background;
+}
+
+.post_card {
+  @extend %center;
+  flex-direction: column;
+  height: 500px;
+  padding: 20px;
+  padding-bottom: 60px;
+  position: relative;
+  border: solid 2px transparent;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    border: solid 2px rgba($apiki_primary_color, 0.777);
+  }
+
+  @include tablet {
+    height: auto;
+  }
+
+  @include dark-background($dark_background_secondary) {
+    border-color: $dark_background_tertiary;
+
+    &:hover {
+      border-color: rgba($apiki_blue, 0.777);
+    }
+  }
+}
+
+.post_title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.post_description {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.post_card_footer {
+  position: absolute;
+  bottom: 20px;
+  @extend %center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.post_button {
+  @extend %button;
+  @include dark-background($dark_background_quaternary) {
+    color: #fff;
+    &:hover {
+      background-color: $apiki_blue;
+    }
+  }
+}
+
+.pagination {
+  @extend %center;
+  background-color: $apiki_blue;
+
+  @include smallPhone {
+    flex-direction: column;
+  }
+  @include dark-background;
+}
+
+.pagination_counter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+
+  @include phone {
+    font-size: 1rem;
+  }
+}
+
+.pagination_button {
+  @extend %button;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 2rem;
+
+  @include phone {
+    font-size: 1rem;
+    margin: 10px;
+  }
+
+  @include dark-background($dark_background_tertiary) {
+    color: #fff;
+    &:hover {
+      background-color: rgba($apiki_blue, 0.777);
+      &:disabled {
+        color: $dark_background_tertiary;
+        background-color: $dark_background_secondary;
+      }
+    }
+    &:disabled {
+      color: $dark_background_tertiary;
+      background-color: $dark_background_secondary;
+    }
+  }
+}

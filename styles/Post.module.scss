@@ -1,0 +1,100 @@
+@import "ApikiColors";
+@import "Utils";
+
+.outer_container {
+  background-color: $apiki_blue;
+  @include dark-background;
+}
+
+.post_container {
+  position: relative;
+  padding: 20px 10%;
+  margin: auto;
+  width: 80vw;
+  border: solid 3px rgba(lighten($apiki_secondary_color, 20%), 0.777);
+  background-color: #fff;
+
+  @include mobile {
+    width: 100vw;
+    padding: 20px 5%;
+  }
+
+  @include dark-background($dark_background_tertiary) {
+    border: solid 3px $dark_background_secondary;
+  }
+}
+
+%button_back {
+  position: absolute;
+  @extend %center;
+  top: 5px;
+  left: 10px;
+  width: 10vw;
+  height: 5vw;
+  max-width: 100px;
+  max-height: 50px;
+  min-width: 70px;
+  min-height: 35px;
+  z-index: 1;
+  padding: 0.5rem 1rem;
+  border: solid 2px rgba(lighten($apiki_secondary_color, 20%), 0.777);
+  border-radius: 10px;
+  background-color: $apiki_secondary_color;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $apiki_blue;
+    border: solid 2px rgba(lighten($apiki_blue, 20%), 0.777);
+  }
+
+  @include tablet {
+    font-size: 1rem;
+  }
+}
+
+.button_back {
+  @extend %button_back;
+}
+
+.post_title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.post_subtitle {
+  color: #777;
+  font-size: 1.35rem;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.post_content {
+  font-size: 1rem;
+  margin-bottom: 4rem;
+  max-width: 80vw;
+
+  img,
+  figure {
+    // the elements from the html API response
+    margin: 0;
+    max-width: 100%;
+    height: auto;
+  }
+
+  @include mobile {
+    max-width: 90vw;
+    padding: 0px;
+  }
+}
+
+.button_back_bottom {
+  @extend %button_back;
+  top: auto;
+  bottom: 0;
+  left: calc(50% - 5vw);
+  margin-bottom: 1rem;
+}

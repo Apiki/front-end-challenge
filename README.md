@@ -1,6 +1,21 @@
-# Desafio - Front-end Developer
+# Desafio - Front-end Developer | Fernando Gurgel
 Este desafio tem como objetivo te avaliar como desenvolvedor Front-end: JavaScript, HTML, CSS e lógica de programação.
 
+## Principais Diferenciais deste projeto
+Dentre as principais melhorias e diferenciais, estão:
+- Super Otimização de velocidade para mobile e desktop (score 100% GTMetrix e Google Pagespeed)
+- Páginas estáticas (ISR - incremental static regeneration)
+- Suporte a tema escuro (selecionado automaticamente)
+- Alta reutilização de código usando utils (DRY)
+- Tipagem (TypeScript)
+- NextJS
+- OOCSS
+- SASS
+
+## DEMO
+![GIF mostrando as funcionalidade do projeto](https://media4.giphy.com/media/ALCUlzW0k88Hl8g1A0/giphy.gif?cid=790b7611221ccc32a7c753f142ab2dd99fd0ce18b411f8ab&rid=giphy.gif&ct=g)
+
+Versão Live: [acessar](https://front-end-challenge-beta.vercel.app).
 ## O Desafio
 Queremos montar uma versão do blog da Apiki apenas para Devs, e queremos que essa seja uma solução headless, esta nova versão terá as seguintes páginas: 
 
