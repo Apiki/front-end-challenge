@@ -1,23 +1,37 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext, useCallback } from 'react';
 import { getPosts } from '../../../services/posts';
 import { ItemCard, ContainerHome } from './styles';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../contexts/AuthContext';
 
 const Home = () => {
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
+    const { user } = useContext(AuthContext);
 
-    const getPostsService = async () => {
-        const { success, data } = await getPosts();
-        if(success) {
-            setPosts(data.data);
-            setLoading(false);
-        }
-    }
+    
+
+    const getPostsService = useCallback(
+        () => {
+            const getPostsService = async () => {
+                const { success, data } = await getPosts();
+                if(success) {
+                    setPosts(data.data);
+                    setLoading(false);
+                }
+            }
+            getPostsService();
+        },
+        [],
+    );
+    
 
     useEffect(() => {
-        getPostsService()
-    }, [])
+        getPostsService();
+        console.log('Context:::::::>>>> ')
+        console.log(user);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [user])
 
     if(loading) return <div>Carregando os melhores conteúdos...</div>
     return (
