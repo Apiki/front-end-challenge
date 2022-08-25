@@ -1,3 +1,4 @@
+import { sanitize } from "isomorphic-dompurify";
 import { GetServerSideProps } from "next";
 import Head from "next/head";
 import styles from "./posts.module.scss";
@@ -35,8 +36,7 @@ export default function Post({ data }: any) {
               year: "numeric",
             })}
           </time>
-          <p className={styles.postContainer}>
-            {data.content.rendered.replace(/(<([^>]+)>)/gi, "")}
+          <p dangerouslySetInnerHTML={{ __html: sanitize(data.content.rendered) }} className={styles.postContainer}>
           </p>
         </article>
       </main>
