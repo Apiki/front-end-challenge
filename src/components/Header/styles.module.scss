@@ -47,7 +47,7 @@
         color: var(--white);
   
         &.active {
-          color: white;
+          color: var(--white);
           font-weight: bold;
         }
   
@@ -60,7 +60,7 @@
         position: absolute;
         bottom: 1px;
         left: 0;
-        background: yellow;
+        background: var(--yellow500);
       }
     }
 }

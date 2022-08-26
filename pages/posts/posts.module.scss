@@ -7,6 +7,11 @@
   align-items: center;
 }
 
+
+.back{
+  margin: 2rem;
+}
+
 @media only screen and (max-width: 600px) {
   .post{
     width: 350px;
@@ -16,7 +21,9 @@
       margin-bottom: 2rem;
     }
   }
+
 }
+
 
 .post {
   max-width: 720px;
@@ -56,6 +63,14 @@
     ul {
       margin: 1.5rem 0;
       
+    }
+
+    ul {
+      padding-left: 1.5rem;
+
+      li{
+        margin: 0.5rem 0;
+      }
     }
   }
 }

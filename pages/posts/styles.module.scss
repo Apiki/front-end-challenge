@@ -3,6 +3,8 @@
   margin: 0 auto;
   padding: 0 auto;
 
+  
+
   button {
     display: flex;
     justify-content: center;
@@ -15,25 +17,27 @@
     display: flex;
     justify-content: center;
     font-weight: bold;
+    border-radius: .5rem;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .posts{
+  .posts {
     width: 300px;
   }
 }
+
 
 .posts {
   max-width: 720px;
   margin: 5rem auto 0;
 
+  
+
   a {
     display: block;
     margin-top: 2rem;
     padding-top: 2rem;
-    
-    
 
     & + a {
       margin-top: 2rem;
@@ -43,7 +47,6 @@
 
     img {
       width: 9rem;
-      height: 5rem;
       margin-bottom: 1rem;
     }
 
@@ -69,7 +72,7 @@
     }
 
     &:hover strong {
-      color: yellow;
+      color: var(--yellow500);
     }
   }
 }

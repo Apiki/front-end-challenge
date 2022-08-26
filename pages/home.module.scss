@@ -10,26 +10,22 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .contentContainer{
+  .contentContainer {
     margin-top: 5rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-
 }
 
 @media only screen and (max-width: 600px) {
-    
-  .image{
+  .image {
     width: 350px;
     margin-top: 4rem;
   }
 }
 .hero {
   max-width: 600px;
-
-  
 
   span {
     font-size: 1.5rem;
