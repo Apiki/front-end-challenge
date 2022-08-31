@@ -16,9 +16,11 @@ function List() {
       const resp = await axios.get(
         `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=${slug}`
       );
-      console.log(resp);
-      setData(resp.data);
-      setLoading(false);
+
+      if (resp.data.length >= 1) {
+        setData(resp.data);
+        setLoading(false);
+      }
     };
     getPost();
   }, [slug]);

@@ -1,4 +1,4 @@
-import styles from "./ButtonCard.module.css";
+import styles from "./ButtonCard.module.scss";
 
 function ButtonCard(props) {
   const btnStyle = {

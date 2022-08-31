@@ -1,4 +1,4 @@
-import styles from "./ButtonPaginator.module.css";
+import styles from "./ButtonPaginator.module.scss";
 
 function ButtonPaginator(props) {
   return (

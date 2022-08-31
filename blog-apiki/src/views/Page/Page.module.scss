@@ -6,6 +6,7 @@
 }
 .title {
   text-align: center;
+  color: #019be9;
 }
 .pageContentContainer {
   padding: 30px;
@@ -27,4 +28,33 @@
   align-items: center;
   width: 100%;
   height: calc(100vh - 80px);
+}
+
+@media screen and (max-width: 768px) {
+  .pageContentContainer {
+    padding: 10px;
+    .pageContent {
+      table {
+        font-size: 0.8rem;
+      }
+      figure {
+        margin: 0;
+        img {
+          width: 100%;
+          height: 200px;
+        }
+      }
+      p {
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
 }

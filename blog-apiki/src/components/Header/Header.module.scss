@@ -10,3 +10,11 @@
   color: #019be9;
   font-weight: bold;
 }
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 150px;
+  }
+  .link {
+    font-size: 0.7rem;
+  }
+}

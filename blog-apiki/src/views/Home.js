@@ -1,8 +1,8 @@
-import styles from "./Home.module.css";
+import styles from "./Home.module.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import PostCard from "../components/PostCard/PostCard";
-import ButtonPaginator from "../components/Button/ButtonPaginator";
+import ButtonPaginator from "../components/ButtonPaginator/ButtonPaginator";
 import ClipLoader from "react-spinners/ClipLoader";
 
 function App() {
@@ -16,15 +16,16 @@ function App() {
       const resp = await axios.get(
         `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=${page}`
       );
-      console.log(resp);
-      const data = [];
-      for (let el of resp.data) {
-        if (el._embedded["wp:featuredmedia"]) {
-          data.push(el);
+      if (resp.data.length >= 1) {
+        const data = [];
+        for (let el of resp.data) {
+          if (el._embedded["wp:featuredmedia"]) {
+            data.push(el);
+          }
         }
+        setPages(parseInt(resp.headers["x-wp-totalpages"]));
+        setPosts(data);
       }
-      setPages(parseInt(resp.headers["x-wp-totalpages"]));
-      setPosts(data);
       setLoading(false);
     };
     getBlogPosts();

@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import styles from "./PostCard.module.css";
-import ButtonCard from "../Button/ButtonCard";
+import styles from "./PostCard.module.scss";
+import ButtonCard from "../ButtonCard/ButtonCard";
 
 function PostCard(props) {
   const navigate = useNavigate();
