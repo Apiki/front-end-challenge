@@ -1,0 +1,18 @@
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 310px;
+  border: 1px solid #000;
+  margin-bottom: 50px;
+  border-radius: 15px;
+}
+.image {
+  height: 265px;
+}
+.title {
+  font-weight: bold;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 15px 15px 0 0;
+}

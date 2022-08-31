@@ -1,0 +1,30 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+}
+.title {
+  text-align: center;
+}
+.pageContentContainer {
+  padding: 30px;
+  .pageContent {
+    figure {
+      text-align: center;
+      img {
+        max-width: 90% !important;
+      }
+    }
+    p {
+      margin-bottom: 5px;
+    }
+  }
+}
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 80px);
+}
