@@ -1,0 +1,20 @@
+.headerContainer {
+  width: 95%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.link {
+  text-decoration: none;
+  color: #019be9;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 150px;
+  }
+  .link {
+    font-size: 0.7rem;
+  }
+}

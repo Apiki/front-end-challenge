@@ -1,0 +1,23 @@
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 310px;
+  border: 1px solid #000;
+  margin-bottom: 50px;
+}
+.image {
+  height: 265px;
+}
+.title {
+  font-weight: bold;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 15px 15px 0 0;
+}
+@media screen and (max-width: 768px) {
+  .cardContainer {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
