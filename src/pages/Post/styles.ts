@@ -39,11 +39,13 @@ export const PostContent = styled.main`
       font-size: 0.85rem;
     }
 
-    th,td {
+    th,
+    td {
       padding: 0.2rem;
     }
   }
-  ul, li {
+  ul,
+  li {
     list-style: none;
     margin-top: 0.875rem;
 
@@ -66,6 +68,10 @@ export const PostContent = styled.main`
   }
   h2 {
     font-size: 1.2rem;
+  }
+
+  h2,
+  h3 {
     margin: 1rem 0;
   }
 `

@@ -43,34 +43,30 @@ export function Post() {
     __html: DOMPurify.sanitize(post?.content.rendered as string),
   })
 
-
-
   return (
     <>
       <Header />
 
       {loading ? (
         <Loader />
-      ): (
+      ) : (
         <PostContainer>
-        <header>
-          <h1>{post?.title.rendered}</h1>
-        </header>
+          <header>
+            <h1>{post?.title.rendered}</h1>
+          </header>
 
-        <PostContent>
-          <img
-            src={
-              post?._embedded['wp:featuredmedia'] &&
-              post?._embedded['wp:featuredmedia'][0].source_url
-            }
-            alt=""
-          />
-          <div dangerouslySetInnerHTML={sanitizedData()}></div>
-        </PostContent>
-      </PostContainer>
+          <PostContent>
+            <img
+              src={
+                post?._embedded['wp:featuredmedia'] &&
+                post?._embedded['wp:featuredmedia'][0].source_url
+              }
+              alt=""
+            />
+            <div dangerouslySetInnerHTML={sanitizedData()}></div>
+          </PostContent>
+        </PostContainer>
       )}
-
-
     </>
   )
 }
