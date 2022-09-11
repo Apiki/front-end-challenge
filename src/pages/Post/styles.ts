@@ -44,13 +44,17 @@ export const PostContent = styled.main`
       padding: 0.2rem;
     }
   }
-  ul,
-  li {
-    list-style: none;
-    margin-top: 0.875rem;
 
-    &:last-child {
-      margin-bottom: 0.875rem;
+  ul {
+    padding-left: 2rem;
+
+    li {
+      list-style: square;
+      margin-top: 0.875rem;
+
+      &:last-child {
+        margin-bottom: 0.875rem;
+      }
     }
   }
 
@@ -62,10 +66,12 @@ export const PostContent = styled.main`
       margin-top: 1rem;
     }
   }
+
   p {
     margin-top: 1rem;
     line-height: 1.2;
   }
+
   h2 {
     font-size: 1.2rem;
   }
@@ -73,5 +79,13 @@ export const PostContent = styled.main`
   h2,
   h3 {
     margin: 1rem 0;
+  }
+
+  pre {
+    margin: 1rem auto;
+    background: ${(props) => props.theme['base-post']};
+    padding: 1rem;
+    overflow: auto;
+    border-radius: 0.3rem;
   }
 `
