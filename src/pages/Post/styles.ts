@@ -63,7 +63,7 @@ export const PostContent = styled.main`
     }
   }
   p {
-    font-size: 0.875rem;
+    margin-top: 1rem;
     line-height: 1.2;
   }
   h2 {
