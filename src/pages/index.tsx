@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
-import { Card } from '../../components/Card'
-import { Header } from '../../components/Header'
-import { HeaderCategory, HomeContent } from './styles'
-import { ButtonPaginate } from '../../components/ButtonPaginate'
-import { api } from '../../lib/axios'
-import { Loader } from '../../components/Loader'
+import { Card } from '../components/Card'
+import { ButtonPaginate } from '../components/ButtonPaginate'
+import { api } from '../lib/axios'
+import { Loader } from '../components/Loader'
+import { HeaderCategory, HomeContent } from '../styles/pages/home'
+import Head from 'next/head'
 
 interface PostProps {
   imgURl: string
@@ -22,7 +22,7 @@ interface PostProps {
   }
 }
 
-export function Home() {
+export default function Home() {
   const [posts, setPosts] = useState<PostProps[]>([])
   const [page, setPage] = useState(1)
   const [pageCount, setPageCount] = useState(0)
@@ -58,7 +58,10 @@ export function Home() {
 
   return (
     <>
-      <Header />
+
+      <Head>
+        <title> Home | Blog Apiki</title>
+      </Head>
 
       {loading ? (
         <Loader />

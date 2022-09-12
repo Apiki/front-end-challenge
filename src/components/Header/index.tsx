@@ -1,15 +1,18 @@
-import { Link } from 'react-router-dom'
+import Image from 'next/image'
 import { HeaderContainer } from './style'
+
+import imgLogo from '../../assets/logo.png'
+import Link from 'next/link'
 
 export function Header() {
   return (
-    <HeaderContainer>
-      <Link to="/">
-        <img
-          src="https://blog.apiki.com/wp-content/uploads/sites/2/2020/04/marca-apiki-blog-h552.png"
-          alt=""
-        />
+      <Link href="/">
+        <HeaderContainer>
+            <Image
+              src={imgLogo}
+              alt=""
+            />
+        </HeaderContainer>
       </Link>
-    </HeaderContainer>
   )
 }

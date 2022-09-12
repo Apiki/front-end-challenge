@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom'
+import Image from 'next/image'
+import Link from 'next/link'
 import { CardContainer, CardContent } from './style'
 
 interface CardProps {
@@ -13,7 +14,7 @@ export function Card({ imgURl, title, slug }: CardProps) {
       <img src={imgURl} alt="" />
       <CardContent>
         <h3>{title}</h3>
-        <Link to={`post/${slug}`}>{slug}</Link>
+        <Link href={`post/${slug}`}>{slug}</Link>
       </CardContent>
     </CardContainer>
   )

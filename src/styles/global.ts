@@ -14,12 +14,13 @@ export const GlobalStyle = createGlobalStyle`
 
 
  body, input, textarea, button {
-  font: 400 1rem 'Nunito', sans-serif;
+  font: 400 1rem 'Montserrat', sans-serif;
   color: ${(props) => props.theme['base-title']};
  }
 
  a {
     color: ${(props) => props.theme['base-label']};
+    cursor: pointer;
   }
 
 
