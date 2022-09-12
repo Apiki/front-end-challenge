@@ -1,0 +1,25 @@
+{
+  "name": "desafio-frontend",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "next": "12.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.16",
+    "@types/react": "^18.0.18",
+    "@types/styled-components": "^5.1.26",
+    "eslint": "8.23.0",
+    "eslint-config-next": "12.3.0",
+    "typescript": "^4.6.4"
+  }
+}
