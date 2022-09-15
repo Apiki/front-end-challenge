@@ -1,7 +1,7 @@
-import { Route, BrowserRouter, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import Internal from "./pages/Internal";
-import "./styles.css";
+import { Route, BrowserRouter, Routes } from "react-router-dom"
+import Home from "./pages/Home"
+import Internal from "./pages/Internal"
+import "./styles.css"
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <Route path="/internal/:slug" element={<Internal />} />
       </Routes>
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
-import Preview from "../../components/Preview";
-import "./styles.css";
+import React, { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
+import Footer from "../../components/Footer"
+import Header from "../../components/Header"
+import Preview from "../../components/Preview"
+import "./styles.css"
 
 const Home = () => {
-  const [posts, setPosts] = useState();
-  const [loading, setLoading] = useState();
-  const [page, setPage] = useState(1);
+  const [posts, setPosts] = useState()
+  const [loading, setLoading] = useState()
+  const [page, setPage] = useState(1)
 
-  var scrollTop = () => window.scrollTo(0, 0);
+  var scrollTop = () => window.scrollTo(0, 0)
 
   useEffect(() => {
-    setLoading(true);
+    setLoading(true)
     fetch(
       `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=${page}`,
       {
@@ -21,26 +21,26 @@ const Home = () => {
       }
     )
       .then(async (response) => {
-        const data = await response.json();
-        setPosts(data);
-        setLoading(false);
-        scrollTop();
+        const data = await response.json()
+        setPosts(data)
+        setLoading(false)
+        scrollTop()
       })
       .catch((err) => {
-        setPosts(err.message);
-      });
-  }, [page]);
+        setPosts(err.message)
+      })
+  }, [page])
 
   const changePage = () => {
-    setPage(page + 1);
-  };
+    setPage(page + 1)
+  }
 
   return (
-    <div className="home">
+    <div className="c-home">
       <Header />
 
-      <div className="content">
-        <h2 className="home__subtitle">
+      <div className="c-home__content">
+        <h2 className="c-home__content__subtitle">
           Posts do Blog Apiki - categoria: <strong>Desenvolvimento</strong>
         </h2>
         {posts?.map((content) => (
@@ -52,16 +52,16 @@ const Home = () => {
             />
           </Link>
         ))}
-        <div id="box__Button">
-        <button onClick={changePage} id="button">
-          {loading ? "Carregando..." : "Carregar mais..."}
-        </button>
+        <div id="container-button">
+          <button onClick={changePage} id="button">
+            {loading ? "Carregando..." : "Carregar mais..."}
+          </button>
+        </div>
       </div>
-      </div>
-      
+
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

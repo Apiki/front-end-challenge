@@ -1,4 +1,4 @@
-.internal{
+.c-internal__content__position{
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -6,9 +6,18 @@
   align-items: center;
 }
 
-#img__internal{
+#c-internal__img{
   width: 70%;
   height: 70%;
+  margin: 30px auto;
+}
+
+.c-internal__content{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
   margin: 30px auto;
 }
 
@@ -27,17 +36,9 @@ img{
   display: block;
 }
 
-.content__internal{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  width: 80%;
-  margin: 30px auto;
-}
-
 table{
   margin: 0 auto;
+  font-size: 14px;
 }
 
 th{
@@ -64,7 +65,7 @@ table tr:nth-child(even) {
 
 p{
   text-align: justify;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   margin: 10px 0;
 }
