@@ -54,3 +54,11 @@
   font-weight: bold;
   width: 100%;
 }
+
+@media (max-width: 500px)
+{
+  .c-preview__content__title
+   {
+    font-size: 18px;
+   }
+}
