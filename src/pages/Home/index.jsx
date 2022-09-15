@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Preview from "../../components/Preview";
@@ -37,23 +38,27 @@ const Home = () => {
   return (
     <div className="home">
       <Header />
-      <h4 className="home__subtitle">
-        Posts do Blog Apiki - categoria: <strong>Desenvolvimento</strong>
-      </h4>
+
       <div className="content">
+        <h2 className="home__subtitle">
+          Posts do Blog Apiki - categoria: <strong>Desenvolvimento</strong>
+        </h2>
         {posts?.map((content) => (
-          <Preview
-            image={content.yoast_head_json.twitter_image}
-            title={content.title.rendered}
-            dataPost={content.date}
-          />
+          <Link className="links" to={`internal/${content.slug}`}>
+            <Preview
+              image={content.yoast_head_json.twitter_image}
+              title={content.title.rendered}
+              dataPost={content.date}
+            />
+          </Link>
         ))}
-      </div>
-      <div id="box__Button">
+        <div id="box__Button">
         <button onClick={changePage} id="button">
           {loading ? "Carregando..." : "Carregar mais..."}
         </button>
       </div>
+      </div>
+      
       <Footer />
     </div>
   );
