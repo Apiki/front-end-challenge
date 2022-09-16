@@ -26,12 +26,6 @@ const Card = (props) => {
                     {props.cards._embedded.author[0].description}
                   </p>
                 </div>
-                <div className={Styles.card__content}>
-                  <div className={Styles.card__content__item}>
-                    <img className={Styles.card__avatar} src={""} alt="" />
-                  </div>
-                  <div className={Styles.card__content__item}></div>
-                </div>
               </div>
             </Link>
           )}

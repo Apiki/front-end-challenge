@@ -41,38 +41,3 @@
     margin-top: 20px;
 }
 
-.card__avatar {
-    border-radius: 50%;
-    margin-left: 15px;
-}
-
-.card__content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: normal;
-    align-items: normal;
-    align-content: normal;
-}
-
-.card__content__item:nth-child(1) {
-    display: block;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    order: 0;
-}
-
-.card__content__item:nth-child(2) {
-    display: block;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    order: 0;
-    margin-left: 15px;
-    color: #fff;
-    font-size: 20px;
-    margin-top: 13px;
-}
