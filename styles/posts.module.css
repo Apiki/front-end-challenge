@@ -1,0 +1,33 @@
+.post__flex{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1350px;
+  margin: auto;
+  margin-bottom: 20px;
+
+}
+
+.post__knowMore{
+    width: 100%;
+    text-align: center;
+}
+
+.button__knowMore{
+    width: 100%;
+    max-width: 200px;
+    padding: 20px;
+    background-color: #98bd13;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 20px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.post__loading {
+    width: 200px;
+    margin: auto;
+    margin-top: 100px;
+}
+
