@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: normal;
+    align-content: space-around;
+    background-color: #0d1622;
+    padding: 20px;
+    position: sticky;   
+    top: 0;
+    width: 100%;
+}
+
+.header__image {
+    width: 100%;
+    max-width: 150px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.header__link {
+    margin-right: 10px;
+    width: 100%;
+    max-width: 100px;
+    color: #2db80d;
+    text-align: center;
+    line-height: 3.0;
+    font-weight: 500;
+    border:  1px solid #9fef00;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.header__link:hover {
+    background-color:#9fef00;
+    color: black;
+ 
+}
