@@ -1,12 +1,30 @@
-import * as React from "react";
+import React from "react";
+import { GetStaticProps } from "next";
 
 import * as S from "./styles";
-import Card from "../../components/Card"
+import Card from "../../components/Card";
+import { BASE_URL } from "../../utils/constants";
 
-export default function Example() {
-    return (
+const Posts = ({posts}) => {
+    return ( 
         <S.Container>
-            <Card />
+            {
+                posts.map((post) => (
+                    <Card key={post.id} post={post} />
+                ))
+            }
         </S.Container>
     );
-}
+};
+
+export const getStaticProps: GetStaticProps = async() => {
+    const data = await fetch(BASE_URL);
+
+    const posts = await data.json();
+
+    return {
+      props: { posts }
+    };
+};
+
+export default Posts;

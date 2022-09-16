@@ -13,6 +13,8 @@
     "@chakra-ui/react": "^2.3.2",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
+    "axios": "^0.27.2",
+    "date-fns": "^2.29.3",
     "framer-motion": "^6.5.1",
     "next": "12.3.0",
     "react": "18.2.0",
