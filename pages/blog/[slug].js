@@ -8,7 +8,6 @@ import { useState } from "react";
 
 const PostsSlug = (props) => {
   const [post, setPost] = useState(props.data[0]);
-  console.log(props.data[0]._embedded.author[0].name);
   return (
     <>
       {post ? (
