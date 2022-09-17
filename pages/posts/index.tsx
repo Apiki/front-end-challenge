@@ -18,7 +18,7 @@ const Posts = ({posts}) => {
 };
 
 export const getStaticProps: GetStaticProps = async() => {
-    const data = await fetch(BASE_URL);
+    const data = await fetch(`${BASE_URL}&categories=518`);
 
     const posts = await data.json();
 

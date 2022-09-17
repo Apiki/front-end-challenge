@@ -24,7 +24,7 @@ export default function Card({post}) {
 
     return (
         <Box p="2" m="0.8rem" minW="16rem" maxW="22rem" borderWidth="1px" borderRadius="md">
-            <Link href={"/"} >
+            <Link href={`/post/${post.slug}`} >
                 <a>
                     <Image borderRadius="md" src={post.yoast_head_json.og_image[0].url} alt="Images" mb="2.5" />
                 </a>
@@ -38,7 +38,7 @@ export default function Card({post}) {
                     letterSpacing={1.1}>
                     {post.yoast_head_json.og_type}
                 </Text>
-                <Link href={"/"} >
+                <Link href={`/post/${post.slug}`} >
                     <a>
                         <Heading
                             color={useColorModeValue('gray.700', 'white')}
@@ -72,32 +72,3 @@ export default function Card({post}) {
         </Box>
     )
 }
-
-// export const getStaticProps: GetStaticProps = async(context) => {
-//     const { params } = context
-//     const data = await fetch(
-//         `${BASE_URL}/${params.post}`
-//     )
-
-//     const post = await data.json();
-
-//     return {
-//       props: { post }
-//     }
-// }
-
-// export const getStaticPaths: GetStaticPaths = async() => {
-//     const response = await fetch(BASE_URL)
-
-//     const data = await response.json()
-
-//     const paths = data.map((post) => {
-//         return {
-//             params: {
-//                 post: `${post.slug}`
-//             }
-//         }
-//     })
-
-//     return { paths, fallback: false }
-// }
