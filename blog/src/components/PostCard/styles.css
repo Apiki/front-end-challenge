@@ -1,0 +1,39 @@
+.post-list-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding-bottom: 30px;
+}
+
+.post-list-figure img {
+    width: 37vw;
+    height: 252px;
+    background-size: cover;
+    border-radius: 8px;
+}
+
+.post-list-info {
+    width: 49vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 4px;
+}
+
+.post-list-info-data h2 {
+    padding: 10px 0 8px 0px;
+
+    color: #262626;
+}
+
+.post-list-info-data time {
+    color: #7f7f7f;
+    font-size: 0.7rem;
+}
+
+.post-list-info-data h3 {
+    color: #4e4e4e;
+    font-weight: 400;
+    font-style: italic;
+}

@@ -1,0 +1,9 @@
+main {
+    margin: 50px 70px;
+}
+
+
+.post-container {
+    display: flex;
+    flex-direction: column;
+}
