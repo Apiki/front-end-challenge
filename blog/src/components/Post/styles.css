@@ -1,0 +1,54 @@
+main {
+    margin: 50px 70px;
+}
+
+.publication-structure {
+    display: flex;
+    flex-direction: column;
+}
+
+.publication-figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    padding-top: 20px;
+}
+
+.publication-figure img {
+    width: 60%;
+    height: 400px;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.publication-date {
+    padding-bottom: 8px;
+
+    font-size: 0.9rem;
+
+    color: #7f7f7f;
+}
+
+.publication-title h2 {
+    font-size: 1.9rem;
+    padding-bottom: 8px;
+
+    color: #262626;
+}
+
+.publication-description h3 {
+    padding-bottom: 8px;
+
+    color: #202020;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.publication-text p {
+    color: #262626;
+    line-height: 1.6;
+
+    padding-top: 20px;
+}

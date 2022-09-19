@@ -1,0 +1,35 @@
+header {
+    width: 100vw;
+
+    background-color: #cacaca;
+    box-shadow: 2px 2px 2px 1px rgba(29, 29, 29, 0.178);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 70px;
+}
+
+.logo {
+    display: flex;
+    
+    text-decoration: none;
+}
+
+.logo img {
+    height: 40px;
+}
+
+h1 {
+    font-size: 40px;
+
+    color: black;
+}
+
+.social-media img {
+    height: 16px;
+    padding-left: 15px;
+}

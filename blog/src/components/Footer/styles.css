@@ -1,0 +1,32 @@
+footer {
+    width: 100vw;
+
+    background-color: #2c2c2c;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 70px;
+}
+
+.logo {
+    display: flex;
+    
+    text-decoration: none;
+}
+
+.logo img {
+    height: 40px;
+}
+
+p {
+    color: rgb(216, 216, 216);
+}
+
+.social-media img {
+    height: 16px;
+    padding-left: 15px;
+}
