@@ -1,10 +1,9 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from '../src/App'
+
 function HomePage () {
-  
-  return (
-    <div>
-      SejaDev
-    </div>
-  )
+  <App/>
 }
 
 export default HomePage
