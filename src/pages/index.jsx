@@ -1,7 +1,7 @@
 import Header from '../components/Header/index.jsx';
 import Cards from '../components/Cards/index.jsx';
 import { useEffect, useState } from "react";
-import axios from 'axios';
+import axios from 'axios'; 
 import styles from '../styles/Button.module.css'
 
 export default function Home() {
