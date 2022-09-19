@@ -1,0 +1,40 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 9rem;
+  
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+
+  height: 38rem;
+  width: 90%;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  margin-block: 2rem;
+
+  padding-inline: 12rem;
+  padding-block: 4rem;
+}
+
+.card img {
+  cursor: pointer;
+}
+
+.card h3 {
+  font-size: 3rem;
+  text-align: justify;
+  width: 50rem;
+  cursor: pointer
+}
+
+.card p {
+  font-size: 1.8rem;
+  text-align: justify;
+  width: 50rem;
+}
