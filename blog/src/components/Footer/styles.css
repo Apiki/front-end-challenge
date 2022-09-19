@@ -1,8 +1,7 @@
-header {
+footer {
     width: 100vw;
 
-    background-color: #cacaca;
-    box-shadow: 2px 2px 2px 1px rgba(29, 29, 29, 0.178);
+    background-color: #2c2c2c;
 }
 
 nav {
@@ -10,7 +9,7 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    padding: 10px 70px;
+    padding: 20px 70px;
 }
 
 .logo {
@@ -23,10 +22,8 @@ nav {
     height: 40px;
 }
 
-h1 {
-    font-size: 40px;
-
-    color: black;
+p {
+    color: rgb(216, 216, 216);
 }
 
 .social-media img {

@@ -7,19 +7,11 @@ import './styles.css';
 function Home() {
 
   const [posts, setPosts] = useState([]);
-  const [loadPage, setLoadPage] = useState('');
-  const [page, setPage] = useState(1);
-
-  
-  function nextPage() {
-    setPage(page + 1);
-  } 
-
 
   useEffect(() => {
     async function loadAPI() {
       try {
-        const response = await api.get(`/posts?_embed&categories=518${loadPage}`);
+        const response = await api.get(`/posts?_embed&categories=518`);
 
         if (response.status > 204) {
           return;
@@ -32,8 +24,9 @@ function Home() {
       }
     }
     loadAPI();
-  }, [loadPage,setLoadPage]);
+  }, []);
   
+  // useEffect()
   console.log(posts)
   return (
     <main className='main-container'>
@@ -53,7 +46,7 @@ function Home() {
 
         </div>
         <div className='post-container-loading'>
-          <button className='button-home' onClick={nextPage}>Carregar mais...</button>
+          <button className='button-home'>Carregar mais...</button>
         </div>
 
       </section>

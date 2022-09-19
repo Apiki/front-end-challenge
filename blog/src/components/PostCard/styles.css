@@ -1,30 +1,37 @@
 .post-list-card {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 
-    padding-bottom: 30px;
-}
+    margin-bottom: 40px;
+    padding: 10px;
 
-.post-list-figure img {
-    width: 37vw;
-    height: 252px;
-    background-size: cover;
-    border-radius: 8px;
+    width: 27vw;
+    height: 450px;
+    
+    border-radius: 10px;
+    
+    background-color: #f3f3f3;
+    box-shadow: 2px 2px 2px 1px rgba(29, 29, 29, 0.178);
 }
 
 .post-list-info {
-    width: 49vw;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
-    padding-bottom: 4px;
 }
 
-.post-list-info-data h2 {
-    padding: 10px 0 8px 0px;
 
-    color: #262626;
+.post-list-figure img {
+    border-radius: 10px;
+    background-size: contain;
+
+    max-width: 100%;
+
+    object-fit: cover;
+
+    margin-bottom: 5px;
 }
 
 .post-list-info-data time {
@@ -32,8 +39,20 @@
     font-size: 0.7rem;
 }
 
+.post-list-info-data h2 {
+    font-size: 1.2rem;
+    color: #262626;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .post-list-info-data h3 {
     color: #4e4e4e;
     font-weight: 400;
     font-style: italic;
+
+    font-size: 0.9rem;
+
+    margin-bottom: 10px;
 }
+

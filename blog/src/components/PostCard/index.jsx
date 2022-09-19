@@ -1,7 +1,7 @@
+import './styles.css';
+import editDate from '../../utils/editDate.jsx';
 import { useNavigate } from 'react-router-dom';
 import UseGlobalContextProvider from '../../hooks/useGlobalContextProvider';
-import editDate from '../../utils/editDate.jsx';
-import './styles.css';
 
 function PostCard({ image, date, title, content, slug }) {
 
@@ -10,7 +10,7 @@ function PostCard({ image, date, title, content, slug }) {
 
     function LoadPost() {
         setSlugData(slug);
-        navigate('/post')
+        navigate('/post')   
     };
 
     return (

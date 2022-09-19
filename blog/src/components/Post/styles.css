@@ -31,22 +31,22 @@ main {
     color: #7f7f7f;
 }
 
-.publication-title {
+.publication-title h2 {
     font-size: 1.9rem;
     padding-bottom: 8px;
 
     color: #262626;
 }
 
-.publication-description {
+.publication-description h3 {
     padding-bottom: 8px;
 
-    color: #4e4e4e;
+    color: #202020;
     font-weight: 400;
     font-style: italic;
 }
 
-.publication-text {
+.publication-text p {
     color: #262626;
     line-height: 1.6;
 
