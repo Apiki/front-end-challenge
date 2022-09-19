@@ -7,17 +7,17 @@ import { GlobalStyle, theme } from '../GlobalStyle'
 import Main from '../components/Main';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return(
+  return (
     <>
       <GlobalStyle />
-      <ThemeProvider theme={theme}>
-        <ChakraProvider>
-          <Main>
-            <Component {...pageProps} />
-          </Main>
-        </ChakraProvider>
-      </ThemeProvider>
-    </> 
+        <ThemeProvider theme={theme}>
+          <ChakraProvider>
+            <Main>
+              <Component {...pageProps} />
+            </Main>
+          </ChakraProvider>
+        </ThemeProvider>
+    </>
   )
 }
 

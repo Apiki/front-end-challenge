@@ -20,10 +20,14 @@
     "html-react-parser": "^3.0.4",
     "isomorphic-dompurify": "^0.22.0",
     "next": "12.3.0",
+    "phosphor-react": "^1.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
-    "styled-components": "^5.3.5"
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-query": "^3.39.2",
+    "styled-components": "^5.3.5",
+    "sweetalert2": "^11.4.33"
   },
   "devDependencies": {
     "@types/node": "18.7.16",

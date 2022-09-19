@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { IconButton } from '@chakra-ui/react';
-import { SearchIcon } from '@chakra-ui/icons';
+import { MagnifyingGlass, House, Info } from "phosphor-react";
 
 import * as S from './styles'
 import Link from "next/link";
@@ -19,12 +18,15 @@ export default function Navbar() {
                     />
                 </a>
             </Link>
-            <IconButton 
-                variant='link'
-                colorScheme='blue'
-                aria-label='Search database' 
-                icon={<SearchIcon color="white" />} 
-            />
+            <S.Menu>
+                <MagnifyingGlass size={26} cursor="pointer"/>
+                <Link href="/" >
+                    <S.Icon><House size={26}/> Home</S.Icon>
+                </Link>
+                <Link href="/" >
+                    <S.Icon><Info size={26} /> Sobre</S.Icon>
+                </Link>
+            </S.Menu>
         </S.Container>
     )
 }

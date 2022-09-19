@@ -12,3 +12,15 @@ export const Container = styled.div`
         padding: 0.5rem 1.5rem;
     }
 `
+
+export const Menu = styled.div`
+    display: flex;
+    color: white;
+`
+
+export const Icon = styled.a`
+    display: flex;
+    margin-left: 1rem;
+    font-size: larger;
+    cursor: pointer;
+`
