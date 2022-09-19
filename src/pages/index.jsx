@@ -40,7 +40,7 @@ export default function Home() {
 
   useEffect(() => {
     fetchAllData();
-  }, [])
+  }, [fetchAllData])
 
   return (
     <div>
