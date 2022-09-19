@@ -3,7 +3,7 @@ import Head from 'next/head';
 import axios from 'axios';
 import { CaretDoubleDown } from 'phosphor-react';
 
-import * as S from "./styles";
+import * as S from "../styles";
 import Card from "../components/Card";
 import { BASE_URL } from "../utils/constants";
 import Loading from '../components/Loading';
@@ -38,8 +38,18 @@ const Posts = () => {
     return (
         <S.Container>
             <Head>
-              <title>FRONT END CHALLENGE</title>
-              <link rel="icon" href="/favicon.ico" />
+                <title>Blog da Apiki sobre WordPress - Blog sobre WordPress</title>
+                <link rel="icon" href="/favicon.ico" />  
+                <link rel="canonical" href="https://blog.apiki.com/" />    
+                <meta name="description" content="Blog da Apiki sobre WordPress - Blog sobre WordPress" />
+                <meta
+                name="keywords"
+                content="blog, apiki, desenvolvimento, wordpress"
+                />
+                <meta name="robots" content="index, follow" />
+                <meta name="revisit-after" content="1 days" />
+                <meta name="language" content="pt-br" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Head>
             <S.Content>
                 {

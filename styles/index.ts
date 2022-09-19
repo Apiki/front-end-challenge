@@ -35,4 +35,16 @@ export const Button = styled.button`
     flex-direction: column;
     align-items: center;
     font-weight: 500;
+    background-image: linear-gradient(94.25deg,#0f9ce7 0%,#44bce2 51.04%,#82e1db 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: 500;
+    color: transparent;
+    -webkit-text-decoration-line: underline;
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+
+    &: hover {
+        color: #0f9ce7;
+    }
 `
