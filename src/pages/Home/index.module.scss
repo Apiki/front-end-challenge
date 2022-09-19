@@ -1,0 +1,39 @@
+@import '../../global.module.scss';
+
+.container {
+    margin: 0 1em;
+    gap: 16px;
+    display: grid;
+    @media screen and (max-width: $telaPMax) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    @media screen and (min-width: $telaMMin) {
+        flex-wrap: wrap;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.card {
+    display: flex;
+    width: 100%;
+    @media screen and (max-width: $mobileMax) {
+        border-radius: .6em;
+    }
+    @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+        border-radius: .7em;
+    }
+    @media screen and (min-width: $telaPMin) and (max-width: $telaPMax) {
+        border-radius: .8em;
+    }
+    @media screen and (min-width: $telaMMin) and (max-width: $telaMMax) {
+        border-radius: .9em;
+    }
+    @media screen and (min-width: $telaGMin) {
+        border-radius: 1em;
+    }
+}
+
+.carregando {
+    height: 100vh;
+    margin: 1em;
+}

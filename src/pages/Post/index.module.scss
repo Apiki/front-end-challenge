@@ -1,0 +1,26 @@
+@import '../../global.module.scss';
+
+.imagens {
+  min-width: 224px;
+  width: 70vw;    
+}
+
+.container {
+  min-width: 320px;
+  text-align: center;
+  @media screen and (max-width: $tabletMax) {
+    width: 90vw;
+  }
+  @media screen and (min-width: $telaPMin) and (max-width: $telaPMax) {
+    width: 85vw;
+  }
+  @media screen and (min-width: $telaMMin) {
+    width: 80vw;
+  }
+} 
+
+.tela {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
