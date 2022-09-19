@@ -1,0 +1,117 @@
+@import '../../global.module.scss';
+
+.link {
+    color: $link_;
+}
+
+.container {
+    width: 100%;
+}
+
+.containerLink {
+    display: flex;
+    justify-content: flex-end;
+    font-size: calc(.6em + .6vw);
+    padding: 0 .8em .8em 0;
+}
+
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width: $mobileMax) {
+        border-radius: .6em 0 0 .6em;
+    }
+    @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+        border-radius: .7em 0 0 .7em;
+    }
+    @media screen and (min-width: $telaPMin) and (max-width: $telaPMax) {
+        border-radius: .8em 0 0 .8em;
+    }
+    @media screen and (min-width: $telaMMin) and (max-width: $telaMMax) {
+        border-radius: .9em 0 0 .9em;
+    }
+    @media screen and (min-width: $telaGMin) {
+        border-radius: 1em 0 0  1em;
+    }
+}
+
+.imgCard {
+    height: 100%;
+    position: absolute;
+} 
+
+.titulo {
+    font-weight: 400;
+    margin: .5em .5em 0 0;
+    @media screen and (max-width: $mobileMax) {
+        font-size: .8em;
+    }
+    @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+        font-size: 1em;
+    }
+    @media screen and (min-width: $telaPMin) {
+        font-size: 1.2em;
+    }
+}
+
+.containerTitulo {
+    margin-bottom: 1em;    
+    @media screen and (max-width: $mobileMax) {
+        height: 1.8em;
+    }
+    @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+        height: 1.3em;
+    }
+    @media screen and (min-width: $telaPMin) and (max-width: $telaPMax) {
+        height: 1.8em;
+    }
+    @media screen and (min-width: $telaMMin) and (max-width: $telaMMax) {
+        height: 3em;
+    }
+    @media screen and (min-width: $telaGMin) {
+        height: 2em;
+    }
+}
+
+.linhas {
+    padding: 0 .6em 0 0;
+    margin-bottom: .6em;
+    font-weight: 200;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    @media screen and (max-width: $mobileMax) {
+        font-size: .8em;
+        -webkit-line-clamp: 1;
+        line-clamp: 1; 
+    }
+    @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+        font-size: .9em;
+        -webkit-line-clamp: 2;
+        line-clamp: 2; 
+    }
+    @media screen and (min-width: $telaPMin) {
+        font-size: 1em;
+        -webkit-line-clamp: 3;
+        line-clamp: 3; 
+    }
+}
+
+.containerLinhas {
+    display: 'inline-grid';
+    @media screen and (max-width: $mobileMax) {
+        height: 1.4em;
+    }
+    @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+        height: 1em;
+        margin-bottom: 1.8em;    
+    }
+    @media screen and (min-width: $telaPMin) {
+        height: 2.2em;
+        margin-bottom: 2em;    
+    }
+  
+}

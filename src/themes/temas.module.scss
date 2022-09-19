@@ -1,0 +1,31 @@
+@import '../global.module.scss';
+
+.bgEscuro {
+    background-color: $preto_1;
+    color: $branco_1;
+  }
+.bgClaro {
+    background-color: $branco_1;
+    color: $preto_1;
+  }
+
+.cardClaro {
+  background-color: $branco_2;
+}
+.cardEscuro {
+  background-color: $preto_2;
+}
+
+.iconeClaro {
+  color: $preto_2;
+}
+.iconeEscuro {
+  color: $branco_2;
+}
+
+.tituloEscuro {
+  color: $branco_2;
+}
+.tituloClaro {
+  color: $titulo;
+}

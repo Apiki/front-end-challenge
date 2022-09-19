@@ -1,0 +1,47 @@
+@import '../../global.module.scss';
+
+.logo{
+    height: auto;
+    margin: 1.2em 0 .4em 1.2em;
+    @media screen and (max-width: $mobileMax) {
+        width: 80px;
+    }
+    @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+        width: 7em;
+    }
+    @media screen and (min-width: $telaPMin) and (max-width: $telaPMax) {
+        width: 8em;
+    }
+    @media screen and (min-width: $telaMMin) and (max-width: $telaMMax) {
+        width: 9em;
+    }
+    @media screen and (min-width: $telaGMin) {
+        width: 10em;
+    }
+}
+
+.titulo{
+    height: auto;
+    margin: .3em;
+    @media screen and (max-width: $mobileMax) {
+        font-size: 1.3em;
+    }
+    @media screen and (min-width: $tabletMin) and (max-width: $tabletMax) {
+        font-size: 2.3em;
+    }
+    @media screen and (min-width: $telaPMin) and (max-width: $telaPMax) {
+        font-size: 2.6em;
+    }
+    @media screen and (min-width: $telaMMin) and (max-width: $telaMMax) {
+        font-size: 3em;
+    }
+    @media screen and (min-width: $telaGMin) {
+        font-size: 4em;
+    }
+}
+
+.container{
+    justify-items: center;
+    align-items: center;
+    width: 100% ;
+}
