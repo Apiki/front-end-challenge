@@ -1,0 +1,22 @@
+{
+  "name": "front-end-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^12.0.7",
+    "react": "^17.0.2",
+    "react-axios": "^2.0.6",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.4.0",
+    "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^2.0.6"
+  }
+}
