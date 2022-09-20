@@ -1,0 +1,83 @@
+.container {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post {
+  max-width: 72rem;
+}
+
+.post Image {
+  object-fit: cover;  
+  width: 100%;
+  height: 100%;
+  margin-bottom: 2rem;
+}
+
+.post h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+}
+
+.post p,
+.post a {
+    margin-bottom: 3rem;
+    font-size: 1.8rem;
+    text-align: justify;
+    line-height: 2.5rem;
+}
+
+.postContent {
+  margin-top: 2rem;
+  font-size: 1.125rem;
+}
+
+.postContent h2 {
+  font-size: 2.2rem;
+  margin-top: 6rem;
+}
+
+.postContent figure {
+  margin: 0 auto;
+  font-size: 10rem;
+  width: 100%;
+}
+
+.postContent table {
+  border-collapse: collapse;
+}
+
+.postContent th {
+  border: 0.1rem solid black;
+  padding: 0.5rem;
+}
+
+.postContent tbody td {
+  border: 0.1rem solid black;
+  padding: 1rem;
+}
+
+.postContent figure img {
+  width: 100%;
+  height: 100%;
+  margin-top: 1rem;
+}
+
+.postContent strong {
+  font-size: 1.8rem;
+}
+
+.postContent ul {
+  padding-left: 7rem;
+}
+
+.postContent li{
+  margin-bottom: 3rem;
+  font-size: 1.8rem;
+  text-align: justify;
+  line-height: 2rem
+}
