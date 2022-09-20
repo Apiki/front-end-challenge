@@ -6,7 +6,7 @@ export const Header_styled = styled.header`
     display: flex;
     align-items: center;
     width: 100%;
-    height: 8vh;
+    height: 80px;
     background: #fdfcff;
     border-bottom: 2px outset rgb(255, 244, 189, 0.5);
     padding: 10px 5px;
@@ -21,7 +21,8 @@ export const Header_styled = styled.header`
       align-items: center;
       img {
         margin-left: 30px;
-        height: 100%;
+        min-height: 1.1em;
+        max-height: 100%;
         cursor: pointer;
       }
     }
@@ -29,13 +30,12 @@ export const Header_styled = styled.header`
     //Segunda Div dentro do Header
     div:nth-child(2) {
       width: 100%;
-      height: 100%;
       ul {
         display: flex;
         justify-content: flex-end;
         align-items: center;
         li {
-          margin-right: 50px;
+          margin-right: 5%;
           list-style-type: none;
           cursor: pointer;
           font-size: 1.2em;

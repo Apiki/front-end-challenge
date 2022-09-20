@@ -1,9 +1,11 @@
 import { Headers } from "../Components/Headers";
+import { Main } from "../Components/Main";
 
 export const Index = () => {
   return (
     <>
-      <Headers></Headers>
+      <Headers />
+      <Main index />
     </>
   );
 };
