@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const Header_styled = styled.header`
-  //Tamanho Desktop
-  @media (min-width: 750px) {
+  @media (min-width: 320px) {
     position: fixed;
     display: flex;
     align-items: center;
@@ -17,7 +16,7 @@ export const Header_styled = styled.header`
     div:nth-child(1) {
       box-sizing: border-box;
       display: flex;
-      width: 60%;
+      width: 30%;
       height: 100%;
       align-items: center;
     }
@@ -27,16 +26,17 @@ export const Header_styled = styled.header`
       width: 100%;
       ul {
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
         align-items: center;
+        padding-left: 0;
         li {
-          margin-right: 5%;
+          margin-left: 4%;
           list-style-type: none;
           cursor: pointer;
           a {
             text-decoration: none;
-            font-size: 1.2em;
-            font-weight: 600;
+            font-size: 0.8em;
+            font-weight: 100;
             color: white;
             :hover {
               color: #ffd983;
@@ -46,7 +46,8 @@ export const Header_styled = styled.header`
       }
     }
   }
-  @media (min-width: 320px) and(max-width: 759px) {
+  //Tamanho Desktop
+  @media (min-width: 750px) {
     position: fixed;
     display: flex;
     align-items: center;
