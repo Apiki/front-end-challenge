@@ -1,12 +1,19 @@
-import axios from "axios";
 import { useContext } from "react";
-import { useParams } from "react-router-dom";
 import { PagePostContext } from "../../Providers/PagePost";
 import { PostContext } from "../../Providers/Posts";
 import { Button } from "../Botao";
 import { Card } from "../Card";
 import { Img } from "../Img";
-import { Main_index, Main_index_div } from "./styled";
+import {
+  Main_H1,
+  Main_H1_titulo,
+  Main_index,
+  Main_index_div,
+  Main_Postagem,
+  Main_Postagem_Content,
+  Main_Postagem_div,
+  Main_Postagem_title,
+} from "./styled";
 import parse from "html-react-parser";
 
 export const Main = ({ index, pagePostagem }) => {
@@ -16,52 +23,53 @@ export const Main = ({ index, pagePostagem }) => {
 
   return (
     <>
+      {/* Main da Page Index */}
       {index && (
         <>
           <Main_index>
-            {/* <div>
-              <h1>Empresa especializada em WordPress</h1>
-              <p>
-                A Apiki é a primeira empresa especializada em WordPress do
-                Brasil. Com mais de 13 anos de existência, fazemos tudo que seu
-                projeto em WordPress precisa para alcançar o sucesso.
-              </p>
-            </div> */}
-            <Main_index_div>
+            {post.length != 0 && <Main_H1_titulo>Postagens</Main_H1_titulo>}
+            <Main_index_div id="cards">
+              {/* Caso o Array estiver vazio ele retorna Carregando, se tiver conteudo, os Cards renderiza */}
               {post.length === 0 ? (
                 <>
-                  <h1>Carregando...</h1>
+                  <Main_H1>Carregando...</Main_H1>
                 </>
               ) : (
                 <>
                   {post.map((elemento) => {
-                    /* console.log(elemento._embedded["wp:featuredmedia"][0].link); */
                     return <Card key={elemento.id} elemento={elemento}></Card>;
                   })}
-                  {/* {console.log(post)} */}
                 </>
               )}
             </Main_index_div>
-            <Button carregar>Carregar mais...</Button>
+            {post.length != 0 && (
+              <>
+                <Button carregar>Carregar mais...</Button>
+              </>
+            )}
           </Main_index>
         </>
       )}
 
       {infoPostagem.length != 0 && pagePostagem && (
         <>
-          <main>
-            {console.log(infoPostagem)}
-            <div>
-              <Img postagem infoPostagem={infoPostagem} />
-            </div>
-            <div>
-              <h1>{infoPostagem.title.rendered}</h1>
-            </div>
-            <div>{parse(infoPostagem.content.rendered)}</div>
-            <div>
-              <button>Voltar</button>
-            </div>
-          </main>
+          <Main_Postagem>
+            <Main_Postagem_div>
+              {console.log(infoPostagem)}
+              <div>
+                <Img postagem infoPostagem={infoPostagem} />
+              </div>
+              <Main_Postagem_title>
+                <h1>{infoPostagem.title.rendered}</h1>
+              </Main_Postagem_title>
+              <Main_Postagem_Content>
+                {parse(infoPostagem.content.rendered)}
+              </Main_Postagem_Content>
+              <div>
+                <Button voltar>Voltar</Button>
+              </div>
+            </Main_Postagem_div>
+          </Main_Postagem>
         </>
       )}
     </>

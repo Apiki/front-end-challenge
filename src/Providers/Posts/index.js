@@ -2,18 +2,14 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 import { createContext } from "react";
-import { useHistory } from "react-router-dom";
 
 export const PostContext = createContext();
 
 export const PostProvider = ({ children }) => {
-  const history = useHistory();
-
   const [post, setPost] = useState([]);
   const [totalPost, setTotalPost] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
   const [countPages, setCountPages] = useState(1);
-  const [buttonStatus, setButtonStatus] = useState(true);
 
   useEffect(
     () => {

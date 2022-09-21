@@ -2,33 +2,28 @@ import styled from "styled-components";
 
 export const Card_Index = styled.div`
   @media (min-width: 760px) {
-    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 2px solid rgb(204, 204, 204, 2);
     box-sizing: border-box;
 
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px;
 
     width: 32%;
-
-    min-height: 450px;
 
     margin-bottom: 30px;
     padding-bottom: 20px;
 
-    background-color: #e6e6e6;
+    background-color: #ffffff;
+    :hover {
+      border: 2px solid rgb(232, 95, 12, 0.8);
+    }
 
     h1 {
       margin: 0 15px 20px 15px;
       font-size: 1.2em;
-    }
-
-    a {
-      margin-left: 15px;
-      text-decoration: none;
-      color: black;
-      font-weight: 600;
-      :hover {
-        color: rgb(0, 0, 0, 0.8);
-      }
+      height: 25%;
     }
 
     p {
@@ -36,6 +31,27 @@ export const Card_Index = styled.div`
       font-size: 0.8em;
       min-height: 50px;
       text-align: justify;
+      height: 110px;
+    }
+  }
+`;
+
+export const Card_Link = styled.div`
+  @media (min-width: 760px) {
+    position: static;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    a {
+      width: 100%;
+      margin-left: 15px;
+      text-decoration: none;
+      color: black;
+      font-weight: 600;
+      :hover {
+        color: rgb(0, 0, 0, 0.8);
+      }
     }
   }
 `;

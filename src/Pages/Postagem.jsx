@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
+import { Footer } from "../Components/Footer";
 import { Headers } from "../Components/Headers";
 import { Main } from "../Components/Main";
 import { PagePostContext } from "../Providers/PagePost";
@@ -26,8 +27,9 @@ export const Postagem = () => {
   console.log(infoPostagem._embedded["wp:featuredmedia"][0].source_url); */
   return (
     <>
-      <Headers />
+      <Headers headerPostagem />
       <Main pagePostagem />
+      <Footer />
     </>
   );
 };
