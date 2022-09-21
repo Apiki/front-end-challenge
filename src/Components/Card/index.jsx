@@ -10,7 +10,8 @@ export const Card = ({ elemento }) => {
           <Img card elementos={elemento}></Img>
         </div>
         <h1>{elemento.title.rendered}</h1>
-        <Link post>postagem</Link>
+        <p>{elemento.yoast_head_json.description}</p>
+        <Link post>Saiba Mais...</Link>
       </Card_Index>
     </>
   );

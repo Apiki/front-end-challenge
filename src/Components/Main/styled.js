@@ -6,9 +6,9 @@ export const Main_index = styled.main`
     flex-direction: column;
     align-items: center;
     width: 100%;
-    border: 1px solid red;
     padding: 0 5%;
     box-sizing: border-box;
+    margin-bottom: 40px;
   }
 `;
 

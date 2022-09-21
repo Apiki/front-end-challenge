@@ -1,3 +1,5 @@
+import { Link_Index } from "./styled";
+
 export const Link = ({ post, carregar, children }) => {
   return (
     <>
@@ -8,7 +10,7 @@ export const Link = ({ post, carregar, children }) => {
       )}
       {carregar && (
         <>
-          <a href="">{children}</a>
+          <Link_Index href="">{children}</Link_Index>
         </>
       )}
     </>

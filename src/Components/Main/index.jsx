@@ -1,13 +1,12 @@
 import { useContext } from "react";
 import { PostContext } from "../../Providers/Posts";
+import { Button } from "../Botao";
 import { Card } from "../Card";
 import { Link } from "../Link";
 import { Main_index, Main_index_div } from "./styled";
 
 export const Main = ({ index }) => {
   const { post } = useContext(PostContext);
-
-  console.log(post.length);
 
   return (
     <>
@@ -31,12 +30,13 @@ export const Main = ({ index }) => {
                 <>
                   {post.map((elemento) => {
                     /* console.log(elemento._embedded["wp:featuredmedia"][0].link); */
-                    return <Card elemento={elemento}></Card>;
+                    return <Card key={elemento.id} elemento={elemento}></Card>;
                   })}
+                  {/* {console.log(post)} */}
                 </>
               )}
             </Main_index_div>
-            <Link carregar>Carregar mais...</Link>
+            <Button carregar>Carregar mais...</Button>
           </Main_index>
         </>
       )}
