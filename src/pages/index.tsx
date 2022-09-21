@@ -1,11 +1,11 @@
-import type { NextPage } from 'next';
+import { MainCard } from '../components/MainCard';
 
-const Home: NextPage = () => {
+import { HomeContainer } from './homeStyles';
+
+export default function Home() {
   return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
+    <HomeContainer>
+      <MainCard />
+    </HomeContainer>
   );
-};
-
-export default Home;
+}
