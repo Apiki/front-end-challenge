@@ -1,7 +1,12 @@
+import { PagePostProvider } from "./PagePost";
 import { PostProvider } from "./Posts";
 
 const Providers = ({ children }) => {
-  return <PostProvider>{children}</PostProvider>;
+  return (
+    <PagePostProvider>
+      <PostProvider>{children}</PostProvider>
+    </PagePostProvider>
+  );
 };
 
 export default Providers;

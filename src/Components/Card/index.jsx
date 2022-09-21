@@ -11,7 +11,9 @@ export const Card = ({ elemento }) => {
         </div>
         <h1>{elemento.title.rendered}</h1>
         <p>{elemento.yoast_head_json.description}</p>
-        <Link post>Saiba Mais...</Link>
+        <Link post click={elemento.slug}>
+          Saiba Mais...
+        </Link>
       </Card_Index>
     </>
   );

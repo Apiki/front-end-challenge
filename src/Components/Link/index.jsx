@@ -1,11 +1,11 @@
 import { Link_Index } from "./styled";
 
-export const Link = ({ post, carregar, children }) => {
+export const Link = ({ post, carregar, children, click }) => {
   return (
     <>
       {post && (
         <>
-          <a href="">{children}</a>
+          <a href={`/post/${click}`}>{children}</a>
         </>
       )}
       {carregar && (

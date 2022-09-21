@@ -1,12 +1,18 @@
+import axios from "axios";
 import { useContext } from "react";
+import { useParams } from "react-router-dom";
+import { PagePostContext } from "../../Providers/PagePost";
 import { PostContext } from "../../Providers/Posts";
 import { Button } from "../Botao";
 import { Card } from "../Card";
-import { Link } from "../Link";
+import { Img } from "../Img";
 import { Main_index, Main_index_div } from "./styled";
+import parse from "html-react-parser";
 
-export const Main = ({ index }) => {
+export const Main = ({ index, pagePostagem }) => {
   const { post } = useContext(PostContext);
+
+  const { infoPostagem } = useContext(PagePostContext);
 
   return (
     <>
@@ -38,6 +44,24 @@ export const Main = ({ index }) => {
             </Main_index_div>
             <Button carregar>Carregar mais...</Button>
           </Main_index>
+        </>
+      )}
+
+      {infoPostagem.length != 0 && pagePostagem && (
+        <>
+          <main>
+            {console.log(infoPostagem)}
+            <div>
+              <Img postagem infoPostagem={infoPostagem} />
+            </div>
+            <div>
+              <h1>{infoPostagem.title.rendered}</h1>
+            </div>
+            <div>{parse(infoPostagem.content.rendered)}</div>
+            <div>
+              <button>Voltar</button>
+            </div>
+          </main>
         </>
       )}
     </>
