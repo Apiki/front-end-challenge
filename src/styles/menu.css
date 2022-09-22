@@ -1,0 +1,39 @@
+.navbar {
+  margin-bottom: 20px;
+  overflow-y: hidden;
+  position: relative;
+  padding: 1rem;
+  -ms-flex-pack: justify;
+}
+
+.menu a {
+  color: var(--light);
+}
+
+.navbar a:nth-child(2) {
+  white-space: nowrap;
+}
+
+.navbar a:nth-child(8) {
+  padding-right: 0;
+  white-space: nowrap;
+}
+
+.nav-link {
+  list-style: none;
+  padding-right: 22px;
+  text-decoration: none;
+}
+
+.menu {
+  background-color: var(--blue);
+  margin-top: 15px;
+  padding: 0 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.menu a:hover {
+  color: var(--white);
+}

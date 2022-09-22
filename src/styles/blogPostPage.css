@@ -1,0 +1,44 @@
+.post-container h2 {
+  font-style: italic;
+  line-height: 1.5;
+  opacity: 0.5;
+}
+
+.author-description {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.post-content {
+  line-height: 2;
+}
+
+.avatar {
+  border-radius: 100%;
+  height: 80px;
+  width: 80px;
+}
+
+.author-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 14px;
+}
+
+.author-name {
+  white-space: nowrap;
+}
+
+.author-name span {
+  font-style: italic;
+  font-weight: 900;
+  padding-left: 5px;
+}
+
+@media (max-width: 575.98px) {
+  .post-container {
+    flex-direction: column;
+  }
+}

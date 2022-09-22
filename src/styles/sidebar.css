@@ -1,0 +1,25 @@
+.sidebar {
+  max-width: 33.3333%;
+  margin: 3% 5% 0 0;
+}
+
+.sidebar .container {
+  position: sticky;
+  top: 100px;
+}
+
+@media (max-width: 575.98px) {
+  .sidebar {
+    max-width: 100%;
+    margin: 8% 5% 5%;
+  }
+
+  .sidebar img {
+    width: 100%;
+    height: auto;
+  }
+
+  .sidebar .container {
+    padding: 0;
+  }
+}

@@ -1,0 +1,12 @@
+.header {
+  align-content: center;
+  align-items: center;
+  margin: 0 5%;
+  padding: 1.5rem 1rem 0;
+}
+
+@media (max-width: 575.98px) {
+  .header {
+    padding: 1.5rem 0 0;
+  }
+}

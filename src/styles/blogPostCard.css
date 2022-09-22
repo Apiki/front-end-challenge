@@ -1,0 +1,29 @@
+.card a {
+  color: var(--gray-dark);
+  text-decoration: none;
+}
+
+.card a:hover {
+  color: var(--blue);
+}
+
+.card-img {
+  border-radius: 0.5rem;
+  height: 200px;
+  width: auto;
+}
+
+@media (max-width: 575.98px) {
+  .card,
+  main {
+    flex-direction: column;
+  }
+
+  .card-body {
+    margin-left: 0;
+  }
+
+  .card-img {
+    margin-bottom: 14px;
+  }
+}
