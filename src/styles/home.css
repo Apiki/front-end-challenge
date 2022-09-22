@@ -1,0 +1,9 @@
+.home-container {
+  margin: 3% 3% 5% 5%;
+}
+
+@media (max-width: 575.98px) {
+  .home-container {
+    margin: 3% 5%;
+  }
+}

@@ -1,0 +1,28 @@
+.search-form {
+  border: 1px solid var(--light);
+  padding: 0 6%;
+  width: 350px;
+}
+
+.search-form button {
+  background-color: transparent;
+  border: none;
+  padding: 0 0.5rem;
+}
+
+.search-input {
+  background: var(--white);
+  border: none;
+  box-sizing: border-box;
+  font-size: 14px;
+  height: 40px;
+  line-height: 1.5;
+  padding: 0.375rem 0.75rem;
+  width: 150%;
+}
+
+@media (max-width: 575.98px) {
+  .searchbar {
+    display: none;
+  }
+}
