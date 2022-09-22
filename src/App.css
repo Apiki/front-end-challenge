@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --blue: #188ecc;
+  --gray-dark: #343a40;
+  --light: #e0e0e0;
+  --orange: #f57f20;
+  --white: #fff;
+  --yellow: #fdd00a;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  color: var(--gray-dark);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1 {
+  font-size: 38px;
+}
+
+h3 {
+  margin-bottom: 14px;
+}
+
+.mb-1 {
+  margin-bottom: 14px;
+}
+
+.mb-2 {
+  margin-bottom: 22px;
+}
+
+.mb-3 {
+  margin-bottom: 30px;
+}
+
+.mr-3 {
+  margin-right: 30px;
+}
+
+.ml-3 {
+  margin-left: 30px;
+}
+
+.m-xy {
+  margin: 3% 5%;
+}
+
+input:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+.container {
+  margin: 0 0 auto auto;
+  padding: 0 15px;
+  width: 100%;
+}
+
+.d-flex {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.justify-content-between {
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flex-no-wrap {
+  flex-wrap: nowrap;
+}
+
+.btn {
+  border: 1px solid transparent;
+  border-radius: 40px;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  padding: 7px 22px;
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  vertical-align: middle;
+}
+
+.btn-orange {
+  background-color: var(--orange);
+  border: 1px solid var(--orange);
+  color: var(--white);
+}
+
+.btn-dark-outline {
+  background-color: transparent;
+  border: 1px solid var(--gray-dark);
+  color: var(--gray-dark);
+}
+
+.posts-list {
+  padding: 3% 5%;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.rounded {
+  border-radius: 24px;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
 }
