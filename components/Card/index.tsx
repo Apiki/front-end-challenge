@@ -46,13 +46,26 @@ export default function Card({ post }) {
     }
 
     return (
-        <Box p="2" m="0.8rem" minW="16rem" maxW="22rem" borderWidth="1px" borderRadius="md">
+        <Box 
+            p="2" 
+            m="0.8rem" 
+            maxW="25rem" 
+            borderWidth="1px" 
+            borderRadius="md" 
+            position={"relative"}
+        >
             <Link href={`/${post.slug}`} >
                 <a onClick={showAlertSuccess}>
-                    <Image borderRadius="md" src={post.yoast_head_json.og_image[0].url} alt="Images" mb="2.5" />
+                    <Image 
+                        borderRadius="md" 
+                        src={post.yoast_head_json.og_image[0].url} 
+                        alt="Images" 
+                        mb="2.5"
+                        minH={"16rem"}
+                    />
                 </a>
             </Link>
-            <Stack>
+            <Stack mb={"4rem"}>
                 <Text
                     color={'green.500'}
                     textTransform={'uppercase'}
@@ -75,7 +88,14 @@ export default function Card({ post }) {
                     {post.yoast_head_json.description}
                 </Text>
             </Stack>
-            <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
+            <Stack 
+                mt={"1rem"} 
+                direction={'row'} 
+                spacing={4} 
+                align={'center'} 
+                position={"absolute"} 
+                bottom={"0.5rem"} 
+            >
                 <Link href={"/"} >
                     <a>
                         <Avatar
@@ -83,7 +103,7 @@ export default function Card({ post }) {
                         />
                     </a>
                 </Link>
-                <Stack direction={'column'} spacing={0} fontSize={'sm'}>
+                <Stack direction={'column'} spacing={0} fontSize={'sm'} >
                     <Link href={"/"} >
                         <a>
                             <Text fontWeight={600}>{post._embedded.author[0].name ?? "Indisponível"}</Text>

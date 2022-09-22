@@ -27,7 +27,7 @@ const Post = ({posts}) => {
         <>
             {post.yoast_head ? <Head>{parse(post.yoast_head)}</Head> : null}
             {loading ? <Loading fontSize="3rem" position="absolute" height="5rem" /> :
-            <>
+            <S.Container>
                 <S.Title>{post.title.rendered}</S.Title>
                 <S.Holder>
                     <Image 
@@ -61,7 +61,7 @@ const Post = ({posts}) => {
                         </Stack>
                     </Stack>
                 </Box>
-            </>
+            </S.Container>
             }
         </>
     )
