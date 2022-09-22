@@ -12,7 +12,7 @@ export function MainCard() {
       <div>
         <ContentMainCard>
           <h2>Título do card</h2>
-          <p>Subtitle</p>
+          <p>Resumo</p>
         </ContentMainCard>
         <FooterMainCard>
           <button>

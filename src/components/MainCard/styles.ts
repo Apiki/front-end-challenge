@@ -6,6 +6,7 @@ export const MainCardContainer = styled.div`
   border-radius: 4px;
   overflow: hidden;
   background: ${(props) => props.theme['gray-800']};
+  margin-bottom: 2.5rem;
 
   img {
     width: 100%;
