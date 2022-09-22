@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+/* eslint-disable react/jsx-props-no-spreading */
+import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
+import './styles/footer.css';
+import './styles/header.css';
+import './styles/menu.css';
+import './styles/blogPostCard.css';
+import './styles/home.css';
+import './styles/sidebar.css';
+import './styles/blogPostPage.css';
+import './styles/searchbar.css';
+import Helmet from 'react-helmet';
+import Home from './pages/Home';
+import PostPage from './pages/BlogPostPage';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Helmet title="Blog APIKI | DEV" />
+
+      <BrowserRouter>
+        <Route exact path="/" component={Home} />
+        <Route path="/:ship" render={(props) => <PostPage {...props} />} />
+      </BrowserRouter>
     </div>
   );
 }
