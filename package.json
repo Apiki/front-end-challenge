@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.27.2",
+    "html-react-parser": "^3.0.4",
     "next": "12.3.1",
     "phosphor-react": "^1.4.1",
     "react": "18.2.0",
@@ -20,8 +22,12 @@
     "@types/react": "18.0.20",
     "@types/react-dom": "18.0.6",
     "@types/styled-components": "^5.1.26",
+    "babel-plugin-styled-components": "^2.0.7",
     "eslint": "8.23.1",
     "eslint-config-next": "12.3.1",
     "typescript": "4.8.3"
+  },
+  "resolutions": {
+    "styled-components": "^5"
   }
 }

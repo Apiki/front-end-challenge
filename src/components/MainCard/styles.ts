@@ -1,20 +1,22 @@
 import styled from 'styled-components';
+import Link from 'next/link';
 
 export const MainCardContainer = styled.div`
   height: 35rem;
+  width: 90rem;
   display: flex;
   border-radius: 4px;
   overflow: hidden;
   background: ${(props) => props.theme['gray-800']};
-  margin-bottom: 2.5rem;
 
   img {
-    width: 100%;
+    cursor: pointer;
+    width: 60rem;
     height: 100%;
   }
 
-  > div {
-    width: 35rem;
+  > div:last-child {
+    /* width: 30rem; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -23,12 +25,19 @@ export const MainCardContainer = styled.div`
 `;
 
 export const ContentMainCard = styled.div`
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 
+  cursor: pointer;
+
   h2 {
     color: ${(props) => props.theme.white};
+  }
+
+  &:hover {
+    text-decoration: underline;
   }
 `;
 

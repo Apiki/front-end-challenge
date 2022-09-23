@@ -1,17 +1,31 @@
+import parse from 'html-react-parser';
+import Link from 'next/link';
+
 import { CommonCardContainer, ContentCommonCard } from './styles';
 
-export function CommonCard() {
+interface CommonCardProps {
+  title: string;
+  excerpt: string;
+  source_url: string;
+  slug: string;
+}
+
+export function CommonCard({
+  title,
+  excerpt,
+  source_url,
+  slug,
+}: CommonCardProps) {
   return (
-    <CommonCardContainer>
-      <img
-        src='https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aHRtbHxlbnwwfHwwfHw%3D&w=1000&q=80'
-        alt=''
-      />
-      <hr />
-      <ContentCommonCard>
-        <h3>Título do card</h3>
-        <p>Resumo</p>
-      </ContentCommonCard>
-    </CommonCardContainer>
+    <Link href={`/postpage/${slug}`}>
+      <CommonCardContainer>
+        <img src={source_url} alt='' />
+        <hr />
+        <ContentCommonCard>
+          <h3>{title}</h3>
+          {parse(excerpt)}
+        </ContentCommonCard>
+      </CommonCardContainer>
+    </Link>
   );
 }
