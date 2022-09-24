@@ -38,6 +38,10 @@ export const ContentCommonCard = styled.div`
 
   overflow: auto;
 
+  h3 {
+    color: ${(props) => props.theme.white};
+  }
+
   p {
     text-align: justify;
     font-size: 0.875rem;
