@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
+import Head from 'next/head';
 import Link from 'next/link';
 import { ParsedUrlQuery } from 'querystring';
 import parse from 'html-react-parser';
@@ -16,17 +17,39 @@ interface PostPageProps {
 
 export default function PostPage({ post }: PostPageProps) {
   return (
-    <PostPageContainer>
-      <h1>{post.title.rendered}</h1>
-      <img src={post._embedded['wp:featuredmedia'][0].source_url} alt='' />
-      <PostPageContent>{parse(post.content.rendered)}</PostPageContent>
+    <>
+      <Head>
+        <title>{post.title.rendered} - Apiki Blog</title>
+        <meta
+          name='description'
+          content={`Se liga nisso: ${post.title.rendered}`}
+        />
+        <meta
+          property='og:title'
+          content={`${post.title.rendered} - Apiki Blog`}
+        />
+        <meta
+          property='og:description'
+          content={`Se liga nisso: ${post.title.rendered}`}
+        />
+        <meta property='og:type' content='website' />
+      </Head>
+      <PostPageContainer>
+        <h1>{post.title.rendered}</h1>
+        <img
+          // src={post._embedded['wp:featuredmedia'][0].source_url}
+          src={post.yoast_head_json.og_image[0].url}
+          alt=''
+        />
+        <PostPageContent>{parse(post.content.rendered)}</PostPageContent>
 
-      <Link href='/'>
-        <footer>
-          <CaretLeft /> Voltar à página inicial
-        </footer>
-      </Link>
-    </PostPageContainer>
+        <Link href='/'>
+          <footer>
+            <CaretLeft /> Voltar à página inicial
+          </footer>
+        </Link>
+      </PostPageContainer>
+    </>
   );
 }
 

@@ -10,6 +10,13 @@ export interface Post {
   content: {
     rendered: string;
   };
+  yoast_head_json: {
+    og_image: [
+      {
+        url: string;
+      }
+    ];
+  };
   _embedded: {
     'wp:featuredmedia': [
       {

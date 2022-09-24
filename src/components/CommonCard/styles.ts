@@ -41,5 +41,11 @@ export const ContentCommonCard = styled.div`
   p {
     text-align: justify;
     font-size: 0.875rem;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 8; /** número de linhas que você quer exibir */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 `;

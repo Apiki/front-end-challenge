@@ -43,7 +43,8 @@ export function MainCard({ lastFourPosts }: MainCardProps) {
     <MainCardContainer>
       <Link href={`/postpage/${currentPost.slug}`}>
         <img
-          src={currentPost._embedded['wp:featuredmedia'][0].source_url}
+          // src={currentPost._embedded['wp:featuredmedia'][0].source_url}
+          src={currentPost.yoast_head_json.og_image[0].url}
           alt=''
         />
       </Link>

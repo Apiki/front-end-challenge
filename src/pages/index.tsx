@@ -22,7 +22,7 @@ interface HomeProps {
 
 export default function Home({ initialPosts, header }: HomeProps) {
   const [posts, setPosts] = useState<Post[]>([]);
-  const [page, setPage] = useState(10);
+  const [page, setPage] = useState(2);
 
   const totalPages = header['x-wp-totalpages'];
   const totalPosts = header['x-wp-total'];
@@ -62,10 +62,8 @@ export default function Home({ initialPosts, header }: HomeProps) {
             key={post.id}
             title={post.title.rendered}
             excerpt={post.excerpt.rendered}
-            source_url={
-              post._embedded['wp:featuredmedia'][0].source_url ||
-              'https://codoacodo.app/sites/default/files/img/product/noimage_1.jpg'
-            }
+            // source_url={post._embedded['wp:featuredmedia'][0].source_url}
+            source_url={post.yoast_head_json.og_image[0].url}
             slug={post.slug}
           />
         ))}
@@ -73,7 +71,6 @@ export default function Home({ initialPosts, header }: HomeProps) {
       <button onClick={handleGetMorePosts} disabled={page === totalPages}>
         Carregar mais postagens
       </button>
-      {page - 1}
     </HomeContainer>
   );
 }

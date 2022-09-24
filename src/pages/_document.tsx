@@ -41,7 +41,17 @@ export default class MyDocument extends Document {
             rel='stylesheet'
           />
 
-          {/* <link rel='shortcut icon' href='/favicon.png' type='image/png' /> */}
+          <meta
+            name='description'
+            content='O melhor blog sobre WordPress de todos os tempos'
+          />
+          <meta property='og:title' content='Apiki Blog' />
+          <meta
+            property='og:description'
+            content='O melhor blog sobre WordPress de todos os tempos'
+          />
+          <meta property='og:type' content='website' />
+          <title>Apiki Blog</title>
         </Head>
         <body>
           <Main />
