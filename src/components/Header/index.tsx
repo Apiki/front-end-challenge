@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import {
   FacebookLogo,
   GithubLogo,
@@ -7,19 +8,21 @@ import {
   YoutubeLogo,
 } from 'phosphor-react';
 
-import { HeaderContainer, SocialMediasContainer } from './styles';
+import { BlogLogo, HeaderContainer, SocialMediasContainer } from './styles';
 
 export function Header() {
   return (
     <HeaderContainer>
-      <a href='/'>
-        <img
-          src='https://apiki.com/wp-content/uploads/2020/11/logo-apiki-site-01.png'
-          alt=''
-        />
-        <hr />
-        <h1>Blog</h1>
-      </a>
+      <Link href='/'>
+        <BlogLogo>
+          <img
+            src='https://apiki.com/wp-content/uploads/2020/11/logo-apiki-site-01.png'
+            alt=''
+          />
+          <hr />
+          <h1>Blog</h1>
+        </BlogLogo>
+      </Link>
       <SocialMediasContainer>
         <a href='https://www.facebook.com/ApikiWordPress'>
           <FacebookLogo size={24} />

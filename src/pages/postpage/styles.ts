@@ -10,18 +10,35 @@ export const PostPageContainer = styled.div`
   gap: 3rem;
   background: ${(props) => props.theme['gray-700']};
 
+  @media (max-width: 1440px) {
+    margin: 0 10rem;
+  }
+
+  @media (max-width: 1000px) {
+    margin: 0 5rem;
+  }
+
+  @media (max-width: 600px) {
+    margin: 0;
+  }
+
   > h1 {
+    text-align: center;
     font-size: 3rem;
     color: ${(props) => props.theme['blue-500']};
+
+    @media (max-width: 800px) {
+      font-size: 2rem;
+    }
   }
 
   > img {
     width: 100%;
-    height: 600px;
+    max-height: 600px;
     border-radius: 16px;
   }
 
-  > a {
+  footer {
     width: 100%;
     display: flex;
     align-items: center;
@@ -31,6 +48,10 @@ export const PostPageContainer = styled.div`
     color: ${(props) => props.theme['blue-500']};
     text-decoration: underline;
     cursor: pointer;
+
+    @media (max-width: 600px) {
+      font-size: 1rem;
+    }
   }
 `;
 
@@ -39,12 +60,16 @@ export const PostPageContent = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   padding: 0 0.5rem;
 
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: justify;
   color: ${(props) => props.theme.white};
+
+  @media (max-width: 600px) {
+    font-size: 1rem;
+  }
 
   h2,
   p {
@@ -56,6 +81,9 @@ export const PostPageContent = styled.div`
   }
 
   img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
     border-radius: 8px;
   }
 
@@ -65,6 +93,22 @@ export const PostPageContent = styled.div`
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+
+  table {
+    text-align: start;
+    background: ${(props) => props.theme['gray-600']};
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+
+    th {
+      text-align: center;
+    }
+
+    th,
+    td {
+      padding: 0.5rem;
     }
   }
 `;

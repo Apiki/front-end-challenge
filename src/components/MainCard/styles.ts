@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Link from 'next/link';
 
 export const MainCardContainer = styled.div`
   height: 35rem;
@@ -9,18 +8,43 @@ export const MainCardContainer = styled.div`
   overflow: hidden;
   background: ${(props) => props.theme['gray-800']};
 
+  @media (max-width: 1440px) {
+    width: 70rem;
+  }
+
+  @media (max-width: 1000px) {
+    height: 20rem;
+    width: 50rem;
+  }
+
+  @media (max-width: 600px) {
+    height: 25rem;
+    width: 35rem;
+  }
+
   img {
     cursor: pointer;
-    width: 60rem;
+    width: 80%;
     height: 100%;
+
+    @media (max-width: 1440px) {
+      width: 70%;
+    }
+
+    @media (max-width: 1000px) {
+      width: 55%;
+    }
   }
 
   > div:last-child {
-    /* width: 30rem; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 3rem 1.5rem 1.5rem;
+
+    @media (max-width: 1000px) {
+      padding: 1rem;
+    }
   }
 `;
 

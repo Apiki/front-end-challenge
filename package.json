@@ -12,6 +12,7 @@
     "axios": "^0.27.2",
     "html-react-parser": "^3.0.4",
     "next": "12.3.1",
+    "nprogress": "^0.2.0",
     "phosphor-react": "^1.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "@types/node": "18.7.18",
+    "@types/nprogress": "^0.2.0",
     "@types/react": "18.0.20",
     "@types/react-dom": "18.0.6",
     "@types/styled-components": "^5.1.26",

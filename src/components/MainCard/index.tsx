@@ -51,7 +51,7 @@ export function MainCard({ lastFourPosts }: MainCardProps) {
         <Link href={`/postpage/${currentPost.slug}`}>
           <ContentMainCard>
             <h2>{currentPost.title.rendered}</h2>
-            <p>{parse(currentPost.excerpt.rendered)}</p>
+            {parse(currentPost.excerpt.rendered)}
           </ContentMainCard>
         </Link>
         <FooterMainCard>

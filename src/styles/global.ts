@@ -12,6 +12,30 @@ export const GlobalStyle = createGlobalStyle`
     box-shadow: 0 0 0 2px ${(props) => props.theme['blue-500']}
   }
 
+  @media (max-width: 1000px) {
+    html {
+      font-size: 93.75%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    html {
+      font-size: 83%;
+    }
+  }
+
+  @media (max-width: 800px) {
+    html {
+      font-size: 75%;
+    }
+  }
+
+  @media (max-width: 400px) {
+    html {
+      font-size: 60%;
+    }
+  }
+
   body {
     background: ${(props) => props.theme['gray-900']};
     color: ${(props) => props.theme['gray-300']};

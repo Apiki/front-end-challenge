@@ -8,7 +8,7 @@ import { Post } from '../@types/post';
 
 import { api } from '../services/api';
 
-import { HomeContainer } from './homeStyles';
+import { HomeContainer } from '../styles/home';
 
 interface Header {
   'x-wp-total': number;
@@ -22,13 +22,13 @@ interface HomeProps {
 
 export default function Home({ initialPosts, header }: HomeProps) {
   const [posts, setPosts] = useState<Post[]>([]);
-  const [page, setPage] = useState(2);
+  const [page, setPage] = useState(10);
 
   const totalPages = header['x-wp-totalpages'];
   const totalPosts = header['x-wp-total'];
 
   async function handleGetMorePosts() {
-    if (page >= totalPages) return;
+    if (page > totalPages) return;
 
     const response = await api.get('', { params: { categories: 518, page } });
     const newPosts = response.data as Post[];
@@ -39,7 +39,6 @@ export default function Home({ initialPosts, header }: HomeProps) {
 
   useEffect(() => {
     setPosts(initialPosts);
-    setPage(2);
   }, []);
 
   return (
@@ -55,8 +54,7 @@ export default function Home({ initialPosts, header }: HomeProps) {
       />
 
       <hr />
-      <hr />
-      <hr />
+      <h1>Todas as postagens</h1>
 
       <div>
         {posts.map((post) => (
@@ -64,7 +62,10 @@ export default function Home({ initialPosts, header }: HomeProps) {
             key={post.id}
             title={post.title.rendered}
             excerpt={post.excerpt.rendered}
-            source_url={post._embedded['wp:featuredmedia'][0].source_url}
+            source_url={
+              post._embedded['wp:featuredmedia'][0].source_url ||
+              'https://codoacodo.app/sites/default/files/img/product/noimage_1.jpg'
+            }
             slug={post.slug}
           />
         ))}
@@ -72,6 +73,7 @@ export default function Home({ initialPosts, header }: HomeProps) {
       <button onClick={handleGetMorePosts} disabled={page === totalPages}>
         Carregar mais postagens
       </button>
+      {page - 1}
     </HomeContainer>
   );
 }

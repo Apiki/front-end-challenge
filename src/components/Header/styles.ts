@@ -7,23 +7,24 @@ export const HeaderContainer = styled.header`
 
   padding: 1rem 3rem;
   background: ${(props) => props.theme['gray-600']};
+`;
 
-  > a {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
+export const BlogLogo = styled.div`
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
 
-    color: ${(props) => props.theme['gray-300']};
+  color: ${(props) => props.theme['gray-300']};
 
-    hr {
-      height: 2rem;
-      border: 1px solid ${(props) => props.theme['gray-500']};
-    }
+  hr {
+    height: 2rem;
+    border: 1px solid ${(props) => props.theme['gray-500']};
+  }
 
-    img {
-      width: 10rem;
-    }
+  img {
+    width: 10rem;
   }
 `;
 

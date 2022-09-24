@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
+import Link from 'next/link';
 import { ParsedUrlQuery } from 'querystring';
 import parse from 'html-react-parser';
 import { CaretLeft } from 'phosphor-react';
@@ -20,9 +21,11 @@ export default function PostPage({ post }: PostPageProps) {
       <img src={post._embedded['wp:featuredmedia'][0].source_url} alt='' />
       <PostPageContent>{parse(post.content.rendered)}</PostPageContent>
 
-      <a>
-        <CaretLeft /> Voltar à página inicial
-      </a>
+      <Link href='/'>
+        <footer>
+          <CaretLeft /> Voltar à página inicial
+        </footer>
+      </Link>
     </PostPageContainer>
   );
 }
