@@ -1,0 +1,56 @@
+import { createGlobalStyle } from 'styled-components';
+
+export const GlobalStyle = createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px ${(props) => props.theme['blue-500']}
+  }
+
+  @media (max-width: 1000px) {
+    html {
+      font-size: 93.75%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    html {
+      font-size: 83%;
+    }
+  }
+
+  @media (max-width: 800px) {
+    html {
+      font-size: 75%;
+    }
+  }
+
+  @media (max-width: 400px) {
+    html {
+      font-size: 60%;
+    }
+  }
+
+  body {
+    background: ${(props) => props.theme['gray-900']};
+    color: ${(props) => props.theme['gray-300']};
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  body, input, textarea, button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+  }
+`;
