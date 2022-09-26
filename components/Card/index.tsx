@@ -31,7 +31,7 @@ export default function Card({ post }) {
             icon: 'info',
             title: 'Carregando, aguarde!',
             showConfirmButton: false,
-            timer: 5000, 
+            timer: 1500, 
             timerProgressBar: true,
             didOpen: () => {
               Swal.showLoading()
@@ -96,7 +96,7 @@ export default function Card({ post }) {
                 position={"absolute"} 
                 bottom={"0.5rem"} 
             >
-                <Link href={"/"} >
+                <Link href={post._embedded.author[0].link ?? "/"} >
                     <a>
                         <Avatar
                             src={avatar}
@@ -104,7 +104,7 @@ export default function Card({ post }) {
                     </a>
                 </Link>
                 <Stack direction={'column'} spacing={0} fontSize={'sm'} >
-                    <Link href={"/"} >
+                    <Link href={post._embedded.author[0].link ?? "/"} >
                         <a>
                             <Text fontWeight={600}>{post._embedded.author[0].name ?? "Indisponível"}</Text>
                         </a>

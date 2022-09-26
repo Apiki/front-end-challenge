@@ -1,31 +1,28 @@
 import React, { useEffect, useState } from 'react';
-import Head from 'next/head';
-import axios from 'axios';
 import { CaretDoubleDown } from 'phosphor-react';
+import Head from 'next/head';
 
-import * as S from "../styles";
-import Card from "../components/Card";
-import { BASE_URL } from "../utils/constants";
+import { controller } from '../utils/controller';
 import Loading from '../components/Loading';
+import Card from "../components/Card";
+import * as S from "../styles";
 
 const Posts = () => {
+    const [loadingPage, setLoadingPage] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [posts, setPosts] = useState([]);
     const [page, setPage] = useState(1);
-    const [loading, setLoading] = useState(true);
-    const [loadingPage, setLoadingPage] = useState(false);
 
     useEffect(() => {
         const getPosts = async() => {
-            await axios(`${BASE_URL}&categories=518&page=${page}`)
-                .then(response => response.data)
-                .then(data => setPosts([...posts, ...data]))
+            const data = await controller.fetchPage(page)
+            setPosts([...posts, ...data])
+            
             setLoadingPage(false)
             setLoading(false)
         }
 
-        setTimeout(() => {
-            getPosts()
-        }, 3000)
+        getPosts()
         
     }, [page])
 

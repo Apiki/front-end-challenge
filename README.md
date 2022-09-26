@@ -1,3 +1,8 @@
+### LINK: https://blog-tech-apiki.vercel.app
+
+## TECNOLOGIAS UTILIZADAS
+<img src='https://img.shields.io/badge/Typescript-FFF?style=for-the-badge&logo=typescript&logoColor=1279eb'/><img src='https://img.shields.io/badge/React-000000?style=for-the-badge&logo=react&logoColor=61DAFB' /><img src='https://img.shields.io/badge/NextJS-20232A?style=for-the-badge&logo=next&logoColor=61DAFB' /><img src='https://img.shields.io/badge/Axios-FFF?style=for-the-badge&logo=axios&logoColor=000' /><img src='https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white' /><img src='https://img.shields.io/badge/chakra_ui-2abfb3?style=for-the-badge&logo=chakra-ui&logoColor=white' /><img src='https://img.shields.io/badge/phosphor_react-f2c66b?style=for-the-badge&logo=phosphor&logoColor=white' />
+
 # Desafio - Front-end Developer
 Este desafio tem como objetivo te avaliar como desenvolvedor Front-end: JavaScript, HTML, CSS e lógica de programação.
 
@@ -45,3 +50,9 @@ Seja criativo, construa um layout pensando no usuário final, e sinta-se a vonta
 1. Efetue o fork deste repositório e crie um branch com o seu nome e sobrenome. (exemplo: fulano-dasilva);
 1. Após finalizar o desafio, crie um Pull Request;
 1. Aguarde algum contribuidor realizar o code review;
+
+
+### 🧑🏾‍💻 Autor
+#### Rommel Santhiago
+
+[<img src='https://img.shields.io/badge/LinkedIn-1279eb?style=for-the-badge&logo=linkedin&logoColor=white' />](https://www.linkedin.com/in/rommelsanthiago)&nbsp;&nbsp;[<img src='https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white' />](mailto:rommel.santhiago@gmail.com)
