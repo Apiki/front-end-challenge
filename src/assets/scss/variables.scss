@@ -1,0 +1,17 @@
+.container {
+  max-width: 1440px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 0 auto;
+}
+
+// CSS Apenas para H1 que tiver a classe Post__title
+h1.post__title {
+  font-weight: 700;
+  font-size: 3em;
+  line-height: 1.15;
+  margin: 0 0 0.4em;
+  letter-spacing: -.04em;
+  color: #121212;
+  margin-bottom: 16px;
+}
