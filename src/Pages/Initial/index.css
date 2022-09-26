@@ -1,0 +1,24 @@
+.initial-box__button {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.initial-box__button-next {
+    flex-direction: column; 
+}
+
+.initial-box__text-footer{
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.initial-box__text-button {
+    width: 20vh;
+    height: 10vh;
+    margin-left: 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(28, 28, 157);
+}

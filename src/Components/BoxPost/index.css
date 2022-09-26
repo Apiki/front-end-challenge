@@ -1,0 +1,23 @@
+.box-post {
+    margin-bottom: 50px;
+    justify-items: center;
+}
+
+.box-post__title {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.box-post__title-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 20px
+}
+
+.box-post__image {
+    width: 150vh;
+    border-radius: 10px
+}
