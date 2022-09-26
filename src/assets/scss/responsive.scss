@@ -1,0 +1,25 @@
+
+@media screen and (max-width: 768px) {
+  .container:not(.navbar__container) {
+    padding: 0;
+  }
+  .posts {
+    &__content {
+      flex-direction: column;
+      img {
+        max-width: 100% !important;
+      }
+    }
+  }
+  .btnHover {
+    width: 100%;
+    padding: 15px 0;
+  }
+  .pagination {
+    // flex-direction: column;
+    // gap: 0;
+    .btnEffect {
+      padding: 15px 30px;
+    }
+  }
+}

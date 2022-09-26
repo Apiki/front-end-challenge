@@ -1,0 +1,216 @@
+.posts__content {
+  &.postPage {
+    justify-content: center;
+    margin: 0 auto;
+  }
+  background: #FFFFFF;
+  box-shadow: 0px 0px 10px rgb(19 19 31 / 5%);
+  border-radius: 5px;
+  padding: 24px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 25px;
+  div {
+    max-width: 100%;
+  }
+}
+.post__author {
+  font-size: 14px;
+  color: #717171;
+  margin-left: 15px;
+}
+
+.post__title {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 32px;
+  text-align: left;
+  color: #1A202C;
+}
+.post__date {
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px;
+  gap: 10px;
+  font-size: 14px;
+  color: #717171;
+}
+.post__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: #717171;
+  &.card {
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 32px;
+      color: #717171;
+    }
+  }
+  p {
+    line-height: 1.4em;
+    margin-bottom: 20px;
+    color: #a0a0a0;
+    margin-top: 0;
+    font-size: 24px;
+  }
+}
+
+
+.postList {
+  margin: 50px 0;
+}
+  
+
+
+.dangerous__content {
+  p {
+    margin: 0 0 1.25em;
+    font-size: 18px;
+    color: #212121;
+    a {
+      color: #ba007c;
+    }
+  }
+  h2 {
+    font-size: 1.953em;
+    margin: 0.83em 0 0.5em;
+    line-height: 1.35;
+    font-weight: 500;
+    color: #121212;
+  }
+  .wp-block-table{
+    margin: 0 0 1em;
+    overflow-x: auto;
+    &.is-style-stripes {
+      border-spacing: 0;
+      border-collapse: inherit;
+      background-color: transparent;
+      border-bottom: 1px solid #f0f0f0;
+    }
+  }
+  table {
+    width: 100%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 100%;
+    overflow-x: auto;
+    word-break: break-word;
+    margin: 1em 0 30px;
+    line-height: normal;
+    color: #7b7b7b;
+    thead tr {
+      border-bottom: 2px solid #eee;
+    }
+  tbody tr:last-child,
+  td:first-child,
+  td:last-child, 
+  th:first-child, 
+  th:last-child {
+      border: 0;
+      color: #5a5a5a;
+      font-weight: 700;
+      vertical-align: middle;
+      font-size: .85em;
+      padding: 8px 20px;
+      text-align: left;
+    }
+      
+  tr {
+      border-bottom: 1px solid #eee;
+    }
+  tbody tr:nth-child(odd) {
+      background-color: #f0f0f0;
+    }
+  td, th {
+      font-size: .85em;
+      padding: 8px 20px;
+      text-align: left;
+      border-left: 1px solid #eee;
+      border-right: 1px solid #eee;
+    }
+  .wp-block-image img {
+      height: auto;
+      max-width: 100%;
+      vertical-align: bottom;
+    }
+  td, th {
+      font-size: 16px;
+      padding: 8px 20px;
+      text-align: left;
+      border-left: 1px solid #eee;
+      border-right: 1px solid #eee;
+    }
+  }
+
+  pre {
+    color: #7b7b7b;
+    background: #fafafa;
+    border: 1px solid #eee;
+    padding: 0.5em 1.5em 0.5em 1.5em;
+    white-space: pre-wrap;
+    word-wrap: break-word
+  }
+  ul {
+    list-style: square;
+    margin-left: 38px;
+    padding-bottom: 32px;
+    li {
+      list-style: square;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+  }
+  h3 {
+    font-weight: 500;
+    color: #121212;
+    font-size: 28px;
+    margin: 28px 0 14px;
+    line-height: 1.4;
+  }
+  h4 {
+    font-weight: 500;
+    color: #121212;
+    font-size: 28px;
+    margin: 28px 0 14px;
+    line-height: 1.4;
+  }
+
+  .tm-click-to-tweet {
+    display: block;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    border: 1px solid #dddddd;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 15px 30px;
+    margin: 15px 0px;
+    zoom: 1;
+    .tm-ctt-text {
+      margin: 0;
+      padding: 0;
+      position: relative;
+      margin-bottom: 10px;
+      word-wrap: break-word;
+      a {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        color: #999999;
+        font-size: 24px;
+        line-height: 140%;
+        text-transform: none;
+        letter-spacing: 0.05em;
+        font-weight: 100;
+        text-decoration: none;
+        text-transform: none;
+      }
+    }
+  }
+}

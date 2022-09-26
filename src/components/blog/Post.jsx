@@ -22,7 +22,7 @@ function Post() {
     <div className="main container">
       {items.map((item) => {
         return (
-        <div key={item.title.rendered} className="posts__content">
+        <div key={item.title.rendered} className="posts__content postPage">
           <Helmet>
             <title>Apiki Blog - { item.yoast_head_json.og_title }</title>
             <meta name="description" content={item.yoast_head_json.og_description} />
@@ -37,7 +37,7 @@ function Post() {
 
 
             <h1 className="post__title">{item.title.rendered}</h1>
-            <h3 className="post__text"dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }} />
+            <h3 className="post__text" dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }} />
 
 
             <div className="dangerous__content" dangerouslySetInnerHTML={{ __html: item.content.rendered }} />

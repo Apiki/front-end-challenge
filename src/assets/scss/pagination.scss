@@ -1,0 +1,14 @@
+
+.pagination {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(87,74,232,1) 0%, rgba(62,161,219,1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  right: 0;
+  z-index: 99;
+}

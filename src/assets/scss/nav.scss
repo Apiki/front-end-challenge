@@ -1,0 +1,22 @@
+.navigation {
+  background: linear-gradient(90deg, rgba(87,74,232,1) 0%, rgba(62,161,219,1) 100%);
+  .navbar {
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__menu {
+      display: flex;
+      gap: 25px;
+      padding: 12px 0;
+    }
+    &__link {
+      color: #fff;
+      &:hover {
+        border-bottom: 2px solid #fff;
+      }
+    }
+  }
+}
+
