@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  color: rgb(121, 121, 121);
+  background: #ddd;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0px;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+
+}
+
+a {
+  text-decoration: none;
+  color: rgb(154, 154, 154);
+
+}
+
+
+
+.container {
+  max-width: 50rem;
+  padding: 0 1rem;
+}
+
+.animeLeft {
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: animeLeft 0.5s forwards;
+}
+
+@keyframes animeLeft {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  /* min-height: calc(100vh + 10rem); */
+  max-width: 80rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+  justify-content: center;
+
+}

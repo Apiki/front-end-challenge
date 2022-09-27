@@ -1,0 +1,94 @@
+.Home {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 400px);
+    gap: 1.2rem;
+    justify-items: center;
+    place-content: start;
+
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    background: rgb(48, 48, 48);
+    border-radius: 0.2rem;
+    justify-items: center;
+    place-content: start;
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    padding: 1rem 1rem 0 1rem;
+}
+
+.card img {
+    margin-top: 1rem;
+}
+
+.card p {
+    padding: 10px;
+    padding-top: 1rem;
+    max-width: 100%;
+    /* width: 250px; */
+;    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    direction: ltr;
+    line-height: .2;
+    font-size: 1rem;
+}
+
+.textopage {
+    text-overflow: ellipsis;
+
+}
+
+.leia {
+    color: #c90387;
+    place-content: end;
+    margin-bottom: 1rem;
+    /* place-content: end; */
+}
+
+.leia:after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background: currentColor;
+    display: block;
+}
+
+.card:nth-child(5) {
+    grid-column: 2 / 4;
+    grid-row: span 2;
+    background: rgb(94, 94, 94);
+}
+
+.card:nth-child(7) {
+    grid-column: 1 / 3;
+    grid-row: span 2;
+}
+
+@media (max-width: 60rem) {
+    .card:nth-child(3) {
+        grid-column: initial;
+        grid-row: initial;
+    }
+}
+
+
+@media (max-width: 60rem) {
+    .Home {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 40rem) {
+    .Home {
+        grid-template-columns: 1fr;
+    }
+}
