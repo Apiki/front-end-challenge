@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './Post.module.css'
 import { useParams } from 'react-router-dom'
 import { POST_GET } from '../Api'
 import { Error } from '../Ajuda/Error'
@@ -24,23 +25,25 @@ export const Post = () => {
     if (data)
 
         return (
-            <article className="animeLeft container">
-                <Head
-                    title="Post"
-                    description="Conteúdo do post."
-                />
-                {data.map(item => {
+            <article className={`${styles.post} container animeLeft`}>
+                <div>
+                    <Head
+                        title="Post"
+                        description="Conteúdo do post."
+                    />
+                    {data.map(item => {
+                        return <div key={item.id}>
+                            <h1>{item.title.rendered}</h1>
+                            
+                            <img src={item._embedded['wp:featuredmedia'][0].source_url} alt={`Imagem referente ao post: ${item.title.rendered}`} />
+                            
 
-                    return <div key={item.id}>
-
-                        <img src={item._embedded['wp:featuredmedia'][0].source_url} alt={`Imagem referente ao post: ${item.title.rendered}`} />
-
-                        <h1>{item.title.rendered}</h1>
-                        <div
-                            dangerouslySetInnerHTML={{ __html: item.content.rendered }}
-                        />
-                    </div>
-                })}
+                            <div
+                                dangerouslySetInnerHTML={{ __html: item.content.rendered }}
+                            />
+                        </div>
+                    })}
+                </div>
             </article>
         );
 }

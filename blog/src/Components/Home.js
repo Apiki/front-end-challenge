@@ -8,7 +8,6 @@ import { useFetch } from '../Hooks/useFetch';
 import Head from '../Ajuda/Head';
 import { PAGE_GET } from '../Api';
 
-
 export const Home = () => {
 
     const { data, request, loading, error } = useFetch()
@@ -28,8 +27,8 @@ export const Home = () => {
     if (data)
 
         return (
-            <section >
-                <div className={`${styles.Home} animeLeft container`}>
+            <section  >
+                <div className={`${styles.Home} container`}>
                     <Head
                         title="Blog Apiki"
                         description="Páginas com posts do blog."
@@ -38,7 +37,7 @@ export const Home = () => {
 
                         <li key={item.slug} className={styles.card} >
                             <h2>{item.title.rendered}</h2>
-                            <Link to={`${item.slug} `}>
+                            <Link to={`${item.slug} `} >
                                 <img src={item._embedded['wp:featuredmedia']
                                     ? item._embedded['wp:featuredmedia'][0].source_url
                                     : ""

@@ -33,6 +33,12 @@
 
 .card h2 {
     font-size: 1.1rem;
+    margin: 0px;
+    color: #ddd;
+    align-items: center;
+    padding: 0rem;
+    line-height: 1.5;
+
 }
 
 .Home .card img {
@@ -44,6 +50,7 @@
 }
 
 .card p {
+    margin: 0px;
     padding-top: .5rem;
     max-width: 100%;
     white-space: nowrap;
@@ -56,6 +63,10 @@
 
 .textopage {
     text-overflow: ellipsis;
+}
+
+.leia  {
+    text-decoration: none;
 }
 
 .leia {
@@ -151,13 +162,13 @@
         margin-top: 3rem;
         padding: 0rem;
     }
-    
+
     .card:nth-child(10) p {
         margin-top: 3.8rem;
         padding: 0rem;
         line-height: 1.5;
     }
-    
+
     .card:nth-child(10) .leia {
         margin-top: 15rem;
     }
@@ -167,7 +178,15 @@
 @media (max-width: 850px) {
     .Home {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(auto, 360px);
+        /* grid-template-rows: repeat(auto, 390px); */
+    }
+
+    .card h2 {
+        color: #fff
+    }
+
+    .card p {
+        font-size: 1.1rem;
     }
 
     .card:nth-child(5) {
@@ -181,8 +200,10 @@
         padding-top: initial;
         font-size: initial;
     }
+
     .card:nth-child(5) p {
         white-space: nowrap;
+        padding: 0;
     }
 
     .card:nth-child(5) img {
@@ -217,13 +238,13 @@
         justify-content: center;
         max-height: 170px;
         border-radius: 0.3rem;
-    
+
     }
 
     .card:nth-child(10) h2 {
         grid-column: initial;
         margin-top: 1rem;
-        padding: initial;
+        padding: 0 1rem;
     }
 
     .card:nth-child(10) p {
@@ -236,12 +257,13 @@
         line-height: initial;
     }
 
-    
+
     .card:nth-child(10) .leia {
         grid-column: initial;
         grid-row: initial;
         margin-top: initial;
-        margin-bottom: 1rem;;
+        margin-bottom: 1rem;
+        ;
     }
 }
 
@@ -250,7 +272,7 @@
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     margin-top: 0rem;
-    padding:1rem;
+    padding: 1rem;
 }
 
 .proxima {
@@ -261,12 +283,11 @@
     grid-column: 3/-1;
 }
 
-@media(max-width:750px){
-    
+@media(max-width:750px) {
+
     .btnHome {
         display: grid;
         grid-template-columns: repeat(2, auto);
         justify-content: space-between;
     }
 }
-

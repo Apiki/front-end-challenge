@@ -1,5 +1,5 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@700&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -20,13 +20,6 @@ body {
   --type-first: 'Montserrat', Georgia;
   --type-second: Roboto, Arial, sans-serif;
   font-family: var(--type-first);
-}
-
-ul,
-li {
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
 }
 
 button {
@@ -57,12 +50,6 @@ img {
   max-width: 100%;
 }
 
-a {
-  text-decoration: none;
-  color: rgb(154, 154, 154);
-
-}
-
 .container {
   max-width: 70rem;
   padding: 0 1rem;
@@ -70,7 +57,6 @@ a {
   justify-content: center;
   margin-top: 6rem;
   margin-bottom: 4rem;
-
 }
 
 .mainContainer {
