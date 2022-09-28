@@ -9,4 +9,8 @@
 .nav {  
   align-items: center;
   height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+

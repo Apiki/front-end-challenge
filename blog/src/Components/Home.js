@@ -28,44 +28,41 @@ export const Home = () => {
     if (data)
 
         return (
-            <section className={`${styles.Home} animeLeft container`} >
-                <Head
-                    title="Blog Apiki"
-                    description="Páginas com posts do blog."
-                />
-                {data.map((item) => (
+            <section >
+                <div className={`${styles.Home} animeLeft container`}>
+                    <Head
+                        title="Blog Apiki"
+                        description="Páginas com posts do blog."
+                    />
+                    {data.map((item) => (
 
-                    <li key={item.slug} className={styles.card} >
+                        <li key={item.slug} className={styles.card} >
+                            <h2>{item.title.rendered}</h2>
+                            <Link to={`${item.slug} `}>
+                                <img src={item._embedded['wp:featuredmedia']
+                                    ? item._embedded['wp:featuredmedia'][0].source_url
+                                    : ""
+                                } alt={`Imagem referente ao post: ${item.title.rendered}`} className="imgCard" />
+                            </Link>
+                            <p dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }} />
+                            <Link to={`${item.slug}`} className={styles.leia}>Veja mais</Link>
+                        </li>
 
-                        <h2>{item.title.rendered}</h2>
+                    ))}
+                </div>
 
-                        <Link to={`${item.slug} `}>
-                            <img src={item._embedded['wp:featuredmedia']
-                                ? item._embedded['wp:featuredmedia'][0].source_url
-                                : ""
-                            } alt={`Imagem referente ao post: ${item.title.rendered}`} className="imgCard" />
-                        </Link>
-                        <p dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }} />
-                        <Link to={`${item.slug}`} className={styles.leia}>Veja mais</Link>
-                    </li>
-
-                ))}
-
-                {navPage > 1 ? (
-                    <Link to=''>
-                        <button onClick={() => carregarAnterior()} className={`${styles.voltar} button animeLeft `}>Voltar</button>
-                    </Link>
-                ) : (
-                    ""
-                )}
-                {navPage < pages ? (
-                    <Link to=''>
-                        <button onClick={() => carregarMais()} className={`${styles.proxima}  button animeLeft `}>PROXIMA PAGINA</button>
-                    </Link>
-                ) : (
-                    <p>Não existem mais posts.</p>
-                )}
-
+                <div className={`${styles.btnHome} container`} >
+                    {navPage > 1 ? (
+                        <button onClick={() => carregarAnterior()} className={`${styles.voltar} button animeLeft `}>Anterior</button>
+                    ) : (
+                        <span></span>
+                    )}
+                    {navPage < pages ? (
+                        <button onClick={() => carregarMais()} className={`${styles.proxima}  button animeLeft `}>Próxima</button>
+                    ) : (
+                        <p>Não existem mais posts.</p>
+                    )}
+                </div>
             </section>
         )
 }

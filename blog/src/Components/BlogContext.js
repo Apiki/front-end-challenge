@@ -7,10 +7,10 @@ export const BlogStorage = ({ children }) => {
 
     //total de páginas
     const [pages, setPages] = React.useState(null)
- 
+
     // navegação entre paginas
     const [navPage, setNavPage] = React.useState(1)
-    
+
     // fetch do número de pages 
     React.useEffect(() => {
         async function puxarDados() {
@@ -31,7 +31,7 @@ export const BlogStorage = ({ children }) => {
     }
 
     return (
-        <BlogContext.Provider value={{  pages,  navPage, carregarMais, carregarAnterior }}>
+        <BlogContext.Provider value={{ pages, navPage, setNavPage, carregarMais, carregarAnterior }}>
 
             {children}
         </BlogContext.Provider>
