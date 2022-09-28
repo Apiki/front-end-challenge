@@ -1,19 +1,25 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto&display=swap');
 * {
   box-sizing: border-box;
 }
 
-body {
-  height: 100vh;
-  color: rgb(121, 121, 121);
-  background: #ddd;
-}
-
+body,
 h1,
 h2,
 h3,
 h4,
 p {
   margin: 0px;
+}
+
+body {
+  height: 100vh;
+  color: #e2e2e2;
+  background: #c8c8c8;
+  --type-first: 'Montserrat', Georgia;
+  --type-second: Roboto, Arial, sans-serif;
+  font-family: var(--type-first);
 }
 
 ul,
@@ -23,10 +29,30 @@ li {
   margin: 0px;
 }
 
+button {
+  display: block;
+  font-size: 1.1rem;
+  font-family: var(--type-first);
+  cursor: pointer;
+  border: none;
+  border-radius: 0.3rem;
+  background-image: linear-gradient(0deg,#a4006d, #f528b1);    
+  color: #220017;
+  min-width: 8rem;
+  padding: 0.8rem 3rem;
+  box-sizing: border-box;
+  transition: 0.2s;
+}
+
+button:hover,
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #ff85d6, 0 0 0 4px #a4006d;
+}
+
 img {
   display: block;
-  max-width: 100%;
-
+  width: 100vh;
 }
 
 a {
@@ -35,17 +61,35 @@ a {
 
 }
 
-
-
 .container {
-  max-width: 50rem;
+  max-width: 80rem;
   padding: 0 1rem;
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+
+}
+
+.mainContainer {
+  margin-top: 8rem;
+  /* margin-left: 10rem; */
+  align-items: center;
+}
+
+.title {
+  font-family: var(--type-second);
+  line-height: 1;
+  font-size: 3rem;
+  margin: 1rem 0;
+  position: relative;
+  z-index: 1;
 }
 
 .animeLeft {
   opacity: 0;
-  transform: translateX(-40px);
-  animation: animeLeft 0.5s forwards;
+  transform: translateX(-50px);
+  animation: animeLeft .3s forwards;
 }
 
 @keyframes animeLeft {
@@ -58,10 +102,9 @@ a {
 .App {
   display: flex;
   flex-direction: column;
-  /* min-height: calc(100vh + 10rem); */
-  max-width: 80rem;
-  padding: 0 1rem;
-  margin: 0 auto;
-  justify-content: center;
+  min-height: 100vh;
+}
 
+.AppBody {
+  flex: 1;
 }

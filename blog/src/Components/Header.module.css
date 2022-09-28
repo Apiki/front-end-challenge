@@ -1,0 +1,12 @@
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background: #303030;
+  top: 0px;
+}
+
+.nav {  
+  align-items: center;
+  height: 4rem;
+}

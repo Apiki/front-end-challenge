@@ -4,25 +4,17 @@ import { API_URL } from '../Api'
 export const BlogContext = React.createContext()
 
 export const BlogStorage = ({ children }) => {
-    // fetch dados pagina inicial
-    const [dadospage, setdaDospage] = React.useState(null)
-    //toral de paginas
+
+    //total de páginas
     const [pages, setPages] = React.useState(null)
+ 
     // navegação entre paginas
     const [navPage, setNavPage] = React.useState(1)
-
-    //Fetch inicial funcionando
-    React.useEffect(() => {
-        fetch(`${API_URL}posts?_embed&categories=518&page=${navPage}`)
-            .then((response) =>
-                response.json())
-            .then((json) => setdaDospage(json))
-    }, [navPage])
-
-    // teste de paginação 
+    
+    // fetch do número de pages 
     React.useEffect(() => {
         async function puxarDados() {
-            const dadosResponse = await fetch(`https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518`);
+            const dadosResponse = await fetch(`${API_URL}posts?_embed&categories=518`);
             setPages(dadosResponse.headers.get('X-WP-TotalPages'));
         }
         puxarDados();
@@ -39,7 +31,7 @@ export const BlogStorage = ({ children }) => {
     }
 
     return (
-        <BlogContext.Provider value={{ dadospage, pages, setNavPage, navPage, carregarMais, carregarAnterior }}>
+        <BlogContext.Provider value={{  pages,  navPage, carregarMais, carregarAnterior }}>
 
             {children}
         </BlogContext.Provider>

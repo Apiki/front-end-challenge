@@ -1,13 +1,11 @@
 .Home {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 400px);
-    gap: 1.2rem;
+    grid-template-rows: repeat(5, 400px);
+    gap: 1rem;
     justify-items: center;
     place-content: start;
-
+    margin-bottom: 6rem;
 }
 
 .card {
@@ -15,9 +13,18 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
     background: rgb(48, 48, 48);
-    border-radius: 0.2rem;
+    border-radius: 0.3rem;
+
     justify-items: center;
     place-content: start;
+
+    position: relative;
+    /* width: 400px;
+    height: 400px; */
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+
 }
 
 .card h2 {
@@ -25,33 +32,34 @@
     padding: 1rem 1rem 0 1rem;
 }
 
-.card img {
+.Home .card img {
     margin-top: 1rem;
+    width: 100%;
+    height: 250px;
+    top: 20rem;
 }
 
 .card p {
-    padding: 10px;
-    padding-top: 1rem;
+    padding: 1rem;
+    padding-top: .5rem;
     max-width: 100%;
-    /* width: 250px; */
-;    white-space: nowrap;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     direction: ltr;
-    line-height: .2;
-    font-size: 1rem;
+    line-height: 0;
+    font-size: .9rem;
+    color: #c8c8c8;
 }
 
 .textopage {
     text-overflow: ellipsis;
-
 }
 
 .leia {
-    color: #c90387;
-    place-content: end;
+    color: #BA007C;
+    font-size: .9rem;
     margin-bottom: 1rem;
-    /* place-content: end; */
 }
 
 .leia:after {
@@ -65,12 +73,29 @@
 .card:nth-child(5) {
     grid-column: 2 / 4;
     grid-row: span 2;
-    background: rgb(94, 94, 94);
+    width: 100%;
+    height: 100%;
+    white-space: none;
+    text-overflow: clip;
+    direction: ltr;
+
 }
 
-.card:nth-child(7) {
+/* .card:nth-child(7){
     grid-column: 1 / 3;
     grid-row: span 2;
+    width: 100%;
+    height: 100%;
+} */
+
+.card:nth-child(10) {
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+.card:nth-child(10) img {
+    width: 100%;
+    height: 40%;
 }
 
 @media (max-width: 60rem) {
@@ -91,4 +116,15 @@
     .Home {
         grid-template-columns: 1fr;
     }
+}
+
+
+/* .Home .proxima {
+    grid-column: 1 / -1;
+} */
+
+
+img {
+    display: block;
+    width: 100vh;
 }

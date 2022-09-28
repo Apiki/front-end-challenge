@@ -1,0 +1,24 @@
+.tela {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  transform: scale(.5);
+  overflow: hidden;  
+}
+
+.loading {
+  animation: is-rotating 1s infinite;
+  border: 6px solid #ffe8f8;
+  border-radius: 50%;
+  border-top-color: #ba007c;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+}
+
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}

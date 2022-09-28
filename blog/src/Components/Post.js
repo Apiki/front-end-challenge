@@ -4,6 +4,7 @@ import { POST_GET } from '../Api'
 import { Error } from '../Ajuda/Error'
 import { Loading } from '../Ajuda/Loading'
 import { useFetch } from '../Hooks/useFetch'
+import Head from '../Ajuda/Head'
 
 export const Post = () => {
     const { data, loading, error, request } = useFetch()
@@ -23,12 +24,16 @@ export const Post = () => {
     if (data)
 
         return (
-            <article >
+            <article className="animeLeft container">
+                <Head
+                    title="Post"
+                    description="Conteúdo do post."
+                />
                 {data.map(item => {
 
                     return <div key={item.id}>
 
-                        <img src={item._embedded['wp:featuredmedia'][0].source_url} alt="Link para o post" />
+                        <img src={item._embedded['wp:featuredmedia'][0].source_url} alt={`Imagem referente ao post: ${item.title.rendered}`} />
 
                         <h1>{item.title.rendered}</h1>
                         <div
