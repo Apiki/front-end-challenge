@@ -1,5 +1,5 @@
 import React from 'react'
-import { API_URL } from '../Api'
+import { API_URL } from './Api'
 
 export const BlogContext = React.createContext()
 

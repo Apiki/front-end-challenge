@@ -11,7 +11,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
-    background: #3c3c3c;
+    background: #303030;
     border-radius: 0.3rem;
     justify-items: center;
     padding: 1rem;
@@ -42,7 +42,6 @@
 }
 
 .Home .card img {
-    margin-top: 2rem;
     top: 20rem;
     justify-content: center;
     max-height: 170px;
@@ -59,19 +58,22 @@
     direction: ltr;
     font-size: .85rem;
     color: #c8c8c8;
+    font-size: 1.02rem;
+
 }
 
 .textopage {
     text-overflow: ellipsis;
 }
 
-.leia  {
+.Home a {
     text-decoration: none;
 }
 
 .leia {
-    color: #BA007C;
-    font-size: .9rem;
+    color: #c50083;
+    font-size: 1rem;
+    font-family: var(--type-second);
 }
 
 .leia:after {
@@ -89,12 +91,13 @@
 }
 
 .card:nth-child(5) h2 {
-    padding-top: 2rem;
+    padding-top: 1rem;
     font-size: 1.2rem;
 }
 
 .card:nth-child(5) img {
-    padding-top: .2rem;
+    margin-top: 2rem;
+    padding-top: .2rem ;
     max-height: 366px;
 }
 
@@ -174,7 +177,6 @@
     }
 }
 
-
 @media (max-width: 850px) {
     .Home {
         grid-template-columns: 1fr;
@@ -185,8 +187,8 @@
         color: #fff
     }
 
-    .card p {
-        font-size: 1.1rem;
+    .card p, .leia {
+        font-size: 1.25rem;
     }
 
     .card:nth-child(5) {
@@ -267,27 +269,3 @@
     }
 }
 
-.btnHome {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    margin-top: 0rem;
-    padding: 1rem;
-}
-
-.proxima {
-    grid-column: 1/2;
-}
-
-.proxima {
-    grid-column: 3/-1;
-}
-
-@media(max-width:750px) {
-
-    .btnHome {
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        justify-content: space-between;
-    }
-}

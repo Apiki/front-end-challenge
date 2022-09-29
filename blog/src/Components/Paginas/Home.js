@@ -1,12 +1,12 @@
 import React from 'react'
-import { Error } from '../Ajuda/Error'
-import { Link } from 'react-router-dom';
-import { BlogContext } from './BlogContext';
+import { Error } from '../../Ajuda/Error'
+import { Link} from 'react-router-dom';
+import { BlogContext } from '../../BlogContext';
 import styles from './Home.module.css'
-import { Loading } from '../Ajuda/Loading';
-import { useFetch } from '../Hooks/useFetch';
-import Head from '../Ajuda/Head';
-import { PAGE_GET } from '../Api';
+import { Loading } from '../../Ajuda/Loading';
+import { useFetch } from '../../Hooks/useFetch';
+import Head from '../../Ajuda/Head';
+import { PAGE_GET } from '../../Api';
 
 export const Home = () => {
 
@@ -18,7 +18,7 @@ export const Home = () => {
         async function fetchPages() {
             const { url, options } = PAGE_GET({ navPage })
             await request(url, options)
-        }
+        }   
         fetchPages()
     }, [request, navPage])
 
@@ -43,27 +43,27 @@ export const Home = () => {
                                     : ""
                                 } alt={`Imagem referente ao post: ${item.title.rendered}`} className="imgCard" />
                             </Link>
-                            <p dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }} />
+                            <p className="paragrafo" dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }} />
                             <Link to={`${item.slug}`} className={styles.leia}>Veja mais</Link>
                         </li>
 
                     ))}
                 </div>
 
-                <div className={`${styles.btnHome} container`} >
+                <div className={`${styles.btnHome} btnHome container`} >
                     {navPage > 1 ? (
-                        <button onClick={() => carregarAnterior()} className={`${styles.voltar} button animeLeft `}>Anterior</button>
+                        <button onClick={() => carregarAnterior()} className={`  anterior button animeLeft `}>Anterior</button>
                     ) : (
                         <span></span>
                     )}
                     {navPage < pages ? (
-                        <button onClick={() => carregarMais()} className={`${styles.proxima}  button animeLeft `}>Próxima</button>
+
+                        <button onClick={() => carregarMais()} className={` proxima  button animeLeft `}>Próxima</button>
                     ) : (
-                        <p>Não existem mais posts.</p>
-                    )}
+                    <p>Não existem mais posts.</p>
+                            )}
                 </div>
             </section>
         )
 }
-
 

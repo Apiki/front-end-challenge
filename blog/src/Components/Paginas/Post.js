@@ -1,11 +1,11 @@
 import React from 'react'
 import styles from './Post.module.css'
-import { useParams } from 'react-router-dom'
-import { POST_GET } from '../Api'
-import { Error } from '../Ajuda/Error'
-import { Loading } from '../Ajuda/Loading'
-import { useFetch } from '../Hooks/useFetch'
-import Head from '../Ajuda/Head'
+import { Link, useParams } from 'react-router-dom'
+import { POST_GET } from '../../Api'
+import { Error } from '../../Ajuda/Error'
+import { Loading } from '../../Ajuda/Loading'
+import { useFetch } from '../../Hooks/useFetch'
+import Head from '../../Ajuda/Head'
 
 export const Post = () => {
     const { data, loading, error, request } = useFetch()
@@ -34,9 +34,9 @@ export const Post = () => {
                     {data.map(item => {
                         return <div key={item.id}>
                             <h1>{item.title.rendered}</h1>
-                            
-                            <img src={item._embedded['wp:featuredmedia'][0].source_url} alt={`Imagem referente ao post: ${item.title.rendered}`} />
-                            
+                            <p dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }} />
+
+                            <img src={item._embedded['wp:featuredmedia'][0].source_url} alt={`Imagem referente ao post: ${item.title.rendered}`} />                       
 
                             <div
                                 dangerouslySetInnerHTML={{ __html: item.content.rendered }}
@@ -44,6 +44,14 @@ export const Post = () => {
                         </div>
                     })}
                 </div>
+                <div className={` btnHome container`} >
+
+                    <Link to={"/"} className={`voltar  button animeLeft `}>
+                        <button>voltar</button>
+                    </Link>
+
+                </div>
+
             </article>
         );
 }
