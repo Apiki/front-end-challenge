@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0px;
+}
+
+body {
+  height: 100vh;
+  color: #e2e2e2;
+  background: #c8c8c8;
+  --type-first: 'Montserrat', Georgia;
+  --type-second: Roboto, Arial, sans-serif;
+  font-family: var(--type-first);
+}
+
+button {
+  display: block;
+  font-size: 1.1rem;
+  font-family: var(--type-first);
+  cursor: pointer;
+  border: none;
+  border-radius: 0.3rem;
+  background-image: linear-gradient(0deg, #a4006d, #f528b1);
+  color: #0f000b;
+  min-width: 8rem;
+  padding: 0.8rem 2rem;
+  box-sizing: border-box;
+  transition: 0.2s;
+  max-width: 20rem;
+}
+
+button:hover,
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #ff85d6, 0 0 0 4px #ff6fcf;
+  color: #0f000b;
+}
+
+.btnHome {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  margin-top: 0rem;
+  padding: 1rem;
+}
+
+.anterior {
+  grid-column: 1/2;
+}
+
+.proxima {
+  grid-column: 3/-1;
+}
+
+.voltar {
+  grid-column: 2/3;
+}
+
+/* @media(max-width:750px) {
+
+  .btnHome {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      justify-content: space-between;
+  }
+} */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p {
+  font-family: var(--type-second);
+}
+
+.container {
+  max-width: 70rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+}
+
+.mainContainer {
+  margin-top: 8rem;
+  /* margin-left: 10rem; */
+  align-items: center;
+}
+
+.animeLeft {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: animeLeft .3s forwards;
+}
+
+@keyframes animeLeft {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.AppBody {
+  flex: 1;
+}

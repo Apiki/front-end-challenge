@@ -1,0 +1,16 @@
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background: #202020;
+  top: 0px;
+}
+
+.nav {  
+  align-items: center;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

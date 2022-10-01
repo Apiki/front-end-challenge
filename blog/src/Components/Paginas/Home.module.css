@@ -1,0 +1,271 @@
+.Home {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 360px);
+    gap: 1rem;
+    justify-items: center;
+    place-content: start;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    background: #303030;
+    border-radius: 0.3rem;
+    justify-items: center;
+    padding: 1rem;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: scaleUp 0.3s forwards;
+    transition: all 0.5s;
+}
+
+@keyframes scaleUp {
+    to {
+        opacity: initial;
+        transform: initial;
+    }
+}
+
+.card h2 {
+    font-size: 1.1rem;
+    margin: 0px;
+    color: #ddd;
+    align-items: center;
+    padding: 0rem;
+    line-height: 1.5;
+
+}
+
+.Home .card img {
+    top: 20rem;
+    justify-content: center;
+    max-height: 170px;
+    border-radius: 0.3rem;
+}
+
+.card p {
+    margin: 0px;
+    padding-top: .5rem;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    direction: ltr;
+    font-size: .85rem;
+    color: #c8c8c8;
+    font-size: 1.02rem;
+
+}
+
+.textopage {
+    text-overflow: ellipsis;
+}
+
+.Home a {
+    text-decoration: none;
+}
+
+.leia {
+    color: #c50083;
+    font-size: 1rem;
+    font-family: var(--type-second);
+}
+
+.leia:after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background: currentColor;
+    display: block;
+}
+
+.card:nth-child(5) {
+    grid-column: 2 / 4;
+    grid-row: span 2;
+    grid-template-rows: repeat(4, auto 400px 200px auto);
+}
+
+.card:nth-child(5) h2 {
+    padding-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.card:nth-child(5) img {
+    margin-top: 2rem;
+    padding-top: .2rem ;
+    max-height: 366px;
+}
+
+.card:nth-child(5) p {
+    margin-top: 1rem;
+    white-space: initial;
+    line-height: 1.5rem;
+    font-size: 1rem;
+}
+
+.card:nth-child(10) {
+    grid-column: 1 / -1;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 0;
+    padding: 0rem;
+}
+
+.card:nth-child(10) img {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    border-radius: 0;
+    grid-row: 1;
+    margin: 0;
+    padding-bottom: 0;
+    max-height: 100%;
+}
+
+
+.card:nth-child(10) h2 {
+    grid-column: 2/-1;
+    margin-top: 1rem;
+    padding: 2rem;
+}
+
+.card:nth-child(10) p {
+    white-space: initial;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin-top: 4rem;
+    padding: .5rem 1rem 0 1.2rem;
+    line-height: 1.5;
+}
+
+.card:nth-child(10) .leia {
+    grid-column: 2/ 3;
+    grid-row: 2/3;
+    margin-top: 18rem;
+}
+
+@media (max-width:1100px) {
+    .card:nth-child(10) {
+        padding: 1rem;
+    }
+
+    .card:nth-child(10) img {
+        margin: 3.5rem;
+        padding-bottom: 0;
+        max-height: 60vh;
+        max-width: 60vh;
+        border-radius: 0.3rem;
+    }
+
+    .card:nth-child(10) h2 {
+        grid-column: 2/-1;
+        margin-top: 3rem;
+        padding: 0rem;
+    }
+
+    .card:nth-child(10) p {
+        margin-top: 3.8rem;
+        padding: 0rem;
+        line-height: 1.5;
+    }
+
+    .card:nth-child(10) .leia {
+        margin-top: 15rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .Home {
+        grid-template-columns: 1fr;
+        /* grid-template-rows: repeat(auto, 390px); */
+    }
+
+    .card h2 {
+        color: #fff
+    }
+
+    .card p, .leia {
+        font-size: 1.25rem;
+    }
+
+    .card:nth-child(5) {
+        grid-column: initial;
+        grid-row: initial;
+        grid-template-rows: initial;
+        ;
+    }
+
+    .card:nth-child(5) h2 {
+        padding-top: initial;
+        font-size: initial;
+    }
+
+    .card:nth-child(5) p {
+        white-space: nowrap;
+        padding: 0;
+    }
+
+    .card:nth-child(5) img {
+        max-height: 170px;
+    }
+
+    .card:nth-child(10) {
+        grid-column: 1fr;
+        grid-template-columns: initial;
+        grid-template-rows: initial;
+        padding: initial;
+    }
+
+    .card:nth-child(10) {
+        width: initial;
+        height: initial;
+        max-height: initial;
+        grid-column: initial;
+    }
+
+    .card:nth-child(10) img {
+        max-height: 170px;
+        grid-column: initial;
+        grid-row: initial;
+        border-radius: initial;
+        grid-row: initial;
+        margin: initial;
+        padding-bottom: initial;
+        max-height: initial;
+        margin-top: 2rem;
+        top: 20rem;
+        justify-content: center;
+        max-height: 170px;
+        border-radius: 0.3rem;
+
+    }
+
+    .card:nth-child(10) h2 {
+        grid-column: initial;
+        margin-top: 1rem;
+        padding: 0 1rem;
+    }
+
+    .card:nth-child(10) p {
+        white-space: nowrap;
+        grid-column: initial;
+        grid-row: initial;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        padding: 0 .5rem;
+        line-height: initial;
+    }
+
+
+    .card:nth-child(10) .leia {
+        grid-column: initial;
+        grid-row: initial;
+        margin-top: initial;
+        margin-bottom: 1rem;
+        ;
+    }
+}
+

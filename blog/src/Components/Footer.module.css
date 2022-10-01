@@ -1,0 +1,15 @@
+.footer {
+  display: block;
+
+  width: 100%;
+  background: rgb(38, 38, 38);
+  padding: 3rem 1rem 0 1rem;
+  height: 10rem;
+  text-align: center;
+  color: #797979;
+
+}
+
+.footer p {
+  margin-top: 1rem;
+}
