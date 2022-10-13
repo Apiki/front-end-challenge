@@ -6,7 +6,7 @@ export const Card = styled.article`
   width: 100%;
   height: 100%;
   min-height: 90px;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
   align-items: flex-start;
   justify-content: flex-start;
    
