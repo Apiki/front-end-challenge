@@ -4,9 +4,9 @@ import PostsContainer from '../../components/postsContainer'
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Header />
       <PostsContainer />
-    </div>
+    </>
   )
 }
