@@ -5,14 +5,13 @@ export const Card = styled.article`
   display: flex;
   width: 100%;
   height: 100%;
-  min-height: 60px;
-  margin-bottom: 24px;
+  min-height: 90px;
+  margin-bottom: 12px;
   align-items: flex-start;
   justify-content: flex-start;
    
   img {
-  max-width: 24%;
-  margin-right: 8px;
+  max-width: 26%;
   border-radius: 8px;
   cursor: pointer;
   }
@@ -29,7 +28,7 @@ export const Card = styled.article`
     h2 {
     font-size: 14px;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1;
     max-width: 400px;
     color: ${palet.secondary};
     }
