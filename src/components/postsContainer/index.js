@@ -2,35 +2,40 @@ import React, { useContext, useEffect, useState } from 'react';
 import AppContext from '../../context/AppContext';
 import { requestPosts } from '../../services/fetchAPI';
 import PostCard from '../postCard';
+import { Btn, BtnContainer, PageCount, PostContainer } from './style';
 
 export default function PostsContainer() {
   const { posts, setPosts } = useContext(AppContext);
   const [page, setPage] = useState(1);
 
-
-
   useEffect(() => {
     const getPosts = async () => {
-      const request = await requestPosts(page)
-      setPosts(request)
-    }
+      const request = await requestPosts(page);
+      setPosts(request);
+    };
 
     getPosts();
-  }, [page, setPosts])
+  }, [page, setPosts]);
 
   return (
-    <main>
+    <PostContainer>
       {posts.data && posts.data.map((post, i) => (
         <PostCard key={i} info={
           {
-            image: post["_embedded"]["wp:featuredmedia"][0]["source_url"].replace('.png', '-350x250.png'),
+            image: post["yoast_head_json"]["og_image"][0].url.replace('.png', '-350x250.png'),
             title: post.title.rendered,
             slug: post.slug,
-            author: post["yoast_head_json"]["twitter_misc"]["Escrito por"]
+            author: post["yoast_head_json"]["twitter_misc"]["Escrito por"],
+            description: post['yoast_head_json'].description,
           }
         } />
       ))}
-      <button onClick={() => setPage(page + 1)}>Carregar mais...</button>
-    </main>
+      <BtnContainer>
+        <Btn onClick={() => setPage(page === 1 ? 1 : page - 1)}>Voltar</Btn>
+        <PageCount>{`${page} de ${posts.totalPages}`}</PageCount>
+        <Btn onClick={() => setPage(page < posts.totalPages ? page + 1 : page)}>Carregar mais...</Btn>
+      </BtnContainer>
+
+    </PostContainer>
   )
 }
