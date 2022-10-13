@@ -28,7 +28,6 @@ export default function PostsContainer() {
             slug: post.slug,
             author: post["yoast_head_json"]["twitter_misc"]["Escrito por"]
           }
-
         } />
       ))}
       <button onClick={() => setPage(page + 1)}>Carregar mais...</button>

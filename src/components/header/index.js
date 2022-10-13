@@ -1,7 +1,10 @@
-import React from 'react'
-
+import React from 'react';
+import logo from '../../images/logo.png';
+import { HeaderContainer } from './style';
 export default function Header() {
   return (
-    <header>Header</header>
+    <HeaderContainer>
+      <img src={logo} alt='Apiki Logo' />
+    </HeaderContainer>
   )
 }
