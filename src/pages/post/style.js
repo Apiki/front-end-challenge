@@ -143,6 +143,7 @@ export const AuthorDetail = styled.section`
     p {
       color: ${palet.highligth};
       line-height: 2;
+      font-weight: 500;
     }
 
     span {
