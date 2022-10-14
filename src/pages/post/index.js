@@ -1,7 +1,10 @@
 import parse from 'html-react-parser';
 import React, { useEffect, useState } from 'react';
+import { FaUserCircle } from 'react-icons/fa';
 import { useParams } from 'react-router-dom';
+import Header from '../../components/header';
 import { requestPostInfo } from '../../services/fetchAPI';
+import { Article, AuthorDetail, Details, PostDetail } from './style';
 
 export default function Post(prop) {
   const { slug } = useParams();
@@ -19,14 +22,18 @@ export default function Post(prop) {
   }, [])
 
   return (
-    <div>
+    <PostDetail>
+      <Header />
       {
         post &&
-        <>
+        <Article>
           <h1>{post.title.rendered}</h1>
-          <h2>{post['yoast_head_json'].description}</h2>
-          <p>{new Date(post.date).toLocaleDateString()}</p>
-          <p>{`Tempo Est. de leitura: ${post['yoast_head_json']['twitter_misc']['Est. tempo de leitura']}`}</p>
+          <span>{post['yoast_head_json'].description}</span>
+          <Details>
+            <p>{post['_embedded'].author[0].name}</p>
+            <p>{new Date(post.date).toLocaleDateString()}</p>
+            <p>{`Tempo Est. de leitura: ${post['yoast_head_json']['twitter_misc']['Est. tempo de leitura']}`}</p>
+          </Details>
 
           <img
             src={post['_embedded']['wp:featuredmedia'][0]['source_url']}
@@ -34,13 +41,19 @@ export default function Post(prop) {
           />
           {parse(post.content.rendered)}
 
-          <div>
-            <img src={authorInfo.image.url} alt={post['_embedded'].author[0].name} />
-            <p>{authorInfo.name}</p>
-            <p>{authorInfo.description}</p>
-          </div>
-        </>
+          <AuthorDetail>
+            {authorInfo.image?.url
+              ? <img src={authorInfo.image?.url} alt={post['_embedded'].author[0].name} />
+              : <FaUserCircle />
+            }
+
+            <div>
+              <p>{authorInfo.name}</p>
+              <span>{authorInfo.description}</span>
+            </div>
+          </AuthorDetail>
+        </Article>
       }
-    </div>
+    </PostDetail>
   )
 }
