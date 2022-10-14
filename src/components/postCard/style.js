@@ -27,10 +27,16 @@ export const Card = styled.article`
 
     h2 {
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1;
     max-width: 400px;
     color: ${palet.secondary};
+    transition: 0.4s;
+    
+    :hover {
+      color: ${palet.highligth};
+    }
+
     }
 
     p {
