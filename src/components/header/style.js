@@ -11,4 +11,14 @@ export const HeaderContainer = styled.header`
   align-items: center;
   justify-content: space-between;
   padding: 16px;
+
+  a {
+    text-decoration: none;
+    color: #eee;
+    font-weight: 500;
+    transition: 0.4s;
+    :hover {
+      color: ${palet.highligth};
+    }
+  }
 `;
