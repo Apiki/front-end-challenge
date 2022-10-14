@@ -30,7 +30,10 @@ export default function Post(prop) {
           <h1>{post.title.rendered}</h1>
           <span>{post['yoast_head_json'].description}</span>
           <Details>
-            <p>{`Por: ${post['_embedded'].author[0].name}`}</p>
+            <p>{`Por: ${post['_embedded'].author[0].name
+              ? post['_embedded'].author[0].name
+              : 'Desconhecido'}`}
+            </p>
             <p>{new Date(post.date).toLocaleDateString()}</p>
             <p>{`Leitura: ${post['yoast_head_json']['twitter_misc']['Est. tempo de leitura']}`}</p>
           </Details>
