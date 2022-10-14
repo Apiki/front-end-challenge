@@ -2,6 +2,7 @@ import parse from 'html-react-parser';
 import React, { useEffect, useState } from 'react';
 import { FaUserCircle } from 'react-icons/fa';
 import { useParams } from 'react-router-dom';
+import Footer from '../../components/footer';
 import Header from '../../components/header';
 import { requestPostInfo } from '../../services/fetchAPI';
 import { Article, AuthorDetail, Details, PostDetail } from './style';
@@ -57,6 +58,7 @@ export default function Post(prop) {
           </AuthorDetail>
         </Article>
       }
+      <Footer />
     </PostDetail>
   )
 }
