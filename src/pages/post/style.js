@@ -77,6 +77,12 @@ export const Article = styled.article`
     }
   }
 
+  pre {
+    font-size: 12px;
+    max-width: 100%;
+    height: auto;
+  }
+
   @media screen and (max-width: 480px){
     width: 100%;
     margin: 0;
@@ -90,7 +96,7 @@ export const Details = styled.div`
   padding-top: 8px;
   margin-top: 16px;
   p {
-    margin-right: 8px;
+    margin-right: 4px;
     font-size: 12px;
     color: ${palet.primary};
   }
