@@ -1,0 +1,16 @@
+.header {
+  position: relative;
+  &__topbar {
+    background: #d83454;
+    height: 76px;
+    position: relative;
+    z-index: 10;
+    border-bottom: 0 solid #e8e8e8;
+  }
+  &__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

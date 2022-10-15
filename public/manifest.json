@@ -1,0 +1,8 @@
+{
+  "short_name": "Blog apiki",
+  "name": "Blog apiki",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
