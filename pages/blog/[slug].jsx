@@ -1,16 +1,28 @@
 /* eslint-disable @next/next/no-img-element */
 import parse from 'html-react-parser';
+import Head from 'next/head';
 import React from 'react';
 import { FaUserCircle } from 'react-icons/fa';
 import Footer from '../../components/footer';
 import Header from '../../components/header';
 import { requestPostInfo } from '../../services/fetchAPI';
-import { Article, AuthorDetail, Details, PostDetail } from './style';
+import { Article, AuthorDetail, Details, PostDetail } from '../../styles/Blogstyle';
 
 export default function Blog({ post, authorInfo }) {
-
+  const title = post.title.rendered
+  const description = post['yoast_head_json'].description;
   return (
     <PostDetail>
+      <Head>
+        <title>{title}</title>
+        <meta name='description' content={description} />
+        <meta property='og:title' content={title} />
+        <meta
+          property='og:description'
+          content={description}
+        />
+        <link rel='icon' href='https://blog.apiki.com/wp-content/uploads/sites/2/2020/04/favicon-apiki-magenta-75x75.png' />
+      </Head>
       <Header />
       {
         post &&

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import palet from "../../services/palet";
+import palet from "../services/palet";
 
 export const PostDetail = styled.main`
   display: flex;
