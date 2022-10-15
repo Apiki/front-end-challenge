@@ -16,7 +16,6 @@ export default function PostsContainer() {
     getPosts();
   }, [page, setPosts]);
 
-  console.log(posts, 'oi')
   return (
     <PostContainer>
       {posts?.data && posts.data.map((post, i) => (

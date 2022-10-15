@@ -8,6 +8,7 @@ export default function AppProvider({ data = {}, children }) {
     posts,
     setPosts,
   }
+
   return (
     <AppContext.Provider value={contextValue}>
       {children}

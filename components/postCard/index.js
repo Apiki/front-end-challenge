@@ -6,7 +6,7 @@ export default function PostCard(prop) {
   const { image, title, slug, author, description } = prop.info;
   const router = useRouter()
 
-  const handleClick = () => router.push(`/${slug}`)
+  const handleClick = () => router.push(`/blog/${slug}`)
 
   return (
     <Card>
