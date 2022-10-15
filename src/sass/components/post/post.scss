@@ -1,0 +1,27 @@
+.post {
+  display: flex;
+  flex-direction: row;
+  margin: 16px;
+  transition: all 200ms;
+
+  @media screen and (max-width: $mobile) {
+    flex-direction: column;
+    margin: 0;
+
+    &__thumb {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+  &img {
+    max-width: 100%;
+  }
+  &__content {
+    padding: 16px;
+  }
+}

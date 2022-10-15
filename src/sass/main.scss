@@ -1,0 +1,22 @@
+/* Colors */
+@import 'abstracts/colors';
+
+/* Resets */
+@import 'base/reset';
+@import 'base/typography';
+
+/* Variables*/
+@import 'abstracts/colors';
+@import 'abstracts/variables';
+
+/* General */
+@import 'general/general';
+
+/* Components */
+@import 'components/header/header';
+@import 'components/footer/footer';
+@import 'components/post/post';
+@import 'components/button/button';
+
+/* Pages */
+@import 'pages/home';
