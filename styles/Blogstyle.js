@@ -72,6 +72,7 @@ export const Article = styled.article`
     max-width: 100%;
     overflow-x: auto;
     height: auto;
+    margin-bottom: 16px;
   }
 
   iframe {
@@ -85,6 +86,22 @@ export const Article = styled.article`
   video {
     max-width: 100%;
     height: auto;
+  }
+
+  ul {
+    padding-left: 26px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  ol {
+    padding-left: 26px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  p {
+    margin-bottom: 8px;
   }
 
   @media screen and (max-width: 480px){
