@@ -108,62 +108,36 @@ export const Article = styled.article`
     color: ${palet.primary};
   }
 
-  pre.wp-block-code {
-  background: #2b2b2b;
-  padding: 1em;
-  margin: 0.5em auto;
-  overflow: auto;
-  border-radius: 0.3em;
-}
-
+  pre {
+    font-size: 12px;
+    border-radius: 6px;
+    background: #2b2b2b;
+    border: 1px solid #eee;
+    padding: 16px;
+    word-wrap: break-word;
+    text-rendering: optimizeLegibility;
+    max-width: 100%;
+    color: #f8f8f2;
+    overflow-x: auto;
+    height: auto;
+    margin-bottom: 16px;
+    font-family: 'Fira Code', Consolas, Menlo, Monaco, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', 'Courier New', Courier, monospace;
+  }
+  
   code[class*='language-'], pre[class*='language-'] {
     color: #f8f8f2;
     background: none;
-    font-family: 'Fira Code', Consolas, Menlo, Monaco, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', 'Courier New', Courier, monospace;
     text-align: left;
+    font-family: 'Fira Code', Consolas, Menlo, Monaco, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', 'Courier New', Courier, monospace;
     white-space: pre;
     word-spacing: normal;
     word-break: normal;
     word-wrap: normal;
     line-height: 1.5;
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
     -webkit-hyphens: none;
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
-  }
-
-  .content-inner>* {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  pre {
-    color: #7b7b7b;
-    background: #fafafa;
-    border: 1px solid #eee;
-    padding: 0.5em 1.5em 0.5em 1.5em;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
-
-  code, kbd, pre, samp {
-    font-family: "Lucida Console",Monaco,monospace;
-    font-size: .9em;
-    padding: 0.2em 0.5em;
-  }
-
-  p, pre {
-    margin: 0 0 1.75em;
-    text-rendering: optimizeLegibility;
-  }
-
-  .wp-block-code code {
-    display: block;
-    white-space: pre-wrap;
-    overflow-wrap: break-word;
   }
 
   code {
@@ -171,6 +145,9 @@ export const Article = styled.article`
     padding-left: 0;
     border: none;
     overflow-x: initial;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
   }
 
   @media screen and (max-width: 480px){
