@@ -21,6 +21,7 @@ export const Article = styled.article`
   }
   h1 {
     margin-bottom: 8px;
+    font-size: 2rem;
   }
   h2 {
     margin-top: 24px;
