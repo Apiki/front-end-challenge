@@ -5,18 +5,19 @@ httprequest.open("GET", "https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categ
 httprequest.send();
 
 
+
 let posts;
-httprequest.onreadystatechange = function(){
-    if(httprequest.readyState === 4 && httprequest.status === 200){
-        posts = JSON.parse(httprequest.response);
-        exibePosts();
-    } 
+httprequest.onreadystatechange = function() {
+	if (httprequest.readyState === 4 && httprequest.status === 200) {
+		posts = JSON.parse(httprequest.response);
+		exibePosts();
+	}
 }
 
-function exibePosts () {
-    let html = "";
-    posts.forEach((post) => {
-        html += `<a href="interna.html" title="${post.title.rendered}">
+function exibePosts() {
+	let html = "";
+	posts.forEach((post) => {
+		html += `<a href="interna.html?slug=${post.slug}" title="${post.title.rendered}">
                     <figure class="box-item-blog">
                         <img src="${post._embedded['wp:featuredmedia'][0].media_details.sizes.medium_large.source_url}" alt="${post.title.rendered}"/>
                         <figcaption>
@@ -26,46 +27,46 @@ function exibePosts () {
                         </figcaption>
                     </figure>
                 </a>`
-        
-    });
-    listaPosts.innerHTML = html;
+	});
+    
+	listaPosts.innerHTML = html;
 }
 
 const btCarregarMais = document.querySelector("#load-more");
 btCarregarMais.addEventListener("click", carregarMais);
 
 var page = 1
-function carregarMais() {
-    httprequest.open('GET', 'https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=' + (page + 1), true)
-    httprequest.onload = function() {
-        var posts = JSON.parse(this.response)
 
-        if(httprequest.status === 200 && httprequest.status === 400) {
-            exibePosts(posts)
-        }
-    } 
-    httprequest.send()
-    page++
-    window.scrollTo(0,0)
+function carregarMais() {
+	httprequest.open('GET', 'https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=' + (page + 1), true)
+	httprequest.onload = function() {
+		var posts = JSON.parse(this.response)
+
+		if (httprequest.status === 200 && httprequest.status === 400) {
+			exibePosts(posts)
+		}
+	}
+	httprequest.send()
+	page++
+	window.scrollTo(0, 0)
 }
 
 const btCarregarAnteriores = document.querySelector("#load-any-less");
 btCarregarAnteriores.addEventListener("click", carregarAnteriores);
 
 var page = 1
+
 function carregarAnteriores() {
-    httprequest.open('GET', 'https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=' + (page - 1), true)
-    httprequest.onload = function() {
-        var posts = JSON.parse(this.response)
+	httprequest.open('GET', 'https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=' + (page - 1), true)
+	httprequest.onload = function() {
+		var posts = JSON.parse(this.response)
 
-        if(httprequest.status === 200 && httprequest.status === 400) {
-            exibePosts(posts)
-        }
-    } 
-    httprequest.send()
-    page--
-    window.scrollTo(0,0)
+		if (httprequest.status === 200 && httprequest.status === 400) {
+			exibePosts(posts);
+            
+		}
+	}
+	httprequest.send()
+	page--
+	window.scrollTo(0, 0)
 }
-
-
-

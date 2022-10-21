@@ -1,8 +1,10 @@
 const httprequest = new XMLHttpRequest();
 const listaPosts = document.querySelector("#exibe-post");
-const loadMore = document.querySelector(".btn-load-more");
 
-httprequest.open("GET", "https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=wordpress-escolha-site-pequenas-empresas");
+const params = new URL(location.href).searchParams;
+const slug = params.get('slug');
+
+httprequest.open("GET", "https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug="+slug);
 httprequest.send();
 
 

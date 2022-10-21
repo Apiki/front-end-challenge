@@ -110,12 +110,14 @@
 #exibe-post {
     width: 70%;
 }
-.wp-caption {
-    width: 100% !important;
-}
+.wp-block-image,
+.wp-block-image img,
+.wp-caption,
 .wp-caption img {
     width: 100% !important;
+    height: auto !important;
 }
+
 .box-image-internal {
     margin-bottom: 50px;
 }
@@ -126,6 +128,7 @@
 .content-blog {
     justify-content: space-between;
 }
+
 
 .author {
     display: flex;
