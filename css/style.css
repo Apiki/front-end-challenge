@@ -111,6 +111,9 @@
     align-items: center;
     flex-direction: column;
 }
+#exibe-post article {
+    width: 100%;
+}
 .wp-block-image,
 .wp-block-image img,
 .wp-caption,

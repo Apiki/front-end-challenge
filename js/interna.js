@@ -17,7 +17,6 @@ httprequest.onreadystatechange = function(){
     } 
 }
 
-
 function exibePost () {
     let html = "";
     post.forEach((post) => {
@@ -25,16 +24,16 @@ function exibePost () {
         document.querySelector(".title-page").innerHTML= post.title.rendered;
 
         html += `<figure class="box-image-internal">
-                        <img src="${post._embedded['wp:featuredmedia'][0].media_details.sizes.medium_large.source_url}" alt="${post.title.rendered}"/>
-                    </figure>
-                    <article>${post.content.rendered}</article>
-                    <div class="author">
-                        <img src="${post._embedded['author'][0].avatar_urls['96']}" alt="${post._embedded['author'][0].name}"/>
-                        <div class="box-text-author">
-                            <p class="name">${post._embedded['author'][0].name}</p>
-                            <p class="description">${post._embedded['author'][0].description}</p>
-                        </div>
-                    </div>`
+                    <img src="${post._embedded['wp:featuredmedia'][0].media_details.sizes.medium_large.source_url}" alt="${post.title.rendered}"/>
+                </figure>
+                <article>${post.content.rendered}</article>
+                <div class="author">
+                    <img src="${post._embedded['author'][0].avatar_urls['96']}" alt="${post._embedded['author'][0].name}"/>
+                    <div class="box-text-author">
+                        <p class="name">${post._embedded['author'][0].name}</p>
+                        <p class="description">${post._embedded['author'][0].description}</p>
+                    </div>
+                </div>`
     });
     listaPosts.innerHTML = html;
 }
