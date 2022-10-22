@@ -29,7 +29,7 @@ function exibePosts() {
                 </a>`
 	});
     
-	listaPosts.innerHTML = html;
+	listaPosts.innerHTML += html;
 }
 
 const btCarregarMais = document.querySelector("#load-more");
@@ -48,25 +48,4 @@ function carregarMais() {
 	}
 	httprequest.send()
 	page++
-	window.scrollTo(0, 0)
-}
-
-const btCarregarAnteriores = document.querySelector("#load-any-less");
-btCarregarAnteriores.addEventListener("click", carregarAnteriores);
-
-var page = 1
-
-function carregarAnteriores() {
-	httprequest.open('GET', 'https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=' + (page - 1), true)
-	httprequest.onload = function() {
-		var posts = JSON.parse(this.response)
-
-		if (httprequest.status === 200 && httprequest.status === 400) {
-			exibePosts(posts);
-            
-		}
-	}
-	httprequest.send()
-	page--
-	window.scrollTo(0, 0)
 }

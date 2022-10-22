@@ -101,9 +101,6 @@
 .btn:hover {
     background-color: var(--bs-dark);
 }
-#load-any-less {
-    margin-right: 1rem;
-}
 
 
 /*Interna*/
