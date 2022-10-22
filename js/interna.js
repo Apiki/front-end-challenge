@@ -8,6 +8,7 @@ httprequest.open("GET", "https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=
 httprequest.send();
 
 
+
 let post;
 httprequest.onreadystatechange = function(){
     if(httprequest.readyState === 4 && httprequest.status === 200){
@@ -15,6 +16,7 @@ httprequest.onreadystatechange = function(){
         exibePost();
     } 
 }
+
 
 function exibePost () {
     let html = "";
@@ -36,7 +38,3 @@ function exibePost () {
     });
     listaPosts.innerHTML = html;
 }
-
-
-
-

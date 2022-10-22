@@ -14,6 +14,7 @@ httprequest.onreadystatechange = function() {
 	}
 }
 
+
 function exibePosts() {
 	let html = "";
 	posts.forEach((post) => {
@@ -22,7 +23,7 @@ function exibePosts() {
                         <img src="${post._embedded['wp:featuredmedia'][0].media_details.sizes.medium_large.source_url}" alt="${post.title.rendered}"/>
                         <figcaption>
                             <h2>${post.title.rendered}</h2>
-                            <p><i class="fa-solid fa-user"></i>  By: ${post._embedded['author'][0].name}</p>
+                            <p><i class="fa-solid fa-pen"></i>  By: ${post._embedded['author'][0].name}</p>
                             <p>${post.excerpt.rendered}</p>
                         </figcaption>
                     </figure>
@@ -35,17 +36,13 @@ function exibePosts() {
 const btCarregarMais = document.querySelector("#load-more");
 btCarregarMais.addEventListener("click", carregarMais);
 
-var page = 1
-
+let page = 1
 function carregarMais() {
 	httprequest.open('GET', 'https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=' + (page + 1), true)
 	httprequest.onload = function() {
-		var posts = JSON.parse(this.response)
-
 		if (httprequest.status === 200 && httprequest.status === 400) {
-			exibePosts(posts)
+			exibePosts()
 		}
 	}
 	httprequest.send()
-	page++
 }

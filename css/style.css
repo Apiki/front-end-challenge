@@ -15,6 +15,7 @@
 #lista-posts {
     width: 100%;
     margin-bottom: 50px;
+    justify-content: center;
 }
 #lista-posts a {
     display: block;
@@ -106,6 +107,9 @@
 /*Interna*/
 #exibe-post {
     width: 70%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 .wp-block-image,
 .wp-block-image img,
