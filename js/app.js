@@ -17,7 +17,7 @@ httprequest.onreadystatechange = function() {
 function exibePosts() {
 	let html = "";
 	posts.forEach((post) => {
-		html += `<a href="interna.html?slug=${post.slug}" title="${post.title.rendered}">
+		html += `<a href="single.html?slug=${post.slug}" title="${post.title.rendered}">
                     <figure class="box-item-blog">
                         <img src="${post._embedded['wp:featuredmedia'][0].media_details.sizes.medium_large.source_url}" alt="${post.title.rendered}"/>
                         <figcaption>
