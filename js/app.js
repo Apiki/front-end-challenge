@@ -29,7 +29,6 @@ function exibePosts() {
                     </figure>
                 </a>`
 	});
-    
 	listaPosts.innerHTML += html;
 }
 

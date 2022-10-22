@@ -120,6 +120,7 @@
 }
 
 .box-image-internal {
+    width: 100%;
     margin-bottom: 50px;
 }
 .box-image-internal img {
