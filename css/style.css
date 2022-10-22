@@ -37,6 +37,7 @@
     width: 40%;
     height: auto;
     margin-right: 3%;
+    transition: .2s;
 }
 #lista-posts a .box-item-blog figcaption {
     width: 57%;
@@ -58,6 +59,9 @@
 
 #lista-posts a:hover {
     box-shadow: 10px 11px 30px 0px rgb(168 163 168 / 49%);
+}
+#lista-posts a:hover img {
+    transform: scale(1.1);
 }
 #lista-posts a:hover .box-item-blog h2,
 #lista-posts a:hover .box-item-blog p {

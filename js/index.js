@@ -4,8 +4,6 @@ const listaPosts = document.querySelector("#lista-posts");
 httprequest.open("GET", "https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518");
 httprequest.send();
 
-
-
 let posts;
 httprequest.onreadystatechange = function() {
 	if (httprequest.readyState === 4 && httprequest.status === 200) {
@@ -42,9 +40,11 @@ function carregarMais() {
 	httprequest.onload = function() {
 
 		if (httprequest.status === 200 && httprequest.status === 400) {
-			exibePosts()
+			exibePosts();
 		}
 	}
 	httprequest.send()
 	page++
 }
+
+
