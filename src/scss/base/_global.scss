@@ -1,0 +1,43 @@
+/* Base */
+
+body {
+  background-color: $color-white;
+  color: $color-gray;
+  font-family: $font-mont;
+  line-height: 1.36;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-mont-bold;
+  color: $color-dark-green;
+}
+
+p,
+a,
+li,
+span {
+  font-size: 1rem;
+}
+
+.container {
+  padding-right: rem_calc(15);
+  padding-left: rem_calc(15);
+  margin-right: auto;
+  margin-left: auto;
+  height: auto;
+  width: auto;
+
+  @include media(">phone") {
+    padding-right: rem-calc(40);
+    padding-left: rem-calc(40);
+  }
+
+  @include media(">desktop-small") {
+    max-width: 1170px;
+  }
+}
