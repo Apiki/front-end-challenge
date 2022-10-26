@@ -1,0 +1,317 @@
+.main {
+  padding: rem-calc(20) 0;
+
+  @include media(">phone") {
+    padding: rem-calc(40) 0;
+  }
+
+  .container {
+    @include media(">tablet") {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  .sidebar {
+    display: none;
+    padding: rem-calc(20);
+    margin-left: 3%;
+    width: rem-calc(250);
+    min-width: rem-calc(250);
+    border: 1px solid $color-dark-green;
+
+    @include media(">tablet") {
+      display: block;
+    }
+
+    @include media(">tablet") {
+      width: rem-calc(250);
+      min-width: rem-calc(250);
+    }
+
+    @include media(">desktop-small") {
+      width: rem-calc(300);
+      min-width: rem-calc(300);
+    }
+
+    &__picture {
+      @extend %site-picture;
+
+      margin: 0;
+      width: rem-calc(250);
+      height: rem-calc(210);
+
+      @include media(">desktop-small") {
+        width: rem-calc(300);
+        height: rem-calc(250);
+      }
+    }
+
+    &__image {
+      @extend %image__cover;
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: rem-calc(16) rem-calc(24);
+    margin-top: rem-calc(30);
+    font-size: rem-calc(16);
+    text-decoration: none;
+    background-color: $color-green;
+    background: -moz-linear-gradient(
+      90deg,
+      $color-green 0%,
+      $color-dark-green 100%
+    );
+    background: -webkit-linear-gradient(
+      90deg,
+      $color-green 0%,
+      $color-dark-green 100%
+    );
+    background: -o-linear-gradient(
+      90deg,
+      $color-green 0%,
+      $color-dark-green 100%
+    );
+    background: -ms-linear-gradient(
+      90deg,
+      $color-green 0%,
+      $color-dark-green 100%
+    );
+    background: linear-gradient(90deg, $color-green 0%, $color-dark-green 100%);
+    border-radius: 10px;
+    color: $color-white;
+    font-family: $font-mont-bold;
+  }
+}
+
+.article-wrapper {
+  display: inline-block;
+
+  @include media(">tablet") {
+    width: 70%;
+  }
+
+  .article {
+    display: flex;
+    margin-bottom: rem-calc(24);
+
+    &__picture {
+      @extend %site-picture;
+
+      margin-right: rem-calc(10);
+      width: rem-calc(80);
+      height: rem-calc(56);
+
+      @include media(">phone-xsmall") {
+        width: rem-calc(120);
+        height: rem-calc(80);
+      }
+
+      @include media(">phone-small") {
+        margin-right: rem-calc(20);
+        width: rem-calc(180);
+        height: rem-calc(120);
+      }
+
+      @include media(">phone") {
+        margin-right: rem-calc(30);
+        width: rem-calc(260);
+        height: rem-calc(180);
+      }
+    }
+
+    &__image {
+      @extend %image__cover;
+
+      border-radius: 10px;
+    }
+
+    &-content {
+      &__title {
+        font-size: rem-calc(14);
+        line-height: 1.2;
+        margin-bottom: 10px;
+        color: $color-dark-green;
+
+        a {
+          color: inherit;
+          font-size: inherit;
+          text-decoration: none;
+        }
+
+        @include media(">phone") {
+          font-size: rem-calc(24);
+        }
+      }
+
+      &__excerpt {
+        display: none;
+        margin-top: rem-calc(10);
+
+        p {
+          font-size: rem-calc(14);
+        }
+
+        @include media(">phone-small") {
+          display: inline-block;
+        }
+
+        @include media(">phone") {
+          p {
+            font-size: rem-calc(16);
+          }
+        }
+      }
+    }
+
+    &-meta {
+      font-size: rem-calc(12);
+      text-rendering: auto;
+      color: $color-gray;
+
+      &__author,
+      &__date {
+        display: none;
+      }
+
+      &__author {
+        text-transform: uppercase;
+        font-size: rem-calc(12);
+
+        @include media(">phone-xsmall") {
+          display: inline-block;
+          margin-right: rem-calc(10);
+        }
+      }
+
+      &__comment {
+        display: inline-block;
+        a {
+          color: inherit;
+          font-size: inherit;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.post-wrapper {
+  display: inline-block;
+  max-width: 100%;
+
+  @include media(">tablet") {
+    width: 70%;
+  }
+
+  .post-header {
+    border-bottom: 2px solid #ececec;
+    margin-bottom: 2rem;
+
+    &__title {
+      margin-bottom: rem-calc(20);
+      font-size: rem-calc(20);
+
+      @include media(">tablet") {
+        margin-bottom: rem-calc(20);
+        font-size: rem-calc(42);
+      }
+    }
+
+    &__subtitle {
+      padding-bottom: rem-calc(16);
+      color: $color-gray;
+      border-bottom: 2px solid #ececec;
+      font-size: rem-calc(24);
+      font-family: $font-mont;
+    }
+
+    img {
+      max-width: 100%;
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  .post-body {
+    h2 {
+      margin-bottom: rem-calc(20);
+      font-size: rem-calc(22);
+    }
+
+    h3 {
+      margin-bottom: rem-calc(18);
+      font-size: rem-calc(18);
+    }
+
+    h4 {
+      margin-bottom: rem-calc(16);
+      font-size: rem-calc(16);
+    }
+    p,
+    li,
+    a {
+      margin-bottom: rem-calc(16);
+      font-size: rem-calc(14);
+      word-break: break-all;
+    }
+
+    iframe {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @include media(">tablet") {
+      h2 {
+        margin-bottom: rem-calc(22);
+        font-size: rem-calc(32);
+      }
+
+      h3 {
+        margin-bottom: rem-calc(20);
+        font-size: rem-calc(28);
+      }
+
+      h4 {
+        margin-bottom: rem-calc(18);
+        font-size: rem-calc(22);
+      }
+      p,
+      li,
+      a {
+        margin-bottom: rem-calc(22);
+        font-size: rem-calc(18);
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: $color-green;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    figure {
+      display: block;
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+      margin: rem-calc(20) auto;
+
+      @include media(">tablet") {
+        height: 100%;
+        margin: rem-calc(40) auto;
+      }
+    }
+  }
+}
