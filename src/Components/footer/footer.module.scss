@@ -1,0 +1,40 @@
+.Footer {
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  position: relative;
+  top: 2vh;
+}
+
+.apikiLogo {
+  width: 128px;
+  object-fit: contain;
+}
+
+.socialMediaIcons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.BsFacebook,
+.BsTwitter,
+.BsYoutube {
+  width: 24px;
+  height: 24px;
+}
+
+.BsFacebook {
+  color: #3982e4;
+}
+
+.BsTwitter {
+  color: #1a8cd8;
+}
+
+.BsYoutube {
+  color: #ff0000;
+}
