@@ -1,0 +1,118 @@
+.mainHeader {
+  width: 100%;
+  padding: 16px;
+  background-color: #000;
+
+  @media (min-width: 768px) {
+    position: unset;
+  }
+}
+
+.headerNavigation {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    justify-content: end;
+    flex-direction: column;
+  }
+}
+
+.apikiLogo {
+  width: 128px;
+  object-fit: contain;
+}
+
+.biMenu {
+  width: 32px;
+  height: 32px;
+  color: #fff;
+  position: fixed;
+  left: 85%;
+  background-color: #000;
+  z-index: 4;
+  border-radius: 50%;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.showHeaderNav {
+  bottom: 4px;
+  position: fixed;
+  z-index: 3;
+  padding: 8px;
+  width: 80vw;
+  height: 100vh;
+  transition: 0.6s ease-in-out;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.hiddenHeaderNav {
+  width: 0;
+  height: 100%;
+  transition: 0.2s ease-in-out;
+}
+
+.navContent {
+  width: 100vw;
+  height: 0;
+  display: flex;
+  justify-content: flex-end;
+  overflow-x: hidden;
+
+  @media (min-width: 768px) {
+    justify-content: unset;
+  }
+}
+
+.navUl {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.navLi {
+  font-family: "Montserrat", sans-serif;
+}
+
+.navBarDesktop {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+    background-color: #000000;
+    width: 100%;
+    right: 0%;
+  }
+}
+
+.navUlDesktop {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.navLiDesktop {
+  color: #fff;
+  font-weight: lighter;
+  list-style-type: none;
+  font-size: clamp(0.8rem, 2vw, 1.1rem);
+}

@@ -1,47 +1,73 @@
-# Desafio - Front-end Developer
+# Teste técnico Apiki (Front-End) - Blog
+
 Este desafio tem como objetivo te avaliar como desenvolvedor Front-end: JavaScript, HTML, CSS e lógica de programação.
 
-## O Desafio
-Queremos montar uma versão do blog da Apiki apenas para Devs, e queremos que essa seja uma solução headless, esta nova versão terá as seguintes páginas: 
+Gostei bastante do desafio, pude aprender com ele e gostaria de receber um feedback mesmo que eu não faça parte da equipe!
+Tiveram diversas coisas que senti vontade de fazer, entretanto essa semana foi muito estressante e não pude me apronfundar como gostaria.
 
-- Página inicial: Listará as últimas postagens do blog com a categoria **Desenvolvimento**; 
-- Interna: Exibirá o conteúdo da postagem;
+Ex:
+-Aperfeiçoar o SEO ;
+-Um filtro de pesquisa;
+-Deixar o layout da página inicial mais bonito (Consigo trabalhar também usando wireframes ou mocks);
+-Abrir uma caixa de resposta ao clicar no botão de responder;
+-Adicionar mais informações no footer;
+-Tornar a NAV funcional;
 
+Desde já agradeço a equipe Apiki pela oportunidade!
 
-## Requesitos
-- Utilizar os dados da API do nosso blog: https://blog.apiki.com/wp-json/wp/v2/;
+O conhecimento é importante!
 
-## Diferencial
-- Utilizar alguma metodologia para a organização de seu CSS (BEMCSS, OOCSS, SMACSS... o que preferir :D);
-- Escolha uma lib para criação de interfaces de usuário (React ou Angular); 
+## Screenshots
 
-### Página inicial
-Para montar esta página você precisará consumir do seguinte endpoint: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518`, ele já te retornará as últimas 10 postagens cadastradas, cada item do array deve representar uma card contendo:
+![Imgur](https://i.imgur.com/WmMlq0F.png)
 
-- Imagem destacada: Você encontrará um atributo chamado `_embedded`, dentro deste atributo você encontrará o `wp:featuredmedia`;
-- Título;
-- Link para a postagem: O link deverá conter o atributo `slug`;
+![Imgur](https://i.imgur.com/xB36xXK.png)
 
-Ao final da listagem deve haver um botão nomeado **Carregar mais...**, Quando o usuário clicar neste botão você deverá fazer uma nova requisição para o mesmo endpoint informando o parâmetro `page`, este parâmetro deve receber o número da próxima página, exemplo: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=2`. Você deve estar se perguntando, "como sei se haverá uma próxima página?", isso é simples, no **Header** de resposta desta requisição virá 2 atributos necessários para essa façanha `X-WP-Total` que diz a quantidade total de postagens que essa categoria possui, e o parâmetro `X-WP-TotalPages` que te informará qual o total de páginas de postagens que essa categoria possui.
+![Imgur](https://i.imgur.com/KhW32Tp.png)
 
-### Interna
-Para montar esta página você precisará consumir do seguinte endpoint: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=wordpress-escolha-site-pequenas-empresas`, lembre-se de substituir o `slug` dado como exemplo pelo slug definido no **Link para a postagem** da **Página inicial**, o layout deve conter os seguintes elementos:
+![Imgur](https://i.imgur.com/EME21Vp.png)
 
-- Imagem destacada;
-- Título;
-- Conteúdo;
+![Imgur](https://i.imgur.com/ph1R7n8.png)
 
-Seja criativo, construa um layout pensando no usuário final, e sinta-se a vontade para incrementar o layout com outros atributos disponíveis no JSON retornado. 
+![Imgur](https://i.imgur.com/sLWGuUw.png)
 
-## Critérios de avaliação
+### Para rodar localmente precisará de:
 
-- Organização do código;
-- Responsividade;
-- Reaproveitamento de código;
-- SEO;
+## Node:
 
-## Como submeter seu projeto
+`npm i node@lts`
 
-1. Efetue o fork deste repositório e crie um branch com o seu nome e sobrenome. (exemplo: fulano-dasilva);
-1. Após finalizar o desafio, crie um Pull Request;
-1. Aguarde algum contribuidor realizar o code review;
+## Chakra UI
+
+`npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion`
+
+## React-Router-Dom:
+
+`npm install react-router `
+
+## Axios:
+
+`npm install axios `
+
+## React-Icons:
+
+`npm install react-icons --save `
+
+## Sass:
+
+`npm install sass `
+
+## html-react-parser:
+
+`npm i html-react-parser`
+
+## react-scroll
+
+`npm i react-scroll`
+
+### No diretório do projeto você rodará:
+
+`npm start `
+
+Iniciará o APP em modo de desenvolvimento.
+Abra [http://localhost:3000](http://localhost:3000) para visualizar no Browser.

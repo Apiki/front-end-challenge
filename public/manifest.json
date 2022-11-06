@@ -1,0 +1,8 @@
+{
+  "short_name": "Blog da Apiki",
+  "name": "Blog da Apiki sobre WordPress - Blog sobre WordPress",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

@@ -1,0 +1,165 @@
+.chakraBox {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.internalPageMain {
+  width: 100vw;
+  padding: 8px;
+}
+
+.mainTitle {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mainTitleInternal,
+.commentsTitle {
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  color: #121212;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.mainTitleSubTitle {
+  color: #808080;
+  font-size: 1.3rem;
+  padding-left: 4px;
+}
+
+.authorInfo {
+  display: flex;
+  padding: 8px 0 8px 0;
+  align-items: center;
+  gap: 8px;
+}
+
+.internalContent {
+  max-width: 100%;
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.internalContentInfo {
+  max-width: 100%;
+  @media (min-width: 768px) {
+    max-width: 60%;
+  }
+}
+
+.internalContentInfo > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px;
+  background-color: #eeeeee;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.contentRendered > p {
+  font-size: clamp(1.2rem, 1.2vw, 2rem);
+}
+
+.contentRendered > h2 {
+  font-size: clamp(1.2rem, 1.2vw, 2rem);
+  font-weight: 700;
+}
+
+.contentRendered > h4 {
+  font-size: clamp(1.2rem, 1.3vw, 2rem);
+  font-weight: 600;
+}
+
+.contentRendered > p > a {
+  color: blue;
+  border-bottom: 1px solid blue;
+  cursor: pointer;
+}
+
+.contentRendered > ol {
+  margin-left: 5%;
+}
+
+.contentRendered > figure,
+.contentRendered > div > iframe {
+  width: 100% !important;
+}
+
+.contentRendered > div > div > figure > table > tbody {
+  text-align: center;
+}
+.contentRendered > div > div > figure > table > tbody > tr {
+  padding: 16px;
+}
+.contentRendered > div > div > figure > table > tbody > tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+
+.comments {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.commentsInfo {
+  max-width: 100%;
+  @media (min-width: 768px) {
+    max-width: 60%;
+  }
+}
+
+.allReplies {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.repliesUsers {
+  height: 20hv;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding: 8px;
+}
+
+.authorName {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.userReplie {
+  height: 10vh;
+  overflow-x: scroll;
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+
+  @media (min-width: 768px) {
+    overflow-x: hidden;
+  }
+}
+
+.replyResponse {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.loadMoreButton {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8px;
+}
