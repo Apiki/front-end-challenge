@@ -1,0 +1,28 @@
+.footer {
+  background-color:#e5e5e5;
+  text-align: center;
+}
+
+.footer__container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 45px 15px;
+}
+
+.footer__icon {
+  margin: 0 .625rem;
+}
+
+.footer__icon svg {
+  fill: #000;
+  font-size: 1.1rem;
+}
+
+.footer__icon:hover svg {
+  fill: #ba007c;
+}
+
+.footer__rights {
+  margin-top: .9375rem;
+  font-size: .8125rem;
+}
