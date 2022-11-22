@@ -1,0 +1,27 @@
+$main-font: Arial, Helvetica, sans-serif;
+
+// ========================================
+// Colors
+// ========================================
+$light-main: #fff;
+$main-color: #188ECC;
+
+$light-text: $main-color;
+$text-color: #717171;
+$dark-text: #3e3e3e;
+$link-defalt: $main-color;
+
+$bg_footer: #2A2A2A;
+$txt_footer: $light-main;
+
+// ========================================
+// Backgrounds
+// ========================================
+$bg-body: $light-main;
+$bg-secundary: #F88121;
+
+// ========================================
+// Grids - Sizes and Columns
+// ========================================
+$max-size: 1200px;
+$sizes: (mx,$max-size,12,last), (sm,699px,6), (ph,520px,2);

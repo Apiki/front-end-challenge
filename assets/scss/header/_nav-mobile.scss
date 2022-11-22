@@ -1,0 +1,198 @@
+.menu-nav-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 310px;
+    height: 100vh;
+    opacity: 0;
+    transform: translateX(-100%);
+    background-color: rgba($light-main,0.95);
+    transition: all 0.2s;
+    z-index: 99999;
+
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
+    @media screen and (max-width: 1023px) {
+        display: inline-block;
+    }
+
+    &.-opened {
+        @media screen and (max-width: 1023px) {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        /*&:before {
+            content: '';
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            background-color: rgba(0,0,0,0.6);
+        }*/
+    }
+
+    ul {
+        padding-left: 0px;
+        list-style-type: none;
+    }
+
+    img {
+        display: none;
+    }
+
+    &__btn-close {
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        width: 36px;
+        height: 36px;
+        border: 2px solid $dark-text;
+        color: $light-main;
+        text-transform: uppercase;
+        text-decoration: none;
+        background: $dark-text;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            top: 14px;
+            left: 4px;
+            width: 25px;
+            height: 3px;
+            background: $light-main;
+        }
+                
+
+        &:before {
+            transform: rotate(45deg)
+        }
+            
+        &:after {
+            transform: rotate(-45deg)
+        }
+    }
+            
+
+    &__inner {
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        height: 100%;
+        padding: 40px 15px;
+        overflow: auto;
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: 30px;
+        background: linear-gradient(to bottom, rgba($main-color,1) 0%, rgba($main-color,0.6) 60%, rgba($main-color,0) 100%);
+    }
+
+    &__item {
+        display: inline-block;
+        font-size: 1.6rem;
+        padding: 8px;
+        font-weight: 600;
+        color: $dark-text;
+        a {
+            color: inherit;
+        }
+        &.-is-btn {
+            a {
+                border-radius: 22px;
+                padding: 8px 30px;
+                background-color: $main-color;
+                color: $dark-text;
+            }
+        }
+    }
+
+    &__menu {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(100% + 30px);
+        margin: 0 -15px;
+        padding-bottom: 10px;
+        font-weight: 600;
+        border-bottom: 1px solid #ccc;
+
+        li, a {
+            display: inline-block;
+            vertical-align: top;
+            width: 100%;
+        }
+            
+        li {
+            position: relative;
+        }
+        a {
+            padding: 5px 40px 5px 15px;
+            color: $dark-text;
+        }
+
+        > li {
+            > a {
+                color: $dark-text;
+                padding-left: 15px;
+            }
+        }
+    }
+
+    &__drop-btn {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 0;
+        right: 15px;
+        color: $main-color;
+        cursor: pointer;
+        &.-is-active {
+            transform: rotate(90deg);
+        }
+            
+        img {
+            display: block;
+            margin: auto;
+            width: 14px;
+        }
+    }
+
+    &__social {
+        li {
+            display: inline-block;
+            margin: 15px 20px 15px 0;
+            width: 30px;
+            a {
+                color: $link-defalt;
+            }
+        }
+    }
+}
+
+.-is-menu-open {
+    .menu-nav-mobile {
+        transform: translateX(0);
+        opacity: 1;
+    }
+        
+
+    .site-header {
+        &:after {
+            @media screen and (max-width: 1023px) {
+                content: '';
+                width: 100vw;
+                height: 100vh;
+                position: fixed;
+                background: rgba(0,0,0,0.6);
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+/* ========================================
+ Row & Site container
+ ======================================== */
+.row {
+	width: 100%;
+}
+
+.container {
+	display: block;
+	width: 100%;
+	max-width: $max-size;
+	margin: auto;
+	padding: 0 15px;
+	position: relative;
+}
+
+/* ========================================
+   Col
+   ======================================== */
+.col {
+	display: inline-block;
+}
+
+/* ========================================
+   Col and Viewport sizes
+   ======================================== */
+@each $prefix, $size-value, $column-number, $pos in $sizes {
+	@if ($pos==last) {
+		@for $aux from 1 through $column-number {
+			.#{$prefix}-#{$aux} {
+				width: calc(100%/$column-number*$aux);
+				//width: 100%/$column-number*$aux;
+			}
+		}
+	}
+	@else {
+		@media screen and (max-width: $size-value) {
+			@for $aux from 1 through $column-number {
+				.#{$prefix}-#{$aux} {
+					width: calc(100%/$column-number*$aux);
+					//width: 100%/$column-number*$aux;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,239 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	margin: 0;
+	font-size: 1.6rem;
+	font-family: $main-font;
+	color: $text-color;
+	background: $bg-body;
+
+	@media screen and (max-width: 1023px) {
+		padding-top: 54px;
+	}
+	@media screen and (min-width: 1024px) {
+		padding-top: 84px;
+	}
+}
+
+a {
+	text-decoration: none;
+
+	&:active,
+	&:hover {
+		outline: 0;
+	}
+}
+
+img {
+	border: 0;
+}
+
+hr {
+	box-sizing: content-box;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+
+button,
+input[type="button"] {
+	-webkit-appearance: button;}
+
+a,
+button,
+input[type="button"] {
+	cursor: pointer;
+}
+
+input {
+	line-height: normal;
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	&::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
+
+	&[type="checkbox"],
+	&[type="radio"] {
+		box-sizing: border-box;
+		padding: 0;
+	}
+
+	&[type="number"] {
+		-moz-appearance: textfield;
+		&::-webkit-inner-spin-button,
+		&::-webkit-outer-spin-button {
+			height: auto;
+		}
+	}
+
+	&[type="button"],
+	&[type="reset"],
+	&[type="submit"] {
+		width: 100%;
+		padding: 5px 15px;
+		font-size: 1.6rem;
+		font-weight: 600;
+		color: $light-main;
+		text-transform: uppercase;
+		border: 1px solid $bg-secundary;
+		background: $bg-secundary;
+		box-shadow: none;
+		border-radius: 5px;
+		will-change: background, border;
+		transition: all .5s linear;
+		-webkit-appearance: button;
+		cursor: pointer;
+
+		&:hover {
+			background: darken($bg-secundary, 10%);
+		}
+
+		&:focus {
+			background: $bg-secundary;
+		}
+
+		&:active {
+			background: $bg-secundary;
+		}
+	}
+	
+	&[type="text"],
+	&[type="email"],
+	&[type="url"],
+	&[type="password"],
+	&[type="search"],
+	&[type="number"],
+	&[type="tel"] {
+		width: 100%;
+		padding: 5px 15px;
+		font-size: 1.6rem;
+		font-weight: 300;
+		color: $text-color;
+		border: 1px solid $text-color;
+		border-radius: 5px;
+		background: $light-main;
+		&:focus {
+			border-color: #737373;
+		}
+	}
+
+	&[disabled] {
+		border-color: transparent;
+		background: transparent;
+	}
+}
+
+button[disabled],
+input[disabled] {
+	cursor: default;
+}
+
+button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+/*--------------------------------------------------------------
+*# Typography
+*--------------------------------------------------------------*/
+h1,
+h2,
+h3 {
+	clear: both;
+	margin: 0;
+	font-family: $main-font;
+	font-weight: 500;
+	color: $dark-text;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-size: 2.0rem;
+}
+
+h3 {
+	font-size: 1.8rem;
+}
+
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-size: 1.6rem;
+	line-height: 1.5;
+}
+
+p {
+	margin-bottom: 1.5rem;
+}
+
+hr {
+	background-color: #dcdcdc;
+	border: 0;
+	height: 1px;
+	margin: 15px auto;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+*# Forms
+*--------------------------------------------------------------*/
+select {
+	width: 100%;
+	padding: 5px 15px;
+	font-size: 1.6rem;
+	font-weight: 300;
+	color: $text-color;
+	border: 1px solid $text-color;
+	border-radius: 5px;
+	background: $light-main;
+
+	&:focus {
+		border-color: #737373;
+	}
+}
+
+textarea:focus {
+	border-color: #737373;
+}
+
+/*--------------------------------------------------------------
+*## Links
+*--------------------------------------------------------------*/
+
+a {
+	color: $main-color;
+	&:hover,
+	&:focus,
+	&:active {
+		color: $text-color;
+		outline: 0 !important;
+	}
+}

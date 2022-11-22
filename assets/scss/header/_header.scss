@@ -1,0 +1,109 @@
+.header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, .15);
+
+	.container {
+		display: flex;
+
+		@media screen and (max-width: 1023px) {
+			justify-content: center;
+		}
+
+		@media screen and (min-width: 1024px) {
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+
+	&__nav {
+		@media screen and (max-width: 1023px) {
+			display: none;
+		}
+	}
+
+	&__nav-item {
+		@media screen and (min-width: 1024px) {
+			margin: auto 10px;
+
+			&:last-child {
+				margin-right: 0px;
+			}
+		}
+	}
+
+	&__logo {
+		@media screen and (max-width: 1023px) {
+			width: 165px;
+		}
+	}
+
+	&__search {
+		position: relative;
+
+		&.mobile {
+			@media screen and (max-width: 1023px) {
+				margin-top: 20px;
+			}
+			@media screen and (min-width: 1024px) {
+				display: none;
+			}
+		}
+
+		&.desktop {
+			@media screen and (max-width: 1023px) {
+				display: none;
+			}
+		}
+
+		&-input {
+			padding-right: 40px;
+			z-index: 1;
+		}
+
+		&-btn {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 40px;
+			height: 36px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 2;
+			background-color: transparent;
+			color: $main-color;
+			border: none;
+		}
+
+		&-svg {
+			width: 25px;
+		}
+	}
+
+	&__toogle-menu {
+		@media screen and (min-width: 1024px) {
+			display: none;
+		}
+		@media screen and (max-width: 1023px) {
+			display: block;
+			vertical-align: top;
+			width: 35px;
+			padding: 0;
+			position: absolute;
+			left: 15px;
+			top: 15px;
+			background: transparent;
+			border: none;
+			cursor: pointer;
+			.i-line {
+				display: block;
+				width: 35px;
+				height: 4px;
+				margin: 0 0 6px 0;
+				background-color: $dark-text;
+			}
+		}
+	}
+}
