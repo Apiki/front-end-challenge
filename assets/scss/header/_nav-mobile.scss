@@ -7,7 +7,7 @@
     height: 100vh;
     opacity: 0;
     transform: translateX(-100%);
-    background-color: rgba($light-main,0.95);
+    background-color: $light-main;
     transition: all 0.2s;
     z-index: 99999;
 

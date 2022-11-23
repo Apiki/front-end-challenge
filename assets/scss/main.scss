@@ -7,7 +7,14 @@
 //Header
 @import 'header/_header';
 @import 'header/_nav-mobile';
+
 //Pages
 @import 'pages/_home';
+
+// Agrupa todos os blocos do projeto
+@import 'blocks/_page-section';
+@import 'blocks/_posts-list';
+@import 'blocks/_card-post';
+
 //Footer
 @import 'footer/_footer';

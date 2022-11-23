@@ -15,7 +15,7 @@
                 router-link(
                     v-for="link in menu"
                     :to="link.href"
-                    v-bind:key="link.href",
+                    v-bind:key="link.href"
                     class="header__nav-item"
                 ) {{ link.text }}
 

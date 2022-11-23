@@ -181,7 +181,7 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
+	color: $main-color;
 	font-size: 1.6rem;
 	line-height: 1.5;
 }
@@ -210,8 +210,8 @@ select {
 	padding: 5px 15px;
 	font-size: 1.6rem;
 	font-weight: 300;
-	color: $text-color;
-	border: 1px solid $text-color;
+	color: $main-color;
+	border: 1px solid $main-color;
 	border-radius: 5px;
 	background: $light-main;
 

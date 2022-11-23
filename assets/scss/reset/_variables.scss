@@ -12,16 +12,24 @@ $dark-text: #3e3e3e;
 $link-defalt: $main-color;
 
 $bg_footer: #2A2A2A;
+$bg_header: #fff;
 $txt_footer: $light-main;
 
 // ========================================
 // Backgrounds
 // ========================================
-$bg-body: $light-main;
+$bg-body: #eff3f4;
 $bg-secundary: #F88121;
+
+
+// ----------------------------------------
+// Padding & Margin
+// ----------------------------------------
+$padding: 15px;
+$v-margin: 25px;
 
 // ========================================
 // Grids - Sizes and Columns
 // ========================================
 $max-size: 1200px;
-$sizes: (mx,$max-size,12,last), (sm,699px,6), (ph,520px,2);
+$sizes: (mx,$max-size,12,last), (df,1023px,12), (md,767px,12), (sm,600px,6), (ph,520px,2);

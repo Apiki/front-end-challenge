@@ -2,7 +2,9 @@
 	width: 100%;
 	position: fixed;
 	top: 0;
+	background-color: $bg_header;
 	box-shadow: 0 0 15px 0 rgba(0, 0, 0, .15);
+	z-index: 9999;
 
 	.container {
 		display: flex;
