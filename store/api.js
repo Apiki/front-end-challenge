@@ -15,6 +15,7 @@ export const actions = {
         commit('update_state', { loading: true })
         const endpoint_posts = params ? `${baseUrl}posts${params}` : `${baseUrl}posts`;
         const request_url = page ? `${endpoint_posts}&page=${page}` : `${endpoint_posts}`
+        
         let totalPages = 1
         let posts = null;
 
@@ -26,13 +27,19 @@ export const actions = {
             .then(res => {
                 commit('update_state', { loading: false })
                 posts = res.map( post => {
+                    let thumb = '';
+                    if( post._embedded ) {
+                        thumb = post._embedded['wp:featuredmedia'][0].source_url
+                    } else if ( post.yoast_head_json.twitter_image ) {
+                        thumb = post.yoast_head_json.twitter_image
+                    }
                     const props_post = {
                         id:      post.id,
                         slug:    post.slug,
                         title:   post.title.rendered,
                         content: post.content.rendered,
                         excerpt: post.excerpt.rendered,
-                        thumb: post._embedded['wp:featuredmedia'] ? post._embedded['wp:featuredmedia'][0].source_url : ''
+                        thumb: thumb
                     }
                     return props_post;
                 })
@@ -41,8 +48,8 @@ export const actions = {
                 commit('update_state', { loading: false })
                 return 'Ops. Deu erro ao requisitar os posts.'
             })
-
-        const result = { totalPages, posts };   
+        
+        const result = { totalPages, posts };  
         return result
     },
 
@@ -123,6 +130,39 @@ export const actions = {
             })
         
         return category[0]
+    },
+
+    async get_pages({}, {}) {
+        const resultado = await fetch(`${baseUrl}pages`)
+            .then((r) => r.json())
+            .then(r => r)
+        return resultado
+    },
+
+    async get_page({}, { slug }) {
+        if( ! slug ) { return }
+        let page = null;
+        const request_url = `${baseUrl}pages?_embed&slug=${slug}`
+        await fetch(`${request_url}`)
+            .then((r) => r.json())
+            .then(res => {
+                page = res.map( post => {
+                    const props_post = {
+                        id:      post.id,
+                        slug:    post.slug,
+                        title:   post.title.rendered,
+                        content: post.content.rendered,
+                        thumb: post._embedded['wp:featuredmedia'] ? post._embedded['wp:featuredmedia'][0].source_url : ''
+                    }
+                    return props_post;
+                })
+            })
+            .catch( _ => {
+                return 'Ops. Deu erro ao requisitar o post. :('
+            })
+        
+        return page[0]
+       
     },
 
 }

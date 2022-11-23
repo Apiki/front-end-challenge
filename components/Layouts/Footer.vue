@@ -14,6 +14,17 @@
                     )
                         i.fab(:class="`fa-${social.name}`")
 
+            hr.footer__hr(v-if="pages")
+
+            .footer__bottom(v-if="pages")
+                strong.footer__pages-title Institucional:
+                ul.footer__pages-nav
+                    li.footer__pages-li(
+                        v-for="page in pages"
+                        v-bind:key="`footer ${page.text}`"
+                    )
+                        router-link.footer__pages-link(:to="page.href") {{ page.text }}
+                    
                     
                         
         
@@ -47,6 +58,18 @@ export default {
                     name: 'linkedin'
                 }
             ]
+        }
+    },
+    computed: {
+        pages() {
+            const menu = this.$store.state.pages.pages.map( item => {
+                const menu_obj = {
+                    href: `/page/${item.slug}`,
+                    text: item.title.rendered
+                }
+                return menu_obj
+            })
+            return menu
         }
     }
 }

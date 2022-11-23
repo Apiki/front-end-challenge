@@ -1,0 +1,41 @@
+.hentry {
+	width: 100%;
+
+	.site-main > & {
+		display: flex;
+		flex-direction: column;
+		background-color: $light-main;
+		background-position: bottom center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		color: $main-color;
+    }
+}
+
+.entry-content {
+	img {
+		&.alignleft {
+			display: block;
+			margin: 5px 20px 10px 0;
+			float: left;
+        }
+		&.alignright {
+			display: block;
+			margin: 5px 0px 10px 20px;
+			float: right;
+        }
+		&.aligncenter {
+			display: block;
+			margin: 0 auto;
+        }
+		&.alignnone {
+			display: inline;
+			float: none;
+        }
+    }
+	
+	h2, h3, h4, h5, h6 {
+		color: $main-color;
+		font-weight: 700;
+    }
+}

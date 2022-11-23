@@ -2,7 +2,7 @@
     LayoutDefault
         section.page-section
             template(v-if="title")
-                h1.page-section__title Post: {{ title }}
+                h1.page-section__title {{ title }}
 
                 img(v-if="thumb" :src="thumb")
 
@@ -31,7 +31,7 @@ export default {
             title: '',
             thumb: '',
             content: '',
-            slug: this.$route.params.post,
+            slug: this.$route.params.page,
         }
     },
     methods: {
@@ -39,7 +39,7 @@ export default {
             const slug = this.slug
             if( ! slug ) { return }
 
-            const result = await this.$store.dispatch( 'api/get_post', { slug } );
+            const result = await this.$store.dispatch( 'api/get_page', { slug } );
             if( !result ) return false;
             
             this.title = result.title

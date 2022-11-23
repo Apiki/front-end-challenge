@@ -36,51 +36,9 @@ export default {
     },
     watch: {
         select_categ() {
-            //console.log('mudou')
+            return this.$router.push(`/category/${this.select_categ}`);
         }
     }
 
 }
 </script>
-<style lang="scss" scoped>
-.categories-list {
-    width: 100%;
-    display: inline-block;
-
-    &__select {
-        @media screen and (max-width: 767px) {
-            display: block;
-            margin: 20px 0;
-        }
-        @media screen and (min-width: 768px) {
-            display: none;
-        }
-    }
-
-    &__nav {
-        @media screen and (max-width: 767px) {
-            display: none;
-        }
-        @media screen and (min-width: 768px) {
-            width: 100%;
-            display: inline-block;
-            overflow: auto;
-        }
-    }
-
-    &__ul {
-        @media screen and (min-width: 768px) {
-            list-style-type: none;
-            white-space: nowrap;
-            padding: 0;
-        }
-    }
-
-    &__li {
-        @media screen and (min-width: 768px) {
-            display: inline-block;
-            margin: 0 15px;
-        }
-    }
-}
-</style>

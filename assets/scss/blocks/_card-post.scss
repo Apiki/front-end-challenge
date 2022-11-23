@@ -25,6 +25,13 @@
         align-items: center;
         justify-content: center;
         margin: 0;
+        &.-silver {
+            background-color: #ccc;
+            min-height: 180px;
+            img {
+                width: 170px;
+            }
+        }
     }
 
     &__text {

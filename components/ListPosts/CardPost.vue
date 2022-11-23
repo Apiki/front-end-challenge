@@ -1,7 +1,7 @@
 <template lang="pug">
     article.card-post.mx-4.md-6.sm-6
         .card-post__container
-            figure.card-post__figure
+            figure.card-post__figure(:class="!thumb ? '-silver' : ''")
                 img(:src="thumb" :alt="title" v-if="thumb")
                 img(:src="alt_thumb" :alt="title" v-else)
 

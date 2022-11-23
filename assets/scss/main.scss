@@ -4,6 +4,9 @@
 @import 'reset/_normalize';
 @import 'reset/_grid';
 
+//Elements
+@import 'elements/_content';
+
 //Header
 @import 'header/_header';
 @import 'header/_nav-mobile';
@@ -15,6 +18,7 @@
 @import 'blocks/_page-section';
 @import 'blocks/_posts-list';
 @import 'blocks/_card-post';
+@import 'blocks/_categories-list';
 
 //Footer
 @import 'footer/_footer';

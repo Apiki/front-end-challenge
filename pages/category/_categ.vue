@@ -10,9 +10,7 @@
                 :query="get_posts"
                 :pagination="pagination")
 
-            div.page-section__loading(v-else)
-                div.page-section__loader
-                span.page-section__load-text Carregando...
+            Preload(v-else)
 
             
 
@@ -22,12 +20,17 @@
 <script>
 import LayoutDefault from '@/components/Layouts/LayoutDefault'
 import ListPosts from '@/components/ListPosts/ListPost'
+import Preload from '@/components/Preload/Index'
 
 export default {
     name: 'Category',
     components: {
         LayoutDefault,
-        ListPosts
+        ListPosts,
+        Preload
+    },
+    head() {
+        return { title: `${this.title.replace('Categoria: ', '')} | Blog  Apiki` };
     },
     data(){
         return {

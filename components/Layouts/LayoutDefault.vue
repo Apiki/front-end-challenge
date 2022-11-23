@@ -17,5 +17,13 @@ export default {
         Header,
         Footer
     },
+    methods: {
+        async get_pages() {
+            await this.$store.dispatch( 'pages/request_pages', {} );
+        }
+    },
+    created() {
+        this.get_pages()
+    }
 }
 </script>

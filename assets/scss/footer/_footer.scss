@@ -13,6 +13,17 @@
         }
     }
 
+    &__bottom {
+        padding: 20px 0 30px;
+    }
+
+    &__hr {
+        width: 100%;
+        height: 1px;
+        display: block;
+        background-color: #a8a8a8;
+    }
+
     &__logo {
         width: 180px;
     }
@@ -51,6 +62,34 @@
             &:last-child {
                 margin-right: 0px;
             }
+        }
+    }
+
+    &__pages-nav {
+        padding-left: 0;
+        margin-bottom: 0px;
+        list-style-type: none;
+        
+        @media screen and (min-width: 600px) and (max-width: 1023px) {
+            column-count: 2;
+        }
+        @media screen and (min-width: 1024px) {
+            column-count: 3;
+        }
+    }
+
+    &__pages-title {
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    &__pages-link {
+        display: inline-block;
+        padding: 10px 0;        
+        color: $light-main;
+
+        &:hover {
+            color: $main-color;
         }
     }
 }

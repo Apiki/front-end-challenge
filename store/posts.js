@@ -24,7 +24,6 @@ export const actions = {
             commit( 'update_state', { pagination: { total: 1, active: 1 } } )
         }
         const resultado = await dispatch( 'api/get_posts', { params, page }, { root: true });
-        
         if(!resultado) return false;
         const pagination = {
             active: page ? page : 1,

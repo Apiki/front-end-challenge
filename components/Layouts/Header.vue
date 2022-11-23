@@ -15,7 +15,7 @@
                 router-link(
                     v-for="link in menu"
                     :to="link.href"
-                    v-bind:key="link.href"
+                    v-bind:key="`desktop ${link.href}`"
                     class="header__nav-item"
                 ) {{ link.text }}
 
@@ -28,8 +28,7 @@
                         ul.menu-nav-mobile__menu
                             li.menu-item(
                                 v-for="link in menu"
-                                :to="link.href"
-                                v-bind:key="link.href"
+                                v-bind:key="`mobile ${link.href}`"
                             )
                                 router-link(:to="link.href") {{ link.text }}
                     
@@ -49,18 +48,21 @@ export default {
     data() {
         return {
             logo: require('@/assets/img/logo-apiki-blog.png'),
-            menu: [
-                {
-                    href: '/',
-                    text: 'Home'
-                },
-                {
-                    href: '/sobre',
-                    text: 'Sobre'
-                },
-            ],
             menu_mobile: false,
         }
     },
+    computed: {
+        menu() {
+            const menu = this.$store.state.pages.pages.map( item => {
+                const menu_obj = {
+                    href: `/page/${item.slug}`,
+                    text: item.title.rendered
+                }
+                return menu_obj
+            })
+            .filter( item => item.text.indexOf(' ') < 0 )
+            return menu
+        }
+    }
 }
 </script>
