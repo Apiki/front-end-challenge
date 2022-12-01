@@ -1,0 +1,74 @@
+.PostSingle {
+  padding: 60px 0;
+}
+
+.PostSingle-backButton {
+  border: 0;
+  background-color: #1a1a1a;
+  color: white;
+  font-size: 16px;
+  padding: 10px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.PostSingle-backButton:hover {
+  opacity: 0.8;
+}
+
+.PostSingle-title {
+  font-size: 56px;
+}
+
+@media screen and (max-width: 1024px) {
+  .PostSingle-title {
+    font-size: 36px;
+  }
+}
+
+.PostSingle-excerpt {
+  font-weight: 500;
+  font-size: 22px;
+  color: grey;
+}
+
+.PostSingle-author {
+  display: block;
+  font-weight: 600;
+}
+
+.PostSingle-divider {
+  padding: 0 5px;
+  color: grey;
+}
+
+.PostSingle-comment {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.PostSingle-commentAuthorThumb {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.PostSingle-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+}
+
+.PostSingle-tagsTitle {
+  color: grey;
+}
+
+.PostSingle-tag {
+  background-color: lightgray;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 4px 8px;
+}
