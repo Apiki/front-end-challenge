@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+p {
+  line-height: 1.25;
+  padding-bottom: 20px;
+}
+
+table {
+  padding: 20px 0;
+  word-break: break-word;
+}
+
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+
+td,
+th {
+  padding: 8px 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+li {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+pre {
+  color: #7b7b7b;
+  background: #fafafa;
+  border: 1px solid #eee;
+  padding: 20px 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+img {
+  margin: 20px 0;
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  max-width: 100%;
+}
+
+.container {
+  padding: 0 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+}
+
+.container-narrow {
+  max-width: 900px;
+}

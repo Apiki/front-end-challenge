@@ -1,0 +1,47 @@
+.PostListing-PostCard {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.PostCard-thumb img {
+  margin: 0;
+}
+
+.PostCard-content {
+  padding: 20px;
+}
+
+.PostCard-category {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 5px 10px;
+  background-color: darkcyan;
+  color: white;
+  border-radius: 20px;
+}
+
+.PostCard-title {
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  color: initial;
+  text-decoration: initial;
+  font-size: 22px;
+  font-weight: 600;
+  transition: opacity 0.3s;
+}
+
+.PostCard-title:hover {
+  opacity: 0.7;
+}
+
+.PostCard-metadata {
+  display: flex;
+  gap: 7px;
+  font-size: 14px;
+  color: grey;
+  font-weight: 600;
+  word-spacing: -2px;
+}

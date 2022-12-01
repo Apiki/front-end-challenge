@@ -1,0 +1,48 @@
+.PostListing {
+  padding-bottom: 60px;
+}
+
+.PostListing-hero {
+  margin-bottom: 60px;
+  min-height: 300px;
+  display: flex;
+  background: darkcyan;
+  color: white;
+}
+
+.PostListing-hero .container {
+  display: flex;
+}
+
+.PostListing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.PostListing-loadMoreWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.PostListing-loadMore {
+  border: 0;
+  background-color: #1a1a1a;
+  color: white;
+  font-size: 20px;
+  padding: 10px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.PostListing-loadMore__isDisabled {
+  opacity: 0.6;
+  cursor: unset;
+}
+
+.PostListing-loadMore:hover {
+  opacity: 0.8;
+}
