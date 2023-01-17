@@ -1,4 +1,4 @@
-# Desafio - Front-end  Developer
+# Desafio -  Front-end  Developer
 Este desafio tem como objetivo te avaliar como desenvolvedor Front-end: JavaScript, HTML, CSS e lógica de programação.
 
 ## O Desafio
