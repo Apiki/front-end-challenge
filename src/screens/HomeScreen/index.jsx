@@ -1,4 +1,7 @@
+import { PostCard } from '@/components/PostCard';
 import Head from 'next/head';
+
+import { PostsListWrapper } from './style';
 
 export function HomeScreen() {
   return (
@@ -9,7 +12,18 @@ export function HomeScreen() {
       </Head>
       
       <main>
-
+        <PostsListWrapper>
+          <PostCard />
+          <PostCard />
+          <PostCard />
+          <PostCard />
+          <PostCard />
+          <PostCard />
+          <PostCard />
+          <PostCard />
+          <PostCard />
+          <PostCard />
+        </PostsListWrapper>
       </main>
     </>
   )
