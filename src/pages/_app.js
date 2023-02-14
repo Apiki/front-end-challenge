@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Montserrat } from "@next/font/google";
 import { GlobalStyles } from "@/styles/GlobalStyles";
+import { Header } from "@/components/Header";
 
 const montserratFont = Montserrat({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -17,6 +18,7 @@ export default function App({ Component, pageProps }) {
 
       <GlobalStyles />
       <main className={montserratFont.className}>
+        <Header />
         <Component {...pageProps} />
       </main>
     </>
