@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { colors } from './colors';
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -7,7 +8,9 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   html {
+    color: ${colors.primary[600]};
     font-size: 62.5%;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: ${colors.primary[200]};
   }
 `;

@@ -1,12 +1,12 @@
 import Head from "next/head";
-import { Montserrat } from "@next/font/google";
+import { Poppins } from "@next/font/google";
 import { GlobalStyles } from "@/styles/GlobalStyles";
 import { Header } from "@/components/Header";
 
-const montserratFont = Montserrat({
+const poppinsFont = Poppins({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
   subsets: ['latin']
-});
+})
 
 export default function App({ Component, pageProps }) {
   return (
@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }) {
       </Head>
 
       <GlobalStyles />
-      <main className={montserratFont.className}>
+      <main className={poppinsFont.className}>
         <Header />
         <Component {...pageProps} />
       </main>
