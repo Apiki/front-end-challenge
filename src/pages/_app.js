@@ -1,7 +1,9 @@
 import Head from "next/head";
 import { Poppins } from "@next/font/google";
 import { GlobalStyles } from "@/styles/GlobalStyles";
+
 import { Header } from "@/components/Header";
+import { PageLayout } from "@/components/PageLayout";
 
 const poppinsFont = Poppins({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -19,7 +21,9 @@ export default function App({ Component, pageProps }) {
       <GlobalStyles />
       <main className={poppinsFont.className}>
         <Header />
-        <Component {...pageProps} />
+        <PageLayout>
+          <Component {...pageProps} />
+        </PageLayout>
       </main>
     </>
   );
