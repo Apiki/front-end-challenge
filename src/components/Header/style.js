@@ -3,10 +3,9 @@ import { colors } from "@/styles/colors";
 import { device } from "@/styles/devices";
 
 export const HeaderContainer = styled.header`
-  background-color: ${colors.primary[800]};
-
   width: 100%;
   padding: 3.2rem 0;
+  background-color: ${colors.primary[800]};
 
   position: fixed;
 
@@ -40,7 +39,6 @@ export const HeaderContainer = styled.header`
       left: 50%;
       transform: translate(-50%, -50%);
     }
-
   }
 
   ${device.desktop} {

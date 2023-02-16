@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { colors } from "@/styles/colors";
 import { device } from "@/styles/devices";
-import { backgroundImage } from "@/styles/imageBackground";
 
 export const Card = styled.li`
   width: 100%;
@@ -14,9 +13,9 @@ export const Card = styled.li`
   &::after {
     content: "";
     width: 20rem;
-    height: .1em;
+    height: .1rem;
 
-    background-color: ${colors.primary[300]};
+    background-color: ${colors.primary[400]};
     border-radius: .4rem;
     position: absolute;
     bottom: -2.4rem;
@@ -43,52 +42,30 @@ export const Card = styled.li`
   }
 `;
 
-export const ProfileWrapper = styled.a`
-  display: flex;
-  align-items: center;
-  gap: .8rem;
-
-  text-decoration: none;
-  .profile-image {
-    width: 4rem;
-    height: 4rem;
-
-    border-radius: 50%;
-  }
-
-  .profile-author {
-    color: ${colors.secondary[100]};
-    font-size: 1.2rem;
-    font-weight: 400;
-  }
-`;
-
 export const ContentWrapper = styled.div `
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
   
   ${device.tablet} {
+    flex: 1;
     flex-direction: row;
     gap: 2.4rem;
   }
 `;
 
-export const Image = styled.div`
-  ${backgroundImage};
+export const Image = styled.img`
   width: 100%;
   height: 20.5rem;
 
-  background-color: yellowgreen;
   border-radius: .4rem;
 
   ${device.tablet} {
-    width: 60%;
+    width: 50%;
     min-height: 16rem;
   }
 
   ${device.laptop} {
-    width: 70%;
     height: 18rem;
   }
 

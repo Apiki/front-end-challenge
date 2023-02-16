@@ -1,8 +1,8 @@
 import NextLink from "next/link";
+import { Author } from "../Author";
 
 import {
   Card,
-  ProfileWrapper,
   ContentWrapper,
   Image,
   Content
@@ -11,21 +11,14 @@ import {
 export function PostCard() {
   return (
     <Card>
-      <ProfileWrapper
-        href="http://" 
-        target="_blank" 
-        rel="noopener noreferrer"
-      >
-        <img 
-          className="profile-image" 
-          src="https://github.com/lucianakyoko.png" 
-          alt="foto de perfil de Luciana Kyoko"
-        />
-        <span className="profile-author">Nome do autor</span>
-      </ProfileWrapper>
+      <Author 
+        href= "https://lucianakyoko.com"
+        image= "https://github.com/lucianakyoko.png"
+        name= "Luciana Kyoko"
+      />
 
       <ContentWrapper>
-        <Image></Image>
+        <Image src="https://blog.apiki.com/wp-content/uploads/sites/2/2020/06/Anatomia-do-Gutenberg-o-editor-do-WordPress-1024x538.png"></Image>
 
         <Content>
           <div className="detail">
@@ -39,7 +32,7 @@ export function PostCard() {
 
           <p className="intro">Reunimos as grandes vantagens do editor Gutenberg. Você precisa considerar o uso e explorar os benefícios desse novo editor do WordPress.</p>
 
-          <NextLink className="link" href='/posts/'>Ler artigo</NextLink>
+          <NextLink className="link" href='/posts/slug-do-post'>Ler artigo</NextLink>
         </Content>
       </ContentWrapper>
     </Card>

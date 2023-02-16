@@ -8,14 +8,14 @@ export const AuthorContainer = styled.a`
   gap: .8rem;
 
   text-decoration: none;
-  .image {
+  .author__image {
     width: 4rem;
     height: 4rem;
     background-color: ${props => props.image};
     border-radius: 50%;
   }
 
-  .name {
+  .author__name {
     color: ${colors.secondary[100]};
     font-size: 1.2rem;
     font-weight: 500;

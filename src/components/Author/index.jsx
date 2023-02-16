@@ -10,11 +10,11 @@ export function Author({href, image, name}) {
       rel="noopener noreferrer"
     >
       <img 
-          className="image" 
+          className="author__image" 
           src= {image}
           alt={`foto de perfil de ${name}`}
       />
-      <span className="name">{name}</span>
+      <span className="author__name">{name}</span>
     </AuthorContainer>
   );
 }
