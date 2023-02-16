@@ -129,11 +129,6 @@ export const Content = styled.div`
   }
 
   ${device.laptop} {
-    .detail {
-      &__title {
-        font-size: 2.4rem;
-      }
-    }
     .intro,
     .link {
       font-size: 1.4rem;
@@ -143,9 +138,6 @@ export const Content = styled.div`
 
   ${device.laptopL} {
     .detail {
-      &__title {
-        font-size: 3.2rem;
-      }
       &__date {
         color: ${colors.primary[500]};
         font-size: 1.6rem;

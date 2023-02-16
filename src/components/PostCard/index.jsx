@@ -1,4 +1,7 @@
 import NextLink from "next/link";
+import { formatDate } from "@/utils/formatDate";
+import { getPostCoverImage } from "@/utils/getPostImage";
+import { getReadingTime } from "@/utils/getReadingTime";
 import { Author } from "../Author";
 
 import {
@@ -8,31 +11,42 @@ import {
   Content
 } from './style';
 
-export function PostCard() {
+export function PostCard({post}) {
+  const timeReading = getReadingTime(post);
+  const imageSrc = getPostCoverImage(post);
+  const publishedDate = formatDate(post.date);
+  const isPostAuthorExist = post._embedded.author[0].name;
+  const author = post._embedded.author[0]
+
   return (
     <Card>
-      <Author 
-        href= "https://lucianakyoko.com"
-        image= "https://github.com/lucianakyoko.png"
-        name= "Luciana Kyoko"
-      />
+      {isPostAuthorExist ? 
+        <Author 
+          href= {author.link}
+          image= {author.avatar_urls[96]}
+          name= {author.name}
+        /> :
+        <Author 
+          image= "/none.png"
+        />
+      }
 
       <ContentWrapper>
-        <Image src="https://blog.apiki.com/wp-content/uploads/sites/2/2020/06/Anatomia-do-Gutenberg-o-editor-do-WordPress-1024x538.png"></Image>
+        <Image src={imageSrc}></Image>
 
         <Content>
           <div className="detail">
-            <h3 className="detail__title">Titulo do post</h3>
+            <h3 className="detail__title">{post.title.rendered}</h3>
             <div className="detail__date">
-              <span>4 de agosto de 2022</span>
+              <span>{publishedDate}</span>
               <span>|</span>
-              <span>dá pra ler em <span className="time">5</span> minutinhos</span>
+              <span>dá pra ler em <span className="time">{timeReading}</span> minutinhos</span>
             </div>
           </div>
 
-          <p className="intro">Reunimos as grandes vantagens do editor Gutenberg. Você precisa considerar o uso e explorar os benefícios desse novo editor do WordPress.</p>
+          <p className="intro">{post.yoast_head_json.description}</p>
 
-          <NextLink className="link" href='/posts/slug-do-post'>Ler artigo</NextLink>
+          <NextLink className="link" href={`/posts/${post.slug}`}>Ler artigo</NextLink>
         </Content>
       </ContentWrapper>
     </Card>
