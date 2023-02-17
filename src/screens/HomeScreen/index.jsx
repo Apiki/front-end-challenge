@@ -31,6 +31,7 @@ export function HomeScreen() {
       setPosts(posts.concat((await response).data));
     }
   }
+  console.log(posts)
 
   useEffect(() => {
     getPosts();
@@ -44,9 +45,9 @@ export function HomeScreen() {
       </Head>
 
       <PostsListWrapper>
-        {posts.map(post => (
+        {posts.map((post, index) => (
           <PostCard  
-            key={post.id}
+            key={post.id + index}
             post={post} 
           />
         ))}

@@ -1,5 +1,6 @@
 export const getPostCoverImage = (post) => {
-  const image = post._embedded['wp:featuredmedia'][0].media_details.sizes.large.source_url;
+  const sizes = post._embedded['wp:featuredmedia'][0].media_details.sizes
+  const image = sizes.full.source_url;
 
   return image;
 }

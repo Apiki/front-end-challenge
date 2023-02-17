@@ -8,7 +8,7 @@ import {
 export function NextPreviousButton() {
   return(
     <Buttons>
-      <NextLink href="/posts/post-anterior" className='button right'>
+      <NextLink href="/post-anterior" className='button right'>
         <div className='wrapper'>
           <ArrowLeft className="icon" weight="thin" />
           <span>post anterior</span>
@@ -16,7 +16,7 @@ export function NextPreviousButton() {
         <h3 className='title'>Titulo do post anterior</h3>
       </NextLink>
 
-      <NextLink href="/posts/proximo-post" className='button left'>
+      <NextLink href="/proximo-post" className='button left'>
         <div className='wrapper'>
           <span>próximo post</span>
           <ArrowRight className="icon" weight="thin" />

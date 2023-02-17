@@ -40,13 +40,13 @@ export function PostCard({post}) {
             <div className="detail__date">
               <span>{publishedDate}</span>
               <span>|</span>
-              <span>dá pra ler em <span className="time">{timeReading}</span> minutinhos</span>
+              <span>dá pra ler em <span className="time">{timeReading}</span> minutinhos</span> 
             </div>
           </div>
 
           <p className="intro">{post.yoast_head_json.description}</p>
 
-          <NextLink className="link" href={`/posts/${post.slug}`}>Ler artigo</NextLink>
+          <NextLink className="link" href={`/${post.slug}`}>Ler artigo</NextLink>
         </Content>
       </ContentWrapper>
     </Card>
