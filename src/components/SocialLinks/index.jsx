@@ -25,4 +25,4 @@ export function SocialLinks() {
       ))}
     </SocialLinksWrapper>
   );
-}
+} 
