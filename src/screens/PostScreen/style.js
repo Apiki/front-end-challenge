@@ -9,23 +9,7 @@ export const PostContainer = styled.div`
   flex-direction: column;
   gap: 1.2rem;
 
-  .home-button {
-    color: ${colors.secondary[100]};
-    font-size: 1.4rem;
-    text-decoration: none;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    
-    &:hover {
-      color: ${colors.secondary[200]};
-    }
-    ${device.laptop} {
-      font-size: 1.6rem;
-    }
-  }
+  position: relative;
 `;
 
 export const CoverImage = styled.img`
@@ -66,7 +50,7 @@ export const Content = styled.div`
     
     tr {
       background-color: ${colors.primary[300]};
-      font-size: 1.2rem;
+      font-size: 1rem;
       
       td {
         padding:  .8rem;
@@ -126,6 +110,11 @@ export const Content = styled.div`
     background-color: ${colors.primary[800]};
   }
 
+  ${device.mobileM} {
+    table tr {
+      font-size: 1.2rem;
+    }
+  }
   ${device.tablet} {
     padding-bottom: 4.8rem;
 

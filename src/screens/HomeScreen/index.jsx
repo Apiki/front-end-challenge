@@ -8,6 +8,7 @@ import {
   PostsListWrapper, 
   ShowMoreButton
 } from './style';
+import { ScrollToTopButton } from '@/components/ScrollToTopButton';
 
 export function HomeScreen() {
   const [posts, setPosts] = useState([]);
@@ -31,7 +32,6 @@ export function HomeScreen() {
       setPosts(posts.concat((await response).data));
     }
   }
-  console.log(posts)
 
   useEffect(() => {
     getPosts();
@@ -52,8 +52,8 @@ export function HomeScreen() {
           />
         ))}
       </PostsListWrapper>
-      
       <ShowMoreButton onClick={loadMore}>carregar mais...</ShowMoreButton>
+      <ScrollToTopButton />
     </>
   )
 }
