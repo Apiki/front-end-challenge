@@ -105,6 +105,8 @@ export const Content = styled.div`
     padding: 1.4rem;
     margin: 1.8rem 0;
 
+    overflow-x: scroll;
+
     color: ${colors.primary[200]};
     font-size: 1.4rem;
     background-color: ${colors.primary[800]};
