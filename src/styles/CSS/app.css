@@ -1,0 +1,133 @@
+@import url("./icons.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+  .bg-gradient-radial {
+    background: linear-gradient(
+        to bottom,
+        var(--primary) 0%,
+        rgba(0, 0, 0, 0) 44%,
+        var(--primary) 100%
+      ),
+      linear-gradient(
+        to right,
+        var(--primary) 0%,
+        rgba(0, 0, 0, 0) 44%,
+        var(--primary) 100%
+      );
+  }
+}
+
+:root.night {
+  --const-white: #ffffff;
+  --const-dark: #1c1917;
+  --primary: #18181b;
+  --secondary: #27272a;
+  --tertiary: #3f3f46;
+  --quaternary: #52525b;
+  --accent-dark: #ff8f00;
+  --accent-light: #fbbf24;
+  --heading: #ffffff;
+  --title: #f4f4f5;
+  --body: #d1d5db;
+  --placeholder: #9ca3af;
+}
+
+:root {
+  --const-white: #ffffff;
+  --const-dark: #1c1917;
+  --primary: #111827;
+  --secondary: #1f2937;
+  --tertiary: #374151;
+  --quaternary: #4b5563;
+  --accent-dark: #ff8f00;
+  --accent-light: #fbbf24;
+  --heading: #ffffff;
+  --title: #f4f4f5;
+  --body: #d1d5db;
+  --placeholder: #9ca3af;
+}
+
+:root.dark {
+  --const-white: #ffffff;
+  --const-dark: #1c1917;
+  --primary: #0c0a09;
+  --secondary: #1c1917;
+  --tertiary: #292524;
+  --quaternary: #44403c;
+  --accent-dark: #ff8f00;
+  --accent-light: #fbbf24;
+  --heading: #ffffff;
+  --title: #f4f4f5;
+  --body: #d1d5db;
+  --placeholder: #9ca3af;
+}
+
+body {
+  font-family: var(--font-geist);
+}
+body.source {
+  font-family: var(--font-source);
+  letter-spacing: 0.001px;
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i {
+  @apply text-heading;
+}
+span {
+  @apply text-title;
+}
+p {
+  @apply text-body;
+}
+
+input {
+  @apply text-body outline-none focus:ring-2 transition placeholder:text-placeholder ring-accent-light;
+}
+
+/* * ---------------------------- scroll styles --------------------------  */
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--quaternary);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-primary;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-tertiary;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-quaternary;
+}
+/* * ---------------------------------------------------------------------------  */
+
+/* * Esta classe lida com os estilos de 'content.rendered' da API do WordPress */
+.render-content {
+  @apply 2xl:[&>_*_img]:my-4 [&>_*_img]:my-2.5 [&>_*_img]:rounded-lg; /* * img */
+  @apply [&>_*_li]:my-1.5 [&>_*_li]:text-body; /* * li */
+  @apply [&>h2]:text-2xl lg:[&>h2]:text-3xl [&>h2]:font-bold 2xl:[&>h2]:text-5xl 2xl:[&>h2]:mb-6 2xl:[&>h2]:mt-12 [&>h2]:mb-4 [&>h2]:mt-9; /* * h2 */
+  @apply [&>h3]:text-xl [&>h3]:font-semibold 2xl:[&>h3]:text-3xl [&>h3]:mb-2 2xl:[&>h3]:mb-3 2xl:[&>h3]:mt-9 [&>h3]:mt-7; /* * h3 */
+  @apply 2xl:[&>p]:text-lg [&>p]:text-[1.01rem]; /* * p */
+  @apply [&>_*_th]:text-title [&>_*_th]:rounded-sm [&>_*_th]:p-3 [&>_*_th]:bg-accent-dark; /* * th */
+  @apply [&>_*_td]:text-body [&>_*_td]:bg-secondary [&>_*_td]:rounded-sm [&>_*_td]:border-b [&>_*_td]:border-tertiary [&>_*_td]:p-3 [&>_*_td]:text-center; /* * td */
+  @apply [&>_*_table]:my-8; /* * table */
+}
