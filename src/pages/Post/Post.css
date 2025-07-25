@@ -1,0 +1,226 @@
+.post-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.post-page__container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.post-page__article {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.post-page__header {
+  padding: 2rem 2rem 0 2rem;
+}
+
+.post-page__back-link {
+  display: inline-block;
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.post-page__back-link:hover {
+  color: #5a67d8;
+}
+
+.post-page__image-container {
+  margin: 0 -2rem 1.5rem -2rem;
+  height: 300px;
+  overflow: hidden;
+}
+
+.post-page__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-page__meta {
+  margin-bottom: 1rem;
+}
+
+.post-page__date {
+  font-size: 0.875rem;
+  color: #718096;
+  font-weight: 500;
+}
+
+.post-page__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.post-page__content {
+  padding: 2rem;
+}
+
+.post-page__body {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #2d3748;
+}
+
+.post-page__body h1,
+.post-page__body h2,
+.post-page__body h3,
+.post-page__body h4,
+.post-page__body h5,
+.post-page__body h6 {
+  color: #1a202c;
+  margin: 2rem 0 1rem 0;
+  font-weight: 600;
+}
+
+.post-page__body h1 { font-size: 2rem; }
+.post-page__body h2 { font-size: 1.75rem; }
+.post-page__body h3 { font-size: 1.5rem; }
+.post-page__body h4 { font-size: 1.25rem; }
+.post-page__body h5 { font-size: 1.125rem; }
+.post-page__body h6 { font-size: 1rem; }
+
+.post-page__body p {
+  margin: 0 0 1.5rem 0;
+}
+
+.post-page__body ul,
+.post-page__body ol {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.post-page__body li {
+  margin: 0.5rem 0;
+}
+
+.post-page__body blockquote {
+  border-left: 4px solid #667eea;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: #4a5568;
+}
+
+.post-page__body code {
+  background: #f7fafc;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.875em;
+}
+
+.post-page__body pre {
+  background: #2d3748;
+  color: #e2e8f0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+.post-page__body pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+.post-page__body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.post-page__body a {
+  color: #667eea;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.post-page__body a:hover {
+  border-bottom-color: #667eea;
+}
+
+.post-page__footer {
+  padding: 2rem;
+  border-top: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+.post-page__back-button {
+  text-decoration: none;
+}
+
+.post-page__error {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post-page__error h1 {
+  font-size: 2rem;
+  color: #1a202c;
+  margin: 0 0 1rem 0;
+}
+
+.post-page__error p {
+  color: #4a5568;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .post-page__container {
+    padding: 1rem;
+  }
+  
+  .post-page__header {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+  }
+  
+  .post-page__title {
+    font-size: 2rem;
+  }
+  
+  .post-page__content {
+    padding: 1.5rem;
+  }
+  
+  .post-page__body {
+    font-size: 1rem;
+  }
+  
+  .post-page__image-container {
+    margin: 0 -1.5rem 1.5rem -1.5rem;
+    height: 200px;
+  }
+  
+  .post-page__footer {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-page__title {
+    font-size: 1.75rem;
+  }
+  
+  .post-page__body h1 { font-size: 1.75rem; }
+  .post-page__body h2 { font-size: 1.5rem; }
+  .post-page__body h3 { font-size: 1.25rem; }
+} 
