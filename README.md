@@ -1,47 +1,37 @@
-# Desafio - Front-end Developer
-Este desafio tem como objetivo te avaliar como desenvolvedor Front-end: JavaScript, HTML, CSS e lógica de programação.
+# Desafio Frontend – Blog Moderno com Next.js 15, Tailwind CSS e TypeScript
 
-## O Desafio
-Queremos montar uma versão do blog da Apiki apenas para Devs, e queremos que essa seja uma solução headless, esta nova versão terá as seguintes páginas: 
+Este projeto é um blog simples e moderno desenvolvido utilizando tecnologias atuais e robustas, como Next.js 15, React 19, Tailwind CSS, TypeScript e shadcn/ui. Ele consome dados de uma API WordPress para exibir posts dinâmicos de forma eficiente e elegante.
 
-- Página inicial: Listará as últimas postagens do blog com a categoria **Desenvolvimento**; 
-- Interna: Exibirá o conteúdo da postagem;
+## Principais funcionalidades
 
+- **Página principal** exibindo os 10 primeiros posts, com um botão para **carregar mais 10 posts** dinamicamente, implementando paginação e carregamento incremental.
+- **Card de destaque** para o primeiro post na página principal, para chamar atenção ao usuário, com design diferenciado e moderno.
+- Tratamento adequado de **erros e estados de loading** para melhor experiência do usuário.
+- **Layout totalmente responsivo** e com um design ultra bonito, clean e funcional, pensado para ser simples e fácil de usar.
+- **Funções feitas** pensando no reaproveitamento do código.
+- **Estrutura de componentes organizada e modularizada**, facilitando a manutenção e compreensão do código.
+- Implementação de **Navbar** e **Footer** com melhorias visuais para um layout mais agradável e profissional.
+- Página interna dinâmica para exibir o conteúdo do post através do slug na URL (`post/[slug]`), consumindo a API para dados específicos do post.
 
-## Requesitos
-- Utilizar os dados da API do nosso blog: https://blog.apiki.com/wp-json/wp/v2/;
+## Tecnologias utilizadas
 
-## Diferencial
-- Utilizar alguma metodologia para a organização de seu CSS (BEMCSS, OOCSS, SMACSS... o que preferir :D);
-- Escolha uma lib para criação de interfaces de usuário (React ou Angular); 
+- Next.js 15 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS
+- shadcn/ui para componentes visuais
+- Fetch API para consumir dados do WordPress REST API
 
-### Página inicial
-Para montar esta página você precisará consumir do seguinte endpoint: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518`, ele já te retornará as últimas 10 postagens cadastradas, cada item do array deve representar uma card contendo:
+## Como rodar
 
-- Imagem destacada: Você encontrará um atributo chamado `_embedded`, dentro deste atributo você encontrará o `wp:featuredmedia`;
-- Título;
-- Link para a postagem: O link deverá conter o atributo `slug`;
+- No terminal rordar:npm install
+- Em seguida no terminal:npm run dev
+- Demo: https://desafiofrontend-apiki-giovanimatos.vercel.app/
 
-Ao final da listagem deve haver um botão nomeado **Carregar mais...**, Quando o usuário clicar neste botão você deverá fazer uma nova requisição para o mesmo endpoint informando o parâmetro `page`, este parâmetro deve receber o número da próxima página, exemplo: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=2`. Você deve estar se perguntando, "como sei se haverá uma próxima página?", isso é simples, no **Header** de resposta desta requisição virá 2 atributos necessários para essa façanha `X-WP-Total` que diz a quantidade total de postagens que essa categoria possui, e o parâmetro `X-WP-TotalPages` que te informará qual o total de páginas de postagens que essa categoria possui.
+# 🧑🏽‍💻 Feito por Giovani Matos
 
-### Interna
-Para montar esta página você precisará consumir do seguinte endpoint: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=wordpress-escolha-site-pequenas-empresas`, lembre-se de substituir o `slug` dado como exemplo pelo slug definido no **Link para a postagem** da **Página inicial**, o layout deve conter os seguintes elementos:
+**`Desenvolvedor FullStack`**
 
-- Imagem destacada;
-- Título;
-- Conteúdo;
+Sou Desenvolvedor FullStack com sólida experiência em Next.js, React, TypeScript, MongoDB, Tailwind CSS, PostgreSQL, Shadcn, PHP, WordPress e MySQL, atuando no desenvolvimento de sistemas web com foco em performance e escalabilidade. Tenho vivência com integração de APIs RESTful, manipulação de bancos de dados relacionais e não relacionais (MySQL/MongoDB), e aplicação de Clean Code, SOLID e padrões de projeto. Já atuei em ambientes colaborativos, utilizando Scrum/Kanban, e possuo inglês básico com leitura técnica ativa. Já fui responsável por tarefas que vão desde a criação de páginas a partir de layouts no Figma até manutenções complexas, como a limpeza e recuperação de sites hackeados em wordpress com mais de 5 anos de experiência. Nas horas vagas sou geek e músico haha.
 
-Seja criativo, construa um layout pensando no usuário final, e sinta-se a vontade para incrementar o layout com outros atributos disponíveis no JSON retornado. 
-
-## Critérios de avaliação
-
-- Organização do código;
-- Responsividade;
-- Reaproveitamento de código;
-- SEO;
-
-## Como submeter seu projeto
-
-1. Efetue o fork deste repositório e crie um branch com o seu nome e sobrenome. (exemplo: fulano-dasilva);
-1. Após finalizar o desafio, crie um Pull Request;
-1. Aguarde algum contribuidor realizar o code review;
+---
