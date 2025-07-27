@@ -1,0 +1,28 @@
+.post {
+  border-bottom: 1px solid #eee;
+  padding: 1rem 0;
+
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+    color: var(--background-color);
+    font-weight: 500;
+  }
+
+  &__excerpt {
+    color: var(--grey);
+    font-weight: 300;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+  }
+}

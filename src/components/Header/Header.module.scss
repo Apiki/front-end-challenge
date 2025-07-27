@@ -1,0 +1,36 @@
+.header {
+  background-color: var(--primary-color);
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 9999; 
+
+  &__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  &__text {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    border: 1px solid #545353;
+    padding: 15px 25px;
+    border-radius: 5px;
+  }
+
+  &__text span {
+    color: #fbbf24;
+    margin-left: 5px;
+  }
+}
