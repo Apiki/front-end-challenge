@@ -1,0 +1,67 @@
+<style>
+    /* Initially hide the loading div */
+#loading {
+    display: none;
+}
+
+/* Show the loading div when the show class is applied */
+#loading.show {
+    display: block;
+}
+
+/* Ensure success message is visible only when intended */
+#success-message {
+    display: none;
+}
+
+#success-message.show {
+    display: block;
+}
+</style>
+<style>
+    function setupLoadingVisibility() {
+    const loadingDiv = document.getElementById('loading');
+    const successDiv = document.getElementById('success-message');
+
+    if (!loadingDiv || !successDiv) {
+        console.warn('Required elements (loading or success-message) not found.');
+        return;
+    }
+
+    // Override the showLoading and hideLoading methods in the existing ApikiSearchLoader
+    if (window.apikiSearchLoader) {
+        const originalLoadPosts = window.apikiSearchLoader.loadPosts;
+        window.apikiSearchLoader.loadPosts = async function () {
+            if (this.isLoading) return;
+            this.isLoading = true;
+            this.loading.classList.add('show');
+            this.hideError();
+            this.hideSuccess();
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchQuery = urlParams.get('s') || '';
+            const apiUrl = `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=${this.CATEGORY}&search=${encodeURIComponent(searchQuery)}&per_page=10`;
+
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) {
+                    throw new Error(`Erro HTTP: ${response.status}`);
+                }
+                const posts = await response.json();
+                this.renderPosts(posts);
+                this.loading.classList.remove('show'); // Hide loading after success
+                this.showSuccess();
+            } catch (error) {
+                console.error('Erro ao carregar posts:', error);
+                this.showError();
+                this.loading.classList.remove('show'); // Hide loading on error
+            } finally {
+                this.isLoading = false;
+            }
+        };
+    }
+}
+
+// Initialize when DOM is fully loaded
+document.addEventListener('DOMContentLoaded', setupLoadingVisibility);
+</style>

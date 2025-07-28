@@ -1,0 +1,570 @@
+<style>
+    .container-conteudo {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 2rem 1rem;
+            }
+
+            div.header {
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+
+            div.header > h2 {
+                font-size: 2.5rem;
+                color: #2c3e50;
+                margin-bottom: 0.5rem;
+            }
+
+            div.header > p {
+                font-size: 1.1rem;
+                color: #7f8c8d;
+                margin-bottom: 1rem;
+            }
+
+            .page-indicator {
+                display: inline-block;
+                background: linear-gradient(90deg, #ed7606 0%, #fc9614 100%);
+                color: white;
+                padding: 0.5rem 1rem;
+                border-radius: 25px;
+                font-size: 0.9rem;
+                font-weight: 600;
+                box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+            }
+
+            .posts-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+                margin-bottom: 3rem;
+            }
+
+            .post-card {
+                background: white;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+
+            .post-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            }
+
+            .post-image {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                background-color: #ecf0f1;
+            }
+
+            .no-image {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #ecf0f1;
+                color: #7f8c8d;
+                font-size: 0.9rem;
+                height: 200px;
+            }
+
+            .post-content {
+                padding: 1.5rem;
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .post-title {
+                font-size: 1.25rem;
+                font-weight: 600;
+                color: #2c3e50;
+                line-height: 1.4;
+                margin-bottom: 1rem;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            .post-excerpt {
+                font-size: 0.95rem;
+                color: #666;
+                line-height: 1.5;
+                margin-bottom: 1.5rem;
+                flex-grow: 1;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            .read-more-btn {
+                display: inline-block;
+                background: linear-gradient(90deg, #ed7606 0%, #fc9614 100%);
+                color: white;
+                text-decoration: none;
+                padding: 0.6rem 1.2rem;
+                border-radius: 25px;
+                font-size: 0.9rem;
+                font-weight: 500;
+                transition: all 0.3s ease;
+                box-shadow: 0 2px 8px rgba(234, 185, 102, 0.3);
+                text-align: center;
+                align-self: flex-start;
+            }
+
+            .read-more-btn:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 4px 12px rgba(234, 185, 102, 0.5);
+                color: white;
+            }
+
+            .load-more-container {
+                text-align: center;
+                margin-top: 2rem;
+            }
+
+            .load-more-btn {
+                background: linear-gradient(90deg, #ed7606 0%, #fc9614 100%);
+                color: white;
+                border: none;
+                padding: 1rem 2rem;
+                font-size: 1.1rem;
+                font-weight: 600;
+                border-radius: 50px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 15px rgba(234, 185, 102, 0.3);
+            }
+
+            .load-more-btn:hover:not(:disabled) {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(234, 185, 102, 0.5);
+            }
+
+            .load-more-btn:disabled {
+                background: #bdc3c7;
+                cursor: not-allowed;
+                box-shadow: none;
+                transform: none;
+            }
+
+            .loading {
+                display: none;
+                text-align: center;
+                margin: 2rem 0;
+            }
+
+            .loading.show {
+                display: block;
+            }
+
+            .spinner {
+                width: 40px;
+                height: 40px;
+                border: 4px solid #f3f3f3;
+                border-top: 4px solid #667eea;
+                border-radius: 50%;
+                animation: spin 1s linear infinite;
+                margin: 0 auto 1rem;
+            }
+
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+
+            .error-message {
+                background: #e74c3c;
+                color: white;
+                padding: 1rem;
+                border-radius: 8px;
+                text-align: center;
+                margin: 1rem 0;
+                display: none;
+            }
+
+            .error-message.show {
+                display: block;
+            }
+
+            .retry-btn {
+                background: #3498db;
+                color: white;
+                border: none;
+                padding: 0.8rem 1.5rem;
+                border-radius: 25px;
+                cursor: pointer;
+                margin-top: 1rem;
+                font-weight: 500;
+                transition: all 0.3s ease;
+            }
+
+            .retry-btn:hover {
+                background: #2980b9;
+                transform: translateY(-1px);
+            }
+
+            @media (max-width: 768px) {
+                .posts-grid {
+                    grid-template-columns: 1fr;
+                    gap: 1.5rem;
+                }
+
+                div.header > h2 {
+                    font-size: 2rem;
+                }
+
+                .container {
+                    padding: 1rem;
+                }
+            }
+</style>
+
+<section class="loop-listing-grid">
+    <div class="container-conteudo">
+        <div class="header">
+            <h2>Blog Apiki</h2>
+            <p>Últimas postagens sobre desenvolvimento web e tecnologia</p>
+            <div id="page-indicator" class="page-indicator" style="display: none;">
+                Página 1 de 1
+            </div>
+        </div>
+
+        <div id="posts-container" class="posts-grid"></div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Carregando postagens...</p>
+        </div>
+
+        <div class="error-message" id="error-message">
+            <p>Erro ao carregar as postagens. Tente novamente.</p>
+            <button id="retry-btn" class="retry-btn">Tentar novamente</button>
+        </div>
+
+        <div class="load-more-container">
+            <button id="load-more" class="load-more-btn" data-page="0" data-per-page="10">
+                Carregar mais...
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- JS 1 - Carregar loop de requisições do Rest API -->
+<script>
+    class ApikiBlogLoader {
+            constructor() {
+                this.container = document.getElementById('posts-container');
+                this.loadMoreBtn = document.getElementById('load-more');
+                this.loading = document.getElementById('loading');
+                this.errorMessage = document.getElementById('error-message');
+                this.pageIndicator = document.getElementById('page-indicator');
+                this.retryBtn = document.getElementById('retry-btn');
+
+                this.CATEGORY = 518;
+
+                this.currentPage = 0;
+                this.totalPages = 0;
+                this.totalPosts = 0;
+                this.isLoading = false;
+                this.loadedPostIds = new Set(); // Corrigido: usar IDs para controle de duplicatas
+
+                this.container.innerHTML = '';
+                this.init();
+            }
+
+            init() {
+                console.log('Inicializando event listeners...');
+
+                // Para qualquer outro script que possa estar interferindo
+                this.stopOtherScripts();
+
+                // Remove event listeners antigos
+                const newBtn = this.loadMoreBtn.cloneNode(true);
+                this.loadMoreBtn.parentNode.replaceChild(newBtn, this.loadMoreBtn);
+                this.loadMoreBtn = newBtn;
+
+                const newRetryBtn = this.retryBtn.cloneNode(true);
+                this.retryBtn.parentNode.replaceChild(newRetryBtn, this.retryBtn);
+                this.retryBtn = newRetryBtn;
+
+                // Adiciona event listeners
+                this.loadMoreBtn.addEventListener('click', () => this.loadPosts());
+                this.retryBtn.addEventListener('click', () => this.retryLoad());
+
+                // Carrega a primeira página
+                this.loadPosts();
+            }
+
+            stopOtherScripts() {
+                // Remove qualquer observer ou timer que possa estar modificando o container
+                const scripts = document.querySelectorAll('script');
+                scripts.forEach(script => {
+                    if (script.textContent.includes('posts-container') && !script.textContent.includes('ApikiBlogLoader')) {
+                        console.log('Script conflitante detectado e neutralizado');
+                    }
+                });
+            }
+
+            async loadPosts() {
+                if (this.isLoading) return;
+
+                this.isLoading = true;
+                this.currentPage++;
+
+                this.showLoading();
+                this.hideError();
+
+                const perPage = parseInt(this.loadMoreBtn.dataset.perPage, 10);
+                const url = `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=${this.CATEGORY}&page=${this.currentPage}&per_page=${perPage}&orderby=date&order=desc`;
+
+                try {
+                    const response = await fetch(url);
+
+                    if (!response.ok) {
+                        throw new Error(`Erro HTTP: ${response.status}`);
+                    }
+
+                    const posts = await response.json();
+
+                    // Obtém informações do header para paginação
+                    this.totalPages = parseInt(response.headers.get('X-WP-TotalPages'), 10);
+                    this.totalPosts = parseInt(response.headers.get('X-WP-Total'), 10);
+
+                    // Filtra posts duplicados - CONTROLE RIGOROSO
+                    const newPosts = posts.filter(post => {
+                        if (this.loadedPostIds.has(post.id)) {
+                            console.log(`Post duplicado filtrado: ID ${post.id} - "${post.title.rendered}"`);
+                            return false;
+                        }
+                        return true;
+                    });
+
+                    console.log(`API retornou ${posts.length} posts, ${newPosts.length} são novos`);
+
+                    if (newPosts.length === 0) {
+                        if (posts.length > 0) {
+                            console.log('Todos os posts desta página já foram carregados - pulando...');
+                            // Se todos são duplicados, tenta próxima página até limite
+                            if (this.currentPage < this.totalPages) {
+                                this.loadPosts(); // Tenta próxima página recursivamente
+                                return;
+                            }
+                        }
+
+                        console.log('Não há mais posts novos para carregar');
+                        this.loadMoreBtn.style.display = 'none';
+                        this.updatePageIndicator();
+                        return;
+                    }
+
+                    // Adiciona IDs dos novos posts
+                    newPosts.forEach(post => this.loadedPostIds.add(post.id));
+
+                    this.renderPosts(newPosts);
+                    this.updateLoadMoreButton();
+                    this.updatePageIndicator();
+
+                    console.log(`Página ${this.currentPage} de ${this.totalPages} carregada`);
+                    console.log(`${newPosts.length} novos posts adicionados`);
+                    console.log(`Total de posts únicos: ${this.loadedPostIds.size} de ${this.totalPosts}`);
+
+                } catch (error) {
+                    console.error('Erro ao carregar posts:', error);
+                    this.showError();
+                    this.currentPage--; // Reverte o incremento da página
+                } finally {
+                    this.hideLoading();
+                    this.isLoading = false;
+                }
+            }
+
+
+
+            retryLoad() {
+                this.hideError();
+                this.loadPosts();
+            }
+
+            renderPosts(posts) {
+                console.log(`Renderizando ${posts.length} posts novos`);
+
+                // Verifica se o container ainda está sob nosso controle
+                if (!this.container.hasAttribute('data-managed-by')) {
+                    console.warn('Container foi modificado externamente - reestabelecendo controle');
+                    this.container.innerHTML = '';
+                    this.container.setAttribute('data-managed-by', 'apiki-loader');
+                }
+
+                posts.forEach((post, index) => {
+                    // Verifica novamente se não existe (double-check)
+                    const existingCard = this.container.querySelector(`[data-post-id="${post.id}"]`);
+                    if (existingCard) {
+                        console.warn(`Post ID ${post.id} já existe no DOM - pulando`);
+                        return;
+                    }
+
+                    const card = this.createPostCard(post);
+                    this.container.appendChild(card);
+                    console.log(`Post adicionado: ID ${post.id} - "${post.title.rendered}"`);
+                });
+            }
+
+            createPostCard(post) {
+                const card = document.createElement('div');
+                card.className = 'post-card';
+                card.setAttribute('data-post-id', post.id);
+
+                // Extrai imagem destacada
+                const featuredMedia = post._embedded?.['wp:featuredmedia']?.[0];
+                const imageUrl = featuredMedia?.source_url;
+                const imageAlt = featuredMedia?.alt_text || post.title.rendered;
+
+                // Cria elemento de imagem
+                const imageElement = imageUrl
+                    ? `<img src="${imageUrl}" alt="${this.escapeHtml(imageAlt)}" class="post-image" loading="lazy">`
+                    : `<div class="post-image no-image">Sem imagem</div>`;
+
+                // Extrai e limpa o excerpt
+                const excerpt = this.stripHtmlTags(post.excerpt.rendered);
+
+                // URL personalizada usando slug
+                const customUrl = `https://samuelneves.com.br/desafio-apiki/artigo/?slug=${post.slug}`;
+
+                card.innerHTML = `
+                    ${imageElement}
+                    <div class="post-content">
+                        <h3 class="post-title">${post.title.rendered}</h3>
+                        <p class="post-excerpt">${excerpt}</p>
+                        <a href="${customUrl}" target="_blank" rel="noopener noreferrer" class="read-more-btn">
+                            Leia mais...
+                        </a>
+                    </div>
+                `;
+
+                // Animação de entrada
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+
+                requestAnimationFrame(() => {
+                    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+
+                    requestAnimationFrame(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    });
+                });
+
+                return card;
+            }
+
+            updateLoadMoreButton() {
+                this.loadMoreBtn.dataset.page = this.currentPage;
+
+                // Verifica se chegou ao final
+                if (this.currentPage >= this.totalPages || this.loadedPostIds.size >= this.totalPosts) {
+                    this.loadMoreBtn.style.display = 'none';
+                } else {
+                    this.loadMoreBtn.style.display = 'inline-block';
+                }
+            }
+
+            updatePageIndicator() {
+                if (this.totalPages > 0) {
+                    const postsPerPage = parseInt(this.loadMoreBtn.dataset.perPage);
+                    const currentDisplayPage = Math.ceil(this.loadedPostIds.size / postsPerPage) || 1;
+                    const totalDisplayPages = Math.ceil(this.totalPosts / postsPerPage);
+
+                    this.pageIndicator.textContent = `Página ${currentDisplayPage} de ${totalDisplayPages}`;
+                    this.pageIndicator.style.display = 'inline-block';
+                }
+            }
+
+            showLoading() {
+                this.loading.classList.add('show');
+                this.loadMoreBtn.disabled = true;
+            }
+
+            hideLoading() {
+                this.loading.classList.remove('show');
+                this.loadMoreBtn.disabled = false;
+            }
+
+            showError() {
+                this.errorMessage.classList.add('show');
+            }
+
+            hideError() {
+                this.errorMessage.classList.remove('show');
+            }
+
+            escapeHtml(text) {
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            }
+
+            stripHtmlTags(html) {
+                const div = document.createElement('div');
+                div.innerHTML = html;
+                return div.textContent || div.innerText || '';
+            }
+        }
+
+        // Inicializa quando o DOM estiver carregado
+        document.addEventListener('DOMContentLoaded', () => {
+            // Garante que só existe uma instância
+            if (window.apikiBlogLoader) {
+                console.log('Reinicializando ApikiBlogLoader...');
+                window.apikiBlogLoader = null;
+            }
+
+            window.apikiBlogLoader = new ApikiBlogLoader();
+            console.log('ApikiBlogLoader inicializado com sucesso');
+        });
+</script>
+
+<!-- JS 2 - Bloquear renderização de duplicados -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Função para remover post-cards que não possuem atributo data-post-id
+      function removeInvalidPostCards() {
+        const cards = document.querySelectorAll('.post-card');
+        cards.forEach(card => {
+          if (!card.hasAttribute('data-post-id')) {
+            card.remove();
+          }
+        });
+      }
+
+      // Executa ao carregar a página
+      removeInvalidPostCards();
+
+      // Observador para detectar novos elementos dinâmicos (ex: ao clicar "carregar mais")
+      const observer = new MutationObserver(mutations => {
+        mutations.forEach(m => {
+          if (m.addedNodes.length > 0) {
+            removeInvalidPostCards();
+          }
+        });
+      });
+
+      const container = document.body; // ou substitua por um container mais específico se souber
+      observer.observe(container, { childList: true, subtree: true });
+
+      // Opcional: ao clicar em botão de "carregar mais", aguardar e aplicar filtro
+      document.addEventListener('click', function (e) {
+        if (e.target.matches('.load-more-btn, button.load-more, .carregar-mais')) {
+          setTimeout(removeInvalidPostCards, 500);
+        }
+      });
+    });
+</script>
