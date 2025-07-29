@@ -1,0 +1,10 @@
+.root-template {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+}

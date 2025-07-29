@@ -1,1 +1,1 @@
-export {} from "./";
+export { RootTemplate } from "./RootTemplate";
