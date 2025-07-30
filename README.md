@@ -1,47 +1,169 @@
-# Desafio - Front-end Developer
-Este desafio tem como objetivo te avaliar como desenvolvedor Front-end: JavaScript, HTML, CSS e lógica de programação.
+# 🚀 Desafio Blog Apiki - Frontend 
 
-## O Desafio
-Queremos montar uma versão do blog da Apiki apenas para Devs, e queremos que essa seja uma solução headless, esta nova versão terá as seguintes páginas: 
+> Uma aplicação React moderna e responsiva para consumir conteúdo do WordPress via API REST, com foco em performance, SEO e experiência do usuário.
 
-- Página inicial: Listará as últimas postagens do blog com a categoria **Desenvolvimento**; 
-- Interna: Exibirá o conteúdo da postagem;
+![React](https://img.shields.io/badge/React-18.x-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.x-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-5.x-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+
+## ✨ Características Principais
+
+### 🎨 **Design Moderno**
+- Interface responsiva com gradientes dinâmicos
+- Animações suaves e microinterações
+- Sistema de cores consistente
+- Cards com efeitos hover elegantes
+
+### ⚡ **Performance Otimizada**
+- Lazy loading de imagens inteligente
+- Cache estratégico com React Query
+- Componentes otimizados
+- Bundle splitting automático
+
+### 🔍 **SEO Avançado**
+- Meta tags dinâmicas com React Helmet
+- Integração completa com Yoast SEO
+- Dados estruturados (Schema.org)
+- URLs canônicas e Open Graph
+
+### 📱 **Responsividade Completa**
+- Mobile-first approach
+- Grid adaptativo (1→2→3→4 colunas)
+- Tipografia fluida
+- Imagens responsivas
+
+## 🛠️ Tecnologias Utilizadas
+
+### **Frontend**
+- **React 18** - Biblioteca para interfaces
+- **TypeScript** - Tipagem estática
+- **Vite** - Build tool moderna
+- **React Router DOM** - Roteamento SPA
+
+### **Estilização**
+- **Tailwind CSS** - Utility-first CSS
+- **@tailwindcss/typography** - Estilização de prosa
+- **Lucide React** - Ícones modernos
+- **Shadcn/ui** - Componentes reutilizáveis
+
+### **Estado e Dados**
+- **TanStack Query** - Cache e sincronização
+- **React Helmet Async** - Gerenciamento de head
+- **DOMPurify** - Sanitização de HTML
+
+### **Utilitários**
+- **Axios** - Cliente HTTP
+- **Lodash** - Utilitários JavaScript
+
+## 🚀 Instalação e Configuração
+
+### **Pré-requisitos**
+- Node.js >= 18.0.0
+- npm ou yarn
+
+### **1. Clone o repositório**
+```bash
+git clone https://github.com/seu-usuario/blog-apiki-frontend.git
+cd blog-apiki-frontend
+```
+
+### **2. Instale as dependências**
+```bash
+npm install
+# ou
+yarn install
+```
+
+### **4. Execute o projeto**
+```bash
+npm run dev
+# ou
+yarn dev
+```
+
+## 🌟 Funcionalidades
+
+### **Página Inicial**
+- [x] Listagem de posts com paginação infinita
+- [x] Cards responsivos com meta informações
+- [x] Tempo de leitura calculado automaticamente
+- [x] Loading states elegantes
+- [x] Header sticky com backdrop blur
+
+### **Página do Post**
+- [x] Conteúdo renderizado com sanitização
+- [x] SEO otimizado com dados do Yoast
+- [x] Tipografia responsiva com prose
+- [x] Meta informações completas
+
+### **SEO e Performance**
+- [x] Meta tags dinâmicas
+- [x] Open Graph e Twitter Cards
+- [x] Schema.org estruturado
+- [x] Lazy loading de imagens
+- [x] Cache inteligente
 
 
-## Requesitos
-- Utilizar os dados da API do nosso blog: https://blog.apiki.com/wp-json/wp/v2/;
+## 🔒 Segurança
 
-## Diferencial
-- Utilizar alguma metodologia para a organização de seu CSS (BEMCSS, OOCSS, SMACSS... o que preferir :D);
-- Escolha uma lib para criação de interfaces de usuário (React ou Angular); 
+- **DOMPurify**: Sanitização de conteúdo HTML
+- **HTTPS obrigatório**: Em produção
+- **CSP Headers**: Recomendado configurar no servidor
+- **Validação de dados**: Tipagem TypeScript
 
-### Página inicial
-Para montar esta página você precisará consumir do seguinte endpoint: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518`, ele já te retornará as últimas 10 postagens cadastradas, cada item do array deve representar uma card contendo:
+## 📈 Performance
 
-- Imagem destacada: Você encontrará um atributo chamado `_embedded`, dentro deste atributo você encontrará o `wp:featuredmedia`;
-- Título;
-- Link para a postagem: O link deverá conter o atributo `slug`;
+### **Métricas Típicas**
+- **First Contentful Paint**: < 1.5s
+- **Largest Contentful Paint**: < 2.5s
+- **Cumulative Layout Shift**: < 0.1
+- **Time to Interactive**: < 3.0s
 
-Ao final da listagem deve haver um botão nomeado **Carregar mais...**, Quando o usuário clicar neste botão você deverá fazer uma nova requisição para o mesmo endpoint informando o parâmetro `page`, este parâmetro deve receber o número da próxima página, exemplo: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=2`. Você deve estar se perguntando, "como sei se haverá uma próxima página?", isso é simples, no **Header** de resposta desta requisição virá 2 atributos necessários para essa façanha `X-WP-Total` que diz a quantidade total de postagens que essa categoria possui, e o parâmetro `X-WP-TotalPages` que te informará qual o total de páginas de postagens que essa categoria possui.
+### **Otimizações Aplicadas**
+- Lazy loading de imagens
+- Code splitting por rotas
+- Cache de requisições
+- Compressão de assets
+- Tree shaking automático
 
-### Interna
-Para montar esta página você precisará consumir do seguinte endpoint: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=wordpress-escolha-site-pequenas-empresas`, lembre-se de substituir o `slug` dado como exemplo pelo slug definido no **Link para a postagem** da **Página inicial**, o layout deve conter os seguintes elementos:
 
-- Imagem destacada;
-- Título;
-- Conteúdo;
+### **Configurações de Build**
+- **Build Command**: `npm run build`
+- **Output Directory**: `dist`
+- **Node Version**: `18.x`
 
-Seja criativo, construa um layout pensando no usuário final, e sinta-se a vontade para incrementar o layout com outros atributos disponíveis no JSON retornado. 
+## 🤝 Contribuindo
 
-## Critérios de avaliação
+1. Fork o projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
 
-- Organização do código;
-- Responsividade;
-- Reaproveitamento de código;
-- SEO;
+### **Padrões de Código**
+- Use TypeScript para tipagem
+- Siga os padrões do ESLint/Prettier
+- Componentes em PascalCase
+- Hooks customizados com prefixo `use`
 
-## Como submeter seu projeto
+## 📝 Changelog
 
-1. Efetue o fork deste repositório e crie um branch com o seu nome e sobrenome. (exemplo: fulano-dasilva);
-1. Após finalizar o desafio, crie um Pull Request;
-1. Aguarde algum contribuidor realizar o code review;
+### **v1.0.0** - 2024-XX-XX
+- ✨ Implementação inicial
+- 🎨 Design responsivo moderno
+- 🔍 SEO otimizado com Yoast
+- ⚡ Performance otimizada
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+
+
+<div align="center">
+
+**Feito com ❤️ por Osnaelle**
+
+
+</div>
