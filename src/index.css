@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme  {
+  
+ 
+
+  --color-yellow-apiki: #FED502;
+  --color-orange-apiki: #E36000;
+}
