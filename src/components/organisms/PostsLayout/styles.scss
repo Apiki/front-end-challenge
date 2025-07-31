@@ -1,0 +1,48 @@
+@use "~styles/_variables.scss" as *;
+@use "~styles/_theme.scss" as *;
+
+.posts-layout {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    row-gap: $spacing-4;
+    place-content: center;
+    place-items: center;
+
+    &__ {
+        &text {
+            width: 100%;
+            height: min-content;
+            color: $color-secondary;
+            font: normal 300 $text-xs / normal $font-family;
+        }
+
+        &box {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            flex: 1 0 auto;
+            gap: $spacing-8;
+            place-content: center start;
+            place-items: center;
+        }
+
+        &btn {
+            width: fit-content;
+            height: min-content;
+            border: none;
+            background-color: transparent;
+            color: $color-interactive;
+            font: normal 900 $text-base / normal $font-family;
+            cursor: pointer;
+            transition: all 0.2s linear;
+
+            &:hover {
+                transform: translateY(-$spacing-1);
+            }
+        }
+    }
+}

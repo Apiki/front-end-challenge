@@ -33,7 +33,9 @@
 
                 &posts {
                     height: auto;
+                    scroll-margin-top: $spacing-10;
                     flex: 1 0 auto;
+                    flex-direction: column;
                 }
             }
         }
@@ -45,12 +47,15 @@
             font: normal 400 $text-sm / normal $font-family;
 
             &-- {
-                :is(&title, &strong) {
+                :is(&title, &strong, &subtitle) {
                     font-weight: 900;
+                }
+
+                :is(&title, &strong) {
                     font-size: $text-4xl;
                 }
 
-                &title {
+                :is(&title, &subtitle) {
                     color: $color-primary;
                 }
 
@@ -60,6 +65,10 @@
 
                 &base {
                     text-align: justify;
+                }
+
+                &subtitle {
+                    font-size: $text-2xl;
                 }
             }
         }

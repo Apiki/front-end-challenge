@@ -1,3 +1,4 @@
+import { PostsLayout } from "~components/organisms";
 import "./styles.scss";
 
 export const HomePage = () => (
@@ -33,7 +34,8 @@ export const HomePage = () => (
             id="posts"
             className="home-page__box home-page__box--posts"
         >
-            <p>posts</p>
+            <h2 className="home-page__text home-page__text--subtitle">Últimas Postagens</h2>
+            <PostsLayout />
         </section>
     </section>
 );

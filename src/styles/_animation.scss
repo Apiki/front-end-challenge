@@ -39,3 +39,14 @@
         transform: translate3d(0, 125rem, 0) scaleY(3);
     }
 }
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}

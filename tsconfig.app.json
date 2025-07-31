@@ -29,6 +29,7 @@
             "~components/*": ["./components/*"],
             "~contexts": ["./contexts"],
             "~hooks": ["./hooks"],
+            "~services": ["./services"],
             "~styles/*": ["./styles/*"],
             "~types": ["./types"],
             "~utils": ["./utils"]

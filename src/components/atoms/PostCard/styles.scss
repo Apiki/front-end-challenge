@@ -1,0 +1,70 @@
+@use "~styles/_variables.scss" as *;
+@use "~styles/_theme.scss" as *;
+
+.post-card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-self: stretch;
+    animation: zoomIn 0.75s ease-out both;
+
+    &__ {
+        &box {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: $spacing-2;
+            place-content: center;
+            place-items: center;
+
+            &-- {
+                &main {
+                    flex-direction: column;
+                }
+
+                &content {
+                    gap: $spacing-1;
+                    align-content: start;
+                }
+            }
+        }
+
+        &link {
+            width: 100%;
+            height: auto;
+            padding: $spacing-2;
+            border-radius: $spacing-1;
+            display: flex;
+            flex: 1 0 auto;
+            flex-wrap: wrap;
+            gap: $spacing-2;
+            text-decoration: none;
+            background-color: $color-surface;
+            box-shadow:
+                rgba(50, 50, 93, 0.25) 0 0.125rem 0.3125rem -0.0625rem,
+                rgba(0, 0, 0, 0.3) 0 0.0625rem 0.1875rem -0.0625rem;
+            transition: transform 0.25s linear;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        &img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            aspect-ratio: 16 / 4;
+            border-radius: $spacing-1;
+        }
+
+        &text {
+            width: 100%;
+            height: min-content;
+            color: $color-primary;
+            font: normal 400 $text-xs / normal $font-family;
+            text-align: justify;
+        }
+    }
+}

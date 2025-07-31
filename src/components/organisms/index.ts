@@ -1,1 +1,1 @@
-export {} from "./";
+export { PostsLayout } from "./PostsLayout";
