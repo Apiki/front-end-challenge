@@ -1,0 +1,91 @@
+@use "~styles/_variables.scss" as *;
+@use "~styles/_theme.scss" as *;
+
+.home-page {
+    width: min(100%, $max-layout);
+    height: auto;
+    padding: $spacing-8 $spacing-4;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    row-gap: $spacing-8;
+    place-content: center;
+    place-items: center;
+
+    &__ {
+        &box {
+            width: 100%;
+            height: min-content;
+            display: flex;
+            flex-wrap: wrap;
+            gap: $spacing-4;
+            place-content: center;
+            place-items: center;
+
+            &-- {
+                &text {
+                    gap: 0;
+                }
+
+                &links {
+                    justify-content: start;
+                }
+
+                &posts {
+                    height: auto;
+                    flex: 1 0 auto;
+                }
+            }
+        }
+
+        &text {
+            width: 100%;
+            height: min-content;
+            color: $color-secondary;
+            font: normal 400 $text-sm / normal $font-family;
+
+            &-- {
+                :is(&title, &strong) {
+                    font-weight: 900;
+                    font-size: $text-4xl;
+                }
+
+                &title {
+                    color: $color-primary;
+                }
+
+                &strong {
+                    color: $color-brand;
+                }
+
+                &base {
+                    text-align: justify;
+                }
+            }
+        }
+
+        &link {
+            width: min(100%, 10rem);
+            height: min-content;
+            padding: $spacing-1 $spacing-4;
+            border-radius: $spacing-12;
+            background-color: $color-interactive;
+            box-shadow: rgba(0, 0, 0, 0.24) 0 0.1875rem 0.25rem;
+            color: $color-primary;
+            font: normal 700 $text-sm / normal $font-family;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.2s linear;
+
+            &:hover {
+                transform: translateY(-$spacing-1) scale(1.1);
+            }
+        }
+
+        &divider {
+            width: 100%;
+            height: $border-sm;
+            background-color: $color-soft;
+        }
+    }
+}
