@@ -1,7 +1,12 @@
 import { RouterProvider } from "react-router";
+import { ViewportContextProvider } from "~contexts";
 import { router } from "~utils";
 import "~styles/global.scss";
 
 export function App() {
-    return <RouterProvider router={router} />;
+    return (
+        <ViewportContextProvider>
+            <RouterProvider router={router} />
+        </ViewportContextProvider>
+    );
 }

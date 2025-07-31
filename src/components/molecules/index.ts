@@ -1,1 +1,1 @@
-export {} from "./";
+export { ScrollToTopButton } from "./ScrollToTopButton";

@@ -27,7 +27,10 @@
         "paths": {
             "~assets/*": ["./assets/*"],
             "~components/*": ["./components/*"],
+            "~contexts": ["./contexts"],
+            "~hooks": ["./hooks"],
             "~styles/*": ["./styles/*"],
+            "~types": ["./types"],
             "~utils": ["./utils"]
         }
     },

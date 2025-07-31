@@ -1,0 +1,46 @@
+@use "~styles/_variables.scss" as *;
+@use "~styles/_theme.scss" as *;
+
+.scroll-to-top-button {
+    width: max-content;
+    height: min-content;
+    padding: $spacing-1;
+    border: none;
+    border-radius: 100%;
+    position: fixed;
+    inset: auto $spacing-4 $spacing-6 auto;
+    z-index: 20;
+    background-color: $color-main;
+    box-shadow:
+        rgba(0, 0, 0, 0.25) 0 3.375rem 3.4375rem,
+        rgba(0, 0, 0, 0.12) 0 -0.75rem 1.875rem,
+        rgba(0, 0, 0, 0.12) 0 0.5rem 0.375rem,
+        rgba(0, 0, 0, 0.17) 0 0.75rem 0.8125rem,
+        rgba(0, 0, 0, 0.09) 0 -0.1875rem 0.3125rem;
+    cursor: pointer;
+    transition: transform 0.2s linear;
+
+    &:hover {
+        transform: translateY(-$spacing-2) scale(1.25);
+    }
+
+    &__icon {
+        display: block;
+        color: $color-interactive;
+        font-size: $icon-md;
+    }
+
+    &-- {
+        &entering {
+            animation: bounceInUp 1.2s ease;
+        }
+
+        &exiting {
+            animation: bounceOutDown 1.5s ease forwards;
+        }
+    }
+
+    @media (width >= $breakpoint-2xl) {
+        right: calc((100vw - $max-layout) / 2);
+    }
+}
