@@ -1,6 +1,7 @@
 import type { PostListType } from "~types";
 
 export interface IContent {
+    listMode: "loadMore" | "pagination";
     pagination: {
         page: number;
         totalPages: number;

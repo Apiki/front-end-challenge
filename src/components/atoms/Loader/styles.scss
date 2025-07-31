@@ -1,0 +1,20 @@
+@use "~styles/_variables.scss" as *;
+@use "~styles/_theme.scss" as *;
+
+.loader {
+    width: min(100%, 2rem);
+    height: auto;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 100%;
+
+    &__icon {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: $border-md solid $color-brand;
+        animation:
+            spinner1 0.8s infinite linear alternate,
+            spinner2 1.6s infinite linear;
+    }
+}

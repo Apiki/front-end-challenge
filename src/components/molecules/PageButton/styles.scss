@@ -1,0 +1,33 @@
+@use "~styles/_variables.scss" as *;
+@use "~styles/_theme.scss" as *;
+
+.page-button {
+    width: max-content;
+    height: min-content;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.1s linear;
+    color: $color-primary;
+    font: normal 700 $text-sm / normal $font-family;
+
+    &:disabled {
+        opacity: 0.4;
+        cursor: default;
+    }
+
+    &:not(:disabled):hover {
+        color: $color-interactive;
+
+        .page-button__icon {
+            color: $color-interactive;
+        }
+    }
+
+    &__icon {
+        display: block;
+        color: $color-primary;
+        font-size: $icon;
+        transition: all 0.1s linear;
+    }
+}

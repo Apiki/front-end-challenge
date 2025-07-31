@@ -1,0 +1,15 @@
+@use "~styles/_variables.scss" as *;
+@use "~styles/_theme.scss" as *;
+
+.error-card {
+    width: 100%;
+    height: min-content;
+
+    &__text {
+        width: 100%;
+        height: min-content;
+        color: $color-error;
+        font: normal 900 $text-lg / normal $font-family;
+        text-align: center;
+    }
+}

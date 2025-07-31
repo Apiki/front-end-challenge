@@ -1,3 +1,15 @@
-import { CaretUpIcon } from "@phosphor-icons/react";
+import {
+    CaretDoubleLeftIcon,
+    CaretDoubleRightIcon,
+    CaretLeftIcon,
+    CaretRightIcon,
+    CaretUpIcon
+} from "@phosphor-icons/react";
 
-export const phosphorIconsReact = { CaretUpIcon };
+export const phosphorIconsReact = {
+    CaretDoubleLeftIcon,
+    CaretDoubleRightIcon,
+    CaretLeftIcon,
+    CaretRightIcon,
+    CaretUpIcon
+};

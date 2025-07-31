@@ -1,7 +1,7 @@
+import { QueryClientProvider } from "@tanstack/react-query";
 import { RouterProvider } from "react-router";
 import { ViewportContextProvider } from "~contexts";
 import { QUERY_CLIENT, router } from "~utils";
-import { QueryClientProvider } from "@tanstack/react-query";
 import "~styles/global.scss";
 
 export function App() {
