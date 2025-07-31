@@ -8,7 +8,7 @@ export const RootTemplate = memo(function RootTemplate({ children }: PropsWithCh
     return (
         <section className="root-template">
             <Header />
-            <main>{renderElementIfTrue(children, children, <Outlet />)}</main>
+            <main className="root-template__box">{renderElementIfTrue(children, children, <Outlet />)}</main>
             <footer>footer</footer>
             <button>scroll to top</button>
         </section>
