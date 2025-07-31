@@ -1,0 +1,55 @@
+@use "~styles/_variables.scss" as *;
+@use "~styles/_theme.scss" as *;
+
+.not-found-page {
+    width: 100%;
+    height: auto;
+    padding: $spacing-12 $spacing-4;
+    display: flex;
+    gap: $spacing-4;
+    flex-wrap: wrap;
+    place-content: center;
+    place-items: center;
+    align-self: stretch;
+
+    &__ {
+        &box {
+            width: 100%;
+            height: min-content;
+            display: flex;
+            flex-wrap: wrap;
+            gap: $spacing-4;
+            place-content: center;
+            place-items: center;
+        }
+
+        &img {
+            width: min(60%, 22rem);
+            height: auto;
+            object-fit: cover;
+        }
+
+        &text {
+            width: 100%;
+            height: min-content;
+            color: $color-secondary;
+            font: normal 400 $text-base / normal $font-family;
+            text-align: center;
+
+            &--caption {
+                color: $color-primary;
+                font-weight: 900;
+                font-size: $text-2xl;
+            }
+        }
+
+        &link {
+            width: fit-content;
+            height: min-content;
+            color: $color-interactive;
+            font: normal 900 $text-lg / normal $font-family;
+            text-decoration: none;
+            text-align: center;
+        }
+    }
+}

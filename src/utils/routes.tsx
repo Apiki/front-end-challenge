@@ -19,11 +19,7 @@ export const router = createBrowserRouter([
             {
                 path: "post/:slug",
                 element: <PostPage />,
-                errorElement: (
-                    <RootTemplate>
-                        <PostNotFoundPage />
-                    </RootTemplate>
-                )
+                errorElement: <PostNotFoundPage />
             }
         ]
     }
