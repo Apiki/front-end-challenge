@@ -1,7 +1,7 @@
 import { memo, type PropsWithChildren } from "react";
 import { Outlet } from "react-router";
-import { Footer, Header } from "~components/atoms";
-import { ScrollToTopButton } from "~components/molecules";
+import { Footer } from "~components/atoms";
+import { Header, ScrollToTopButton } from "~components/molecules";
 import { renderElementIfTrue } from "~utils";
 import "./styles.scss";
 

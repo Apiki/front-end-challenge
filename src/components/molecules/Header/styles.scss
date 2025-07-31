@@ -1,0 +1,51 @@
+@use "~styles/_variables.scss" as *;
+@use "~styles/_theme.scss" as *;
+
+.header {
+    width: 100%;
+    height: min-content;
+    padding: $spacing-4;
+    display: grid;
+    grid: min-content / min(100%, $max-layout);
+    justify-content: center;
+    background-color: $color-primary;
+
+    &__ {
+        &box {
+            width: 100%;
+            height: min-content;
+            display: flex;
+            column-gap: $spacing-4;
+            justify-content: space-between;
+            align-items: center;
+
+            &-- {
+                &list {
+                    list-style: none;
+                    justify-content: end;
+                }
+
+                &item {
+                    width: max-content;
+                }
+            }
+        }
+
+        &link {
+            text-decoration: none;
+
+            &--item {
+                width: 100%;
+                height: min-content;
+                color: $color-main;
+                font: normal 700 $text-lg / normal $font-family;
+                transition: all 0.15s linear;
+
+                &:hover {
+                    color: $color-brand;
+                    transform: translateY(-$spacing-1);
+                }
+            }
+        }
+    }
+}
