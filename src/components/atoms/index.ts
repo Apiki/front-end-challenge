@@ -1,1 +1,1 @@
-export {} from "./";
+export { PhosphorIcon } from "./PhosphorIcon";
