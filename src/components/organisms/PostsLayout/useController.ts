@@ -1,11 +1,12 @@
 import { useCallback, useEffect, useState } from "react";
-import { usePostsResponse } from "~hooks";
+import { usePostsResponse, useTimeout } from "~hooks";
 import { INITIAL_CONTENT, PAGE_ONE } from "./constants";
 import type { IContent } from "./types";
 
 export const useController = () => {
     const [content, setContent] = useState(INITIAL_CONTENT);
     const { isLoading, isError, data } = usePostsResponse(content.pagination.page);
+    const { resetTimeout, runTimeout } = useTimeout();
 
     const toggleListMode = useCallback(
         (mode?: IContent["listMode"]) =>
@@ -14,28 +15,51 @@ export const useController = () => {
 
                 if (newMode === previousState.listMode) return previousState;
 
+                runTimeout(() => {
+                    setContent((previousState) => {
+                        return {
+                            ...previousState,
+                            pagination: {
+                                ...INITIAL_CONTENT.pagination,
+                                page: INITIAL_CONTENT.pagination.page
+                            }
+                        };
+                    });
+                    resetTimeout();
+                });
+
                 return {
                     ...INITIAL_CONTENT,
                     listMode: newMode,
                     pagination: {
                         ...INITIAL_CONTENT.pagination,
-                        page: previousState.pagination.page === 1 ? 2 : 1
+                        page: 0
                     }
                 };
             }),
-        []
+        [resetTimeout, runTimeout]
     );
-    const resetList = useCallback(
-        () =>
-            setContent((previousState) => ({
-                ...INITIAL_CONTENT,
-                pagination: {
-                    ...INITIAL_CONTENT.pagination,
-                    page: previousState.pagination.page === 1 ? 2 : 1
-                }
-            })),
-        []
-    );
+    const resetList = useCallback(() => {
+        runTimeout(() => {
+            setContent((previousState) => {
+                return {
+                    ...previousState,
+                    pagination: {
+                        ...INITIAL_CONTENT.pagination,
+                        page: INITIAL_CONTENT.pagination.page
+                    }
+                };
+            });
+            resetTimeout();
+        });
+        setContent({
+            ...INITIAL_CONTENT,
+            pagination: {
+                ...INITIAL_CONTENT.pagination,
+                page: 0
+            }
+        });
+    }, [resetTimeout, runTimeout]);
     const updateData = useCallback(() => {
         if (data && data.data.length > INITIAL_CONTENT.data.loadedPosts)
             setContent((previousState) => {
