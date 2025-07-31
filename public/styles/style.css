@@ -1,0 +1,71 @@
+.title_page {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 3rem 0 0 0;
+  font-size: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+.box_card {
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+.box_card:hover {
+  transform: scale(1.02);
+  transition: 0.5s;
+}
+.box_card_image {
+  width: 100%;
+  height: 158px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  object-fit: cover;
+}
+.box_card_title {
+  font-size: 1.3rem;
+  margin: 0 0 0.5rem 0;
+}
+.box_card_excerpt {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #555;
+  line-height: 1.4;
+}
+.box_button {
+  grid-column: 1/-1;
+  width: 50%;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  background-color: #f8931f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 2rem auto 0 auto;
+  display: block;
+}
+.box_button:hover {
+  background-color: #ff8800;
+}
+
+.box_link {
+  display: inline-block;
+  color: #ccc;
+  text-decoration: none;
+  cursor: pointer;
+}
+.box_link:hover {
+  color: #ff8800;
+}
+
+/*# sourceMappingURL=style.css.map */
