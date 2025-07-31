@@ -1,0 +1,23 @@
+@use "~styles/_variables.scss" as *;
+@use "~styles/_theme.scss" as *;
+
+.root-template {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+
+    &__box {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex: 1 0 auto;
+        flex-direction: column;
+        place-content: center;
+        place-items: center;
+    }
+}

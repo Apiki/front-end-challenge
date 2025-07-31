@@ -1,0 +1,99 @@
+@use "~styles/_variables.scss" as *;
+@use "~styles/_theme.scss" as *;
+
+.posts-layout {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    row-gap: $spacing-4;
+    place-content: center start;
+    place-items: center;
+
+    &__ {
+        &box {
+            width: 100%;
+            height: min-content;
+            display: flex;
+            flex-wrap: wrap;
+            gap: $spacing-4;
+            place-content: center;
+            place-items: center;
+
+            &-- {
+                &control {
+                    justify-content: start;
+                }
+
+                &mode {
+                    width: max-content;
+                    gap: 0;
+                }
+
+                &data {
+                    gap: $spacing-8;
+                }
+            }
+        }
+
+        &btn- {
+            &mode {
+                width: max-content;
+                height: min-content;
+                padding: $spacing-1 $spacing-2;
+                border: none;
+                background-color: $color-surface;
+                box-shadow:
+                    rgba(50, 50, 93, 0.25) 0 0.125rem 0.3125rem -0.0625rem,
+                    rgba(0, 0, 0, 0.3) 0 0.0625rem 0.1875rem -0.0625rem;
+                color: $color-primary;
+                font: normal 900 $text-xs / normal $font-family;
+                cursor: pointer;
+                transition: all 0.1s linear;
+
+                &:hover {
+                    color: $color-interactive;
+                }
+
+                &-- {
+                    &list {
+                        padding-left: $spacing-4;
+                        border-radius: $spacing-12 0 0 $spacing-12;
+                    }
+
+                    &pagination {
+                        padding-right: $spacing-4;
+                        border-radius: 0 $spacing-12 $spacing-12 0;
+                    }
+
+                    &active {
+                        color: $color-interactive;
+                    }
+                }
+            }
+
+            &reset {
+                width: fit-content;
+                height: min-content;
+                border: none;
+                background-color: transparent;
+                color: $color-primary;
+                font: normal 900 $text-xs / normal $font-family;
+                cursor: pointer;
+                transition: all 0.1s linear;
+
+                &:hover {
+                    color: $color-interactive;
+                }
+            }
+        }
+
+        &text {
+            width: 100%;
+            height: min-content;
+            color: $color-secondary;
+            font: normal 300 $text-xs / normal $font-family;
+        }
+    }
+}

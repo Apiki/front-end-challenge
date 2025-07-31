@@ -1,0 +1,26 @@
+@use "~styles/_variables.scss" as *;
+@use "~styles/_theme.scss" as *;
+
+.pagination-control {
+    width: 100%;
+    height: min-content;
+    display: flex;
+    column-gap: $spacing-8;
+    justify-content: center;
+    align-items: center;
+
+    &__ {
+        &box {
+            width: fit-content;
+            height: min-content;
+            display: flex;
+            column-gap: $spacing-2;
+            place-content: center;
+            place-items: center;
+
+            &--main {
+                column-gap: $spacing-1;
+            }
+        }
+    }
+}

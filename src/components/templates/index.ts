@@ -1,0 +1,1 @@
+export { RootTemplate } from "./RootTemplate";

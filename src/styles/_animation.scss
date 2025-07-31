@@ -1,0 +1,90 @@
+@keyframes bounceInUp {
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    from {
+        opacity: 0;
+        transform: translate3d(0, 187.5rem, 0) scaleY(5);
+    }
+    60% {
+        opacity: 1;
+        transform: translate3d(0, -1.25rem, 0) scaleY(0.9);
+    }
+    75% {
+        transform: translate3d(0, 0.625rem, 0) scaleY(0.95);
+    }
+    90% {
+        transform: translate3d(0, -0.313rem, 0) scaleY(0.985);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes bounceOutDown {
+    20% {
+        transform: translate3d(0, 0.625rem, 0) scaleY(0.985);
+    }
+    40%,
+    45% {
+        opacity: 1;
+        transform: translate3d(0, -1.25rem, 0) scaleY(0.9);
+    }
+    to {
+        opacity: 0;
+        transform: translate3d(0, 125rem, 0) scaleY(3);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes spinner1 {
+    0% {
+        clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+    }
+    12.5% {
+        clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%);
+    }
+    25% {
+        clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%);
+    }
+    50% {
+        clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+    }
+    62.5% {
+        clip-path: polygon(50% 50%, 100% 0, 100% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+    }
+    75% {
+        clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0% 100%);
+    }
+    100% {
+        clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%);
+    }
+}
+@keyframes spinner2 {
+    0% {
+        transform: scaleY(1) rotate(0deg);
+    }
+    49.99% {
+        transform: scaleY(1) rotate(135deg);
+    }
+    50% {
+        transform: scaleY(-1) rotate(0deg);
+    }
+    100% {
+        transform: scaleY(-1) rotate(-135deg);
+    }
+}

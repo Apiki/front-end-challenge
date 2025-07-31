@@ -1,0 +1,43 @@
+@use "~styles/_variables.scss" as *;
+@use "~styles/_theme.scss" as *;
+
+.footer {
+    width: 100%;
+    height: min-content;
+    padding: $spacing-4 $spacing-4 $spacing-12;
+    display: grid;
+    grid: repeat(3, min-content) / min(100%, $max-layout);
+    place-content: center;
+    place-items: center;
+    background-color: $color-primary;
+
+    &__ {
+        &box {
+            width: 100%;
+            height: min-content;
+            display: flex;
+            column-gap: $spacing-8;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &text {
+            width: 100%;
+            height: min-content;
+            color: $color-secondary;
+            font: normal 400 $text-sm / normal $font-family;
+            text-align: center;
+
+            &--credits {
+                width: fit-content;
+                color: $color-main;
+            }
+        }
+
+        &divider {
+            width: 100%;
+            height: $border-sm;
+            background-color: $color-brand;
+        }
+    }
+}

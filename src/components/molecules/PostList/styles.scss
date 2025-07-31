@@ -1,0 +1,16 @@
+@use "~styles/_variables.scss" as *;
+
+.post-list {
+    width: 100%;
+    height: auto;
+    list-style: none;
+    display: grid;
+    grid: auto / repeat(auto-fill, minmax(12rem, 1fr));
+    gap: $spacing-8;
+    place-content: center;
+    place-items: center;
+
+    @media (width >= $breakpoint-lg) {
+        grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    }
+}
