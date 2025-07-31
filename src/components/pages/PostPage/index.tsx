@@ -1,4 +1,4 @@
-import { Logo } from "~components/atoms";
+import { Logo, Seo } from "~components/atoms";
 import { renderElementIfTrue } from "~utils";
 import { useController } from "./useController";
 import "./styles.scss";
@@ -10,6 +10,7 @@ export const PostPage = () => {
         isLoading,
         <div>isLoading</div>,
         <section className="post-page">
+            <Seo meta={data?.[0].meta} />
             <section className="post-page__box">
                 <section className="post-page__box post-page__box--heading">
                     <img

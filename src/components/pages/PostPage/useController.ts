@@ -12,7 +12,7 @@ export const useController = () => {
         const updated = formatDate(data?.[0].modified ?? "");
         const isSameDate = published === updated;
 
-        return `Publicado em: ${published}${!isSameDate ? `- Atualizado em: ${updated}` : ""}`;
+        return `Publicado em: ${published}${!isSameDate ? ` - Atualizado em: ${updated}` : ""}`;
     }, [data]);
 
     useEffect(() => {
