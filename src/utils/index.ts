@@ -4,3 +4,4 @@ export * from "./styles";
 export * from "./routes";
 export * from "./phosphorIcons";
 export * from "./constants";
+export * from "./formatting";

@@ -18,3 +18,13 @@ export const getPostsResponse = async (page: number) => {
         }
     };
 };
+
+export const getPost = async (slug: string) =>
+    await api
+        .get<PostListType>(ENDPOINT.posts, {
+            params: {
+                [PARAM.embed]: true,
+                slug
+            }
+        })
+        .then((response) => response.data);

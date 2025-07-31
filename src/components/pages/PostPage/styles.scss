@@ -1,0 +1,188 @@
+@use "~styles/_variables.scss" as *;
+@use "~styles/_theme.scss" as *;
+
+.post-page {
+    width: min(100%, $max-layout);
+    height: auto;
+    padding: 0 $spacing-4 $spacing-8;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    row-gap: $spacing-8;
+    place-content: center;
+    place-items: center;
+
+    &__ {
+        &box {
+            width: 100%;
+            height: min-content;
+            display: flex;
+            flex-wrap: wrap;
+            gap: $spacing-4;
+            place-content: center;
+            place-items: center;
+
+            &-- {
+                &heading {
+                    gap: 0;
+                }
+
+                &content {
+                    gap: 0;
+
+                    :is(h1, h2, h3, h4, h5, h6) {
+                        width: 100%;
+                        height: min-content;
+                        margin-block: $spacing-8 $spacing-4;
+                        color: $color-primary;
+                        font: normal 900 $text-3xl / normal $font-family;
+                    }
+
+                    h2 {
+                        font-size: $text-2xl;
+                    }
+
+                    h3 {
+                        font-size: $text-3xl;
+                    }
+
+                    h4 {
+                        font-size: $text-xl;
+                    }
+
+                    h5 {
+                        font-size: $text-lg;
+                    }
+
+                    h6 {
+                        font-size: $text-base;
+                    }
+
+                    p {
+                        width: 100%;
+                        height: min-content;
+                        margin-bottom: $spacing-6;
+                        color: $color-secondary;
+                        font: normal 400 $text-sm / normal $font-family;
+                        text-align: justify;
+                    }
+
+                    a {
+                        width: 100%;
+                        height: min-content;
+                        color: $color-interactive;
+                        font: normal 900 $text-sm / normal $font-family;
+                        text-decoration: none;
+                    }
+
+                    :is(ul, ol) {
+                        width: 100%;
+                        height: min-content;
+                        margin-bottom: $spacing-8;
+                        padding-left: $spacing-6;
+                    }
+
+                    li {
+                        margin-bottom: $spacing-2;
+                        color: $color-secondary;
+                        font: normal 400 $text-sm / normal $font-family;
+                    }
+
+                    blockquote {
+                        width: 100%;
+                        height: min-content;
+                        margin-block: $spacing-4;
+                        padding: $spacing-2;
+                        border-left: $border-md solid $color-brand;
+                        border-radius: $spacing-1;
+                        padding: $spacing-4;
+                        background-color: $color-surface;
+                    }
+
+                    strong {
+                        width: 100%;
+                        height: min-content;
+                        font-weight: 900;
+                    }
+
+                    table {
+                        width: 100%;
+                        height: min-content;
+                        border-collapse: collapse;
+                        margin-block: $spacing-8;
+                    }
+
+                    :is(th, td) {
+                        border: $border-sm solid $color-soft;
+                        padding: $spacing-3;
+                        text-align: left;
+                    }
+
+                    th {
+                        background-color: $color-surface;
+                        font: normal 900 $text-base / normal $font-family;
+                    }
+
+                    div {
+                        width: 100%;
+                        height: min-content;
+                    }
+
+                    :is(img, video, iframe, figure) {
+                        width: 100%;
+                        height: min-content;
+                        object-fit: cover;
+                    }
+                }
+
+                &logo {
+                    flex-wrap: nowrap;
+                }
+            }
+        }
+
+        &img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            aspect-ratio: 16 / 5;
+            border-radius: 0 0 $spacing-4 $spacing-4;
+        }
+
+        &text {
+            width: 100%;
+            height: min-content;
+            color: $color-primary;
+            font: normal 400 $text-sm / normal $font-family;
+            text-align: justify;
+
+            &-- {
+                &title {
+                    font-weight: 900;
+                    font-size: $text-4xl;
+                    text-align: center;
+                }
+
+                &footer {
+                    font-size: $text-xs;
+                }
+
+                &author {
+                    font-weight: 900;
+                }
+            }
+        }
+
+        &divider {
+            width: 100%;
+            height: $border-sm;
+            background-color: $color-brand;
+        }
+    }
+
+    @media (width >= $breakpoint-md) {
+        &__box--main {
+            width: 85%;
+        }
+    }
+}

@@ -1,3 +1,3 @@
 export { useTimeout } from "./useTimeout";
 export { useToggle } from "./useToggle";
-export { usePostsResponse } from "./useApi";
+export { usePostsResponse, usePost } from "./useApi";

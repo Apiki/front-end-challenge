@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router";
-import { GlobalNotFoundPage, HomePage } from "~components/pages";
+import { GlobalNotFoundPage, HomePage, PostNotFoundPage, PostPage } from "~components/pages";
 import { RootTemplate } from "~components/templates";
 
 export const router = createBrowserRouter([
@@ -15,6 +15,15 @@ export const router = createBrowserRouter([
             {
                 index: true,
                 element: <HomePage />
+            },
+            {
+                path: "post/:slug",
+                element: <PostPage />,
+                errorElement: (
+                    <RootTemplate>
+                        <PostNotFoundPage />
+                    </RootTemplate>
+                )
             }
         ]
     }
