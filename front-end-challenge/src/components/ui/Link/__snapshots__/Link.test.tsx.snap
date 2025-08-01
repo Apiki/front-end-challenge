@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link component combina com o snapshot 1`] = `
+<DocumentFragment>
+  <a
+    class="text-white underline underline-offset-3 abc"
+    href="/snap"
+  >
+    <em>
+      S
+    </em>
+    nap
+  </a>
+</DocumentFragment>
+`;

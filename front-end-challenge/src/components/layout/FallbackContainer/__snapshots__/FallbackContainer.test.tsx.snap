@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FallbackContainer component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="h-[518px] lg:h-[70vh] overflow-hidden rounded-2xl border border-slate-700/60 flex items-center justify-center snap-class"
+  >
+    <div>
+      Snap
+    </div>
+  </div>
+</DocumentFragment>
+`;

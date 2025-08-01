@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AsyncFallback component matches snapshot for error state 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="fallback"
+  >
+    Err
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AsyncFallback component matches snapshot for loading state 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="fallback"
+  >
+    <div
+      data-testid="spinner"
+    />
+  </div>
+</DocumentFragment>
+`;

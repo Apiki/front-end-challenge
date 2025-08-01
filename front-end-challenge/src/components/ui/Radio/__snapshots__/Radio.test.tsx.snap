@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio component combina com o snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="flex items-center gap-4 snapshot-class"
+  >
+    <input
+      checked=""
+      class="sr-only"
+      id="radio-1"
+      name="group"
+      type="radio"
+      value="val1"
+    />
+    <label
+      class="flex items-center cursor-pointer select-none"
+      for="radio-1"
+    >
+      <span
+        aria-hidden="true"
+        class="inline-flex items-center justify-center w-5 h-5 border-2 rounded-full border-[var(--color-primary)] transition-colors"
+      >
+        <span
+          aria-hidden="true"
+          class="w-2.5 h-2.5 rounded-full bg-[var(--color-primary)] opacity-100 transition-opacity"
+        />
+      </span>
+      <span
+        class="ml-2 text-xs font-inter text-[var(--color-light)]"
+      >
+        Opção 1
+      </span>
+    </label>
+  </div>
+</DocumentFragment>
+`;

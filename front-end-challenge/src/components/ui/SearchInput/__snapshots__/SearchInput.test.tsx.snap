@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchInput component combines with snapshot 1`] = `
+<DocumentFragment>
+  <input
+    class="rounded-md border border-[#8A939D] bg-transparent px-3 text-sm font-inter placeholder:text-[#8A939D] placeholder:font-light placeholder:text-xs placeholder:text-inter focus:border-cyan-600 focus:outline-none focus:ring-1 focus:ring-cyan-500 h-7 w-40 md:w-56 snap-class"
+    placeholder="Snap"
+    type="search"
+  />
+</DocumentFragment>
+`;

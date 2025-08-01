@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Td component matches the snapshot 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr>
+        <td
+          class="px-4 h-[40px] whitespace-nowrap text-center text-sm text-white text-normal tracking-wide font-inter snapshot-class"
+          colspan="2"
+          data-extra="x"
+        >
+          Snap
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;

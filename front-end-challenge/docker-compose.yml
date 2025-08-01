@@ -1,0 +1,14 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_BASE_URL_API_CLIENT=${VITE_BASE_URL_API_CLIENT}
+      - VITE_CELLPHONE_NUMBER=${VITE_CELLPHONE_NUMBER}
+      - VITE_LINKEDIN_ACCOUNT=${VITE_LINKEDIN_ACCOUNT}

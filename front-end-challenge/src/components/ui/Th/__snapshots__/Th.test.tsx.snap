@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Th component matches the snapshot 1`] = `
+<DocumentFragment>
+  <table>
+    <thead>
+      <tr>
+        <th
+          class="sticky top-0 z-10 bg-dark px-4 h-[55px] text-center font-semibold  font-poppins text-sm text-white tracking-wide snap-class"
+          data-extra="y"
+        >
+          Snap
+        </th>
+      </tr>
+    </thead>
+  </table>
+</DocumentFragment>
+`;

@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.node.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "verbatimModuleSyntax": false,
+    "types": ["node"]
+  },
+  "include": ["cypress.config.ts", "cypress/support/**/*.ts"]
+}

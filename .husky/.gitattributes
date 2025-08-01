@@ -1,0 +1,2 @@
+# .gitattributes
+.husky/* text eol=lf

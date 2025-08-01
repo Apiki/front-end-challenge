@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button component – testes adicionais combina com o snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="rounded-lg font-medium focus:outline-none focus-visible:ring text-poppins bg-tertiary text-light hover:bg-tertiary/80 focus-visible:ring-tertiary/60 px-3 py-1 text-sm"
+    type="button"
+  >
+    Snap
+  </button>
+</DocumentFragment>
+`;

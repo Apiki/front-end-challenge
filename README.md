@@ -1,47 +1,189 @@
-# Desafio - Front-end Developer
-Este desafio tem como objetivo te avaliar como desenvolvedor Front-end: JavaScript, HTML, CSS e lógica de programação.
+# Apiki 🚀
 
-## O Desafio
-Queremos montar uma versão do blog da Apiki apenas para Devs, e queremos que essa seja uma solução headless, esta nova versão terá as seguintes páginas: 
+> Aplicação React de Apiki.
 
-- Página inicial: Listará as últimas postagens do blog com a categoria **Desenvolvimento**; 
-- Interna: Exibirá o conteúdo da postagem;
+[![CI](https://github.com/seu-usuario/control361/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/seu-usuario/control361/actions/workflows/ci-cd.yml)
+[![Docker](https://img.shields.io/badge/docker-ready-blue)](#docker)
+[![Deploy on Vercel](https://vercel.com/button)](https://vercel.com/)
 
+---
 
-## Requesitos
-- Utilizar os dados da API do nosso blog: https://blog.apiki.com/wp-json/wp/v2/;
+## 📋 Sumário
 
-## Diferencial
-- Utilizar alguma metodologia para a organização de seu CSS (BEMCSS, OOCSS, SMACSS... o que preferir :D);
-- Escolha uma lib para criação de interfaces de usuário (React ou Angular); 
+- [Apiki 🚀](#apiki-)
+  - [📋 Sumário](#-sumário)
+  - [🧐 Sobre](#-sobre)
+  - [✨ Funcionalidades](#-funcionalidades)
+  - [🛠️ Pré-requisitos](#️-pré-requisitos)
+  - [⚡ Instalação](#-instalação)
+  - [🔑 Variáveis de Ambiente](#-variáveis-de-ambiente)
+  - [🧑‍💻 Desenvolvimento Local](#-desenvolvimento-local)
+  - [🐳 Uso com Docker](#-uso-com-docker)
+    - [Dockerfile.dev (desenv)](#dockerfiledev-desenv)
+    - [Docker Compose](#docker-compose)
+  - [💻 CI/CD](#-cicd)
+  - [🚀 Deploy no Vercel](#-deploy-no-vercel)
+  - [🗂️ Estrutura de Pastas](#️-estrutura-de-pastas)
 
-### Página inicial
-Para montar esta página você precisará consumir do seguinte endpoint: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518`, ele já te retornará as últimas 10 postagens cadastradas, cada item do array deve representar uma card contendo:
+---
 
-- Imagem destacada: Você encontrará um atributo chamado `_embedded`, dentro deste atributo você encontrará o `wp:featuredmedia`;
-- Título;
-- Link para a postagem: O link deverá conter o atributo `slug`;
+## 🧐 Sobre
 
-Ao final da listagem deve haver um botão nomeado **Carregar mais...**, Quando o usuário clicar neste botão você deverá fazer uma nova requisição para o mesmo endpoint informando o parâmetro `page`, este parâmetro deve receber o número da próxima página, exemplo: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=2`. Você deve estar se perguntando, "como sei se haverá uma próxima página?", isso é simples, no **Header** de resposta desta requisição virá 2 atributos necessários para essa façanha `X-WP-Total` que diz a quantidade total de postagens que essa categoria possui, e o parâmetro `X-WP-TotalPages` que te informará qual o total de páginas de postagens que essa categoria possui.
+Este repositório contém a aplicação **Apiki**, desenvolvida em React + TypeScript, gerenciador global de estado com Zustand, formulários com React Hook Form + Zod.
 
-### Interna
-Para montar esta página você precisará consumir do seguinte endpoint: `https://blog.apiki.com/wp-json/wp/v2/posts?_embed&slug=wordpress-escolha-site-pequenas-empresas`, lembre-se de substituir o `slug` dado como exemplo pelo slug definido no **Link para a postagem** da **Página inicial**, o layout deve conter os seguintes elementos:
+---
 
-- Imagem destacada;
-- Título;
-- Conteúdo;
+## ✨ Funcionalidades
 
-Seja criativo, construa um layout pensando no usuário final, e sinta-se a vontade para incrementar o layout com outros atributos disponíveis no JSON retornado. 
+- Listagem das notícias.
+- Visualização de detalhes de cada notícia.
 
-## Critérios de avaliação
+---
 
-- Organização do código;
-- Responsividade;
-- Reaproveitamento de código;
-- SEO;
+## 🛠️ Pré-requisitos
 
-## Como submeter seu projeto
+- **Node.js** >= 18
+- **npm** >= 8
+- **Docker** (para ambiente conteinerizado)
+- **Docker Compose** (opcional para dev local)
+- **Conta no Vercel** (para deploy)
 
-1. Efetue o fork deste repositório e crie um branch com o seu nome e sobrenome. (exemplo: fulano-dasilva);
-1. Após finalizar o desafio, crie um Pull Request;
-1. Aguarde algum contribuidor realizar o code review;
+---
+
+## ⚡ Instalação
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/GefersonLopes/front-end-challenge
+   cd front-end-challenge
+   ```
+2. Instale as dependências:
+   ```bash
+   npm i
+   ```
+3. Crie um arquivo `.env` na raiz, copiando de `.env.example`:
+   ```bash
+   cp .env.example .env
+   ```
+4. Ajuste as variáveis de ambiente conforme necessário. (Deixei já o padrão que será funcional)
+
+---
+
+## 🔑 Variáveis de Ambiente
+
+As seguintes variáveis devem estar definidas no seu `.env`:
+
+```dotenv
+VITE_BASE_URL_API_CLIENT=https://blog.apiki.com/wp-json/wp/v2/
+VITE_CELLPHONE_NUMBER=5571996063783
+VITE_LINKEDIN_ACCOUNT=algeferson
+```
+
+## 🧑‍💻 Desenvolvimento Local
+
+Execute em modo de desenvolvimento com Vite e hot-reload:
+
+```bash
+npm run dev        # serve http://localhost:5173/
+```
+
+Ou via Docker Compose:
+
+```bash
+docker compose up --build
+#Após build, acesse http://localhost:5173
+```
+
+---
+
+## 🐳 Uso com Docker
+
+### Dockerfile.dev (desenv)
+
+- **EXPOSE** 5173
+- Comando: `CMD ["npm", "run", "dev"]`
+
+### Docker Compose
+
+```yaml
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_BASE_URL_API_CLIENT={{ VITE_BASE_URL_API_CLIENT }}
+      - VITE_CELLPHONE_NUMBER={{ VITE_CELLPHONE_NUMBER }}
+      - VITE_LINKEDIN_ACCOUNT={{ VITE_LINKEDIN_ACCOUNT }}
+```
+
+Para rodar:
+
+```bash
+docker compose up --build
+```
+
+---
+
+## 💻 CI/CD
+
+Fluxo configurado via GitHub Actions:
+
+1. **CI**
+   - Checkout do código
+   - Setup Node.js
+   - Cache npm
+   - `npm ci`, `npm run lint`, `npm test`, `npm run build`
+   - Upload de artefato `build/`
+
+2. **Docker Build & Push** (on push em `main`)
+   - Download do build
+   - `docker build -f Dockerfile` → imagem tageada por commit SHA + `latest`
+   - Push no Docker Hub (opcional)
+
+3. **Deploy no Vercel**
+   - Ação `amondnet/vercel-action@v20` usando `vercel.json` e secrets:
+     - VERCEL_TOKEN, VERCEL_ORG_ID, VERCEL_PROJECT_ID
+
+Arquivo: `.github/workflows/ci-cd.yml`
+
+---
+
+## 🚀 Deploy no Vercel
+
+O deploy utiliza Docker no Vercel, via `vercel.json`:
+
+```json
+{
+  "version": 2,
+  "builds": [{ "src": "Dockerfile", "use": "@vercel/docker" }],
+  "routes": [{ "src": "/(.*)", "dest": "/" }]
+}
+```
+
+Defina as mesmas variáveis de ambiente no painel Vercel (Production & Preview).
+
+---
+
+## 🗂️ Estrutura de Pastas
+
+```
+Apiki/
+├── .env.example
+├── Dockerfile
+├── Dockerfile.dev
+├── docker-compose.yml
+├── package.json
+├── public/
+└── src/
+    ├── components/
+    ├── hooks/
+    ├── pages/
+    ├── store/
+    └── utils/
+```
