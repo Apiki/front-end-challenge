@@ -1,0 +1,50 @@
+.post {
+  font-family: 'Montserrat', sans-serif;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    max-width: 800px;
+    width: 100%;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  &__content {
+    font-size: 1rem;
+    line-height: 1.6;
+
+    * {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+
+    h2, h3, h4 {
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+    }
+  }
+}
