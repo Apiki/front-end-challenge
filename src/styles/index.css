@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+.post-content h2 {
+  @apply text-2xl md:text-3xl font-bold text-yellow-400 mt-8 mb-4;
+}
+
+.post-content p {
+  @apply text-base md:text-lg text-gray-200 mb-4 leading-relaxed;
+}
+
+.post-content ul {
+  @apply list-disc list-inside ml-4 text-gray-200;
+}
+
+.post-content a {
+  @apply text-blue-400 underline hover:text-blue-600;
+}
+
+body {
+  background-color: black;
+}
+
+.bg-primary {
+  background: #161618;
+}
+
+.font-title {
+  font-family: "Montserrat", sans-serif;
+}
+
+.font-text {
+  font-family: "Inter", sans-serif;
+}
+
+.text-primary {
+  color: #a3a3a3;
+}
+
+.text-secondary {
+  color: #a1a1aa;
+}
