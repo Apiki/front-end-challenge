@@ -1,0 +1,69 @@
+.apiki-dev-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+  background: var(--color-text-92);
+  backdrop-filter: blur(16px);
+}
+
+.apiki-dev-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 80px;
+}
+
+.apiki-dev-header__brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.apiki-dev-header__brand-image {
+  width: auto;
+  height: 32px;
+  object-fit: contain;
+}
+
+.apiki-dev-header__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.apiki-dev-header__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 8px 24px;
+  border: 2px solid var(--color-orange-400);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1em;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  transition: var(--transition-default);
+}
+
+.apiki-dev-header__cta:hover {
+  background-color: var(--color-orange-400-10);
+}
+
+.apiki-dev-header__cta-highlight {
+  color: var(--color-white);
+}
+
+@media (min-width: 768px) {
+  .apiki-dev-header__cta {
+    padding-inline: 24px;
+    font-size: 14px;
+  }
+}

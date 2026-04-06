@@ -1,0 +1,42 @@
+.posts-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.posts-feed__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.posts-feed__actions {
+  display: flex;
+  justify-content: center;
+}
+
+.posts-feed__error {
+  margin: 0;
+  color: var(--color-orange-800);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.posts-feed__button {
+  min-width: 226px;
+  border-radius: 8px;
+  font-family: var(--font-label);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  height: 60px;
+  padding: 16px 40px;
+}
+
+@media (min-width: 768px) {
+  .posts-feed__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
